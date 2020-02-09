@@ -1,0 +1,10 @@
+- title: "Contact Us"
+  title_detail: "Contact us @ gappsapps.co.uk"
+  slug: "contactus"
+  category: "contact"
+  color: "#0B2E39"
+  images: "contactus"
+  cover: "./contactus/jason-rosewell-ASKeuOZqhYU-unsplash.jpg"
+  image_credit: "Photo by Jason Rosewell on Unsplash"
+  desc: "Please get in touch"
+  tags: Contact
