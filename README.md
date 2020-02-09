@@ -1,10 +1,3 @@
-![](https://i.imgur.com/TlwEgUo.png)
-
-# Gatsby Starter Portfolio: Jodie
-
-A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience are designers and photographers.
-
-[Demo Website](https://jodie.lekoarts.de)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hometurf/lawncare) [![Edit gappsapps](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/LeKoArts/gatsby-starter-portfolio-jodie/tree/master/)
 
@@ -13,21 +6,6 @@ A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience
 - CSS-Grid powered layout with Sidebar
 - Large images & Instagram integration
 - Themeable pages & automatically adapting sidebar
-
-## Why?
-
-If you want to quickly bootstrap a design/photography portfolio or use it as a foundation for your personal site, the starters in _gatsby-starter-portfolio_ are a perfect fit for you! The project's goal is to offer minimalistic and fast websites.
-
-I hope you like my starters and create something awesome! To see some of my work, you can visit my [website](https://www.lekoarts.de) or support me on [Patreon](https://www.patreon.com/lekoarts) to get some neat rewards (4K images, project files, tutorial insights). Every pledge on Patreon helps me create more free starters!
-
-Also, check out the other starters for _gatsby-starter-portfolio_:
-
-- [gatsby-starter-portfolio-emma](https://github.com/LekoArts/gatsby-starter-portfolio-emma)
-- [gatsby-starter-portfolio-emilia](https://github.com/LekoArts/gatsby-starter-portfolio-emilia)
-- [gatsby-starter-portfolio-bella](https://github.com/LekoArts/gatsby-starter-portfolio-bella)
-- [gatsby-starter-portfolio-cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
-
-Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfolio.netlify.com/)!
 
 ## Features
 
@@ -64,7 +42,7 @@ Check your development environment! You'll need [Node.js](https://nodejs.org/en/
 To copy and install this starter run this command (with "project-name" being the name of your folder you wish to install it in):
 
 ```
-gatsby new project-name https://github.com/LekoArts/gatsby-starter-portfolio-jodie
+gatsby new project-name https://github.com/hometurf/gappsapps
 cd project-name
 npm run develop
 ```
@@ -129,24 +107,25 @@ You can configure your setup in `config/index.js`:
 module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
-  siteTitle: 'Jodie', // Navigation and Site Title
-  siteTitleAlt: 'Jodie - Gatsby Starter Portfolio', // Alternative Site title for SEO
-  siteTitleShort: 'Jodie', // short_name for manifest
-  siteHeadline: 'Come & Enjoy our excellent photos', // Headline for schema.org JSONLD
-  siteUrl: 'https://jodie.lekoarts.de', // Domain of your site. No trailing slash!
+
+  siteTitle: 'gappsapps.co.uk', // Navigation and Site Title
+  siteTitleAlt: 'gappsapps.co.uk - services', // Alternative Site title for SEO
+  siteTitleShort: 'gappsapps.co.uk', // short_name for manifest
+  siteHeadline: 'Take a look at Our Software, services and portfolio of recent projects.', // Headline for schema.org JSONLD
+  siteUrl: 'https://gappsapps.co.uk', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
-  siteDescription: 'Image-heavy photography portfolio with colorful accents & great typography',
-  author: 'LekoArts', // Author for schema.org JSONLD
+  siteDescription: 'gappsapps.co.uk',
+  author: 'gappsapps', // Author for schema.org JSONLD
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
-  userTwitter: '@jodie', // Twitter Username
-  ogSiteName: 'jodie', // Facebook Site Name
-  ogLanguage: 'en_US', // og:language
+  userTwitter: '@gappsapps', // Twitter Username
+  ogSiteName: 'gappsapps', // Facebook Site Name
+  ogLanguage: 'en_GB', // og:language
   googleAnalyticsID: 'UA-XXXXXX-X',
 
   // Manifest and Progress color
-  themeColor: '#db7436',
+  themeColor: '#0B2E39',
   backgroundColor: '#3b3c4f',
 }
 ```
