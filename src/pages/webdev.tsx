@@ -41,7 +41,7 @@ const Webdev: React.FunctionComponent<PageProps> = ({ data: { webdev } }) => {
 
   return (
     <Layout color={theme.colors.primary}>
-      <SEO title="Website development | gappsapps.co.uk" />
+      <SEO title="Website development | hellodave.club" />
       <Area style={pageAnimation}>
         {webdev.nodes.map(webdev => (
           <GridItem key={webdev.slug} to={webdev.slug} aria-label={`View webdev "${webdev.title}"`}>

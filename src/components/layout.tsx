@@ -73,7 +73,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     color: black;
-    font-family: 'Roboto slab';
+    font-family: 'Open Sans';
     background: white;
     font-size: 18px;
   }
@@ -254,8 +254,7 @@ const Layout = ({ children, color }: LayoutProps) => {
           <Main>{children}</Main>
           <Footer color={color}>
             <Box p={[6, 6, 8]} fontSize={0}>
-              Website by <Link to="/">gappsapps.co.uk</Link>
-              {/* Website by <a href="https://www.gappsapps.co.uk">gappsapps.co.uk</a> */}
+              Website by <a href="https://www.gappsapps.co.uk">gappsapps.co.uk</a>
             </Box>
           </Footer>
         </Wrapper>

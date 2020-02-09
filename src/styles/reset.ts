@@ -6,7 +6,7 @@ const reset = css`
   optgroup,
   select,
   textarea {
-    font-family: 'Roboto slab';
+    font-family: 'Open Sans';
     font-size: 100%;
     margin: 0;
   }

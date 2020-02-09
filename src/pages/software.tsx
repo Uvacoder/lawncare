@@ -41,7 +41,7 @@ const Software: React.FunctionComponent<PageProps> = ({ data: { software } }) =>
 
   return (
     <Layout color={theme.colors.primary}>
-      <SEO title="Software | gappsapps.co.uk" />
+      <SEO title="Software | hellodave.club" />
       <Area style={pageAnimation}>
         {software.nodes.map(software => (
           <GridItem key={software.slug} to={software.slug} aria-label={`View software "${software.title}"`}>

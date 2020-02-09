@@ -100,7 +100,7 @@ const Software: React.FunctionComponent<PageProps> = ({ data: { software, images
     <Layout color={software.color}>
       <SEO
         pathname={software.slug}
-        title={`${software.title_detail} | gappsapps.co.uk`}
+        title={`${software.title_detail} | hellodave.club`}
         desc={software.desc}
         node={software.parent}
         banner={software.cover.childImageSharp.resize.src}

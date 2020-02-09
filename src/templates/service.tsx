@@ -100,7 +100,7 @@ const Service: React.FunctionComponent<PageProps> = ({ data: { service, images }
     <Layout color={service.color}>
       <SEO
         pathname={service.slug}
-        title={`${service.title_detail} | gappsapps.co.uk`}
+        title={`${service.title_detail} | hellodave.club`}
         desc={service.desc}
         node={service.parent}
         banner={service.cover.childImageSharp.resize.src}

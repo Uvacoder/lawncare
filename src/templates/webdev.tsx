@@ -100,7 +100,7 @@ const Webdev: React.FunctionComponent<PageProps> = ({ data: { webdev, images } }
     <Layout color={webdev.color}>
       <SEO
         pathname={webdev.slug}
-        title={`${webdev.title_detail} | gappsapps.co.uk`}
+        title={`${webdev.title_detail} | hellodave.club`}
         desc={webdev.desc}
         node={webdev.parent}
         banner={webdev.cover.childImageSharp.resize.src}
