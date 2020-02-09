@@ -6,7 +6,7 @@ A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience
 
 [Demo Website](https://jodie.lekoarts.de)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hometurf/gappsapps) [![Edit gappsapps](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/LeKoArts/gatsby-starter-portfolio-jodie/tree/master/)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hometurf/lawncare) [![Edit gappsapps](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/LeKoArts/gatsby-starter-portfolio-jodie/tree/master/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f51f5488-aa2d-4e42-baa7-4182d9e81c2e/deploy-status)](https://app.netlify.com/sites/portfolio-jodie/deploys) [![CircleCI](https://circleci.com/gh/LekoArts/gatsby-starter-portfolio-jodie.svg?style=svg)](https://circleci.com/gh/LekoArts/gatsby-starter-portfolio-jodie)
 
