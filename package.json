@@ -1,7 +1,7 @@
 {
   "name": "gappsapps",
   "private": true,
-  "description": "Portfolio website",
+  "description": "Service provider website",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {

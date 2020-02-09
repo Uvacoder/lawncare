@@ -76,8 +76,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'software',
-        path: `${__dirname}/static/content/software`,
+        name: 'portfolio',
+        path: `${__dirname}/static/content/portfolio`,
       },
     },
     {
@@ -135,6 +135,12 @@ module.exports = {
             },
           },
         ],
+      },
+    },  
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `lawnsmatter`,
       },
     },
     'gatsby-plugin-sitemap',

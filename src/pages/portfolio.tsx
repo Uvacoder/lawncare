@@ -11,7 +11,7 @@ import theme from '../../config/theme'
 
 type PageProps = {
   data: {
-    software: {
+    portfolio: {
       nodes: {
         title: string
         slug: string
@@ -32,7 +32,7 @@ const Area = styled(animated.div)`
   }
 `
 
-const Software: React.FunctionComponent<PageProps> = ({ data: { software } }) => {
+const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio } }) => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -41,12 +41,12 @@ const Software: React.FunctionComponent<PageProps> = ({ data: { software } }) =>
 
   return (
     <Layout color={theme.colors.primary}>
-      <SEO title="Software | hellodave.club" />
+      <SEO title="Portfolio | hellodave.club" />
       <Area style={pageAnimation}>
-        {software.nodes.map(software => (
-          <GridItem key={software.slug} to={software.slug} aria-label={`View software "${software.title}"`}>
-            <Img fluid={software.cover.childImageSharp.fluid} />
-            <span>{software.title}</span>
+        {portfolio.nodes.map(portfolio => (
+          <GridItem key={portfolio.slug} to={portfolio.slug} aria-label={`View portfolio "${portfolio.title}"`}>
+            <Img fluid={portfolio.cover.childImageSharp.fluid} />
+            <span>{portfolio.title}</span>
           </GridItem>
         ))}
       </Area>
@@ -54,11 +54,11 @@ const Software: React.FunctionComponent<PageProps> = ({ data: { software } }) =>
   )
 }
 
-export default Software
+export default Portfolio
 
 export const query = graphql`
-  query Software {
-    software: allSoftwareYaml {
+  query Portfolio {
+    portfolio: allPortfolioYaml {
       nodes {
         title
         slug

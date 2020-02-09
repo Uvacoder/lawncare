@@ -18,11 +18,12 @@ const theme: ThemeShape = {
   // fontSizes: ['1rem', '1.2rem', '1.44rem', '1.728rem', '2.074rem', '2.488rem'],
   fontSizes: ['75%', '100%', '120%', '144%', '172.8%', '207.4%', '248.8%'],
   colors: {
-    active: '#ffd700',
-    primary: '#0B2E39',
-    secondary: '#494992',
+    active: '#90C03E',
+    primary: '#2B2C3E',
+    secondary: '#577C38',
     grey: '#58545a',
     shade: '#f5f5f5',
+    background: '#2B2C3E',
   },
   space: [
     '0',

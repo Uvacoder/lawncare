@@ -1,8 +1,4 @@
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hometurf/lawncare) [![Edit gappsapps](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/LeKoArts/gatsby-starter-portfolio-jodie/tree/master/)
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f51f5488-aa2d-4e42-baa7-4182d9e81c2e/deploy-status)](https://app.netlify.com/sites/portfolio-jodie/deploys) [![CircleCI](https://circleci.com/gh/LekoArts/gatsby-starter-portfolio-jodie.svg?style=svg)](https://circleci.com/gh/LekoArts/gatsby-starter-portfolio-jodie)
-
 - CSS-Grid powered layout with Sidebar
 - Large images & Instagram integration
 - Themeable pages & automatically adapting sidebar
@@ -105,13 +101,13 @@ You can configure your setup in `config/index.js`:
 
 ```JS
 module.exports = {
-  pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
+  pathPrefix: '/', // Prefix for all links."
 
 
   siteTitle: 'hellodave.club', // Navigation and Site Title
   siteTitleAlt: 'hellodave.club - services', // Alternative Site title for SEO
   siteTitleShort: 'hellodave.club', // short_name for manifest
-  siteHeadline: 'Take a look at Our Software, services and portfolio of recent projects.', // Headline for schema.org JSONLD
+  siteHeadline: 'Take a look at our services and see our recent projects.', // Headline for schema.org JSONLD
   siteUrl: 'https://hellodave.club', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
@@ -153,7 +149,7 @@ const theme: ThemeShape = {
   fontSizes: ['1rem', '1.2rem', '1.44rem', '1.728rem', '2.074rem', '2.488rem'],
   colors: {
     primary: '#c66131',
-    secondary: '#494992',
+    secondary: '#577C38',
     grey: '#646066',
     shade: '#f5f5f5',
   },

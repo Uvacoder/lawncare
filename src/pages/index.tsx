@@ -22,7 +22,7 @@ type PageProps = {
         cover: ChildImageSharp
       }[]
     }
-    softwareProjects: {
+    portfolioProjects: {
       nodes: {
         title: string
         slug: string
@@ -46,7 +46,7 @@ const Area = styled(animated.div)`
   grid-template-areas:
     'first-project multi-projects multi-projects'
     'about-us about-us about-us'
-    'software-projects software-projects software-projects';
+    'portfolio-projects portfolio-projects portfolio-projects';
 
   @media (max-width: ${props => props.theme.breakpoints[3]}) {
     grid-template-columns: repeat(4, 1fr);
@@ -55,7 +55,7 @@ const Area = styled(animated.div)`
     grid-template-areas:
       'first-project first-project  multi-projects multi-projects'
       'about-us about-us about-us about-us'
-      'software-projects software-projects software-projects software-projects';
+      'portfolio-projects portfolio-projects portfolio-projects portfolio-projects';
   }
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
@@ -67,8 +67,8 @@ const Area = styled(animated.div)`
       'multi-projects multi-projects'
       'multi-projects multi-projects'
       'multi-projects multi-projects'
-      'software-projects software-projects'
-      'software-projects software-projects';
+      'portfolio-projects portfolio-projects'
+      'portfolio-projects portfolio-projects';
   }
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
@@ -81,8 +81,8 @@ const Area = styled(animated.div)`
       'multi-projects'
       'multi-projects'
       'multi-projects'
-      'software-projects' 
-      'software-projects';
+      'portfolio-projects' 
+      'portfolio-projects';
   }
 `
 
@@ -110,8 +110,8 @@ const MultiProjects = styled.div`
     grid-template-rows: 1fr 1fr 1fr;
   }
 `
-const SoftwareProjects = styled.div`
-  grid-area: software-projects;
+const PortfolioProjects = styled.div`
+  grid-area: portfolio-projects;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
@@ -122,7 +122,7 @@ const SoftwareProjects = styled.div`
 `
 
 
-const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, multiProjects, softwareProjects, aboutUs } }) => {
+const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, multiProjects, portfolioProjects, aboutUs } }) => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -153,14 +153,14 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, multi
             </GridItem>
           ))}
         </MultiProjects>
-        <SoftwareProjects>
-          {softwareProjects.nodes.map(software => (
-            <GridItem to={software.slug} key={software.slug} aria-label={`View software "${software.title}"`}>
-              <Img fluid={software.cover.childImageSharp.fluid} />
-              <span>{software.title}</span>
+        <PortfolioProjects>
+          {portfolioProjects.nodes.map(portfolio => (
+            <GridItem to={portfolio.slug} key={portfolio.slug} aria-label={`View portfolio "${portfolio.title}"`}>
+              <Img fluid={portfolio.cover.childImageSharp.fluid} />
+              <span>{portfolio.title}</span>
             </GridItem>
           ))}
-        </SoftwareProjects>        
+        </PortfolioProjects>        
       </Area>
     </Layout>
   )
@@ -194,7 +194,7 @@ export const query = graphql`
         }
       }
     }
-    softwareProjects: allSoftwareYaml( limit:3 ) {
+    portfolioProjects: allPortfolioYaml( limit:3 ) {
       nodes {
         title
         slug

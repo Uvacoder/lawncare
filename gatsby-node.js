@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const webdevTemplate = require.resolve('./src/templates/webdev.tsx')
   const contactTemplate = require.resolve('./src/templates/contact.tsx')
   const aboutTemplate = require.resolve('./src/templates/about.tsx')
-  const softwareTemplate = require.resolve('./src/templates/software.tsx')
+  const portfolioTemplate = require.resolve('./src/templates/portfolio.tsx')
   const serviceTemplate = require.resolve('./src/templates/service.tsx')
   const webpageTemplate = require.resolve('./src/templates/webpage.tsx')
   const tagsTemplate = require.resolve('./src/templates/tags.tsx')
@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions }) => {
           tags
         }
       }
-      software: allSoftwareYaml {
+      portfolio: allPortfolioYaml {
         nodes {
           slug
           images
@@ -137,10 +137,10 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   }),
-  result.data.software.nodes.forEach(node => {
+  result.data.portfolio.nodes.forEach(node => {
     createPage({
       path: node.slug,
-      component: softwareTemplate,
+      component: portfolioTemplate,
       context: {
         slug: node.slug,
         images: `/${node.images}/`,

@@ -1,10 +1,10 @@
 module.exports = {
-  pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
+  pathPrefix: '/', // Prefix for all links. "
 
   siteTitle: 'hellodave.club', // Navigation and Site Title
   siteTitleAlt: 'hellodave.club - services', // Alternative Site title for SEO
   siteTitleShort: 'hellodave.club', // short_name for manifest
-  siteHeadline: 'Take a look at Our Software, services and portfolio of recent projects.', // Headline for schema.org JSONLD
+  siteHeadline: 'Take a look at our services and see our recent projects.', // Headline for schema.org JSONLD
   siteUrl: 'https://hellodave.club', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
@@ -19,5 +19,5 @@ module.exports = {
 
   // Manifest and Progress color
   themeColor: '#0B2E39',
-  backgroundColor: '#3b3c4f',
+  backgroundColor: '#2B2C3E',
 }

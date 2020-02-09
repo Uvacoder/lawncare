@@ -46,7 +46,7 @@ const PButton = styled(Button)<{ color: string }>`
 
 type PageProps = {
   data: {
-    software: {
+    portfolio: {
       title_detail: string
       color: string
       category: string
@@ -85,7 +85,7 @@ type PageProps = {
   }
 }
 
-const Software: React.FunctionComponent<PageProps> = ({ data: { software, images } }) => {
+const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio, images } }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -97,34 +97,34 @@ const Software: React.FunctionComponent<PageProps> = ({ data: { software, images
   const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
-    <Layout color={software.color}>
+    <Layout color={portfolio.color}>
       <SEO
-        pathname={software.slug}
-        title={`${software.title_detail} | hellodave.club`}
-        desc={software.desc}
-        node={software.parent}
-        banner={software.cover.childImageSharp.resize.src}
+        pathname={portfolio.slug}
+        title={`${portfolio.title_detail} | hellodave.club`}
+        desc={portfolio.desc}
+        node={portfolio.parent}
+        banner={portfolio.cover.childImageSharp.resize.src}
         individual
       />
-      <Content bg={software.color} py={10}>
+      <Content bg={portfolio.color} py={10}>
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
-        <animated.h1 style={titleAnimation}>{software.title_detail}</animated.h1>
+        <animated.h1 style={titleAnimation}>{portfolio.title_detail}</animated.h1>
           {images.nodes.map(image => (
             <Img alt={image.name} key={image.childImageSharp.fluid.src} fluid={image.childImageSharp.fluid} />
           ))}
         </PBox>
       </Content>
       <PBox py={10} px={[6, 6, 8, 10]}>
-        <Category style={categoryAnimation}>{software.category}</Category>
+        <Category style={categoryAnimation}>{portfolio.category}</Category>
 
         <Description style={descAnimation}>
-          <div dangerouslySetInnerHTML={{ __html: software.desc }} />
+          <div dangerouslySetInnerHTML={{ __html: portfolio.desc }} />
         </Description>
       </PBox>
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2>Want to start your own software?</h2>
+        <h2>Want to start your own portfolio?</h2>
         <Link to="/contactus">
-        <PButton color={software.color} py={4} px={8}>
+        <PButton color={portfolio.color} py={4} px={8}>
           Contact Us
         </PButton>
         </Link>
@@ -133,11 +133,11 @@ const Software: React.FunctionComponent<PageProps> = ({ data: { software, images
   )
 }
 
-export default Software
+export default Portfolio
 
 export const query = graphql`
-  query SoftwareTemplate($slug: String!, $images: String!) {
-    software: softwareYaml(slug: { eq: $slug }) {
+  query PortfolioTemplate($slug: String!, $images: String!) {
+    portfolio: portfolioYaml(slug: { eq: $slug }) {
       title_detail
       color
       category

@@ -7,6 +7,7 @@ import { Box, Flex } from '../elements'
 import theme from '../../config/theme'
 import reset from '../styles/reset'
 import Logo from './logo'
+/* import { Divider } from 'theme-ui' */
 
 const GlobalStyles = createGlobalStyle`
   *::before,
@@ -15,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
   }
   ::selection {
     color: white;
-    background-color: #f6993f;
+    background-color: #2B2C3E;
   }
   html {
     box-sizing: border-box;
@@ -88,7 +89,8 @@ const GlobalStyles = createGlobalStyle`
   }
   g { fill: ${theme.colors.active};
   }
-  
+
+
   ${reset}
 `
 
@@ -120,7 +122,7 @@ const SideBarInner = styled(Box)<{ bg: string }>`
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: centre;
 
   background: ${props => props.bg};
 
@@ -203,7 +205,7 @@ const Footer = styled.footer<{ color: string }>`
 type LayoutProps = { children: React.ReactNode } & typeof defaultProps
 
 const defaultProps = {
-  color: '#0B2E39',
+  color: '#2B2C3E',
 }
 
 interface QueryResult {
@@ -237,18 +239,22 @@ const Layout = ({ children, color }: LayoutProps) => {
               </Box>
               <Nav
                 color={color}
-                mt={[0, 0, 0, 10]}
+                mt={[10, 0, 0, 10]}
                 as="nav"
                 flexWrap="nowrap"
                 flexDirection={['row', 'row', 'row', 'column']}
-                alignItems="flex-start"
+                alignItems="center"
               >
+                
                 {data.navigation.nodes.map(item => (
                   <PartialNavLink to={item.link} key={item.name}>
                     {item.name}
+                    {/* <Divider color={theme.colors.secondary} width="275px" alignItems="center"/>   */}
                   </PartialNavLink>
                 ))}
+               
               </Nav>
+             
             </Flex>
           </SideBarInner>
           <Main>{children}</Main>

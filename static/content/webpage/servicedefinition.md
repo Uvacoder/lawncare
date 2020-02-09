@@ -1,13 +1,13 @@
 ---
 templateKey: 'webpage'
 slug: pages/servicedefinition
-color: "#1339AC"
+color: "#2B2C3E"
 title: 'Service definition'
 categtory: SEO
 sortorder: '3'
 image: /img/anas-alshanti-feXpdV001o4-unsplash.jpg
 imagecredit: Photo by Anas Alshanti on Unsplash
-name: Software
+name: Portfolio
 aggregateRating: 5 Star
 areaServed: United Kingdom
 map: 'polygon'
@@ -26,8 +26,8 @@ offers: Two websites for the price of two
 provider: Hometurf.systems
 providerMobility: Mobile
 review: A job well done
-serviceOutput: Software systems and websites
-serviceType: Software as a service
+serviceOutput: Portfolio systems and websites
+serviceType: Portfolio as a service
 termsOfService: 
 heading: Getting your data onto your system
 description: >-

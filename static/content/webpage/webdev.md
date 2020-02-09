@@ -1,7 +1,7 @@
 ---
 templateKey: 'webpage'
 slug: pages/webdevelopment
-color: "#1339AC"
+color: "#2B2C3E"
 title: Web development
 category: Web development
 image: /img/artiom-vallat-TAUdKZVWKGI-unsplash.jpg
@@ -80,7 +80,7 @@ pricing:
     monthly subscription plans to receive great coffee at your doorstep each
     month. Contact us about more details and payment info.
   plans:
-    - description: Software subscription.
+    - description: Portfolio subscription.
       items:
         - 3 lbs of coffee per month
         - Green or roasted beans"
@@ -92,7 +92,7 @@ pricing:
         - 6 lbs of coffee per month
         - Green or roasted beans
         - Up to 4 different varieties of beans
-      plan: Software subscription
+      plan: Portfolio subscription
       price: '£50/month'
     - description: Want a few tiny batches from different varieties? Try our custom plan
       items:
