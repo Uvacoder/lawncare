@@ -118,15 +118,18 @@ const Contact: React.FunctionComponent<PageProps> = ({ data: { contact, images }
         <Category style={categoryAnimation}>{contact.category}</Category>
         <Description style={descAnimation}>
           <div dangerouslySetInnerHTML={{ __html: contact.desc }} />
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
           <p>
           <label>Name <input type="text" name="name" /></label>
+          </p>
+          <p>
+          <label>Post Code <input type="text" name="postcode" /></label>
           </p>
           <p>
           <label>Email <input type="email" name="email" /></label>
           </p>
           <p>
-          <label>Message: <textarea name="message"></textarea></label>
+          <label>Message: <textarea name="message" placeholder="I am interested in receiving a lawn assessment and quote for your services.  "></textarea></label>
           </p>
           <p>
           <PButton type="submit" color={contact.color} py={4} px={8}>
