@@ -6,5 +6,7 @@
   link: "/portfolio"
 - name: "Instagram"
   link: "/instagram"
+- name: "Reviews"
+  link: "/reviews"
 - name: "Contact"
   link: "/contactus"

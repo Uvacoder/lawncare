@@ -11,7 +11,7 @@ sortorder: '1'
 description: Gatsby allows you to pull data from multiple sources for your website.
 intro:
   blurbs:
-    - image: /img/data-migration.png
+    - image: /images/data-migration.png
       text: >
         We sell green and roasted coffee beans that are sourced directly from
         independent farmers and farm cooperatives. We’re proud to offer a
@@ -35,13 +35,13 @@ main:
     optimal for the plants, farmers and the local environment.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
+    image: /images/products-grid3.jpg
   image2:
     alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
+    image: /images/products-grid2.jpg
   image3:
     alt: Coffee beans
-    image: /img/products-grid1.jpg
+    image: /images/products-grid1.jpg
 testimonials:
   - author: Philipp Trommler
     quote: >-
@@ -81,6 +81,6 @@ tags:
   - brewing
   - chemex
 ---
-![chemex](/img/chemex.jpg)
+![chemex](/images/chemex.jpg)
 
 This week we’ll **take** a look at all the steps required to make astonishing coffee with a Chemex at home. The Chemex Coffeemaker is a manual, pour-over style glass-container coffeemaker that Peter Schlumbohm invented in 1941, and which continues to be manufactured by the Chemex Corporation in Chicopee, Massachusetts.

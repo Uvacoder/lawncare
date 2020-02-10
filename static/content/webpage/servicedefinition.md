@@ -5,7 +5,7 @@ color: "#2B2C3E"
 title: 'Service definition'
 categtory: SEO
 sortorder: '3'
-image: /img/anas-alshanti-feXpdV001o4-unsplash.jpg
+image: /images/anas-alshanti-feXpdV001o4-unsplash.jpg
 imagecredit: Photo by Anas Alshanti on Unsplash
 name: Portfolio
 aggregateRating: 5 Star
@@ -37,7 +37,7 @@ description: >-
   anyone.
 intro:
   blurbs:
-    - image: /img/products-grid3.jpg
+    - image: /images/products-grid3.jpg
       imagecredit: 
       text: >
         We sell green and roasted coffee beans that are sourced directly from
@@ -60,13 +60,13 @@ main:
     optimal for the plants, farmers and the local environment.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
+    image: /images/products-grid3.jpg
   image2:
     alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
+    image: /images/products-grid2.jpg
   image3:
     alt: Coffee beans
-    image: /img/products-grid1.jpg
+    image: /images/products-grid1.jpg
 testimonials:
   - author: Elisabeth Kaurismäki
     quote: >-

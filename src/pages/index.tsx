@@ -36,17 +36,19 @@ type PageProps = {
         cover: ChildImageSharp
       }[]
     }
+    instagram: ChildImageSharp
   }
 }
 
 const Area = styled(animated.div)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 35vw 40vw 25vw;
+  grid-template-rows: 35vw 40vw 25vw 25vw;
   grid-template-areas:
     'first-project multi-projects multi-projects'
     'about-us about-us about-us'
-    'portfolio-projects portfolio-projects portfolio-projects';
+    'portfolio-projects portfolio-projects portfolio-projects'
+    'instagram instagram instagram';
 
   @media (max-width: ${props => props.theme.breakpoints[3]}) {
     grid-template-columns: repeat(4, 1fr);
@@ -55,7 +57,8 @@ const Area = styled(animated.div)`
     grid-template-areas:
       'first-project first-project  multi-projects multi-projects'
       'about-us about-us about-us about-us'
-      'portfolio-projects portfolio-projects portfolio-projects portfolio-projects';
+      'portfolio-projects portfolio-projects portfolio-projects portfolio-projects'
+      'instagram instagram instagram instagram';
   }
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
@@ -68,7 +71,8 @@ const Area = styled(animated.div)`
       'multi-projects multi-projects'
       'multi-projects multi-projects'
       'portfolio-projects portfolio-projects'
-      'portfolio-projects portfolio-projects';
+      'portfolio-projects portfolio-projects'
+      'instagram instagram';
   }
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
@@ -82,7 +86,8 @@ const Area = styled(animated.div)`
       'multi-projects'
       'multi-projects'
       'portfolio-projects' 
-      'portfolio-projects';
+      'portfolio-projects'
+      'instagram';
   }
 `
 
@@ -120,9 +125,12 @@ const PortfolioProjects = styled.div`
     grid-template-rows: 1fr 1fr 1fr;
   }
 `
+const Instagram = styled(GridItem)`
+  grid-area: instagram;
+`
 
 
-const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, multiProjects, portfolioProjects, aboutUs } }) => {
+const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, multiProjects, portfolioProjects, aboutUs, instagram } }) => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -160,7 +168,11 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, multi
               <span>{portfolio.title}</span>
             </GridItem>
           ))}
-        </PortfolioProjects>        
+        </PortfolioProjects>   
+        <Instagram to="/instagram" aria-label="See my Instagram pictures">
+        <Img fluid={instagram.cover.childImageSharp.fluid} />
+          <span>Instagram</span>
+        </Instagram>     
       </Area>
     </Layout>
   )
@@ -170,7 +182,7 @@ export default Index
 
 export const query = graphql`
   query Index {
-    firstProject: webdevYaml {
+    firstProject: reviewsYaml {
       title
       slug
       cover {
@@ -181,7 +193,7 @@ export const query = graphql`
         }
       }
     }
-    multiProjects: allWebdevYaml( limit:3 skip: 1) {
+    multiProjects: allReviewsYaml( limit:3 skip: 1) {
       nodes {
         title
         slug
@@ -216,6 +228,15 @@ export const query = graphql`
             fluid(quality: 95, maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp
             }
+          }
+        }
+      }
+    }
+    instagram: portfolioYaml(slug: {eq: "portfolio/instagrampics"}) {
+      cover {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80) {
+            src
           }
         }
       }

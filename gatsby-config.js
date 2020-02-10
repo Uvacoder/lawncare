@@ -48,7 +48,7 @@ module.exports = {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/img`,
+        path: `${__dirname}/static/images`,
         name: `images`,
       },
     },
@@ -69,8 +69,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'webdev',
-        path: `${__dirname}/static/content/webdev`,
+        name: 'reviews',
+        path: `${__dirname}/static/content/reviews`,
       },
     },
     {

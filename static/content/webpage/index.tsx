@@ -10,7 +10,7 @@ export default class WebPage extends React.Component {
         <div
           className="full-width-image margin-top-0"
           style={{
-          backgroundImage: `url('/img/daniel-josef-AMssSjUaTY4-unsplash.jpg')`,
+          backgroundImage: `url('/images/daniel-josef-AMssSjUaTY4-unsplash.jpg')`,
           backgroundPosition: `top left`,
           backgroundAttachment: `fixed`,
           }}

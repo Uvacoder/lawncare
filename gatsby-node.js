@@ -17,7 +17,7 @@ const wrapper = promise =>
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const webdevTemplate = require.resolve('./src/templates/webdev.tsx')
+  const reviewsTemplate = require.resolve('./src/templates/reviews.tsx')
   const contactTemplate = require.resolve('./src/templates/contact.tsx')
   const aboutTemplate = require.resolve('./src/templates/about.tsx')
   const portfolioTemplate = require.resolve('./src/templates/portfolio.tsx')
@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await wrapper(
     graphql(`{
-      webdev: allWebdevYaml {
+      reviews: allReviewsYaml {
         nodes {
           slug
           images
@@ -117,10 +117,10 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   }),
-  result.data.webdev.nodes.forEach(node => {
+  result.data.reviews.nodes.forEach(node => {
     createPage({
       path: node.slug,
-      component: webdevTemplate,
+      component: reviewsTemplate,
       context: {
         slug: node.slug,
         images: `/${node.images}/`,
