@@ -77,7 +77,7 @@ const Area = styled(animated.div)`
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 50vw);
+    grid-template-rows: repeat(11, 50vw);
 
     grid-template-areas:
     'first-project'  
