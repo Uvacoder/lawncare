@@ -225,7 +225,7 @@ const Layout = ({ children, color }: LayoutProps) => {
       <>
         <GlobalStyles />
         <Wrapper>
-          <SideBarInner bg={color} as="aside" p={[, 6, 8]}>
+          <SideBarInner bg={color} as="aside" p={[6, 6, 8]}>
             <Flex
               flexWrap="nowrap"
               flexDirection={['row', 'row', 'row', 'column']}
@@ -239,7 +239,7 @@ const Layout = ({ children, color }: LayoutProps) => {
               </Box>
               <Nav
                 color={color}
-                mt={[10, 0, 0, 10]}
+                mt={[0, 0, 0, 10]}
                 as="nav"
                 flexWrap="nowrap"
                 flexDirection={['row', 'row', 'row', 'column']}
