@@ -59,12 +59,12 @@
   desc: "Our consultant will identify the appropriate course of treatment to address any disease affecting your lawn. "
   tags: services
 - title: "Pest Control"
-  title_detail: "Getting rid of Beetles and other pests from your lawn. "
+  title_detail: "Beetles will spoil your lawn. "
   slug: "services/pestcontrol"
-  category: "pestcontrol"
+  category: "Pest Control."
   color: "#2B2C3E"
   images: "pestcontrol"
-  cover: "./pestcontrol/tom-arrowsmith-7HNftpNvqho-unsplash.jpg"
+  cover: "./pestcontrol/pestcontrol.jpg"
   image_credit: "Photo by Tom Arrowsmith on Unsplash"
   desc: "If your lawn is infested with pests, our consultant will recommend a course of treatment to get rid of the infestation. "
   tags: services

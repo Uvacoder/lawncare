@@ -67,7 +67,7 @@ const Area = styled(animated.div)`
 
     grid-template-areas:
       'first-project about-us'
-      'multi-projects multi-projects'
+      'about-us about-us'
       'multi-projects multi-projects'
       'multi-projects multi-projects'
       'portfolio-projects portfolio-projects'
@@ -80,8 +80,8 @@ const Area = styled(animated.div)`
     grid-template-rows: repeat(12, 50vw);
 
     grid-template-areas:
+    'first-project'  
       'about-us'
-      'first-project'
       'about-us'
       'about-us'
       'multi-projects'
@@ -90,7 +90,6 @@ const Area = styled(animated.div)`
       'portfolio-projects' 
       'portfolio-projects' 
       'portfolio-projects'
-      'instagram'
       'instagram';
   }
 `

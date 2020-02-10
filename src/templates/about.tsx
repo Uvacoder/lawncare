@@ -117,10 +117,20 @@ const About: React.FunctionComponent<PageProps> = ({ data: { about, images } }) 
         </Description>
       </PBox>
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2>Want to start your own project?</h2>
+        <h2></h2>
         <Link to="/contactus">
         <PButton color={about.color} py={4} px={8}>
           Contact Us
+        </PButton>
+        </Link>
+        <Link to="/about">
+        <PButton color={about.color} py={4} px={8}>
+          Find out more
+        </PButton>
+        </Link>
+        <Link to="/">
+        <PButton color={about.color} py={4} px={8}>
+          Return to main menu
         </PButton>
         </Link>
       </PBox>
