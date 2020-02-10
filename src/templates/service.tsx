@@ -121,7 +121,7 @@ const Service: React.FunctionComponent<PageProps> = ({ data: { service, images }
         </Description>
       </PBox>
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2>Want to start your own service?</h2>
+        <h2>Would you like a free lawn assessment and quote for our services?</h2>
         <Link to="/contactus">
         <PButton color={service.color} py={4} px={8}>
           Contact Us

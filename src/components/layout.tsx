@@ -4,10 +4,11 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import { readableColor } from 'polished'
 import 'typeface-work-sans'
 import { Box, Flex } from '../elements'
-import theme from '../../config/theme'
+import {  useColorMode, Select } from 'theme-ui'
+// import theme from '../../config/theme'
+import theme from '../gatsby-plugin-theme-ui/index'
 import reset from '../styles/reset'
 import Logo from './logo'
-/* import { Divider } from 'theme-ui' */
 
 const GlobalStyles = createGlobalStyle`
   *::before,
@@ -119,9 +120,8 @@ const SideBarInner = styled(Box)<{ bg: string }>`
   position: fixed;
   height: 100%;
   width: ${props => props.theme.sidebarWidth.big};
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  display: 'grid';
+  gridTemplateColumns: repeat(auto-fit, minmax(128px, 1fr));
   justify-content: centre;
 
   background: ${props => props.bg};
@@ -145,7 +145,8 @@ const Nav = styled(Flex)<{ color: string }>`
     text-decoration: none;
     color: ${props => readableColor(`${props.color}`)};
     font-size: ${props => props.theme.fontSizes[3]};
-    line-height: 1.75;
+    line-height: 1.5;
+    padding: .25rem;
     &:hover,
     &:focus,
     &.navlink-active {
@@ -205,7 +206,7 @@ const Footer = styled.footer<{ color: string }>`
 type LayoutProps = { children: React.ReactNode } & typeof defaultProps
 
 const defaultProps = {
-  color: '#2B2C3E',
+  color: theme.colors.background,
 }
 
 interface QueryResult {
@@ -219,7 +220,7 @@ interface QueryResult {
 
 const Layout = ({ children, color }: LayoutProps) => {
   const data: QueryResult = useStaticQuery(query)
-
+  const [colorMode, setColorMode] = useColorMode()
   return (
     <ThemeProvider theme={theme}>
       <>
@@ -262,6 +263,12 @@ const Layout = ({ children, color }: LayoutProps) => {
             <Box p={[6, 6, 8]} fontSize={0}>
               Website by <a href="https://www.gappsapps.co.uk">gappsapps.co.uk</a>
             </Box>
+            <button borderRadius='5px'
+        onClick={e => {
+          setColorMode(colorMode === 'light' ? 'dark' : 'light')
+        }}>
+        {colorMode === 'light' ? 'Dark' : 'Light'}
+      </button>
           </Footer>
         </Wrapper>
       </>

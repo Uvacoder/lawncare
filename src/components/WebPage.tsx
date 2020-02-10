@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import SEO from './SEO'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-import theme from '../../config/theme'
-
+// import { useColorMode } from 'theme-ui'
+// import theme from '../../config/theme'
+import theme from '../gatsby-plugin-theme-ui/index'
 
 export const WebPageTemplate = ({
   slug,

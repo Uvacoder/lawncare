@@ -144,6 +144,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-sitemap',
+    'gatsby-theme-overreacted-toggle',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

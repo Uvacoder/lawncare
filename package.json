@@ -28,6 +28,9 @@
   },
   "dependencies": {
     "@pake/react-color": "^3.0.0",
+    "@theme-ui/color-modes": "^0.3.1",
+    "@theme-ui/presets": "^0.3.0",
+    "@theme-ui/style-guide": "^0.3.0",
     "babel-plugin-styled-components": "^1.10.6",
     "codemirror": "^5.51.0",
     "gatsby": "^2.18.17",
@@ -48,6 +51,7 @@
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-source-filesystem": "^2.1.43",
     "gatsby-source-instagram": "^0.6.1",
+    "gatsby-theme-overreacted-toggle": "^1.0.2",
     "gatsby-transformer-remark": "^2.6.50",
     "gatsby-transformer-sharp": "^2.3.9",
     "gatsby-transformer-yaml": "^2.2.20",

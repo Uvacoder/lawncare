@@ -1,6 +1,8 @@
 import React from 'react'
 import WebPageIndex from '../../components/WebPageIndex'
-import theme from '../../../config/theme'
+// import { useColorMode } from 'theme-ui'
+// import theme from '../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui/index'
 
 export default class WebPageIndexPage extends React.Component {
   render() {

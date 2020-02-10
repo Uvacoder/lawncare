@@ -8,6 +8,16 @@
   image_credit: "Photo by Cole Keister on Unsplash"
   desc: "Our lawn assessments and consultation services are performed by a Lawn Care Professional, who is City and Guilds Qualified and City & Guilds NPTC Qualified in this field. All treatnments are also applied by our trained Lawn Care staff under the direction of a Qualified Consultant. "
   tags: About
+- title: "Service Area"
+  title_detail: "We are based in Oxfordshire."
+  slug: "about/location"
+  category: "About"
+  color: "#2B2C3E"
+  images: "location"
+  cover: "./location/lawnsmattervan.jpg"
+  image_credit: "Photo by Lawns Matter"
+  desc: "Our lawn assessments and consultation services are performed by a Lawn Care Professional. "
+  tags: About
 - title: "Our Passion"
   title_detail: "Beautiful Lawns are our passion."
   slug: "about/passion"

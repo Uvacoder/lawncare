@@ -7,7 +7,9 @@ import Layout from '../components/layout'
 import GridItem from '../components/grid-item'
 import SEO from '../components/SEO'
 import { ChildImageSharp } from '../types'
-import theme from '../../config/theme'
+// import { useColorMode } from 'theme-ui'
+// import theme from '../../config/theme'
+import theme from '../gatsby-plugin-theme-ui/index'
 
 type PageProps = {
   data: {
