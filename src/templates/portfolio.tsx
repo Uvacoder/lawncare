@@ -7,6 +7,7 @@ import { config, useSpring, animated } from 'react-spring'
 import Layout from '../components/layout'
 import { Box, AnimatedBox, Button } from '../elements'
 import SEO from '../components/SEO'
+// import Flippy, { FrontSide, BackSide } from 'react-flippy'
 
 const PBox = styled(AnimatedBox)`
   max-width: 1400px;
@@ -64,6 +65,13 @@ type PageProps = {
           }
         }
       }
+      before: {
+        childImageSharp: {
+          resize: {
+            src: string
+          }
+        }
+      }
     }
     images: {
       nodes: {
@@ -113,6 +121,22 @@ const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio, imag
             <Img alt={image.name} key={image.childImageSharp.fluid.src} fluid={image.childImageSharp.fluid} />
           ))}
         </PBox>
+{/*         <Flippy
+            flipOnHover={false} // default false
+            flipOnClick={true} // default false
+            flipDirection="horizontal" // horizontal or vertical
+            ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
+             // if you pass isFlipped prop component will be controlled component.
+             // and other props, which will go to div
+           //  style={{ width: '200px', height: '200px' }} /// these are optional style, it is not necessary
+            >
+             <FrontSide >
+               Rick
+               </FrontSide>
+              <BackSide >
+                ROCKS
+              </BackSide>
+            </Flippy> */}
       </Content>
       <PBox py={10} px={[6, 6, 8, 10]}>
         <Category style={categoryAnimation}>{portfolio.category}</Category>
@@ -151,6 +175,13 @@ export const query = graphql`
         }
       }
       cover {
+        childImageSharp {
+          resize(width: 1200, height: 675, quality: 80) {
+            src
+          }
+        }
+      }
+      before {
         childImageSharp {
           resize(width: 1200, height: 675, quality: 80) {
             src

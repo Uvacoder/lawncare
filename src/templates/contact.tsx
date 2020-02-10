@@ -118,13 +118,20 @@ const Contact: React.FunctionComponent<PageProps> = ({ data: { contact, images }
         <Category style={categoryAnimation}>{contact.category}</Category>
         <Description style={descAnimation}>
           <div dangerouslySetInnerHTML={{ __html: contact.desc }} />
+          <form name="contact" netlify>
+          <p>
+          <label>Name <input type="text" name="name" /></label>
+          </p>
+          <p>
+          <label>Email <input type="email" name="email" /></label>
+          </p>
+          <p>
+          <PButton type="submit" color={contact.color} py={4} px={8}>
+          Send
+          </PButton>
+          </p>
+          </form>
         </Description>
-      </PBox>
-      <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2>Want to start your own project?</h2>
-        <PButton color={contact.color} py={4} px={8}>
-          Contact Us
-        </PButton>
       </PBox>
     </Layout>
   )
