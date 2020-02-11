@@ -1,4 +1,18 @@
 
+- title: "About Us"
+  title_detail: "Lawns Matter Professional Lawn Care"
+  slug: "about/aboutus"
+  category: "About Us"
+  color: "#2B2C3E"
+  images: "aboutus"
+  cover: "./aboutus/aboutus.jpg"
+  image_credit: "Photo by Johannes Plenio on Unsplash"
+  desc: |
+   Lawns Matter are an independent, family run business based in Oxfordshire.  
+   We are passionate about lawns and pride ourselves on giving the customer a bespoke service using the best products the market has to offer.
+   We are City and Guilds trained and have a NPTC certification in the Safe use of Pesticides, we are also members of the The UK Lawn Care Network. 
+   We specialise is restoring and maintaining lawns which means you get great results at affordable prices back up with excellent customer service. 
+  tags: About
 - title: "Our Passion"
   title_detail: "Beautiful Lawns are our passion."
   slug: "about/passion"

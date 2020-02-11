@@ -32,7 +32,7 @@ const GridItem = styled(Link)`
   }
   &:hover {
     > div img {
-      transform: scale(1.4);
+      transform: scale(1.2);
     }
   }
 `
