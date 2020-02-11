@@ -1,10 +1,10 @@
 ---
-templateKey: 'webpage'
+templateKey: webpage
 slug: pages/reviewselopment
-color: "#2B2C3E"
-title: Web development
+color: '#2B2C3E'
+title: Web development Two
 category: Web development
-image: /images/artiom-vallat-TAUdKZVWKGI-unsplash.jpg
+image": /images/adi-goldstein-EUsVwEOsblE-unsplash.jpg
 imagecredit: Photo by Artiom Vallat on Unsplash
 heading: Great coffee with a conscience
 sortorder: '4'
@@ -86,21 +86,21 @@ pricing:
         - Green or roasted beans"
         - One or two varieties of beans"
       plan: Web hosting
-      price: '£15/month'
+      price: £15/month
     - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
       items:
         - 6 lbs of coffee per month
         - Green or roasted beans
         - Up to 4 different varieties of beans
       plan: Portfolio subscription
-      price: '£50/month'
+      price: £50/month
     - description: Want a few tiny batches from different varieties? Try our custom plan
       items:
         - Whatever you need
         - Green or roasted beans
         - Unlimited varieties
       plan: Web & software package
-      price: '£60/month'
+      price: £60/month
 tags:
   - brewing
   - chemex
