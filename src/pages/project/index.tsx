@@ -1,8 +1,8 @@
 import React from 'react'
-import BlogRoll from '../../components/BlogRoll'
+import PortfolioPage from '../../components/PortfolioPage'
 import theme from '../../gatsby-plugin-theme-ui/index'
 
-export default class BlogIndexPage extends React.Component {
+export default class ProjectIndexPage extends React.Component {
   render() {
     return (
       <div>
@@ -44,7 +44,7 @@ export default class BlogIndexPage extends React.Component {
                    }}>
                     Latest information
                   </h1>
-               <BlogRoll />
+               <PortfolioPage />
             </div>
             </div>
             </div>
