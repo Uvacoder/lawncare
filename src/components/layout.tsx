@@ -4,8 +4,8 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import { readableColor } from 'polished'
 import 'typeface-work-sans'
 import { Box, Flex } from '../elements'
-import {  useColorMode, Select, Grid } from 'theme-ui'
-// import theme from '../../config/theme'
+import {  useColorMode } from 'theme-ui'
+// import {  useColorMode, Button } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui/index'
 import reset from '../styles/reset'
 import Logo from './logo'
@@ -123,8 +123,10 @@ const SideBarInner = styled(Box)<{ bg: string }>`
   position: fixed;
   height: 100%;
   width: ${props => props.theme.sidebarWidth.big};
-  justify-content: center;
-
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   background: ${props => props.bg};
 
   @media (max-width: ${props => props.theme.breakpoints[4]}) {
@@ -147,7 +149,6 @@ const Nav = styled(Flex)<{ color: string }>`
     color: ${props => readableColor(`${props.color}`)};
     font-size: ${props => props.theme.fontSizes[3]};
     line-height: 1.5;
-    padding: .25rem;
     &:hover,
     &:focus,
     &.navlink-active {
@@ -221,29 +222,31 @@ interface QueryResult {
 
 const Layout = ({ children, color }: LayoutProps) => {
   const data: QueryResult = useStaticQuery(query)
-  const [colorMode, setColorMode] = useColorMode()
+  // const [colorMode, setColorMode] = useColorMode()
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
         <Wrapper >
-          <SideBarInner bg={color} as="aside" alignItems="center"  >
+          <SideBarInner bg={color} as="aside" p={[6, 6, 8]}>
             <Flex
-              flexWrap="nowrap"
+          //    flexWrap="nowrap"
               flexDirection={['row', 'row', 'row', 'column']}
-              alignItems={['center', 'center', 'center', 'flex-start']}
-              justifyContent="space-between"  
+              // alignItems={['center', 'center', 'center', 'flex-start']}
+            //      alignItems={['basline']}
+            //  justifyContent="space-between"  
             >
               <Nav
                 color={color}
-               mt={[0, 0, 0, 10]}
+               mt={[0, 0, 5, 5]}
                 as="nav"
                 // flexWrap="nowrap"
+             //   padding="0 2rem"
                 flexDirection={['row', 'row', 'row', 'column']}
                 alignItems="center"  
               >  
-                  <Box width={['3rem', '4rem', '5rem', '6rem']} >
-                <Link to="/" aria-label="Back to Home">
+                  <Box width={['3rem', '4rem', '5rem', '6rem']}>
+                <Link to="/" aria-label="Back to Home" >
                   <Logo />
                 </Link>
               </Box>
@@ -252,12 +255,12 @@ const Layout = ({ children, color }: LayoutProps) => {
                     {item.name}
                   </PartialNavLink>
                 ))}
-           
-                   <Box width={['3rem', '4rem', '5rem', '6rem']}>
-                   <a href = "mailto: jon@lawnsmatter.co.uk" ><Email /></a> 
+           <br />
+                   <Box width={['3rem', '4rem', '5rem', '6rem']}  padding="0 .5rem">
+                   <a href = "mailto: jon@lawnsmatter.co.uk" rel="nofollow"><Email /></a> 
                    </Box>
-                   <Box width={['3rem', '4rem', '5rem', '6rem']}>
-                   <a href = "tel:01295402447"><Phone /></a>
+                   <Box width={['3rem', '4rem', '5rem', '6rem']}  padding="0 .5rem">
+                   <a href = "tel:01295402447" rel="nofollow"><Phone /></a>
                    </Box>
                </Nav>
             </Flex>
@@ -267,12 +270,12 @@ const Layout = ({ children, color }: LayoutProps) => {
             <Box p={[6, 6, 8]} fontSize={0}>
               Website by <a href="https://www.gappsapps.co.uk">gappsapps.co.uk</a>
             </Box>
-            <button borderRadius='5px'
+{/*             <Button borderRadius='5px'
         onClick={e => {
           setColorMode(colorMode === 'light' ? 'dark' : 'light')
         }}>
         {colorMode === 'light' ? 'Dark' : 'Light'}
-      </button>
+      </Button> */}
           </Footer>
         </Wrapper>
       </>

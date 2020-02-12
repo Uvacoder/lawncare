@@ -1,15 +1,15 @@
 import React from 'react'
-import WebPageIndex from '../../components/WebPageIndex'
+import BlogRoll from '../../components/BlogRoll'
 import theme from '../../gatsby-plugin-theme-ui/index'
 
-export default class WebPageIndexPage extends React.Component {
+export default class BlogIndexPage extends React.Component {
   render() {
     return (
       <div>
         <div
           className="full-width-image margin-top-0"
           style={{
-            backgroundImage: `url('/images/moritz-kindler-G66K_ERZRhM-unsplash.jpg')`,
+            backgroundImage: `url('/img/moritz-kindler-G66K_ERZRhM-unsplash.jpg')`,
             backgroundPosition: `top left`,
             backgroundAttachment: `fixed`,
           }}
@@ -36,7 +36,7 @@ export default class WebPageIndexPage extends React.Component {
                        style={{
                        boxShadow: 'transparent',
                        borderRadius: '6px',
-                       backgroundColor: theme.primary,
+                       backgroundColor: theme.palette.primary.main,
                        color: 'white',
                        lineHeight: '1',
                        padding: '0.3em',
@@ -44,7 +44,7 @@ export default class WebPageIndexPage extends React.Component {
                    }}>
                     Latest information
                   </h1>
-               <WebPageIndex />
+               <BlogRoll />
             </div>
             </div>
             </div>
