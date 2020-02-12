@@ -104,14 +104,14 @@ module.exports = {
   pathPrefix: '/', // Prefix for all links."
 
 
-  siteTitle: 'hellodave.club', // Navigation and Site Title
-  siteTitleAlt: 'hellodave.club - services', // Alternative Site title for SEO
-  siteTitleShort: 'hellodave.club', // short_name for manifest
+  siteTitle: 'lawnsmatter.co.uk', // Navigation and Site Title
+  siteTitleAlt: 'lawnsmatter.co.uk - services', // Alternative Site title for SEO
+  siteTitleShort: 'lawnsmatter.co.uk', // short_name for manifest
   siteHeadline: 'Take a look at our services and see our recent projects.', // Headline for schema.org JSONLD
-  siteUrl: 'https://hellodave.club', // Domain of your site. No trailing slash!
+  siteUrl: 'https://lawnsmatter.co.uk', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
-  siteDescription: 'hellodave.club',
+  siteDescription: 'lawnsmatter.co.uk',
   author: 'gappsapps', // Author for schema.org JSONLD
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional

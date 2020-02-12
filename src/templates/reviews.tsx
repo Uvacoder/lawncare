@@ -100,7 +100,7 @@ const Reviews: React.FunctionComponent<PageProps> = ({ data: { reviews, images }
     <Layout color={reviews.color}>
       <SEO
         pathname={reviews.slug}
-        title={`${reviews.title_detail} | hellodave.club`}
+        title={`${reviews.title_detail} | lawnsmatter.co.uk`}
         desc={reviews.desc}
         node={reviews.parent}
         banner={reviews.cover.childImageSharp.resize.src}

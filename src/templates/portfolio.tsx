@@ -108,7 +108,7 @@ const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio, imag
     <Layout color={portfolio.color}>
       <SEO
         pathname={portfolio.slug}
-        title={`${portfolio.title_detail} | hellodave.club`}
+        title={`${portfolio.title_detail} | lawnsmatter.co.uk`}
         desc={portfolio.desc}
         node={portfolio.parent}
         banner={portfolio.cover.childImageSharp.resize.src}

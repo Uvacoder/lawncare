@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 type Props = { url: string; title: string; desc: string; image: string; locale: string } & typeof defaultProps
 
 const defaultProps = {
-  name: '',
+  name: 'lawnsmatter',
   type: 'website',
 }
 

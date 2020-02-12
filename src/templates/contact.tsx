@@ -100,7 +100,7 @@ const Contact: React.FunctionComponent<PageProps> = ({ data: { contact, images }
     <Layout color={Contact.color}>
       <SEO
         pathname={contact.slug}
-        title={`${contact.title_detail} | hellodave.club`}
+        title={`${contact.title_detail} | lawnsmatter.co.uk`}
         desc={contact.desc}
         node={contact.parent}
         banner={contact.cover.childImageSharp.resize.src}

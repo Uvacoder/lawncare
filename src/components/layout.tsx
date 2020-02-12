@@ -4,11 +4,13 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import { readableColor } from 'polished'
 import 'typeface-work-sans'
 import { Box, Flex } from '../elements'
-import {  useColorMode, Select } from 'theme-ui'
+import {  useColorMode, Select, Grid } from 'theme-ui'
 // import theme from '../../config/theme'
 import theme from '../gatsby-plugin-theme-ui/index'
 import reset from '../styles/reset'
 import Logo from './logo'
+import Phone from './phone'
+import Email from './email'
 
 const GlobalStyles = createGlobalStyle`
   *::before,
@@ -82,7 +84,7 @@ const GlobalStyles = createGlobalStyle`
   a {
     transition: all 0.3s ease-in-out;
     color: black;
-    text-decoration: underline;
+    text-decoration: none;
     &:hover,
     &:focus {
       color: ${theme.colors.active};
@@ -107,8 +109,9 @@ const PartialNavLink = ({ children, to, ...rest }: { children: React.ReactNode; 
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: ${props => props.theme.sidebarWidth.big} 1fr;
+
   @media (max-width: ${props => props.theme.breakpoints[4]}) {
-    grid-template-columns: ${props => props.theme.sidebarWidth.normal} 1fr;
+   grid-template-columns: ${props => props.theme.sidebarWidth.normal} 1fr;
   }
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
@@ -120,9 +123,7 @@ const SideBarInner = styled(Box)<{ bg: string }>`
   position: fixed;
   height: 100%;
   width: ${props => props.theme.sidebarWidth.big};
-  display: 'grid';
-  gridTemplateColumns: repeat(auto-fit, minmax(128px, 1fr));
-  justify-content: centre;
+  justify-content: center;
 
   background: ${props => props.bg};
 
@@ -168,7 +169,7 @@ const Nav = styled(Flex)<{ color: string }>`
       margin-left: ${props => props.theme.space[2]};
     }
   }
-`
+` 
 
 const Main = styled.main`
   @media (min-width: calc(${props => props.theme.breakpoints[2]} + 1px)) {
@@ -225,37 +226,40 @@ const Layout = ({ children, color }: LayoutProps) => {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <Wrapper>
-          <SideBarInner bg={color} as="aside" p={[6, 6, 8]}>
+        <Wrapper >
+          <SideBarInner bg={color} as="aside" alignItems="center"  >
             <Flex
               flexWrap="nowrap"
               flexDirection={['row', 'row', 'row', 'column']}
               alignItems={['center', 'center', 'center', 'flex-start']}
-              justifyContent="space-between"
+              justifyContent="space-between"  
             >
-              <Box width={['3rem', '4rem', '5rem', '6rem']}>
-                <Link to="/" aria-label="Back to Home" >
+              <Nav
+                color={color}
+               mt={[0, 0, 0, 10]}
+                as="nav"
+                // flexWrap="nowrap"
+                flexDirection={['row', 'row', 'row', 'column']}
+                alignItems="center"  
+              >  
+                  <Box width={['3rem', '4rem', '5rem', '6rem']} >
+                <Link to="/" aria-label="Back to Home">
                   <Logo />
                 </Link>
               </Box>
-              <Nav
-                color={color}
-                mt={[0, 0, 0, 10]}
-                as="nav"
-                flexWrap="nowrap"
-                flexDirection={['row', 'row', 'row', 'column']}
-                alignItems="center"
-              >
-                
                 {data.navigation.nodes.map(item => (
                   <PartialNavLink to={item.link} key={item.name}>
                     {item.name}
-                    {/* <Divider color={theme.colors.secondary} width="275px" alignItems="center"/>   */}
                   </PartialNavLink>
                 ))}
-               
-              </Nav>
-             
+           
+                   <Box width={['3rem', '4rem', '5rem', '6rem']}>
+                   <a href = "mailto: jon@lawnsmatter.co.uk" ><Email /></a> 
+                   </Box>
+                   <Box width={['3rem', '4rem', '5rem', '6rem']}>
+                   <a href = "tel:01295402447"><Phone /></a>
+                   </Box>
+               </Nav>
             </Flex>
           </SideBarInner>
           <Main>{children}</Main>

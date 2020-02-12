@@ -43,7 +43,7 @@ const About: React.FunctionComponent<PageProps> = ({ data: { about } }) => {
 
   return (
     <Layout color={theme.colors.primary}>
-      <SEO title="About | hellodave.club" />
+      <SEO title="About | lawnsmatter.co.uk" />
       <Area style={pageAnimation}>
         {about.nodes.map(about => (
           <GridItem key={about.slug} to={about.slug} aria-label={`View about "${about.title}"`}>

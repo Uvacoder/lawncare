@@ -96,7 +96,7 @@ const About: React.FunctionComponent<PageProps> = ({ data: { about, images } }) 
     <Layout color={about.color}>
       <SEO
         pathname={about.slug}
-        title={`${about.title_detail} | hellodave.club`}
+        title={`${about.title_detail} | lawnsmatter.co.uk`}
         desc={about.desc}
         node={about.parent}
         banner={about.cover.childImageSharp.resize.src}

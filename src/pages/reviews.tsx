@@ -43,7 +43,7 @@ const Reviews: React.FunctionComponent<PageProps> = ({ data: { reviews } }) => {
 
   return (
     <Layout color={theme.colors.primary}>
-      <SEO title="Website development | hellodave.club" />
+      <SEO title="Website development | lawnsmatter.co.uk" />
       <Area style={pageAnimation}>
         {reviews.nodes.map(reviews => (
           <GridItem key={reviews.slug} to={reviews.slug} aria-label={`View reviews "${reviews.title}"`}>

@@ -43,7 +43,7 @@ const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio } }) 
 
   return (
     <Layout color={theme.colors.primary}>
-      <SEO title="Portfolio | hellodave.club" />
+      <SEO title="Portfolio | lawnsmatter.co.uk" />
       <Area style={pageAnimation}>
         {portfolio.nodes.map(portfolio => (
           <GridItem key={portfolio.slug} to={portfolio.slug} aria-label={`View portfolio "${portfolio.title}"`}>

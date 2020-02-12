@@ -1,4 +1,3 @@
-
 - title: "About Us"
   title_detail: "Lawns Matter Professional Lawn Care"
   slug: "about/aboutus"
@@ -13,7 +12,7 @@
    We are City and Guilds trained and have a NPTC certification in the Safe use of Pesticides, we are also members of the The UK Lawn Care Network. 
    We specialise is restoring and maintaining lawns which means you get great results at affordable prices back up with excellent customer service. 
   tags: About
-- title: "Our Passion"
+- title: "The benefits of Lawn Care"
   title_detail: "Beautiful Lawns are our passion."
   slug: "about/passion"
   category: "Passion"
@@ -23,14 +22,14 @@
   image_credit: "Photo by Johannes Plenio on Unsplash"
   desc: "We are passionate about beautiful lawns and are devoting our working lives to create them for our customers. "
   tags: About
-- title: "Qualified & Professional"
+- title: "Why choose us?"
   title_detail: "Fully Qualified Lawn Care Service Provider"
-  slug: "about/quals"
-  category: "About"
+  slug: "about/whyus"
+  category: "Why choose us?"
   color: "#2B2C3E"
-  images: "quals"
-  cover: "./quals/qualifications.png"
-  image_credit: "Photo by Cole Keister on Unsplash"
+  images: "whyus"
+  cover: "./whyus/whyus.jpg"
+  image_credit: "Photo by Lawns Matter on client site. "
   desc: "Our lawn assessments and consultation services are performed by a Lawn Care Professional, who is City and Guilds Qualified and City & Guilds NPTC Qualified in this field. All treatnments are also applied by our trained Lawn Care staff under the direction of a Qualified Consultant. "
   tags: About
 - title: "Service Area"
@@ -42,26 +41,6 @@
   cover: "./location/lawnsmattervan.jpg"
   image_credit: "Photo by Lawns Matter"
   desc: "Our lawn assessments and consultation services are performed by a Lawn Care Professional. "
-  tags: About
-- title: "We don't do mowing"
-  title_detail: "We do not provide a mowing service, however, we can provide advice."
-  slug: "about/wedontmow"
-  category: "Mowing advice"
-  color: "#2B2C3E"
-  images: "wedontmow"
-  cover: "./wedontmow/remi-muller-LlHgaeBwYVE-unsplash.jpg"
-  image_credit: "Photo by Stefan Stefancik on Unsplash"
-  desc: "We are passionate about making lawns grow and thrive. We do not provide a mowing service, but we can provide instructions on how and when you should mow your lawn to complement the treatments that are being applied to give the best overall results. "
-  tags: About
-- title: "Nuts about lawns"
-  title_detail: "If you are going nuts about the quality of your lawn, get in touch. "
-  slug: "about/nuts"
-  category: "nuts"
-  color: "#2B2C3E"
-  images: "nuts"
-  cover: "./nuts/vincent-van-zalinge-G92J78wQHDg-unsplash.jpg"
-  image_credit: "Photo by Lee Campbell on Unsplash"
-  desc: "We devote our lives to creating beautiful lawns for our customers and we are looking for new projects. "
   tags: About
 - title: "Thanks"
   title_detail: "Thanks to the contributors at unsplash for their photographs"

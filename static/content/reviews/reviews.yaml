@@ -39,12 +39,12 @@
   desc: "Highly Recommend, Very Professional. We are very pleased with the results so far!"
   tags: reviews
 - title: "Customer satisfaction"
-  title_detail: "We want to create beautiful lawns for our customers and when we are satisfied our customers are satisfied too.  "
-  slug: "reviews/purrfect"
-  category: "Customer satisfaction"
+  title_detail: "We want to create beautiful lawns for our customers.  "
+  slug: "reviews/satisfaction"
+  category: "Customer Satisfaction"
   color: "#2B2C3E"
-  images: "purrfect"
-  cover: "./purrfect/anna-breaux-j2Ga_lspbJk-unsplash.jpg"
+  images: "satisfaction"
+  cover: "./satisfaction/customersatisfaction.jpg"
   image_credit: "Photo by Anna Breaux on Unsplash"
   desc: "Highly Recommend, Very Professional. We are very pleased with the results so far!"
   tags: reviews

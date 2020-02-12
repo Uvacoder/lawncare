@@ -151,7 +151,7 @@ class WebPage extends React.Component {
     return (
       <div>
 
-      <SEO title="${webpage.frontmatter.title} | hellodave.club" />
+      <SEO title="${webpage.frontmatter.title} | lawnsmatter.co.uk" />
         {webpages &&  webpages.map(({ node: webpage }) => (
             <div className="is-parent column is-6" key={webpage.id}>
               <article
