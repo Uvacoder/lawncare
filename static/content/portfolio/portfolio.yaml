@@ -102,7 +102,7 @@
   category: "Instagram"
   color: "#2B2C3E"
   images: "instagrampics"
-  before: "./instagrampics/instagram.jpg"
+  before: "./instagrampics/lawnsmatter.png"
   cover: "./instagrampics/instagram.jpg"
   image_credit: "Photo by Lawns Matter on client site"
   desc: "Before and after pictures."
