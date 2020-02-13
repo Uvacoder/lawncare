@@ -5,21 +5,21 @@ color: '#1339AC'
 title: Data migration
 title_detail: project1 title detail
 category: Data
-image": /images/markus-spiske-iar-afB0QQw-unsplash.jpg
+image": /img/markus-spiske-iar-afB0QQw-unsplash.jpg
 imagecredit: Photo by Patrick Lindenberg on Unsplash
 heading: Getting your data onto your system
 sortorder: '1'
 description: Gatsby allows you to pull data from multiple sources for your website.
 intro:
   blurbs:
-    - image: /images/data-migration.png
+    - image: /img/data-migration.png
       text: >
         We sell green and roasted coffee beans that are sourced directly from
         independent farmers and farm cooperatives. We’re proud to offer a
         variety of coffee beans grown with great care for the environment and
         local communities. Check our post or contact us directly for current
         availability.
-    - image: /images/markus-spiske-iar-afB0QQw-unsplash.jpg
+    - image: /img/markus-spiske-iar-afB0QQw-unsplash.jpg
       text: Getting your data presented on your website
   heading: What we offer
   description: >
@@ -36,13 +36,13 @@ main:
     optimal for the plants, farmers and the local environment.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
-    image: /images/products-grid3.jpg
+    image: /img/products-grid3.jpg
   image2:
     alt: A green cup of a coffee on a wooden table
-    image: /images/products-grid2.jpg
+    image: /img/products-grid2.jpg
   image3:
     alt: Coffee beans
-    image: /images/products-grid1.jpg
+    image: /img/products-grid1.jpg
 testimonials:
   - author: Philipp Trommler
     quote: >-
@@ -82,6 +82,6 @@ tags:
   - brewing
   - chemex
 ---
-![chemex](/images/chemex.jpg)
+![chemex](/img/chemex.jpg)
 
 This week we’ll **take** a look at all the steps required to make astonishing coffee with a Chemex at home. The Chemex Coffeemaker is a manual, pour-over style glass-container coffeemaker that Peter Schlumbohm invented in 1941, and which continues to be manufactured by the Chemex Corporation in Chicopee, Massachusetts.

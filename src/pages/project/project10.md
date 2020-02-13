@@ -3,10 +3,11 @@ templateKey: project
 slug: project10
 title: project10
 title_detail: "project1 title detail"
+featured: true
 category: projectcategory
-cover: /images/sharon-mccutcheon-fSlCxR0dnZY-unsplash.jpg
-cover_alt: Photo by Ekko Puji on Unsplash
-before: /images/artem-beliaikin-fwO3tUXoy7U-unsplash.jpg
+cover: /img/sharon-mccutcheon-fSlCxR0dnZY-unsplash.jpg
+cover_alt: Photo by Sharon McCutcheon on Unsplash
+before: /img/artem-beliaikin-fwO3tUXoy7U-unsplash.jpg
 before_alt: Photo by Artem Beliaikin on Unsplash
 heading: Software and services for your growing business 
 subheading: We provide systems and services to enable businesses to thrive on their own home turf. 
@@ -16,13 +17,13 @@ main:
   description: 'Hometurfsystems.com is in its development phase and is not yet live. '
   image1:
     alt: Hometurf.systems CRM
-    image: /images/sheri-hooley-OYGx12FElcA-unsplash.jpg
+    image: /img/sheri-hooley-OYGx12FElcA-unsplash.jpg
   image2:
     alt: Hometurf.systems Accounts
-    image: /images/frantzou-fleurine-cg92SZiKGis-unsplash.jpg
+    image: /img/frantzou-fleurine-cg92SZiKGis-unsplash.jpg
   image3:
     alt: Hometurf.systems marketing
-    image: /images/alejandro-alas-fd85rEFOS1Q-unsplash.jpg
+    image: /img/alejandro-alas-fd85rEFOS1Q-unsplash.jpg
 testimonials:
   - author: Test Case1
     quote: >-
@@ -33,10 +34,10 @@ testimonials:
       Kaldi is the place to go if you want the best quality coffee. I love their
       stance on empowering farmers and transparency.
 tags:
-  - brewing
+  - project
   - chemex
 ---
-![chemex](/images/alexey-turenkov-AF36q06J8fQ-unsplash.jpg)
+![chemex](/img/alexey-turenkov-AF36q06J8fQ-unsplash.jpg)
 
 This week we’ll **take** a look at all the steps required to make astonishing coffee with a Chemex at home. The Chemex Coffeemaker is a manual, pour-over style glass-container coffeemaker that Peter Schlumbohm invented in 1941, and which continues to be manufactured by the Chemex Corporation in Chicopee, Massachusetts.
 

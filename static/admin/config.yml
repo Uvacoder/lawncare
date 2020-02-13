@@ -7,17 +7,44 @@ backend:
     delete: 'Delete {{collection}} “{{slug}}”'
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
-media_folder: static/images
-public_folder: /images
+
+media_folder: static/img
+public_folder: /img
 publish_mode: editorial_workflow
 collections:  
-  - name: "webpages"
-    label: "webpages"
-    folder:  "static/content/webpage"
+  - name: "testimonial"
+    label: "testimonial"
+    folder:  "src/pages/testimonial"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "webpage"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial"}
+      - {label: "slug", name: "slug", widget: "string"}
+      - {label: "quote", name: "quote", widget: "string"} 
+      - {label: "author", name: "author", widget: "string"}
+      - {label: "date", name: "date", widget: "string"}
+  - name: "sections"
+    label: "sections"
+    folder:  "src/pages/sections"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sections"}
+      - {label: "slug", name: "slug", widget: "string"}
+      - {label: "title", name: "title", widget: "string"} 
+      - {label: "title_detail", name: "title_detail", widget: "string"}
+      - {label: "category", name: "category", widget: "string"}
+      - {label: "cover", name: cover", widget: "image"}      
+      - {label: "Alt", name: "alt", widget: "string"}
+      - {label: 'Main content', name: 'body', widget: 'markdown' }
+      - {label: "Tags", name: "tags", widget: "list"}
+  - name: "webpages"
+    label: "webpages"
+    folder:  "src/pages/webpages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "webpages"}
       - {label: "slug", name: "slug", widget: "string"}
       - {label: "title", name: "title", widget: "string"} 
       - {label: "title_detail", name: "title_detail", widget: "string"}

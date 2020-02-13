@@ -48,7 +48,7 @@ module.exports = {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/images`,
+        path: `${__dirname}/static/img`,
         name: `images`,
       },
     },
@@ -57,13 +57,6 @@ module.exports = {
       options: {
         name: 'pages',
         path: `${__dirname}/src/pages`,
-      },
-    }, 
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'projects',
-        path: `${__dirname}/src/pages/project`,
       },
     }, 
     {
@@ -124,17 +117,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [`400`, `700`]
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -166,6 +148,17 @@ module.exports = {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `lawnsmatter`,
+      },
+    }, 
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`]
+          },
+        ],
       },
     },
     'gatsby-plugin-sitemap',

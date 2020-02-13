@@ -9,7 +9,7 @@ export default class WebPageIndexPage extends React.Component {
         <div
           className="full-width-image margin-top-0"
           style={{
-            backgroundImage: `url('/images/moritz-kindler-G66K_ERZRhM-unsplash.jpg')`,
+            backgroundImage: `url('/img/moritz-kindler-G66K_ERZRhM-unsplash.jpg')`,
             backgroundPosition: `top left`,
             backgroundAttachment: `fixed`,
           }}
