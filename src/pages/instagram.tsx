@@ -107,7 +107,7 @@ type Props = {
         id: string
         timestamp: number
         likes: number
-        localFile: ChildImageSharp
+        original: string
       }[]
     }
   }
@@ -169,13 +169,19 @@ export default Instagram
 
 export const query = graphql`
 query Instagram {
-  instagram: allInstaNode(sort: {fields: timestamp, order: DESC}, limit: 30) {
+  instagram: allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 30) {
     nodes {
       caption
       id
       timestamp
-      original
       likes
+      localFile {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 600, maxHeight: 600) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   }
 }
