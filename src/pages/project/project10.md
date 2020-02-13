@@ -4,7 +4,7 @@ slug: project10
 title: project10
 title_detail: "project1 title detail"
 category: projectcategory
-cover: /images/ekko-puji-k7tyY8az6Bc-unsplash.jpg
+cover: /images/sharon-mccutcheon-fSlCxR0dnZY-unsplash.jpg
 cover_alt: Photo by Ekko Puji on Unsplash
 before: /images/artem-beliaikin-fwO3tUXoy7U-unsplash.jpg
 before_alt: Photo by Artem Beliaikin on Unsplash

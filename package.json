@@ -103,9 +103,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hometurf/gappsapps"
+    "url": "https://github.com/hometurf/lawncare"
   },
   "bugs": {
-    "url": "https://github.com/hometurf/gappsapps/issues"
+    "url": "https://github.com/hometurf/lawncare/issues"
   }
 }

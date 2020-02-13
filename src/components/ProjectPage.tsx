@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class PortfolioPage extends React.Component {
+class ProjectPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: projects } = data.allMarkdownRemark
@@ -14,11 +14,11 @@ class PortfolioPage extends React.Component {
           projects.map(({ node: project }) => (
             <div className="is-parent column is-6" key={project.id}>
                 <header>
-                  {project.frontmatter.cover ? (
+                  {project.frontmatter.cover.childImageSharp ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage 
                         imageInfo={{
-                          image: project.frontmatter.cover,
+                          image: project.frontmatter.cover.childImageSharp,
                           alt: `featured image thumbnail  ${project.frontmatter.cover_alt}`,
                         }}
                       />
@@ -51,7 +51,7 @@ class PortfolioPage extends React.Component {
   }
 }
 
-PortfolioPage.propTypes = {
+ProjectPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -61,8 +61,8 @@ PortfolioPage.propTypes = {
 
 export default () => (
   <StaticQuery
-    query={graphql`query PortfolioPageQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "portfolio"}}}) {
+    query={graphql`query ProjectPageQuery {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}) {
         edges {
           node {
             id
@@ -92,6 +92,6 @@ export default () => (
     }
     
     `}
-    render={(data, count) => <PortfolioPage data={data} count={count} />}
+    render={(data, count) => <ProjectPage data={data} count={count} />}
   />
 )

@@ -7,7 +7,8 @@ import { config, useSpring, animated } from 'react-spring'
 import Layout from '../components/layout'
 import { Box, AnimatedBox, Button } from '../elements'
 import SEO from '../components/SEO'
-// import Flippy, { FrontSide, BackSide } from 'react-flippy'
+import { ChildImageSharp } from '../types'
+
 
 const PBox = styled(AnimatedBox)`
   max-width: 1400px;
@@ -48,34 +49,15 @@ const PButton = styled(Button)<{ color: string }>`
 type PageProps = {
   data: {
     portfolio: {
+      title: string
       title_detail: string
       color: string
       category: string
       desc: string
       slug: string
-      image_credit: string
-      parent: {
-        modifiedTime: string
-        birthTime: string
-      }
+      before_alt: string
+      cover_alt: string
       cover: {
-        childImageSharp: {
-          resize: {
-            src: string
-          }
-        }
-      }
-      before: {
-        childImageSharp: {
-          resize: {
-            src: string
-          }
-        }
-      }
-    }
-    images: {
-      nodes: {
-        name: string
         childImageSharp: {
           fluid: {
             aspectRatio: number
@@ -88,12 +70,26 @@ type PageProps = {
             srcSetWebp: string
           }
         }
-      }[]
+      }
+      before: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: number
+            src: string
+            srcSet: string
+            sizes: string
+            base64: string
+            tracedSVG: string
+            srcWebp: string
+            srcSetWebp: string
+          }
+        }
+      }
     }
   }
 }
 
-const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio, images } }) => {
+const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio } }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -110,33 +106,16 @@ const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio, imag
         pathname={portfolio.slug}
         title={`${portfolio.title_detail} | lawnsmatter.co.uk`}
         desc={portfolio.desc}
-        node={portfolio.parent}
-        banner={portfolio.cover.childImageSharp.resize.src}
+        banner={portfolio.cover.childImageSharp.fluid.srcWebp}
         individual
       />
       <Content bg={portfolio.color} py={10}>
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
-        <animated.h1 style={titleAnimation}>{portfolio.title_detail}</animated.h1>
-          {images.nodes.map(image => (
-            <Img alt={image.name} key={image.childImageSharp.fluid.src} fluid={image.childImageSharp.fluid} />
-          ))}
+        <animated.h1 style={titleAnimation}>portfolio.title</animated.h1>
+ 
+            <Img alt={portfolio.cover_alt} key={portfolio.cover.childImageSharp.fluid.src} fluid={portfolio.cover.childImageSharp.fluid} />
+  
         </PBox>
-{/*         <Flippy
-            flipOnHover={false} // default false
-            flipOnClick={true} // default false
-            flipDirection="horizontal" // horizontal or vertical
-            ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-             // if you pass isFlipped prop component will be controlled component.
-             // and other props, which will go to div
-           //  style={{ width: '200px', height: '200px' }} /// these are optional style, it is not necessary
-            >
-             <FrontSide >
-               Rick
-               </FrontSide>
-              <BackSide >
-                ROCKS
-              </BackSide>
-            </Flippy> */}
       </Content>
       <PBox py={10} px={[6, 6, 8, 10]}>
         <Category style={categoryAnimation}>{portfolio.category}</Category>
@@ -160,44 +139,45 @@ const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio, imag
 export default Portfolio
 
 export const query = graphql`
-  query PortfolioTemplate($slug: String!, $images: String!) {
+  query PortfolioTemplate($slug: String) {
     portfolio: portfolioYaml(slug: { eq: $slug }) {
       title_detail
+      title
       color
       category
       desc
       slug
-      image_credit
-      parent {
-        ... on File {
-          modifiedTime
-          birthTime
+      before_alt
+      cover_alt
+      before {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80) {
+            base64
+            tracedSVG
+            srcWebp
+            srcSetWebp
+            originalImg
+            originalName
+            presentationWidth
+            presentationHeight
+          }
         }
       }
       cover {
         childImageSharp {
-          resize(width: 1200, height: 675, quality: 80) {
-            src
-          }
-        }
-      }
-      before {
-        childImageSharp {
-          resize(width: 1200, height: 675, quality: 80) {
-            src
-          }
-        }
-      }
-    }
-    images: allFile(filter: { relativePath: { regex: $images } }, sort: { fields: name, order: DESC }) {
-      nodes {
-        name
-        childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 80) {
+            base64
+            tracedSVG
+            srcWebp
+            srcSetWebp
+            originalImg
+            originalName
+            presentationWidth
+            presentationHeight
           }
         }
       }
     }
   }
+  
 `

@@ -1,95 +1,133 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import Content, { HTMLContent } from '../components/Content'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
+import { config, animated, useSpring } from 'react-spring'
+import Layout from '../components/layout'
+import SEO from '../components/SEO'
+import { ChildImageSharp } from '../types'
+import { Box, AnimatedBox, Button } from '../elements'
+import theme from '../gatsby-plugin-theme-ui/index'
+import { transparentize, readableColor } from 'polished'
+import GridItem from '../components/grid-item'
 
-export const ProjectTemplate = ({
-  content,
-  contentComponent,
-  description,
-  tags,
-  title,
-  helmet,
-}) => {
-  const ProjectContent = contentComponent || Content
+const PBox = styled(AnimatedBox)`
+  max-width: 1400px;
+  margin: 0 auto;
+`
 
-  return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <ProjectContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+const Content = styled(Box)<{ bg: string }>`
+  background-color: ${props => transparentize(0.9, props.bg)};
 
-ProjectTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object,
-}
+  .gatsby-image-wrapper:not(:last-child) {
+    margin-bottom: ${props => props.theme.space[10]};
 
-const Project = ({ data }) => {
-  const { markdownRemark: project } = data
+    @media (max-width: ${props => props.theme.breakpoints[3]}) {
+      margin-bottom: ${props => props.theme.space[8]};
+    }
+  }
+`
+const Category = styled(AnimatedBox)`
+  letter-spacing: 0.05em;
+  font-size: ${props => props.theme.fontSizes[1]};
+  text-transform: uppercase;
+`
 
-  return (
-    <div>
-      <ProjectTemplate
-        content={project.html}
-        contentComponent={HTMLContent}
-        description={project.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Projects">
-            <title>{`${project.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${project.frontmatter.description}`}
-            />
-          </Helmet>
+const Description = styled(animated.div)`
+  max-width: 960px;
+  letter-spacing: -0.003em;
+  --baseline-multiplier: 0.179;
+  --x-height-multiplier: 0.35;
+  line-height: 1.58;
+`
+
+const PButton = styled(Button)<{ color: string }>`
+  background: ${props => (props.color === 'white' ? 'black' : props.color)};
+  color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
+`
+
+
+type PageProps = {
+  data: {
+    project: {
+      id: string
+      rawMarkdownBody: markdown
+      frontmatter: {
+        title: string
+        title_detail: string
+        category: string
+        description: string
+        Before: ChildImageSharp
+        before_alt: string
+        tags: list
+        cover: ChildImageSharp
+        cover_alt: string
+        testimonials: {
+          author: string
+          quote: string
         }
-        tags={project.frontmatter.tags}
-        title={project.frontmatter.title}
+        slug: string
+        templateKey: string
+        main: {
+          heading: string
+          description: string
+          image1: {
+            image: ChildImageSharp
+            alt: string
+          }
+          image2: {
+            alt: string
+            image: ChildImageSharp
+          }
+          image3: {
+            alt: string
+            image: ChildImageSharp
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+const ProjectTemplate: React.FunctionComponent<PageProps> = ({ data: { project } }) => {
+
+
+  const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
+  const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
+  const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
+
+  return (
+    <Layout color={theme.colors.primary}>
+      <SEO
+        pathname={project.frontmatter.slug}
+        title={`${project.frontmatter.title_detail} | lawnsmatter.co.uk`}
+        desc={project.frontmatter.description}
+        individual
       />
-    </div>
+       <Content bg={theme.colors.primary} py={10}>
+        <animated.h1 style={titleAnimation}>{project.frontmatter.title_detail}</animated.h1>
+      </Content>      
+
+      <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
+        <h2>Would you like a free lawn assessment and quote for our services?</h2>
+        <Link to="/contactus">
+        <PButton color={theme.colors.primary} py={4} px={8}>
+          Contact Us
+        </PButton>
+        </Link>
+      </PBox>
+    </Layout>
   )
 }
+export default ProjectTemplate
 
-Project.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
 
-export default Project
-
-export const pageQuery = graphql`  query ProjectByID($id: String!) {
-  markdownRemark(id: { eq: $id })  {
+export const query = graphql`  
+ query ProjectTemplate($id: String!) {
+  project: markdownRemark(id: { eq: $id })  {
     id
-    html
     frontmatter {
       title
       title_detail
@@ -155,7 +193,7 @@ export const pageQuery = graphql`  query ProjectByID($id: String!) {
         }
       }
     }
+    rawMarkdownBody
   }
 }
-
 `
