@@ -168,21 +168,15 @@ const Instagram: React.FunctionComponent<Props> = ({
 export default Instagram
 
 export const query = graphql`
-  query Instagram {
-    instagram: allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 30) {
-      nodes {
-        caption
-        id
-        timestamp
-        likes
-        localFile {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 600, maxHeight: 600) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
+query Instagram {
+  allInstaNode(sort: {fields: timestamp, order: DESC}, limit: 30) {
+    nodes {
+      caption
+      id
+      timestamp
+      original
+      likes
     }
   }
+}
 `

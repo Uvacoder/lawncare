@@ -3,6 +3,7 @@ templateKey: webpage
 slug: pages/datamigration
 color: '#1339AC'
 title: Data migration
+title_detail: project1 title detail
 category: Data
 image": /images/markus-spiske-iar-afB0QQw-unsplash.jpg
 imagecredit: Photo by Patrick Lindenberg on Unsplash

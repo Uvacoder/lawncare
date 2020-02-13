@@ -61,33 +61,36 @@ PortfolioPage.propTypes = {
 
 export default () => (
   <StaticQuery
-    query={graphql`
-      query PortfolioPageQuery {
-        allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}) {
-          edges {
-            node {
-              excerpt(pruneLength: 400)
-              id
-              fields {
-                slug
+    query={graphql`query PortfolioPageQuery {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}) {
+        edges {
+          node {
+            id
+            excerpt(pruneLength: 400)
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              title_detail
+              templateKey
+              category
+              description
+              cover {
+                childImageSharp {
+                  sizes(maxWidth: 1200, quality: 80) {
+                    src
+                  }
+                }
               }
-              frontmatter {
-                title
-                title_detail
-                templateKey
-                category
-                description
-                cover
-                cover_alt
-                before
-                before_alt
-                heading
-                subheading
-              }
+              heading
+              subheading
             }
           }
         }
       }
+    }
+    
     `}
     render={(data, count) => <PortfolioPage data={data} count={count} />}
   />

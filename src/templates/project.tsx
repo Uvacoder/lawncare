@@ -86,22 +86,76 @@ Project.propTypes = {
 
 export default Project
 
-export const pageQuery = graphql`
-  query ProjectByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
-      frontmatter {
-        title
-        title_detail
-        category
-        cover
-        cover_alt
+export const pageQuery = graphql`  query ProjectByID($id: String!) {
+  markdownRemark(id: { eq: $id })  {
+    id
+    html
+    frontmatter {
+      title
+      title_detail
+      category
+      description
+      before {
+        id
+        childImageSharp {
+          sizes(maxWidth: 1200, quality: 80) {
+            src
+          }
+        }
+      }
+      before_alt
+      tags
+      cover {
+        id
+        childImageSharp {
+          sizes(maxWidth: 1200, quality: 80) {
+            src
+          }
+        }
+      }
+      cover_alt
+      testimonials {
+        author
+        quote
+      }
+      slug
+      templateKey
+      main {
+        heading
         description
-        before
-        before_alt
-        tags
+        image1 {
+          image {
+            childImageSharp {
+              sizes(maxWidth: 1200, quality: 80) {
+                src
+              }
+            }
+          }
+          alt
+        }
+        image2 {
+          alt
+          image {
+            childImageSharp {
+              sizes(maxWidth: 1200, quality: 80) {
+                src
+              }
+            }
+          }
+        }
+        image3 {
+          alt
+          image {
+            childImageSharp {
+              sizes(maxWidth: 1200, quality: 80) {
+                src
+              }
+            }
+          }
+        }
       }
     }
   }
+}
+
 `
