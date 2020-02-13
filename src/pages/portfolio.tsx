@@ -17,7 +17,7 @@ type PageProps = {
       nodes: {
         title: string
         slug: string
-        cover: ChildImageSharp
+        cover: string
       }[]
     }
   }
@@ -47,7 +47,7 @@ const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio } }) 
       <Area style={pageAnimation}>
         {portfolio.nodes.map(portfolio => (
           <GridItem key={portfolio.slug} to={portfolio.slug} aria-label={`View portfolio "${portfolio.title}"`}>
-            <Img fluid={portfolio.cover.childImageSharp.fluid} />
+            <Img fluid={portfolio.cover} />
             <span>{portfolio.title}</span>
           </GridItem>
         ))}
@@ -65,12 +65,8 @@ export const query = graphql`
         title
         slug
         cover {
-          childImageSharp {
-            fluid(quality: 95, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
+          id
+        } 
       }
     }
   }

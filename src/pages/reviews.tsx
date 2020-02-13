@@ -47,7 +47,7 @@ const Reviews: React.FunctionComponent<PageProps> = ({ data: { reviews } }) => {
       <Area style={pageAnimation}>
         {reviews.nodes.map(reviews => (
           <GridItem key={reviews.slug} to={reviews.slug} aria-label={`View reviews "${reviews.title}"`}>
-            <Img fluid={reviews.cover.childImageSharp.fluid} />
+            <Img fluid={reviews.cover} />
             <span>{reviews.title}</span>
           </GridItem>
         ))}

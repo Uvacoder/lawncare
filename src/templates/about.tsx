@@ -99,7 +99,7 @@ const About: React.FunctionComponent<PageProps> = ({ data: { about, images } }) 
         title={`${about.title_detail} | lawnsmatter.co.uk`}
         desc={about.desc}
         node={about.parent}
-        banner={about.cover.childImageSharp.resize.src}
+        banner={about.cover}
         individual
       />
       <Content bg={about.color} py={10}>
