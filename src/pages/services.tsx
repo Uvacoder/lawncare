@@ -14,7 +14,7 @@ type PageProps = {
       nodes: {
         title: string
         slug: string
-        cover: string
+        cover: ChildImageSharp
       }[]
     }
   }
@@ -44,7 +44,7 @@ const Services: React.FunctionComponent<PageProps> = ({ data: { services } }) =>
       <Area style={pageAnimation}>
         {services.nodes.map(services => (
           <GridItem key={services.slug} to={services.slug} aria-label={`View services "${services.title}"`}>
-            <Img fluid={services.cover} />
+            <Img fluid={services.cover.childImageSharp.fluid} />
             <span>{services.title}</span>
           </GridItem>
         ))}

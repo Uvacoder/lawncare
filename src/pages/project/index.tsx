@@ -9,7 +9,7 @@ export default class ProjectIndexPage extends React.Component {
         <div
           className="full-width-image margin-top-0"
           style={{
-            backgroundImage: `url('/img/moritz-kindler-G66K_ERZRhM-unsplash.jpg')`,
+            backgroundImage: `url('/images/moritz-kindler-G66K_ERZRhM-unsplash.jpg')`,
             backgroundPosition: `top left`,
             backgroundAttachment: `fixed`,
           }}
@@ -36,7 +36,7 @@ export default class ProjectIndexPage extends React.Component {
                        style={{
                        boxShadow: 'transparent',
                        borderRadius: '6px',
-                       backgroundColor: theme.palette.primary.main,
+                       backgroundColor: theme.primary,
                        color: 'white',
                        lineHeight: '1',
                        padding: '0.3em',

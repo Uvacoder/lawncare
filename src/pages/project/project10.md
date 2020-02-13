@@ -1,7 +1,7 @@
 ---
 templateKey: project
-slug: project1
-title: project1
+slug: project10
+title: project10
 title_detail: "project1 title detail"
 category: projectcategory
 cover: /images/ekko-puji-k7tyY8az6Bc-unsplash.jpg
