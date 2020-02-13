@@ -169,7 +169,7 @@ export default Instagram
 
 export const query = graphql`
 query Instagram {
-  allInstaNode(sort: {fields: timestamp, order: DESC}, limit: 30) {
+  instagram: allInstaNode(sort: {fields: timestamp, order: DESC}, limit: 30) {
     nodes {
       caption
       id
