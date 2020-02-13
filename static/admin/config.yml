@@ -37,9 +37,9 @@ collections:
       - {label: "title", name: "title", widget: "string"} 
       - {label: "title_detail", name: "title_detail", widget: "string"}
       - {label: "category", name: "category", widget: "string"}
-      - {label: "cover", name: cover", widget: "image"}      
+      - {label: "cover", name: cover", widget: "string"}      
       - {label: "cover_alt", name: "cover_alt", widget: "string"}
-      - {label: "before", name: before", widget: "image"}      
+      - {label: "before", name: before", widget: "string"}      
       - {label: "before_alt", name: "before_alt", widget: "string"}
       - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
       - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
