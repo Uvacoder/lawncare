@@ -23,6 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const portfolioTemplate = require.resolve('./src/templates/portfolio.tsx')
   const serviceTemplate = require.resolve('./src/templates/service.tsx')
   const webpageTemplate = require.resolve('./src/templates/webpage.tsx')
+  const projectTemplate = require.resolve('./src/templates/project.tsx')
   const tagsTemplate = require.resolve('./src/templates/tags.tsx')
  
 
