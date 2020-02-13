@@ -73,10 +73,16 @@ export default () => (
               }
               frontmatter {
                 title
+                title_detail
                 templateKey
+                category
                 description
                 cover
                 cover_alt
+                before
+                before_alt
+                heading
+                subheading
               }
             }
           }
