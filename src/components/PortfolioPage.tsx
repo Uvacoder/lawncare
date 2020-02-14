@@ -72,10 +72,7 @@ export default () => (
             }
             frontmatter {
               title
-              title_detail
               templateKey
-              category
-              description
               cover {
                 childImageSharp {
                   sizes(maxWidth: 1200, quality: 80) {
@@ -83,8 +80,6 @@ export default () => (
                   }
                 }
               }
-              heading
-              subheading
             }
           }
         }

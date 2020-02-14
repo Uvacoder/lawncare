@@ -81,7 +81,6 @@ export default () => (
                 frontmatter {
                   title
                   templateKey
-                  featured
                   cover {
                     childImageSharp {
                       fluid(maxWidth: 400, quality: 80) {

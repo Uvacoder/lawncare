@@ -54,9 +54,6 @@ type PageProps = {
       rawMarkdownBody: markdown
       frontmatter: {
         title: string
-        title_detail: string
-        category: string
-        description: string
         Before: ChildImageSharp
         before_alt: string
         tags: list
@@ -68,28 +65,10 @@ type PageProps = {
         }
         slug: string
         templateKey: string
-        main: {
-          heading: string
-          description: string
-          image1: {
-            image: ChildImageSharp
-            alt: string
-          }
-          image2: {
-            alt: string
-            image: ChildImageSharp
-          }
-          image3: {
-            alt: string
-            image: ChildImageSharp
-          }
-        }
       }
     }
   }
 }
-
-
 
 const ProjectTemplate: React.FunctionComponent<PageProps> = ({ data: { project } }) => {
 
@@ -102,12 +81,12 @@ const ProjectTemplate: React.FunctionComponent<PageProps> = ({ data: { project }
     <Layout color={theme.colors.primary}>
       <SEO
         pathname={project.frontmatter.slug}
-        title={`${project.frontmatter.title_detail} | lawnsmatter.co.uk`}
+        title={`${project.frontmatter.title} | lawnsmatter.co.uk`}
         desc={project.frontmatter.description}
         individual
       />
        <Content bg={theme.colors.primary} py={10}>
-        <animated.h1 style={titleAnimation}>{project.frontmatter.title_detail}</animated.h1>
+        <animated.h1 style={titleAnimation}>{project.frontmatter.title}</animated.h1>
       </Content>      
 
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
@@ -126,18 +105,15 @@ export default ProjectTemplate
 
 export const query = graphql`  
  query ProjectTemplate($id: String!) {
-  project: markdownRemark(id: { eq: $id })  {
+  project: markdownRemark(id: {eq: $id}) {
     id
     frontmatter {
       title
-      title_detail
-      category
-      description
       before {
         id
         childImageSharp {
           sizes(maxWidth: 1200, quality: 80) {
-            src                                                         
+            src
           }
         }
       }
@@ -158,42 +134,7 @@ export const query = graphql`
       }
       slug
       templateKey
-      main {
-        heading
-        description
-        image1 {
-          image {
-            childImageSharp {
-              sizes(maxWidth: 1200, quality: 80) {
-                src
-              }
-            }
-          }
-          alt
-        }
-        image2 {
-          alt
-          image {
-            childImageSharp {
-              sizes(maxWidth: 1200, quality: 80) {
-                src
-              }
-            }
-          }
-        }
-        image3 {
-          alt
-          image {
-            childImageSharp {
-              sizes(maxWidth: 1200, quality: 80) {
-                src
-              }
-            }
-          }
-        }
-      }
     }
-    rawMarkdownBody
   }
 }
 `
