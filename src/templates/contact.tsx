@@ -118,24 +118,35 @@ const Contact: React.FunctionComponent<PageProps> = ({ data: { contact, images }
         <Category style={categoryAnimation}>{contact.category}</Category>
         <Description style={descAnimation}>
           <div dangerouslySetInnerHTML={{ __html: contact.desc }} />
+
           <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
-          <p>
-          <label>Name <input type="text" name="name" /></label>
-          </p>
-          <p>
-          <label>Post Code <input type="text" name="postcode" /></label>
-          </p>
-          <p>
-          <label>Email <input type="email" name="email" /></label>
-          </p>
-          <p>
-          <label>Message: <textarea name="message" placeholder="I am interested in receiving a lawn assessment and quote for your services.  "></textarea></label>
-          </p>
-          <p>
+            <table>
+            <thead>
+            <tr>
+            <th>Contact us</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr> 
+              <td><label>Name</label></td> <td><input type="text" name="name" /></td>
+              </tr>
+              <tr> 
+              <td><label>Post Code</label></td> <td><input type="text" name="postcode" /></td>
+              </tr>
+              <tr> 
+              <td><label>Email</label></td> <td> <input type="email" name="email" /></td>
+              </tr>
+              <tr> 
+              <td><label>Message: </label></td> <td><textarea name="message" placeholder="I am interested in receiving a lawn assessment and quote for your services.  "></textarea></td>
+              </tr>
+            </tbody>
+            </table>
+
+   
           <PButton type="submit" color={contact.color} py={4} px={8}>
           Send
           </PButton>
-          </p>
+         
           </form>
         </Description>
       </PBox>
