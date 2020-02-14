@@ -1,8 +1,8 @@
 import React from 'react'
-import ProjectIndex from '../../components/ProjectIndex'
+import SectionIndex from '../../components/SectionIndex'
 import theme from '../../gatsby-plugin-theme-ui/index'
 
-export default class ProjectIndexPage extends React.Component {
+export default class SectionIndexPage extends React.Component {
   render() {
     return (
       <div>
@@ -42,9 +42,9 @@ export default class ProjectIndexPage extends React.Component {
                        padding: '0.3em',
             
                    }}>
-                    Our project portfolio
+                    Our section portfolio
                   </h1>
-              <ProjectIndex />
+              <SectionIndex />
             </div>
             </div>
             </div>

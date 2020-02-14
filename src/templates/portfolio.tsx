@@ -7,7 +7,7 @@ import { config, useSpring, animated } from 'react-spring'
 import Layout from '../components/layout'
 import { Box, AnimatedBox, Button } from '../elements'
 import SEO from '../components/SEO'
-import { ChildImageSharp } from '../types'
+// import { ChildImageSharp } from '../types'
 
 
 const PBox = styled(AnimatedBox)`

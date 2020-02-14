@@ -23,34 +23,27 @@ collections:
       - {label: "quote", name: "quote", widget: "string"} 
       - {label: "author", name: "author", widget: "string"}
       - {label: "date", name: "date", widget: "string"}
-  - name: "sections"
-    label: "sections"
-    folder:  "src/pages/sections"
+  - name: "section"
+    label: "section"
+    folder:  "src/pages/section"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sections"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "section"}
       - {label: "slug", name: "slug", widget: "string"}
       - {label: "title", name: "title", widget: "string"} 
-      - {label: "title_detail", name: "title_detail", widget: "string"}
-      - {label: "category", name: "category", widget: "string"}
-      - {label: "cover", name: cover", widget: "image"}      
-      - {label: "Alt", name: "alt", widget: "string"}
-      - {label: 'Main content', name: 'body', widget: 'markdown' }
-      - {label: "Tags", name: "tags", widget: "list"}
-  - name: "webpages"
-    label: "webpages"
-    folder:  "src/pages/webpages"
+  - name: "webpage"
+    label: "webpage"
+    folder:  "src/pages/webpage"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "webpages"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "webpage"}
       - {label: "slug", name: "slug", widget: "string"}
       - {label: "title", name: "title", widget: "string"} 
-      - {label: "title_detail", name: "title_detail", widget: "string"}
       - {label: "category", name: "category", widget: "string"}
       - {label: "cover", name: cover", widget: "image"}      
-      - {label: "Alt", name: "alt", widget: "string"}
+      - {label: "cover_alt", name: "cover_alt", widget: "string"}
       - {label: 'Main content', name: 'body', widget: 'markdown' }
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "project"

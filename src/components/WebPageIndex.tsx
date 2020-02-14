@@ -17,11 +17,11 @@ class WebPageIndex extends React.Component {
                 className={`blog-list-item tile is-child box notification `}
               >
                 <header>
-                  {webpage.frontmatter.image ? (
+                  {webpage.frontmatter.cover ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage 
                         imageInfo={{
-                          image: webpage.frontmatter.image,
+                          image: webpage.frontmatter.cover,
                           alt: `featured image thumbnail for webpage ${webpage.frontmatter.title}`,
                         }}
                       />
@@ -80,7 +80,7 @@ export default () => (
               slug
               title
               templateKey
-              image {
+              cover {
                 id
                 childImageSharp {
                   resize(width: 1200, height: 675, quality: 80) {
@@ -88,7 +88,7 @@ export default () => (
                   }
                 }
               }
-              imagecredit
+              cover_alt
               tags
               sortorder
               description

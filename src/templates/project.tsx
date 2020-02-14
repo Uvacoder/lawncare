@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import Layout from '../components/layout'
@@ -9,7 +9,7 @@ import { ChildImageSharp } from '../types'
 import { Box, AnimatedBox, Button } from '../elements'
 import theme from '../gatsby-plugin-theme-ui/index'
 import { transparentize, readableColor } from 'polished'
-import GridItem from '../components/grid-item'
+// import GridItem from '../components/grid-item'
 
 const PBox = styled(AnimatedBox)`
   max-width: 1400px;
@@ -27,19 +27,19 @@ const Content = styled(Box)<{ bg: string }>`
     }
   }
 `
-const Category = styled(AnimatedBox)`
+/* const Category = styled(AnimatedBox)`
   letter-spacing: 0.05em;
   font-size: ${props => props.theme.fontSizes[1]};
   text-transform: uppercase;
-`
+` */
 
-const Description = styled(animated.div)`
+/* const Description = styled(animated.div)`
   max-width: 960px;
   letter-spacing: -0.003em;
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
   line-height: 1.58;
-`
+` */
 
 const PButton = styled(Button)<{ color: string }>`
   background: ${props => (props.color === 'white' ? 'black' : props.color)};
@@ -51,12 +51,10 @@ type PageProps = {
   data: {
     project: {
       id: string
-      rawMarkdownBody: markdown
       frontmatter: {
         title: string
         Before: ChildImageSharp
         before_alt: string
-        tags: list
         cover: ChildImageSharp
         cover_alt: string
         testimonials: {
@@ -74,15 +72,15 @@ const ProjectTemplate: React.FunctionComponent<PageProps> = ({ data: { project }
 
 
   const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
-  const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
+/*   const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
   const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
-
+ */
   return (
     <Layout color={theme.colors.primary}>
       <SEO
         pathname={project.frontmatter.slug}
         title={`${project.frontmatter.title} | lawnsmatter.co.uk`}
-        desc={project.frontmatter.description}
+        desc={project.frontmatter.title}
         individual
       />
        <Content bg={theme.colors.primary} py={10}>
@@ -109,6 +107,7 @@ export const query = graphql`
     id
     frontmatter {
       title
+      category
       before {
         id
         childImageSharp {

@@ -3,28 +3,28 @@ import PropTypes from 'prop-types'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class ProjectIndex extends React.Component {
+class SectionIndex extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: projects } = data.allMarkdownRemark
+    const { edges: sections } = data.allMarkdownRemark
 
     return (
       <div className="columns is-multiline">
-        {projects &&
-          projects.map(({ node: project }) => (
-            <div className="is-parent column is-6" key={project.id}>
+        {sections &&
+          sections.map(({ node: section }) => (
+            <div className="is-parent column is-6" key={section.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
-                  project.frontmatter.featured ? 'is-featured' : ''
+                  section.frontmatter.featured ? 'is-featured' : ''
                 }`}
               >
                 <header>
-                  {project.frontmatter.cover ? (
+                  {section.frontmatter.cover ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
-                          image: project.frontmatter.cover,
-                          alt: `featured image thumbnail for service ${project.frontmatter.title}`,
+                          image: section.frontmatter.cover,
+                          alt: `featured image thumbnail for service ${section.frontmatter.title}`,
                         }}
                       />
                     </div>
@@ -33,20 +33,20 @@ class ProjectIndex extends React.Component {
                   <span> &bull; </span>
                     <Link
                       className="has-text-weight-semibold is-size-3"
-                      to={project.fields.slug}
+                      to={section.fields.slug}
                     >
-                      {project.frontmatter.title}
+                      {section.frontmatter.title}
                     </Link>
                     <span className="subtitle is-size-5 is-block">
-                      {project.frontmatter.date}
+                      {section.frontmatter.date}
                     </span>
                   </p>
                 </header>
                 <h3 className="has-text-weight-semibold is-size-5">
-                  {project.excerpt}
+                  {section.excerpt}
                   <br />
                   <br />
-                  <Link className="button" to={project.fields.slug}>
+                  <Link className="button" to={section.fields.slug}>
                     Keep Reading →
                   </Link>
                 </h3>
@@ -58,7 +58,7 @@ class ProjectIndex extends React.Component {
   }
 }
 
-ProjectIndex.propTypes = {
+SectionIndex.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -69,8 +69,8 @@ ProjectIndex.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query ProjectIndexQuery {
-        allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}) {
+      query SectionIndexQuery {
+        allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "section"}}}) {
             edges {
               node {
                 excerpt(pruneLength: 400)
@@ -94,6 +94,6 @@ export default () => (
           }
         }
     `}
-    render={(data, count) => <ProjectIndex data={data} count={count} />}
+    render={(data, count) => <SectionIndex data={data} count={count} />}
   />
 )

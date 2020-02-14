@@ -7,6 +7,7 @@ import { config, useSpring, animated } from 'react-spring'
 import Layout from '../components/layout'
 import { Box, AnimatedBox, Button } from '../elements'
 import SEO from '../components/SEO'
+import theme from '../gatsby-plugin-theme-ui/index'
 
 const PBox = styled(AnimatedBox)`
   max-width: 1400px;
@@ -31,13 +32,6 @@ const Category = styled(AnimatedBox)`
   text-transform: uppercase;
 `
 
-const Description = styled(animated.div)`
-  max-width: 960px;
-  letter-spacing: -0.003em;
-  --baseline-multiplier: 0.179;
-  --x-height-multiplier: 0.35;
-  line-height: 1.58;
-`
 
 const PButton = styled(Button)<{ color: string }>`
   background: ${props => (props.color === 'white' ? 'black' : props.color)};
@@ -47,45 +41,18 @@ const PButton = styled(Button)<{ color: string }>`
 type PageProps = {
   data: {
     service: {
-      title_detail: string
-      color: string
+      title: string
       category: string
-      desc: string
       slug: string
-      image_credit: string
-      parent: {
-        modifiedTime: string
-        birthTime: string
-      }
-      cover: {
-        childImageSharp: {
-          resize: {
-            src: string
-          }
-        }
-      }
-    }
-    images: {
-      nodes: {
-        name: string
-        childImageSharp: {
-          fluid: {
-            aspectRatio: number
-            src: string
-            srcSet: string
-            sizes: string
-            base64: string
-            tracedSVG: string
-            srcWebp: string
-            srcSetWebp: string
-          }
-        }
-      }[]
+      templateKey: string
+      tags: string
+      cover_alt: string
+      cover: ChildImageSharp
     }
   }
 }
 
-const Service: React.FunctionComponent<PageProps> = ({ data: { service, images } }) => {
+const ServiceTemplate: React.FunctionComponent<PageProps> = ({ data: { service } }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -93,37 +60,32 @@ const Service: React.FunctionComponent<PageProps> = ({ data: { service, images }
   })
 
   const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
-  const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
   const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
-    <Layout color={service.color}>
+    <Layout color={theme.colors.primary}>
       <SEO
-        pathname={service.slug}
-        title={`${service.title_detail} | lawnsmatter.co.uk`}
-        desc={service.desc}
-        node={service.parent}
-        banner={service.cover.childImageSharp.resize.src}
+        pathname={service.frontmatter.slug}
+        title={`${service.frontmatter.title} | lawnsmatter.co.uk`}
+/*         node={service.frontmatter.parent}
+        banner={service.frontmatter.cover.childImageSharp.resize.src} */
         individual
       />
-      <Content bg={service.color} py={10}>
+      <Content bg={theme.colors.primary} py={10}>
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
-        <animated.h1 style={titleAnimation}>{service.title_detail}</animated.h1>
+        <animated.h1 style={titleAnimation}>{service.frontmatter.title}</animated.h1>
           {images.nodes.map(image => (
-            <Img alt={image.name} key={image.childImageSharp.fluid.src} fluid={image.childImageSharp.fluid} />
+            <Img alt={service.frontmatter.cover_alt} key={service.frontmatter.cover.childImageSharp.resize.src} fluid={service.frontmatter.cover.childImageSharp.resize} />
           ))}
         </PBox>
       </Content>      
       <PBox py={10} px={[6, 6, 8, 10]}>
-        <Category style={categoryAnimation}>{service.category}</Category>
-        <Description style={descAnimation}>
-          <div dangerouslySetInnerHTML={{ __html: service.desc }} />
-        </Description>
+        <Category style={categoryAnimation}>{service.frontmatter.category}</Category>
       </PBox>
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
         <h2>Would you like a free lawn assessment and quote for our services?</h2>
         <Link to="/contactus">
-        <PButton color={service.color} py={4} px={8}>
+        <PButton color={theme.colors.primary} py={4} px={8}>
           Contact Us
         </PButton>
         </Link>
@@ -132,39 +94,25 @@ const Service: React.FunctionComponent<PageProps> = ({ data: { service, images }
   )
 }
 
-export default Service
+export default ServiceTemplate
 
 export const query = graphql`
-  query ServiceTemplate($slug: String!, $images: String!) {
-    service: servicesYaml(slug: { eq: $slug }) {
-      title_detail
-      color
-      category
-      desc
-      slug
-      image_credit
-      parent {
-        ... on File {
-          modifiedTime
-          birthTime
-        }
-      }
-      cover {
-        childImageSharp {
-          resize(width: 1200, height: 675, quality: 80) {
-            src
+  query ServiceTemplate($slug: String!) {
+  service: markdownRemark(id: {eq: $slug}) {
+      frontmatter {
+        title
+        category
+        tags
+        cover {
+          childImageSharp {
+            sizes(maxWidth: 1200, quality: 80) {
+              src
+            }
           }
         }
-      }
-    }
-    images: allFile(filter: { relativePath: { regex: $images } }, sort: { fields: name, order: ASC }) {
-      nodes {
-        name
-        childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
+        cover_alt
+        slug
+        templateKey
       }
     }
   }

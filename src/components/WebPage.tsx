@@ -1,242 +1,113 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql, StaticQuery, Link } from 'gatsby'
-import SEO from './SEO'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
+import { config, animated, useSpring } from 'react-spring'
+import Layout from '../components/layout'
+import GridItem from '../components/grid-item'
+import SEO from '../components/SEO'
+import { ChildImageSharp } from '../types'
 // import { useColorMode } from 'theme-ui'
 // import theme from '../../config/theme'
 import theme from '../gatsby-plugin-theme-ui/index'
 
-export const WebPageTemplate = ({
-  slug,
-  title,
-  image,  
-  imagecredit,
-  heading,
-  sortorder,
-  description,
-  intro,
-  main,
-  testimonials,
-  pricing,
-}) => (
-  <div className="content">
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: webpage.frontmatter.image,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,        
-      }}
-    >
-  <div
-        style={{
-          display: 'flex',
-          height: '350px',
-          width: '70%' ,
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-      </div>
-    </div>
-    <section className="sectionMainRaised">
-      <div className="container">
-         <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                  <div className="title">
-                  <h1 className="pageTitle"
-                       style={{
-                       boxShadow: 'transparent',
-                       borderRadius: '6px',
-                       backgroundColor: theme.primary,
-                       color: 'white',
-                       lineHeight: '1',
-                       padding: '0.3em',
-            
-                   }}>
-                    {title}
-                  </h1>
-                    <h2 className="has-text-weight-semibold is-size-3">{heading}</h2>
-                    <h3 className="has-text-weight-semibold is-size-5">{description}</h3>
-                    </div>
-                </div>         
-          <div className="columns">
-            <div className="column is-12">
-             <h3 className="subtitle">{main.title}</h3>
-                    <h3 className="has-text-weight-semibold is-size-4">
-                   {main.description}
-                    </h3>
-                  </div>
-                </div>
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    {main.heading}
-                  </h3>
-                  <p>{main.description}</p>
-                </div>
-              </div>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
-                    </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image2} />
-                      </article>
-                    </div>
-                  </div>
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image3} />
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <Testimonials testimonials={testimonials} />
-              <h2 className="has-text-weight-semibold is-size-2">
-                {pricing.heading}
-              </h2>
-              <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-)
 
-WebPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  imagecredit: PropTypes.string,
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  }),
-  testimonials: PropTypes.array,
-  fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
+type PageProps = {
+  data: {
+    webpage: {
+      nodes: {
+        title: string
+        templateKey: string 
+        slug: string
+        cover: ChildImageSharp
+      }[]
+    }
+  }
 }
 
+const Area = styled(animated.div)`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 50vw;
 
-class WebPage extends React.Component {
-  render() {
-  const { data } = this.props
-  const { edges: webpages } = data.allMarkdownRemark
+  @media (max-width: ${props => props.theme.breakpoints[2]}) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 60vw;
+  }
+`
 
+const Webpage: React.FunctionComponent<PageProps> = ({ data: { webpage } }) => {
+  const pageAnimation = useSpring({
+    config: config.slow,
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  })
 
     return (
-      <div>
-
-      <SEO title="${webpage.frontmatter.title} | lawnsmatter.co.uk" />
-        {webpages &&  webpages.map(({ node: webpage }) => (
-            <div className="is-parent column is-6" key={webpage.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  webpage.frontmatter.description ? 'is-featured' : ''
-                }`}
-              >
+      <div className="columns is-multiline">
+            <div className="is-parent column is-6" key={webpage.frontmatter.slug}>
                 <header>
-                  {webpage.frontmatter.image ? (
+                  {webpage.frontmatter.cover.childImageSharp ? (
                     <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
+                      <PreviewCompatibleImage 
                         imageInfo={{
-                          image: webpage.frontmatter.image,
-                          alt: `featured image thumbnail for webpage ${webpage.frontmatter.imagecredit}`,
+                          image: webpage.frontmatter.cover.childImageSharp,
+                          alt: `featured image thumbnail  ${webpage.frontmatter.cover_alt}`,
                         }}
                       />
                     </div>
                   ) : null}
-                  <p className="has-text-weight-semibold is-size-3">
-                  <span> &bull; </span>
+                </header>
+                <h3 className="has-text-weight-semibold is-size-5">
                     <Link
                       className="has-text-weight-semibold is-size-3"
                       to={webpage.frontmatter.slug}
                     >
                       {webpage.frontmatter.title}
                     </Link>
-                  </p>
-                </header>
-                <h3 className="has-text-weight-semibold is-size-5">
+                    <span> &bull; </span>
+                    <br />
+                    <br />
+                  </h3>
+                <h4 className="has-text is-size-6">
                   {webpage.excerpt}
                   <br />
                   <br />
                   <Link className="button" to={webpage.frontmatter.slug}>
                     Keep Reading →
                   </Link>
-                </h3>
-              </article>
+                </h4>
             </div>
-          ))}
-    </div>
+      </div>
     )
   }
-}
 
-WebPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+export default Webpage
 
-export default () => (
-  <StaticQuery
-    query={graphql`
+export const query = graphql`
     query WebPageQuery {
-      allMarkdownRemark(sort: {order: ASC, fields: frontmatter___sortorder}, filter: {frontmatter: {templateKey: {eq: "webpage"}}}) {
+    webpage:  allMarkdownRemark(sort: {order: ASC, fields: frontmatter___sortorder}, filter: {frontmatter: {templateKey: {eq: "webpage"}}}) {
         edges {
           node {
-            id
             excerpt(pruneLength: 400)
             frontmatter {
               slug
               title
+              category
               templateKey
-              image {
-                id
+              cover {
                 childImageSharp {
                   resize(width: 1200, height: 675, quality: 80) {
                     src
                   }
                 }
               }
-              imagecredit
+              cover_alt
               tags
-              sortorder
-              description
             }
           }
         }
       }
     }
-    
-  `}
-  render={(data, count) => <WebPage data={data} count={count} />}
-  />
-  )
-  
+  `
+

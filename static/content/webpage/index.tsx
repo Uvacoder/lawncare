@@ -43,7 +43,7 @@ export default class WebPage extends React.Component {
                        padding: '0.3em',
             
                    }}>
-                    Our webpages catalogue
+                    Our webpage catalogue
                   </h1>
               <WebPage />
             </div>

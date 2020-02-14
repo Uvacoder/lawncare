@@ -75,16 +75,6 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-   project: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}) {
-    edges {
-      node {
-        frontmatter {
-          slug
-          templateKey
-        }
-      }
-    }
-  }
     }
     `))
   

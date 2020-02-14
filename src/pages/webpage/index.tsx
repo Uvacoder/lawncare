@@ -36,7 +36,7 @@ export default class WebPageIndexPage extends React.Component {
                        style={{
                        boxShadow: 'transparent',
                        borderRadius: '6px',
-                       backgroundColor: theme.primary,
+                       backgroundColor: theme.colors.primary,
                        color: 'white',
                        lineHeight: '1',
                        padding: '0.3em',

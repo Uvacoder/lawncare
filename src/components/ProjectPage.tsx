@@ -1,18 +1,50 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql, StaticQuery, Link } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
+import { config, animated, useSpring } from 'react-spring'
+import Layout from '../components/layout'
+import GridItem from '../components/grid-item'
+import SEO from '../components/SEO'
+import { ChildImageSharp } from '../types'
+// import { useColorMode } from 'theme-ui'
+// import theme from '../../config/theme'
+import theme from '../gatsby-plugin-theme-ui/index'
 
-class ProjectPage extends React.Component {
-  render() {
-    const { data } = this.props
-    const { edges: projects } = data.allMarkdownRemark
+type PageProps = {
+  data: {
+    project: {
+      nodes: {
+        title: string
+        templateKey: string 
+        slug: string
+        cover: ChildImageSharp
+      }[]
+    }
+  }
+}
+
+const Area = styled(animated.div)`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 50vw;
+
+  @media (max-width: ${props => props.theme.breakpoints[2]}) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 60vw;
+  }
+`
+
+const Project: React.FunctionComponent<PageProps> = ({ data: { project } }) => {
+  const pageAnimation = useSpring({
+    config: config.slow,
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  })
 
     return (
       <div className="columns is-multiline">
-        {projects &&
-          projects.map(({ node: project }) => (
-            <div className="is-parent column is-6" key={project.id}>
+            <div className="is-parent column is-6" key={project.frontmatter.slug}>
                 <header>
                   {project.frontmatter.cover.childImageSharp ? (
                     <div className="featured-thumbnail">
@@ -45,32 +77,20 @@ class ProjectPage extends React.Component {
                   </Link>
                 </h4>
             </div>
-          ))}
       </div>
     )
   }
-}
 
-ProjectPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+  export default Project
 
-export default () => (
-  <StaticQuery
-    query={graphql`query ProjectPageQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}) {
+export const query = graphql`
+  query ProjectPageQuery {
+    project:  allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}) {
         edges {
           node {
-            id
             excerpt(pruneLength: 400)
-            fields {
-              slug
-            }
             frontmatter {
+              slug
               title
               templateKey
               cover {
@@ -85,8 +105,4 @@ export default () => (
         }
       }
     }
-    
-    `}
-    render={(data, count) => <ProjectPage data={data} count={count} />}
-  />
-)
+  `
