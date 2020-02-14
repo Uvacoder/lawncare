@@ -60,6 +60,22 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"} 
+      - {label: "Before", name: before", widget: "image"}      
+      - {label: "Before_alt", name: "before_alt", widget: "string"}
+      - {label: "After", name: cover", widget: "image"}      
+      - {label: "After_alt", name: "cover_alt", widget: "string"}
+      - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+      - {label: 'Main content', name: 'body', widget: 'markdown' }
+      - {label: "Tags", name: "tags", widget: "list"}    
+  - name: "article"
+    label: "article"
+    folder:  "src/pages/article"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "article"}
       - {label: "slug", name: "slug", widget: "string"}
       - {label: "title", name: "title", widget: "string"} 
       - {label: "title_detail", name: "title_detail", widget: "string"}
