@@ -7,6 +7,7 @@ import { config, useSpring, animated } from 'react-spring'
 import Layout from '../components/layout'
 import { Box, AnimatedBox, Button } from '../elements'
 import SEO from '../components/SEO'
+import theme from '../gatsby-plugin-theme-ui/index'
 
 const PBox = styled(AnimatedBox)`
   max-width: 1400px;
@@ -119,17 +120,17 @@ const About: React.FunctionComponent<PageProps> = ({ data: { about, images } }) 
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
         <h2></h2>
         <Link to="/contactus">
-        <PButton color={about.color} py={4} px={8}>
+        <PButton color={theme.colors.active} py={4} px={8}>
           Contact Us
         </PButton>
         </Link>
         <Link to="/about">
-        <PButton color={about.color} py={4} px={8}>
+        <PButton color={theme.colors.active} py={4} px={8}>
           Find out more
         </PButton>
         </Link>
         <Link to="/">
-        <PButton color={about.color} py={4} px={8}>
+        <PButton color={theme.colors.active} py={4} px={8}>
           Return to main menu
         </PButton>
         </Link>

@@ -13,12 +13,16 @@ import theme from '../gatsby-plugin-theme-ui/index'
 
 type PageProps = {
   data: {
-    portfolio: {
-      nodes: {
-        title: string
-        slug: string
-        cover: ChildImageSharp
-      }[]
+    projects: {
+      edges: {
+        node: {
+          frontmatter: {
+            title: string
+            slug: string
+            cover: ChildImageSharp
+          }[]
+        }
+      }
     }
   }
 }
@@ -34,7 +38,7 @@ const Area = styled(animated.div)`
   }
 `
 
-const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio } }) => {
+const Portfolio: React.FunctionComponent<PageProps> = ({ data: { projects } }) => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -45,10 +49,10 @@ const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio } }) 
     <Layout color={theme.colors.primary}>
       <SEO title="Portfolio | lawnsmatter.co.uk" />
       <Area style={pageAnimation}>
-        {portfolio.nodes.map(portfolio => (
-          <GridItem key={portfolio.slug} to={portfolio.slug} aria-label={`View portfolio "${portfolio.title}"`}>
-            <Img fluid={portfolio.cover.childImageSharp.fluid} />
-            <span>{portfolio.title}</span>
+        {projects.edges.node.frontmatter.map(project => (
+          <GridItem key={project.slug} to={project.slug} aria-label={`View project "${project.title}"`}>
+            <Img fluid={project.cover.childImageSharp} />
+            <span>{project.title}</span>
           </GridItem>
         ))}
       </Area>
@@ -60,14 +64,18 @@ export default Portfolio
 
 export const query = graphql`
   query Portfolio {
-    portfolio: allPortfolioYaml {
-      nodes {
-        title
-        slug
-        cover {
-          childImageSharp {
-            fluid(quality: 95, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
+    projects: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}) {
+      edges {
+        node {
+          frontmatter {
+            slug
+            title
+            cover {
+              childImageSharp {
+                fluid(quality: 95, maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
             }
           }
         }
