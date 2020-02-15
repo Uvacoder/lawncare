@@ -4,7 +4,7 @@
   category: "Portfolio"
   color: "#2B2C3E"
   images: "ourporfolio"
-  before: "./project1/before1.jpg"
+  before: "./ourporfolio/vadim-sherbakov-d6ebY-faOO0-unsplash.jpg"
   before_alt: "Photo by Vadim Sherbakov on Unsplash"  
   cover: "./ourporfolio/cs-zwl6fOnNqrk-unsplash.jpg"
   cover_alt: "Photo by Viktor Forgacs on Unsplash"

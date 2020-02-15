@@ -53,7 +53,7 @@ type PageProps = {
       id: string
       frontmatter: {
         title: string
-        Before: ChildImageSharp
+        before: ChildImageSharp
         before_alt: string
         cover: ChildImageSharp
         cover_alt: string
@@ -63,6 +63,7 @@ type PageProps = {
         }
         slug: string
         templateKey: string
+        images: string
       }
     }
   }
@@ -133,6 +134,7 @@ export const query = graphql`
       }
       slug
       templateKey
+      images
     }
   }
 }

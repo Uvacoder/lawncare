@@ -71,6 +71,7 @@ exports.createPages = async ({ graphql, actions }) => {
             frontmatter {
               slug
               templateKey
+              tags
             }
           }
         }
