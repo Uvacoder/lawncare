@@ -9,7 +9,7 @@ export default class ProjectIndexPage extends React.Component {
         <div
           className="full-width-image margin-top-0"
           style={{
-          backgroundImage: `url('/images/daniel-josef-AMssSjUaTY4-unsplash.jpg')`,
+          backgroundImage: `url('/img/david-guenther-DrDZmWff3vo-unsplash.jpg')`,
           backgroundPosition: `top left`,
           backgroundAttachment: `fixed`,
           }}
