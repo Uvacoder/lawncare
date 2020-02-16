@@ -3,7 +3,7 @@
 - name: "About"
   link: "/about"
 - name: "Portfolio"
-  link: "/portfolio"
+  link: "/project"
 - name: "Reviews"
   link: "/reviews"
 - name: "Contact"

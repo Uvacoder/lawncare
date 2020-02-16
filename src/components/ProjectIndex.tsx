@@ -1,17 +1,114 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery, Link } from 'gatsby'
+import Img from 'gatsby-image'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import styled from 'styled-components'
+import { config, animated, useSpring, useTrail } from 'react-spring'
+import { Flex } from '../elements'
+import Layout from '../components/layout'
+import { ChildImageSharp } from '../types'
+import SEO from '../components/SEO'
+
+const Grid = styled(animated.div)`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+
+  @media (max-width: ${props => props.theme.breakpoints[4]}) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints[3]}) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints[0]}) {
+    grid-template-columns: 1fr;
+  }
+`
+
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+`
+
+const Title = styled.div`
+  color: white;
+  font-weight: 700;
+  font-size: ${props => props.theme.fontSizes[3]};
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  @media (max-width: ${props => props.theme.breakpoints[3]}) {
+    font-size: ${props => props.theme.fontSizes[1]};
+  }
+  transform: translateY(-45px);
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+`
+
+const Bottom = styled(Flex)`
+  color: white;
+  @media (max-width: ${props => props.theme.breakpoints[3]}) {
+    font-size: ${props => props.theme.fontSizes[0]};
+  }
+  transform: translateY(45px);
+  opacity: 0;
+  transition: all 0.4s ease 0s;
+`
+
+const Item = styled(animated.a)`
+  position: relative;
+  overflow: hidden;
+  > div img {
+    transition: all 0.3s ease 0s !important;
+  }
+  &:hover {
+    ${Overlay} {
+      opacity: 1;
+    }
+
+    ${Bottom} {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    ${Title} {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+`
+
+const Content = styled(Flex)`
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: ${props => props.theme.space[5]};
+`
+
 
 class ProjectIndex extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: projects } = data.allMarkdownRemark
+
+    const { edges: project } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
-        {projects &&
-          projects.map(({ node: project }) => (
+      <Layout color="#2B2C3E">
+      <SEO title="Project | Lawns Matter" />
+      <Grid>
+      <Overlay />
+       {project &&
+          project.map(({ node: project }) => (
             <div className="is-parent column is-6" key={project.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
@@ -31,12 +128,14 @@ class ProjectIndex extends React.Component {
                   ) : null}
                   <p className="has-text-weight-semibold is-size-3">
                   <span> &bull; </span>
+                  <Item>
                     <Link
                       className="has-text-weight-semibold is-size-3"
                       to={project.fields.slug}
                     >
                       {project.frontmatter.title}
                     </Link>
+                    </Item>
                     <span className="subtitle is-size-5 is-block">
                       {project.frontmatter.date}
                     </span>
@@ -47,13 +146,14 @@ class ProjectIndex extends React.Component {
                   <br />
                   <br />
                   <Link className="button" to={project.fields.slug}>
-                    Keep Reading →
+                    Keep Reading Now →
                   </Link>
                 </h3>
               </article>
             </div>
           ))}
-      </div>
+      </Grid>
+    </Layout>
     )
   }
 }
@@ -83,7 +183,7 @@ export default () => (
                   templateKey
                   cover {
                     childImageSharp {
-                      fluid(maxWidth: 400, quality: 80) {
+                      fluid(maxWidth: 600, maxHeight: 600, quality: 80) {
                         ...GatsbyImageSharpFluid
                       }
                     }

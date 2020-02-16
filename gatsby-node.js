@@ -20,7 +20,6 @@ exports.createPages = async ({ graphql, actions }) => {
   const reviewsTemplate = require.resolve('./src/templates/reviews.tsx')
   const contactTemplate = require.resolve('./src/templates/contact.tsx')
   const aboutTemplate = require.resolve('./src/templates/about.tsx')
-  const portfolioTemplate = require.resolve('./src/templates/portfolio.tsx')
   const serviceTemplate = require.resolve('./src/templates/service.tsx')
   const webpageTemplate = require.resolve('./src/templates/webpage.tsx')
   const projectTemplate = require.resolve('./src/templates/project.tsx')
@@ -43,13 +42,6 @@ exports.createPages = async ({ graphql, actions }) => {
           tags
         }
       }
-      portfolio: allPortfolioYaml {
-        nodes {
-          slug
-          images
-          tags
-        }
-      }
       about: allAboutYaml {
         nodes {
           slug
@@ -64,7 +56,7 @@ exports.createPages = async ({ graphql, actions }) => {
           tags
         }
       }
-      allMarkdownRemark {
+    allMarkdownRemark  {
         edges {
           node {
             id
@@ -78,28 +70,11 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
     `))
-  
-    const posts = result.data.allMarkdownRemark.edges
-
-  posts.forEach(edge => {
-    const id = edge.node.id
-    createPage({
-      path: edge.node.frontmatter.slug,
-      tags: edge.node.tags,
-      component: path.resolve(
-        `src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`
-      ),
-      // additional data can be passed via context
-      context: {
-        id,
-      },
-    })
-  })
 
 
   let tags = []
   // Iterate through each webpage, putting all found tags into `tags`
-  posts.forEach(edge => {
+  tags.forEach(edge => {
     if (_.get(edge, `node.tags`)) {
       tags = tags.concat(edge.node.tags)
     }
@@ -139,16 +114,16 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   }),
-  result.data.portfolio.nodes.forEach(node => {
+/*   result.data.project.nodes.forEach(node => {
     createPage({
       path: node.slug,
-      component: portfolioTemplate,
+      component: projectTemplate,
       context: {
         slug: node.slug,
         images: `/${node.images}/`,
       },
     })
-  }),
+  }), */
   result.data.contact.nodes.forEach(node => {
     createPage({
       path: node.slug,
