@@ -1,7 +1,7 @@
 ---
 templateKey: project
 slug: /project/project3
-title: Project3
+title: Project 3
 before: /img/before3.jpg
 before_alt: Project3 Before photo
 featuredimage: /img/after3.jpg
