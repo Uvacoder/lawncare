@@ -21,9 +21,9 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "service"}
       - {label: "slug", name: "slug", widget: "string"}
       - {label: "title", name: "title", widget: "string"} 
-      - {label: "featuredimage", name: "featuredimage", widget: "image"}      
-      - {label: "featuredimage_alt", name: "featuredimage_alt", widget: "string"}
-      - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+      - {label: "Featured image", name: "featuredimage", widget: "image"}      
+      - {label: "Featured image alt", name: "featuredimage_alt", widget: "string"}
+      - {label: Testimonials, required: false, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
       - {label: 'Main content', name: 'body', widget: 'markdown' }
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "project"
@@ -35,24 +35,13 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project"}
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Title", name: "title", widget: "string"} 
-      - {label: "Before", name: "before", widget: "image"}      
-      - {label: "Before_alt", name: "before_alt", widget: "string"}
-      - {label: "After", name: "featuredimage", widget: "image"}      
-      - {label: "After_alt", name: "featuredimage_alt", widget: "string"}
-      - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+      - {label: "Before", required: false, name: "before", widget: "image"}      
+      - {label: "Before alt", required: false, name: "before_alt", widget: "string"}
+      - {label: "Featured Image", name: "featuredimage", widget: "image"}      
+      - {label: "Featured alt", name: "featuredimage_alt", widget: "string"}
+      - {label: Testimonials, required: false, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
       - {label: 'Main content', name: 'body', widget: 'markdown' }
       - {label: "Tags", name: "tags", widget: "list"}    
-  - name: "testimonial"
-    label: "Testimonial"
-    folder:  "src/pages/testimonial"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial"}
-      - {label: "slug", name: "slug", widget: "string"}
-      - {label: "quote", name: "quote", widget: "string"} 
-      - {label: "author", name: "author", widget: "string"}
-      - {label: "date", name: "date", widget: "string"}
   - name: "areaserved"
     label: "Area Served"
     files:
@@ -60,7 +49,7 @@ collections:
       label: "Area Served"
       name: "areaserved"
       fields:
-        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "areaserved-page"}
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "areaserved"}
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Body", name: "body", widget: "markdown"}                
-        - {label: "Area Served", name: "geojson", widget: map, type: "polygon"}
+        - {label: "Area Served", name: "geojson", widget: "map"}
