@@ -22,8 +22,21 @@ collections:
       - {label: "slug", name: "slug", widget: "string"}
       - {label: "title", name: "title", widget: "string"} 
       - {label: "category", name: "category", widget: "string"}
-      - {label: "cover", name: "cover", widget: "image"}      
-      - {label: "cover_alt", name: "cover_alt", widget: "string"}
+      - {label: "featuredimage", name: "featuredimage", widget: "image"}      
+      - {label: "featuredimage_alt", name: "featuredimage_alt", widget: "string"}
+      - {label: 'Main content', name: 'body', widget: 'markdown' }
+      - {label: "Tags", name: "tags", widget: "list"}
+  - name: "service"
+    label: "Service"
+    folder:  "src/pages/service"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "service"}
+      - {label: "slug", name: "slug", widget: "string"}
+      - {label: "title", name: "title", widget: "string"} 
+      - {label: "featuredimage", name: "featuredimage", widget: "image"}      
+      - {label: "featuredimage_alt", name: "featuredimage_alt", widget: "string"}
       - {label: 'Main content', name: 'body', widget: 'markdown' }
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "project"
@@ -37,8 +50,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"} 
       - {label: "Before", name: "before", widget: "image"}      
       - {label: "Before_alt", name: "before_alt", widget: "string"}
-      - {label: "After", name: "cover", widget: "image"}      
-      - {label: "After_alt", name: "cover_alt", widget: "string"}
+      - {label: "After", name: "featuredimage", widget: "image"}      
+      - {label: "After_alt", name: "featuredimage_alt", widget: "string"}
       - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
       - {label: 'Main content', name: 'body', widget: 'markdown' }
       - {label: "Tags", name: "tags", widget: "list"}    

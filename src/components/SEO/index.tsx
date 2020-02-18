@@ -105,7 +105,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'ListItem',
       item: {
         '@id': `${siteUrl}/projects`,
-        name: 'About',
+        name: 'Projects',
       },
       position: 3,
     },
@@ -113,7 +113,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'ListItem',
       item: {
         '@id': `${siteUrl}/instagram`,
-        name: 'About',
+        name: 'Instagram',
       },
       position: 4,
     },
@@ -223,6 +223,41 @@ const query = graphql`
         author
         twitter
         facebook
+        type
+        serviceType
+        provider {
+          type
+          name
+        }
+        serviceName
+        aggregateRating {
+          ratingValue
+          itemReviewed
+          ratingCount
+          reviewCount
+        }
+        availableChannel {
+          servicePhone
+          serviceSmsNumber
+          serviceUrl
+        }
+        brand
+        category
+        hasOfferCatalog{
+          type
+          name
+          itemListElement{
+            type
+            itemOffered{
+              type
+              name
+          }
+          }
+        }
+        providerMobility
+        serviceOutput
+        serviceType
+        contactPoint
       }
     }
   }

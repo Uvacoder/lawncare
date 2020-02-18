@@ -7,6 +7,7 @@ import { config, useSpring, animated } from 'react-spring'
 import Layout from '../components/layout'
 import { Box, AnimatedBox, Button } from '../elements'
 import SEO from '../components/SEO'
+import theme from '../gatsby-plugin-theme-ui/index'
 
 const PBox = styled(AnimatedBox)`
   max-width: 1400px;
@@ -57,7 +58,7 @@ type PageProps = {
         modifiedTime: string
         birthTime: string
       }
-      cover: {
+      featuredimage: {
         childImageSharp: {
           resize: {
             src: string
@@ -97,16 +98,16 @@ const Contact: React.FunctionComponent<PageProps> = ({ data: { contact, images }
   const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
-    <Layout color={Contact.color}>
+    <Layout color={theme.colors.primary}>
       <SEO
         pathname={contact.slug}
         title={`${contact.title_detail} | lawnsmatter.co.uk`}
         desc={contact.desc}
         node={contact.parent}
-        banner={contact.cover.childImageSharp.resize.src}
+        banner={contact.featuredimage.childImageSharp.resize.src}
         individual
       />
-      <Content bg={contact.color} py={10}>
+      <Content bg={theme.colors.primary} py={10}>
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
         <animated.h1 style={titleAnimation}>{contact.title_detail}</animated.h1>
           {images.nodes.map(image => (
@@ -143,7 +144,7 @@ const Contact: React.FunctionComponent<PageProps> = ({ data: { contact, images }
             </table>
 
    
-          <PButton type="submit" color={contact.color} py={4} px={8}>
+          <PButton type="submit" color={theme.colors.active} py={4} px={8}>
           Send
           </PButton>
          
@@ -171,7 +172,7 @@ export const query = graphql`
           birthTime
         }
       }
-      cover {
+      featuredimage {
         childImageSharp {
           resize(width: 1200, height: 675, quality: 80) {
             src

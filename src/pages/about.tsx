@@ -7,8 +7,6 @@ import Layout from '../components/layout'
 import GridItem from '../components/grid-item'
 import SEO from '../components/SEO'
 import { ChildImageSharp } from '../types'
-// import { useColorMode } from 'theme-ui'
-// import theme from '../../config/theme'
 import theme from '../gatsby-plugin-theme-ui/index'
 
 type PageProps = {
@@ -17,7 +15,7 @@ type PageProps = {
       nodes: {
         title: string
         slug: string
-        cover: ChildImageSharp
+        featuredimage: ChildImageSharp
       }[]
     }
   }
@@ -47,7 +45,7 @@ const About: React.FunctionComponent<PageProps> = ({ data: { about } }) => {
       <Area style={pageAnimation}>
         {about.nodes.map(about => (
           <GridItem key={about.slug} to={about.slug} aria-label={`View about "${about.title}"`}>
-            <Img fluid={about.cover.childImageSharp.fluid} />
+            <Img fluid={about.featuredimage.childImageSharp.fluid} />
             <span>{about.title}</span>
           </GridItem>
         ))}
@@ -64,9 +62,9 @@ export const query = graphql`
       nodes {
         title
         slug
-        cover {
+        featuredimage {
           childImageSharp {
-            fluid(quality: 95, maxWidth: 1200) {
+            fluid(quality: 80, maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

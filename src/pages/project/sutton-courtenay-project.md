@@ -1,11 +1,11 @@
 ---
 templateKey: project
-slug: project/tadmartonproject
+slug: /project/sutton-courtenay-project
 title: Tadmarton Project
 before: /img/before6.jpg
 before_alt: Tadmarton Project Before photo
-cover: /img/after6.jpg
-cover_alt: Tadmarton Project After photo
+featuredimage: /img/after6.jpg
+featuredimage_alt: Tadmarton Project After photo
 testimonials:
   - author: none
     quote: Excellent Service

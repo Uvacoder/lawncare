@@ -1,11 +1,11 @@
 ---
 templateKey: project
-slug: project/project3
+slug: /project/project3
 title: Project3
 before: /img/before3.jpg
 before_alt: Project3 Before photo
-cover: /img/after2.jpg
-cover_alt: Project3 After photo
+featuredimage: /img/after3.jpg
+featuredimage_alt: Project3 After photo
 testimonials:
   - author: none
     quote: Excellent Service

@@ -15,8 +15,8 @@ interface ThemeShape {
 
 const theme: ThemeShape = {
   breakpoints: ['480px', '650px', '1000px', '1200px', '1400px'],
-  // fontSizes: ['1rem', '1.2rem', '1.44rem', '1.728rem', '2.074rem', '2.488rem'],
-  fontSizes: ['75%', '100%', '120%', '144%', '172.8%', '207.4%', '248.8%'],
+  fontSizes: ['1rem', '1.2rem', '1.44rem', '1.728rem', '2.074rem', '2.488rem'],
+ // fontSizes: ['75%', '100%', '120%', '144%', '172.8%', '207.4%', '248.8%'],
   colors: {
     active: '#90C03E',
     primary: '#2B2C3E',

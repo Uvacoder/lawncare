@@ -21,22 +21,47 @@ module.exports = {
     author: config.author,
     twitter: config.userTwitter,
     facebook: config.ogSiteName,
-/*     name: ,
-    aggregateRating: ,
-    areaServed: , 
-    map: , 
-    audience: , 
-    availableChannel: , 
-    brand: , 
-    category: , 
-    hasOfferCatalog: , 
-    OfferCatalog: , 
-    hoursAvailable: , 
-    isSimilarTo: , 
-    provider: , 
-    providerMobility: , 
-    serviceOutput: , 
-    serviceType: ,  */
+    type: config.type,
+    serviceType: config.serviceType,
+    provider: {
+      type: config.provider.type,
+      name: config.provider.name,
+    }, 
+    hasOfferCatalog: {
+      type: config.hasOfferCatalog.type,
+      name: config.hasOfferCatalog.name,
+      itemListElement: {
+        type: config.hasOfferCatalog.itemListElement.type,
+        itemOffered: {
+          type: config.hasOfferCatalog.itemListElement.itemOffered.type,
+          name: config.hasOfferCatalog.itemListElement.itemOffered.name,
+      }
+    },     
+    },
+    serviceName: config.serviceName,
+    aggregateRating: {
+      type: config.aggregateRating.type,
+      ratingValue: config.aggregateRating.ratingValue,
+      itemReviewed: config.aggregateRating.itemReviewed,
+      ratingCount: config.aggregateRating.ratingCount,
+      reviewCount: config.aggregateRating.reviewCount,
+    },
+    // areaServed: config.areaServed, 
+    // map: , 
+    // audience: config.audience, 
+    availableChannel: {
+      servicePhone: config.availableChannel.servicePhone,
+      serviceSmsNumber: config.availableChannel.serviceSmsNumber,
+      serviceUrl: config.availableChannel.serviceUrl,
+    },
+    brand: config.brand, 
+    category: config.category, 
+    // hoursAvailable: config.hoursAvailable, 
+    // isSimilarTo: , 
+    providerMobility: config.providerMobility, 
+    serviceOutput: config.serviceOutput, 
+    serviceType: config.serviceType, 
+    contactPoint: config.contactPoint,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -90,22 +115,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'services',
-        path: `${__dirname}/static/content/services`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'config',
         path: `${__dirname}/config`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'webpage',
-        path: `${__dirname}/static/content/webpage`,
       },
     },
     {

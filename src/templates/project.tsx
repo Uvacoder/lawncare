@@ -1,14 +1,13 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import { transparentize, readableColor } from 'polished'
 import styled from 'styled-components'
-import { config, useSpring, animated } from 'react-spring'
+import { config, animated, useSpring } from 'react-spring'
 import Layout from '../components/layout'
-import { Box, AnimatedBox, Button } from '../elements'
 import SEO from '../components/SEO'
-// import { ChildImageSharp } from '../types'
-
+import theme from '../gatsby-plugin-theme-ui/index'
+import { Box, AnimatedBox, Button } from '../elements'
+import { transparentize, readableColor } from 'polished'
 
 const PBox = styled(AnimatedBox)`
   max-width: 1400px;
@@ -48,87 +47,72 @@ const PButton = styled(Button)<{ color: string }>`
 
 type PageProps = {
   data: {
-    portfolio: {
-      title: string
-      title_detail: string
-      color: string
-      category: string
-      desc: string
-      slug: string
-      before_alt: string
-      cover_alt: string
-      cover: {
-        childImageSharp: {
-          fluid: {
-            aspectRatio: number
-            src: string
-            srcSet: string
-            sizes: string
-            base64: string
-            tracedSVG: string
-            srcWebp: string
-            srcSetWebp: string
+        id: string
+        excerpt: string
+        internal: {
+          content: markdown 
+        }
+        frontmatter: {
+          title: string
+          templateKey: string
+          featured: boolean
+          slug: string
+          featuredimage_alt: string
+          tags: string
+          featuredimage: ChildImageSharp
           }
         }
-      }
-      before: {
-        childImageSharp: {
-          fluid: {
-            aspectRatio: number
-            src: string
-            srcSet: string
-            sizes: string
-            base64: string
-            tracedSVG: string
-            srcWebp: string
-            srcSetWebp: string
-          }
-        }
-      }
-    }
   }
-}
 
-const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio } }) => {
+
+  const ProjectPage = ({ data }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
     to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
   })
-
   const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
   const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
   const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
-    <Layout color={portfolio.color}>
+    <Layout color={theme.colors.primary}>
       <SEO
-        pathname={portfolio.slug}
-        title={`${portfolio.title_detail} | lawnsmatter.co.uk`}
-        desc={portfolio.desc}
-        banner={portfolio.cover.childImageSharp.fluid.srcWebp}
+        pathname={data.markdownRemark.frontmatter.slug}
+        title={`${data.markdownRemark.frontmatter.title} | lawnsmatter.co.uk`}
+        desc={data.markdownRemark.excerpt}
+        node={data.markdownRemark.frontmatter.slug}
+        banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         individual
       />
-      <Content bg={portfolio.color} py={10}>
+      <Content bg={theme.colors.primary} py={10}>
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
-        <animated.h1 style={titleAnimation}>portfolio.title</animated.h1>
- 
-            <Img alt={portfolio.cover_alt} key={portfolio.cover.childImageSharp.fluid.src} fluid={portfolio.cover.childImageSharp.fluid} />
+        <animated.h1 style={titleAnimation}>{data.markdownRemark.frontmatter.title}</animated.h1>
   
+        <Img fluid={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid} />
         </PBox>
       </Content>
       <PBox py={10} px={[6, 6, 8, 10]}>
-        <Category style={categoryAnimation}>{portfolio.category}</Category>
-
+        <Category style={categoryAnimation}>{data.markdownRemark.frontmatter.templateKey}</Category>
         <Description style={descAnimation}>
-          <div dangerouslySetInnerHTML={{ __html: portfolio.desc }} />
+        <p> {data.markdownRemark.internal.content}</p>
         </Description>
       </PBox>
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2>Want to start your own portfolio?</h2>
+        <h2></h2>
         <Link to="/contactus">
-        <PButton color={portfolio.color} py={4} px={8}>
+        <PButton color={theme.colors.active} py={4} px={8}>
           Contact Us
+        </PButton>
+        </Link>
+        <Link to="/project">
+        <PButton color={theme.colors.active} py={4} px={8}>
+          Other Projects
+        </PButton>
+        </Link>
+        <Link to="/">
+        <PButton color={theme.colors.active} py={4} px={8}>
+          Return to main menu
         </PButton>
         </Link>
       </PBox>
@@ -136,34 +120,34 @@ const Portfolio: React.FunctionComponent<PageProps> = ({ data: { portfolio } }) 
   )
 }
 
-export default Portfolio
+
+export default ProjectPage
 
 export const query = graphql`
-  query PortfolioTemplate($slug: String) {
-    portfolio: portfolioYaml(slug: { eq: $slug }) {
-      title_detail
-      title
-      color
-      category
-      desc
+query ProjectPage ($id: String!) {
+   markdownRemark(id: { eq: $id }) {
+   excerpt(pruneLength: 400)
+   internal {
+     content
+   }
+    frontmatter {
       slug
-      before_alt
-      cover_alt
-      before {
+      title
+      templateKey
+      tags
+      featuredimage {
         childImageSharp {
-          fluid(quality: 80, maxWidth: 1200) {
+          fluid(quality: 95, maxWidth: 1200) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      cover {
-        childImageSharp {
-          fluid(quality: 80, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+      featuredimage_alt
+      featured
     }
+    id
   }
-  
+}
+
+
 `

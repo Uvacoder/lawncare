@@ -3,12 +3,10 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
-import Layout from '../components/layout'
-import GridItem from '../components/grid-item'
-import SEO from '../components/SEO'
+import Layout from './layout'
+import GridItem from './grid-item'
+import SEO from './SEO/index'
 import { ChildImageSharp } from '../types'
-// import { useColorMode } from 'theme-ui'
-// import theme from '../../config/theme'
 import theme from '../gatsby-plugin-theme-ui/index'
 
 
@@ -19,7 +17,7 @@ type PageProps = {
         title: string
         templateKey: string 
         slug: string
-        cover: ChildImageSharp
+        featuredimage: ChildImageSharp
       }[]
     }
   }
@@ -47,12 +45,12 @@ const Webpage: React.FunctionComponent<PageProps> = ({ data: { webpage } }) => {
       <div className="columns is-multiline">
             <div className="is-parent column is-6" key={webpage.frontmatter.slug}>
                 <header>
-                  {webpage.frontmatter.cover.childImageSharp ? (
+                  {webpage.frontmatter.featuredimage.childImageSharp ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage 
                         imageInfo={{
-                          image: webpage.frontmatter.cover.childImageSharp,
-                          alt: `featured image thumbnail  ${webpage.frontmatter.cover_alt}`,
+                          image: webpage.frontmatter.featuredimage.childImageSharp,
+                          alt: `featured image thumbnail  ${webpage.frontmatter.featuredimage_alt}`,
                         }}
                       />
                     </div>
@@ -89,20 +87,20 @@ export const query = graphql`
     webpage:  allMarkdownRemark(sort: {order: ASC, fields: frontmatter___sortorder}, filter: {frontmatter: {templateKey: {eq: "webpage"}}}) {
         edges {
           node {
-            excerpt(pruneLength: 400)
+           excerpt(pruneLength: 400)
             frontmatter {
               slug
               title
               category
               templateKey
-              cover {
+              featuredimage {
                 childImageSharp {
                   resize(width: 1200, height: 675, quality: 80) {
                     src
                   }
                 }
               }
-              cover_alt
+              featuredimage_alt
               tags
             }
           }

@@ -54,7 +54,7 @@ type PageProps = {
       desc: string
       slug: string
       image_credit: string
-      cover: {
+      featuredimage: {
         childImageSharp: {
           resize: {
             src: string
@@ -100,7 +100,7 @@ const About: React.FunctionComponent<PageProps> = ({ data: { about, images } }) 
         title={`${about.title_detail} | lawnsmatter.co.uk`}
         desc={about.desc}
         node={about.parent}
-        banner={about.cover}
+        banner={about.featuredimage}
         individual
       />
       <Content bg={about.color} py={10}>
@@ -156,7 +156,7 @@ export const query = graphql`
           birthTime
         }
       }
-      cover {
+      featuredimage {
         childImageSharp {
           resize(width: 1200, height: 675, quality: 80) {
             src

@@ -13,27 +13,27 @@ type PageProps = {
     firstProject: {
       title: string
       slug: string
-      cover: ChildImageSharp
+      featuredimage: ChildImageSharp
     }
     multiProjects: {
       nodes: {
         title: string
         slug: string
-        cover: ChildImageSharp
+        featuredimage: ChildImageSharp
       }[]
     }
     portfolioProjects: {
       nodes: {
         title: string
         slug: string
-        cover: ChildImageSharp
+        featuredimage: ChildImageSharp
       }[]
     }
     aboutUs: {
       nodes: {
         title: string
         slug: string
-        cover: ChildImageSharp
+        featuredimage: ChildImageSharp
       }[]
     }
     instagram: ChildImageSharp
@@ -145,13 +145,13 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, multi
       <SEO />
       <Area style={pageAnimation}>
         <FirstProject to={firstProject.slug} aria-label={`View project "${firstProject.title}"`}>
-          <Img fluid={firstProject.cover.childImageSharp.fluid} />
+          <Img fluid={firstProject.featuredimage.childImageSharp.fluid} />
           <span>{firstProject.title}</span>
         </FirstProject>
         <AboutUs>
           {aboutUs.nodes.map(about => (          
              <GridItem to={about.slug} key={about.slug} aria-label={`View about "${about.title}"`}>
-              <Img fluid={about.cover.childImageSharp.fluid} />
+              <Img fluid={about.featuredimage.childImageSharp.fluid} />
               <span>{about.title}</span>
              </GridItem>
            ))}
@@ -159,7 +159,7 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, multi
         <MultiProjects>
           {multiProjects.nodes.map(project => (
             <GridItem to={project.slug} key={project.slug} aria-label={`View project "${project.title}"`}>
-              <Img fluid={project.cover.childImageSharp.fluid} />
+              <Img fluid={project.featuredimage.childImageSharp.fluid} />
               <span>{project.title}</span>
             </GridItem>
           ))}
@@ -167,13 +167,13 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, multi
         <PortfolioProjects>
           {portfolioProjects.nodes.map(portfolio => (
             <GridItem to={portfolio.slug} key={portfolio.slug} aria-label={`View portfolio "${portfolio.title}"`}>
-              <Img fluid={portfolio.cover.childImageSharp.fluid} />
+              <Img fluid={portfolio.featuredimage.childImageSharp.fluid} />
               <span>{portfolio.title}</span>
             </GridItem>
           ))}
         </PortfolioProjects>   
         <Instagram to="/instagram" aria-label="See my Instagram pictures">
-        <Img fluid={instagram.cover.childImageSharp.fluid} />
+        <Img fluid={instagram.featuredimage.childImageSharp.fluid} />
           <span>Instagram</span>
         </Instagram>     
       </Area>
@@ -188,7 +188,7 @@ export const query = graphql`
     firstProject: reviewsYaml {
       title
       slug
-      cover {
+      featuredimage {
         childImageSharp {
           fluid(quality: 95, maxWidth: 1200) {
             ...GatsbyImageSharpFluid_withWebp
@@ -200,7 +200,7 @@ export const query = graphql`
       nodes {
         title
         slug
-        cover {
+        featuredimage {
           childImageSharp {
             fluid(quality: 95, maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp
@@ -213,7 +213,7 @@ export const query = graphql`
       nodes {
         title
         slug
-        cover {
+        featuredimage {
           childImageSharp {
             fluid(quality: 95, maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp
@@ -226,7 +226,7 @@ export const query = graphql`
       nodes {
         title
         slug
-        cover {
+        featuredimage {
           childImageSharp {
             fluid(quality: 95, maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp
@@ -236,7 +236,7 @@ export const query = graphql`
       }
     }
     instagram: portfolioYaml(slug: {eq: "portfolio/instagrampics"}) {
-      cover {
+      featuredimage {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80) {
             src

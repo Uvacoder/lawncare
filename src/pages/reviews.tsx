@@ -17,7 +17,7 @@ type PageProps = {
       nodes: {
         title: string
         slug: string
-        cover: ChildImageSharp
+        featuredimage: ChildImageSharp
       }[]
     }
   }
@@ -47,7 +47,7 @@ const Reviews: React.FunctionComponent<PageProps> = ({ data: { reviews } }) => {
       <Area style={pageAnimation}>
         {reviews.nodes.map(reviews => (
           <GridItem key={reviews.slug} to={reviews.slug} aria-label={`View reviews "${reviews.title}"`}>
-            <Img fluid={reviews.cover.childImageSharp.fluid} />
+            <Img fluid={reviews.featuredimage.childImageSharp.fluid} />
             <span>{reviews.title}</span>
           </GridItem>
         ))}
@@ -64,7 +64,7 @@ export const query = graphql`
       nodes {
         title
         slug
-        cover {
+        featuredimage {
           childImageSharp {
             fluid(quality: 95, maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp

@@ -7,6 +7,7 @@ import { config, useSpring, animated } from 'react-spring'
 import Layout from '../components/layout'
 import { Box, AnimatedBox, Button } from '../elements'
 import SEO from '../components/SEO'
+import theme from '../gatsby-plugin-theme-ui/index'
 
 const PBox = styled(AnimatedBox)`
   max-width: 1400px;
@@ -57,7 +58,7 @@ type PageProps = {
         modifiedTime: string
         birthTime: string
       }
-      cover: {
+      featuredimage: {
         childImageSharp: {
           resize: {
             src: string
@@ -103,7 +104,7 @@ const Reviews: React.FunctionComponent<PageProps> = ({ data: { reviews, images }
         title={`${reviews.title_detail} | lawnsmatter.co.uk`}
         desc={reviews.desc}
         node={reviews.parent}
-        banner={reviews.cover.childImageSharp.resize.src}
+        banner={reviews.featuredimage.childImageSharp.resize.src}
         individual
       />
       <Content bg={reviews.color} py={10}>
@@ -123,7 +124,7 @@ const Reviews: React.FunctionComponent<PageProps> = ({ data: { reviews, images }
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
         <h2>Want to start your own project?</h2>
         <Link to="/contactus">
-        <PButton color={reviews.color} py={4} px={8}>
+        <PButton color={theme.colors.active} py={4} px={8}>
           Contact Us
         </PButton>
         </Link>
@@ -149,7 +150,7 @@ export const query = graphql`
           birthTime
         }
       }
-      cover {
+      featuredimage {
         childImageSharp {
           resize(width: 1200, height: 675, quality: 80) {
             src

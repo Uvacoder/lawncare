@@ -1,10 +1,10 @@
 - title: "Contact Us"
   title_detail: "Contact us @ lawnsmatter.co.uk"
-  slug: "contactus"
+  slug: "/contactus"
   category: "contact"
   color: "#2B2C3E"
   images: "contactus"
-  cover: "./contactus/lawnsmatter.jpg"
+  featuredimage: "./contactus/lawnsmatter.jpg"
   image_credit: "Photo by Nervenet"
   desc: "Please get in touch"
   tags: Contact

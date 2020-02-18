@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import { transparentize, readableColor } from 'polished'
 import styled from 'styled-components'
-import { config, useSpring, animated } from 'react-spring'
+import { config, animated, useSpring } from 'react-spring'
 import Layout from '../components/layout'
-import { Box, AnimatedBox, Button } from '../elements'
 import SEO from '../components/SEO'
 import theme from '../gatsby-plugin-theme-ui/index'
+import { Box, AnimatedBox, Button } from '../elements'
+import { transparentize, readableColor } from 'polished'
 
 const PBox = styled(AnimatedBox)`
   max-width: 1400px;
@@ -32,6 +32,13 @@ const Category = styled(AnimatedBox)`
   text-transform: uppercase;
 `
 
+const Description = styled(animated.div)`
+  max-width: 960px;
+  letter-spacing: -0.003em;
+  --baseline-multiplier: 0.179;
+  --x-height-multiplier: 0.35;
+  line-height: 1.58;
+`
 
 const PButton = styled(Button)<{ color: string }>`
   background: ${props => (props.color === 'white' ? 'black' : props.color)};
@@ -40,53 +47,72 @@ const PButton = styled(Button)<{ color: string }>`
 
 type PageProps = {
   data: {
-    service: {
-      title: string
-      category: string
-      slug: string
-      templateKey: string
-      tags: string
-      cover_alt: string
-      cover: ChildImageSharp
-    }
+        id: string
+        excerpt: string
+        internal: {
+          content: markdown 
+        }
+        frontmatter: {
+          title: string
+          templateKey: string
+          featured: boolean
+          slug: string
+          featuredimage_alt: string
+          tags: string
+          featuredimage: ChildImageSharp
+          }
+        }
   }
-}
 
-const ServiceTemplate: React.FunctionComponent<PageProps> = ({ data: { service } }) => {
+
+  const ServicePage = ({ data }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
     to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
   })
-
   const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
+  const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
   const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
     <Layout color={theme.colors.primary}>
       <SEO
-        pathname={service.frontmatter.slug}
-        title={`${service.frontmatter.title} | lawnsmatter.co.uk`}
-/*         node={service.frontmatter.parent}
-        banner={service.frontmatter.cover.childImageSharp.resize.src} */
+        pathname={data.markdownRemark.frontmatter.slug}
+        title={`${data.markdownRemark.frontmatter.title} | lawnsmatter.co.uk`}
+        desc={data.markdownRemark.excerpt}
+        node={data.markdownRemark.frontmatter.slug}
+        banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         individual
       />
       <Content bg={theme.colors.primary} py={10}>
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
-        <animated.h1 style={titleAnimation}>{service.frontmatter.title}</animated.h1>
-          {images.nodes.map(image => (
-            <Img alt={service.frontmatter.cover_alt} key={service.frontmatter.cover.childImageSharp.resize.src} fluid={service.frontmatter.cover.childImageSharp.resize} />
-          ))}
+        <animated.h1 style={titleAnimation}>{data.markdownRemark.frontmatter.title}</animated.h1>
+  
+        <Img fluid={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid} />
         </PBox>
-      </Content>      
+      </Content>
       <PBox py={10} px={[6, 6, 8, 10]}>
-        <Category style={categoryAnimation}>{service.frontmatter.category}</Category>
+        <Category style={categoryAnimation}>{data.markdownRemark.frontmatter.templateKey}</Category>
+        <Description style={descAnimation}>
+        <p> {data.markdownRemark.internal.content}</p>
+        </Description>
       </PBox>
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2>Would you like a free lawn assessment and quote for our services?</h2>
+        <h2></h2>
         <Link to="/contactus">
-        <PButton color={theme.colors.primary} py={4} px={8}>
+        <PButton color={theme.colors.active} py={4} px={8}>
           Contact Us
+        </PButton>
+        </Link>
+        <Link to="/service">
+        <PButton color={theme.colors.active} py={4} px={8}>
+          Other Services
+        </PButton>
+        </Link>
+        <Link to="/">
+        <PButton color={theme.colors.active} py={4} px={8}>
+          Return to main menu
         </PButton>
         </Link>
       </PBox>
@@ -94,26 +120,34 @@ const ServiceTemplate: React.FunctionComponent<PageProps> = ({ data: { service }
   )
 }
 
-export default ServiceTemplate
+
+export default ServicePage
 
 export const query = graphql`
-  query ServiceTemplate($slug: String!) {
-  service: markdownRemark(id: {eq: $slug}) {
-      frontmatter {
-        title
-        category
-        tags
-        cover {
-          childImageSharp {
-            sizes(maxWidth: 1200, quality: 80) {
-              src
-            }
+query ServicePage ($id: String!) {
+   markdownRemark(id: { eq: $id }) {
+   excerpt(pruneLength: 400)
+   internal {
+     content
+   }
+    frontmatter {
+      slug
+      title
+      templateKey
+      tags
+      featuredimage {
+        childImageSharp {
+          fluid(quality: 95, maxWidth: 1200) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
-        cover_alt
-        slug
-        templateKey
       }
+      featuredimage_alt
+      featured
     }
+    id
   }
+}
+
+
 `
