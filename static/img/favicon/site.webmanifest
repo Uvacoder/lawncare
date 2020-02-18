@@ -1,0 +1,20 @@
+{
+    "name": "Lawns Matter",
+    "short_name": "Lawns Matter",
+    "icons": [
+        {
+            "src": "/static/img/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/img/favicon/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#2b2c3e",
+    "background_color": "#2b2c3e",
+    "start_url": "https://lawnsmatter.co.uk",
+    "display": "standalone"
+}
