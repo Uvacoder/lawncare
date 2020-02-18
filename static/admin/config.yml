@@ -12,20 +12,6 @@ media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 collections:  
-  - name: "webpage"
-    label: "Webpage"
-    folder:  "src/pages/webpage"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "webpage"}
-      - {label: "slug", name: "slug", widget: "string"}
-      - {label: "title", name: "title", widget: "string"} 
-      - {label: "category", name: "category", widget: "string"}
-      - {label: "featuredimage", name: "featuredimage", widget: "image"}      
-      - {label: "featuredimage_alt", name: "featuredimage_alt", widget: "string"}
-      - {label: 'Main content', name: 'body', widget: 'markdown' }
-      - {label: "Tags", name: "tags", widget: "list"}
   - name: "service"
     label: "Service"
     folder:  "src/pages/service"
@@ -37,6 +23,7 @@ collections:
       - {label: "title", name: "title", widget: "string"} 
       - {label: "featuredimage", name: "featuredimage", widget: "image"}      
       - {label: "featuredimage_alt", name: "featuredimage_alt", widget: "string"}
+      - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
       - {label: 'Main content', name: 'body', widget: 'markdown' }
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "project"

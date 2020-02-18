@@ -118,29 +118,50 @@ const Wrapper = styled.div`
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     grid-template-columns: 1fr;
-    grid-template-rows: 20vw auto;
   }
+`
+const Icon = styled(animated.div)`
+height: ${props => props.theme.sidebarWidth.big} 3rem;
+margin: .5rem;
+
+@media (max-width: ${props => props.theme.breakpoints[4]}) {
+  height: ${props => props.theme.sidebarWidth.normal} 2.6rem;
+  margin: .4rem;
+ }
+
+ @media (max-width: ${props => props.theme.breakpoints[2]}) {
+  height: 1.8rem;
+  margin: .2rem;
+}
+
 `
 
 const IconGrid = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  margin: 1rem;
-
-  @media (max-width: ${props => props.theme.breakpoints[4]}) {
-    grid-template-columns: ${props => props.theme.sidebarWidth.normal}/2 2fr;
-    margin: .1rem;
-   }
- 
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 10vw;
+  width: 6rem;
+  height: ${props => props.theme.sidebarWidth.big} 8rem;
   
+  @media (max-width: ${props => props.theme.breakpoints[4]}) {
+    height: ${props => props.theme.sidebarWidth.normal} 6rem;
+   }
+  
+   @media (max-width: ${props => props.theme.breakpoints[2]}) {
+    height: 5.2rem;
   }
+  
 
 `
+
+
+const MyLogo = styled(animated.div)`
+
+  height: 9rem;
+
+`
+
+
 const PBox = styled(AnimatedBox)`
   padding: 1rem;
   margin: .1rem;
@@ -175,6 +196,8 @@ const SideBarInner = styled(Box)<{ bg: string }>`
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     position: relative;
     width: 100%;
+    height: 10rem;
+    flex-direction: row;
   }
 
   svg {
@@ -242,6 +265,7 @@ const Footer = styled.footer<{ color: string }>`
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     position: relative;
+    height: 6rem;
     width: 100%;
   }
 `
@@ -269,7 +293,7 @@ const Layout = ({ children, color }: LayoutProps) => {
       <>
         <GlobalStyles />
         <Wrapper>
-          <SideBarInner bg={color} as="aside" p={[6, 6, 8]}>
+          <SideBarInner bg={color} >
             <Flex
           //    flexWrap="nowrap"
               flexDirection={['row', 'row', 'row', 'column']}
@@ -287,9 +311,7 @@ const Layout = ({ children, color }: LayoutProps) => {
                 alignItems="center"  
               >  
                 <Link to="/" aria-label="Back to Home" >
-                  <Logo  style={{
-                minHeight: '3rem',
-              }}/>
+                  <MyLogo><Logo /></MyLogo>
                 </Link>
                 {data.navigation.nodes.map(item => (
                   <PartialNavLink to={item.link} key={item.name}>
@@ -298,14 +320,14 @@ const Layout = ({ children, color }: LayoutProps) => {
                 ))}
            <br />
                   <IconGrid justify-items="">
-                  <PBox>
+                  <Icon>
                     <a href = "mailto: jon@lawnsmatter.co.uk" rel="nofollow"><Email /></a> 
-                    </PBox>
-                    <PBox>
+                    </Icon>
+                    <Icon>
                    <a href = "tel:01295402447" rel="nofollow"><Phone /></a>
-                   </PBox>
-                   <PBox><a href = "https://www.facebook.com/lawnsmatter" rel="nofollow"><Facebook /></a></PBox>
-                   <PBox><Link to="/instagram"><Instagram /></Link></PBox>
+                   </Icon>
+                   <Icon><a href = "https://www.facebook.com/lawnsmatter" rel="nofollow"><Facebook /></a></Icon>
+                   <Icon><Link to="/instagram"><Instagram /></Link></Icon>
                    </IconGrid>
                </Nav>
             </Flex>
@@ -315,12 +337,6 @@ const Layout = ({ children, color }: LayoutProps) => {
             <Box p={[6, 6, 8]} fontSize={0}>
               Website by <a href="https://www.gappsapps.co.uk">gappsapps.co.uk</a>
             </Box>
-{/*             <Button borderRadius='5px'
-        onClick={e => {
-          setColorMode(colorMode === 'light' ? 'dark' : 'light')
-        }}>
-        {colorMode === 'light' ? 'Dark' : 'Light'}
-      </Button> */}
           </Footer>
         </Wrapper>
       </>
