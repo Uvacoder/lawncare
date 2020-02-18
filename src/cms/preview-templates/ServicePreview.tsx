@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import  ServicePage  from '../../templates/service'
+import ServiceCatalog from '../../components/ServiceCatalog'
 
 
 
@@ -8,7 +8,7 @@ const ServicePagePreview = ({ entry, getAsset }) => {
 
   return (
          <div>
-    <ServicePage
+    <ServiceCatalog
       slug={entry.getIn(['data', 'string'])}
       title={entry.getIn(['data', 'string'])}
       featuredimage={entry.getIn(['data', 'image'])}
