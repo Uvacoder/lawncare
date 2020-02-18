@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ServicePage } from '../../templates/service'
+import  ServicePage  from '../../templates/service'
 
 
 
-const ServicePreview = ({ entry, getAsset }) => {
+const ServicePagePreview = ({ entry, getAsset }) => {
 
   return (
          <div>
-    <ServicePreview
+    <ServicePage
       slug={entry.getIn(['data', 'string'])}
       title={entry.getIn(['data', 'string'])}
       featuredimage={entry.getIn(['data', 'image'])}
@@ -19,11 +19,11 @@ const ServicePreview = ({ entry, getAsset }) => {
   )
 }
 
-ServicePreview.propTypes = {
+ServicePagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 }
 
-export default ServicePreview
+export default ServicePagePreview

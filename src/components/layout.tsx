@@ -118,6 +118,7 @@ const Wrapper = styled.div`
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     grid-template-columns: 1fr;
+    grid-template-rows: 20vw auto;
   }
 `
 
@@ -135,6 +136,7 @@ const IconGrid = styled(animated.div)`
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    height: 10vw;
   
   }
 
@@ -179,6 +181,7 @@ const SideBarInner = styled(Box)<{ bg: string }>`
     fill: ${props => readableColor(`${props.bg}`)};
   }
 `
+
 
 const Nav = styled(Flex)<{ color: string }>`
   a {
@@ -284,7 +287,9 @@ const Layout = ({ children, color }: LayoutProps) => {
                 alignItems="center"  
               >  
                 <Link to="/" aria-label="Back to Home" >
-                  <Logo />
+                  <Logo  style={{
+                minHeight: '3rem',
+              }}/>
                 </Link>
                 {data.navigation.nodes.map(item => (
                   <PartialNavLink to={item.link} key={item.name}>

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ProjectPage } from '../../templates/project'
+import ProjectPage from '../../templates/project'
 
 
 
@@ -8,7 +8,7 @@ const ProjectPreview = ({ entry, getAsset }) => {
 
   return (
          <div>
-    <ProjectPreview
+    <ProjectPage
       slug={entry.getIn(['data', 'string'])}
       title={entry.getIn(['data', 'string'])}
       featuredimage={entry.getIn(['data', 'image'])}
