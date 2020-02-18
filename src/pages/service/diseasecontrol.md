@@ -1,10 +1,10 @@
 ---
-title: Disease Control
 templateKey: service
 slug: /service/diseasecontrol
-featured: false
+title: Disease Control
 featuredimage: /img/disease.jpg
-featuredimage_alt: "Photo by from Lawns Matter's Facebook page"
+featuredimage_alt: Photo by from Lawns Matter's Facebook page
 tags:
-- service
+  - service
 ---
+Add content
