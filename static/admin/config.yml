@@ -7,7 +7,6 @@ backend:
     delete: 'Delete {{collection}} “{{slug}}”'
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
-
 media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
@@ -19,6 +18,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "select", options: ["service", "project", "about"], default: "project"}
+      - {label: Menus, name: menus, widget: list, fields: [{label: "Menu name", name: menuName, widget: string}, {label: Identifier, name: identifier, widget: string}, {label: Url, name: url, widget: string}, fields: [{label: "Menu item name", name: menuItemName, widget: string}, {label: itemIdentifier, name: itemIdentifier, widget: string}, {label: itemUrl, name: itemUrl, widget: string}]]}
       - {label: "slug", name: "slug", widget: "string"}
       - {label: "title", name: "title", widget: "string"} 
       - {label: "Featured image", name: "featuredimage", widget: "image"}      
