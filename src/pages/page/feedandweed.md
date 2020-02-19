@@ -1,14 +1,13 @@
 ---
-title: Feed and Weed
 templateKey: page
-menus: service
-rating: []
+menu: service
 slug: /service/feedandweed
-featured: true
+title: Feed and Weed
 featuredimage: /img/david-kaloczi-10xlYvD5yn4-unsplash.jpg
 featuredimage_alt: Photo by David Kaloczi on Unsplash
+rating: []
 tags:
-- service
+  - service
 ---
 Lawns Matter uses the finest professional turf fertilisers to nourish your lawn.  These feeds are not available to buy domestically and are designed to release fertilisers to the root zones over several weeks.  We at your house every 10 weeks to carry out the following lawn treatments, starting with the current season.  You will get notification of each treatment date in advance and we will leave your property clean and secure
 
