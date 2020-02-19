@@ -18,7 +18,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "select", options: ["service", "project", "about"]}
+      - {label: "Template Key", name: "templateKey", widget: "select", options: ["service", "project", "about"], default: "project"}
       - {label: "slug", name: "slug", widget: "string"}
       - {label: "title", name: "title", widget: "string"} 
       - {label: "Featured image", name: "featuredimage", widget: "image"}      
@@ -29,22 +29,29 @@ collections:
       - {label: Rating, required: false, name: rating, widget: list, fields: [{label: Rating, name: rating, widget: number, default: 5, valueType: "int", min: 1, max: 5, step: 1}, {label: Author, name: author, widget: string}, {label: Date, name: Date, widget: datetime, dateFormat: "MMMM YYYY"},  {label: Location, name: location, widget: string}]}
       - {label: 'Main content', required: false, name: 'body', widget: 'markdown' }
       - {label: "Tags", required: false, name: "tags", widget: "list"}
+      - {label: "Location", required: false, name: "location", widget: map, type: Point }
+      - {label: "Route", required: false, name: "route", widget: map, type: LineString }
+      - {label: "Area Served", required: false, name: areaServed, widget: list, fields: [{label: "Area", required: false, name: "route", widget: map, type: Polygon }, {label: Place name, name: place, widget: string}]}
   - name: "project"
     label: "Project"
     folder:  "src/pages/project"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project"}
-      - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"} 
+      - {label: "Template Key", name: "templateKey", widget: "select", options: ["service", "project", "about"], default: "project"}
+      - {label: "slug", name: "slug", widget: "string"}
+      - {label: "title", name: "title", widget: "string"} 
+      - {label: "Featured image", name: "featuredimage", widget: "image"}      
+      - {label: "Featured image alt", name: "featuredimage_alt", widget: "string"}
       - {label: "Before", required: false, name: "before", widget: "image"}      
-      - {label: "Before alt", required: false, name: "before_alt", widget: "string"}
-      - {label: "Featured Image", name: "featuredimage", widget: "image"}      
-      - {label: "Featured alt", name: "featuredimage_alt", widget: "string"}
-      - {label: Testimonials, required: false, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-      - {label: 'Main content', name: 'body', widget: 'markdown' }
-      - {label: "Tags", name: "tags", widget: "list"}    
+      - {label: "Before alt", required: false, name: "before_alt", widget: "string"}      
+      - {label: Review, required: false, name: review, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}, {label: Date, name: Date, widget: datetime, dateFormat: "MMMM YYYY"},  {label: Location, name: location, widget: string}]}
+      - {label: Rating, required: false, name: rating, widget: list, fields: [{label: Rating, name: rating, widget: number, default: 5, valueType: "int", min: 1, max: 5, step: 1}, {label: Author, name: author, widget: string}, {label: Date, name: Date, widget: datetime, dateFormat: "MMMM YYYY"},  {label: Location, name: location, widget: string}]}
+      - {label: 'Main content', required: false, name: 'body', widget: 'markdown' }
+      - {label: "Tags", required: false, name: "tags", widget: "list"}
+      - {label: "Location", required: false, name: "location", widget: map, type: Point }
+      - {label: "Route", required: false, name: "route", widget: map, type: LineString }
+      - {label: "Area Served", required: false, name: areaServed, widget: list, fields: [{label: "Area", required: false, name: "route", widget: map, type: Polygon }, {label: Place name, name: place, widget: string}]}
   - name: "areaserved"
     label: "Area Served"
     files:
@@ -55,4 +62,4 @@ collections:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "areaserved"}
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Body", name: "body", widget: "markdown"}                
-        - {label: "Area Served", name: "geojson", widget: "map"}
+        - {label: "Location", name: "location", widget: "map", type: "Point"}

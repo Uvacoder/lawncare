@@ -2,7 +2,7 @@
 title: About Us
 templateKey: service
 slug: /service/aboutus
-featured: false
+featured: true
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Photo by Nervenet
 tags:
