@@ -2,6 +2,7 @@
 templateKey: page
 menu: project
 slug: /project/farthinghoe-project
+featured: true
 title: Farthinghoe Project
 featuredimage: /img/after4a.jpg
 featuredimage_alt: Farthinghoe Project After photo

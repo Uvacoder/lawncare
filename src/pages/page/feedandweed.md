@@ -2,6 +2,7 @@
 templateKey: page
 menu: service
 slug: /service/feedandweed
+featured: true
 title: Feed and Weed
 featuredimage: /img/david-kaloczi-10xlYvD5yn4-unsplash.jpg
 featuredimage_alt: Photo by David Kaloczi on Unsplash

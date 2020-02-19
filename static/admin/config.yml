@@ -21,6 +21,7 @@ collections:
       - {label: Menu, required: false, name: menu, widget: "select", options: ["service", "project", "about"], default: "project" }
       - {label: "slug", name: "slug", widget: "string"}
       - {label: "title", name: "title", widget: "string"} 
+      - {label: "Featured", required: false, name: "featured", widget: "boolean"}          
       - {label: "Featured image", name: "featuredimage", widget: "image"}      
       - {label: "Featured image alt", name: "featuredimage_alt", widget: "string"}
       - {label: "Images", required: false, name: images, widget: list, fields: [{label: Image, name: image, widget: image}, {label: "Image alt", required: false, name: "image_alt", widget: "string"},  {label: "Image label", required: false, name: "imagelabel", widget: "string"}]}
@@ -41,6 +42,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "post"}
       - {label: "slug", name: "slug", widget: "string"}
       - {label: "title", name: "title", widget: "string"} 
+      - {label: "Featured", required: false, name: "featured", widget: "boolean"}    
       - {label: "Featured image", name: "featuredimage", widget: "image"}      
       - {label: "Featured image alt", name: "featuredimage_alt", widget: "string"}
       - {label: "Before", required: false, name: "before", widget: "image"}      

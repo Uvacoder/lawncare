@@ -1,5 +1,5 @@
 - name: "Services"
-  link: "/service" 
+  link: "/servicecatalog" 
 - name: "Portfolio"
   link: "/page"
 - name: "Contact"

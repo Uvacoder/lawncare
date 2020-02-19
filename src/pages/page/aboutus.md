@@ -2,6 +2,7 @@
 templateKey: about
 menu: about
 slug: /about/aboutus
+featured: true
 title: About Us
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Photo by Nervenet

@@ -41,7 +41,7 @@ const Area = styled(animated.div)`
     grid-auto-rows: 60vw;
   }
 `
-class PageIndex extends React.Component {
+class ServiceCatalog extends React.Component {
   render() {
 
     const { data } = this.props
@@ -71,18 +71,20 @@ class PageIndex extends React.Component {
 export default () => (
   <StaticQuery
     query={graphql`
-    query PageIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "page"}}}, sort: {order: ASC, fields: id}) {
+    query ServiceCatalogQuery {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "page"}, menu: {eq: "service"}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
-           excerpt(pruneLength: 400)
+            excerpt(pruneLength: 400)
             id
             frontmatter {
               slug
               title
               templateKey
+              menu
               featured
               featuredimage {
+                id
                 childImageSharp {
                   fluid(quality: 80, maxWidth: 1200) {
                     ...GatsbyImageSharpFluid_withWebp
@@ -93,8 +95,9 @@ export default () => (
           }
         }
       }
-    }  
+    }
+    
     `}
-    render={(data, count) => <PageIndex data={data} count={count} />}
+    render={(data, count) => <ServiceCatalog data={data} count={count} />}
   />
 )

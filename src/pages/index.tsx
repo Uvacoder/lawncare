@@ -32,10 +32,8 @@ type PageProps = {
 const Area = styled(animated.div)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 35vw 40vw 25vw 25vw 25vw 25vw;
+  grid-template-rows: 35vw 40vw 25vw 25vw ;
   grid-template-areas:
-  'pages pages pages'
-  'pages pages pages'
   'pages pages pages'
   'pages pages pages'
   'pages pages pages'
@@ -43,11 +41,9 @@ const Area = styled(animated.div)`
 
   @media (max-width: ${props => props.theme.breakpoints[3]}) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 35vw 30vw 30vw 25vw 25vw 25vw ;
+    grid-template-rows: 35vw 30vw 30vw 25vw ;
 
     grid-template-areas:
-    'pages pages pages'
-    'pages pages pages'
     'pages pages pages'
     'pages pages pages'
     'pages pages pages'
@@ -56,15 +52,12 @@ const Area = styled(animated.div)`
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(9, 38vw);
+    grid-template-rows: repeat(6, 38vw);
 
     grid-template-areas:
     'pages pages'  
     'pages pages'  
     'pages pages'  
-    'pages pages'  
-    'pages pages'  
-    'pages pages'
     'pages pages'  
     'pages pages'  
     'pages pages'  ;
@@ -72,7 +65,7 @@ const Area = styled(animated.div)`
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(18, 50vw);
+    grid-template-rows: repeat(12, 50vw);
 
     grid-template-areas:
     'pages'  
@@ -86,13 +79,7 @@ const Area = styled(animated.div)`
     'pages'  
     'pages'  
     'pages'  
-    'pages'
-    'pages'  
-    'pages'  
-    'pages'  
-    'pages'  
-    'pages'  
-    'pages'   ;
+    'pages'  ;
   }
 `
 
@@ -139,7 +126,7 @@ class Index extends React.Component {
 export default Index
 
 export const query = graphql`  {
-  allMarkdownRemark(sort: {order: ASC, fields: id}, limit: 18) {
+  allMarkdownRemark(sort: {order: ASC, fields: id}, limit: 12, filter: {frontmatter: {featured: {eq: true}}}) {
     edges {
       node {
         excerpt(pruneLength: 400)
@@ -150,6 +137,7 @@ export const query = graphql`  {
           templateKey
           featured
           featuredimage {
+            id
             childImageSharp {
               fluid(quality: 80, maxWidth: 1200) {
                 ...GatsbyImageSharpFluid_withWebp
