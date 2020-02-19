@@ -1,13 +1,12 @@
 ---
-title: Pest Control
 templateKey: page
-menus: service
-rating: []
+menu: service
 slug: /service/pestcontrol
-featured: false
+title: Pest Control
 featuredimage: /img/pestcontrol.jpg
 featuredimage_alt: Photo of red thread disease by Lawns Matter
+rating: []
 tags:
-- service
+  - service
 ---
 Pest control
