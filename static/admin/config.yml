@@ -18,7 +18,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "select", options: ["service", "project", "about"], default: "project"}
-      - {label: Menus, name: menus, widget: list}
+      - {label: Menus, required: false, name: menus, widget: list }
       - {label: "slug", name: "slug", widget: "string"}
       - {label: "title", name: "title", widget: "string"} 
       - {label: "Featured image", name: "featuredimage", widget: "image"}      
