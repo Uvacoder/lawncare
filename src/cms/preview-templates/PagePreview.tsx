@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ProjectPage from '../../templates/project'
+import PagePage from '../../templates/page'
 
 
 
-const ProjectPreview = ({ entry, getAsset }) => {
+const PagePreview = ({ entry, getAsset }) => {
 
   return (
          <div>
-    <ProjectPage
+    <PagePage
       slug={entry.getIn(['data', 'string'])}
       title={entry.getIn(['data', 'string'])}
       featuredimage={entry.getIn(['data', 'image'])}
@@ -19,11 +19,11 @@ const ProjectPreview = ({ entry, getAsset }) => {
   )
 }
 
-ProjectPreview.propTypes = {
+PagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 }
 
-export default ProjectPreview
+export default PagePreview

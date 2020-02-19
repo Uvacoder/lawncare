@@ -122,7 +122,7 @@ const Reviews: React.FunctionComponent<PageProps> = ({ data: { reviews, images }
         </Description>
       </PBox>
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2>Want to start your own project?</h2>
+        <h2>Interested in lawn care?</h2>
         <Link to="/contactus">
         <PButton color={theme.colors.active} py={4} px={8}>
           Contact Us

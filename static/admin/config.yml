@@ -12,9 +12,9 @@ media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 collections:  
-  - name: "service"
-    label: "Service"
-    folder:  "src/pages/service"
+  - name: "page"
+    label: "Page"
+    folder:  "src/pages/page"
     create: true
     slug: "{{slug}}"
     fields:
@@ -32,13 +32,13 @@ collections:
       - {label: "Location", required: false, name: "location", widget: map, type: Point }
       - {label: "Route", required: false, name: "route", widget: map, type: LineString }
       - {label: "Area Served", required: false, name: areaServed, widget: list, fields: [{label: "Area", required: false, name: "route", widget: map, type: Polygon }, {label: Place name, name: place, widget: string}]}
-  - name: "project"
-    label: "Project"
-    folder:  "src/pages/project"
+  - name: "post"
+    label: "Post"
+    folder:  "src/pages/post"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "select", options: ["service", "project", "about"], default: "project"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "post"}
       - {label: "slug", name: "slug", widget: "string"}
       - {label: "title", name: "title", widget: "string"} 
       - {label: "Featured image", name: "featuredimage", widget: "image"}      

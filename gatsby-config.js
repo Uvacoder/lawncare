@@ -105,11 +105,11 @@ module.exports = {
         path: `${__dirname}/config`,
       },
     },
-/*     {
+    {
       resolve: '@stackbit/gatsby-plugin-menus',
       options: {
         // static definition of menu items (optional)
-        menus: {
+/*         menus: {
           main: // identifier of menu container
             [ // array of contained children menu items
               {
@@ -120,7 +120,7 @@ module.exports = {
               }
             ]
           ]
-        },
+        }, */
         // Gatsby node types from which we extract menus (optional, see "Advanced usage")
         sourceNodeType: 'MarkdownRemark', 
         // the relative node path where we can find the 'menus' container (optional)
@@ -132,7 +132,7 @@ module.exports = {
         // the property to use for injecting to the page context (optional, see "Advanced usage")
         pageContextProperty: 'menus',
       },
-    }, */
+    },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {

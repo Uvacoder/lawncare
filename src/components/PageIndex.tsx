@@ -41,23 +41,23 @@ const Area = styled(animated.div)`
     grid-auto-rows: 60vw;
   }
 `
-class ServiceCatalog extends React.Component {
+class PageIndex extends React.Component {
   render() {
 
     const { data } = this.props
-    const { edges: ourservices } = data.allMarkdownRemark
+    const { edges: pages } = data.allMarkdownRemark
 
     return (
 
       <Layout color={theme.colors.primary}>
         <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
         <Area>
-        {ourservices &&
-          ourservices.map(({ node: ourservice }) => (
+        {pages &&
+          pages.map(({ node: page }) => (
 
-         <GridItem key={ourservice.frontmatter.slug} to={ourservice.frontmatter.slug} aria-label={`View our service "${ourservice.frontmatter.title}"`}>
-                        <Img fluid={ourservice.frontmatter.featuredimage.childImageSharp.fluid} />
-            <span>{ourservice.frontmatter.title}</span>
+         <GridItem key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
+                        <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
+            <span>{page.frontmatter.title}</span>
           </GridItem>
          
           ))}
@@ -67,11 +67,12 @@ class ServiceCatalog extends React.Component {
   }
 }
 
+
 export default () => (
   <StaticQuery
     query={graphql`
-    query ServiceCatalogQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "service"}}}, sort: {order: ASC, fields: id}) {
+    query PageIndexQuery {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
            excerpt(pruneLength: 400)
@@ -94,6 +95,6 @@ export default () => (
       }
     }  
     `}
-    render={(data, count) => <ServiceCatalog data={data} count={count} />}
+    render={(data, count) => <PageIndex data={data} count={count} />}
   />
 )

@@ -65,7 +65,7 @@ type PageProps = {
   }
 
 
-  const ServicePage = ({ data }) => {
+  const BlogPage = ({ data }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -105,9 +105,9 @@ type PageProps = {
           Contact Us
         </PButton>
         </Link>
-        <Link to="/service">
+        <Link to="/news">
         <PButton color={theme.colors.active} py={4} px={8}>
-          Other Services
+          Latest information
         </PButton>
         </Link>
         <Link to="/">
@@ -121,10 +121,10 @@ type PageProps = {
 }
 
 
-export default ServicePage
+export default BlogPage
 
 export const query = graphql`
-query ServicePage ($id: String!) {
+query BlogPage ($id: String!) {
    markdownRemark(id: { eq: $id }) {
    excerpt(pruneLength: 400)
    internal {

@@ -65,7 +65,7 @@ type PageProps = {
   }
 
 
-  const ProjectPage = ({ data }) => {
+  const PagePage = ({ data }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -105,9 +105,9 @@ type PageProps = {
           Contact Us
         </PButton>
         </Link>
-        <Link to="/project">
+        <Link to="/page">
         <PButton color={theme.colors.active} py={4} px={8}>
-          Other Projects
+          Other Pages
         </PButton>
         </Link>
         <Link to="/">
@@ -121,10 +121,10 @@ type PageProps = {
 }
 
 
-export default ProjectPage
+export default PagePage
 
 export const query = graphql`
-query ProjectPage ($id: String!) {
+query PagePage ($id: String!) {
    markdownRemark(id: { eq: $id }) {
    excerpt(pruneLength: 400)
    internal {

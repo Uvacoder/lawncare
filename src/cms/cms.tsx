@@ -3,10 +3,10 @@ import uploadcare from 'netlify-cms-media-library-uploadcare'
 import cloudinary from 'netlify-cms-media-library-cloudinary'
 
 import ContactusPreview from './preview-templates/ContactusPreview'
-import ProjectPreview from './preview-templates/ProjectPreview'
+import PagePreview from './preview-templates/PagePreview'
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
 
 CMS.registerPreviewTemplate('contactus', ContactusPreview)
-CMS.registerPreviewTemplate('project', ProjectPreview)
+CMS.registerPreviewTemplate('page', PagePreview)

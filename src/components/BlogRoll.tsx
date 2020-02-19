@@ -41,23 +41,23 @@ const Area = styled(animated.div)`
     grid-auto-rows: 60vw;
   }
 `
-class Portfolio extends React.Component {
+class BlogRoll extends React.Component {
   render() {
 
     const { data } = this.props
-    const { edges: projects } = data.allMarkdownRemark
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
 
       <Layout color={theme.colors.primary}>
         <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
         <Area>
-        {projects &&
-          projects.map(({ node: project }) => (
+        {posts &&
+          posts.map(({ node: post }) => (
 
-         <GridItem key={project.frontmatter.slug} to={project.frontmatter.slug} aria-label={`View project "${project.frontmatter.title}"`}>
-                        <Img fluid={project.frontmatter.featuredimage.childImageSharp.fluid} />
-            <span>{project.frontmatter.title}</span>
+         <GridItem key={post.frontmatter.slug} to={post.frontmatter.slug} aria-label={`View our lastest news "${post.frontmatter.title}"`}>
+                        <Img fluid={post.frontmatter.featuredimage.childImageSharp.fluid} />
+            <span>{post.frontmatter.title}</span>
           </GridItem>
          
           ))}
@@ -67,12 +67,11 @@ class Portfolio extends React.Component {
   }
 }
 
-
 export default () => (
   <StaticQuery
     query={graphql`
-    query PortfolioQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}, sort: {order: ASC, fields: id}) {
+    query BlogRollQuery {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
            excerpt(pruneLength: 400)
@@ -95,6 +94,6 @@ export default () => (
       }
     }  
     `}
-    render={(data, count) => <Portfolio data={data} count={count} />}
+    render={(data, count) => <BlogRoll data={data} count={count} />}
   />
 )

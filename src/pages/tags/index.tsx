@@ -2,6 +2,14 @@ import React from 'react'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
+import { config, animated, useSpring } from 'react-spring'
+import Layout from '../../components/layout'
+import SEO from '../../components/SEO'
+import theme from '../../gatsby-plugin-theme-ui/index'
+import { Box, AnimatedBox, Button } from '../../elements'
+import { transparentize, readableColor } from 'polished'
 
 const TagsPage = ({
   data: {
@@ -11,7 +19,7 @@ const TagsPage = ({
     },
   },
 }) => (
-  <div>
+  <Layout color={theme.colors.primary}>
     <section className="section">
       <Helmet title={`Tags | ${title}`} />
       <div className="container content">
@@ -34,7 +42,7 @@ const TagsPage = ({
         </div>
       </div>
     </section>
-  </div>
+  </Layout>
 )
 
 export default TagsPage
