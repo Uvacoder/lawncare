@@ -1,15 +1,14 @@
 ---
-title: Why Us
 templateKey: page
-menus: service
-rating: []
-slug: /service/whyus
-featured: false
+menu: about
+slug: /about/whyus
+title: Why Us
 featuredimage: /img/whyus.jpg
-featuredimage_alt: Photo by Lawns Matter on client site. 
+featuredimage_alt: Photo by Lawns Matter on client site.
+rating: []
 tags:
-- service
-- about
+  - service
+  - about
 ---
 Lawns Matter are an independent, family run business based in Oxfordshire.  
 We are passionate about lawns and pride ourselves on giving the customer a bespoke service using the best products the market has to offer.
