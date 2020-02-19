@@ -1,5 +1,5 @@
 ---
-templateKey: service
+templateKey: about
 menus:
   - about
 slug: /about/aboutus
