@@ -1,16 +1,11 @@
 ---
 templateKey: page
-menus: project
-rating: []
+menu: project
 slug: /project/project3
 title: Project 3
-before: /img/before3.jpg
-before_alt: Project3 Before photo
 featuredimage: /img/after3.jpg
 featuredimage_alt: Project3 After photo
-testimonials:
-  - author: none
-    quote: Excellent Service
+rating: []
 tags:
   - project
 ---
