@@ -1,8 +1,7 @@
 ---
 title: Scarification
-templateKey: service
-menus:
-  - project
+templateKey: page
+menus: service
 rating: []
 slug: /service/scarification
 featured: true

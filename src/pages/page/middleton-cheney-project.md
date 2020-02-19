@@ -1,7 +1,6 @@
 ---
-templateKey: project
-menus:
-  - project
+templateKey: page
+menus: project
 rating: []
 slug: /project/middleton-cheney-project
 title: Middleton Cheney Project

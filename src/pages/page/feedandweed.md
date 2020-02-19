@@ -1,8 +1,7 @@
 ---
 title: Feed and Weed
-templateKey: service
-menus:
-  - service
+templateKey: page
+menus: service
 rating: []
 slug: /service/feedandweed
 featured: true

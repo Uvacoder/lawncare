@@ -1,8 +1,7 @@
 ---
 title: Pest Control
-templateKey: service
-menus:
-  - service
+templateKey: page
+menus: service
 rating: []
 slug: /service/pestcontrol
 featured: false

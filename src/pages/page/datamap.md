@@ -1,7 +1,6 @@
 ---
-templateKey: project
-menus:
-  - project
+templateKey: page
+menus: project
 slug: /project/datamap
 title: datamap
 featuredimage: /img/sheri-hooley-OYGx12FElcA-unsplash.jpg

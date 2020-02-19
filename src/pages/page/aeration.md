@@ -1,8 +1,7 @@
 ---
 title: Aeration
-templateKey: service
-menus:
-  - service
+templateKey: page
+menus: service
 rating: []
 slug: /service/aeration
 featured: false

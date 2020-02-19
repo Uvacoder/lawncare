@@ -1,8 +1,7 @@
 ---
 title: Thanks
-templateKey: service
-menus:
-  - service
+templateKey: page
+menus: service
 rating: []
 slug: /service/thanks
 featured: false

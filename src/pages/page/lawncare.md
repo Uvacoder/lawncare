@@ -1,8 +1,7 @@
 ---
 title: Lawn care
-templateKey: service
-menus:
-  - project
+templateKey: page
+menus: service
 rating: []
 slug: /service/lawncare
 featured: true

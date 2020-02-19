@@ -1,8 +1,7 @@
 ---
 title: About Us
-templateKey: service
-menus:
-  - project
+templateKey: page
+menus: service
 rating: []
 slug: /service/aboutus
 featured: true

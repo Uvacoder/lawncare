@@ -1,8 +1,7 @@
 ---
 title: Why Us
-templateKey: service
-menus:
-  - service
+templateKey: page
+menus: service
 rating: []
 slug: /service/whyus
 featured: false

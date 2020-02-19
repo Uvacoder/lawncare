@@ -1,8 +1,7 @@
 ---
 title: Lawn Renovations
-templateKey: service
-menus:
-  - service
+templateKey: page
+menus: service
 rating: []
 slug: /service/renovation
 featured: true

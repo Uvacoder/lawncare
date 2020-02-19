@@ -1,8 +1,7 @@
 ---
 title: Disease Control
-templateKey: service
-menus:
-  - service
+templateKey: page
+menus: service
 rating: []
 slug: /service/diseasecontrol
 featured: false

@@ -1,7 +1,6 @@
 ---
-templateKey: project
-menus:
-  - project
+templateKey: page
+menus: project
 slug: /project/bicester-project
 title: Bicester Project
 addressLocality: "Bicester, Oxfordshire, England"
