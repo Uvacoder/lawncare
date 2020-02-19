@@ -101,13 +101,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'portfolio',
-        path: `${__dirname}/static/content/portfolio`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'config',
         path: `${__dirname}/config`,
       },
