@@ -1,14 +1,13 @@
 ---
-title: Lawn Renovations
 templateKey: page
-menus: service
-rating: []
+menu: service
 slug: /service/renovation
-featured: true
+title: Lawn Renovations
 featuredimage: /img/lawnsmatter_renovation001.jpg
 featuredimage_alt: Photo by Lawns Matter on client site
+rating: []
 tags:
-- service
+  - service
 ---
 Our most popular service of 2019 is back for 2020!
 
