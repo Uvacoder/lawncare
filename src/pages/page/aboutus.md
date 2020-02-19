@@ -1,7 +1,6 @@
 ---
 templateKey: about
-menus:
-  - about
+menu: about
 slug: /about/aboutus
 title: About Us
 featuredimage: /img/aboutus.jpg
