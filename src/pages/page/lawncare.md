@@ -1,13 +1,12 @@
 ---
-title: Lawn care
 templateKey: page
-menus: service
-rating: []
+menu: service
 slug: /service/lawncare
-featured: true
+title: Lawn care
 featuredimage: /img/lawnassessment.jpg
 featuredimage_alt: Lawns Matter Logo
+rating: []
 tags:
-- service
+  - service
 ---
 We provide the most complete Lawn care Service in the country
