@@ -1,6 +1,9 @@
 ---
 title: Area served 
 templateKey: service
+menus:
+  - service
+rating: []
 slug: /service/areaserved
 featured: false
 featuredimage: /img/lawnsmattervan.jpg

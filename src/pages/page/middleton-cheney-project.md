@@ -1,5 +1,8 @@
 ---
 templateKey: project
+menus:
+  - project
+rating: []
 slug: /project/middleton-cheney-project
 title: Middleton Cheney Project
 before: /img/before2.jpg

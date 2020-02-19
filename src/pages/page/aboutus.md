@@ -1,6 +1,9 @@
 ---
 title: About Us
 templateKey: service
+menus:
+  - project
+rating: []
 slug: /service/aboutus
 featured: true
 featuredimage: /img/aboutus.jpg

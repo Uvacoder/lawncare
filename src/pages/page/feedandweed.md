@@ -1,6 +1,9 @@
 ---
 title: Feed and Weed
 templateKey: service
+menus:
+  - service
+rating: []
 slug: /service/feedandweed
 featured: true
 featuredimage: /img/david-kaloczi-10xlYvD5yn4-unsplash.jpg

@@ -1,6 +1,9 @@
 ---
 title: Pest Control
 templateKey: service
+menus:
+  - service
+rating: []
 slug: /service/pestcontrol
 featured: false
 featuredimage: /img/pestcontrol.jpg

@@ -1,5 +1,8 @@
 ---
 templateKey: project
+menus:
+  - project
+rating: []
 slug: /project/deddington-project
 title: Deddington Project
 before: /img/before7.jpg

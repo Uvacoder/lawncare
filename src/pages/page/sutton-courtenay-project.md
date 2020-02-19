@@ -1,5 +1,8 @@
 ---
 templateKey: project
+menus:
+  - project
+rating: []
 slug: /project/sutton-courtenay-project
 title: Tadmarton Project
 before: /img/before6.jpg

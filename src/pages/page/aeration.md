@@ -1,6 +1,9 @@
 ---
 title: Aeration
 templateKey: service
+menus:
+  - service
+rating: []
 slug: /service/aeration
 featured: false
 featuredimage: /img/aerator.jpg

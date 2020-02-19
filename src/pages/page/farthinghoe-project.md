@@ -1,5 +1,8 @@
 ---
 templateKey: project
+menus:
+  - project
+rating: []
 slug: /project/farthinghoe-project
 title: Farthinghoe Project
 before: /img/before4a.jpg

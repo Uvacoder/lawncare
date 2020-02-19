@@ -1,5 +1,8 @@
 ---
 templateKey: project
+menus:
+  - project
+rating: []
 slug: /project/project3
 title: Project 3
 before: /img/before3.jpg

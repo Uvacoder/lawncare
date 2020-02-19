@@ -1,6 +1,9 @@
 ---
 title: Disease Control
 templateKey: service
+menus:
+  - service
+rating: []
 slug: /service/diseasecontrol
 featured: false
 featuredimage: /img/disease.jpg

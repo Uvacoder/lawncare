@@ -1,5 +1,7 @@
 ---
 templateKey: project
+menus:
+  - project
 slug: /project/bicester-project
 title: Bicester Project
 addressLocality: "Bicester, Oxfordshire, England"
@@ -14,5 +16,6 @@ testimonials:
     quote: Excellent Service
 tags:
   - project
+rating: []
 ---
 Enjoy your beautiful lawn

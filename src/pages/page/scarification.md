@@ -1,6 +1,9 @@
 ---
 title: Scarification
 templateKey: service
+menus:
+  - project
+rating: []
 slug: /service/scarification
 featured: true
 featuredimage: /img/scarifying-101.jpg

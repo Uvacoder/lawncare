@@ -1,6 +1,9 @@
 ---
 title: Why Us
 templateKey: service
+menus:
+  - service
+rating: []
 slug: /service/whyus
 featured: false
 featuredimage: /img/whyus.jpg

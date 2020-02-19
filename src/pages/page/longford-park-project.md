@@ -1,5 +1,8 @@
 ---
 templateKey: project
+menus:
+  - project
+rating: []
 slug: /project/longford-park-project
 title: Longford Park Project
 before: /img/before1.jpg

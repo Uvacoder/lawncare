@@ -1,6 +1,9 @@
 ---
 title: Lawn Renovations
 templateKey: service
+menus:
+  - service
+rating: []
 slug: /service/renovation
 featured: true
 featuredimage: /img/lawnsmatter_renovation001.jpg

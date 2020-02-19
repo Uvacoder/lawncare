@@ -1,5 +1,8 @@
 ---
 templateKey: project
+menus:
+  - project
+rating: []
 slug: /project/tadmarton-project
 title: Tadmarton project
 before: /img/before5.jpg
