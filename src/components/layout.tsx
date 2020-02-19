@@ -360,7 +360,6 @@ const Layout = ({ children, color }: LayoutProps) => {
           <Main>{children}</Main>
           <Footer color={color}>
             <Flex>
-               
             <Box p={[6, 6, 8]} fontSize={0}>
               Website by <a href="https://www.gappsapps.co.uk">gappsapps.co.uk</a>
             </Box>
