@@ -10,7 +10,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const reviewsTemplate = require.resolve('./src/templates/reviews.tsx')
   const contactTemplate = require.resolve('./src/templates/contact.tsx')
-  const aboutTemplate = require.resolve('./src/templates/about.tsx')
  // const serviceTemplate = require.resolve('./src/templates/service.tsx')
   // const webpageTemplate = require.resolve('./src/templates/webpage.tsx')
   // const projectTemplate = require.resolve('./src/templates/project.tsx')
@@ -19,13 +18,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
  return graphql(`{
       reviews: allReviewsYaml {
-        nodes {
-          slug
-          images
-          tags
-        }
-      }
-      about: allAboutYaml {
         nodes {
           slug
           images
@@ -111,16 +103,6 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: node.slug,
       component: contactTemplate,
-      context: {
-        slug: node.slug,
-        images: `/${node.images}/`,
-      },
-    })
-  }),
-  result.data.about.nodes.forEach(node => {
-    createPage({
-      path: node.slug,
-      component: aboutTemplate,
       context: {
         slug: node.slug,
         images: `/${node.images}/`,

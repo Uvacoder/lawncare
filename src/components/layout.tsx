@@ -121,21 +121,22 @@ const Wrapper = styled.div`
   }
 `
 const Icon = styled(animated.div)`
-height: ${props => props.theme.sidebarWidth.big} 3rem;
-margin: .5rem;
+height: ${props => props.theme.sidebarWidth.big} 6rem;
+margin: 1rem;
 
 @media (max-width: ${props => props.theme.breakpoints[4]}) {
-  height: ${props => props.theme.sidebarWidth.normal} 2.6rem;
-  margin: .4rem;
+  height: ${props => props.theme.sidebarWidth.normal} 4.5rem;
+  margin: .75rem;
  }
 
  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-  height: 1.8rem;
-  margin: .2rem;
+  height: 4rem;
+  margin: .5rem;
+
 }
 
 `
-
+/* 
 const IconGrid = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -152,8 +153,29 @@ const IconGrid = styled(animated.div)`
   }
   
 
-`
+` */
 
+
+const IconLine = styled(animated.div)`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr  1fr 1fr 1fr;
+  width: 4rem;
+  height: ${props => props.theme.sidebarWidth.big} 3rem;
+  
+  @media (max-width: ${props => props.theme.breakpoints[4]}) {
+    height: ${props => props.theme.sidebarWidth.normal} 6rem;
+   }
+  
+   @media (max-width: ${props => props.theme.breakpoints[2]}) {
+    height: 5.2rem;
+    grid-template-columns: 1fr  1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    width: 6rem;
+  }
+  
+
+`
 
 const MyLogo = styled(animated.div)`
 
@@ -246,7 +268,7 @@ const Footer = styled.footer<{ color: string }>`
   position: fixed;
   width: ${props => props.theme.sidebarWidth.big};
   bottom: 0;
-
+ 
   background: ${props => props.color};
 
   color: ${props => readableColor(`${props.color}`, `${props.theme.colors.grey}`, '#c3c3c3')};
@@ -319,24 +341,30 @@ const Layout = ({ children, color }: LayoutProps) => {
                   </PartialNavLink>
                 ))}
            <br />
-                  <IconGrid justify-items="">
+                  <IconLine>
                   <Icon>
                     <a href = "mailto: jon@lawnsmatter.co.uk" rel="nofollow"><Email /></a> 
                     </Icon>
                     <Icon>
                    <a href = "tel:01295402447" rel="nofollow"><Phone /></a>
                    </Icon>
-                   <Icon><a href = "https://www.facebook.com/lawnsmatter" rel="nofollow"><Facebook /></a></Icon>
+                   <Icon>
+                   <a href = "https://www.facebook.com/lawnsmatter" rel="nofollow" color="#fffff"><Facebook /></a>
+                   </Icon>
                    <Icon><Link to="/instagram"><Instagram /></Link></Icon>
-                   </IconGrid>
+                   </IconLine>
+                 
                </Nav>
             </Flex>
           </SideBarInner>
           <Main>{children}</Main>
           <Footer color={color}>
+            <Flex>
+               
             <Box p={[6, 6, 8]} fontSize={0}>
               Website by <a href="https://www.gappsapps.co.uk">gappsapps.co.uk</a>
             </Box>
+            </Flex> 
           </Footer>
         </Wrapper>
       </>

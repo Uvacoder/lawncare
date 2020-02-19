@@ -1,11 +1,12 @@
 ---
+title: Aeration
 templateKey: service
 slug: /service/aeration
-title: Aeration
+featured: false
 featuredimage: /img/aerator.jpg
 featuredimage_alt: Lawnsmatter aerator on client site
 tags:
-  - service
+- service
 ---
 Aeration is key to what we do.  If we look after the soil then the rest becomes so much easier.  To get a great looking lawn its important to ensure that nutrients can reach the soil beneath your grass.  Aeration is important for a healthy lawn because it allows the air and water to get underneath the built up grass and thatch layer.
 

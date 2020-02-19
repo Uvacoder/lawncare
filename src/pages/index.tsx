@@ -7,109 +7,98 @@ import Layout from '../components/layout'
 import GridItem from '../components/grid-item'
 import SEO from '../components/SEO'
 import { ChildImageSharp } from '../types'
+import theme from '../gatsby-plugin-theme-ui/index'
 
 type PageProps = {
   data: {
-    firstProject: {
-      title: string
-      slug: string
-      featuredimage: ChildImageSharp
+    allMarkdownRemark: {
+      edges: {
+        node: {
+          excerpt: string
+          id: string
+          frontmatter: {
+            title: string
+            slug: string
+            templateKey: string
+            featured: boolean
+            featuredimage: ChildImageSharp
+            }[]
+        }
+      }
     }
-    multiProjects: {
-      nodes: {
-        title: string
-        slug: string
-        featuredimage: ChildImageSharp
-      }[]
-    }
-    portfolioProjects: {
-      nodes: {
-        title: string
-        slug: string
-        featuredimage: ChildImageSharp
-      }[]
-    }
-    aboutUs: {
-      nodes: {
-        title: string
-        slug: string
-        featuredimage: ChildImageSharp
-      }[]
-    }
-    instagram: ChildImageSharp
   }
 }
 
 const Area = styled(animated.div)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 35vw 40vw 25vw 25vw;
+  grid-template-rows: 35vw 40vw 25vw 25vw 25vw 25vw;
   grid-template-areas:
-    'about-us about-us about-us' 
-    ' instagram instagram first-project '
-    'portfolio-projects portfolio-projects portfolio-projects'
-    'multi-projects multi-projects multi-projects' ;
+  'pages pages pages'
+  'pages pages pages'
+  'pages pages pages'
+  'pages pages pages'
+  'pages pages pages'
+  'pages pages pages' ;
 
   @media (max-width: ${props => props.theme.breakpoints[3]}) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 35vw 30vw 30vw 25vw;
+    grid-template-rows: 35vw 30vw 30vw 25vw 25vw 25vw ;
 
     grid-template-areas:
-      'multi-projects  first-project  multi-projects multi-projects'
-      'about-us about-us about-us about-us'
-      'portfolio-projects portfolio-projects portfolio-projects portfolio-projects'
-      'instagram instagram instagram instagram';
+    'pages pages pages'
+    'pages pages pages'
+    'pages pages pages'
+    'pages pages pages'
+    'pages pages pages'
+    'pages pages pages' ;
   }
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 38vw);
+    grid-template-rows: repeat(9, 38vw);
 
     grid-template-areas:
-      'first-project about-us'
-      'about-us about-us'
-      'multi-projects multi-projects'
-      'multi-projects multi-projects'
-      'portfolio-projects portfolio-projects'
-      'portfolio-projects portfolio-projects'
-      'instagram instagram';
+    'pages pages'  
+    'pages pages'  
+    'pages pages'  
+    'pages pages'  
+    'pages pages'  
+    'pages pages'
+    'pages pages'  
+    'pages pages'  
+    'pages pages'  ;
   }
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(11, 50vw);
+    grid-template-rows: repeat(18, 50vw);
 
     grid-template-areas:
-    'first-project'  
-      'about-us'
-      'about-us'
-      'about-us'
-      'multi-projects'
-      'multi-projects'
-      'multi-projects'
-      'portfolio-projects' 
-      'portfolio-projects' 
-      'portfolio-projects'
-      'instagram';
+    'pages'  
+    'pages'  
+    'pages'  
+    'pages'  
+    'pages'  
+    'pages'  
+    'pages'  
+    'pages'  
+    'pages'  
+    'pages'  
+    'pages'  
+    'pages'
+    'pages'  
+    'pages'  
+    'pages'  
+    'pages'  
+    'pages'  
+    'pages'   ;
   }
 `
 
-const FirstProject = styled(GridItem)`
-  grid-area: first-project;
-`
 
-const AboutUs = styled(GridItem)`
-grid-area: about-us;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-
-@media (max-width: ${props => props.theme.breakpoints[1]}) {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-`
-const MultiProjects = styled.div`
-  grid-area: multi-projects;
+const PageIndex = styled.div`
+  grid-area: pages;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
@@ -118,131 +107,58 @@ const MultiProjects = styled.div`
     grid-template-rows: 1fr 1fr 1fr;
   }
 `
-const PortfolioProjects = styled.div`
-  grid-area: portfolio-projects;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  @media (max-width: ${props => props.theme.breakpoints[1]}) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-`
-const Instagram = styled(GridItem)`
-  grid-area: instagram;
-`
 
 
-const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, multiProjects, portfolioProjects, aboutUs, instagram } }) => {
-  const pageAnimation = useSpring({
-    config: config.slow,
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-  })
+class Index extends React.Component {
+  render() {
 
-  return (
-    <Layout>
-      <SEO />
-      <Area style={pageAnimation}>
-        <FirstProject to={firstProject.slug} aria-label={`View project "${firstProject.title}"`}>
-          <Img fluid={firstProject.featuredimage.childImageSharp.fluid} />
-          <span>{firstProject.title}</span>
-        </FirstProject>
-        <AboutUs>
-          {aboutUs.nodes.map(about => (          
-             <GridItem to={about.slug} key={about.slug} aria-label={`View about "${about.title}"`}>
-              <Img fluid={about.featuredimage.childImageSharp.fluid} />
-              <span>{about.title}</span>
-             </GridItem>
-           ))}
-        </AboutUs>
-        <MultiProjects>
-          {multiProjects.nodes.map(project => (
-            <GridItem to={project.slug} key={project.slug} aria-label={`View project "${project.title}"`}>
-              <Img fluid={project.featuredimage.childImageSharp.fluid} />
-              <span>{project.title}</span>
-            </GridItem>
+    const { data } = this.props
+    const { edges: pages } = data.allMarkdownRemark
+
+    return (
+
+      <Layout color={theme.colors.primary}>
+        <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
+        <Area>
+        {pages &&
+          pages.map(({ node: page }) => (
+
+         <GridItem key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
+                        <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
+            <span>{page.frontmatter.title}</span>
+          </GridItem>
+         
           ))}
-        </MultiProjects>
-        <PortfolioProjects>
-          {portfolioProjects.nodes.map(portfolio => (
-            <GridItem to={portfolio.slug} key={portfolio.slug} aria-label={`View portfolio "${portfolio.title}"`}>
-              <Img fluid={portfolio.featuredimage.childImageSharp.fluid} />
-              <span>{portfolio.title}</span>
-            </GridItem>
-          ))}
-        </PortfolioProjects>   
-        <Instagram to="/instagram" aria-label="See my Instagram pictures">
-        <Img fluid={instagram.featuredimage.childImageSharp.fluid} />
-          <span>Instagram</span>
-        </Instagram>     
       </Area>
-    </Layout>
-  )
+      </Layout>
+    )
+  }
 }
+
 
 export default Index
 
-export const query = graphql`
-  query Index {
-    firstProject: reviewsYaml {
-      title
-      slug
-      featuredimage {
-        childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-    multiProjects: allReviewsYaml( limit:3 skip: 1) {
-      nodes {
-        title
-        slug
-        featuredimage {
-          childImageSharp {
-            fluid(quality: 95, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
+export const query = graphql`  {
+  allMarkdownRemark(sort: {order: ASC, fields: id}, limit: 18) {
+    edges {
+      node {
+        excerpt(pruneLength: 400)
+        id
+        frontmatter {
+          slug
+          title
+          templateKey
+          featured
+          featuredimage {
+            childImageSharp {
+              fluid(quality: 80, maxWidth: 1200) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
             }
-          }
-        }
-      }
-    }
-    portfolioProjects: allPortfolioYaml( limit:3 ) {
-      nodes {
-        title
-        slug
-        featuredimage {
-          childImageSharp {
-            fluid(quality: 95, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    }
-    aboutUs: allAboutYaml( limit:3 ) {
-      nodes {
-        title
-        slug
-        featuredimage {
-          childImageSharp {
-            fluid(quality: 95, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    }
-    instagram: portfolioYaml(slug: {eq: "portfolio/instagrampics"}) {
-      featuredimage {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 80) {
-            src
           }
         }
       }
     }
   }
+}
 `
