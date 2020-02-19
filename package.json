@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@pake/react-color": "^3.0.0",
+    "@stackbit/gatsby-plugin-menus": "0.0.4",
     "@theme-ui/color-modes": "^0.3.1",
     "@theme-ui/presets": "^0.3.0",
     "@theme-ui/style-guide": "^0.3.0",

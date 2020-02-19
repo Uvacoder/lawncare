@@ -125,23 +125,24 @@ height: ${props => props.theme.sidebarWidth.big} 6rem;
 margin: 1rem;
 
 @media (max-width: ${props => props.theme.breakpoints[4]}) {
-  height: ${props => props.theme.sidebarWidth.normal} 4.5rem;
-  margin: .75rem;
+  height: ${props => props.theme.sidebarWidth.normal} 4rem;
+  margin: .3rem;
  }
 
  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-  height: 4rem;
-  margin: .5rem;
+  height: 3rem;
+  margin: .2rem;
 
 }
 
 `
-/* 
+
 const IconGrid = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   width: 6rem;
+  margin: 1rem;
   height: ${props => props.theme.sidebarWidth.big} 8rem;
   
   @media (max-width: ${props => props.theme.breakpoints[4]}) {
@@ -153,9 +154,9 @@ const IconGrid = styled(animated.div)`
   }
   
 
-` */
+`
 
-
+/* 
 const IconLine = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr;
@@ -175,11 +176,12 @@ const IconLine = styled(animated.div)`
   }
   
 
-`
+` */
 
 const MyLogo = styled(animated.div)`
 
-  height: 9rem;
+  height: 8rem;
+  justify-content: flex-start;
 
 `
 
@@ -208,7 +210,7 @@ const SideBarInner = styled(Box)<{ bg: string }>`
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   background: ${props => props.bg};
 
   @media (max-width: ${props => props.theme.breakpoints[4]}) {
@@ -218,7 +220,7 @@ const SideBarInner = styled(Box)<{ bg: string }>`
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     position: relative;
     width: 100%;
-    height: 10rem;
+    height: 8rem;
     flex-direction: row;
   }
 
@@ -341,7 +343,7 @@ const Layout = ({ children, color }: LayoutProps) => {
                   </PartialNavLink>
                 ))}
            <br />
-                  <IconLine>
+                  <IconGrid>
                   <Icon>
                     <a href = "mailto: jon@lawnsmatter.co.uk" rel="nofollow"><Email /></a> 
                     </Icon>
@@ -352,7 +354,7 @@ const Layout = ({ children, color }: LayoutProps) => {
                    <a href = "https://www.facebook.com/lawnsmatter" rel="nofollow" color="#fffff"><Facebook /></a>
                    </Icon>
                    <Icon><Link to="/instagram"><Instagram /></Link></Icon>
-                   </IconLine>
+                   </IconGrid>
                  
                </Nav>
             </Flex>
