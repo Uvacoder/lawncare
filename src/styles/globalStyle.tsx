@@ -1,8 +1,8 @@
 
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import theme from '../../gatsby-plugin-theme-ui/index'
-import reset from '../../styles/reset'
+import theme from '../gatsby-plugin-theme-ui/index'
+import reset from './reset'
 
 const GlobalStyles = createGlobalStyle`
 *::before,
@@ -75,7 +75,7 @@ body {
 }
 a {
   transition: all 0.3s ease-in-out;
-  color: black;
+  color: ${theme.colors.text};
   text-decoration: none;
   &:hover,
   &:focus {

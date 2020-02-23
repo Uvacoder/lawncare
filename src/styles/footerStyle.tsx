@@ -1,8 +1,8 @@
 
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import theme from '../../gatsby-plugin-theme-ui/index'
-import reset from '../../styles/reset'
+import theme from '../gatsby-plugin-theme-ui/index'
+import reset from './reset'
 import { readableColor } from 'polished'
 
 const Footer = styled.footer<{ color: string }>`

@@ -7,7 +7,7 @@ export const query = graphql`
   {
     file(name: {eq: "logo"}) {
       childImageSharp {
-        fixed(width: 125) {
+        fixed(width: 400) {
           src
         }
       }

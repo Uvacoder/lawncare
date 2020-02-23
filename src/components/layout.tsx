@@ -1,29 +1,12 @@
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import { readableColor } from 'polished'
 import 'typeface-work-sans'
-import { Box, Flex, AnimatedBox } from '../elements'
 import theme from '../gatsby-plugin-theme-ui/index'
 import reset from '../styles/reset'
-import {  Responsive } from 'semantic-ui-react'
-import {  Menu } from '@material-ui/core'
-import Logo from './logo'
-import Phone from './phone'
-import Email from './email'
-import Facebook from './facebook'
-import Instagram from './instagram'
-import { animated } from 'react-spring'
-import NavbarBottom from  './NavbarBottom'
-import GlobalStyles from './styles/globalStyle'
-import Footer from './styles/footerStyle'
-import IconGrid from './styles/iconGridStyle'
-import Icon from './styles/iconStyle'
-import Main from './styles/mainStyle'
-import MyLogo from './styles/myLogoStyle'
-import Nav from './styles/navStyle'
-import SideBarInner from './styles/sideBarInnerStyle'
-import Wrapper from './styles/wrapperStyle'
+import GlobalStyles from '../styles/globalStyle'
+import Main from '../styles/mainStyle'
+import Wrapper from '../styles/wrapperStyle'
 import PersistentDrawerLeft from './PersistentDrawer'
 
 
@@ -53,39 +36,14 @@ interface QueryResult {
 
 const Layout = ({ children, color }: LayoutProps) => {
   const data: QueryResult = useStaticQuery(query)
-  // const [colorMode, setColorMode] = useColorMode()
   return (
+   
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
         <Wrapper>
-          <SideBarInner bg={color} >
-            <Flex
-          //    flexWrap="nowrap"
-              flexDirection={['row', 'row', 'row', 'column']}
-              // alignItems={['center', 'center', 'center', 'flex-start']}
-            //      alignItems={['basline']}
-            //  justifyContent="space-between"  
-            >
-              <Nav
-                color={color}
-              //  mt={[0, 0, 5, 5]}
-                as="nav"
-                // flexWrap="nowrap"
-             //   padding="0 2rem"
-                flexDirection={['row', 'row', 'row', 'column']}
-                alignItems="center"  
-              >  
-
-                   </Nav>
-              <PersistentDrawerLeft />
-             
-            </Flex>
-             {/* <a href="https://www.gappsapps.co.uk"  ><GappsappsPWA /></a> */}
-          </SideBarInner>
+        <PersistentDrawerLeft bg={color} />
           <Main>{children}</Main>
-    
-          {/* <NavbarBottom  maxWidth={Responsive.onlyTablet.maxWidth}/> */}
         </Wrapper>
       </>
     </ThemeProvider>

@@ -1,9 +1,9 @@
 
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import theme from '../../gatsby-plugin-theme-ui/index'
-import reset from '../../styles/reset'
-import { Box, Flex, AnimatedBox } from '../../elements'
+import theme from '../gatsby-plugin-theme-ui/index'
+import reset from './reset'
+import { Box, Flex, AnimatedBox } from '../elements'
 import { readableColor } from 'polished'
 
 const isPartiallyActive = ({ isPartiallyCurrent }: { isPartiallyCurrent: boolean }) =>
