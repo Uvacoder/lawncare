@@ -18,8 +18,10 @@ const GridItem = styled(Link)`
     color: white;
     position: absolute;
     left: 0;
+    bottom: 0;
+    margin: 2rem 1rem;
     right: 0;
-    text-align: right;
+    text-align: left;
     font-weight: 700;
     font-size: ${props => props.theme.fontSizes[4]};
     padding: ${props => props.theme.space[6]};

@@ -27,6 +27,8 @@
     "test:ci": "npm-run-all -s test:compile server:ci"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.3",
+    "@material-ui/icons": "^4.9.1",
     "@pake/react-color": "^3.0.0",
     "@stackbit/gatsby-plugin-menus": "0.0.4",
     "@theme-ui/color-modes": "^0.3.1",
@@ -51,6 +53,7 @@
     "gatsby-remark-copy-linked-files": "^2.1.37",
     "gatsby-remark-images": "^3.1.44",
     "gatsby-remark-relative-images": "^0.2.3",
+    "gatsby-source-facebook": "^2.0.1",
     "gatsby-source-filesystem": "^2.1.43",
     "gatsby-source-instagram": "^0.6.1",
     "gatsby-theme-overreacted-toggle": "^1.0.2",
@@ -70,11 +73,14 @@
     "react-helmet": "^5.2.1",
     "react-spring": "^8.0.27",
     "redux": "^4.0.5",
+    "semantic-ui-react": "^0.88.2",
     "styled-components": "^4.4.1",
     "styled-system": "^5.1.4",
     "theme-ui": "^0.3.1",
     "typeface-work-sans": "^0.0.72",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.4",
+    "typography": "^0.16.19",
+    "typography-theme-sutro": "^0.16.19"
   },
   "devDependencies": {
     "@testing-library/cypress": "^5.0.2",

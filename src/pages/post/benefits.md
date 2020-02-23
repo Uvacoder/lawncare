@@ -1,8 +1,7 @@
 ---
 title: The benefits of Lawn Care
 templateKey: post
-menus:
-  - service
+menu: service
 rating: []
 slug: /service/benefits
 featured: false

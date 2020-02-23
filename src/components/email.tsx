@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const Email = () => (
-  <svg width="100%" height="100%" viewBox="0 -36 300 300" >
+  <svg width="100%" height="100%" fill="#ffffff" viewBox="0 -36 300 300" >
     <title>LawnsMatterEmail</title>
     <polygon id="Icon-Path" opacity="0.9" points="209.964706 107.370462 297.935294 194.799692 285.45 207.199385 197.479412 119.770154"></polygon>
     <polygon id="Icon-Path" opacity="0.9" points="90.6882353 107.747538 103.164706 120.147231 15.8117647 206.962615 3.33529412 194.598"></polygon>

@@ -1,6 +1,6 @@
 ---
 templateKey: page
-menus: project
+menu: project
 rating: []
 slug: /project/project3
 title: Project 3

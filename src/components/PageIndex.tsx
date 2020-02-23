@@ -56,7 +56,7 @@ class PageIndex extends React.Component {
           pages.map(({ node: page }) => (
 
          <GridItem key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
-                        <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
+           <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
             <span>{page.frontmatter.title}</span>
           </GridItem>
          
