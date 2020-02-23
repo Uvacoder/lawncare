@@ -12,7 +12,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import LogoLarge from '../components/logoLarge'
-import GappsappsTinyPWA from './gappsappsTinyPWA'
+import GappsappsPWA from './gappsapps-PWA.tsx'
 import FacebookIcon from '@material-ui/icons/facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import PhoneIcon from '@material-ui/icons/Phone'
@@ -277,7 +277,7 @@ export default function PersistentDrawerLeft() {
         <List>
         <a href="https://www.gappsapps.co.uk" rel="nofollow">
             <ListItem button >
-              <ListItemIcon><GappsappsTinyPWA /></ListItemIcon>
+              <ListItemIcon><GappsappsPWA /></ListItemIcon>
             </ListItem></a>
         </List>
       </Drawer>
