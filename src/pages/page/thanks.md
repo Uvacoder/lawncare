@@ -2,6 +2,7 @@
 templateKey: page
 menu: about
 slug: /about/thanks
+featured: false
 title: Thanks
 featuredimage: /img/johnny-brown-1k35_trK6qo-unsplash.jpg
 featuredimage_alt: Photo by Johnny Brown on Unsplash
