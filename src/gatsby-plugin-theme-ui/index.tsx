@@ -21,7 +21,7 @@ const theme: ThemeShape = {
   useCustomProperties: true,
   colors: {
     text: '#fff',
-    background: '#2B2C3E',      
+    background: '#484A64',
     active: '#90C03E',
     primary: '#2B2C3E',
     secondary: '#577C38',
@@ -31,8 +31,8 @@ const theme: ThemeShape = {
         dark: {
           text: '#000',
           background: '#fff',
-          active: '#90C03E',          
-          primary: '#7f1734',    
+          active: '#90C03E',
+          primary: '#7f1734',
           secondary: '#1339AC',
           grey: '#2B2C3E',
           shade: '#f5f5f5',
@@ -61,11 +61,9 @@ const theme: ThemeShape = {
     bold: 600,
   },
   sidebarWidth: {
-    big: '275px',
-    normal: '220px',
+    big: '0px',
+    normal: '0px',
   },
 }
 
 export default theme
-
-

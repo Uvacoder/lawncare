@@ -88,15 +88,17 @@ const Content = styled(Flex)`
   z-index: 10;
   position: absolute;
   left: 0;
-  top: 0;
-  right: 0;
   bottom: 0;
+  top: 0; 
+  right: 0;
   padding: ${props => props.theme.space[5]};
 `
 
 const HeartIcon = styled.img`
   width: 1.25rem;
   height: 1.25rem;
+  top: 0;
+  right: 0;
 `
 
 type Props = {

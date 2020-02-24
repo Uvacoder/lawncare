@@ -1,6 +1,6 @@
 ---
 templateKey: page
-menus: project
+menu: project
 rating: []
 slug: /project/project3
 title: Project 3
@@ -14,4 +14,5 @@ testimonials:
 tags:
   - project
 ---
+
 Enjoy your beautiful lawn

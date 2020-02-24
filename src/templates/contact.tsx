@@ -5,9 +5,11 @@ import { transparentize, readableColor } from 'polished'
 import styled from 'styled-components'
 import { config, useSpring, animated } from 'react-spring'
 import Layout from '../components/layout'
-import { Box, AnimatedBox, Button } from '../elements'
+import { Box, AnimatedBox} from '../elements'
 import SEO from '../components/SEO'
 import theme from '../gatsby-plugin-theme-ui/index'
+import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+
 
 const PBox = styled(AnimatedBox)`
   max-width: 1400px;
@@ -114,43 +116,32 @@ const Contact: React.FunctionComponent<PageProps> = ({ data: { contact, images }
             <Img alt={image.name} key={image.childImageSharp.fluid.src} fluid={image.childImageSharp.fluid} />
           ))}
         </PBox>
-      </Content>      
-      <PBox py={10} px={[6, 6, 8, 10]}>
-        <Category style={categoryAnimation}>{contact.category}</Category>
+      </Content>  
+      <Category style={categoryAnimation}>{contact.category}</Category>
         <Description style={descAnimation}>
           <div dangerouslySetInnerHTML={{ __html: contact.desc }} />
-
-          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
-            <table>
-            <thead>
-            <tr>
-            <th>Contact us</th>
-            </tr>
-            </thead>
-            <tbody>
-              <tr> 
-              <td><label>Name</label></td> <td><input type="text" name="name" /></td>
-              </tr>
-              <tr> 
-              <td><label>Post Code</label></td> <td><input type="text" name="postcode" /></td>
-              </tr>
-              <tr> 
-              <td><label>Email</label></td> <td> <input type="email" name="email" /></td>
-              </tr>
-              <tr> 
-              <td><label>Message: </label></td> <td><textarea name="message" placeholder="I am interested in receiving a lawn assessment and quote for your services.  "></textarea></td>
-              </tr>
-            </tbody>
-            </table>
-
-   
-          <PButton type="submit" color={theme.colors.active} py={4} px={8}>
-          Send
-          </PButton>
-         
-          </form>
-        </Description>
-      </PBox>
+          </Description>
+      <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+      <Grid.Column width='fill-available'>
+      <Form size='large' name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
+        <Segment stacked>
+          <Form.Input fluid icon='user' iconPosition='left' placeholder='Name' />
+          <Form.Input fluid icon='phone' iconPosition='left' placeholder='Phone number' />
+          <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
+          <Form.Input fluid icon='user' iconPosition='left' placeholder='Address' />
+          <Form.Input fluid icon='user' iconPosition='left' placeholder='Post Code' />
+          <Button color='teal' fluid size='large'>
+            Login
+          </Button>
+        </Segment>
+      </Form>
+         <Message>
+          New to us? <a href='#'>Sign Up</a>
+         </Message>
+      </Grid.Column>
+    </Grid>
+       
+  
     </Layout>
   )
 }
