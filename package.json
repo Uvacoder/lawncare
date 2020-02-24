@@ -53,7 +53,6 @@
     "gatsby-remark-copy-linked-files": "^2.1.37",
     "gatsby-remark-images": "^3.1.44",
     "gatsby-remark-relative-images": "^0.2.3",
-    "gatsby-source-facebook": "^2.0.1",
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-source-instagram": "^0.6.1",
     "gatsby-theme-overreacted-toggle": "^1.0.2",
