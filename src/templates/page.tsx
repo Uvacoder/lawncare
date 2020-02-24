@@ -6,9 +6,10 @@ import { config, animated, useSpring } from 'react-spring'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-plugin-theme-ui/index'
-import { Box, AnimatedBox, Button } from '../elements'
+import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
+import Button from '@material-ui/core/Button'
 
 const PBox = styled(AnimatedBox)`
   max-width: 1400px;
@@ -102,19 +103,19 @@ type PageProps = {
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
         <h2></h2>
         <Link to="/contactus">
-        <PButton color={theme.colors.active} py={4} px={8}>
+        <Button color={theme.colors.active} variant="contained"py={4} px={8}>
           Contact Us
-        </PButton>
+        </Button>
         </Link>
         <Link to="/page">
-        <PButton color={theme.colors.active} py={4} px={8}>
+        <Button color={theme.colors.active} variant="outlined" py={4} px={8}>
           Other Pages
-        </PButton>
+        </Button>
         </Link>
         <Link to="/">
-        <PButton color={theme.colors.active} py={4} px={8}>
+        <Button color={theme.colors.active} variant="contained" py={4} px={8}>
           Return to main menu
-        </PButton>
+        </Button>
         </Link>
       </PBox>
     </Layout>

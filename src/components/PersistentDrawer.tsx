@@ -31,7 +31,7 @@ import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 
 
-import Logo from '../components/logo'
+
 const drawerWidth = 275;
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -60,9 +60,19 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     menuButton: {
       marginRight: theme.spacing(2),
-      color: palette.palette.primary.text,
       fontFamily: 'Open Sans',
-      textDecoration: 'none',
+      fontWeight: '400',
+      fontSize: '1.1rem',
+      textTransform: 'capitalize',
+    },
+    button: {
+      marginRight: theme.spacing(1),
+      fontFamily: 'Open Sans',
+      fontWeight: '400',
+      fontSize: '1.1rem',
+      textTransform: 'capitalize',
+      color: palette.palette.primary.text,
+      borderColor:  palette.palette.primary.light,
     },
     svgIcon: {
       fill: palette.palette.primary.text,
@@ -170,15 +180,11 @@ export default function PersistentDrawerLeft() {
       >
         <Toolbar>
         <Link to="/"><Container maxWidth="sm"><LogoLarge /></Container></Link>
-        <Button variant="outlined" color={theme.palette.primary.text}    aria-label="open drawer"
+        <Button variant="outlined" aria-label="open drawer"
             onClick={handleDrawerOpen} size="medium"
-            className={clsx(classes.menuButton, open && classes.hide)}>
+            className={clsx(classes.button, open && classes.hide)}>
         Menu
       </Button>
-
-
-         {/* <Container> <a href="tel:01295402447" rel="nofollow" margin="1rem"><PhoneIcon /></a></Container> */}
-
 
           <div className={classes.search}>
             <div className={classes.searchIcon}>
