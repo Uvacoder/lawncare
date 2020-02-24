@@ -27,7 +27,7 @@ import SearchIcon from '@material-ui/icons/Search'
 import InputBase from '@material-ui/core/InputBase'
 import palette from '../gatsby-plugin-theme-ui/palette'
 import MenuIcon from '@material-ui/icons/Menu';
-import Container from '@material-ui/core/Container';  
+import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 
 
@@ -41,13 +41,13 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: palette.palette.primary.background,
     },
     appBar: {
-      backgroundColor: palette.palette.primary.background, 
-      color: palette.palette.primary.text,  
+      backgroundColor: palette.palette.primary.background,
+      color: palette.palette.primary.text,
       transition: theme.transitions.create(['margin', 'width'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
-        backgroundColor: palette.palette.primary.background, 
-        color: palette.palette.primary.text,     
+        backgroundColor: palette.palette.primary.background,
+        color: palette.palette.primary.text,
       }),
     },
     appBarShift: {
@@ -60,12 +60,12 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     menuButton: {
       marginRight: theme.spacing(2),
-      color: palette.palette.primary.text,  
+      color: palette.palette.primary.text,
       fontFamily: 'Open Sans',
       textDecoration: 'none',
     },
     svgIcon: {
-      fill: palette.palette.primary.text,   
+      fill: palette.palette.primary.text,
     },
     hide: {
       display: 'none',
@@ -76,8 +76,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     drawerPaper: {
       width: drawerWidth,
-      backgroundColor: palette.palette.primary.background, 
-      color: palette.palette.primary.text,     
+      backgroundColor: palette.palette.primary.background,
+      color: palette.palette.primary.text,
     },
     drawerHeader: {
       display: 'flex',
@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     content: {
       flexGrow: 1,
-      color: palette.palette.primary.text,     
+      color: palette.palette.primary.text,
       padding: theme.spacing(3),
       transition: theme.transitions.create('margin', {
         easing: theme.transitions.easing.sharp,
@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme: Theme) =>
     search: {
       position: 'relative',
       borderRadius: theme.shape.borderRadius,
-      color: palette.palette.primary.text,     
+      color: palette.palette.primary.text,
       backgroundColor: fade(theme.palette.common.white, 0.15),
       '&:hover': {
         backgroundColor: fade(theme.palette.common.white, 0.25),
@@ -161,7 +161,7 @@ export default function PersistentDrawerLeft() {
     <div className={classes.root}>
       <CssBaseline />
       <GlobalStyles />
-    
+
       <AppBar
         position="fixed"
          className={clsx(classes.appBar, {
@@ -175,10 +175,10 @@ export default function PersistentDrawerLeft() {
             className={clsx(classes.menuButton, open && classes.hide)}>
         Menu
       </Button>
-   
-  
+
+
          {/* <Container> <a href="tel:01295402447" rel="nofollow" margin="1rem"><PhoneIcon /></a></Container> */}
-   
+
 
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -214,10 +214,10 @@ export default function PersistentDrawerLeft() {
              <MenuIcon
             aria-label="close drawer"
             onClick={handleDrawerClose}
-              
+
         />
-         
-       
+
+
         </div>
         <Divider />
         <div className={classes.search}>
@@ -295,9 +295,9 @@ export default function PersistentDrawerLeft() {
         })}
       >
         <div className={classes.drawerHeader} />
-     
+
       </main>
-     
+
     </div>
   );
 }

@@ -55,6 +55,6 @@ const Nav = styled(Flex)<{  color: theme.colors.primary }>`
       margin-left: ${props => props.theme.space[2]};
     }
   }
-` 
+`
 
 export default Nav

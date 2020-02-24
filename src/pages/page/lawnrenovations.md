@@ -18,7 +18,7 @@ thatch then a lawn renovation is your answer. Lawn renovation basically means we
 kill the moss and weeds and then we either turf cut the lawn or scarify it back
 to soil and re-seed. The beauty of this treatment is that we can choose the
 correct type of grass seed that will thrive in it environment which cannot be
-said for turfing which only uses a set species.  
+said for turfing which only uses a set species.
 Lawn renovation is also a 1/4 of the price of turfing.
 
 Get in contact today for a quote for a Full Lawn Renovation.
