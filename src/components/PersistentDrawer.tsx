@@ -13,7 +13,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import LogoLarge from '../components/logoLarge'
 import GappsappsPWA from './gappsapps-PWA.tsx'
-import FacebookIcon from '@material-ui/icons/facebook'
+import FacebookIcon from '@material-ui/icons/Facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import PhoneIcon from '@material-ui/icons/Phone'
 import Phone from '../components/phone'
