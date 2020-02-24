@@ -9,7 +9,7 @@ const Footer = styled.footer<{ color: string }>`
   position: fixed;
   width: ${props => props.theme.sidebarWidth.big};
   bottom: 0;
- 
+
   background: ${props => props.color};
 
   color: ${props => readableColor(`${props.color}`, `${props.theme.colors.grey}`, '#c3c3c3')};

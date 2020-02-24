@@ -186,7 +186,7 @@ module.exports = {
         ],
       },
     },
- /*    {
+    {
       resolve: `gatsby-source-facebook`,
       options: {
         places: [`www.facebook.com/lawnsmatter`], // Can be either a numeric ID or the URL ID
@@ -196,7 +196,7 @@ module.exports = {
         key: 'EAAGLnI8D2EYBAF4JTvFzS82CyaMknnfyDsVzbcHtuBzRLh928z9ddvEvYNZBADXFh8VbV20MON0PAYyvxm2BE9U1deyeqt9OGZC6nxCy2taPmRMbUXqB6cuilxusLkjFbn44WMrmZADyECbrDNuazdqoloYeGVgfCVlSLWooWHYypx8KRZBohPiu1y5zHi6z2kdK4NecGoZCltZC21j9GdolwEgBereIJmZBrl7ScNmgAZDZD', // You will need to create a Facebook application and go through review in order to get an API token.
         version: '5.0', // The version of the graph API to use. Defaults to 5.0
       },
-    }, */
+    },
     'gatsby-plugin-sitemap',
     'gatsby-theme-overreacted-toggle',
     {

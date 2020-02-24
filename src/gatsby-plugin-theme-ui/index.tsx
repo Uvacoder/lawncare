@@ -2,7 +2,7 @@ interface ThemeShape {
   breakpoints: string[]
   fontSizes: string[]
   colors: {
-    [key: string]: string 
+    [key: string]: string
   }
   space: string[]
   fontWeights: {
@@ -21,7 +21,7 @@ const theme: ThemeShape = {
   useCustomProperties: true,
   colors: {
     text: '#fff',
-    background: '#484A64',      
+    background: '#484A64',
     active: '#90C03E',
     primary: '#2B2C3E',
     secondary: '#577C38',
@@ -31,8 +31,8 @@ const theme: ThemeShape = {
         dark: {
           text: '#000',
           background: '#fff',
-          active: '#90C03E',          
-          primary: '#7f1734',    
+          active: '#90C03E',
+          primary: '#7f1734',
           secondary: '#1339AC',
           grey: '#2B2C3E',
           shade: '#f5f5f5',
@@ -67,5 +67,3 @@ const theme: ThemeShape = {
 }
 
 export default theme
-
-

@@ -59,7 +59,7 @@ class PageIndex extends React.Component {
            <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
             <span>{page.frontmatter.title}</span>
           </GridItem>
-         
+
           ))}
       </Area>
       </Layout>
@@ -93,7 +93,7 @@ export default () => (
           }
         }
       }
-    }  
+    }
     `}
     render={(data, count) => <PageIndex data={data} count={count} />}
   />

@@ -17,11 +17,11 @@ html {
   box-sizing: border-box;
   border: 0;
   margin: 0;
-  
+
   h1, h2, h3, h4, h5, h6 {
     font-weight: ${theme.fontWeights.bold};
   }
-  
+
   h1 {
     font-size: ${theme.fontSizes[6]};
   }
@@ -40,10 +40,10 @@ html {
   h6 {
     font-size: ${theme.fontSizes[1]};
   }
-  
+
   @media (max-width: 600px) {
     font-size: 16px;
-    
+
     h1 {
       font-size: ${theme.fontSizes[5]};
     }
