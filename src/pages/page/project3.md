@@ -10,4 +10,4 @@ tags:
   - project
 ---
 
-Enjoy your beautiful lawn
+Enjoy your beautiful lawn!
