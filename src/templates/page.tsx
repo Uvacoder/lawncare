@@ -8,6 +8,7 @@ import SEO from '../components/SEO'
 import theme from '../gatsby-plugin-theme-ui/index'
 import { Box, AnimatedBox, Button } from '../elements'
 import { transparentize, readableColor } from 'polished'
+import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 
 const PBox = styled(AnimatedBox)`
   max-width: 1400px;

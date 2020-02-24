@@ -16,6 +16,7 @@ import GappsappsPWA from './gappsapps-PWA.tsx'
 import FacebookIcon from '@material-ui/icons/facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import PhoneIcon from '@material-ui/icons/Phone'
+import Phone from '../components/phone'
 import EmailIcon from '@material-ui/icons/Email'
 import InfoIcon from '@material-ui/icons/Info'
 import HomeIcon from '@material-ui/icons/Home'
@@ -61,6 +62,10 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: theme.spacing(2),
       color: palette.palette.primary.text,  
       fontFamily: 'Open Sans',
+      textDecoration: 'none',
+    },
+    svgIcon: {
+      fill: palette.palette.primary.text,   
     },
     hide: {
       display: 'none',
@@ -123,7 +128,7 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
     },
     inputRoot: {
-      color: 'inherit',
+      color: palette.palette.primary.text,
     },
     inputInput: {
       padding: theme.spacing(1, 1, 1, 7),
@@ -189,6 +194,9 @@ export default function PersistentDrawerLeft() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
+          <br />
+        <Container>  <a href="tel:01295402447" rel="nofollow" className={clsx(classes.menuButton, open && classes.hide)}  fill={palette.palette.primary.text} >
+          <Phone /></a> </Container>
         </Toolbar>
       </AppBar>
       <Drawer
