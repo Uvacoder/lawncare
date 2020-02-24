@@ -7,7 +7,7 @@ const palette: Palette = {
       light: '#656681',
       main: '#2B2C3E',
       text: '#fff',
-      background: '#484A64',      
+      background: '#484A64',
       active: '#90C03E',
       primary: '#2B2C3E',
       grey: '#2B2C3E',
@@ -34,7 +34,7 @@ const palette: Palette = {
       'Open Sans',
     ].join(','),
   },
- 
+
     fontWeights: {
       normal: 300,
       bold: 600,

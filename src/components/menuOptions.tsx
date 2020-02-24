@@ -14,5 +14,3 @@ export default class MenuOptions extends React.Component {
     `} />
     )}
     }
-
-

@@ -6,7 +6,7 @@ import NavBottom from '../styles/navBottomStyle'
 import Instagram from './instagram'
 import Facebook from './facebook'
 import Phone from './phone'
-import Email from './email' 
+import Email from './email'
 import Home from './home'
 import Gappsapps from './gappsapps'
 import styled from 'styled-components'
@@ -34,7 +34,7 @@ class NavbarBottom extends React.Component {
          <GridIcon><Box><a href="https://www.facebook.com/lawnsmatter" rel="nofollow"><Facebook /></a></Box></GridIcon>
          <GridIcon><Box><Link to="/instagram"><Instagram /></Link></Box></GridIcon>
          <GridIcon><Box><a href="https://www.gappsapps.co.uk" rel="nofollow"><Gappsapps /></a></Box></GridIcon>
-     
+
        </FooterGrid>
        </Container>
     )

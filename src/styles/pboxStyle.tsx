@@ -14,7 +14,7 @@ const PBox = styled(AnimatedBox)`
   @media (max-width: ${props => props.theme.breakpoints[4]}) {
     margin: .1rem;
    }
- 
+
   @media (max-height: ${props => props.theme.breakpoints[2]}/2 2fr) {
    margin: .5rem;
   }
