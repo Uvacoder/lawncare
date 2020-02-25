@@ -11,19 +11,18 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import LogoLarge from '../components/logoLarge'
+import LogoLarge from './logoLarge'
 import Gappsapps from './gappsapps.tsx'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import PhoneIcon from '@material-ui/icons/Phone'
-import Phone from '../components/phone'
+import Phone from './phone'
 import EmailIcon from '@material-ui/icons/Email'
 import InfoIcon from '@material-ui/icons/Info'
 import HomeIcon from '@material-ui/icons/Home'
 import FolderIcon from '@material-ui/icons/Folder'
 import WorkIcon from '@material-ui/icons/Work'
 import GlobalStyles from '../styles/globalStyle'
-import SearchIcon from '@material-ui/icons/Search'
 import InputBase from '@material-ui/core/InputBase'
 import palette from '../gatsby-plugin-theme-ui/palette'
 import MenuIcon from '@material-ui/icons/Menu';
@@ -112,14 +111,6 @@ const useStyles = makeStyles((theme: Theme) =>
       }),
       marginLeft: 0,
     },
-    search: {
-      position: 'relative',
-      borderRadius: theme.shape.borderRadius,
-      color: palette.palette.primary.text,
-      backgroundColor: fade(theme.palette.common.white, 0.15),
-      '&:hover': {
-        backgroundColor: fade(theme.palette.common.white, 0.25),
-      },
       marginLeft: 0,
       width: '60%',
       [theme.breakpoints.up('sm')]: {
@@ -127,33 +118,10 @@ const useStyles = makeStyles((theme: Theme) =>
         width: 'auto',
       },
     },
-    searchIcon: {
-      width: theme.spacing(7),
-      height: '100%',
-      position: 'absolute',
-      pointerEvents: 'none',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    inputRoot: {
-      color: palette.palette.primary.text,
-    },
-    inputInput: {
-      padding: theme.spacing(1, 1, 1, 7),
-      transition: theme.transitions.create('width'),
-      width: '100%',
-      [theme.breakpoints.up('sm')]: {
-        width: 120,
-        '&:focus': {
-          width: 200,
-        },
-      },
-    },
-  }),
+  )
 );
 
-export default function PersistentDrawerLeft() {
+export default function PermanentDrawerLeft() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -171,42 +139,10 @@ export default function PersistentDrawerLeft() {
       <CssBaseline />
       <GlobalStyles />
 
-      <AppBar
-        position="fixed"
-         className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
-        })}
-      >
-        <Toolbar  className={clsx(classes.toolbar, open && classes.hide)}>
-        <Link to="/"><Container maxWidth="sm"><LogoLarge /></Container></Link>
-        <Button variant="outlined" aria-label="open drawer"
-            onClick={handleDrawerOpen} size="medium"
-            className={clsx(classes.button, open && classes.hide)}>
-        Menu
-      </Button>
-
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon className={clsx(classes.menuButton, open && classes.hide)}/>
-            </div>
-            <InputBase
-              placeholder="Search…"
-              className={clsx(classes.menuButton, open && classes.hide)}
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
-          <br />
-        <Container>  <a href="tel:01295402447" rel="nofollow" className={clsx(classes.menuButton, open && classes.hide)}  fill={palette.palette.primary.text} >
-          <Phone /></a> </Container>
-        </Toolbar>
-      </AppBar>
+     
       <Drawer
         className={classes.drawer}
-        variant="persistent"
+        variant="permanent"
         anchor="left"
         open={open}
         classes={{
@@ -216,30 +152,10 @@ export default function PersistentDrawerLeft() {
         <div className={classes.drawerHeader}
            >
 
-         <Container 
-           maxWidth={drawerWidth}
-           aria-label="close drawer"
-           onClick={handleDrawerClose}
-          ><LogoLarge /></Container>
+<Link to="/"><Container><LogoLarge /></Container></Link>
         </div>
         <List   width={drawerWidth}>
     
-        <ListItem>
-        <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
-          </ListItem>
-
             <Link to="/">
             <ListItem button >
               <ListItemIcon><HomeIcon /></ListItemIcon>
@@ -280,6 +196,7 @@ export default function PersistentDrawerLeft() {
               <ListItemIcon><InstagramIcon /></ListItemIcon>
               <ListItemText>Instagram</ListItemText>
             </ListItem></Link>
+            <Divider />
         <a href="https://www.gappsapps.co.uk" rel="nofollow">
             <ListItem button >
               <ListItemIcon><Gappsapps /></ListItemIcon>

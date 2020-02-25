@@ -18,8 +18,8 @@ module.exports = {
   googleAnalyticsID: 'UA-XXXXXX-X',
 
   // Manifest and Progress color
-  themeColor: '#2B2C3E',
-  backgroundColor: '#2B2C3E',
+  themeColor: '#2f3644',
+  backgroundColor: '#2f3644',
 
   // Service SEO
   type: 'Service',

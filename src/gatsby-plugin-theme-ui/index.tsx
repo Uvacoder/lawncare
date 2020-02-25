@@ -61,9 +61,16 @@ const theme: ThemeShape = {
     bold: 600,
   },
   sidebarWidth: {
-    big: '0px',
-    normal: '0px',
+    big: '275px',
+    normal: '275px',
+    small: '275px',
   },
+  menuBarHeight: {
+    big: '275px',
+    normal: '275px',
+    small: '275px',
+  },
+
 }
 
 export default theme

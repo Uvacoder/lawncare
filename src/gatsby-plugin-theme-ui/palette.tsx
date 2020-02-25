@@ -5,11 +5,11 @@ const palette: Palette = {
     primary: {
       // light: will be calculated from palette.primary.main,
       light: '#656681',
-      main: '#2B2C3E',
+      main: '#2f3644',
       text: '#fff',
-      background: '#484A64',
+      background: '#2f3644',
       active: '#90C03E',
-      primary: '#2B2C3E',
+      primary: '#2f3644',
       grey: '#2B2C3E',
       shade: '#f5f5f5',
       // dark: will be calculated from palette.primary.main,
@@ -43,6 +43,20 @@ const palette: Palette = {
       big: '275px',
       normal: '220px',
     },
+  raisedContainer: {
+    padding: '30px 0',
+    margin: '0',
+    boxShadow: '0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2)',
+    borderRadius: '6px',
+    zIndex: '3',
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    minWidth: '0',
+    wordWrap: 'break-word',
+    fontSize: '1rem ',
+    transition: 'all 300ms linear ' ,
+  },
 
 };
 

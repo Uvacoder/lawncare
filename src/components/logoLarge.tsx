@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const LogoLarge = () => (
-  <svg width="100%" height="100%" viewBox="0 0 600 274" >
+  <svg width="100%" height="100%" viewBox="0 0 300 274" >
     <title>LawnsMatter</title>
     <g id="logoLarge" >
     <text id="la" fill="#7CB141" font-family="Open Sans" font-size="100" font-weight="300"><tspan x="15" y="137">la</tspan></text>

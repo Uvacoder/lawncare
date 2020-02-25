@@ -10,14 +10,19 @@ import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 import Button from '@material-ui/core/Button'
+import Container from '@material-ui/core/Container'
+import BackgroundImage from 'gatsby-background-image'
 
 const PBox = styled(AnimatedBox)`
-  max-width: 1400px;
-  margin: 0 auto;
+  
+  margin: 30 auto;
 `
+
+
 
 const Content = styled(Box)<{ bg: string }>`
   background-color: ${props => transparentize(0.9, props.bg)};
+  
 
   .gatsby-image-wrapper:not(:last-child) {
     margin-bottom: ${props => props.theme.space[10]};
@@ -31,11 +36,27 @@ const Content = styled(Box)<{ bg: string }>`
 const Category = styled(AnimatedBox)`
   letter-spacing: 0.05em;
   font-size: ${props => props.theme.fontSizes[1]};
-  text-transform: uppercase;
+  text-transform: capitalize;
+  color: ${theme.colors.active};
 `
+const RaisedContainer = styled(Container)`
+  padding: 30px 0;
+  margin: -300px;
+  box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
+  border-radius: 6px;
+  z-index: 3;
+  position: relative;
+  background-color: ${theme.colors.primary};
+  display: flex
+  flexDirection: column
+  minWidth: 0;
+  wordWrap: break-word;
+  fontSize: 1.5rem ;
+  transition: all 300ms linear ; 
 
+  `
 const Description = styled(animated.div)`
-  max-width: 960px;
+  
   letter-spacing: -0.003em;
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
@@ -76,8 +97,9 @@ type PageProps = {
   const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
   const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
   const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
-
+  const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
+    <div>
     <Layout color={theme.colors.primary}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
@@ -87,23 +109,62 @@ type PageProps = {
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         individual
       />
-      <Content bg={theme.colors.primary} py={10}>
-        <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
-        <animated.h1 style={titleAnimation}>{data.markdownRemark.frontmatter.title}</animated.h1>
+         <Content bg={theme.colors.primary} >
+      
+        <BackgroundImage
+ 
+          fluid={imageData}
+          style={{
+          backgroundAttachment: 'fixed',     
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          }}
+      
+          // backgroundSize="cover"          
+
+        >   
+ 
+    
+          <Container
+        style={{
+          display: 'flex',
+          height: '800px',
+          width: '70%' ,
+          lineHeight: '1',
+          justifyContent: 'space-around',
+          alignItems: 'left',
+          flexDirection: 'column',
+        }}
+      >
+        </Container>  
+   </BackgroundImage>
+
+   <Container>
+   <Container>
+   <RaisedContainer>
+   
+ 
+   
+      
+      
   
-        <Img fluid={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid} />
-        </PBox>
-      </Content>
-      <PBox py={10} px={[6, 6, 8, 10]}>
-        <Category style={categoryAnimation}>{data.markdownRemark.frontmatter.templateKey}</Category>
+        {/* <animated.h1 style={titleAnimation}></animated.h1> */}
+      
+ 
+      
+   
+        <Category style={categoryAnimation}> <h3 >{data.markdownRemark.frontmatter.title}</h3></Category>
+        
+          
+
         <Description style={descAnimation}>
-        <p> {data.markdownRemark.internal.content}</p>
+         {data.markdownRemark.internal.content}
         </Description>
-      </PBox>
+        
+     
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2></h2>
         <Link to="/contactus">
-        <Button color={theme.colors.active} variant="contained"py={4} px={8}>
+        <Button color={theme.colors.active} margin="1rem" variant="contained"py={4} px={8}>
           Contact Us
         </Button>
         </Link>
@@ -118,7 +179,13 @@ type PageProps = {
         </Button>
         </Link>
       </PBox>
+      
+      </RaisedContainer>
+      </Container>  
+      </Container>
+      </Content>
     </Layout>
+    </div>
   )
 }
 

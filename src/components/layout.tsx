@@ -7,7 +7,7 @@ import reset from '../styles/reset'
 import GlobalStyles from '../styles/globalStyle'
 import Main from '../styles/mainStyle'
 import Wrapper from '../styles/wrapperStyle'
-import PersistentDrawerLeft from './PersistentDrawer'
+import PermanentDrawerLeft from './PermanentDrawer'
 
 
 const isPartiallyActive = ({ isPartiallyCurrent }: { isPartiallyCurrent: boolean }) =>
@@ -42,7 +42,7 @@ const Layout = ({ children, color }: LayoutProps) => {
       <>
         <GlobalStyles />
         <Wrapper>
-        <PersistentDrawerLeft bg={color} />
+        <PermanentDrawerLeft bg={color} />
           <Main>{children}</Main>
         </Wrapper>
       </>
