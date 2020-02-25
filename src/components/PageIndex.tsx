@@ -72,7 +72,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query PageIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "page"}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "page"}, menu: {eq: "project"}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
            excerpt(pruneLength: 400)
