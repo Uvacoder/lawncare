@@ -1,12 +1,12 @@
 ---
 templateKey: page
 menu: project
-rating: []
 slug: /project/project3
-title: Project 3
+title: 'Deddington Top Dressing '
 featured: false
 featuredimage: /img/after3.jpg
 featuredimage_alt: Project3 After photo
+rating: []
 tags:
   - project
 ---
