@@ -39,10 +39,7 @@ const palette: Palette = {
       normal: 300,
       bold: 600,
     },
-    sidebarWidth: {
-      big: '275px',
-      normal: '220px',
-    },
+
   raisedContainer: {
     padding: '30px 0',
     margin: '0',
@@ -57,7 +54,20 @@ const palette: Palette = {
     fontSize: '1rem ',
     transition: 'all 300ms linear ' ,
   },
-
+  raisedHeader: {
+    padding: '30px 0',
+    margin: '0',
+    boxShadow: '0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2)',
+    borderRadius: '0px',
+    zIndex: '3',
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    minWidth: '0',
+    wordWrap: 'break-word',
+    fontSize: '1rem ',
+    transition: 'all 300ms linear ' ,
+  },
 };
 
 export default palette

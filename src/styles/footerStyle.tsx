@@ -7,7 +7,7 @@ import { readableColor } from 'polished'
 
 const Footer = styled.footer<{ color: string }>`
   position: fixed;
-  width: ${props => props.theme.sidebarWidth.big};
+  width: ${props => props.theme.sidebar.width.big};
   bottom: 0;
 
   background: ${props => props.color};
@@ -23,7 +23,7 @@ const Footer = styled.footer<{ color: string }>`
   }
 
   @media (max-width: ${props => props.theme.breakpoints[4]}) {
-    width: ${props => props.theme.sidebarWidth.normal};
+    width: 0;
   }
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {

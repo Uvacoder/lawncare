@@ -66,7 +66,10 @@ module.exports = {
     // review: ,
   serviceOutput: 'Beautiful Lawns',
   slogan: 'Professional Lawn Care',
-  contactPoint: 'Jon',
+  contactPoint: {
+    name: 'Jon',
+    email: 'jon@lawnsmatter.co.uk',
+  },
     // termsOfService: ,
 
 }

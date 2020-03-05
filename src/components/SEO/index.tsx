@@ -34,6 +34,10 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       author,
       twitter,
       facebook,
+      contactPoint: {
+        name,
+        email,
+      },
     },
   } = site
 
@@ -146,6 +150,10 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
           url: `${siteUrl}${defaultBanner}`,
         },
       },
+      contactPoint: {
+        name: name,
+        email: email,
+      },
       datePublished: node ? node.birthTime : '2019-03-10T10:30:00+01:00',
       dateModified: node ? node.modifiedTime : '2019-03-10T10:30:00+01:00',
       description: seo.description,
@@ -257,7 +265,10 @@ const query = graphql`
         providerMobility
         serviceOutput
         serviceType
-        contactPoint
+        contactPoint{
+          name
+          email
+        }
       }
     }
   }

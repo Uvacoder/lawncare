@@ -10,10 +10,10 @@ grid-template-columns: 1fr 1fr;
 grid-template-rows: 1fr 1fr;
 width: 6rem;
 margin: 1rem;
-height: ${props => props.theme.sidebarWidth.big} 8rem;
+height: ${props => props.theme.sidebar.width.big} 8rem;
 
 @media (max-width: ${props => props.theme.breakpoints[4]}) {
-  height: ${props => props.theme.sidebarWidth.normal} 6rem;
+  height: 0 6rem;
  }
 
  @media (max-width: ${props => props.theme.breakpoints[2]}) {

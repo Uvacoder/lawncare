@@ -6,11 +6,11 @@ import reset from './reset'
 
 
 const Icon = styled(animated.div)`
-height: ${props => props.theme.sidebarWidth.big} 6rem;
+height: ${props => props.theme.sidebar.width.big} 6rem;
 margin: 1rem;
 
 @media (max-width: ${props => props.theme.breakpoints[4]}) {
-  height: ${props => props.theme.sidebarWidth.normal} 4rem;
+  height: 0 4rem;
   margin: .3rem;
  }
 

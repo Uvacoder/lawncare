@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import theme from '../gatsby-plugin-theme-ui/index'
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
@@ -10,7 +11,7 @@ const FeatureGrid = ({ gridItems }) => (
           <div className="has-text-centered">
             <div
               style={{
-                width: '240px',
+                width: theme.sidebar.width.normal,
                 display: 'inline-block',
               }}
             >

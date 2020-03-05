@@ -61,7 +61,10 @@ module.exports = {
     providerMobility: config.providerMobility, 
     serviceOutput: config.serviceOutput, 
     serviceType: config.serviceType, 
-    contactPoint: config.contactPoint,
+    contactPoint: {
+      name: config.contactPoint.name,
+      email: config.contactPoint.email,
+    }
   },
   plugins: [
     'gatsby-plugin-react-helmet',

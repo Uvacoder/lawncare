@@ -58,8 +58,8 @@ exports.createPages = async ({ graphql, actions }) => {
           path: edge.node.frontmatter.slug,
           tags: edge.node.frontmatter.tags,
           component: path.resolve(
-            // `src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`
-            `src/templates/page.tsx`
+           `src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`
+          //  `src/templates/page.tsx`
           ),
           // additional data can be passed via context
           context: {

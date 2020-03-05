@@ -2,6 +2,7 @@
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui/index'
+import palette from '../gatsby-plugin-theme-ui/palette'
 import reset from './reset'
 import { Box, Flex, AnimatedBox } from '../elements'
 import { readableColor } from 'polished'
@@ -15,21 +16,21 @@ const PartialNavLink = ({ children, to, ...rest }: { children: React.ReactNode; 
   </Link>
 )
 
-const Nav = styled(Flex)<{  color: theme.colors.primary }>`
+const Nav = styled(Flex)<{  color: palette.palette.primary.background }>`
   a {
     text-decoration: none;
-    color: ${props => readableColor(`${theme.colors.primary }`)};
+    color: ${props => readableColor(`${palette.palette.primary.background }`)};
     font-size: ${props => props.theme.fontSizes[3]};
     line-height: 2;
     justify-content: center;
     &:hover,
     &:focus,
     &.navlink-active {
-      color: ${props => props.theme.colors.active};
+      color: ${props => palette.palette.primary.active};
     }
   Link {
     text-decoration: none;
-    color: ${props => readableColor(`${theme.colors.primary }`)};
+    color: ${props => readableColor(`${palette.palette.primary.text }`)};
     font-size: ${props => props.theme.fontSizes[3]};
     line-height: 2;
     align-content: center;
@@ -37,9 +38,21 @@ const Nav = styled(Flex)<{  color: theme.colors.primary }>`
     &:hover,
     &:focus,
     &.navlink-active {
-      color: ${props => props.theme.colors.active};
+      color: ${props => palette.palette.primary.active};
     }
-
+    MenuItem {
+    text-decoration: none;
+    color: ${props => readableColor(`${palette.palette.primary.text }`)};
+    background-color: ${props => readableColor(`${palette.palette.primary.background }`)};
+    font-size: ${props => props.theme.fontSizes[3]};
+    line-height: 2;
+    align-content: center;
+    justify-content: center;
+    &:hover,
+    &:focus,
+    &.navlink-active {
+      color: ${props => palette.palette.primary.active};
+    }
     @media (max-width: ${props => props.theme.breakpoints[2]}) {
       font-size: ${props => props.theme.fontSizes[2]};
       margin-left: ${props => props.theme.space[4]};

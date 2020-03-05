@@ -1,10 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby'
 import clsx from 'clsx';
 import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -25,44 +25,41 @@ import WorkIcon from '@material-ui/icons/Work'
 import GlobalStyles from '../styles/globalStyle'
 import InputBase from '@material-ui/core/InputBase'
 import palette from '../gatsby-plugin-theme-ui/palette'
+import theme from '../gatsby-plugin-theme-ui/index'
 import MenuIcon from '@material-ui/icons/Menu';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
+import IconButtonBar from './IconButtonBar'
+import ToolbarStyle from '../styles/ToolbarStyle'
+import SideBarInner from '../styles/sideBarInnerStyle'
+import Hidden from '@material-ui/core/Hidden';
+import withWidth from '@material-ui/core/withWidth';
+//import Typography from '@material-ui/core/Typography';
 
-
-
-const drawerWidth = 275;
+const drawerWidth =  theme.sidebar.width.big;
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 0,
-      backgroundColor: palette.palette.primary.background,
-    },
-    appBar: {
-      backgroundColor: palette.palette.primary.background,
-      color: palette.palette.primary.text,
-      transition: theme.transitions.create(['margin', 'width'], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-        backgroundColor: palette.palette.primary.background,
-        color: palette.palette.primary.text,
-      }),
-    },
-    appBarShift: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-      transition: theme.transitions.create(['margin', 'width'], {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
+      display: 'flex',
+      flexGrow: 1,
+      position: 'static',
+
+
+      // maxWidth: Responsive.onlyTablet.maxWidth,
     },
     menuButton: {
-      fontFamily: 'Open Sans',
-      fontWeight: '400',
-      fontSize: '1.1rem',
-      textTransform: 'capitalize',
+      marginRight: theme.spacing(2),
+      [theme.breakpoints.up('sm')]: {
+        display: 'none',
+      },
     },
+    // menuButton: {
+    //   fontFamily: 'Open Sans',
+    //   fontWeight: '400',
+    //   fontSize: '1.1rem',
+    //   textTransform: 'capitalize',
+    // },
     button: {
       fontFamily: 'Open Sans',
       fontWeight: '400',
@@ -75,18 +72,22 @@ const useStyles = makeStyles((theme: Theme) =>
       fill: palette.palette.primary.text,
     },
     hide: {
-      display: 'none',
+      display: 'smDown',
     },
     drawer: {
+      display: 'flex',
       width: drawerWidth,
       flexShrink: 0,
+      [theme.breakpoints.up('sm')]: {
+      },
     },
     drawerPaper: {
       width: drawerWidth,
       backgroundColor: palette.palette.primary.background,
-      color: palette.palette.primary.text,
+      color: palette.palette.primary.main,
     },
     drawerHeader: {
+      flexGrow: 3,
       width:  drawerWidth,
       display: 'flex',
       alignItems: 'center',
@@ -95,56 +96,45 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
     },
     content: {
-      flexGrow: 1,
-      color: palette.palette.primary.text,
+      flexGrow: 5,
+      width:  drawerWidth,
+      color: palette.palette.primary.main,
       padding: theme.spacing(3),
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-      }),
-      marginLeft: -drawerWidth,
+    
     },
-    contentShift: {
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      marginLeft: 0,
+    iconButtonBar: {
+      flexGrow: 1,
+      width:  drawerWidth,
+      color: palette.palette.primary.main,
+      padding: theme.spacing(3),
+    
     },
-      marginLeft: 0,
-      width: '60%',
-      [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(1),
-        width: 'auto',
-      },
+    gappsappsLogo: {
+      flexGrow: 1,
+      width:  drawerWidth,
+      color: palette.palette.primary.main,
+      padding: theme.spacing(3),
+    
     },
+  }
   )
 );
 
-export default function PermanentDrawerLeft() {
+export default function PermanentDrawerLeft(props) {
+  const { container, width } = props;  
   const classes = useStyles();
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
 
   return (
     <div className={classes.root}>
+  
       <CssBaseline />
       <GlobalStyles />
-
-     
       <Drawer
         className={classes.drawer}
         variant="permanent"
         anchor="left"
-        open={open}
         classes={{
           paper: classes.drawerPaper,
         }}
@@ -154,9 +144,10 @@ export default function PermanentDrawerLeft() {
 
 <Link to="/"><Container><LogoLarge /></Container></Link>
         </div>
-        <List   width={drawerWidth}>
+      
+        <List className={classes.content} >
     
-            <Link to="/">
+        <Link to="/">
             <ListItem button >
               <ListItemIcon><HomeIcon /></ListItemIcon>
               <ListItemText>Home</ListItemText>
@@ -176,7 +167,29 @@ export default function PermanentDrawerLeft() {
               <ListItemIcon><InfoIcon /></ListItemIcon>
               <ListItemText>About us</ListItemText>
             </ListItem></Link>
-        <a href="tel:01295402447" rel="nofollow">
+
+
+            {/* <Link to="/">
+            <ListItem button >
+              <ListItemText>Home</ListItemText>
+            </ListItem></Link>
+            <Link to="/page">
+            <ListItem button >
+              <ListItemText >Portfolio</ListItemText>
+            </ListItem></Link>
+            <Link to="/servicecatalog">
+            <ListItem button >
+              <ListItemText>Service</ListItemText>
+            </ListItem></Link>
+            <Link to="/tags/about">
+            <ListItem button >
+
+              <ListItemText>About us</ListItemText>
+            </ListItem></Link> */}
+
+
+
+        {/* <a href="tel:01295402447" rel="nofollow">
             <ListItem button >
               <ListItemIcon><PhoneIcon /></ListItemIcon>
               <ListItemText>Call us now</ListItemText>
@@ -195,20 +208,22 @@ export default function PermanentDrawerLeft() {
             <ListItem button >
               <ListItemIcon><InstagramIcon /></ListItemIcon>
               <ListItemText>Instagram</ListItemText>
-            </ListItem></Link>
+            </ListItem></Link> */}
             <Divider />
-        <a href="https://www.gappsapps.co.uk" rel="nofollow">
+
+        </List>
+        <IconButtonBar className={classes.iconButtonBar} />
+            <Divider />
+        <a href="https://www.gappsapps.co.uk" className={classes.gappsappsLogo} rel="nofollow">
             <ListItem button >
               <ListItemIcon><Gappsapps /></ListItemIcon>
             </ListItem></a>
-        </List>
       </Drawer>
+
       <main
-        className={clsx(classes.content, {
-          [classes.contentShift]: open,
-        })}
+
       >
-        <div className={classes.drawerHeader} />
+        {/* <div className={classes.drawerHeader} /> */}
 
       </main>
 

@@ -1,5 +1,5 @@
 ---
-templateKey: about
+templateKey: page
 menu: about
 slug: /about/aboutus
 featured: true

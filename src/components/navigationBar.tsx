@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import { Link } from 'gatsby'
 import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
@@ -9,24 +8,16 @@ import { flexbox } from '@material-ui/system';
 import palette from '../gatsby-plugin-theme-ui/palette'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import GlobalStyles from '../styles/globalStyle'
 import ListItemText from '@material-ui/core/ListItemText';
 import List from '@material-ui/core/List';
 import SimpleMenu from './SimpleMenu'
 import PhoneLink from './phoneLink'
 import HomeIcon from '@material-ui/icons/Home';
 import GridIcon from './gridIcon'
-import SocialIconButtonBar from "../components/SocialIconButtonBar"
-import Gappsapps from './gappsapps.tsx'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-        flexGrow: 0,
-        backgroundColor: palette.palette.primary.background,
-      },  
-    Footer: {
+    NavigationBar: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
@@ -38,24 +29,34 @@ const useStyles = makeStyles((theme: Theme) =>
     }
 ));
 
-export default function Footer() {
+export default function NavigationBar() {
     const classes = useStyles();
     const theme = useTheme();
     return (
-        <div className={classes.root}>
-        <CssBaseline />
-        <GlobalStyles />
-        <Container className={classes.Footer} alignItems="space-between">
+<div><Container className={classes.NavigationBar} alignItems="space-between">
 
-<ListItem button >
-<a href="https://www.gappsapps.co.uk" rel="nofollow">
+<ListItem button >  <Link to="/"><Container  alignItems="center">
+          
+<HomeIcon /></Container>
+          </Link>  </ListItem>
+            <ListItem button ><Container alignItems="center" >  <SimpleMenu /></Container></ListItem>
+           {/* <Link to="/page">
             <ListItem button >
-              <ListItemIcon><Gappsapps /></ListItemIcon>
-            </ListItem></a>
-            </ListItem>
-            <ListItem button>
-<SocialIconButtonBar />
-</ListItem>
+              <ListItemText >Portfolio</ListItemText>
+            </ListItem></Link>
+
+            <Link to="/servicecatalog">
+            <ListItem button >
+              <ListItemText>Service</ListItemText>
+            </ListItem></Link>
+
+            <Link to="/tags/about">
+            <ListItem button >
+              <ListItemText>About us</ListItemText>
+            </ListItem></Link> */}
+
+           
+<ListItem button variant="contained" ><Container alignItems="center" >   <ListItemIcon> <PhoneLink /></ListItemIcon></Container></ListItem>
 
 
 </Container></div>

@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import LogoLarge from './logoLarge';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from '@material-ui/core/Container';
 
+export default function LogoSmall() {
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <Container >
 
-const LogoSmall = () => (
-  <svg width="50%" height="50%" viewBox="0 0 400 400" >
+      <svg width="100%" height="100%" viewBox="0 0 300 274" >
     <title>LawnsMatter</title>
     <g id="logoSmall" >
     <text id="la" fill="#7CB141" font-family="Open Sans" font-size="100" font-weight="300"><tspan x="15" y="137">la</tspan></text>
@@ -14,6 +21,8 @@ const LogoSmall = () => (
     <text id="PROFESSIONAL LAWN CARE" fill="#F5F5F5" font-family="Open Sans" font-size="19" font-weight="300"><tspan x="20" y="222">PROFESSIONAL LAWN CARE</tspan></text>   
     </g>
   </svg>
-)
+      </Container>
+    </React.Fragment>
+  );
+}
 
-export default LogoSmall

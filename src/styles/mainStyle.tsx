@@ -6,7 +6,7 @@ import reset from './reset'
 
 const Main = styled.main`
 @media (min-width: calc(${props => props.theme.breakpoints[2]} + 1px)) {
-  grid-template-columns: 1fr 1fr  1fr 1fr;
+  grid-template-columns: ${props => props.theme.sidebar.width.normal} 1fr 1fr  1fr 1fr;
   grid-column-start: 2;
 }
 `
