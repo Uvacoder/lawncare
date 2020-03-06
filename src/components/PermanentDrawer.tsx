@@ -96,7 +96,7 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
     },
     content: {
-      flexGrow: 5,
+      flexGrow: 7,
       width:  drawerWidth,
       color: palette.palette.primary.main,
       padding: theme.spacing(3),
@@ -113,7 +113,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
       width:  drawerWidth,
       color: palette.palette.primary.main,
-      padding: theme.spacing(3),
+      margin: theme.spacing(3),
     
     },
   }

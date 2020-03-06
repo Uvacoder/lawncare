@@ -12,6 +12,10 @@ import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
+import palette from '../gatsby-plugin-theme-ui/palette'
+import GridItem from '../components/grid-item'
+import HorizontalLogo from '../components/horizontalLogo'
+
 
 const PBox = styled(AnimatedBox)`
   
@@ -39,22 +43,65 @@ const Category = styled(AnimatedBox)`
   text-transform: capitalize;
   color: ${theme.colors.active};
 `
-const RaisedContainer = styled(Container)`
+const RaisedHeader = styled(Container)`
   padding: 30px 0;
-  margin: -300px;
+  margin: -300px 10px 140px 10px;
   box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
-  border-radius: 6px;
+  border-radius: 16px;
   z-index: 3;
   position: relative;
-  background-color: ${theme.colors.primary};
+  background-color: ${palette.palette.primary.text};
+  color: ${palette.palette.primary.background};
   display: flex
   flexDirection: column
   minWidth: 0;
   wordWrap: break-word;
   fontSize: 1.5rem ;
   transition: all 300ms linear ; 
+`
 
-  `
+const PageTitle = styled(Container)`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  'lawns matter'
+  'title'   ;
+  padding: 1rem ;
+  background-color: ${palette.palette.primary.background};
+  text-align: center;
+  margin: -80px 25% 20px 25%;
+  box-shadow: 0 16px 16px 2px rgba(11, 67, 30, 0.14), 0 6px 30px 5px rgba(11, 67, 30, 0.12), 0 8px 10px 5px rgba(11, 67, 30, 0.2), 0 8px 10px 5px rgba(11, 67, 30, 0.2);
+  PageTilePlain: {
+    marginLeft: "0px",
+    marginRight: "0px"
+  },
+
+
+
+` 
+const Lawns = styled(GridItem)`
+  grid-area: lawns;
+  color: ${palette.palette.primary.active}; 
+  text-transform: lowercase;
+ `
+
+const Matter = styled(GridItem)`
+  grid-area: matter;
+  color: ${palette.palette.primary.text}; 
+  text-transform: lowercase;
+ `
+
+const HorizontalImg = styled(Img)`
+  grid-area: logo;
+
+`
+const Title = styled(GridItem)`
+  grid-area: title;
+  color: ${palette.palette.primary.active}; 
+
+`
+
 const Description = styled(animated.div)`
   
   letter-spacing: -0.003em;
@@ -85,10 +132,10 @@ type PageProps = {
           featuredimage: ChildImageSharp
           }
         }
-  }
+     }
 
 
-  const PagePage = ({ data }) => {
+  const AlternatePage = ({ data }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -109,6 +156,7 @@ type PageProps = {
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         individual
       />
+  
          <Content bg={theme.colors.primary} >
       
         <BackgroundImage
@@ -140,22 +188,43 @@ type PageProps = {
    </BackgroundImage>
 
    <Container>
+ 
    <Container>
-   <RaisedContainer>
-   
  
-   
-      
-      
-  
-        {/* <animated.h1 style={titleAnimation}></animated.h1> */}
-      
+   <RaisedHeader    style={{
+        display: 'flex',
+        width: '60rem' ,
+        lineHeight: '1',
+        justifyContent: 'space-around',
+        alignItems: 'left',
+        flexDirection: 'column',}}>
+   <PageTitle   style={{
+        display: 'flex',
+        width: '30rem' ,
+        lineHeight: '1',
+        justifyContent: 'space-around',
+        alignItems: 'left',
+        flexDirection: 'column',}}>
+   <Container > 
  
-      
-   
-        <Category style={categoryAnimation}> <h3 >{data.markdownRemark.frontmatter.title}</h3></Category>
-        
-          
+   <h2 className="pageTitle"
+                       style={{
+                       boxShadow: 'transparent',
+                       borderRadius: '0px',
+                       backgroundColor: palette.palette.primary.background,
+                       color: palette.palette.primary.text,
+                       lineHeight: '1',
+                       padding: '0.3em',
+            
+                   }}>
+ 
+ <Category style={categoryAnimation} color={palette.palette.primary.text}> 
+   <Lawns>lawns</Lawns> <Matter>matter</Matter>
+   <br />
+   <Title color={palette.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
+  </Container>
+   </PageTitle>
+     
 
         <Description style={descAnimation}>
          {data.markdownRemark.internal.content}
@@ -180,7 +249,7 @@ type PageProps = {
         </Link>
       </PBox>
       
-      </RaisedContainer>
+      </RaisedHeader>
       </Container>  
       </Container>
       </Content>
@@ -190,10 +259,10 @@ type PageProps = {
 }
 
 
-export default PagePage
+export default AlternatePage
 
 export const query = graphql`
-query PagePage ($id: String!) {
+query AlternatePage ($id: String!) {
    markdownRemark(id: { eq: $id }) {
    excerpt(pruneLength: 400)
    internal {

@@ -39,14 +39,14 @@ const Category = styled(AnimatedBox)`
   text-transform: capitalize;
   color: ${theme.colors.active};
 `
-const RaisedHeader = styled(Container)`
+const RaisedContainer = styled(Container)`
   padding: 30px 0;
   margin: -300px;
   box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
-  border-radius: 0px;
+  border-radius: 6px;
   z-index: 3;
   position: relative;
-  background-color: ${theme.colors.background};
+  background-color: ${theme.colors.primary};
   display: flex
   flexDirection: column
   minWidth: 0;
@@ -88,7 +88,7 @@ type PageProps = {
   }
 
 
-  const AlternatePage = ({ data }) => {
+  const PagePage = ({ data }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -141,9 +141,12 @@ type PageProps = {
 
    <Container>
    <Container>
-   <RaisedHeader>
+   <RaisedContainer>
    
  
+   
+      
+      
   
         {/* <animated.h1 style={titleAnimation}></animated.h1> */}
       
@@ -177,7 +180,7 @@ type PageProps = {
         </Link>
       </PBox>
       
-      </RaisedHeader>
+      </RaisedContainer>
       </Container>  
       </Container>
       </Content>
@@ -187,10 +190,10 @@ type PageProps = {
 }
 
 
-export default AlternatePage
+export default PagePage
 
 export const query = graphql`
-query AlternatePage ($id: String!) {
+query PagePage ($id: String!) {
    markdownRemark(id: { eq: $id }) {
    excerpt(pruneLength: 400)
    internal {

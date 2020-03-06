@@ -53,9 +53,9 @@ export default function Footer() {
               <ListItemIcon><Gappsapps /></ListItemIcon>
             </ListItem></a>
             </ListItem>
-            <ListItem button>
+         
 <SocialIconButtonBar />
-</ListItem>
+
 
 
 </Container></div>

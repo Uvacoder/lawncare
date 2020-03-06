@@ -22,7 +22,7 @@ const PageHeader = styled(Link)`
     margin: 2rem 1rem;
     right: 0;
     text-align: left;
-    font-weight: 700;
+    font-weight: 400;
     font-size: ${props => props.theme.fontSizes[4]};
     padding: ${props => props.theme.space[6]};
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);

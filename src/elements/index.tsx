@@ -86,7 +86,7 @@ type ButtonProps = SpaceProps & WidthProps & ColorProps
 export const Button = styled.button<ButtonProps>`
   border-radius: 1000rem;
   border: none;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.25rem;
   &:hover {
     cursor: pointer;

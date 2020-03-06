@@ -70,7 +70,7 @@ const theme: ThemeShape = {
     '16rem',
   ],
   fontWeights: {
-    normal: 300,
+    normal: 400,
     bold: 600,
   },
   sidebar: {

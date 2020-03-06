@@ -19,7 +19,7 @@ html {
   margin: 0;
 
   h1, h2, h3, h4, h5, h6 {
-    font-weight: ${theme.fontWeights.bold};
+    font-weight: ${theme.fontWeights.normal};
   }
 
   h1 {
@@ -68,9 +68,7 @@ body {
   border: 0;
   margin: 0;
   padding: 0;
-  color: black;
   font-family: 'Open Sans';
-  background: white;
   font-size: 1rem;
 }
 a {

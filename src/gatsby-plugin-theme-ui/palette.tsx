@@ -36,7 +36,7 @@ const palette: Palette = {
   },
 
     fontWeights: {
-      normal: 300,
+      normal: 400,
       bold: 600,
     },
 

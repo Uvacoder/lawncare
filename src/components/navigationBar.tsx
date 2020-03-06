@@ -56,7 +56,7 @@ export default function NavigationBar() {
             </ListItem></Link> */}
 
            
-<ListItem button variant="contained" ><Container alignItems="center" >   <ListItemIcon> <PhoneLink /></ListItemIcon></Container></ListItem>
+<ListItem button ><Container  >   <ListItemIcon > <PhoneLink alignItems="center" /></ListItemIcon></Container></ListItem>
 
 
 </Container></div>
