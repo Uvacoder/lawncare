@@ -47,7 +47,7 @@ const RaisedHeader = styled(Container)`
   padding: 30px 0;
   margin: -300px 10px 140px 10px;
   box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
-  border-radius: 16px;
+  border-radius: 12px;
   z-index: 3;
   position: relative;
   background-color: ${palette.palette.primary.text};
@@ -146,8 +146,8 @@ type PageProps = {
   const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
-    <div>
-    <Layout color={palette.palette.primary.main}>
+    <div >
+    <Layout >
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
         title={`${data.markdownRemark.frontmatter.title} | lawnsmatter.co.uk`}

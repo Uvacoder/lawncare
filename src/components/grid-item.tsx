@@ -19,6 +19,7 @@ const GridItem = styled(Link)`
     position: absolute;
     left: 0;
     bottom: 0;
+    maxHeight: 30%;
     width: 50%;
     margin: 1rem 1rem;
     right: 0;

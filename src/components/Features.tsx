@@ -11,7 +11,7 @@ const FeatureGrid = ({ gridItems }) => (
           <div className="has-text-centered">
             <div
               style={{
-                width: theme.sidebar.width.normal,
+                width: theme.sidebar.width.big,
                 display: 'inline-block',
               }}
             >

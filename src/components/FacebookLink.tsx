@@ -13,7 +13,7 @@ const FacebookLink = () => (
       }
     }
     `}
-    render={data => <a href={`https://www.facebook.com/${data.site.siteMetadata.facebook}`} rel="nofollow">
+    render={data => <a href={`https://www.facebook.com/${data.site.siteMetadata.facebook}`} rel="nofollow" >
  <FacebookIcon /></a>}
   ></StaticQuery>
 )

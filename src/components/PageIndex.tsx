@@ -21,7 +21,7 @@ type PageProps = {
           frontmatter: {
             title: string
             slug: string
-            menu:string
+            menu: string
             templateKey: string
             featured: boolean
             featuredimage: ChildImageSharp
@@ -58,7 +58,6 @@ class PageIndex extends React.Component {
 
          <GridItem key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
            <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
-           <span color={theme.palette.primary.active}>{page.frontmatter.menu}</span>
             <span>{page.frontmatter.title}</span>
           </GridItem>
 

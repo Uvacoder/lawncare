@@ -17,8 +17,7 @@ const palette: Palette = {
       // contrastText: will be calculated to contrast with palette.primary.main
     },
     secondary: {
-      light: '#0066ff',
-      main: '#0044ff',
+      main: '#111B2E',
       // dark: will be calculated from palette.secondary.main,
       contrastText: '#ffcc00',
     },

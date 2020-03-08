@@ -30,7 +30,8 @@ const useStyles = makeStyles((theme: Theme) =>
         alignContent: 'center',
         backgroundColor: palette.palette.primary.background,
       },
-    }
+  },
+
 ));
 
 
@@ -54,8 +55,8 @@ export default function BottomNavigationBar() {
 
     >
       <BottomNavigationAction  icon={<InstagramLink />} />
-      <BottomNavigationAction  icon={<FacebookLink />} /> 
-      <BottomNavigationAction  icon={<GappsappsIcon />} />
+      <BottomNavigationAction icon={<FacebookLink />} /> 
+      <BottomNavigationAction  fill={palette.palette.primary.text} icon={<GappsappsIcon />} />
 
     </BottomNavigation>
     </Container></div>
