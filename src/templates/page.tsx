@@ -176,7 +176,7 @@ type PageProps = {
           <Container
         style={{
           display: 'flex',
-          height: '600px',
+          height: '700px',
           width: '70%' ,
           lineHeight: '1',
           justifyContent: 'space-around',
