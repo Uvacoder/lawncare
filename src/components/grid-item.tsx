@@ -24,7 +24,7 @@ const GridItem = styled(Link)`
     margin: 15% 10%;
     right: 0;
     background-color: ${theme.palette.primary.background};
-    box-shadow: 0 8px 8px 1px rgba(43,44,62, 0.14), 0 3px 12px 3px rgba(43,44,62, 0.12), 0 4px 5px 3px rgba(43,44,62, 0.2), 0 4px 5px 3px rgba(43,44,62, 0.2);
+    box-shadow: 3px 3px 5px 6px rgb(47, 54, 68, 0.4);
     text-align: left;
     font-weight: 400;
     font-size: ${props => props.theme.fontSizes[3]};

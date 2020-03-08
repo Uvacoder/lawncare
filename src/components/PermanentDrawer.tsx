@@ -12,7 +12,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import LogoLarge from './logoLarge'
-import Gappsapps from './gappsapps.tsx'
+import Gappsapps from './gappsapps'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import PhoneIcon from '@material-ui/icons/Phone'

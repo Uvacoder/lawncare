@@ -13,6 +13,7 @@ const palette: Palette = {
       primary: '#2f3644',
       grey: '#2B2C3E',
       shade: '#f5f5f5',
+      primaryShadow: '3px 3px 5px 6px rgb(47, 54, 68, 0.4)'
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
