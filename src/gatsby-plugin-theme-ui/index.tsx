@@ -38,7 +38,7 @@ interface ThemeShape {
 const theme: ThemeShape = {
   breakpoints: ['0px', '600px', '960px', '1280px', '1920px'],
   // fontSizes: ['1rem', '1.2rem', '1.44rem', '1.728rem', '2.074rem', '2.488rem'],
-  fontSizes: ['75%', '100%', '120%', '144%', '172.8%', '207.4%', '248.8%'],
+  fontSizes: ['70%', '90%', '110%', '144%', '172.8%', '207.4%', '248.8%'],
   initialColorMode: 'primary',
   useCustomProperties: true,
   palette: {
@@ -153,8 +153,8 @@ const theme: ThemeShape = {
   },
   toolbar: {
     height: {
-      big: '150px',
-      normal: '120px',
+      big: '18vw',
+      normal: '15vw',
         },
     width: '100%',
   },

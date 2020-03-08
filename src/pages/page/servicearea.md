@@ -1,7 +1,7 @@
 ---
 templateKey: page
-menu: service
-slug: /service/areaserved
+menu: about
+slug: /about/areaserved
 featured: false
 title: Area served
 featuredimage: /img/lawnsmattervan.jpg

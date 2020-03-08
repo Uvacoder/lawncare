@@ -2,14 +2,6 @@ import React from 'react'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
-import { config, animated, useSpring } from 'react-spring'
-import Layout from '../../components/layout'
-import SEO from '../../components/SEO'
-import theme from '../../gatsby-plugin-theme-ui/index'
-import { Box, AnimatedBox, Button } from '../../elements'
-import { transparentize, readableColor } from 'polished'
 
 const TagsPage = ({
   data: {
@@ -19,7 +11,7 @@ const TagsPage = ({
     },
   },
 }) => (
-  <Layout color={theme.palette.primary.main}>
+  <div>
     <section className="section">
       <Helmet title={`Tags | ${title}`} />
       <div className="container content">
@@ -42,22 +34,37 @@ const TagsPage = ({
         </div>
       </div>
     </section>
-  </Layout>
+  </div>
 )
 
 export default TagsPage
 
 export const tagPageQuery = graphql`
-  query TagsQuery {
+query TagsQuery ($menu: String) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(limit: 1000) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
+    allMarkdownRemark(filter: {frontmatter: {tags: {eq: $menu}}}) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            featuredimage {
+              childImageSharp {
+                fluid(maxHeight: 600, maxWidth: 600, quality: 80) {
+                  src
+                }
+              }
+            }
+            menu
+          }
+          excerpt(pruneLength: 200)
+        }
       }
     }
   }

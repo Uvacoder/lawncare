@@ -13,8 +13,9 @@ const ToolbarStyle = styled(Box)<{ bg: string }>`
   flex-wrap: nowrap;
   justify-content: flex-start;
   background-color: ${props => props.palette.palette.primary.background};
-  height: ${props => props.palette.toolbar.height.big};
-  width: ${props => props.palette.toolbar.width.big};
+  height: ${props => props.theme.toolbar.height.big};
+  width: ${props => props.theme.toolbar.width.big};
+  
 
   svg {
     fill: ${props => readableColor(`${props.palette.palette.primary.background}`)};

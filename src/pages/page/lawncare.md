@@ -9,5 +9,6 @@ featuredimage_alt: Lawns Matter Logo
 rating: []
 tags:
   - service
+  - about
 ---
 We provide the most complete Lawn care Service in the country

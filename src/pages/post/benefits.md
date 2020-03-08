@@ -1,9 +1,9 @@
 ---
 title: The benefits of Lawn Care
 templateKey: post
-menu: service
+menu: about
 rating: []
-slug: /service/benefits
+slug: /about/benefits
 featured: false
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 featuredimage_alt: Photo by Annie Sprat on Unsplash

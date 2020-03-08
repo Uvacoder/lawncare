@@ -20,8 +20,8 @@ const GridItem = styled(Link)`
     left: 0;
     bottom: 0;
     maxHeight: 30%;
-    width: 50%;
-    margin: 1rem 1rem;
+    width: 60%;
+    margin: 15% 10%;
     right: 0;
     background-color: ${theme.palette.primary.background};
     box-shadow: 0 8px 8px 1px rgba(43,44,62, 0.14), 0 3px 12px 3px rgba(43,44,62, 0.12), 0 4px 5px 3px rgba(43,44,62, 0.2), 0 4px 5px 3px rgba(43,44,62, 0.2);

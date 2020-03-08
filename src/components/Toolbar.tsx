@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
 // import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
-// import AppBar from '@material-ui/core/AppBar';
+import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 // import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -76,6 +76,7 @@ const useStyles = makeStyles((theme: Theme) =>
     drawerPaper: {
       // width: theme.toolbar.width.big,
       color: palette.palette.primary.background,
+      backgroundColor: palette.palette.primary.background,
     }, 
     drawer: {
       [theme.breakpoints.up('sm')]: {
@@ -99,29 +100,36 @@ export default function ElevateAppBar(props: Props) {
      
       <CssBaseline />
       <GlobalStyles />
+      <AppBar 
+        className={classes.drawerPaper}
+        backgroundColor={palette.palette.primary.background}
+        position="fixed">
         <Toolbar
+        backgroundColor={palette.palette.primary.background}
           position="fixed"
           className={classes.drawer}
           variant="permanent"
           anchor="top"
          
+         
                 alignItems="space-between"
               >
             
         <Grid container position="fixed"
+         height="150px"
           justify="center"
           alignItems="center">  
 
          
         <Grid item xs={3}>
    
-                <Button       
-                  variant="outlined"
-                  color="white"
+                {/* <Button       
+                  variant="contained"
+                  color="default"
                   className={classes.button}
                   startIcon={<SimpleMenu/>}>
-                </Button> 
-                
+                </Button>  */}
+                <SimpleMenu/>
            </Grid>   
         
           <Grid item xs={6}>
@@ -135,7 +143,7 @@ export default function ElevateAppBar(props: Props) {
         
             <a href={`tel:${<PhoneNo />}`} rel="nofollow">
               <Button       
-                    variant="outlined"
+                    variant="contained"
                     color={palette.palette.primary.active}
                     className={classes.button}
                     startIcon={<PhoneIcon alignItems="center" color={palette.palette.primary.active}/>}>
@@ -151,6 +159,7 @@ export default function ElevateAppBar(props: Props) {
          */}
         </Grid>
         </Toolbar>
+        </AppBar> 
     </div>
   );
 }
