@@ -24,8 +24,6 @@ import FolderIcon from '@material-ui/icons/Folder'
 import WorkIcon from '@material-ui/icons/Work'
 import GlobalStyles from '../styles/globalStyle'
 import InputBase from '@material-ui/core/InputBase'
-import palette from '../gatsby-plugin-theme-ui/palette'
-import theme from '../gatsby-plugin-theme-ui/index'
 import MenuIcon from '@material-ui/icons/Menu';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
@@ -35,6 +33,10 @@ import SideBarInner from '../styles/sideBarInnerStyle'
 import Hidden from '@material-ui/core/Hidden';
 import withWidth from '@material-ui/core/withWidth';
 //import Typography from '@material-ui/core/Typography';
+import theme from '../gatsby-plugin-theme-ui/index'
+import palette from '../gatsby-plugin-theme-ui/palette'
+import PermanentDrawerStyle from '../styles/permanentDrawerStyle'
+
 
 const drawerWidth =  theme.sidebar.width.big;
 
@@ -96,7 +98,7 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
     },
     content: {
-      flexGrow: 7,
+      flexGrow: 5,
       width:  drawerWidth,
       color: palette.palette.primary.main,
       padding: theme.spacing(3),
@@ -166,7 +168,7 @@ export default function PermanentDrawerLeft(props) {
             <ListItem button >
               <ListItemIcon><InfoIcon /></ListItemIcon>
               <ListItemText>About us</ListItemText>
-            </ListItem></Link>
+            </ListItem></Link> 
 
 
             {/* <Link to="/">

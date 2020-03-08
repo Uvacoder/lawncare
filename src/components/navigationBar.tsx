@@ -1,19 +1,21 @@
 
 import React from 'react';
-import { Link } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import { flexbox } from '@material-ui/system';
-import palette from '../gatsby-plugin-theme-ui/palette'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import List from '@material-ui/core/List';
+import PhoneNo from '../components/phoneNo'
 import SimpleMenu from './SimpleMenu'
 import PhoneLink from './phoneLink'
+import PhoneIcon from '@material-ui/icons/Phone';
 import HomeIcon from '@material-ui/icons/Home';
 import GridIcon from './gridIcon'
+import theme from '../gatsby-plugin-theme-ui/index'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -24,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
         alignContent: 'center',
       },
       ListItemText: {
-        color: palette.palette.primary.text,
+        color: theme.palette.primary.text,
       }
     }
 ));
@@ -36,10 +38,24 @@ export default function NavigationBar() {
 <div><Container className={classes.NavigationBar} alignItems="space-between">
 
 <ListItem button >  <Link to="/"><Container  alignItems="center">
+<Button       
+        variant="contained"
+        color="white"
+        className={classes.button}
+        startIcon={<HomeIcon alignItems="center" />}>
           
-<HomeIcon /></Container>
+
+</Button>
+</Container>
           </Link>  </ListItem>
-            <ListItem button ><Container alignItems="center" >  <SimpleMenu /></Container></ListItem>
+            <ListItem button ><Container alignItems="center" > <Button       
+        variant="outlined"
+        color="white"
+        className={classes.button}
+        startIcon={<SimpleMenu alignItems="center" />}>
+          
+
+</Button> </Container></ListItem>
            {/* <Link to="/page">
             <ListItem button >
               <ListItemText >Portfolio</ListItemText>
@@ -56,8 +72,15 @@ export default function NavigationBar() {
             </ListItem></Link> */}
 
            
-<ListItem button ><Container  >   <ListItemIcon > <PhoneLink alignItems="center" /></ListItemIcon></Container></ListItem>
-
-
+<ListItem><Container alignItems="center" ><a href={`tel:${<PhoneNo />}`} rel="nofollow">
+  <Button       
+        variant="contained"
+        color="white"
+        className={classes.button}
+        startIcon={<PhoneIcon alignItems="center" />}>
+          Call
+          </Button> </a></Container></ListItem>
+  
 </Container></div>
     )}
+

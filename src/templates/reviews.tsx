@@ -15,7 +15,7 @@ const PBox = styled(AnimatedBox)`
 `
 
 const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, props.bg)};
+  background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
 
   .gatsby-image-wrapper:not(:last-child) {
     margin-bottom: ${props => props.theme.space[10]};
@@ -124,7 +124,7 @@ const Reviews: React.FunctionComponent<PageProps> = ({ data: { reviews, images }
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
         <h2>Interested in lawn care?</h2>
         <Link to="/contactus">
-        <PButton color={theme.colors.active} py={4} px={8}>
+        <PButton color={theme.palette.primary.active} py={4} px={8}>
           Contact Us
         </PButton>
         </Link>

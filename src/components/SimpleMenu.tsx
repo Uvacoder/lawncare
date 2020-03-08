@@ -5,10 +5,10 @@ import MenuItem from '@material-ui/core/MenuItem';
 import {Link} from 'gatsby';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import GlobalStyles from '../styles/globalStyle'
-import palette from '../gatsby-plugin-theme-ui/palette'
 import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
-
+import theme from '../gatsby-plugin-theme-ui/index'
 import Nav from '../styles/navStyle'
+import palette from '../gatsby-plugin-theme-ui/palette'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

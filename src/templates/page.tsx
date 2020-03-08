@@ -12,7 +12,6 @@ import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
-import palette from '../gatsby-plugin-theme-ui/palette'
 import GridItem from '../components/grid-item'
 import HorizontalLogo from '../components/horizontalLogo'
 
@@ -25,7 +24,7 @@ const PBox = styled(AnimatedBox)`
 
 
 const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, props.bg)};
+  background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
   
 
   .gatsby-image-wrapper:not(:last-child) {
@@ -41,7 +40,7 @@ const Category = styled(AnimatedBox)`
   letter-spacing: 0.05em;
   font-size: ${props => props.theme.fontSizes[1]};
   text-transform: capitalize;
-  color: ${theme.colors.active};
+  color: ${theme.palette.primary.active};
 `
 const RaisedHeader = styled(Container)`
   padding: 30px 0;
@@ -50,8 +49,8 @@ const RaisedHeader = styled(Container)`
   border-radius: 16px;
   z-index: 3;
   position: relative;
-  background-color: ${palette.palette.primary.text};
-  color: ${palette.palette.primary.background};
+  background-color: ${theme.palette.primary.text};
+  color: ${theme.palette.primary.background};
   display: flex
   flexDirection: column
   minWidth: 0;
@@ -68,7 +67,7 @@ const PageTitle = styled(Container)`
   'lawns matter'
   'title'   ;
   padding: 1rem ;
-  background-color: ${palette.palette.primary.background};
+  background-color: ${theme.palette.primary.background};
   text-align: center;
   margin: -80px 25% 20px 25%;
   box-shadow: 0 16px 16px 2px rgba(11, 67, 30, 0.14), 0 6px 30px 5px rgba(11, 67, 30, 0.12), 0 8px 10px 5px rgba(11, 67, 30, 0.2), 0 8px 10px 5px rgba(11, 67, 30, 0.2);
@@ -82,13 +81,13 @@ const PageTitle = styled(Container)`
 ` 
 const Lawns = styled(GridItem)`
   grid-area: lawns;
-  color: ${palette.palette.primary.active}; 
+  color: ${theme.palette.primary.active}; 
   text-transform: lowercase;
  `
 
 const Matter = styled(GridItem)`
   grid-area: matter;
-  color: ${palette.palette.primary.text}; 
+  color: ${theme.palette.primary.text}; 
   text-transform: lowercase;
  `
 
@@ -98,7 +97,7 @@ const HorizontalImg = styled(Img)`
 `
 const Title = styled(GridItem)`
   grid-area: title;
-  color: ${palette.palette.primary.active}; 
+  color: ${theme.palette.primary.active}; 
 
 `
 
@@ -135,7 +134,7 @@ type PageProps = {
      }
 
 
-  const AlternatePage = ({ data }) => {
+  const Page = ({ data }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -147,7 +146,7 @@ type PageProps = {
   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
     <div>
-    <Layout color={theme.colors.primary}>
+    <Layout color={theme.palette.primary.main}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
         title={`${data.markdownRemark.frontmatter.title} | lawnsmatter.co.uk`}
@@ -157,7 +156,7 @@ type PageProps = {
         individual
       />
   
-         <Content bg={theme.colors.primary} >
+         <Content bg={theme.palette.primary.main} >
       
         <BackgroundImage
  
@@ -176,7 +175,7 @@ type PageProps = {
           <Container
         style={{
           display: 'flex',
-          height: '800px',
+          height: '600px',
           width: '70%' ,
           lineHeight: '1',
           justifyContent: 'space-around',
@@ -193,14 +192,14 @@ type PageProps = {
  
    <RaisedHeader    style={{
         display: 'flex',
-        width: '60rem' ,
+        width: '90%' ,
         lineHeight: '1',
         justifyContent: 'space-around',
         alignItems: 'left',
         flexDirection: 'column',}}>
    <PageTitle   style={{
         display: 'flex',
-        width: '30rem' ,
+        width: '70%' ,
         lineHeight: '1',
         justifyContent: 'space-around',
         alignItems: 'left',
@@ -211,42 +210,42 @@ type PageProps = {
                        style={{
                        boxShadow: 'transparent',
                        borderRadius: '0px',
-                       backgroundColor: palette.palette.primary.background,
-                       color: palette.palette.primary.text,
+                       backgroundColor: theme.palette.primary.background,
+                       color: theme.palette.primary.text,
                        lineHeight: '1',
                        padding: '0.3em',
             
                    }}>
  
- <Category style={categoryAnimation} color={palette.palette.primary.text}> 
+ <Category style={categoryAnimation} color={theme.palette.primary.text}> 
    <Lawns>lawns</Lawns> <Matter>matter</Matter>
    <br />
-   <Title color={palette.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
+   <Title color={theme.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
   </Container>
    </PageTitle>
      
 
-        <Description style={descAnimation}>
+      <h4>  <Description style={descAnimation}>
          {data.markdownRemark.internal.content}
-        </Description>
+        </Description></h4> 
         
      
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
         <Link to="/contactus">
-        <Button color={theme.colors.active} margin="1rem" variant="contained"py={4} px={8}>
+        <Button variant="contained" color={theme.palette.primary.active} margin="1rem" py={4} px={8}>
           Contact Us
         </Button>
         </Link>
-        <Link to="/page">
-        <Button color={theme.colors.active} variant="outlined" py={4} px={8}>
+        {/* <Link to="/page">
+        <Button color={theme.palette.primary.active} variant="outlined" py={4} px={8}>
           Other Pages
         </Button>
         </Link>
         <Link to="/">
-        <Button color={theme.colors.active} variant="contained" py={4} px={8}>
+        <Button color={theme.palette.primary.active} variant="contained" py={4} px={8}>
           Return to main menu
         </Button>
-        </Link>
+        </Link> */}
       </PBox>
       
       </RaisedHeader>
@@ -259,10 +258,10 @@ type PageProps = {
 }
 
 
-export default AlternatePage
+export default Page
 
 export const query = graphql`
-query AlternatePage ($id: String!) {
+query Page ($id: String!) {
    markdownRemark(id: { eq: $id }) {
    excerpt(pruneLength: 400)
    internal {

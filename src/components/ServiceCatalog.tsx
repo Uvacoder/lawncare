@@ -49,7 +49,7 @@ class ServiceCatalog extends React.Component {
 
     return (
 
-      <Layout color={theme.colors.primary}>
+      <Layout color={theme.palette.primary.main}>
         <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
         <Area>
         {pages &&

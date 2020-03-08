@@ -2,7 +2,6 @@
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui/index'
-import palette from '../gatsby-plugin-theme-ui/palette'
 import reset from './reset'
 import { Box, Flex, AnimatedBox } from '../elements'
 import { readableColor } from 'polished'
@@ -16,21 +15,21 @@ const PartialNavLink = ({ children, to, ...rest }: { children: React.ReactNode; 
   </Link>
 )
 
-const Nav = styled(Flex)<{  color: palette.palette.primary.background }>`
+const Nav = styled(Flex)<{  color: theme.palette.primary.background }>`
   a {
     text-decoration: none;
-    color: ${props => readableColor(`${palette.palette.primary.background }`)};
+    color: ${props => readableColor(`${theme.palette.primary.background}`)};
     font-size: ${props => props.theme.fontSizes[3]};
     line-height: 2;
     justify-content: center;
     &:hover,
     &:focus,
     &.navlink-active {
-      color: ${props => palette.palette.primary.active};
+      color: ${props => theme.palette.primary.active};
     }
   Link {
     text-decoration: none;
-    color: ${props => readableColor(`${palette.palette.primary.text }`)};
+    color: ${props => readableColor(`${theme.palette.primary.text }`)};
     font-size: ${props => props.theme.fontSizes[3]};
     line-height: 2;
     align-content: center;
@@ -38,12 +37,12 @@ const Nav = styled(Flex)<{  color: palette.palette.primary.background }>`
     &:hover,
     &:focus,
     &.navlink-active {
-      color: ${props => palette.palette.primary.active};
+      color: ${props => theme.palette.primary.active};
     }
     MenuItem {
     text-decoration: none;
-    color: ${props => readableColor(`${palette.palette.primary.text }`)};
-    background-color: ${props => readableColor(`${palette.palette.primary.background }`)};
+    color: ${props => readableColor(`${theme.palette.primary.text }`)};
+    background-color: ${props => readableColor(`${theme.palette.primary.background }`)};
     font-size: ${props => props.theme.fontSizes[3]};
     line-height: 2;
     align-content: center;
@@ -51,7 +50,7 @@ const Nav = styled(Flex)<{  color: palette.palette.primary.background }>`
     &:hover,
     &:focus,
     &.navlink-active {
-      color: ${props => palette.palette.primary.active};
+      color: ${props => theme.palette.primary.active};
     }
     @media (max-width: ${props => props.theme.breakpoints[2]}) {
       font-size: ${props => props.theme.fontSizes[2]};

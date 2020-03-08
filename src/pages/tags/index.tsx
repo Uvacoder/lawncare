@@ -19,7 +19,7 @@ const TagsPage = ({
     },
   },
 }) => (
-  <Layout color={theme.colors.primary}>
+  <Layout color={theme.palette.primary.main}>
     <section className="section">
       <Helmet title={`Tags | ${title}`} />
       <div className="container content">

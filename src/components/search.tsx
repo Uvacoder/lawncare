@@ -1,10 +1,10 @@
     // search: {
     //   position: 'relative',
     //   borderRadius: theme.shape.borderRadius,
-    //   color: palette.palette.primary.text,
-    //   backgroundColor: fade(palette.palette.primary.light, 0.15),
+    //   color: theme.palette.primary.text,
+    //   backgroundColor: fade(theme.palette.primary.light, 0.15),
     //   '&:hover': {
-    //     backgroundColor: fade(palette.palette.primary.light, 0.25),
+    //     backgroundColor: fade(theme.palette.primary.light, 0.25),
     //   },
     //   marginLeft: 0,
     //   [theme.breakpoints.up('sm')]: {
@@ -22,7 +22,7 @@
     //   justifyContent: 'center',
     // },
     // inputRoot: {
-    //   color: palette.palette.primary.text,
+    //   color: theme.palette.primary.text,
     // },
     // inputInput: {
     //   padding: theme.spacing(1, 1, 1, 7),

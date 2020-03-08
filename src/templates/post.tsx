@@ -15,7 +15,7 @@ const PBox = styled(AnimatedBox)`
 `
 
 const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, props.bg)};
+  background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
 
   .gatsby-image-wrapper:not(:last-child) {
     margin-bottom: ${props => props.theme.space[10]};
@@ -76,7 +76,7 @@ type PageProps = {
   const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
-    <Layout color={theme.colors.primary}>
+    <Layout color={theme.palette.primary.main}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
         title={`${data.markdownRemark.frontmatter.title} | lawnsmatter.co.uk`}
@@ -85,7 +85,7 @@ type PageProps = {
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         individual
       />
-      <Content bg={theme.colors.primary} py={10}>
+      <Content bg={theme.palette.primary.main} py={10}>
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
         <animated.h1 style={titleAnimation}>{data.markdownRemark.frontmatter.title}</animated.h1>
   
@@ -101,17 +101,17 @@ type PageProps = {
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
         <h2></h2>
         <Link to="/contactus">
-        <PButton color={theme.colors.active} py={4} px={8}>
+        <PButton color={theme.palette.primary.active} py={4} px={8}>
           Contact Us
         </PButton>
         </Link>
         <Link to="/news">
-        <PButton color={theme.colors.active} py={4} px={8}>
+        <PButton color={theme.palette.primary.active} py={4} px={8}>
           Latest information
         </PButton>
         </Link>
         <Link to="/">
-        <PButton color={theme.colors.active} py={4} px={8}>
+        <PButton color={theme.palette.primary.active} py={4} px={8}>
           Return to main menu
         </PButton>
         </Link>

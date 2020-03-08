@@ -42,7 +42,7 @@ const Reviews: React.FunctionComponent<PageProps> = ({ data: { reviews } }) => {
   })
 
   return (
-    <Layout color={theme.colors.primary}>
+    <Layout color={theme.palette.primary.main}>
       <SEO title="Website development | lawnsmatter.co.uk" />
       <Area style={pageAnimation}>
         {reviews.nodes.map(reviews => (

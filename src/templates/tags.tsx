@@ -7,11 +7,15 @@ import { config, animated, useSpring } from 'react-spring'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-plugin-theme-ui/index'
-import { Box, AnimatedBox, Button } from '../elements'
+import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
-
-class TagRoute extends React.Component {
-  render() {
+import Button from '@material-ui/core/Button'
+import Container from '@material-ui/core/Container'
+import BackgroundImage from 'gatsby-background-image'
+import GridItem from '../components/grid-item'
+ 
+const TagRoute = ({ data }) => {
+ 
     const tagpages = this.props.data.allMarkdownRemark.edges
     const tagpageLinks = tagpages.map(tagpage => (
       <li key={tagpage.node.frontmatter.slug}>
@@ -20,7 +24,7 @@ class TagRoute extends React.Component {
         </Link>
       </li>
     ))
-    const tag = this.props.pageContext.tag
+    const tag = this.props.tagpageContext.tag
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `${totalCount} tagpage${
@@ -30,9 +34,53 @@ class TagRoute extends React.Component {
     max-width: 1400px;
     margin: 0 auto;
   `
-  
+  const Area = styled(animated.div)`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 35vw;
+  grid-template-areas:
+  'tagpages tagpages tagpages';
+ ;
+
+  @media (max-width: ${props => props.theme.breakpoints[3]}) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 35vw;
+
+    grid-template-areas:
+    'tagpages tagpages tagpages';
+  ;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 35vw;
+
+    grid-template-areas:
+    'tagpages tagpages'   ;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints[0]}) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 35vw;
+
+    grid-template-areas:
+    'tagpages'  ;
+  ;
+  }
+  `
+  const TagPage = styled.div`
+    grid-area: tagpages;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: ${props => props.theme.breakpoints[1]}) {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 35vw;
+    }
+  `
+
   const Content = styled(Box)<{ bg: string }>`
-    background-color: ${props => transparentize(0.9, props.bg)};
+    background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
   
     .gatsby-image-wrapper:not(:last-child) {
       margin-bottom: ${props => props.theme.space[10]};
@@ -63,9 +111,32 @@ class TagRoute extends React.Component {
   `
 
 
+  class TagPageIndex extends React.Component {
+    render() {
+  
+      const { data } = this.props
+      const { edges: tagpages } = data.allMarkdownRemark
+  
     return (
-      <Layout color={theme.colors.primary}>
-        <section className="section">
+      <Layout color={theme.palette.primary.main}>
+         <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
+         <section className="section">
+          <Helmet title={`${tag} | ${title}`} />
+         <Area>
+         
+         {tagpages &&
+          tagpages.map(({ node: tagpage }) => (
+
+         <GridItem key={tagpage.frontmatter.slug} to={tagpage.frontmatter.slug} aria-label={`View tagpage "${tagpage.frontmatter.title}"`}>
+                        <Img fluid={tagpage.frontmatter.featuredimage.childImageSharp.fluid} />
+            <span>{tagpage.frontmatter.title}</span>
+          </GridItem>
+         
+          ))}
+          </Area>
+
+
+        {/* <section className="section">
           <Helmet title={`${tag} | ${title}`} />
           <div className="container content">
             <div className="columns">
@@ -80,12 +151,14 @@ class TagRoute extends React.Component {
                 </p>
               </div>
             </div>
-          </div>
+          </div>v
+        </section> */}
         </section>
       </Layout>
     )
+   }
   }
-}
+  }
 
 export default TagRoute
 

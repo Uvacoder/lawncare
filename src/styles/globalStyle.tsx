@@ -73,14 +73,14 @@ body {
 }
 a {
   transition: all 0.3s ease-in-out;
-  color: ${theme.colors.text};
+  color: ${theme.palette.primary.text};
   text-decoration: none;
   &:hover,
   &:focus {
-    color: ${theme.colors.active};
+    color: ${theme.palette.primary.active};
   }
 }
-g { fill: ${theme.colors.active};
+g { fill: ${theme.palette.primary.active};
 }
 
 

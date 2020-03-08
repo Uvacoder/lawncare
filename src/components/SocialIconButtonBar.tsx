@@ -9,7 +9,6 @@ import PhoneLink from './phoneLink'
 import FacebookLink from './FacebookLink'
 import EmailLink from './EmailLink'
 import InstagramIcon from '@material-ui/icons/Instagram'
-import palette from '../gatsby-plugin-theme-ui/palette'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 

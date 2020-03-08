@@ -7,10 +7,10 @@ import reset from './reset'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: ${props => props.theme.sidebar.width.big} 1fr;
+  grid-template-columns: ${theme.sidebar.width.big} 1fr;
 
   @media (max-width: ${props => props.theme.breakpoints[4]}) {
-   grid-template-columns:  ${props => props.theme.sidebar.width.big} 1fr;
+   grid-template-columns:  ${theme.sidebar.width.big} 1fr;
   }
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {

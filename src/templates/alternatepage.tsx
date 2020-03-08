@@ -21,7 +21,7 @@ const PBox = styled(AnimatedBox)`
 
 
 const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, props.bg)};
+  background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
   
 
   .gatsby-image-wrapper:not(:last-child) {
@@ -37,7 +37,7 @@ const Category = styled(AnimatedBox)`
   letter-spacing: 0.05em;
   font-size: ${props => props.theme.fontSizes[1]};
   text-transform: capitalize;
-  color: ${theme.colors.active};
+  color: ${props => props.theme.palette.primary.active};
 `
 const RaisedContainer = styled(Container)`
   padding: 30px 0;
@@ -46,7 +46,7 @@ const RaisedContainer = styled(Container)`
   border-radius: 6px;
   z-index: 3;
   position: relative;
-  background-color: ${theme.colors.primary};
+  background-color: ${props => props.theme.palette.primary.main};
   display: flex
   flexDirection: column
   minWidth: 0;
@@ -88,7 +88,7 @@ type PageProps = {
   }
 
 
-  const PagePage = ({ data }) => {
+  const AlternatePage = ({ data }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -100,7 +100,7 @@ type PageProps = {
   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
     <div>
-    <Layout color={theme.colors.primary}>
+    <Layout color={theme.palette.primary.main}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
         title={`${data.markdownRemark.frontmatter.title} | lawnsmatter.co.uk`}
@@ -109,7 +109,7 @@ type PageProps = {
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         individual
       />
-         <Content bg={theme.colors.primary} >
+         <Content bg={theme.palette.primary.main} >
       
         <BackgroundImage
  
@@ -164,17 +164,17 @@ type PageProps = {
      
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
         <Link to="/contactus">
-        <Button color={theme.colors.active} margin="1rem" variant="contained"py={4} px={8}>
+        <Button color={theme.palette.primary.active} margin="1rem" variant="contained"py={4} px={8}>
           Contact Us
         </Button>
         </Link>
         <Link to="/page">
-        <Button color={theme.colors.active} variant="outlined" py={4} px={8}>
+        <Button color={theme.palette.primary.active} variant="outlined" py={4} px={8}>
           Other Pages
         </Button>
         </Link>
         <Link to="/">
-        <Button color={theme.colors.active} variant="contained" py={4} px={8}>
+        <Button color={theme.palette.primary.active} variant="contained" py={4} px={8}>
           Return to main menu
         </Button>
         </Link>
@@ -190,10 +190,10 @@ type PageProps = {
 }
 
 
-export default PagePage
+export default AlternatePage
 
 export const query = graphql`
-query PagePage ($id: String!) {
+query AlternatePage ($id: String!) {
    markdownRemark(id: { eq: $id }) {
    excerpt(pruneLength: 400)
    internal {

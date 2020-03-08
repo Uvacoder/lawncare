@@ -36,7 +36,7 @@ const Area = styled(animated.div)`
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 50vw;
 
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
+  [theme.breakpoints.down('md')]: {
     grid-template-columns: 1fr;
     grid-auto-rows: 60vw;
   }
@@ -49,7 +49,7 @@ class PageIndex extends React.Component {
 
     return (
 
-      <Layout color={theme.colors.primary}>
+      <Layout color={theme.palette.primary.main}>
         <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
         <Area>
         {pages &&
@@ -57,6 +57,7 @@ class PageIndex extends React.Component {
 
          <GridItem key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
            <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
+           <span color={theme.palette.primary.active}>{page.frontmatter.menu}</span>
             <span>{page.frontmatter.title}</span>
           </GridItem>
 

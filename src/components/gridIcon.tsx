@@ -13,7 +13,7 @@ const GridIcon = styled(Box)`
   margin: .1rem;
   border: 0 1px solid white;
   border-radius: 5px;
-  background-color: ${theme.colors.primary}; 
+  background-color: ${theme.palette.primary.background}; 
     
 `
 

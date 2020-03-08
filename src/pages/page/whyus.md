@@ -1,6 +1,6 @@
 ---
 templateKey: page
-menu: about
+menu: lawnsmatter
 slug: /about/whyus
 featured: true
 title: Why Us?

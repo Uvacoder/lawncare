@@ -3,20 +3,21 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import 'typeface-work-sans'
 import theme from '../gatsby-plugin-theme-ui/index'
-import palette from '../gatsby-plugin-theme-ui/palette'
 import reset from '../styles/reset'
 import GlobalStyles from '../styles/globalStyle'
 import Main from '../styles/mainStyle'
 import Wrapper from '../styles/wrapperStyle'
-import PermanentDrawerLeft from './PermanentDrawer'
+import PermanentDrawerLeft from './permanentDrawer'
 import ToolbarTop from './Toolbar'
+import ToolbarStyle from '../styles/ToolbarStyle'
 import SideBarInner from '../styles/sideBarInnerStyle'
+import CssBaseline from '@material-ui/core/CssBaseline';
 import PropTypes from 'prop-types'
 import Hidden from '@material-ui/core/Hidden'
 import withWidth from '@material-ui/core/withWidth'
 import { Container } from '@material-ui/core'
-import Header from './Header/Header'
 import Footer from './footer'
+import BottomNavigationBar from './bottomNavigation'
 
 const isPartiallyActive = ({ isPartiallyCurrent }: { isPartiallyCurrent: boolean }) =>
   isPartiallyCurrent ? { className: 'navlink-active navlink' } : { className: 'navlink' }
@@ -30,7 +31,7 @@ const PartialNavLink = ({ children, to, ...rest }: { children: React.ReactNode; 
 type LayoutProps = { children: React.ReactNode } & typeof defaultProps
 
 const defaultProps = {
-  color: palette.palette.primary.background,
+  color: theme.palette.primary.background,
 }
 
 interface QueryResult {
@@ -48,11 +49,12 @@ const Layout = ({ children, color }: LayoutProps) => {
    
     <ThemeProvider theme={theme}>
       <>
+      <CssBaseline />
         <GlobalStyles />
         <Wrapper>
 
         <Hidden mdUp>
-        <ToolbarTop bg={color} />
+        <ToolbarTop  bg={color} />
     
         </Hidden>
         <Hidden smDown>
@@ -62,7 +64,8 @@ const Layout = ({ children, color }: LayoutProps) => {
         </Hidden>
           <Main>{children}</Main>
           <Hidden mdUp>
-        <Footer bg={color} />
+        <BottomNavigationBar  bg={color}  />
+        {/* <Footer bg={color} /> */}
     
         </Hidden>
         </Wrapper>

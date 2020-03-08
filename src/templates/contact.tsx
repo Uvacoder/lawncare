@@ -17,7 +17,7 @@ const PBox = styled(AnimatedBox)`
 `
 
 const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, props.bg)};
+  background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
 
   .gatsby-image-wrapper:not(:last-child) {
     margin-bottom: ${props => props.theme.space[10]};
@@ -100,7 +100,7 @@ const Contact: React.FunctionComponent<PageProps> = ({ data: { contact, images }
   const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
-    <Layout color={theme.colors.primary}>
+    <Layout color={theme.palette.primary.main}>
       <SEO
         pathname={contact.slug}
         title={`${contact.title_detail} | lawnsmatter.co.uk`}
@@ -109,7 +109,7 @@ const Contact: React.FunctionComponent<PageProps> = ({ data: { contact, images }
         banner={contact.featuredimage.childImageSharp.resize.src}
         individual
       />
-      <Content bg={theme.colors.primary} py={10}>
+      <Content bg={theme.palette.primary.main} py={10}>
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
         <animated.h1 style={titleAnimation}>{contact.title_detail}</animated.h1>
           {images.nodes.map(image => (
