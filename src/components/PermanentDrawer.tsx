@@ -38,8 +38,6 @@ import palette from '../gatsby-plugin-theme-ui/palette'
 import PermanentDrawerStyle from '../styles/permanentDrawerStyle'
 
 
-const drawerWidth =  theme.sidebar.width.big;
-
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -78,19 +76,19 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     drawer: {
       display: 'flex',
-      width: drawerWidth,
+      width: theme.sidebar.width.big,
       flexShrink: 0,
       [theme.breakpoints.up('sm')]: {
       },
     },
     drawerPaper: {
-      width: drawerWidth,
+      width: theme.sidebar.width.big,
       backgroundColor: palette.palette.primary.background,
       color: palette.palette.primary.main,
     },
     drawerHeader: {
       flexGrow: 3,
-      width:  drawerWidth,
+      width:  theme.sidebar.width.big,
       display: 'flex',
       alignItems: 'center',
       //  padding: theme.spacing(1, 1),
@@ -99,21 +97,21 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     content: {
       flexGrow: 5,
-      width:  drawerWidth,
+      width:  theme.sidebar.width.big,
       color: palette.palette.primary.main,
       padding: theme.spacing(3),
     
     },
     iconButtonBar: {
       flexGrow: 1,
-      width:  drawerWidth,
+      width:  theme.sidebar.width.big,
       color: palette.palette.primary.main,
       padding: theme.spacing(3),
     
     },
     gappsappsLogo: {
       flexGrow: 1,
-      width:  drawerWidth,
+      width:  theme.sidebar.width.big,
       color: palette.palette.primary.main,
       margin: theme.spacing(3),
     
