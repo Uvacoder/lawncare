@@ -16,8 +16,8 @@ import GridItem from '../components/grid-item'
  
 const TagRoute = ({ data }) => {
  
-    const tagpages = this.props.data.allMarkdownRemark.edges
-    const tagpageLinks = tagpages.map(tagpage => (
+    const tagpages = data.allMarkdownRemark.edges
+    const tagpage = tagpages.map(tagpage => (
       <li key={tagpage.node.frontmatter.slug}>
         <Link to={tagpage.node.frontmatter.slug}>
           <h2 className="is-size-2">{tagpage.node.frontmatter.title}</h2>
@@ -186,10 +186,12 @@ export const tagPageQuery = graphql`
             }
           }
         }
-          }
-          excerpt(pruneLength: 200)
-        }
+        tags
       }
+      excerpt(pruneLength: 200)
     }
-  }  
+  }
+}
+}
+
 `

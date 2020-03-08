@@ -3,6 +3,7 @@ import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui/index'
 import reset from './reset'
+import palette from '../gatsby-plugin-theme-ui/palette'
 
 const GlobalStyles = createGlobalStyle`
 *::before,
@@ -70,6 +71,7 @@ body {
   padding: 0;
   font-family: 'Open Sans';
   font-size: 1rem;
+  background-color: ${palette.palette.primary.active};
 }
 a {
   transition: all 0.3s ease-in-out;

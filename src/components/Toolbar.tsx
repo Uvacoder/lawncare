@@ -14,6 +14,7 @@ import Divider from '@material-ui/core/Divider';
 // import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import LogoLarge from './logoLarge'
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import LogoSmall from './logoSmall'
 // import Gappsapps from './gappsapps.tsx'
 import GlobalStyles from '../styles/globalStyle'
@@ -37,6 +38,28 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import ToolbarStyle from '../styles/ToolbarStyle'
 import palette from '../gatsby-plugin-theme-ui/palette'
 
+interface Props {
+
+  window?: () => Window;
+  children: React.ReactElement;
+}
+
+function ElevationScroll(props: Props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+    target: window ? window() : undefined,
+  });
+
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0,
+  });
+}
+
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -51,12 +74,12 @@ const useStyles = makeStyles((theme: Theme) =>
       color: palette.palette.primary.text,
     },
     drawerPaper: {
-      width: ToolbarTop.width,
+      // width: theme.toolbar.width.big,
       color: palette.palette.primary.background,
     }, 
     drawer: {
       [theme.breakpoints.up('sm')]: {
-        width: ToolbarTop.width,
+        // width: theme.toolbar.width.big ,
         flexShrink: 0,
         color: palette.palette.primary.background,
       },
@@ -67,7 +90,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function ToolbarTop() {
+export default function ElevateAppBar(props: Props) {
   const classes = useStyles();
  
 
@@ -77,7 +100,7 @@ export default function ToolbarTop() {
       <CssBaseline />
       <GlobalStyles />
         <Toolbar
-          position="static"
+          position="fixed"
           className={classes.drawer}
           variant="permanent"
           anchor="top"

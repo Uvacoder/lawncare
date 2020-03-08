@@ -26,14 +26,13 @@ interface ThemeShape {
     height: { [key: string]: string }
     }
   toolbar:{
-    width: {
+    height: {
       big:  {[key: string]: string}
       normal: {[key: string]: string}
     }
-    height: { 
-      [key: string]: string
+    width: string
     }
-  }
+  
 }
 
 const theme: ThemeShape = {

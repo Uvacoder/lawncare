@@ -1,5 +1,5 @@
 ---
-templateKey: alternatepage
+templateKey: page
 menu: project
 slug: /project/farthinghoe-project
 featured: true

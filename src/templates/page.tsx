@@ -6,6 +6,7 @@ import { config, animated, useSpring } from 'react-spring'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-plugin-theme-ui/index'
+import palette from '../gatsby-plugin-theme-ui/palette'
 import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
@@ -24,7 +25,7 @@ const PBox = styled(AnimatedBox)`
 
 
 const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
+  background-color: ${props => transparentize(0.9, palette.palette.primary.background)};
   
 
   .gatsby-image-wrapper:not(:last-child) {
@@ -40,7 +41,7 @@ const Category = styled(AnimatedBox)`
   letter-spacing: 0.05em;
   font-size: ${props => props.theme.fontSizes[1]};
   text-transform: capitalize;
-  color: ${theme.palette.primary.active};
+  color: ${palette.palette.primary.active};
 `
 const RaisedHeader = styled(Container)`
   padding: 30px 0;
@@ -49,8 +50,8 @@ const RaisedHeader = styled(Container)`
   border-radius: 16px;
   z-index: 3;
   position: relative;
-  background-color: ${theme.palette.primary.text};
-  color: ${theme.palette.primary.background};
+  background-color: ${palette.palette.primary.text};
+  color: ${palette.palette.primary.background};
   display: flex
   flexDirection: column
   minWidth: 0;
@@ -67,7 +68,7 @@ const PageTitle = styled(Container)`
   'lawns matter'
   'title'   ;
   padding: 1rem ;
-  background-color: ${theme.palette.primary.background};
+  background-color: ${palette.palette.primary.background};
   text-align: center;
   margin: -80px 25% 20px 25%;
   box-shadow: 0 16px 16px 2px rgba(11, 67, 30, 0.14), 0 6px 30px 5px rgba(11, 67, 30, 0.12), 0 8px 10px 5px rgba(11, 67, 30, 0.2), 0 8px 10px 5px rgba(11, 67, 30, 0.2);
@@ -81,13 +82,13 @@ const PageTitle = styled(Container)`
 ` 
 const Lawns = styled(GridItem)`
   grid-area: lawns;
-  color: ${theme.palette.primary.active}; 
+  color: ${palette.palette.primary.active}; 
   text-transform: lowercase;
  `
 
 const Matter = styled(GridItem)`
   grid-area: matter;
-  color: ${theme.palette.primary.text}; 
+  color: ${palette.palette.primary.text}; 
   text-transform: lowercase;
  `
 
@@ -97,7 +98,7 @@ const HorizontalImg = styled(Img)`
 `
 const Title = styled(GridItem)`
   grid-area: title;
-  color: ${theme.palette.primary.active}; 
+  color: ${palette.palette.primary.active}; 
 
 `
 
@@ -146,7 +147,7 @@ type PageProps = {
   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
     <div>
-    <Layout color={theme.palette.primary.main}>
+    <Layout color={palette.palette.primary.main}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
         title={`${data.markdownRemark.frontmatter.title} | lawnsmatter.co.uk`}
@@ -156,7 +157,7 @@ type PageProps = {
         individual
       />
   
-         <Content bg={theme.palette.primary.main} >
+         <Content bg={palette.palette.primary.main} >
       
         <BackgroundImage
  
@@ -210,17 +211,17 @@ type PageProps = {
                        style={{
                        boxShadow: 'transparent',
                        borderRadius: '0px',
-                       backgroundColor: theme.palette.primary.background,
-                       color: theme.palette.primary.text,
+                       backgroundColor: palette.palette.primary.background,
+                       color: palette.palette.primary.text,
                        lineHeight: '1',
                        padding: '0.3em',
             
                    }}>
  
- <Category style={categoryAnimation} color={theme.palette.primary.text}> 
+ <Category style={categoryAnimation} color={palette.palette.primary.text}> 
    <Lawns>lawns</Lawns> <Matter>matter</Matter>
    <br />
-   <Title color={theme.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
+   <Title color={palette.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
   </Container>
    </PageTitle>
      
@@ -232,17 +233,17 @@ type PageProps = {
      
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
         <Link to="/contactus">
-        <Button variant="contained" color={theme.palette.primary.active} margin="1rem" py={4} px={8}>
+        <Button variant="contained" color={palette.palette.primary.active} margin="1rem" py={4} px={8}>
           Contact Us
         </Button>
         </Link>
         {/* <Link to="/page">
-        <Button color={theme.palette.primary.active} variant="outlined" py={4} px={8}>
+        <Button color={palette.palette.primary.active} variant="outlined" py={4} px={8}>
           Other Pages
         </Button>
         </Link>
         <Link to="/">
-        <Button color={theme.palette.primary.active} variant="contained" py={4} px={8}>
+        <Button color={palette.palette.primary.active} variant="contained" py={4} px={8}>
           Return to main menu
         </Button>
         </Link> */}
