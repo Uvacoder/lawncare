@@ -91,9 +91,9 @@ collections:
           widget: "string",
         }
       - {
-          label: "Images",
+          label: "Slideshow",
           required: false,
-          name: images,
+          name: slideshow,
           widget: list,
           fields:
             [
@@ -185,23 +185,17 @@ collections:
                 type: Point,
               },
               { label: "Place name", name: placename, widget: string },
-            ],
-        }
-      - {
-          label: "Route",
-          required: false,
-          name: routesServed,
-          widget: list,
-          fields:
-            [
-              {
-                label: "Route",
-                required: false,
-                name: "route",
-                widget: map,
-                type: LineString,
-              },
-              { label: "Route name", name: routename, widget: string },
+              { label: "Service area radius (in miles)", name: radius, widget: number, valueType: int,  min: 1, step: 1},
+              { label: "options", 
+                required: false, 
+                name: options, 
+                widget: list, f
+                fields: 
+                   [ 
+                     { label: "Steps plotted",  required: false, name: steps, widget: number, valueType: int,  min: 3, step: 1 },
+                     { label: "miles or Km",  required: false, name: units, widget: select, options: ["miles", "kilometres"], default: ["miles"] }
+                     ],
+              }
             ],
         }
       - {
@@ -219,6 +213,7 @@ collections:
                 type: Polygon,
               },
               { label: "Area name", name: areaname, widget: string },
+              { label: "Central point", name: centerPoint, widget: list  []  }
             ],
         }
   - name: "post"

@@ -19,6 +19,7 @@ import GlobalStyles from '../styles/globalStyle'
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 
+
 type PageProps = {
   data: {
     allMarkdownRemark: {

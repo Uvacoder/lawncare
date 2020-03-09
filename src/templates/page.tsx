@@ -16,7 +16,7 @@ import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
 import HorizontalLogo from '../components/horizontalLogo'
-
+import ImageCarousel from '../components/imageCarousel'
 
 const PBox = styled(AnimatedBox)`
   
@@ -170,11 +170,9 @@ type PageProps = {
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           }}
-      
           // backgroundSize="cover"          
-
         >   
- 
+        {/* <ImageCarousel /> */}
     
           <Container
         style={{
