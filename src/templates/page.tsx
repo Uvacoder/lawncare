@@ -47,7 +47,7 @@ const RaisedHeader = styled(Container)`
   padding: 30px 0;
   margin: -300px 10px 140px 10px;
   //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
-  box-shadow: 3px 3px 5px 6px rgb(47, 54, 68, 0.4);
+  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
   border-radius: 12px;
   z-index: 3;
   position: relative;
@@ -72,7 +72,7 @@ const PageTitle = styled(Container)`
   background-color: ${palette.palette.primary.background};
   text-align: center;
   margin: -80px 25% 20px 25%;
-  box-shadow: 0 16px 16px 2px rgba(11, 67, 30, 0.14), 0 6px 30px 5px rgba(11, 67, 30, 0.12), 0 8px 10px 5px rgba(11, 67, 30, 0.2), 0 8px 10px 5px rgba(11, 67, 30, 0.2);
+  box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
   PageTilePlain: {
     marginLeft: "0px",
     marginRight: "0px"
@@ -109,6 +109,7 @@ const Description = styled(animated.div)`
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
   line-height: 1.58;
+  margin: 30px;
 `
 
 const PButton = styled(Button)<{ color: string }>`

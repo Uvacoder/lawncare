@@ -35,7 +35,7 @@ import Grid from '@material-ui/core/Grid'
 import SimpleMenu from './SimpleMenu'
 import PhoneNo from '../components/phoneNo'
 import PhoneIcon from '@material-ui/icons/Phone';
-import ToolbarStyle from '../styles/ToolbarStyle'
+import ToolbarStyle from '../styles/toolbarStyle'
 import palette from '../gatsby-plugin-theme-ui/palette'
 
 interface Props {

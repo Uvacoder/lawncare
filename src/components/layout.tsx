@@ -10,7 +10,7 @@ import Main from '../styles/mainStyle'
 import Wrapper from '../styles/wrapperStyle'
 import PermanentDrawerLeft from './permanentDrawer'
 import ToolbarTop from './Toolbar'
-import ToolbarStyle from '../styles/ToolbarStyle'
+import ToolbarStyle from '../styles/toolbarStyle'
 import SideBarInner from '../styles/sideBarInnerStyle'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import PropTypes from 'prop-types'

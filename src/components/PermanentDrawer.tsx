@@ -1,11 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby'
-import clsx from 'clsx';
 import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
@@ -13,31 +10,26 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import LogoLarge from './logoLarge'
 import Gappsapps from './gappsapps'
-import FacebookIcon from '@material-ui/icons/Facebook'
-import InstagramIcon from '@material-ui/icons/Instagram'
-import PhoneIcon from '@material-ui/icons/Phone'
-import Phone from './phone'
-import EmailIcon from '@material-ui/icons/Email'
 import InfoIcon from '@material-ui/icons/Info'
 import HomeIcon from '@material-ui/icons/Home'
 import FolderIcon from '@material-ui/icons/Folder'
 import WorkIcon from '@material-ui/icons/Work'
 import GlobalStyles from '../styles/globalStyle'
-import InputBase from '@material-ui/core/InputBase'
-import MenuIcon from '@material-ui/icons/Menu';
+
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import IconButtonBar from './IconButtonBar'
-import ToolbarStyle from '../styles/ToolbarStyle'
+import ToolbarStyle from '../styles/toolbarStyle'
 import SideBarInner from '../styles/sideBarInnerStyle'
 import Hidden from '@material-ui/core/Hidden';
 import withWidth from '@material-ui/core/withWidth';
-//import Typography from '@material-ui/core/Typography';
 import theme from '../gatsby-plugin-theme-ui/index'
 import palette from '../gatsby-plugin-theme-ui/palette'
 import PermanentDrawerStyle from '../styles/permanentDrawerStyle'
 
 const drawerWidth = '275px'
+const drawerContentsWidth = '250px'
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -50,9 +42,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     menuButton: {
       marginRight: theme.spacing(2),
-      [theme.breakpoints.up('sm')]: {
-        display: 'none',
-      },
     },
     // menuButton: {
     //   fontFamily: 'Open Sans',
@@ -70,9 +59,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     svgIcon: {
       fill: palette.palette.primary.text,
-    },
-    hide: {
-      display: 'smDown',
     },
     drawer: {
       display: 'flex',
@@ -97,21 +83,21 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     content: {
       flexGrow: 5,
-      width:  drawerWidth,
+      width:  drawerContentsWidth,
       color: palette.palette.primary.main,
       padding: theme.spacing(3),
     
     },
     iconButtonBar: {
       flexGrow: 1,
-      width:  drawerWidth,
+      width:  drawerContentsWidth,
       color: palette.palette.primary.main,
       padding: theme.spacing(3),
     
     },
     gappsappsLogo: {
       flexGrow: 1,
-      width:  drawerWidth,
+      width:  drawerContentsWidth,
       color: palette.palette.primary.main,
       margin: theme.spacing(3),
     
