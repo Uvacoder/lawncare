@@ -49,7 +49,7 @@ class BlogRoll extends React.Component {
 
     return (
 
-      <Layout color={theme.colors.primary}>
+      <Layout color={theme.palette.primary.background}>
         <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
         <Area>
         {posts &&
