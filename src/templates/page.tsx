@@ -153,13 +153,13 @@ type PageProps = {
     <Layout >
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
-        title={`${data.markdownRemark.frontmatter.title} | ${siteUrl}`}
+        title={`${data.markdownRemark.frontmatter.title} | Lawns Matter`}
         desc={data.markdownRemark.excerpt}
         node={data.markdownRemark.frontmatter.slug}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         individual
       />
-         <Helmet title={`${data.markdownRemark.frontmatter.title} | ${title}`} />
+         <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
          <Content bg={palette.palette.primary.main} >
       
         <BackgroundImage
