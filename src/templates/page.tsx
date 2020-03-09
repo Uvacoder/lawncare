@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
@@ -152,13 +153,13 @@ type PageProps = {
     <Layout >
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
-        title={`${data.markdownRemark.frontmatter.title} | lawnsmatter.co.uk`}
+        title={`${data.markdownRemark.frontmatter.title} | ${siteUrl}`}
         desc={data.markdownRemark.excerpt}
         node={data.markdownRemark.frontmatter.slug}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         individual
       />
-  
+         <Helmet title={`${data.markdownRemark.frontmatter.title} | ${title}`} />
          <Content bg={palette.palette.primary.main} >
       
         <BackgroundImage

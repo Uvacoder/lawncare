@@ -28,7 +28,7 @@ import palette from '../gatsby-plugin-theme-ui/palette'
 import PermanentDrawerStyle from '../styles/permanentDrawerStyle'
 
 const drawerWidth = '275px'
-const drawerContentsWidth = '250px'
+const drawerContentsWidth = '240px'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -69,6 +69,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     drawerPaper: {
       width: drawerWidth,
+      padding: 0,
       backgroundColor: palette.palette.primary.background,
       color: palette.palette.primary.main,
     },
@@ -77,29 +78,28 @@ const useStyles = makeStyles((theme: Theme) =>
       width:  drawerWidth,
       display: 'flex',
       alignItems: 'center',
-      //  padding: theme.spacing(1, 1),
+      padding: 0,
       // ...theme.mixins.toolbar,
       justifyContent: 'center',
     },
     content: {
       flexGrow: 5,
-      width:  drawerContentsWidth,
+      width:  drawerWidth,
       color: palette.palette.primary.main,
-      padding: theme.spacing(3),
-    
-    },
+      padding: theme.spacing(2),
+      },
     iconButtonBar: {
       flexGrow: 1,
       width:  drawerContentsWidth,
       color: palette.palette.primary.main,
-      padding: theme.spacing(3),
+      padding: theme.spacing(2),
     
     },
     gappsappsLogo: {
       flexGrow: 1,
       width:  drawerContentsWidth,
       color: palette.palette.primary.main,
-      margin: theme.spacing(3),
+      margin: theme.spacing(2),
     
     },
   }
@@ -131,7 +131,7 @@ export default function PermanentDrawerLeft(props) {
 <Link to="/"><Container><LogoLarge /></Container></Link>
         </div>
       
-        <List className={classes.content} >
+      <List className={classes.content} >
     
         <Link to="/">
             <ListItem button >

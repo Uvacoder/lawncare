@@ -40,32 +40,18 @@ const TagsPage = ({
 export default TagsPage
 
 export const tagPageQuery = graphql`
-query TagsQuery ($menu: String) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(filter: {frontmatter: {tags: {eq: $menu}}}) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            featuredimage {
-              childImageSharp {
-                fluid(maxHeight: 600, maxWidth: 600, quality: 80) {
-                  src
-                }
-              }
-            }
-            menu
-          }
-          excerpt(pruneLength: 200)
-        }
-      }
+query TagsQuery {
+  site {
+    siteMetadata {
+      title
     }
   }
+  allMarkdownRemark {
+    group(field: frontmatter___menu) {
+      fieldValue
+      totalCount
+    }
+  }
+}
+
 `
