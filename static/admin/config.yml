@@ -189,13 +189,13 @@ collections:
               { label: "options", 
                 required: false, 
                 name: options, 
-                widget: list, f
+                widget: list, 
                 fields: 
                    [ 
                      { label: "Steps plotted",  required: false, name: steps, widget: number, valueType: int,  min: 3, step: 1 },
                      { label: "miles or Km",  required: false, name: units, widget: select, options: ["miles", "kilometres"], default: ["miles"] }
                      ],
-              }
+              },
             ],
         }
       - {
@@ -213,7 +213,6 @@ collections:
                 type: Polygon,
               },
               { label: "Area name", name: areaname, widget: string },
-              { label: "Central point", name: centerPoint, widget: list  []  }
             ],
         }
   - name: "post"
