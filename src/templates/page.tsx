@@ -86,12 +86,16 @@ const Lawns = styled(GridItem)`
   grid-area: lawns;
   color: ${palette.palette.primary.active}; 
   text-transform: lowercase;
+  font-weight: 400;
+  font-size: ${props => props.theme.fontSizes[5]};
  `
 
 const Matter = styled(GridItem)`
   grid-area: matter;
   color: ${palette.palette.primary.text}; 
   text-transform: lowercase;
+  font-weight: 400;
+  font-size: ${props => props.theme.fontSizes[5]};
  `
 
 const HorizontalImg = styled(Img)`
@@ -101,6 +105,10 @@ const HorizontalImg = styled(Img)`
 const Title = styled(GridItem)`
   grid-area: title;
   color: ${palette.palette.primary.active}; 
+  text-transform: uppercase;
+  font-weight: 400;
+  color: ${palette.palette.primary.text}; 
+  font-size: ${props => props.theme.fontSizes[1]};
 
 `
 

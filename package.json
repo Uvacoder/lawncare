@@ -61,6 +61,7 @@
     "gatsby-source-instagram": "^0.6.1",
     "gatsby-theme-material-ui": "^1.0.8",
     "gatsby-theme-overreacted-toggle": "^1.0.2",
+    "gatsby-theme-testimonials": "0.0.11",
     "gatsby-transformer-remark": "^2.6.53",
     "gatsby-transformer-sharp": "^2.3.14",
     "gatsby-transformer-yaml": "^2.2.25",

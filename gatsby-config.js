@@ -72,6 +72,7 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-transformer-yaml',
     'gatsby-plugin-theme-ui',
+    'gatsby-theme-testimonials',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: `gatsby-source-filesystem`,

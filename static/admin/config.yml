@@ -2,88 +2,15 @@ backend:
   name: git-gateway
   branch: master
   commit_messages:
-    create: "Create {{collection}} “{{slug }}”"
-    update: "Update {{collection}} “{{slug }}”"
-    delete: "Delete {{collection}} “{{slug }}”"
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
 media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 collections:
-  - name: seo
-    label: SEO
-    folder: src/pages/SEO
-    create: true
-    fields:
-      - { label: "Template Key", name: templateKey, widget: hidden, default: seo }
-      - { label: Title, name: title, widget: string }
-      - { label: logo, required: false, name: logo, widget: image }
-      - { label: logoName, required: false, name: image_alt, widget: text }
-      - { label: Heading, required: false, name: heading, widget: string }
-      - label: Pricing 
-        required: false
-        name: pricing 
-        widget: list
-        fields: 
-          - { label: Heading, required: false, name: heading, widget: string }
-          - { label: Description, required: false, name: description, widget: string }
-          - label: Plans
-            required: false
-            name: plans 
-            widget: list 
-            fields: 
-              - { label: Plan, required: false, name: plan, widget: string }
-              - { label: Price, required: false, name: price, widget: string }
-              - { label: Description, required: false, name: description, widget: string } 
-              - { label: Items, required: false, name: items, widget: string }
-      - { label: Body, required: false, name: body, widget: markdown }
-      - { label: Tags, required: false, name: tags, widget: list }
-      - { label: name, required: false, name: name, widget: string }
-      - { label: AggregateRating, required: false, name: aggregateRating, widget: number }
-      - { label: Audience, required: false, name: audience, widget: string }
-      - { label: "Available Channel", required: false, name: availableChannel, widget: string }
-      - { label: Award, required: false, name: award, widget: string }
-      - { label: Brand, required: false, name: brand, widget: string }
-      - { label: Broker, required: false, name: broker, widget: string }
-      - { label: Category, required: false, name: category, widget: string }
-      - label: hasoffercatalog
-        name: hasOfferCatalog
-        required: false
-        widget: list
-        fields: 
-          - { label: type, required: false, name: type, widget: string, default: OfferCatalog }
-          - { label: name, required: false, name: name, widget: string }
-          - label: itemListElement
-            required: false
-            name: itemListElement
-            widget: list
-            fields:
-              - { label: type, required: false, name: type, widget: string, default: Offer }
-              - label: itemOffered
-                required: false
-                name: itemOffered
-                widget: list
-                fields: 
-                  - { label: type, required: false, name: type, widget: select,  options: [service, product ], default: service }
-                  - { label: name, required: false, name: name, widget: string }
-      - label: hoursAvailable
-        required: false
-        name: hoursAvailable
-        widget: list
-        fields: 
-            - { label: Day, required: false, name: day, widget: string }
-            - { label: Hours, required: false, name: hours, widget: string }
-      - { label: isRelatedTo, required: false, name: isRelatedTo, widget: string }
-      - { label: isSimilarTo, required: false, name: isSimilarTo, widget: string }
-      - { label: offers, required: false, name: offers, widget: markdown }
-      - { label: provider, required: false, name: provider, widget: string }
-      - { label: providerMobility, required: false, name: providerMobility, widget: select, options: [mobile, static], default: mobile}
-      - { label: review, required: false, name: Review, widget: string }
-      - { label: serviceOutput, required: false, name: Service Output, widget: string }
-      - { label: serviceType, required: false, name: Service Type, widget: string }
-      - { label: slogan, required: false, name: Slogan, widget: string }
-      - { label: termsOfService, required: false, name: Terms Of Service, widget: markdown }
   - name: page      
     label: Page
     folder: src/pages/page
@@ -174,6 +101,22 @@ collections:
       - { label: reviewdate, name: reviewDate, widget: datetime, dateFormat: MMMM YYYY }
       - { label: locationName, name: location, widget: string }
       - { label: Tags, required: false, name: tags, widget: list }
+  - name: testimonial
+    label: testimonials
+    folder: testimonials
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Template Key", name: templateKey, widget: hidden, default: review }
+      - { label: slug, name: slug, widget: string }
+      - { label: Name, name: name, widget: string }
+      - { label: Company, required: false, name: company, widget: string }
+      - { label: Quote, name: quote, widget: string }
+      - { label: Twitter, required: false, name: twitter, widget: string }
+      - { label: linkedIn, required: false, name: linkedIn, widget: string }
+      - { label: reviewdate, required: false, name: reviewDate, widget: datetime, dateFormat: MMMM YYYY }
+      - { label: locationName, required: false, name: location, widget: string }
+      - { label: Tags, required: false, name: tags, widget: list }
   - name: rating
     label: Rating
     folder: src/pages/rating
@@ -191,5 +134,15 @@ collections:
       - { label: ratingdate, name: ratingDate, widget: datetime, dateFormat: MMMM YYYY }
       - { label: locationName, name: location, widget: string }
       - { label: Tags, required: false, name: tags, widget: list }
+  - name: siteinfo
+    label: siteinfo
+    folder: src/pages/siteinfo
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Template Key", name: templateKey, widget: hidden, default: siteinfo }
+      - { label: slug, name: slug, widget: string }
+      - { label: dataType,  required: false, name: dataType, widget: string}
+      - { label: value, name: value, widget: string }
 
  

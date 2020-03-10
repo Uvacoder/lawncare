@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       alignItems: 'center',
       padding: 0,
-      // ...theme.mixins.toolbar,
+       ...theme.mixins.toolbar,
       justifyContent: 'center',
     },
     content: {
@@ -102,6 +102,11 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: theme.spacing(2),
     
     },
+    listitem: {
+      fontWeight: 400,
+      fontSize: '2rem',
+      padding: theme.spacing(6),
+  }
   }
   )
 );
@@ -130,7 +135,7 @@ export default function PermanentDrawerLeft(props) {
 
 <Link to="/"><Container><LogoLarge /></Container></Link>
         </div>
-      
+     
       <List className={classes.content} >
     
         <Link to="/">
@@ -198,6 +203,7 @@ export default function PermanentDrawerLeft(props) {
             <Divider />
 
         </List>
+     
         <IconButtonBar className={classes.iconButtonBar} />
             <Divider />
         <a href="https://www.gappsapps.co.uk" className={classes.gappsappsLogo} rel="nofollow">
