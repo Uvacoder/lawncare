@@ -16,346 +16,163 @@ collections:
     folder: "src/pages/SEO"
     create: true
     fields:
-      - { required: false, label: "Template Key", name: "templateKey", widget: "hidden", default: "seo" }
-      - { required: false, label: Title, name: title, widget: string }
-      - { required: false, label: Image, name: image, widget: image }
-      - { required: false, label: "Image Credit", name: "imagecredit", widget: "text" }
-      - { required: false, label: Heading, name: heading, widget: string }
-      - { required: false, label: Pricing, 
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "seo" }
+      - { label: Title, name: title, widget: string }
+      - { label: Image, name: image, widget: image }
+      - { label: "Image Credit", name: "imagecredit", widget: "text" }
+      - { label: Heading, name: heading, widget: string }
+      - label: Pricing, 
         name: pricing, 
-        widget: list, 
+        widget: list,
         fields: 
-          - { required: false, label: Heading, name: heading, widget: string }
-          - { required: false, label: Description, name: description, widget: string }
-          - { required: false, label: Plans, 
+          - { label: Heading, name: heading, widget: string }
+          - { label: Description, name: description, widget: string }
+          - label: Plans, 
             name: plans, 
             widget: list, 
             fields: 
-              - { required: false, label: Plan, name: plan, widget: string }
-              - { required: false, label: Price, name: price, widget: string }
-              - { required: false, label: Description, name: description, widget: strin } 
-              - { required: false, label: Items, name: items, widget: string }
-            }
-          }
-      - { required: false, label: "Body", name: "body", widget: "markdown" }
-      - { required: false, label: "Tags", name: "tags", widget: "list" }
-      - { required: false, label: "name", name: "Name", widget: "string" }
-      - { required: false, label: "aggregateRating", name: "Aggregate Rating", widget: "number" }
-      - { required: false, label: "audience", name: "Audience", widget: "string" }
-      - { required: false, label: "availableChannel", name: "Available Channel", widget: "string" }
-      - { required: false, label: "award", name: "Award", widget: "string" }
-      - { required: false, label: "brand", name: "Brand", widget: "string" }
-      - { required: false, label: "broker", name: "Broker", widget: "string" }
-      - { required: false, label: "category", name: "Category", widget: "string" }
-      - { required: false, label: "hasOfferCatalog", 
-      name: "Has offer catalogue", 
-      widget: list,
-      fields: 
-          - { required: false, label: type, name: type, widget: string, default: "OfferCatalog" }
-          - { required: false, label: name, name: name, widget: string }
-          - { required: false, label: itemListElement, name: itemListElement, widget: = list,
-            fields:
-              - { required: false, label: type, name: type, widget: string, default: "Offer" }
-              - { required: false, label: itemOffered, name: itemOffered,  widget: list,
-                fields: 
-                  - { required: false, label: type, name: type, widget: "select",  options: ["service", "product" ], default: "service" }
-                  - { required: false, label: name, name: name, widget: string }
-                }
-              }
-            }
-      - { required: false, label: "Hours Available", name: hoursAvailable, widget: "list",
+              - { label: Plan, name: plan, widget: string }
+              - { label: Price, name: price, widget: string }
+              - { label: Description, name: description, widget: strin } 
+              - { label: Items, name: items, widget: string }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "name", name: "name", widget: "string" }
+      - { label: "Aggregate Rating", name: "aggregateRating", widget: "number" }
+      - { label: "Audience", name: "audience", widget: "string" }
+      - { label: "Available Channel", name: "availableChannel", widget: "string" }
+      - { label: "Award", name: "award", widget: "string" }
+      - { label: "Brand", name: "brand", widget: "string" }
+      - { label: "Broker", name: "broker", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - label: hasoffercatalog, 
+        name: hasOfferCatalog, 
+        widget: list,
         fields: 
-            - { required: false, label: Day, name: day, widget: string }
-            - { required: false, label: Hours, name: hours, widget: string }
-       }
-      - { required: false, label: "isRelatedTo", name: "Is Related To", widget: "string" }
-      - { required: false, label: "isSimilarTo", name: "Is Similar To", widget: "string" }
-      - { required: false, label: "offers", name: "Offers", widget: "markdown" }
-      - { required: false, label: "provider", name: "Provider", widget: "string" }
-      - { required: false, label: "providerMobility", name: "Provider Mobility", widget: "string" }
-      - { required: false, label: "review", name: "Review", widget: "string" }
-      - { required: false, label: "serviceOutput", name: "Service Output", widget: "string" }
-      - { required: false, label: "serviceType", name: "Service Type", widget: "string" }
-      - { required: false, label: "slogan", name: "Slogan", widget: "string" }
-      - { required: false, label: "termsOfService", name: "Terms Of Service", widget: "markdown" }
+          - { label: type, name: type, widget: string, default: "OfferCatalog" }
+          - { label: name, name: name, widget: string }
+          - label: itemListElement, 
+            name: itemListElement, 
+            widget: list,
+            fields:
+              - { label: type, name: type, widget: string, default: "Offer" }
+              - label: itemOffered, 
+                name: itemOffered,  
+                widget: list,
+                fields: 
+                  - { label: type, name: type, widget: "select",  options: ["service", "product" ], default: "service" }
+                  - { label: name, name: name, widget: string }
+      - label: hoursAvailable, 
+        name: hoursAvailable, 
+        widget: list,
+        fields: 
+            - { label: Day, name: day, widget: string }
+            - { label: Hours, name: hours, widget: string }
+      - { label: "isRelatedTo", name: "isRelatedTo", widget: "string" }
+      - { label: "isSimilarTo", name: "isSimilarTo", widget: "string" }
+      - { label: "offers", name: "offers", widget: "markdown" }
+      - { label: "provider", name: "provider", widget: "string" }
+      - { label: "providerMobility", name: "providerMobility", widget: select, options: ["mobile", "static"], default: "mobile"}
+      - { label: "review", name: "Review", widget: "string" }
+      - { label: "serviceOutput", name: "Service Output", widget: "string" }
+      - { label: "serviceType", name: "Service Type", widget: "string" }
+      - { label: "slogan", name: "Slogan", widget: "string" }
+      - { label: "termsOfService", name: "Terms Of Service", widget: "markdown" }
   - name: "page"      
     label: "Page"
     folder: "src/pages/page"
     create: true
     slug: "{{slug}}"
     fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "page",
-        }
-      - {
-          label: Menu,
-          required: false,
-          name: menu,
-          widget: "select",
-          options: ["/service", "/project", "/about"],
-          default: "/project",
-        }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "page" }
+      - { label: Menu, required: false, name: menu, widget: "select", options: ["/service", "/project", "/about"], default: "/project" }
       - { label: "slug", name: "slug", widget: "string" }
       - { label: "title", name: "title", widget: "string" }
-      - {
-          label: "Featured",
-          required: false,
-          name: "featured",
-          widget: "boolean",
-        }
-      - { label: "Featured image", name: "featuredimage", widget: "image" }
-      - {
-          label: "Featured image alt",
-          name: "featuredimage_alt",
-          widget: "string",
-        }
-      - {
-          label: "Slideshow",
-          required: false,
-          name: slideshow,
-          widget: list,
-          fields:
-            - { label: Image, name: image, widget: image }
-            - {
-                label: "Index",
-                name: "index",
-                widget: "number",
-                min: "1",
-                step: "1",
-              }
-            - {
-                label: "Image alt",
-                required: false,
-                name: "image_alt",
-                widget: "string",
-              }
-            - {
-                label: "Image label",
-                required: false,
-                name: "imagelabel",
-                widget: "string",
-              }
-        }
-      - {
-          label: Review,
-          required: false,
-          name: review,
-          widget: list,
-          fields:
-            - { label: Quote, name: quote, widget: string }
-            - { label: Author, name: author, widget: string }
-            - {
-                label: Date,
-                name: Date,
-                widget: datetime,
-                dateFormat: "MMMM YYYY",
-              }
-            - { label: Location, name: location, widget: string }
-        }
-      - {
-          label: Rating,
-          required: false,
-          name: rating,
-          widget: list,
-          fields:
-            - {
-                label: Rating,
-                name: rating,
-                widget: number,
-                valueType: "int",
-                min: 1,
-                max: 5,
-                step: 1,
-              }
-            - { label: Author, name: author, widget: string }
-            - {
-                label: Date,
-                name: Date,
-                widget: datetime,
-                dateFormat: "MMMM YYYY",
-              }
-            - { label: Location, name: location, widget: string }
-        }
-      - {
-          label: "Main content",
-          required: false,
-          name: "body",
-          widget: "markdown",
-        }
-      - { label: "Tags", required: false, name: "tags", widget: "list" }
-      - {
-          label: "Area Served",
-          required: false,
-          name: areaServed,
-          widget: list,
-          fields:
-            - {
-                label: "Area",
-                required: false,
-                name: "area",
-                widget: map,
-                type: Polygon,
-              }
-            - { label: "Area name", name: areaname, widget: string }
-        }
-  - name: "post"
-    label: "Post"
-    folder: "src/pages/post"
+      - { label: "Featured", required: false, name: "featured", widget: "boolean" }
+      - { label: "Featuredimage", name: "featuredimage", widget: "image" }
+      - { label: "Featuredimage alt", name: "featuredimage_alt", widget: "string" }
+      - label: Slideshow
+        required: false
+        name: slideshow
+        widget: list
+        fields:
+          - { label: image, name: image, widget: image }
+          - { label: index", name: "index", widget: "number", min: "1", step: "1", }
+          - { label: imagealt, required: false, name: "image_alt", widget: "string" }
+          - { label: "imageLabel", required: false, name: "imageLabel", widget: "string" }
+      - { label: "Main content", required: false, name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+  - name: post
+    label: post
+    folder: src/pages/post
     create: true
     slug: "{{slug }}"
     fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "post",
-        }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "post" }
       - { label: "slug", name: "slug", widget: "string" }
       - { label: "title", name: "title", widget: "string" }
-      - {
-          label: "Featured",
-          required: false,
-          name: "featured",
-          widget: "boolean",
-        }
-      - { label: "Featured image", name: "featuredimage", widget: "image" }
-      - {
-          label: "Featured image alt",
-          name: "featuredimage_alt",
-          widget: "string",
-        }
-      - { label: "Tags", required: false, name: "tags", widget: "list" }
-      - {
-          label: "Location name",
-          required: false,
-          name: "locationName",
-          widget: string,
-        }
+      - { label: "Featured",required: false, name: "featured", widget: "boolean" }
+      - { label: "featuredImage", name: "featuredimage", widget: "image" }
+      - { label: "Featured image alt", name: "featuredimage_alt", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "locationName", required: false, name: "locationName", widget: string }
   - name: "areaserved"
-    label: "Area Served"
+    label: "AreaServed"
     files: 
       - file: "src/pages/areaserved.md"
-        label: "Area served Page"
+        label: "AreaServedMap"
         name: "areaserved"       
         slug: "{{slug }}"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "areaserved",
-            }
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "areaserved" }
+          - { label: hasmap, name: hasmap, widget: boolean}
           - { label: "slug", name: "slug", widget: "string" }
           - { label: "title", name: "title", widget: "string" }
-          - {
-              label: "Featured",
-              required: false,
-              name: "featured",
-              widget: "boolean",
-            }
-          - { label: "Tags", required: false, name: "tags", widget: "list" }
-          - {
-              label: "Area Served",
-              required: false,
-              name: areaServed,
-              widget: list,
-              fields:
-                - {
-                    label: "Cental point",
-                    required: false,
-                    name: "location",
-                    widget: map,
-                    type: Point,
-                  }
-                - { label: "Area name", required: false, name: placename, widget: string }
-                - { label: "Service area radius (in miles)", required: false, name: radius, widget: number, valueType: int,  min: 1, step: 1}
-                - { label: "options", 
-                    required: false, 
-                    name: options, 
-                    widget: list, 
-                    fields: 
-                      [ 
-                      - { label: "Points plotted",  required: false, name: steps, widget: number, valueType: int,  min: 3, step: 1 }
-                      - { label: "miles or Km",  required: false, name: units, widget: select, options: ["miles", "kilometres"], default: "miles" }
-                  }
-                ],
-            },
-  - name: "review",
-    label: "Review",
-    folder: "src/pages/review",
-    create: true,
-    slug: "{{slug }}",
+          - { label: "Featured", required: false, name: "featured", widget: "boolean" }
+          - { label: "Tags", name: "tags", widget: "list" }
+          - label: AreaServed
+            required: false 
+            name: areaServed
+            widget: object
+            fields:
+                - { label: "Cental point", required: true, name: "location", widget: map, type: Point }
+                - { label: "Area name", name: placename, widget: string }
+                - { label: "ServiceAreaRadius", name: radius, widget: number, valueType: int,  min: 1, step: 1}
+                - label: "options"
+                  name: options, 
+                  widget: list, 
+                  fields: 
+                      - { label: "Points plotted",  name: steps, widget: number, valueType: int,  min: 3, step: 1 }
+                      - { label: "milesOrKm",  name: units, widget: select, options: ["miles", "kilometres"], default: "miles" }
+  - name: "review"
+    label: "Review"
+    folder: "src/pages/review"
+    create: true
+    slug: "{{slug}}"
     fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "review",
-        }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "review" }
       - { label: "slug", name: "slug", widget: "string" }
-      - { label: "title", name: "title", widget: "string" }
-      - {
-          label: "Featured",
-          required: false,
-          name: "featured",
-          widget: "boolean",
-        }
-      - { label: "Featured image", name: "featuredimage", widget: "image" }
-      - {
-          label: "Featured image alt",
-          name: "featuredimage_alt",
-          widget: "string",
-        }
-      - {
-          label: Review,
-          required: false,
-          name: review,
-          widget: list,
-          fields:
-            - { label: Quote, name: quote, widget: string }
-            - { label: Author, name: author, widget: string }
-            - {
-                label: Date,
-                name: Date,
-                widget: datetime,
-                dateFormat: "MMMM YYYY",
-              }
-            - { label: Location, name: location, widget: string }
-        }
-      - {
-          label: Rating,
-          required: false,
-          name: rating,
-          widget: list,
-          fields:
-            - {
-                label: Rating,
-                name: rating,
-                widget: number,
-                default: 5,
-                valueType: "int",
-                min: 1,
-                max: 5,
-                step: 1,
-              }
-            - { label: Author, name: author, widget: string }
-            - {
-                label: Date,
-                name: Date,
-                widget: datetime,
-                dateFormat: "MMMM YYYY",
-              }
-            - { label: Location, name: location, widget: string }
-        }
-      - { label: "Tags", required: false, name: "tags", widget: "list" }
-      - {
-          label: "Location",
-          required: false,
-          name: "location",
-          widget: map,
-          type: Point,
-        }
+      - { label: "title", name: "title", widget: "string"}
+      - { label: "Featured", required: false, name: "featured", widget: "boolean" }
+      - { label: Quote, name: quote, widget: string }
+      - { label: Author, name: author, widget: string }
+      - { label: reviewdate, name: reviewDate, widget: datetime, dateFormat: "MMMM YYYY" }
+      - { label: locationName, name: location, widget: string }
+      - { label: "Tags", name: "tags", widget: "list" }
+  - name: "rating"
+    label: "Rating"
+    folder: "src/pages/rating"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "rating" }
+      - { label: "slug", name: "slug", widget: "string" }
+      - { label: "title", name: "title", widget: "string"}
+      - { label: "Featured", required: false, name: "featured", widget: "boolean" }
+      - { label: rating, name: rating, widget: number, default: 5, valueType: "int", min: 1, max: 5, step: 1 }
+      - { label: Author, name: author, widget: string }
+      - { label: ratingdate, name: ratingDate, widget: datetime, dateFormat: "MMMM YYYY" }
+      - { label: locationName, name: location, widget: string }
+      - { label: "Tags", name: "tags", widget: "list" }
+
  
