@@ -1,6 +1,6 @@
 ---
 templateKey: seo
-title: seo title
+title: Lawns Matter Professional Lawn Care Service
 logo: /img/lawnsmatter.png
 image_alt: lawns matter logo
 tags:
