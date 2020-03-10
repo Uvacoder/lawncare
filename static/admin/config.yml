@@ -11,56 +11,57 @@ media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 collections:
-  - name: "seo"
-    label: "SEO"
-    folder: "src/pages/SEO"
+  - name: seo
+    label: SEO
+    folder: src/pages/SEO
     create: true
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "seo" }
+      - { label: "Template Key", name: templateKey, widget: hidden, default: seo }
       - { label: Title, name: title, widget: string }
-      - { label: Image, name: image, widget: image }
-      - { label: "Image Credit", name: "imagecredit", widget: "text" }
+      - { label: logo, name: logo, widget: image }
+      - { label: logoName, name: image_alt, widget: text }
       - { label: Heading, name: heading, widget: string }
-      - label: Pricing, 
-        name: pricing, 
-        widget: list,
+      - label: Pricing 
+        required: false
+        name: pricing 
+        widget: list
         fields: 
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
-          - label: Plans, 
-            name: plans, 
-            widget: list, 
+          - label: Plans
+            name: plans 
+            widget: list 
             fields: 
               - { label: Plan, name: plan, widget: string }
               - { label: Price, name: price, widget: string }
-              - { label: Description, name: description, widget: strin } 
+              - { label: Description, name: description, widget: string } 
               - { label: Items, name: items, widget: string }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "name", name: "name", widget: "string" }
-      - { label: "Aggregate Rating", name: "aggregateRating", widget: "number" }
-      - { label: "Audience", name: "audience", widget: "string" }
-      - { label: "Available Channel", name: "availableChannel", widget: "string" }
-      - { label: "Award", name: "award", widget: "string" }
-      - { label: "Brand", name: "brand", widget: "string" }
-      - { label: "Broker", name: "broker", widget: "string" }
-      - { label: "Category", name: "category", widget: "string" }
+      - { label: Body, name: body, widget: markdown }
+      - { label: Tags, name: tags, widget: list }
+      - { label: name, name: name, widget: string }
+      - { label: AggregateRating, name: aggregateRating, widget: number }
+      - { label: Audience, name: audience, widget: string }
+      - { label: "Available Channel", name: availableChannel, widget: string }
+      - { label: Award, name: award, widget: string }
+      - { label: Brand, name: brand, widget: string }
+      - { label: Broker, name: broker, widget: string }
+      - { label: Category, name: category, widget: string }
       - label: hasoffercatalog, 
         name: hasOfferCatalog, 
         widget: list,
         fields: 
-          - { label: type, name: type, widget: string, default: "OfferCatalog" }
+          - { label: type, name: type, widget: string, default: OfferCatalog }
           - { label: name, name: name, widget: string }
           - label: itemListElement, 
             name: itemListElement, 
             widget: list,
             fields:
-              - { label: type, name: type, widget: string, default: "Offer" }
+              - { label: type, name: type, widget: string, default: Offer }
               - label: itemOffered, 
                 name: itemOffered,  
                 widget: list,
                 fields: 
-                  - { label: type, name: type, widget: "select",  options: ["service", "product" ], default: "service" }
+                  - { label: type, name: type, widget: select,  options: [service, product ], default: service }
                   - { label: name, name: name, widget: string }
       - label: hoursAvailable, 
         name: hoursAvailable, 
@@ -68,111 +69,111 @@ collections:
         fields: 
             - { label: Day, name: day, widget: string }
             - { label: Hours, name: hours, widget: string }
-      - { label: "isRelatedTo", name: "isRelatedTo", widget: "string" }
-      - { label: "isSimilarTo", name: "isSimilarTo", widget: "string" }
-      - { label: "offers", name: "offers", widget: "markdown" }
-      - { label: "provider", name: "provider", widget: "string" }
-      - { label: "providerMobility", name: "providerMobility", widget: select, options: ["mobile", "static"], default: "mobile"}
-      - { label: "review", name: "Review", widget: "string" }
-      - { label: "serviceOutput", name: "Service Output", widget: "string" }
-      - { label: "serviceType", name: "Service Type", widget: "string" }
-      - { label: "slogan", name: "Slogan", widget: "string" }
-      - { label: "termsOfService", name: "Terms Of Service", widget: "markdown" }
-  - name: "page"      
-    label: "Page"
-    folder: "src/pages/page"
+      - { label: isRelatedTo, name: isRelatedTo, widget: string }
+      - { label: isSimilarTo, name: isSimilarTo, widget: string }
+      - { label: offers, name: offers, widget: markdown }
+      - { label: provider, name: provider, widget: string }
+      - { label: providerMobility, name: providerMobility, widget: select, options: [mobile, static], default: mobile}
+      - { label: review, name: Review, widget: string }
+      - { label: serviceOutput, name: Service Output, widget: string }
+      - { label: serviceType, name: Service Type, widget: string }
+      - { label: slogan, name: Slogan, widget: string }
+      - { label: termsOfService, name: Terms Of Service, widget: markdown }
+  - name: page      
+    label: Page
+    folder: src/pages/page
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "page" }
-      - { label: Menu, required: false, name: menu, widget: "select", options: ["/service", "/project", "/about"], default: "/project" }
-      - { label: "slug", name: "slug", widget: "string" }
-      - { label: "title", name: "title", widget: "string" }
-      - { label: "Featured", required: false, name: "featured", widget: "boolean" }
-      - { label: "Featuredimage", name: "featuredimage", widget: "image" }
-      - { label: "Featuredimage alt", name: "featuredimage_alt", widget: "string" }
+      - { label: "Template Key", name: templateKey, widget: hidden, default: page }
+      - { label: Menu, required: false, name: menu, widget: select, options: ["/service", "/project", "/about"], default: "/project" }
+      - { label: slug, name: slug, widget: string }
+      - { label: title, name: title, widget: string }
+      - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: Featuredimage, name: featuredimage, widget: image }
+      - { label: "Featuredimage alt", name: featuredimage_alt, widget: string }
       - label: Slideshow
         required: false
         name: slideshow
         widget: list
         fields:
           - { label: image, name: image, widget: image }
-          - { label: index", name: "index", widget: "number", min: "1", step: "1", }
-          - { label: imagealt, required: false, name: "image_alt", widget: "string" }
-          - { label: "imageLabel", required: false, name: "imageLabel", widget: "string" }
-      - { label: "Main content", required: false, name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
+          - { label: index, name: index, widget: number, min: 1, step: 1, }
+          - { label: imagealt, required: false, name: image_alt, widget: string }
+          - { label: imageLabel, required: false, name: imageLabel, widget: string }
+      - { label: "Main content", required: false, name: body, widget: markdown }
+      - { label: Tags, name: tags, widget: list }
   - name: post
     label: post
     folder: src/pages/post
     create: true
     slug: "{{slug }}"
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "post" }
-      - { label: "slug", name: "slug", widget: "string" }
-      - { label: "title", name: "title", widget: "string" }
-      - { label: "Featured",required: false, name: "featured", widget: "boolean" }
-      - { label: "featuredImage", name: "featuredimage", widget: "image" }
-      - { label: "Featured image alt", name: "featuredimage_alt", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "locationName", required: false, name: "locationName", widget: string }
-  - name: "areaserved"
-    label: "AreaServed"
+      - { label: "Template Key", name: templateKey, widget: hidden, default: post }
+      - { label: slug, name: slug, widget: string }
+      - { label: title, name: title, widget: string }
+      - { label: Featured,required: false, name: featured, widget: boolean }
+      - { label: featuredImage, name: featuredimage, widget: image }
+      - { label: "Featured image alt", name: featuredimage_alt, widget: string }
+      - { label: Tags, name: tags, widget: list }
+      - { label: locationName, required: false, name: locationName, widget: string }
+  - name: areaserved
+    label: AreaServed
     files: 
-      - file: "src/pages/areaserved.md"
-        label: "AreaServedMap"
-        name: "areaserved"       
+      - file: src/pages/areaserved.md
+        label: AreaServedMap
+        name: areaserved       
         slug: "{{slug }}"
         fields:
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "areaserved" }
+          - { label: "Template Key", name: templateKey, widget: hidden, default: areaserved }
           - { label: hasmap, name: hasmap, widget: boolean}
-          - { label: "slug", name: "slug", widget: "string" }
-          - { label: "title", name: "title", widget: "string" }
-          - { label: "Featured", required: false, name: "featured", widget: "boolean" }
-          - { label: "Tags", name: "tags", widget: "list" }
+          - { label: slug, name: slug, widget: string }
+          - { label: title, name: title, widget: string }
+          - { label: Featured, required: false, name: featured, widget: boolean }
+          - { label: Tags, name: tags, widget: list }
           - label: AreaServed
             required: false 
             name: areaServed
             widget: object
             fields:
-                - { label: "Cental point", required: true, name: "location", widget: map, type: Point }
+                - { label: "Cental point", required: true, name: location, widget: map, type: Point }
                 - { label: "Area name", name: placename, widget: string }
-                - { label: "ServiceAreaRadius", name: radius, widget: number, valueType: int,  min: 1, step: 1}
-                - label: "options"
+                - { label: ServiceAreaRadius, name: radius, widget: number, valueType: int,  min: 1, step: 1}
+                - label: options
                   name: options, 
                   widget: list, 
                   fields: 
                       - { label: "Points plotted",  name: steps, widget: number, valueType: int,  min: 3, step: 1 }
-                      - { label: "milesOrKm",  name: units, widget: select, options: ["miles", "kilometres"], default: "miles" }
-  - name: "review"
-    label: "Review"
-    folder: "src/pages/review"
+                      - { label: milesOrKm,  name: units, widget: select, options: [miles, kilometres], default: miles }
+  - name: review
+    label: Review
+    folder: src/pages/review
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "review" }
-      - { label: "slug", name: "slug", widget: "string" }
-      - { label: "title", name: "title", widget: "string"}
-      - { label: "Featured", required: false, name: "featured", widget: "boolean" }
+      - { label: "Template Key", name: templateKey, widget: hidden, default: review }
+      - { label: slug, name: slug, widget: string }
+      - { label: title, name: title, widget: string}
+      - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: Quote, name: quote, widget: string }
       - { label: Author, name: author, widget: string }
-      - { label: reviewdate, name: reviewDate, widget: datetime, dateFormat: "MMMM YYYY" }
+      - { label: reviewdate, name: reviewDate, widget: datetime, dateFormat: MMMM YYYY }
       - { label: locationName, name: location, widget: string }
-      - { label: "Tags", name: "tags", widget: "list" }
-  - name: "rating"
-    label: "Rating"
-    folder: "src/pages/rating"
+      - { label: Tags, name: tags, widget: list }
+  - name: rating
+    label: Rating
+    folder: src/pages/rating
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "rating" }
-      - { label: "slug", name: "slug", widget: "string" }
-      - { label: "title", name: "title", widget: "string"}
-      - { label: "Featured", required: false, name: "featured", widget: "boolean" }
-      - { label: rating, name: rating, widget: number, default: 5, valueType: "int", min: 1, max: 5, step: 1 }
+      - { label: "Template Key", name: templateKey, widget: hidden, default: rating }
+      - { label: slug, name: slug, widget: string }
+      - { label: title, name: title, widget: string}
+      - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: rating, name: rating, widget: number, default: 5, valueType: int, min: 1, max: 5, step: 1 }
       - { label: Author, name: author, widget: string }
-      - { label: ratingdate, name: ratingDate, widget: datetime, dateFormat: "MMMM YYYY" }
+      - { label: ratingdate, name: ratingDate, widget: datetime, dateFormat: MMMM YYYY }
       - { label: locationName, name: location, widget: string }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: Tags, name: tags, widget: list }
 
  
