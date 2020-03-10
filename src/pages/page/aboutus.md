@@ -14,5 +14,4 @@ We are passionate about lawns and pride ourselves on giving the customer a bespo
 
 We are City and Guilds trained and have a NPTC certification in the Safe use of Pesticides, we are also members of the The UK Lawn Care Network. 
 
-
-We specialise is restoring and maintaining lawns which means you get great results at affordable prices back up with excellent customer service.
+We specialise is restoring and maintaining lawns which means you get great results at affordable prices backed up with excellent customer service.
