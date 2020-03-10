@@ -2,9 +2,9 @@ backend:
   name: git-gateway
   branch: master
   commit_messages:
-    create: "Create {{collection}} “{{slug}}”"
-    update: "Update {{collection}} “{{slug}}”"
-    delete: "Delete {{collection}} “{{slug}}”"
+    create: "Create {{collection}} “{{slug }}”"
+    update: "Update {{collection}} “{{slug }}”"
+    delete: "Delete {{collection}} “{{slug }}”"
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
 media_folder: static/img
@@ -16,116 +16,69 @@ collections:
     folder: "src/pages/SEO"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "seo"}
-      - {label: Title, name: title, widget: string}
-      - {label: Image, name: image, widget: image}
-      - {label: "Image Credit", name: "imagecredit", widget: "text"}
-      - {label: Heading, name: heading, widget: string}
-      - {label: Description, name: description, widget: string}
-      - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-      - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-      - {label: Full_image, name: full_image, widget: image}
-      - {label: "Full Image Credit", name: "fullimagecredit", widget: "text"}
-      - {label: Pricing, 
+      - { required: false, label: "Template Key", name: "templateKey", widget: "hidden", default: "seo" }
+      - { required: false, label: Title, name: title, widget: string }
+      - { required: false, label: Image, name: image, widget: image }
+      - { required: false, label: "Image Credit", name: "imagecredit", widget: "text" }
+      - { required: false, label: Heading, name: heading, widget: string }
+      - { required: false, label: Pricing, 
         name: pricing, 
-        widget: object, 
+        widget: list, 
         fields: 
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Plans, 
+          - { required: false, label: Heading, name: heading, widget: string }
+          - { required: false, label: Description, name: description, widget: string }
+          - { required: false, label: Plans, 
             name: plans, 
             widget: list, 
             fields: 
-              - {label: Plan, name: plan, widget: string}
-              - {label: Price, name: price, widget: string}
-              - {label: Description, name: description, widget: string} 
-              - {label: Items, name: items, widget: string}
+              - { required: false, label: Plan, name: plan, widget: string }
+              - { required: false, label: Price, name: price, widget: string }
+              - { required: false, label: Description, name: description, widget: strin } 
+              - { required: false, label: Items, name: items, widget: string }
             }
           }
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "name", name: "Name", widget: "string"}
-      - {label: "aggregateRating", name: "Aggregate Rating", widget: "number"}
-      - {label: "audience", name: "Audience", widget: "string"}
-      - {label: "availableChannel", name: "Available Channel", widget: "string"}
-      - {label: "award", name: "Award", widget: "string"}
-      - {label: "brand", name: "Brand", widget: "string"}
-      - {label: "broker", name: "Broker", widget: "string"}
-      - {label: "category", name: "Category", widget: "string"}
-      - {label: "hasOfferCatalog", 
+      - { required: false, label: "Body", name: "body", widget: "markdown" }
+      - { required: false, label: "Tags", name: "tags", widget: "list" }
+      - { required: false, label: "name", name: "Name", widget: "string" }
+      - { required: false, label: "aggregateRating", name: "Aggregate Rating", widget: "number" }
+      - { required: false, label: "audience", name: "Audience", widget: "string" }
+      - { required: false, label: "availableChannel", name: "Available Channel", widget: "string" }
+      - { required: false, label: "award", name: "Award", widget: "string" }
+      - { required: false, label: "brand", name: "Brand", widget: "string" }
+      - { required: false, label: "broker", name: "Broker", widget: "string" }
+      - { required: false, label: "category", name: "Category", widget: "string" }
+      - { required: false, label: "hasOfferCatalog", 
       name: "Has offer catalogue", 
       widget: list,
       fields: 
-          - {label: type, name: type, widget: string, default: "OfferCatalog" }
-          - {label: name, name: name, widget: string}
-          - {label: itemListElement, name: itemListElement, widget: = list,
+          - { required: false, label: type, name: type, widget: string, default: "OfferCatalog" }
+          - { required: false, label: name, name: name, widget: string }
+          - { required: false, label: itemListElement, name: itemListElement, widget: = list,
             fields:
-              - {label: type, name: type, widget: string, default: "Offer" }
-              - {label: itemOffered, name: itemOffered,  widget: list,
+              - { required: false, label: type, name: type, widget: string, default: "Offer" }
+              - { required: false, label: itemOffered, name: itemOffered,  widget: list,
                 fields: 
-                  - {label: type, name: type, widget: "select",  options: ["service", "product" ], default: "service"}
-                  - {label: name, name: name, widget: string}
+                  - { required: false, label: type, name: type, widget: "select",  options: ["service", "product" ], default: "service" }
+                  - { required: false, label: name, name: name, widget: string }
                 }
               }
             }
-      - {label: "hoursAvailable", name: "Hours Available", widget: "list",
-       fields: 
-          - {label: Day, name: day, widget: string}
-          - {label: Hours, name: hours, widget: string}
+      - { required: false, label: "Hours Available", name: hoursAvailable, widget: "list",
+        fields: 
+            - { required: false, label: Day, name: day, widget: string }
+            - { required: false, label: Hours, name: hours, widget: string }
        }
-      - {label: "isRelatedTo", name: "Is Related To", widget: "string"}
-      - {label: "isSimilarTo", name: "Is Similar To", widget: "string"}
-      - {label: "offers", name: "Offers", widget: "markdown"}
-      - {label: "provider", name: "Provider", widget: "string"}
-      - {label: "providerMobility", name: "Provider Mobility", widget: "string"}
-      - {label: "review", name: "Review", widget: "string"}
-      - {label: "serviceOutput", name: "Service Output", widget: "string"}
-      - {label: "serviceType", name: "Service Type", widget: "string"}
-      - {label: "slogan", name: "Slogan", widget: "string"}
-      - {label: "termsOfService", name: "Terms Of Service", widget: "markdown"}
-  - name: "service"
-    label: "Service"
-    files: 
-      - file: "src/pages/service/index.md"
-        label: "Your service"
-        name: "service" 
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ourservice-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: "Image Credit", name: "imagecredit", widget: "text"}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: "Full Image Credit", name: "fullimagecredit", widget: "text"}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Tags", name: "tags", widget: "list"}
-          - {label: "name", name: "Name", widget: "string"}
-          - {label: "aggregateRating", name: "Aggregate Rating", widget: "number"}
-          - {label: "audience", name: "Audience", widget: "string"}
-          - {label: "availableChannel", name: "Available Channel", widget: "string"}
-          - {label: "award", name: "Award", widget: "string"}
-          - {label: "brand", name: "Brand", widget: "string"}
-          - {label: "broker", name: "Broker", widget: "string"}
-          - {label: "category", name: "Category", widget: "string"}
-          - {label: "hasOfferCatalog", name: "Has offer catalogue", widget: "list"}
-          - {label: "OfferCatalog", name: "Offer Catalog", widget: "list"}
-          - {label: "hoursAvailable", name: "Hours Available", widget: "list"}
-          - {label: "isRelatedTo", name: "Is Related To", widget: "string"}
-          - {label: "isSimilarTo", name: "Is Similar To", widget: "string"}
-          - {label: "offers", name: "Offers", widget: "markdown"}
-          - {label: "provider", name: "Provider", widget: "string"}
-          - {label: "providerMobility", name: "Provider Mobility", widget: "string"}
-          - {label: "review", name: "Review", widget: "string"}
-          - {label: "serviceOutput", name: "Service Output", widget: "string"}
-          - {label: "serviceType", name: "Service Type", widget: "string"}
-          - {label: "slogan", name: "Slogan", widget: "string"}
-          - {label: "termsOfService", name: "Terms Of Service", widget: "markdown"}
-  - name: "page"
+      - { required: false, label: "isRelatedTo", name: "Is Related To", widget: "string" }
+      - { required: false, label: "isSimilarTo", name: "Is Similar To", widget: "string" }
+      - { required: false, label: "offers", name: "Offers", widget: "markdown" }
+      - { required: false, label: "provider", name: "Provider", widget: "string" }
+      - { required: false, label: "providerMobility", name: "Provider Mobility", widget: "string" }
+      - { required: false, label: "review", name: "Review", widget: "string" }
+      - { required: false, label: "serviceOutput", name: "Service Output", widget: "string" }
+      - { required: false, label: "serviceType", name: "Service Type", widget: "string" }
+      - { required: false, label: "slogan", name: "Slogan", widget: "string" }
+      - { required: false, label: "termsOfService", name: "Terms Of Service", widget: "markdown" }
+  - name: "page"      
     label: "Page"
     folder: "src/pages/page"
     create: true
@@ -252,7 +205,7 @@ collections:
     label: "Post"
     folder: "src/pages/post"
     create: true
-    slug: "{{slug}}"
+    slug: "{{slug }}"
     fields:
       - {
           label: "Template Key",
@@ -287,7 +240,7 @@ collections:
       - file: "src/pages/areaserved.md"
         label: "Area served Page"
         name: "areaserved"       
-        slug: "{{slug}}"
+        slug: "{{slug }}"
         fields:
           - {
               label: "Template Key",
@@ -329,12 +282,12 @@ collections:
                       - { label: "miles or Km",  required: false, name: units, widget: select, options: ["miles", "kilometres"], default: "miles" }
                   }
                 ],
-            }
-  - name: "review"
-    label: "Review"
-    folder: "src/pages/review"
-    create: true
-    slug: "{{slug}}"
+            },
+  - name: "review",
+    label: "Review",
+    folder: "src/pages/review",
+    create: true,
+    slug: "{{slug }}",
     fields:
       - {
           label: "Template Key",
