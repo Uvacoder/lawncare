@@ -110,14 +110,14 @@ export default function ElevateAppBar(props: Props) {
           className={classes.drawer}
           variant="permanent"
           anchor="top"
+      
          
          
                 alignItems="space-between"
               >
             
         <Grid container position="fixed"
-         height="150px"
-          justify="center"
+              justify="center"
           alignItems="center">  
 
          
