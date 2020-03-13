@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/category
+slug: /category
 dataType: string
 value: Physical Service
 tags:

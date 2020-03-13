@@ -105,16 +105,7 @@ type PageProps = {
           Contact Us
         </PButton>
         </Link>
-        <Link to="/news">
-        <PButton color={theme.palette.primary.active} py={4} px={8}>
-          Latest information
-        </PButton>
-        </Link>
-        <Link to="/">
-        <PButton color={theme.palette.primary.active} py={4} px={8}>
-          Return to main menu
-        </PButton>
-        </Link>
+       
       </PBox>
     </Layout>
   )

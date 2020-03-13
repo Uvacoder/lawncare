@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/availableChannel/serviceSmsNumber
+slug: /availableChannel/serviceSmsNumber
 dataType: string
 value: 07904 095705
 tags:

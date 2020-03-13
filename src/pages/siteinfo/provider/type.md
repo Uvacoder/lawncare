@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/provider/type
+slug: /provider/type
 dataType: string
 value: LocalBusiness
 tags:

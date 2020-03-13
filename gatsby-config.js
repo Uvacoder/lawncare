@@ -72,7 +72,6 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-transformer-yaml',
     'gatsby-plugin-theme-ui',
-    'gatsby-theme-testimonials',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: `gatsby-source-filesystem`,
@@ -109,6 +108,7 @@ module.exports = {
         path: `${__dirname}/config`,
       },
     },
+    `gatsby-plugin-mdx`,
     {
       resolve: '@stackbit/gatsby-plugin-menus',
       options: {
@@ -180,6 +180,12 @@ module.exports = {
       },
     }, 
     {
+      resolve: `gatsby-plugin-facebook-sdk`,
+      options: {
+        appId: '629164404334446',
+      },
+    },
+    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
@@ -190,18 +196,17 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-source-facebook`,
-    //   options: {
-    //     places: [`www.facebook.com/lawnsmatter`], // Can be either a numeric ID or the URL ID
-    //     params: {
-    //       fields: 'lawnsmatter/feed/?fields=id,picture,story,likes', // See Facebooks API to see what you can query for
-    //     },
-    //     key: 'EAAGLnI8D2EYBAF4JTvFzS82CyaMknnfyDsVzbcHtuBzRLh928z9ddvEvYNZBADXFh8VbV20MON0PAYyvxm2BE9U1deyeqt9OGZC6nxCy2taPmRMbUXqB6cuilxusLkjFbn44WMrmZADyECbrDNuazdqoloYeGVgfCVlSLWooWHYypx8KRZBohPiu1y5zHi6z2kdK4NecGoZCltZC21j9GdolwEgBereIJmZBrl7ScNmgAZDZD', // You will need to create a Facebook application and go through review in order to get an API token.
-    //     version: '5.0', // The version of the graph API to use. Defaults to 5.0
-    //   },
-    // },
-    'gatsby-plugin-sitemap',
+    {
+      resolve: `gatsby-source-facebook`,
+      options: {
+        places: [`986924381457198`], // Can be either a numeric ID or the URL ID
+        params: {
+          fields: "id,name,ratings.limit(100){reviewer,has_rating,rating,created_time,open_graph_story,recommendation_type,review_text},about,cover,category,featured_video,general_info,hours,payment_options,phone,rating_count,whatsapp_number,albums,feed,videos{title,description}"},
+        key: 'EAAGLnI8D2EYBACZCR2L5PUn9gEDHW7LVRyd6k3FV2mEJpRtGSKb7sat5ooBUYCjgbSVS6kBgQZBfqeJtAIcL7akZCb0Dvu74A3SKmvFKAKrdAgmE8UA6X9qfRpZBy6V7SrMSME3RZCT3gWs90bQiG9Yg4JvPKC0gZD', // You will need to create a Facebook application and go through review in order to get an API token.
+        version: '5.0', // The version of the graph API to use. Defaults to 5.0
+      },
+    },
+     'gatsby-plugin-sitemap',
     'gatsby-theme-overreacted-toggle',
     {
       resolve: 'gatsby-plugin-manifest',

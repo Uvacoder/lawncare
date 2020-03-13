@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/brand
+slug: /brand
 dataType: string
 value: Lawns Matter
 tags:

@@ -8,7 +8,7 @@ const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const reviewsTemplate = require.resolve('./src/templates/reviews.tsx')
+
   const contactTemplate = require.resolve('./src/templates/contact.tsx')
  // const serviceTemplate = require.resolve('./src/templates/service.tsx')
   // const webpageTemplate = require.resolve('./src/templates/webpage.tsx')
@@ -17,13 +17,6 @@ exports.createPages = async ({ graphql, actions }) => {
  
 
  return graphql(`{
-      reviews: allReviewsYaml {
-        nodes {
-          slug
-          images
-          tags
-        }
-      }
       contact: allContactYaml {
         nodes {
           slug
@@ -90,16 +83,6 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   }),
-  result.data.reviews.nodes.forEach(node => {
-    createPage({
-      path: node.slug,
-      component: reviewsTemplate,
-      context: {
-        slug: node.slug,
-        images: `/${node.images}/`,
-      },
-    })
-  }),  
   result.data.contact.nodes.forEach(node => {
     createPage({
       path: node.slug,

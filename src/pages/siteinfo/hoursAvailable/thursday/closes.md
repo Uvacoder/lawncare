@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/hoursAvailable/thursday/closes
+slug: /hoursAvailable/thursday/closes
 dataType: string
 value: 8pm
 tags:

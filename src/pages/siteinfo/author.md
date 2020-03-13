@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/author
+slug: /author
 dataType: string
 value: 'gappsapps'
 tags:

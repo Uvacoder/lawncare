@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/backgroundColor
+slug: /backgroundColor
 dataType: string
 value: #2f3644
 tags:

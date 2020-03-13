@@ -52,6 +52,7 @@ export default function SimpleMenu() {
         id="simple-menu"
         className={classes.drawer}
         anchorEl={anchorEl}
+        anchorOrigin="left"
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}

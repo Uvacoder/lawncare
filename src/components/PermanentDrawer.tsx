@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       flexGrow: 1,
       position: 'static',
+      fontFamily: 'Open Sans',
 
 
       // maxWidth: Responsive.onlyTablet.maxWidth,
@@ -102,8 +103,9 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: theme.spacing(2),
     
     },
-    listitem: {
+    listitemtext: {
       fontWeight: 400,
+      fontFamily: 'Open Sans',
       fontSize: '2rem',
       padding: theme.spacing(6),
   }

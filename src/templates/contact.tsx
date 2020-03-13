@@ -109,7 +109,19 @@ const Contact: React.FunctionComponent<PageProps> = ({ data: { contact, images }
         banner={contact.featuredimage.childImageSharp.resize.src}
         individual
       />
-      <Content bg={theme.palette.primary.main} py={10}>
+            <Content bg={theme.palette.primary.main} py={10}>
+      {/* <body><script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '629164404334446',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v6.0'
+    });
+  };
+</script>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script></body> */}
+
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
         <animated.h1 style={titleAnimation}>{contact.title_detail}</animated.h1>
           {images.nodes.map(image => (

@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/siteLogo
+slug: /siteLogo
 dataType: image
 value: /logos/logo.png
 tags:

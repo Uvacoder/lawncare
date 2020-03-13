@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/aggregateRating/reviewCount
+slug: /aggregateRating/reviewCount
 dataType: number
 value: '10'
 tags:

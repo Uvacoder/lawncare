@@ -10,6 +10,8 @@ import GridItem from './grid-item'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import theme from '../gatsby-plugin-theme-ui/index'
+import Container from '@material-ui/core/Container' 
+import { Box, AnimatedBox } from '../elements'
 
 type PageProps = {
   data: {
@@ -31,7 +33,12 @@ type PageProps = {
     }
   }
 }
-
+const Category = styled(AnimatedBox)`
+  letter-spacing: 0.05em;
+  font-size: ${props => props.theme.fontSizes[1]};
+  text-transform: capitalize;
+  color: ${theme.palette.primary.active};
+`
 const Area = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -42,6 +49,69 @@ const Area = styled(animated.div)`
     grid-auto-rows: 60vw;
   }
 `
+const RaisedHeader = styled(Container)`
+  padding: 30px 0;
+  margin: -100px 10px 140px 10px;
+  //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
+  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
+  border-radius: 12px;
+  z-index: 3;
+  position: relative;
+  background-color: ${theme.palette.primary.text};
+  color: ${theme.palette.primary.background};
+  display: flex
+  flexDirection: column
+  minWidth: 0;
+  wordWrap: break-word;
+  fontSize: 1.5rem ;
+  transition: all 300ms linear ; 
+`
+
+const PageTitle = styled(Container)`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  'lawns matter'
+  'title'   ;
+  padding: 1rem ;
+  background-color: ${theme.palette.primary.background};
+  text-align: center;
+   margin: 100px 25% 20px 25%;
+  box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
+  PageTilePlain: {
+    marginLeft: "0px",
+    marginRight: "0px"
+  },
+
+
+
+` 
+const Lawns = styled(GridItem)`
+  grid-area: lawns;
+  color: ${theme.palette.primary.active}; 
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: ${props => props.theme.fontSizes[3]};
+ `
+
+const Matter = styled(GridItem)`
+  grid-area: matter;
+  color: ${theme.palette.primary.text}; 
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: ${props => props.theme.fontSizes[3]};
+ `
+ const Title = styled(GridItem)`
+  grid-area: title;
+  color: ${theme.palette.primary.active}; 
+  text-transform: uppercase;
+  font-weight: 400;
+  color: ${theme.palette.primary.text}; 
+  font-size: ${props => props.theme.fontSizes[1]};
+
+`
+
 class PageIndex extends React.Component {
   render() {
 
@@ -58,7 +128,33 @@ class PageIndex extends React.Component {
 
          <GridItem key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
            <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
-            <span>{page.frontmatter.title}</span>
+           <Container > 
+   {/* <RaisedHeader    style={{
+        display: 'flex',
+        width: '90%' ,
+        lineHeight: '1',
+        justifyContent: 'space-around',
+        alignItems: 'left',
+        flexDirection: 'column',}} />
+       */}
+
+   <PageTitle   style={{
+        display: 'flex',
+        width: '50%' ,
+        lineHeight: '1',
+        position: 'relative',
+        bottom: '20px',
+        justifyContent: 'flex-end',
+        alignItems: 'left',
+        flexDirection: 'column',}}>
+           <Category color={theme.palette.primary.text}>
+          <Lawns>lawn</Lawns> <Matter>care</Matter>
+             <br />
+            <Title color={theme.palette.primary.active}>{page.frontmatter.title}</Title>
+            </Category>
+            </PageTitle>
+            </Container>
+            {/* </RaisedHeader> */}
           </GridItem>
 
           ))}

@@ -14,7 +14,7 @@ import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
-import HorizontalLogo from '../components/horizontalLogo'
+
 
 
 

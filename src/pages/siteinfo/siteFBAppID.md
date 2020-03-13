@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/siteFBAppID
+slug: /siteFBAppID
 dataType: string
 value: '123456789'
 tags:

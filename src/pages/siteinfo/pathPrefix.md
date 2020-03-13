@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/pathPrefix
+slug: /pathPrefix
 dataType: string
 value: /
 tags:

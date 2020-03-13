@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/aggregateRating/itemReviewed
+slug: /aggregateRating/itemReviewed
 dataType: string
 value: Lawn Care Service
 tags:

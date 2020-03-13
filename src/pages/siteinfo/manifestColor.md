@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/manifestColor
+slug: /manifestColor
 dataType: string
 value: 
 tags:

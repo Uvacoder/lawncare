@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/siteDescription
+slug: /siteDescription
 dataType: string
 value: nearandnow.services
 tags:

@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/itemListElement/type
+slug: /itemListElement/type
 dataType: string
 value: Offer
 tags:

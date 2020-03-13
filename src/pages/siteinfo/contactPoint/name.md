@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/contactPoint/name
+slug: /contactPoint/name
 dataType: string
 value: Jon
 tags:

@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/googleAnalyticsID
+slug: /googleAnalyticsID
 dataType: string
 value: UA-XXXXXX-X
 tags:

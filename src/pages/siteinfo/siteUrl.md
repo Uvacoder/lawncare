@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/siteUrl
+slug: /siteUrl
 dataType: string
 value: lawnsmatter.co.uk
 tags:

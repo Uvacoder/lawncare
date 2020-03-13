@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/hasOfferCatalog/type
+slug: /hasOfferCatalog/type
 dataType: string
 value: OfferCatalog
 tags:

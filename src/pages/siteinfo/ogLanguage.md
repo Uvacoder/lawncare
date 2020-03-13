@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/ogLanguage
+slug: /ogLanguage
 dataType: string
 value: en_GB
 tags:

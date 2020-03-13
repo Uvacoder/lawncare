@@ -2,7 +2,7 @@
 templateKey: page
 menu: project
 slug: /project/project3
-title: 'Deddington Top Dressing '
+title: 'Deddington'
 featured: false
 featuredimage: /img/after3.jpg
 featuredimage_alt: Project3 After photo

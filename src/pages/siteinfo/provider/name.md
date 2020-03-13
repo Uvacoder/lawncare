@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/provider/name
+slug: /provider/name
 dataType: string
 value: Lawns Matter
 tags:

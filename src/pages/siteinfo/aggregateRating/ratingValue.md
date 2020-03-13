@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/aggregateRating/ratingValue
+slug: /aggregateRating/ratingValue
 dataType: number
 value: '5'
 tags:

@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/siteLanguage
+slug: /siteLanguage
 dataType: string
 value: en
 tags:

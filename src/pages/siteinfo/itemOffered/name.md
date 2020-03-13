@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/itemOffered/name
+slug: /itemOffered/name
 dataType: string
 value: Lawns Matter Professional Lawn Care
 tags:

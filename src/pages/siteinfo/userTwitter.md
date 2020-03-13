@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/userTwittet
+slug: /userTwittet
 dataType: string
 value: lawnsmatter
 tags:

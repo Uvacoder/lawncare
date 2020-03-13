@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/ogSiteName
+slug: /ogSiteName
 dataType: string
 value: lawnsmatter
 tags:

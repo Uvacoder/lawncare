@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/aggregateRating/type
+slug: /aggregateRating/type
 dataType: string
 value: AggregateRating
 tags:

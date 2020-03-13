@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/serviceOutput
+slug: /serviceOutput
 dataType: string
 value: Beautiful Lawns
 tags:

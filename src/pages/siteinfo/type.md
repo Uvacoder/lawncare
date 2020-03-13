@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/type
+slug: /type
 dataType: string
 value: Service
 tags:

@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/themeColor
+slug: /themeColor
 dataType: string
 value: #2f3644
 tags:

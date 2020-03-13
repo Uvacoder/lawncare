@@ -1,6 +1,6 @@
 ---
 templateKey: siteinfo
-slug: /siteinfo/providerMobility
+slug: /providerMobility
 dataType: string
 value: dynamic
 tags:
