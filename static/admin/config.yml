@@ -144,5 +144,17 @@ collections:
       - { label: slug, name: slug, widget: string }
       - { label: dataType,  required: false, name: dataType, widget: string}
       - { label: value, name: value, widget: string }
-
- 
+  - name: index
+    label: Index
+    files: 
+      - file: src/pages/index.md
+        label: index
+        name: index       
+        slug: /
+        fields:
+          - { label: "Template Key", name: templateKey, widget: hidden, default: index-page }
+          - { label: title, required: false, name: title, widget: string }
+          - { label: image, required: false, name: image, widget: image }          
+          - { label: heading,  required: false, name: heading, widget: string}    
+          - { label: Tags, required: false, name: tags, widget: list }
+          - { label: 'Index page content', required: false, name: 'body', widget: 'markdown' }

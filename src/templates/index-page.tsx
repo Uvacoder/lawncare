@@ -149,8 +149,7 @@ export const IndexPageTemplate = ({
   title,
   heading,
   slug,
-  description,
-  intro,
+  body,
 }) => (
   <div>
     <GlobalStyles />
@@ -209,7 +208,7 @@ export const IndexPageTemplate = ({
                     <h3 className="has-text-weight-semibold is-size-2">
                       {/* {heading} */}
                     </h3>
-                    <h4>{description}</h4>
+                    <h5>{body}</h5>
                   </div>
                 </div>
                 <Flex
@@ -218,10 +217,7 @@ export const IndexPageTemplate = ({
               alignItems={['center', 'center', 'center', 'flex-start']}
               justifyContent="space-between"
             >
-                {/* <MediaCardGrid>
-               <MediaCard gridItems={posts}  />
-               </MediaCardGrid> */}
-
+    
                </Flex>
 
 
@@ -257,10 +253,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   slug: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  body: PropTypes.string,
   posts: PropTypes.shape({
     frontmatter: PropTypes.array,
   }),
@@ -273,24 +266,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={indexdata.image}
-        title={indexdata.title}
-        slug={indexdata.slug}
-        heading={indexdata.heading}
-        description={indexdata.description}
-        intro={indexdata.intro}
+        image={indexdata.frontmatter.image}
+        title={indexdata.frontmatter.title}
+        slug={indexdata.frontmatter.slug}
+        heading={indexdata.frontmatter.heading}
+        body={indexdata.body}
       />
-     {/* <Area>
-        {posts &&
-          posts.map(({ node: post }) => (
-
-         <GridItem key={posts.slug} to={posts.slug} aria-label={`Lawn News "${posts.title}"`}>
-                        <Img fluid={posts.featuredimage.childImageSharp.fluid} />
-            <span>{posts.title}</span>
-          </GridItem>
-         
-          ))}
-      </Area> */}
     </Layout>
   )
 }
@@ -310,8 +291,8 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query IndexPageTemplate {
-  markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
-    indexdata:  frontmatter {
+  indexdata: markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+      frontmatter {
       title
       image {
         childImageSharp {
@@ -322,23 +303,8 @@ query IndexPageTemplate {
       }
       slug
       heading
-      description
-      intro {
-        blurbs {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 600, quality: 64) {
-                src
-              }
-            }
-          }
-          text
-          alt
-          subtitle
-          title
-        }
-      }
     }
+    body
   }
 allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {order: ASC, fields: id}) { 
   edges {
