@@ -6,7 +6,7 @@ siteRanking: 100
 slug: /aboutus
 title: About Us
 featured: true
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg
 featuredimage_alt: Photo by Nervenet
 tags:
   - service

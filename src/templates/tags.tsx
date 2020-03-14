@@ -17,7 +17,7 @@ import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import GridItem from '../components/grid-item'
 import GlobalStyles from '../styles/globalStyle'
-
+import { ChildImageSharp } from '../types'
 
 const PBox = styled(AnimatedBox)`
   margin: 30 auto;
@@ -131,7 +131,7 @@ const Area = styled(animated.div)`
 `
 
 export const HeaderPageTemplate = ({
-  image,
+  featuredimage,
   title,
   heading,
   slug,
@@ -144,7 +144,7 @@ export const HeaderPageTemplate = ({
       className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : frontmatter.image
+          !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage
         })`,
         backgroundPosition: `center`,
         backgroundAttachment: `fixed`,
@@ -235,7 +235,7 @@ export const HeaderPageTemplate = ({
 )
 
 HeaderPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   slug: PropTypes.string,
@@ -252,7 +252,7 @@ const HeaderPage = ({ data }) => {
   return (
     <Layout>
       <HeaderPageTemplate
-        image={data.markdownRemark.frontmatter.image}
+        featuredimage={data.markdownRemark.frontmatter.featuredimage}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
         heading={data.markdownRemark.frontmatter.heading}
