@@ -9,6 +9,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import GappsappsIcon from './gappsappsIcon.tsx'
 import FacebookLink from './FacebookLink'
 import InstagramLink from './InstagramLink'
+import EmailLink from './EmailLink'
 import NavBottom from '../styles/navBottomStyle'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import GlobalStyles from '../styles/globalStyle'
@@ -55,6 +56,7 @@ export default function BottomNavigationBar() {
 
     >
       <BottomNavigationAction  icon={<InstagramLink />} />
+      <BottomNavigationAction  icon={<EmailLink />} />
       <BottomNavigationAction icon={<FacebookLink />} /> 
       <BottomNavigationAction  fill={palette.palette.primary.text} icon={<GappsappsIcon />} />
 

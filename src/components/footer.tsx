@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
         flexGrow: 0,
-        backgroundColor: palette.palette.primary.background,
+        backgroundColor: theme.palette.primary.background,
       },  
     Footer: {
         display: 'flex',
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
         alignContent: 'center',
       },
       ListItemText: {
-        color: palette.palette.primary.text,
+        color: theme.palette.primary.text,
       }
     }
 ));

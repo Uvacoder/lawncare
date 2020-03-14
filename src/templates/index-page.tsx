@@ -11,31 +11,22 @@ import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import SEO from '../components/SEO'
 import theme from '../gatsby-plugin-theme-ui/index'
-import palette from '../gatsby-plugin-theme-ui/palette'
 import { Box, Flex, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import GridItem from '../components/grid-item'
 import GlobalStyles from '../styles/globalStyle'
-import MediaCard from '../components/Card'
 
 
 const PBox = styled(AnimatedBox)`
   margin: 30 auto;
 `
 
-const MediaCardGrid = styled.div`
-  display: grid;
-  grid-template-columns:  35vw 35vw;
-  grid-template-rows: 25vw 25vw;
-
-`
-
 
 
 const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, palette.palette.primary.background)};
+  background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
   
 
   .gatsby-image-wrapper:not(:last-child) {
@@ -47,12 +38,7 @@ const Content = styled(Box)<{ bg: string }>`
   }
 `
 
-const Category = styled(AnimatedBox)`
-  letter-spacing: 0.05em;
-  font-size: ${props => props.theme.fontSizes[1]};
-  text-transform: capitalize;
-  color: ${palette.palette.primary.active};
-`
+
 const RaisedHeader = styled(Container)`
   margin: -300px 10px 140px 10px;
   //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
@@ -60,8 +46,8 @@ const RaisedHeader = styled(Container)`
   border-radius: 12px;
   z-index: 3;
   position: relative;
-  background-color: ${palette.palette.primary.text};
-  color: ${palette.palette.primary.background};
+  background-color: ${theme.palette.primary.text};
+  color: ${theme.palette.primary.background};
   display: flex
   flexDirection: column
   minWidth: 0;
@@ -78,7 +64,7 @@ const PageTitle = styled(Container)`
   'lawns matter'
   'title'   ;
   padding: 1rem ;
-  background-color: ${palette.palette.primary.background};
+  background-color: ${theme.palette.primary.background};
   text-align: center;
   margin: -80px 25% 20px 25%;
   box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
@@ -91,7 +77,7 @@ const PageTitle = styled(Container)`
 
 const Lawns = styled(GridItem)`
   grid-area: lawns;
-  color: ${palette.palette.primary.active}; 
+  color: ${theme.palette.primary.active}; 
   text-transform: lowercase;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
@@ -99,7 +85,7 @@ const Lawns = styled(GridItem)`
 
 const Matter = styled(GridItem)`
   grid-area: matter;
-  color: ${palette.palette.primary.text}; 
+  color: ${theme.palette.primary.text}; 
   text-transform: lowercase;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
@@ -111,10 +97,10 @@ const HorizontalImg = styled(Img)`
 `
 const Title = styled(GridItem)`
   grid-area: title;
-  color: ${palette.palette.primary.active}; 
+  color: ${theme.palette.primary.active}; 
   text-transform: uppercase;
   font-weight: 400;
-  color: ${palette.palette.primary.text}; 
+  color: ${theme.palette.primary.text}; 
   font-size: ${props => props.theme.fontSizes[1]};
 
 `
@@ -168,15 +154,15 @@ export const IndexPageTemplate = ({
       <div
         style={{
           display: 'flex',
-          height: '700px',
+          height: '1000px',
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',
           flexDirection: 'column',
         }}
-      ></div>
+      />
 
-<RaisedHeader    style={{
+ <RaisedHeader    style={{
         display: 'flex',
         width: '90%' ,
         lineHeight: '1',
@@ -318,7 +304,7 @@ allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {or
           featured
           featuredimage {
             childImageSharp {
-              fluid(quality: 80, maxWidth: 1200) {
+              fluid(quality: 95, maxWidth: 1200) {
                 src
               }
             }

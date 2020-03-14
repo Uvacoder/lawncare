@@ -134,7 +134,7 @@ query TagRoute($tag: String) {
           slug
           featuredimage {
             childImageSharp {
-              fluid(quality: 80, maxWidth: 600) {
+              fluid(quality: 95, maxWidth: 600) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

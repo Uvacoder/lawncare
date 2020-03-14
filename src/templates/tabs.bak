@@ -181,7 +181,7 @@ export const tagPageQuery = graphql`
             slug
            featuredimage {
           childImageSharp {
-            fluid(quality: 80, maxWidth: 400) {
+            fluid(quality: 95, maxWidth: 400) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

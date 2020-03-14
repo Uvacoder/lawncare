@@ -71,7 +71,7 @@ body {
   padding: 0;
   font-family: 'Open Sans';
   font-size: 1rem;
-  background-color: ${palette.palette.primary.active};
+  background-color: ${theme.palette.primary.active};
 }
 a {
   transition: all 0.3s ease-in-out;

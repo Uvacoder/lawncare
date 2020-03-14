@@ -17,7 +17,7 @@ const EmailLink = () => (
       }
     }
     `}
-    render={data =>  <a href={`mailto:${data.site.siteMetadata.email}?subject=Lawn%20Care%20Society&body=Dear%20%${data.site.siteMetadata.name},`} rel="nofollow"><EmailIcon /></a>}></StaticQuery>  
+    render={data =>  <a href={`mailto:${data.site.siteMetadata.contactPoint.email}?subject=Lawn%20Care%20Society&body=Dear%20%${data.site.siteMetadata.contactPoint.name},`} rel="nofollow"><EmailIcon /></a>}></StaticQuery>  
 
 )
 
