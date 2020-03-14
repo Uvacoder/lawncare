@@ -133,7 +133,7 @@ type PageProps = {
         internal: {
           content: markdown 
         }
-        html
+        html: markdown 
         frontmatter: {
           title: string
           templateKey: string

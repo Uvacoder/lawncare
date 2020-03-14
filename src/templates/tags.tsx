@@ -1,45 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import Layout from '../components/layout'
+import Features from '../components/Features'
+import Spotlight from '../components/spotlight'
+import BlogIndex from '../components/BlogIndex'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
-import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-plugin-theme-ui/index'
-import palette from '../gatsby-plugin-theme-ui/palette'
 import { Box, Flex, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
-import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
-import BackgroundImage from 'gatsby-background-image'
-import GridArticle from '../components/grid-article'
-import GlobalStyles from '../styles/globalStyle'
-import CssBaseline from '@material-ui/core/CssBaseline';
 import GridItem from '../components/grid-item'
-
-
-type PageProps = {
-  data: {
-    allMarkdownRemark: {
-      edges: {
-        node: {
-          excerpt: string
-          id: string
-          frontmatter: {
-            title: string
-            slug: string
-            templateKey: string
-            featured: boolean
-            featuredimage: ChildImageSharp
-            }[]
-        }
-      }
-    }
-  }
-}
+import GlobalStyles from '../styles/globalStyle'
 
 
 const PBox = styled(AnimatedBox)`
@@ -63,7 +40,7 @@ const Content = styled(Box)<{ bg: string }>`
 
 
 const RaisedHeader = styled(Container)`
- 
+  margin: -300px 10px 140px 10px;
   //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
   box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
   border-radius: 12px;
@@ -144,174 +121,208 @@ const PButton = styled(Button)<{ color: string }>`
 
 const Area = styled(animated.div)`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 35vw;
-  grid-template-areas:
-  'article image'   
-  'image article'
-  'article image'   
-  'image article'
-  'article image'   
-  'image article'  
-  ;
-}
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 50vw;
+
+  @media (max-width: ${props => props.theme.breakpoints[2]}) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 60vw;
+  }
 `
 
-
-class TagIndex extends React.Component {
-  render() {
+export const HeaderPageTemplate = ({
+  image,
+  title,
+  heading,
+  slug,
+  html,
+}) => (
+  <div>
+    <GlobalStyles />
     
-    const tags = this.props.data.allMarkdownRemark.edges
-    const tagLinks = tags.map(tag => (
-      <li key={tag.node.frontmatter.slug}>
-        <Link to={tag.node.frontmatter.slug}>
-          <h2 className="is-size-2">{tag.node.frontmatter.title}</h2>
-        </Link>
-      </li>
-    ))
-    const tag = this.props.pageContext.tag
-    const title = this.props.data.site.siteMetadata.title
-    const totalCount = this.props.data.allMarkdownRemark.totalCount
-    const tagHeader = `${totalCount} article${
-      totalCount === 1 ? '' : 's'
-    } with information in the category “${tag}”`
+    <div
+      className="full-width-image margin-top-0"
+      style={{
+        backgroundImage: `url(${
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : frontmatter.image
+        })`,
+        backgroundPosition: `center`,
+        backgroundAttachment: `fixed`,
+        backgroundSize: 'cover',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          height: '1000px',
+          lineHeight: '1',
+          justifyContent: 'space-around',
+          alignItems: 'left',
+          flexDirection: 'column',
+        }}
+      />
 
-    return (
-      <div>
-        <Layout>
-          <CssBaseline />
-             <GlobalStyles />
-                <section className="section">
-                  <Helmet title={`${tag} | ${title}`} />
-                  <div className="container content">
-                    <div className="columns">
-                  
-                    
-                      </div>
-                  </div>
-                                  
-                </section> 
-                <RaisedHeader    style={{
-                      display: 'flex',
-                      width: '90%' ,
-                      lineHeight: '1',
-                      justifyContent: 'space-around',
-                      alignItems: 'left',
-                      flexDirection: 'column',}}>
-                          <PageTitle   style={{
-                      display: 'flex',
-                      width: '70%' ,
-                      lineHeight: '1',
-                      justifyContent: 'space-around',
-                      alignItems: 'left',
-                      flexDirection: 'column',}}>
-                    <Container><Lawns>lawns</Lawns> <Matter>matter</Matter></Container>
+ <RaisedHeader    style={{
+        display: 'flex',
+        width: '90%' ,
+        lineHeight: '1',
+        justifyContent: 'space-around',
+        alignItems: 'left',
+        flexDirection: 'column',}}>
+            <PageTitle   style={{
+        display: 'flex',
+        width: '70%' ,
+        lineHeight: '1',
+        justifyContent: 'space-around',
+        alignItems: 'left',
+        flexDirection: 'column',}}>
+       <Container><Lawns>lawns</Lawns> <Matter>matter</Matter></Container>
 
-                    <h2>  <Title color={theme.palette.primary.active}>Information {tag}</Title></h2>
-                    
-                      </PageTitle>
-                
- 
-            <section className="section section--gradient">
-              <div >
-                {/* <div className="section">
-                  <div className="columns">
-                    <div className="column is-10 is-offset-1"> */}
-                      <div className="content">
-                        <div className="columns">
-                          <div className="column is-12">
-                            <h3 className="has-text-weight-semibold is-size-2">
-                              {/* {heading} */}
-                            </h3>
-                      {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
-                          </div>
-                        </div>
-                        <Flex
-                      flexWrap="nowrap"
-                      flexDirection={['row', 'row', 'row', 'column']}
-                      alignItems={['center', 'center', 'center', 'flex-start']}
-                      justifyContent="space-between"
-                    >
-            
-                      </Flex>
-
-
-                        <div className="columns">
-                          <div >
-                            <Link className="btn" to="/products">
-                              See all products
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="column is-12">
-                          <h3 className="has-text-weight-semibold is-size-2">
-                            Latest stories
-                          </h3>
-                          {/* <BlogIndex /> */}
-                          <div className="column is-12 has-text-centered">
-                            <Link className="btn" to="/blog">
-                              Read more
-                            </Link>
-                          </div>
-                        </div>
-                  
-                        </div>          
-                        </div>          
-         
-         
-                  </section>
-               </RaisedHeader>
-
-                <Area>
-                  {tags &&
-                    tags.map(({ node: tag }) => (
-
-                  <GridArticle key={tag.frontmatter.slug} to={tag.frontmatter.slug} aria-label={`View page "${tag.frontmatter.title}"`}>
-                                  <Img fluid={tag.frontmatter.featuredimage.childImageSharp.fluid} />
-                      <span>{tag.frontmatter.title}</span>
-                    </GridArticle>
-
-                    ))}
-                </Area>
+ <h2>  <Title color={theme.palette.primary.active}>{heading}</Title></h2>
         
-        </Layout>
+          </PageTitle>
+       
+ 
+    <section className="section section--gradient">
+      <div >
+        {/* <div className="section">
+          <div className="columns">
+            <div className="column is-10 is-offset-1"> */}
+              <div className="content">
+                <div className="columns">
+                  <div className="column is-12">
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      {/* {heading} */}
+                    </h3>
+               <div dangerouslySetInnerHTML={{ __html: html }} />
+                  </div>
+                </div>
+                <Flex
+              flexWrap="nowrap"
+              flexDirection={['row', 'row', 'row', 'column']}
+              alignItems={['center', 'center', 'center', 'flex-start']}
+              justifyContent="space-between"
+            >
+    
+               </Flex>
+
+
+                <div className="columns">
+                  <div >
+                    <Link className="btn" to="/products">
+                      See all products
+                    </Link>
+                  </div>
+                </div>
+                <div className="column is-12">
+                  <h3 className="has-text-weight-semibold is-size-2">
+                    Latest stories
+                  </h3>
+                  <BlogIndex />
+                  <div className="column is-12 has-text-centered">
+                    <Link className="btn" to="/blog">
+                      Read more
+                    </Link>
+                  </div>
+                </div>
+              </div>
       </div>
-    )
-  }
+    </section>
+    </RaisedHeader>
+    
+    </div>
+  // </div>
+)
+
+HeaderPageTemplate.propTypes = {
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  title: PropTypes.string,
+  heading: PropTypes.string,
+  slug: PropTypes.string,
+  html: PropTypes.markdown,
+  posts: PropTypes.shape({
+    frontmatter: PropTypes.array,
+  }),
 }
 
-export default TagIndex
+const HeaderPage = ({ data }) => {
+  const { headerdata } = data.markdownRemark
+  const { edges: posts } = data.allMarkdownRemark
 
-export const tagPageQuery = graphql`
-query TagRoute($tag: String) {
-  site {
-    siteMetadata {
-      title
-    }
-  }
-  allMarkdownRemark(limit: 1000, sort: {fields: [frontmatter___slug], order: DESC}, filter: {frontmatter: {tags: {eq: $tag}}}) {
-    totalCount
-    edges {
-      node {
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          slug
-          featuredimage {
-            childImageSharp {
-              fluid(quality: 95, maxWidth: 600) {
-                ...GatsbyImageSharpFluid_withWebp
+  return (
+    <Layout>
+      <HeaderPageTemplate
+        image={data.markdownRemark.frontmatter.image}
+        title={data.markdownRemark.frontmatter.title}
+        slug={data.markdownRemark.frontmatter.slug}
+        heading={data.markdownRemark.frontmatter.heading}
+        html={data.markdownRemark.html}
+      />
+    </Layout>
+  )
+}
+
+HeaderPage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
+  allMarkdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+  }),
+}
+
+export default HeaderPage
+
+export const pageQuery = graphql`
+ 
+  query HeaderPageTemplate {
+    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {order: ASC, fields: id}) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            slug
+            featuredimage {
+              childImageSharp {
+                fluid(quality: 95, maxWidth: 600) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
               }
             }
+            featuredimage_alt
           }
-          featuredimage_alt
+          excerpt(pruneLength: 147)
         }
-        excerpt(pruneLength: 147)
+      }
+    }
+    markdownRemark(frontmatter: {templateKey: {eq: "tags"}, menu: {eq: "about"}}) {
+      id
+      html
+      frontmatter {
+        title
+        templateKey
+        slug
+        heading
+        menu
+        featured
+        featuredimage {
+          childImageSharp {
+            fluid(quality: 95, maxWidth: 600) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        featuredimage_alt
+        menuRanking
+        siteRanking
       }
     }
   }
-}
-
+  
 `

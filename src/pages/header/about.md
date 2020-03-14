@@ -1,9 +1,9 @@
 ---
-templateKey: page
+templateKey: tags
 menu: about
 menuRanking: 100
 siteRanking: 100
-slug: /about/aboutus
+slug: /aboutus
 title: About Us
 featured: true
 featuredimage: /img/aboutus.jpg
