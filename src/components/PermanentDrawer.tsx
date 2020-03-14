@@ -162,46 +162,7 @@ export default function PermanentDrawerLeft(props) {
             </ListItem></Link> 
 
 
-            {/* <Link to="/">
-            <ListItem button >
-              <ListItemText>Home</ListItemText>
-            </ListItem></Link>
-            <Link to="/page">
-            <ListItem button >
-              <ListItemText >Portfolio</ListItemText>
-            </ListItem></Link>
-            <Link to="/servicecatalog">
-            <ListItem button >
-              <ListItemText>Service</ListItemText>
-            </ListItem></Link>
-            <Link to="/tags/about">
-            <ListItem button >
-
-              <ListItemText>About us</ListItemText>
-            </ListItem></Link> */}
-
-
-
-        {/* <a href="tel:01295402447" rel="nofollow">
-            <ListItem button >
-              <ListItemIcon><PhoneIcon /></ListItemIcon>
-              <ListItemText>Call us now</ListItemText>
-            </ListItem></a>
-            <a href="mailto: jon@lawnsmatter.co.uk?subject=Lawn%20Care%20Enquiry&body=Dear%20Jon,%0d%0dI%20am%20interested%20in%20the%20Lawn%20Care%20Services%20that%20I%20have%20read%20about%20on%20your%20website,%20would%20you%20please%20contact%20me%20to%20book%20a%20lawn%20assessment.%0d%0dMy%20contact%20details%20are...%0d%0dName:%0dAddress:%0dPost%20code:%0dPhone%20number:%0dEmail:%0d%0dKind%20regards,%0d%0d" rel="nofollow">
-            <ListItem button >
-              <ListItemIcon><EmailIcon /></ListItemIcon>
-              <ListItemText>Email us</ListItemText>
-            </ListItem></a>
-        <a href="https://www.facebook.com/lawnsmatter" rel="nofollow">
-            <ListItem button >
-              <ListItemIcon><FacebookIcon /></ListItemIcon>
-              <ListItemText>Facebook</ListItemText>
-            </ListItem></a>
-            <Link to="/instagram">
-            <ListItem button >
-              <ListItemIcon><InstagramIcon /></ListItemIcon>
-              <ListItemText>Instagram</ListItemText>
-            </ListItem></Link> */}
+    
             <Divider />
 
         </List>

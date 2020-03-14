@@ -56,20 +56,6 @@ export default function NavigationBar() {
           
 
 </Button> </Container></ListItem>
-           {/* <Link to="/page">
-            <ListItem button >
-              <ListItemText >Portfolio</ListItemText>
-            </ListItem></Link>
-
-            <Link to="/servicecatalog">
-            <ListItem button >
-              <ListItemText>Service</ListItemText>
-            </ListItem></Link>
-
-            <Link to="/tags/about">
-            <ListItem button >
-              <ListItemText>About us</ListItemText>
-            </ListItem></Link> */}
 
            
 <ListItem><Container alignItems="center" ><a href={`tel:${<PhoneNo />}`} rel="nofollow">
