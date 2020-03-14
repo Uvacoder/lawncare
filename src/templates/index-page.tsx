@@ -149,7 +149,7 @@ export const IndexPageTemplate = ({
   title,
   heading,
   slug,
-  body,
+  html,
 }) => (
   <div>
     <GlobalStyles />
@@ -208,7 +208,7 @@ export const IndexPageTemplate = ({
                     <h3 className="has-text-weight-semibold is-size-2">
                       {/* {heading} */}
                     </h3>
-                    <h5>{body}</h5>
+               <div dangerouslySetInnerHTML={{ __html: html }} />
                   </div>
                 </div>
                 <Flex
@@ -253,7 +253,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   slug: PropTypes.string,
-  body: PropTypes.string,
+  html: PropTypes.markdown,
   posts: PropTypes.shape({
     frontmatter: PropTypes.array,
   }),
@@ -266,11 +266,11 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={indexdata.frontmatter.image}
-        title={indexdata.frontmatter.title}
-        slug={indexdata.frontmatter.slug}
-        heading={indexdata.frontmatter.heading}
-        body={indexdata.body}
+        image={data.markdownRemark.frontmatter.image}
+        title={data.markdownRemark.frontmatter.title}
+        slug={data.markdownRemark.frontmatter.slug}
+        heading={data.markdownRemark.frontmatter.heading}
+        html={data.markdownRemark.html}
       />
     </Layout>
   )
@@ -291,7 +291,8 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query IndexPageTemplate {
-  indexdata: markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+   markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+      html
       frontmatter {
       title
       image {
@@ -304,7 +305,6 @@ query IndexPageTemplate {
       slug
       heading
     }
-    body
   }
 allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {order: ASC, fields: id}) { 
   edges {
