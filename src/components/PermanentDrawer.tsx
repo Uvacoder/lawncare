@@ -158,7 +158,7 @@ export default function PermanentDrawerLeft(props) {
             <Link to="/tags/about">
             <ListItem button >
               <ListItemIcon><InfoIcon /></ListItemIcon>
-              <ListItemText>About us</ListItemText>
+              <ListItemText>Information</ListItemText>
             </ListItem></Link> 
 
 

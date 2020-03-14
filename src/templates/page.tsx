@@ -133,6 +133,7 @@ type PageProps = {
         internal: {
           content: markdown 
         }
+        html
         frontmatter: {
           title: string
           templateKey: string
@@ -162,7 +163,7 @@ type PageProps = {
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
         title={`${data.markdownRemark.frontmatter.title} | Lawns Matter`}
-        desc={data.markdownRemark.excerpt}
+        desc={data.markdownRemark.html}
         node={data.markdownRemark.frontmatter.slug}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         individual
@@ -277,6 +278,7 @@ query Page ($id: String!) {
    internal {
      content
    }
+    html
     frontmatter {
       slug
       title
