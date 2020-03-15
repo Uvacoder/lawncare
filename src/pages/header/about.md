@@ -3,7 +3,7 @@ templateKey: tags
 menu: about
 menuRanking: 100
 siteRanking: 100
-slug: /aboutus
+slug: /tags/about
 title: About Us
 featured: true
 featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg

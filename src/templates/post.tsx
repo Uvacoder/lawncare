@@ -45,7 +45,7 @@ const Category = styled(AnimatedBox)`
 `
 const RaisedHeader = styled(Container)`
   padding: 30px 0;
-  margin: -300px 10px 140px 10px;
+  margin: -200px 10px 140px 10px;
   //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
   box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
   border-radius: 12px;
@@ -129,9 +129,7 @@ type PageProps = {
   data: {
         id: string
         excerpt: string
-        internal: {
-          content: markdown 
-        }
+        html: markdown
         frontmatter: {
           title: string
           templateKey: string
@@ -234,7 +232,7 @@ type PageProps = {
    
 
     <h4>  <Description style={descAnimation}>
-       {data.markdownRemark.internal.content}
+    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </Description></h4> 
       
    
@@ -244,44 +242,12 @@ type PageProps = {
         Contact Us
       </Button>
       </Link>
-      {/* <Link to="/page">
-      <Button color={palette.palette.primary.active} variant="outlined" py={4} px={8}>
-        Other Pages
-      </Button>
-      </Link>
-      <Link to="/">
-      <Button color={palette.palette.primary.active} variant="contained" py={4} px={8}>
-        Return to main menu
-      </Button>
-      </Link> */}
     </PBox>
     
     </RaisedHeader>
     </Container>  
     </Container>
     </Content>
-
-        {/* <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
-        <animated.h1 style={titleAnimation}>{data.markdownRemark.frontmatter.title}</animated.h1>
-  
-        <Img fluid={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid} />
-        </PBox>
-      </Content>
-      <PBox py={10} px={[6, 6, 8, 10]}>
-        <Category style={categoryAnimation}>{data.markdownRemark.frontmatter.templateKey}</Category>
-        <Description style={descAnimation}>
-        <p> {data.markdownRemark.internal.content}</p>
-        </Description>
-      </PBox>
-      <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2></h2>
-        <Link to="/contactus">
-        <PButton color={theme.palette.primary.active} py={4} px={8}>
-          Contact Us
-        </PButton>
-        </Link>
-       
-      </PBox> */}
     </Layout>
     </div>
   )
@@ -294,9 +260,7 @@ export const query = graphql`
 query BlogPage ($id: String!) {
    markdownRemark(id: { eq: $id }) {
    excerpt(pruneLength: 400)
-   internal {
-     content
-   }
+    html
     frontmatter {
       slug
       title
