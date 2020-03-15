@@ -109,6 +109,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: '@stackbit/gatsby-plugin-menus',
       options: {

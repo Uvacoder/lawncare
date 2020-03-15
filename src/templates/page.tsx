@@ -130,9 +130,6 @@ type PageProps = {
   data: {
         id: string
         excerpt: string
-        internal: {
-          content: markdown 
-        }
         html: markdown 
         frontmatter: {
           title: string
@@ -186,7 +183,7 @@ type PageProps = {
           <Container
         style={{
           display: 'flex',
-          height: '700px',
+          height: '1000px',
           width: '70%' ,
           lineHeight: '1',
           justifyContent: 'space-around',
@@ -237,7 +234,7 @@ type PageProps = {
      
 
       <h4>  <Description style={descAnimation}>
-         {data.markdownRemark.internal.content}
+      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
         </Description></h4> 
         
      
@@ -247,16 +244,6 @@ type PageProps = {
           Contact Us
         </Button>
         </Link>
-        {/* <Link to="/page">
-        <Button color={palette.palette.primary.active} variant="outlined" py={4} px={8}>
-          Other Pages
-        </Button>
-        </Link>
-        <Link to="/">
-        <Button color={palette.palette.primary.active} variant="contained" py={4} px={8}>
-          Return to main menu
-        </Button>
-        </Link> */}
       </PBox>
       
       </RaisedHeader>
@@ -275,9 +262,6 @@ export const query = graphql`
 query Page ($id: String!) {
    markdownRemark(id: { eq: $id }) {
    excerpt(pruneLength: 400)
-   internal {
-     content
-   }
     html
     frontmatter {
       slug

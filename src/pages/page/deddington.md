@@ -1,7 +1,7 @@
 ---
 templateKey: page
 menu: project
-slug: /project/project3
+slug: /project/deddington
 title: 'Deddington'
 featured: false
 featuredimage: /img/after3.jpg
