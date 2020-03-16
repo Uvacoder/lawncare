@@ -13,12 +13,24 @@ import theme from '../gatsby-plugin-theme-ui/index'
 
 type PageProps = {
   data: {
-    reviews: {
-      nodes: {
-        title: string
-        slug: string
-        featuredimage: ChildImageSharp
-      }[]
+    review: {
+      edges: {
+        node: {
+          frontmatter: {
+              title: string
+              slug: string
+              templateKey: string
+              tags: string
+              created_time: string
+              has_rating: boolean
+              has_review: boolean
+              recommendation_type_positive: boolean
+              featured: boolean
+              featuredimage_alt: string
+              featuredimage: ChildImageSharp
+            }[] 
+        }
+      }
     }
   }
 }
@@ -34,7 +46,7 @@ const Area = styled(animated.div)`
   }
 `
 
-const Reviews: React.FunctionComponent<PageProps> = ({ data: { reviews } }) => {
+const Review: React.FunctionComponent<PageProps> = ({ data: { review } }) => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -45,10 +57,10 @@ const Reviews: React.FunctionComponent<PageProps> = ({ data: { reviews } }) => {
     <Layout color={theme.palette.primary.main}>
       <SEO title="Website development | lawnsmatter.co.uk" />
       <Area style={pageAnimation}>
-        {reviews.nodes.map(reviews => (
-          <GridItem key={reviews.slug} to={reviews.slug} aria-label={`View reviews "${reviews.title}"`}>
-            <Img fluid={reviews.featuredimage.childImageSharp.fluid} />
-            <span>{reviews.title}</span>
+        {review.edges.node.frontmatter.nodes.map(review => (
+          <GridItem key={review.edges.node.frontmatter.slug} to={review.edges.node.frontmatter.slug} aria-label={`View review "${review.edges.node.frontmatter.title}"`}>
+            <Img fluid={review.edges.node.frontmatter.featuredimage.childImageSharp.fluid} />
+            <span>{review.edges.node.frontmatter.title}</span>
           </GridItem>
         ))}
       </Area>
@@ -56,22 +68,35 @@ const Reviews: React.FunctionComponent<PageProps> = ({ data: { reviews } }) => {
   )
 }
 
-export default Reviews
+export default Review
 
 export const query = graphql`
-  query Reviews {
-    reviews: allReviewsYaml {
-      nodes {
-        title
-        slug
-        featuredimage {
-          childImageSharp {
-            fluid(quality: 95, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
+  query Review {
+    review: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            slug
+            title
+            templateKey
+            tags
+            created_time
+            has_rating
+            has_review
+            recommendation_type_positive
+            featured
+            featuredimage_alt
+            featuredimage {
+              childImageSharp {
+                fluid(quality: 95, maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
             }
           }
         }
       }
     }
   }
+  
 `

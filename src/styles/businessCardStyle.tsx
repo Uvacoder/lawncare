@@ -40,7 +40,7 @@ const PageTitle = styled(Container)`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-  'lawns matter'
+  'titlepart1 titlepart2'
   'title'   ;
   padding: 1rem ;
   background-color: ${props => props.theme.palette.primary.background};
@@ -55,14 +55,14 @@ const PageTitle = styled(Container)`
 
 
 ` 
-const Lawns = styled(GridItem)`
-  grid-area: lawns;
+const TitlePart1 = styled(GridItem)`
+  grid-area: titlepart1;
   color: ${props => props.theme.palette.primary.active}; 
   text-transform: lowercase;
  `
 
-const Matter = styled(GridItem)`
-  grid-area: matter;
+const TitlePart2 = styled(GridItem)`
+  grid-area: titlepart2;
   color: ${props => props.theme.palette.primary.text}; 
   text-transform: lowercase;
  `

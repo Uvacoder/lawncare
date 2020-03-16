@@ -97,13 +97,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'reviews',
-        path: `${__dirname}/static/content/reviews`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'config',
         path: `${__dirname}/config`,
       },
@@ -186,7 +179,7 @@ module.exports = {
     //     appId: '629164404334446',
     //   },
     // },
-    {
+     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
@@ -202,9 +195,9 @@ module.exports = {
     //   options: {
     //     places: [`986924381457198`], // Can be either a numeric ID or the URL ID
     //     params: {
-    //       fields: "id,name,ratings.limit(100){reviewer,has_rating,rating,created_time,open_graph_story,recommendation_type,review_text},about,cover,category,featured_video,general_info,hours,payment_options,phone,rating_count,whatsapp_number,albums,feed,videos{title,description}"},
-    //     key: 'EAAGLnI8D2EYBACZCR2L5PUn9gEDHW7LVRyd6k3FV2mEJpRtGSKb7sat5ooBUYCjgbSVS6kBgQZBfqeJtAIcL7akZCb0Dvu74A3SKmvFKAKrdAgmE8UA6X9qfRpZBy6V7SrMSME3RZCT3gWs90bQiG9Yg4JvPKC0gZD', // You will need to create a Facebook application and go through review in order to get an API token.
-    //     version: '5.0', // The version of the graph API to use. Defaults to 5.0
+    //       fields: "id,albums{photos{images,name,created_time}},ratings{created_time,has_rating,has_review,rating,recommendation_type,review_text,reviewer}"},
+    //     key: 'EAAI8OMDTX24BAHI0H9DArAJO6xIZCWFZAidPEK0zRZB9BrWnNS0yKnc0dxPMaZCc0LIl30PtuumU3pL4ixWPZCf0Mkah3ztBngZCPaIXCzHGkGnLaG9Kzz2IzIGH3JRZAZCK1mXM5KBcegAXYoOKBQvOWDUxYpTccXQcksJ59sZBmoQZDZD', // You will need to create a Facebook application and go through review in order to get an API token.
+    //     version: '6.0', // The version of the graph API to use. Defaults to 5.0
     //   },
     // },
      'gatsby-plugin-sitemap',

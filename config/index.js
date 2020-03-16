@@ -1,17 +1,17 @@
 module.exports = {
   pathPrefix: '/', // Prefix for all links. "
 
-  siteTitle: 'nearandnow.services', // Navigation and Site Title
-  siteTitleAlt: 'nearandnow.services - services', // Alternative Site title for SEO
-  siteTitleShort: 'nearandnow.services', // short_name for manifest
+  siteTitle: 'lawnsmatter.co.uk', // Navigation and Site Title
+  siteTitleAlt: 'lawnsmatter.co.uk - Lawn Care Service', // Alternative Site title for SEO
+  siteTitleShort: 'lawnsmatter.co.uk', // short_name for manifest
   siteHeadline: 'Take a look at our services and see our recent projects.', // Headline for schema.org JSONLD
-  siteUrl: 'https://nearandnow.services', // Domain of your site. No trailing slash!
+  siteUrl: 'https://lawnsmatter.co.uk', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logos/logo.png', // Used for SEO and manifest
-  siteDescription: 'nearandnow.services',
+  siteLogo: '/img/logo.png', // Used for SEO and manifest
+  siteDescription: 'lawnsmatter.co.uk',
   author: 'gappsapps', // Author for schema.org JSONLD
 
-  // siteFBAppID: '123456789', // Facebook App ID - Optional
+  siteFBAppID: '629164404334446', // Facebook App ID - Optional
   userTwitter: '@lawnsmatter', // Twitter Username
   ogSiteName: 'lawnsmatter', // Facebook Site Name
   ogLanguage: 'en_GB', // og:language
@@ -36,7 +36,7 @@ module.exports = {
       type: 'Offer',
       itemOffered: {
         type: 'Service',
-        name: ['Lawn Assessment', 'Complete Lawn Care Service', 'Lawn Renovation',  'Scarifying', 'Lawn Aeration', 'Lawn Pest Control', 'Lawn Disease Control', 'Lawn Feed and Weed',  'Lawn Fertilisation',  'Lawn Maintenance',],
+        name: ['Professional Lawn Care', 'Lawn Assessment', 'Complete Lawn Care Service', 'Lawn Renovation',  'Scarifying', 'Lawn Aeration', 'Lawn Pest Control', 'Lawn Disease Control', 'Lawn Feed and Weed',  'Lawn Fertilisation',  'Lawn Maintenance',],
       },
     },
   },
@@ -45,8 +45,8 @@ module.exports = {
     type: 'AggregateRating',
     ratingValue: '5',
     itemReviewed: 'Lawn Care Service',
-    ratingCount: '10',
-    reviewCount: '10',
+    ratingCount: '11',
+    reviewCount: '11',
     },
  /*     areaServed:
     GeoShape: ,

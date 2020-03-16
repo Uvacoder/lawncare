@@ -67,7 +67,7 @@ const PageTitle = styled(Container)`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-  'lawns matter'
+  'titlepart1 titlepart2'
   'title'   ;
   padding: 1rem ;
   background-color: ${palette.palette.primary.background};
@@ -82,16 +82,16 @@ const PageTitle = styled(Container)`
 
 
 ` 
-const Lawns = styled(GridItem)`
-  grid-area: lawns;
+const TitlePart1 = styled(GridItem)`
+  grid-area: titlepart1;
   color: ${palette.palette.primary.active}; 
   text-transform: lowercase;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
  `
 
-const Matter = styled(GridItem)`
-  grid-area: matter;
+const TitlePart2 = styled(GridItem)`
+  grid-area: titlepart2;
   color: ${palette.palette.primary.text}; 
   text-transform: lowercase;
   font-weight: 400;
@@ -226,7 +226,7 @@ type PageProps = {
                    }}>
  
   <Category style={categoryAnimation} color={palette.palette.primary.text}> 
-   <Lawns>lawns</Lawns> <Matter>matter</Matter>
+   <TitlePart1>lawns</TitlePart1> <TitlePart2>matter</TitlePart2>
    <br />
    <Title color={palette.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
   </Container>

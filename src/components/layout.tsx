@@ -20,6 +20,7 @@ import { Container } from '@material-ui/core'
 import Footer from './footer'
 import BottomNavigationBar from './bottomNavigation'
 
+
 const isPartiallyActive = ({ isPartiallyCurrent }: { isPartiallyCurrent: boolean }) =>
   isPartiallyCurrent ? { className: 'navlink-active navlink' } : { className: 'navlink' }
 
@@ -64,6 +65,7 @@ const Layout = ({ children, color }: LayoutProps) => {
         </SideBarInner>
         </Hidden>
           <Main>{children}</Main>
+          
           <Hidden mdUp>
         <BottomNavigationBar  bg={color}  />
         {/* <Footer bg={color} /> */}

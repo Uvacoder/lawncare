@@ -72,7 +72,7 @@ const PageTitle = styled(Container)`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-  'lawns matter'
+  'titlepart1 titlepart2'
   'title'   ;
   padding: 1rem ;
   background-color: ${theme.palette.primary.background};
@@ -87,16 +87,16 @@ const PageTitle = styled(Container)`
 
 
 ` 
-const Lawns = styled(GridItem)`
-  grid-area: lawns;
+const TitlePart1 = styled(GridItem)`
+  grid-area: titlepart1;
   color: ${theme.palette.primary.active}; 
   text-transform: lowercase;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[3]};
  `
 
-const Matter = styled(GridItem)`
-  grid-area: matter;
+const TitlePart2 = styled(GridItem)`
+  grid-area: titlepart2;
   color: ${theme.palette.primary.text}; 
   text-transform: lowercase;
   font-weight: 400;
@@ -148,7 +148,7 @@ class PageIndex extends React.Component {
         alignItems: 'left',
         flexDirection: 'column',}}>
            <Category color={theme.palette.primary.text}>
-          <Lawns>lawn</Lawns> <Matter>care</Matter>
+          <TitlePart1>lawn</TitlePart1> <TitlePart2>care</TitlePart2>
              <br />
             <Title color={theme.palette.primary.active}>{page.frontmatter.title}</Title>
             </Category>
