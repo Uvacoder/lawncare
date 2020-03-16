@@ -6,7 +6,7 @@ menuRanking: 100
 siteRanking: 100
 title: Beccy Richards
 featured: true
-featuredimage: /img/sharon-mccutcheon-fSlCxR0dnZY-unsplash.jpg
+featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 featuredimage_alt: Photo by Sharon Mccutcheon on Unsplash
 tags:
   - service

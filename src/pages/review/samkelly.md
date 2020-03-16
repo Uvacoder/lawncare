@@ -4,7 +4,7 @@ menu: review
 slug: /review/samkelly
 title: Sam Kelly
 featured: true
-featuredimage: /img/sharon-mccutcheon-fSlCxR0dnZY-unsplash.jpg
+featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 featuredimage_alt: Photo by Sharon Mccutcheon on Unsplash
 tags:
   - service
