@@ -55,17 +55,17 @@ collections:
       - { label: Tags, required: false, name: tags, widget: list }
       - { label: locationName, required: false, name: locationName, widget: string }
   - name: areaserved
-    label: AreaServed
+    label: areaserved
     files: 
       - file: src/pages/areaserved.md
         label: AreaServedMap
         name: areaserved       
-        slug: "{{slug }}"
+        slug: "{{slug}}"
         fields:
           - { label: "Template Key", name: templateKey, widget: hidden, default: areaserved }
           - { label: siteRanking, required: true, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }          
           - { label: hasmap, required: false, name: hasmap, widget: boolean}
-          - { label: slug, name: slug, widget: hidden, default: areaserved  }
+          - { label: slug, name: slug, widget: string, default: areaserved  }
           - { label: title, required: false, name: title, widget: string }
           - { label: Featured, required: false, name: featured, widget: boolean }
           - { label: Tags, required: false, name: tags, widget: list }
