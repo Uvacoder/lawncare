@@ -54,7 +54,6 @@ const useStyles = makeStyles((theme: Theme) =>
     button: {
       fontFamily: 'Open Sans',
       fontWeight: '400',
-      fontSize: '1.1rem',
       textTransform: 'capitalize',
       color: palette.palette.primary.text,
       borderColor:  palette.palette.primary.light,
@@ -107,7 +106,6 @@ const useStyles = makeStyles((theme: Theme) =>
     listitemtext: {
       fontWeight: 400,
       fontFamily: 'Open Sans',
-      fontSize: '2rem',
       padding: theme.spacing(6),
   }
   }
