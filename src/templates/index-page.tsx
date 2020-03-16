@@ -175,7 +175,9 @@ export const IndexPageTemplate = ({
         justifyContent: 'space-around',
         alignItems: 'left',
         flexDirection: 'column',}}>
-       <Container><TitlePart1>professional</TitlePart1> <TitlePart2>lawn care</TitlePart2></Container>
+       <Container><TitlePart1>professional</TitlePart1> 
+       <br />
+       <TitlePart2>lawn care</TitlePart2></Container>
 
  {/* <h2>  <Title color={theme.palette.primary.active}>{heading}</Title></h2> */}
         
@@ -184,9 +186,6 @@ export const IndexPageTemplate = ({
  
     <section className="section section--gradient">
       <div >
-        {/* <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1"> */}
               <div className="content">
                 <div className="columns">
                   <div className="column is-12">

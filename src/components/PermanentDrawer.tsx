@@ -154,7 +154,7 @@ export default function PermanentDrawerLeft(props) {
               <ListItemIcon><WorkIcon /></ListItemIcon>
               <ListItemText>Service</ListItemText>
             </ListItem></Link>
-            <Link to="/reviewlist">
+            <Link to="/reviewindex">
             <ListItem button >
               <ListItemIcon><StarIcon /></ListItemIcon>
               <ListItemText>Reviews</ListItemText>

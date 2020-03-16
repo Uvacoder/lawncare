@@ -176,6 +176,7 @@ export default () => (
               slug
               title
               templateKey
+              menu
               featured
               featuredimage {
                 childImageSharp {

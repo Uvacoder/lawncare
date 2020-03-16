@@ -42,7 +42,7 @@ type PageProps = {
       grid-auto-rows: 60vw;
     }
   `
-  class ReviewList extends React.Component {
+  class ReviewIndex extends React.Component {
     render() {
   
       const { data } = this.props
@@ -72,7 +72,7 @@ type PageProps = {
   export default () => (
     <StaticQuery
       query={graphql`
-      query ReviewListQuery {
+      query ReviewIndexQuery {
         allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "review"}, menu: {eq: "review"}}}, sort: {order: ASC, fields: id}) {
           edges {
             node {
@@ -99,7 +99,7 @@ type PageProps = {
       }
       
       `}
-      render={(data, count) => <ReviewList data={data} count={count} />}
+      render={(data, count) => <ReviewIndex data={data} count={count} />}
     />
   )
   
