@@ -72,7 +72,7 @@ const PageTitle = styled(Container)`
   grid-template-rows: 1fr;
   grid-template-areas:
   'titlepart1 titlepart2'
-  'title'   ;
+  'title';
   padding: 1rem ;
   background-color: ${theme.palette.primary.background};
   text-align: center;

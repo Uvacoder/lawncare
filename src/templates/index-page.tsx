@@ -97,7 +97,7 @@ const HorizontalImg = styled(Img)`
 const Title = styled(GridItem)`
   grid-area: title;
   color: ${theme.palette.primary.active}; 
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-weight: 400;
   color: ${theme.palette.primary.text}; 
   font-size: ${props => props.theme.fontSizes[1]};
@@ -175,9 +175,9 @@ export const IndexPageTemplate = ({
         justifyContent: 'space-around',
         alignItems: 'left',
         flexDirection: 'column',}}>
-       <Container><TitlePart1>lawns</TitlePart1> <TitlePart2>matter</TitlePart2></Container>
+       <Container><TitlePart1>professional</TitlePart1> <TitlePart2>lawn care</TitlePart2></Container>
 
- <h2>  <Title color={theme.palette.primary.active}>{heading}</Title></h2>
+ {/* <h2>  <Title color={theme.palette.primary.active}>{heading}</Title></h2> */}
         
           </PageTitle>
        
