@@ -45,14 +45,23 @@ export default function SimpleMenu() {
      <CssBaseline />
       <GlobalStyles />
       <Nav>
-     <MenuItem> <Button variant="text" uppercase="false" className={classes.button} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} > 
+     <MenuItem> <Button variant="outlined" size="large" uppercase="false" className={classes.button} aria-controls="simple-menu" aria-haspopup="true"  padding="1rem" onClick={handleClick} > 
      Menu
       </Button></MenuItem>
       <Menu
         id="simple-menu"
         className={classes.drawer}
         anchorEl={anchorEl}
-        anchorOrigin="left"
+        // anchorReference="anchorPosition"
+        // anchorPosition={{ top: 150, left: 0 }}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
@@ -65,6 +74,7 @@ export default function SimpleMenu() {
     <Link to="/reviewindex"><MenuItem  onClick={handleClose}>Reviews</MenuItem></Link>  
     <Link to="/tags/about"><MenuItem  onClick={handleClose}>About Us</MenuItem></Link>  
     <Link to="/page"><MenuItem  onClick={handleClose}>Portfolio</MenuItem></Link>  
+    <Link to="/instagram"><MenuItem  onClick={handleClose}>Instagram</MenuItem></Link>  
     <Link to="/contactus"><MenuItem  onClick={handleClose}>Contact Us</MenuItem></Link>  
       </Menu>
       </Nav>

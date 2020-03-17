@@ -44,22 +44,7 @@ const Category = styled(AnimatedBox)`
   text-transform: capitalize;
   color: ${palette.palette.primary.active};
 `
-const RaisedHeader = styled(Container)`
-  padding: 30px 0;
-  margin: -300px 10px 140px 10px;
-  //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
-  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
-  border-radius: 12px;
-  z-index: 3;
-  position: relative;
-  background-color: ${palette.palette.primary.text};
-  color: ${palette.palette.primary.background};
-  display: flex
-  flexDirection: column
-  minWidth: 0;
-  wordWrap: break-word;
-  transition: all 300ms linear ; 
-`
+
 
 const PageTitle = styled(Container)`
   display: grid;
@@ -110,6 +95,23 @@ const Title = styled(GridItem)`
   font-size: ${props => props.theme.fontSizes[1]};
 
 `
+const RaisedHeader = styled(Container)`
+  padding: 30px 0;
+  margin: -300px 10px 140px 10px;
+  //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
+  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
+  border-radius: 12px;
+  z-index: 3;
+  position: relative;
+  background-color: ${palette.palette.primary.text};
+  color: ${palette.palette.primary.background};
+  display: flex
+  flexDirection: column
+  minWidth: 0;
+  wordWrap: break-word;
+  transition: all 300ms linear ; 
+
+`
 
 const Description = styled(animated.div)`
   
@@ -118,6 +120,14 @@ const Description = styled(animated.div)`
   --x-height-multiplier: 0.35;
   line-height: 1.58;
   margin: 30px;
+  
+  a {
+    color: ${palette.palette.primary.background}; 
+    &:hover,
+    &:focus {
+      color: ${theme.palette.primary.active};
+    }
+}
 `
 
 const PButton = styled(Button)<{ color: string }>`
@@ -182,7 +192,7 @@ type PageProps = {
           <Container
         style={{
           display: 'flex',
-          height: '1000px',
+          height: '800px',
           width: '70%' ,
           lineHeight: '1',
           justifyContent: 'space-around',
@@ -233,7 +243,7 @@ type PageProps = {
      
 
       <h4>  <Description style={descAnimation}>
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      <div className="raisedheader" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
         </Description></h4> 
         
      

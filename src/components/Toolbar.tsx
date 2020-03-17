@@ -10,7 +10,7 @@ import LogoLarge from './logoLarge'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import LogoSmall from './logoSmall'
 import GlobalStyles from '../styles/globalStyle'
-import Button from '@material-ui/core/Button';
+import Button from './CallButton';
 import theme from '../gatsby-plugin-theme-ui/index'
 import Grid from '@material-ui/core/Grid'
 import SimpleMenu from './SimpleMenu'
@@ -18,6 +18,7 @@ import PhoneNo from '../components/phoneNo'
 import PhoneIcon from '@material-ui/icons/Phone';
 import ToolbarStyle from '../styles/toolbarStyle'
 import palette from '../gatsby-plugin-theme-ui/palette'
+import ButtonBases from '../components/MenuButton'
 
 
 function ElevationScroll(props: Props) {
@@ -74,29 +75,25 @@ export default function ElevateAppBar(props: Props) {
         position="fixed">
         <Toolbar
         backgroundColor={palette.palette.primary.background}
-          position="fixed"
+        
           className={classes.drawer}
           variant="permanent"
           anchor="top"
-      
+          
          
          
                 alignItems="space-between"
               >
             
-        <Grid container position="relative"
+        <Grid container 
+        position="relative"
               justify="center"
           alignItems="center">  
 
          
         <Grid item xs={3}>
    
-                {/* <Button       
-                  variant="contained"
-                  color="default"
-                  className={classes.button}
-                  startIcon={<SimpleMenu/>}>
-                </Button>  */}
+         
                 <SimpleMenu/>
            </Grid>   
         
@@ -111,8 +108,8 @@ export default function ElevateAppBar(props: Props) {
         
             <a href={`tel:${<PhoneNo />}`} rel="nofollow">
               <Button       
-                    variant="contained"
-                    color={palette.palette.primary.active}
+                    variant="outlined"
+                    color="primary"
                     className={classes.button}
                     startIcon={<PhoneIcon alignItems="center" color={palette.palette.primary.active}/>}>
                   Call
@@ -121,10 +118,7 @@ export default function ElevateAppBar(props: Props) {
            
             </Grid>   
          <Divider />
-         {/* <Grid item xs={12}>
-           <NavigationBar />
-        </Grid>
-         */}
+
         </Grid>
         </Toolbar>
         </AppBar> 

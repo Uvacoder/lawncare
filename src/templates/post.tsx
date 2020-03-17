@@ -179,7 +179,7 @@ type PageProps = {
         style={{
           display: 'flex',
           height: '700px',
-          width: '70%' ,
+          width: '80%' ,
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',
@@ -204,14 +204,14 @@ type PageProps = {
       flexDirection: 'column',}}>
  <PageTitle   style={{
       display: 'flex',
-      width: '70%' ,
+      width: '80%' ,
       lineHeight: '1',
       justifyContent: 'space-around',
       alignItems: 'left',
       flexDirection: 'column',}}>
  <Container > 
 
- <h2 className="pageTitle"
+ <h4 className="pageTitle"
                      style={{
                      boxShadow: 'transparent',
                      borderRadius: '0px',
@@ -225,7 +225,7 @@ type PageProps = {
 <Category style={categoryAnimation} color={palette.palette.primary.text}> 
  <Lawns>lawns</Lawns> <Matter>matter</Matter>
  <br />
- <Title color={palette.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
+ <Title color={palette.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h4>
 </Container>
  </PageTitle>
    

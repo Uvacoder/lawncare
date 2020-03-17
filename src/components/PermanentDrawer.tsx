@@ -15,6 +15,7 @@ import HomeIcon from '@material-ui/icons/Home'
 import FolderIcon from '@material-ui/icons/Folder'
 import WorkIcon from '@material-ui/icons/Work'
 import StarIcon from '@material-ui/icons/Star'
+import InstagramIcon from '@material-ui/icons/Instagram'
 import GlobalStyles from '../styles/globalStyle'
 
 import Container from '@material-ui/core/Container';
@@ -148,6 +149,11 @@ export default function PermanentDrawerLeft(props) {
             <ListItem button >
               <ListItemIcon><FolderIcon /></ListItemIcon>
               <ListItemText >Portfolio</ListItemText>
+            </ListItem></Link>
+            <Link to="/instagram">
+            <ListItem button >
+              <ListItemIcon><InstagramIcon /></ListItemIcon>
+              <ListItemText >Instagram</ListItemText>
             </ListItem></Link>
             <Link to="/servicecatalog">
             <ListItem button >

@@ -35,6 +35,7 @@ const Area = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 50vw;
+  grid-row-start: 2;
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     grid-template-columns: 1fr;

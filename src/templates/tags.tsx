@@ -60,7 +60,7 @@ const PageTitle = styled(Container)`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-  'lawns matter'
+  'titlepart1 titlepart2'
   'title'   ;
   padding: 1rem ;
   background-color: ${theme.palette.primary.background};
@@ -74,16 +74,16 @@ const PageTitle = styled(Container)`
 ` 
 
 
-const Lawns = styled(GridItem)`
-  grid-area: lawns;
+const TitlePart1 = styled(GridItem)`
+  grid-area: titlepart1;
   color: ${theme.palette.primary.active}; 
   text-transform: lowercase;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
  `
 
-const Matter = styled(GridItem)`
-  grid-area: matter;
+const TitlePart2 = styled(GridItem)`
+  grid-area: titlepart2;
   color: ${theme.palette.primary.text}; 
   text-transform: lowercase;
   font-weight: 400;
@@ -153,7 +153,7 @@ export const HeaderPageTemplate = ({
       <div
         style={{
           display: 'flex',
-          height: '1000px',
+          height: '800px',
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',
@@ -175,9 +175,11 @@ export const HeaderPageTemplate = ({
         justifyContent: 'space-around',
         alignItems: 'left',
         flexDirection: 'column',}}>
-       <Container><Lawns>lawns</Lawns> <Matter>matter</Matter></Container>
+       <Container><TitlePart1>lawns</TitlePart1> 
+       <br />
+       <TitlePart2>matter</TitlePart2></Container>
 
- <h2>  <Title color={theme.palette.primary.active}>{heading}</Title></h2>
+<h4>  <Title color={theme.palette.primary.active}>{heading}</Title></h4>
         
           </PageTitle>
        

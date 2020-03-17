@@ -30,7 +30,7 @@ const NavBottom = styled(Flex)<{  color: theme.palette.primary.background }>`
     }
   menu {
     text-decoration: none;
-    color: ${props => readableColor(props.theme.palette.primary.background)};
+    color: ${props => readableColor(props.theme.palette.primary.text)};
     font-size: ${props => props.theme.fontSizes[3]};
     line-height: 2;
     align-content: center;
