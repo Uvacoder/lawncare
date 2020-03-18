@@ -4,8 +4,8 @@ menu: faqs
 slug: /faqs/howmuch
 title: How much does a treatment cost?
 featured: false
-featuredimage: /img/after1.jpg
-featuredimage_alt: Longford Park Project After photo
+featuredimage: /img/steve-smith-Zvvu4zRKijE-unsplash.jpg
+featuredimage_alt: Photo by Steve Smith on Unsplash
 rating: []
 tags:
   - faqs

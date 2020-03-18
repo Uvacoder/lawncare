@@ -10,13 +10,14 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import LogoLarge from './logoLarge'
 import Gappsapps from './gappsapps'
-import InfoIcon from '@material-ui/icons/Info'
-import HomeIcon from '@material-ui/icons/Home'
-import FolderIcon from '@material-ui/icons/Folder'
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import FolderOutlinedIcon from '@material-ui/icons/FolderOutlined';
 import WorkIcon from '@material-ui/icons/Work'
-import StarIcon from '@material-ui/icons/Star'
+import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
 import InstagramIcon from '@material-ui/icons/Instagram'
 import GlobalStyles from '../styles/globalStyle'
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
@@ -142,12 +143,12 @@ export default function PermanentDrawerLeft(props) {
     
         <Link to="/">
             <ListItem button >
-              <ListItemIcon><HomeIcon /></ListItemIcon>
+              <ListItemIcon><HomeOutlinedIcon /></ListItemIcon>
               <ListItemText>Home</ListItemText>
             </ListItem></Link>
             <Link to="/page">
             <ListItem button >
-              <ListItemIcon><FolderIcon /></ListItemIcon>
+              <ListItemIcon><FolderOutlinedIcon /></ListItemIcon>
               <ListItemText >Portfolio</ListItemText>
             </ListItem></Link>
             <Link to="/instagram">
@@ -157,18 +158,18 @@ export default function PermanentDrawerLeft(props) {
             </ListItem></Link>
             <Link to="/servicecatalog">
             <ListItem button >
-              <ListItemIcon><WorkIcon /></ListItemIcon>
+              <ListItemIcon><InfoOutlinedIcon /></ListItemIcon>
               <ListItemText>Service</ListItemText>
             </ListItem></Link>
             <Link to="/reviewindex">
             <ListItem button >
-              <ListItemIcon><StarIcon /></ListItemIcon>
+              <ListItemIcon><StarBorderOutlinedIcon /></ListItemIcon>
               <ListItemText>Reviews</ListItemText>
             </ListItem></Link>
             <Link to="/faqs">
             <ListItem button >
-              <ListItemIcon><InfoIcon /></ListItemIcon>
-              <ListItemText>Information</ListItemText>
+              <ListItemIcon><HelpOutlineIcon /></ListItemIcon>
+              <ListItemText>Questions?</ListItemText>
             </ListItem></Link> 
 
 

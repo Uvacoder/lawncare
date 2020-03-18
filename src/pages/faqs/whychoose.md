@@ -4,8 +4,8 @@ menu: faqs
 slug: /faqs/whychoose
 title: Why Choose Lawns Matter?
 featured: false
-featuredimage: /img/after1.jpg
-featuredimage_alt: Longford Park Project After photo
+featuredimage: /img/jon-tyson-hhq1Lxtuwd8-unsplash.jpg
+featuredimage_alt: Photo by Jon Tyson on Unsplash
 rating: []
 tags:
   - faqs
