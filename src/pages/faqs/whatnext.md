@@ -4,8 +4,8 @@ menu: faqs
 slug: /faqs/whatnext
 title: What do I do next?
 featured: false
-featuredimage: /img/after1.jpg
-featuredimage_alt: Longford Park Project After photo
+featuredimage: /img/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg
+featuredimage_alt: Photo by Javier Allegue Barros on Unsplash
 rating: []
 tags:
   - faqs
