@@ -18,9 +18,9 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Template Key", name: templateKey, widget: hidden, default: page }
-      - { label: Menu, required: false, name: menu, widget: select, options: ["/service", "/project", "/about"], default: "/project" }
-      - { label: menuRanking, required: true, name: menuRanking, widget: number, min: 1, step: 1, default: 100 }
-      - { label: siteRanking, required: true, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }
+      - { label: Menu, required: false, name: menu, widget: select, options: ["/faqs", "/service", "/project", "/about"], default: "/project" }
+      - { label: menuRanking, required: false, name: menuRanking, widget: number, min: 1, step: 1, default: 100 }
+      - { label: siteRanking, required: false, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }
       - { label: slug, name: slug, widget: string }
       - { label: title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
@@ -45,9 +45,26 @@ collections:
     fields:
       - { label: "Template Key", name: templateKey, widget: hidden, default: post }
       - { label: slug, name: slug, widget: string }
-      - { label: Menu, required: true, name: menu, widget: select, options: ["/service", "/project", "/about"], default: "/post" }
-      - { label: menuRanking, required: true, name: menuRanking, widget: number, min: 1, step: 1, default: 100 }
-      - { label: siteRanking, required: true, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }
+      - { label: Menu, required: false, name: menu, widget: select, options: ["/faqs", "/service", "/project", "/about"], default: "/post" }
+      - { label: menuRanking, required: false, name: menuRanking, widget: number, min: 1, step: 1, default: 100 }
+      - { label: siteRanking, required: false, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }
+      - { label: title, name: title, widget: string }
+      - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: featuredImage, required: false, name: featuredimage, widget: image }
+      - { label: "Featured image alt", required: false, name: featuredimage_alt, widget: string }
+      - { label: Tags, required: false, name: tags, widget: list }
+      - { label: locationName, required: false, name: locationName, widget: string }
+  - name: faqs
+    label: faqs
+    folder: src/pages/faqs
+    create: true
+    slug: "{{slug }}"
+    fields:
+      - { label: "Template Key", name: templateKey, widget: hidden, default: faqs }
+      - { label: slug, name: slug, widget: string }
+      - { label: Menu, required: false, name: menu, widget: select, options: ["/faqs", "/service", "/project", "/about"], default: "/faqs" }
+      - { label: menuRanking, required: false, name: menuRanking, widget: number, min: 1, step: 1, default: 100 }
+      - { label: siteRanking, required: false, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }
       - { label: title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
@@ -63,7 +80,7 @@ collections:
         slug: "{{slug}}"
         fields:
           - { label: "Template Key", name: templateKey, widget: hidden, default: areaserved }
-          - { label: siteRanking, required: true, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }          
+          - { label: siteRanking, required: false, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }          
           - { label: hasmap, required: false, name: hasmap, widget: boolean}
           - { label: slug, name: slug, widget: string, default: areaserved  }
           - { label: title, required: false, name: title, widget: string }
