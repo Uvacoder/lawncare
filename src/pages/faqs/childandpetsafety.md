@@ -4,8 +4,8 @@ menu: faqs
 slug: /faqs/childandpetsafety
 title: Will the lawn be safe for children and pets?
 featured: false
-featuredimage: /img/after1.jpg
-featuredimage_alt: Longford Park Project After photo
+featuredimage: /img/treddy-chen-UdQWvefOXJk-unsplash.jpg
+featuredimage_alt: Photo by Treddy Chen on Unsplash
 rating: []
 tags:
   - faqs

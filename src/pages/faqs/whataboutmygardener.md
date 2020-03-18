@@ -4,8 +4,8 @@ menu: faqs
 slug: /faqs/whataboutmygardener
 title:  What if I already have a gardener?
 featured: false
-featuredimage: /img/after1.jpg
-featuredimage_alt: Longford Park Project After photo
+featuredimage: /img/mohammad-saemian-riYppYjeltk-unsplash.jpg
+featuredimage_alt: Photo by mohammad saemian on Unsplash
 rating: []
 tags:
   - faqs

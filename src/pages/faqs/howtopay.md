@@ -4,8 +4,8 @@ menu: faqs
 slug: /faqs/whychoose
 title:  How should I pay?
 featured: false
-featuredimage: /img/after1.jpg
-featuredimage_alt: Longford Park Project After photo
+featuredimage: /img/colin-watts-8WRRJ4xJeyg-unsplash.jpg
+featuredimage_alt: Photo by Colin Watts Muller on Unsplash
 rating: []
 tags:
   - faqs

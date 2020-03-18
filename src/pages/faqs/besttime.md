@@ -4,8 +4,8 @@ menu: faqs
 slug: /faqs/besttime
 title:   When is the best time to start?
 featured: false
-featuredimage: /img/after1.jpg
-featuredimage_alt: Longford Park Project After photo
+featuredimage: /img/aron-visuals-BXOXnQ26B7o-unsplash.jpg
+featuredimage_alt: Photo by Aron Visuals on Unsplash
 rating: []
 tags:
   - faqs

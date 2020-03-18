@@ -4,8 +4,8 @@ menu: faqs
 slug: /faqs/doineedtobein
 title:  Do I need to be in when the lawn is being treated?
 featured: false
-featuredimage: /img/after1.jpg
-featuredimage_alt: Longford Park Project After photo
+featuredimage: /img/marina-de-salis-UozvGeM-_Ko-unsplash.jpg
+featuredimage_alt: Photo by Marina De Salis on Unsplash
 rating: []
 tags:
   - faqs

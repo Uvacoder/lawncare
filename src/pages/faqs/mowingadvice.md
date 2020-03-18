@@ -4,8 +4,8 @@ menu: faqs
 slug: /faqs/mowingadvice
 title: How should I mow the lawn?
 featured: false
-featuredimage: /img/after1.jpg
-featuredimage_alt: Longford Park Project After photo
+featuredimage: /img/remi-muller-LlHgaeBwYVE-unsplash.jpg
+featuredimage_alt: Photo by Remi Muller on Unsplash
 rating: []
 tags:
   - faqs

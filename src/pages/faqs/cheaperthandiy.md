@@ -4,8 +4,8 @@ menu: faqs
 slug: /faqs/cheaperthandiy
 title: Is your service cheaper than DIY?
 featured: false
-featuredimage: /img/after1.jpg
-featuredimage_alt: Longford Park Project After photo
+featuredimage: /img/eugen-str-CrhsIRY3JWY-unsplash.jpg
+featuredimage_alt: Photo by Eugen Str on Unsplash
 rating: []
 tags:
   - faqs

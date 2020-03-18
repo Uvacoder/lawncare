@@ -45,24 +45,24 @@ class FAQIndex extends React.Component {
   render() {
 
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { edges: faqs } = data.allMarkdownRemark
 
     return (
 
-      <Layout color={theme.palette.primary.background}>
-        <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
+    
+   
         <Area>
-        {posts &&
-          posts.map(({ node: post }) => (
+        {faqs &&
+          faqs.map(({ node: faqs }) => (
 
-         <GridItem key={post.frontmatter.slug} to={post.frontmatter.slug} aria-label={`View our lastest news "${post.frontmatter.title}"`}>
-                        <Img fluid={post.frontmatter.featuredimage.childImageSharp.fluid} />
-            <span>{post.frontmatter.title}</span>
+         <GridItem key={faqs.frontmatter.slug} to={faqs.frontmatter.slug} aria-label={`View our lastest news "${faqs.frontmatter.title}"`}>
+                        <Img fluid={faqs.frontmatter.featuredimage.childImageSharp.fluid} />
+            <span>{faqs.frontmatter.title}</span>
           </GridItem>
          
           ))}
       </Area>
-      </Layout>
+      
     )
   }
 }

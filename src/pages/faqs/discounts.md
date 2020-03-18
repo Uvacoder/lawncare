@@ -4,8 +4,8 @@ menu: faqs
 slug: /faqs/discounts
 title: Do you offer a loyalty discount scheme?
 featured: false
-featuredimage: /img/after1.jpg
-featuredimage_alt: Longford Park Project After photo
+featuredimage: /img/jj-ying-UcI5OAPD820-unsplash.jpg
+featuredimage_alt: Photo by JJ Ying on Unsplash
 rating: []
 tags:
   - faqs
