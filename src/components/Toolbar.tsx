@@ -39,8 +39,7 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: palette.palette.primary.background,
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: 'center',
-      alignContent: 'center',
+
     },
     ListItemText: {
       color: palette.palette.primary.text,
