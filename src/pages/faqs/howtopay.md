@@ -1,7 +1,7 @@
 ---
 templateKey: faqs
 menu: faqs
-slug: /faqs/whychoose
+slug: /faqs/howtopay
 title:  How should I pay?
 featured: false
 featuredimage: /img/colin-watts-8WRRJ4xJeyg-unsplash.jpg
