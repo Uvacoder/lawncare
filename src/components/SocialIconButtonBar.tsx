@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
     iconButtonBar: {
       display: 'flex',
       flexDirection: 'row',
-      padding: '4rem 0',
+      // padding: '4rem 0',
       justifyContent: 'center',
     },}
 ));

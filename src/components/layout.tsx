@@ -57,7 +57,8 @@ const Layout = ({ children, color }: LayoutProps) => {
 
         <Hidden mdUp>
         <ToolbarTop  bg={color} />
-    
+        <Container fixed style={{ backgroundColor: '#cfe8fc', height: '18vh' }} />
+      
         </Hidden>
         <Hidden smDown>
         <SideBarInner bg={color} as="aside" p={[6, 6, 8]}>

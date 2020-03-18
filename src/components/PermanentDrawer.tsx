@@ -18,6 +18,7 @@ import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
 import InstagramIcon from '@material-ui/icons/Instagram'
 import GlobalStyles from '../styles/globalStyle'
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
 
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
@@ -66,7 +67,7 @@ const useStyles = makeStyles((theme: Theme) =>
     drawer: {
       display: 'flex',
       width: drawerWidth,
-      flexShrink: 0,
+      flexShrink: 1,
       [theme.breakpoints.up('sm')]: {
       },
     },
@@ -78,16 +79,15 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     drawerHeader: {
       flexGrow: 3,
-      width:  drawerWidth,
       display: 'flex',
       alignItems: 'center',
-      padding: 0,
+      padding: 1,
        ...theme.mixins.toolbar,
       justifyContent: 'center',
     },
     content: {
-      flexGrow: 5,
-      width:  drawerWidth,
+      flexGrow: 4,
+      width:  drawerContentsWidth,
       color: palette.palette.primary.main,
       padding: theme.spacing(2),
       },
@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
       width:  drawerContentsWidth,
       color: palette.palette.primary.main,
-      padding: theme.spacing(2),
+     // padding: theme.spacing(2),
     
     },
     gappsappsLogo: {
@@ -146,20 +146,10 @@ export default function PermanentDrawerLeft(props) {
               <ListItemIcon><HomeOutlinedIcon /></ListItemIcon>
               <ListItemText>Home</ListItemText>
             </ListItem></Link>
-            <Link to="/page">
-            <ListItem button >
-              <ListItemIcon><FolderOutlinedIcon /></ListItemIcon>
-              <ListItemText >Portfolio</ListItemText>
-            </ListItem></Link>
-            <Link to="/instagram">
-            <ListItem button >
-              <ListItemIcon><InstagramIcon /></ListItemIcon>
-              <ListItemText >Instagram</ListItemText>
-            </ListItem></Link>
             <Link to="/servicecatalog">
             <ListItem button >
               <ListItemIcon><InfoOutlinedIcon /></ListItemIcon>
-              <ListItemText>Service</ListItemText>
+              <ListItemText>Our Service</ListItemText>
             </ListItem></Link>
             <Link to="/reviewindex">
             <ListItem button >
@@ -171,9 +161,22 @@ export default function PermanentDrawerLeft(props) {
               <ListItemIcon><HelpOutlineIcon /></ListItemIcon>
               <ListItemText>Questions?</ListItemText>
             </ListItem></Link> 
+            <Link to="/page">
+            <ListItem button >
+              <ListItemIcon><FolderOutlinedIcon /></ListItemIcon>
+              <ListItemText >Our Portfolio</ListItemText>
+            </ListItem></Link>
+            <Link to="/instagram">
+            <ListItem button >
+              <ListItemIcon><InstagramIcon /></ListItemIcon>
+              <ListItemText >Instagram</ListItemText>
+            </ListItem></Link>
+            <Link to="/contactus">
+            <ListItem button >
+              <ListItemIcon><ContactMailIcon /></ListItemIcon>
+              <ListItemText >Contact Us</ListItemText>
+            </ListItem></Link>
 
-
-    
             <Divider />
 
         </List>

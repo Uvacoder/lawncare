@@ -207,9 +207,9 @@ export const IndexPageTemplate = ({
 
                 <div className="columns">
                   <div >
-                    <Link className="btn" to="/products">
+                    {/* <Link className="btn" to="/products">
                       See all products
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
                 <div className="column is-12">

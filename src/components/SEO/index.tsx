@@ -15,10 +15,10 @@ const defaultProps = {
     modifiedTime: '',
     birthTime: '',
   },
-  individual: false,
+  organization: false,
 }
 
-const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
+const SEO = ({ title, desc, banner, pathname, node, organization }: Props) => {
   const { site } = useStaticQuery(query)
 
   const {
@@ -62,20 +62,20 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
     description: defaultDescription,
     name: defaultTitle,
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       name: author,
     },
     copyrightHolder: {
-      '@type': 'Person',
+      '@type': 'Organization',
       name: author,
     },
-    copyrightYear: '2019',
+    copyrightYear: '2020',
     creator: {
-      '@type': 'Person',
+      '@type': 'Organisation',
       name: author,
     },
     publisher: {
-      '@type': 'Person',
+      '@type': 'Organization',
       name: author,
     },
     datePublished: '2019-03-10T10:30:00+01:00',
@@ -93,25 +93,41 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'ListItem',
       item: {
         '@id': siteUrl,
-        name: 'Homepage',
+        name: 'Home',
       },
       position: 1,
     },
     {
       '@type': 'ListItem',
       item: {
-        '@id': `${siteUrl}/about`,
-        name: 'About',
+        '@id': `${siteUrl}/servicecatalog`,
+        name: 'Our Service',
       },
       position: 2,
     },
     {
       '@type': 'ListItem',
       item: {
-        '@id': `${siteUrl}/projects`,
-        name: 'Projects',
+        '@id': `${siteUrl}/reviewindex`,
+        name: 'Reviews',
       },
       position: 3,
+    },
+    {
+      '@type': 'ListItem',
+      item: {
+        '@id': `${siteUrl}/faqs`,
+        name: 'Questions?',
+      },
+      position: 4,
+    },
+    {
+      '@type': 'ListItem',
+      item: {
+        '@id': `${siteUrl}/page`,
+        name: 'Portfolio',
+      },
+      position: 5,
     },
     {
       '@type': 'ListItem',
@@ -119,27 +135,38 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         '@id': `${siteUrl}/instagram`,
         name: 'Instagram',
       },
-      position: 4,
+      position: 6,
     },
+    {
+      '@type': 'ListItem',
+      item: {
+        '@id': `${siteUrl}/contactus`,
+        name: 'Contact Us',
+      },
+      position: 7,
+    },
+
+
+
   ]
 
   let schemaArticle = null
 
-  if (individual) {
+  if (organization) {
     schemaArticle = {
       '@context': 'http://schema.org',
       '@type': 'Article',
       author: {
-        '@type': 'Person',
+        '@type': 'Organization',
         name: author,
       },
       copyrightHolder: {
-        '@type': 'Person',
+        '@type': 'Organization',
         name: author,
       },
       copyrightYear: '2019',
       creator: {
-        '@type': 'Person',
+        '@type': 'Organization',
         name: author,
       },
       publisher: {
@@ -192,17 +219,16 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         <html lang={siteLanguage} />
         <meta name="description" content={seo.description} />
         <meta name="image" content={seo.image} />
-        <meta name="gatsby-starter" content="Gatsby Starter gappsapps.co.uk" />
         {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
-        {!individual && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
-        {individual && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
+        {!organization && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
+        {organization && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
         <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
       </Helmet>
       <Facebook
         desc={seo.description}
         image={seo.image}
         title={seo.title}
-        type={individual ? 'article' : 'website'}
+        type={organization ? 'article' : 'website'}
         url={seo.url}
         locale={ogLanguage}
         name={facebook}

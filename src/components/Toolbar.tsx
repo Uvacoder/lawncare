@@ -19,6 +19,8 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import ToolbarStyle from '../styles/toolbarStyle'
 import palette from '../gatsby-plugin-theme-ui/palette'
 import ButtonBases from '../components/MenuButton'
+import Box from '@material-ui/core/Box';
+import CallButton from '../components/CallButton'
 
 
 function ElevationScroll(props: Props) {
@@ -88,13 +90,17 @@ export default function ElevateAppBar(props: Props) {
         <Grid container 
         position="relative"
               justify="center"
-          alignItems="center">  
+          alignItems="flex-end">  
 
          
-        <Grid item xs={3}>
-   
+        <Grid item xs={3}
+             display="flex"
+             alignItems="flex-end"
+         
+        >
          
                 <SimpleMenu/>
+           
            </Grid>   
         
           <Grid item xs={6}>
@@ -107,15 +113,9 @@ export default function ElevateAppBar(props: Props) {
             <Grid item xs={3} >
         
             <a href={`tel:${<PhoneNo />}`} rel="nofollow">
-              <Button       
-                    variant="outlined"
-                    color="primary"
-                    className={classes.button}
-                    startIcon={<PhoneIcon alignItems="center" color={palette.palette.primary.active}/>}>
-                  Call
-                </Button> 
+
+             <CallButton />
                </a>
-           
             </Grid>   
          <Divider />
 
