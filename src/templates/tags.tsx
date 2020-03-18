@@ -302,7 +302,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    markdownRemark(frontmatter: {templateKey: {eq: "tags"}, menu: {eq: "about"}}) {
+    markdownRemark(frontmatter: {templateKey: {eq: "tags"}}) {
       id
       html
       frontmatter {

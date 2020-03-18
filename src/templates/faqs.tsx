@@ -61,7 +61,6 @@ const RaisedHeader = styled(Container)`
 `
 
 
-
 const PageTitle = styled(Container)`
   display: grid;
   grid-template-columns: 1fr;
@@ -97,7 +96,6 @@ const TitlePart2 = styled(GridItem)`
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
  `
-
 const HorizontalImg = styled(Img)`
   grid-area: logo;
 
@@ -144,7 +142,7 @@ type PageProps = {
   }
 
 
-  const BlogPage = ({ data }) => {
+  const FAQPage = ({ data }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -255,10 +253,10 @@ type PageProps = {
 }
 
 
-export default BlogPage
+export default FAQPage
 
 export const query = graphql`
-query BlogPage ($id: String!) {
+query FAQPage ($id: String!) {
    markdownRemark(id: { eq: $id }) {
    excerpt(pruneLength: 400)
     html
