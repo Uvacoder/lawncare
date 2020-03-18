@@ -223,7 +223,7 @@ let theme = createMuiTheme({
 			fontSize: '0.875rem',
 			lineHeight: '1.75',
 			letterSpacing: '0.02857em',
-			textTransform: 'uppercase' ,
+			textTransform: 'none' ,
 		},
 			caption: {
 			fontFamily: 'Open Sans, sans-serif',
@@ -238,7 +238,7 @@ let theme = createMuiTheme({
 			fontSize: '0.75rem',
 			lineHeight: '2.66',
 			letterSpacing: '0.08333em',
-			textTransform: 'uppercase',
+			textTransform: 'none',
 			},
 		},
 			},

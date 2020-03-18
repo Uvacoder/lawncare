@@ -41,7 +41,7 @@ const Content = styled(Box)<{ bg: string }>`
 const Category = styled(AnimatedBox)`
   letter-spacing: 0.05em;
   font-size: ${props => props.theme.fontSizes[1]};
-  text-transform: uppercase;
+  text-transform: none;
 `
 const RaisedHeader = styled(Container)`
   padding: 30px 0;
@@ -105,7 +105,7 @@ const HorizontalImg = styled(Img)`
 const Title = styled(GridItem)`
   grid-area: title;
   color: ${palette.palette.primary.active}; 
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: 400;
   color: ${palette.palette.primary.text}; 
   font-size: ${props => props.theme.fontSizes[1]};

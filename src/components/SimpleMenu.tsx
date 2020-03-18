@@ -45,7 +45,7 @@ export default function SimpleMenu() {
      <CssBaseline />
       <GlobalStyles />
       <Nav>
-     <MenuItem> <Button variant="outlined" size="large" uppercase="false" className={classes.button} aria-controls="simple-menu" aria-haspopup="true"  padding="1rem" onClick={handleClick} > 
+     <MenuItem> <Button variant="outlined" size="large" none="false" className={classes.button} aria-controls="simple-menu" aria-haspopup="true"  padding="1rem" onClick={handleClick} > 
      Menu
       </Button></MenuItem>
       <Menu

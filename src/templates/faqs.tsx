@@ -41,7 +41,7 @@ const Content = styled(Box)<{ bg: string }>`
 const Category = styled(AnimatedBox)`
   letter-spacing: 0.05em;
   font-size: ${props => props.theme.fontSizes[1]};
-  text-transform: uppercase;
+  text-transform: none;
 `
 const RaisedHeader = styled(Container)`
   padding: 30px 0;
