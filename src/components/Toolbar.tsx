@@ -95,6 +95,7 @@ export default function ElevateAppBar(props: Props) {
         <Grid item xs={3}
              display="flex"
              alignItems="flex-end"
+             justify="center"
          
         >
          
