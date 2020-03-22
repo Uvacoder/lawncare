@@ -3,6 +3,7 @@ templateKey: review
 menu: review
 slug: /review/lindawinters
 title: Linda Winters
+location: Bodicote
 featured: true
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 featuredimage_alt: Photo by Sharon Mccutcheon on Unsplash

@@ -12,4 +12,4 @@ tags:
 ---
 
 
-Treatment costs vary depending on the size of the lawn. Our basic service costs from as little as £14 per treatment, but why not let us give you a free no obligation quote for your lawn.
+The cost of Lawn Care services vary depending on the size of the lawn and the treatments that are required. We can provide the best treatments available at a rate that is so competitive that you couldn't DIY for a similar price. So don't waste your own time and your money, get in touch for a free no obligation quote for your lawn.

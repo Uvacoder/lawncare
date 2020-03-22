@@ -18,7 +18,7 @@ import Layout from '../components/layout'
 import { Box, AnimatedBox} from '../elements'
 import SEO from '../components/SEO'
 import theme from '../gatsby-plugin-theme-ui/index'
-import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
@@ -29,13 +29,17 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FilledInput from '@material-ui/core/FilledInput';
 import TextField, { TextFieldProps } from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
+import Button from '@material-ui/core/Button';
 
 
 
 const TextInputField = styled(TextField)`
   variant: outlined;
 `
-
+const SendMessageButton = styled(Button)`
+  variant: outlined;  
+  color: primary;
+`
 
 
 const InputField = withStyles({
@@ -312,13 +316,13 @@ type PageProps = {
    </FormControl>
 
 
-
+   <SendMessageButton variant="outlined">Send Message</SendMessageButton>
 
              {/* <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea> */}
    
-             <ul className="actions">
+             {/* <ul className="actions">
                <input type="submit" value="Send Message" className="primary" />
-             </ul>
+             </ul> */}
        
      </Segment>
    </Form>
