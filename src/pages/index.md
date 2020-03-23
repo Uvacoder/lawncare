@@ -1,6 +1,7 @@
 ---
 templateKey: index-page
 slug: /
+menu: index
 title: Lawns Matter
 image: /img/whyus.jpg
 heading: Service in Oxfordshire

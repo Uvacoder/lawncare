@@ -11,6 +11,7 @@ import { ChildImageSharp } from '../types'
 // import { useColorMode } from 'theme-ui'
 // import theme from '../../config/theme'
 import theme from '../gatsby-plugin-theme-ui/index'
+import SiteInfo from './SiteInfo'
 
 type PageProps = {
     data: {
@@ -21,17 +22,29 @@ type PageProps = {
             id: string
             frontmatter: {
               title: string
+              location: string
               slug: string
               templateKey: string
               featured: boolean
-              featuredimage: ChildImageSharp
-              }[]
           }
+        }
+      }
+      site: {
+        siteMetadata: {
+          aggregateRating: {
+            ratingCount: string
+            ratingValue: string
+            reviewCount: string
+            itemReviewed: string
+            type: string
+          }
+          title: string
+          siteUrl: string
         }
       }
     }
   }
-  
+}
   const Area = styled(animated.div)`
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -51,14 +64,13 @@ type PageProps = {
       return (
   
         <Layout color={theme.palette.primary.main}>
-          <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
+          <SEO title={data.site.siteMetadata.title}/>
           <Area>
           {reviews &&
             reviews.map(({ node: review }) => (
   
-           <GridItem key={review.frontmatter.slug} to={review.frontmatter.slug} aria-label={`View review "${review.frontmatter.title}"`}>
-                          <Img fluid={review.frontmatter.featuredimage.childImageSharp.fluid} />
-              <span>{review.frontmatter.title}</span>
+           <GridItem key={review.frontmatter.slug} to={review.frontmatter.slug} aria-label={`View review "${review.frontmatter.title}"`}>              
+              <span>{review.frontmatter.title} {review.frontmatter.loction}</span>
             </GridItem>
            
             ))}
@@ -73,7 +85,7 @@ type PageProps = {
     <StaticQuery
       query={graphql`
       query ReviewIndexQuery {
-        allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "review"}, menu: {eq: "review"}}}, sort: {order: ASC, fields: id}) {
+        allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "review"}}}, sort: {order: ASC, fields: id}) {
           edges {
             node {
               excerpt(pruneLength: 400)
@@ -81,22 +93,29 @@ type PageProps = {
               frontmatter {
                 slug
                 title
+                location
                 templateKey
                 menu
                 featured
-                featuredimage {
-                  id
-                  childImageSharp {
-                    fluid(quality: 95, maxWidth: 1200) {
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
-                  }
-                }
               }
             }
           }
         }
+        site {
+          siteMetadata {
+            aggregateRating {
+              ratingCount
+              ratingValue
+              reviewCount
+              itemReviewed
+              type
+            }
+            title
+            siteUrl
+          }
+        }
       }
+      
       
       `}
       render={(data, count) => <ReviewIndex data={data} count={count} />}

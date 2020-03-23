@@ -1,5 +1,5 @@
 ---
-templateKey: review
+templateKey: post
 menu: review
 slug: /review/eelkedegroot
 title: Eelke de Groot

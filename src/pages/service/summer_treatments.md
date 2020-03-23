@@ -1,15 +1,16 @@
 ---
 templateKey: page
-menu: service
+menu: treatment
 menuRanking: 50
 siteRanking: 50
-slug: /service/summer_treatments
+slug: /treatment/summer_treatments
 title: Summer Treatments
 featured: true
 featuredimage: /img/johnny-mcclung-XZWH2LSGYVw-unsplash.jpg
 featuredimage_alt: Photo by David Kaloczi on Unsplash
 tags:
   - service
+  - treatment
 ---
 
 * **Summer (May to August)**\

@@ -1,15 +1,16 @@
 ---
 templateKey: page
-menu: service
+menu: treatment
 menuRanking: 50
 siteRanking: 50
-slug: /service/autumn_treatments
+slug: /treatment/autumn_treatments
 title: Autumn Treatments
 featured: true
 featuredimage: /img/johannes-plenio-pY0LOiwK9Sc-unsplash.jpg
 featuredimage_alt: Photo by David Kaloczi on Unsplash
 tags:
   - service
+  - treatment
 ---
 
 * **Autumn (September to December)**

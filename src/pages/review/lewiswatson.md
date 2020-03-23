@@ -1,5 +1,5 @@
 ---
-templateKey: review
+templateKey: post
 menu: review
 slug: /review/lewiswatson
 title: Lewis Watson
