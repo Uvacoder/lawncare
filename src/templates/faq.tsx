@@ -15,7 +15,6 @@ import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
-import HorizontalLogo from '../components/horizontalLogo'
 import ImageCarousel from '../components/imageCarousel'
 
 
@@ -60,14 +59,12 @@ const RaisedHeader = styled(Container)`
   transition: all 300ms linear ; 
 `
 
-
-
 const PageTitle = styled(Container)`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-  'titlepart1 titlepart2'
+  'TitlePart1 titlepart2'
   'title'   ;
   padding: 1rem ;
   background-color: ${palette.palette.primary.background};
@@ -144,7 +141,7 @@ type PageProps = {
   }
 
 
-  const BlogPage = ({ data }) => {
+  const FaqPage = ({ data }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -181,7 +178,7 @@ type PageProps = {
         style={{
           display: 'flex',
           height: '700px',
-          width: '80%' ,
+          width: '70%' ,
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',
@@ -206,14 +203,14 @@ type PageProps = {
       flexDirection: 'column',}}>
  <PageTitle   style={{
       display: 'flex',
-      width: '80%' ,
+      width: '70%' ,
       lineHeight: '1',
       justifyContent: 'space-around',
       alignItems: 'left',
       flexDirection: 'column',}}>
  <Container > 
 
- <h3 className="pageTitle"
+ <h2 className="pageTitle"
                      style={{
                      boxShadow: 'transparent',
                      borderRadius: '0px',
@@ -225,9 +222,9 @@ type PageProps = {
                  }}>
 
 <Category style={categoryAnimation} color={palette.palette.primary.text}> 
-{/* <TitlePart1>lawns</TitlePart1> <TitlePart2>matter</TitlePart2>
+ {/* <TitlePart1>customer</TitlePart1> <TitlePart2>Faq</TitlePart2>
  <br /> */}
- <Title color={palette.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h3>
+ <Title color={palette.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
 </Container>
  </PageTitle>
    
@@ -255,10 +252,10 @@ type PageProps = {
 }
 
 
-export default BlogPage
+export default FaqPage
 
 export const query = graphql`
-query BlogPage ($id: String!) {
+query FaqPage ($id: String!) {
    markdownRemark(id: { eq: $id }) {
    excerpt(pruneLength: 400)
     html

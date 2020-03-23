@@ -19,4 +19,4 @@ recommendation_type_positive: true
 ---
 "Fabulous attentive and knowledgeable service. My lawn has never looked better."
 
-5 Star Rating
+![](./5starrating.png)

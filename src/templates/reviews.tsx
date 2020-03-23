@@ -153,7 +153,7 @@ export const ReviewsPageTemplate = ({
       <div
         style={{
           display: 'flex',
-          height: '1000px',
+          height: '500px',
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',

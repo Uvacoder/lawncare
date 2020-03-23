@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import Layout from './layout'
-import GridItem from './grid-item'
+import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import theme from '../gatsby-plugin-theme-ui/index'
@@ -56,10 +56,10 @@ class ServiceCatalog extends React.Component {
         {pages &&
           pages.map(({ node: page }) => (
 
-         <GridItem key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
+         <GridLink key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
                         <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
             <span>{page.frontmatter.title}</span>
-          </GridItem>
+          </GridLink>
          
           ))}
       </Area>

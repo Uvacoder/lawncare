@@ -1,14 +1,14 @@
 ---
-templateKey: faqs
-menu: faqs
-slug: /faqs/howmuch
+templateKey: faq
+menu: faq
+slug: /faq/howmuch
 title: How much does a treatment cost?
 featured: false
 featuredimage: /img/steve-smith-Zvvu4zRKijE-unsplash.jpg
 featuredimage_alt: Photo by Steve Smith on Unsplash
 rating: []
 tags:
-  - faqs
+  - faq
 ---
 
 

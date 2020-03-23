@@ -1,26 +1,25 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
+import Features from '../components/Features'
+import Spotlight from '../components/spotlight'
+import FAQIndex from '../components/FAQIndex'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
-import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-plugin-theme-ui/index'
-import palette from '../gatsby-plugin-theme-ui/palette'
-import { Box, AnimatedBox } from '../elements'
+import { Box, Flex, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
-import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
-import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
-import HorizontalLogo from '../components/horizontalLogo'
-import ImageCarousel from '../components/imageCarousel'
+import GlobalStyles from '../styles/globalStyle'
 
 
 const PBox = styled(AnimatedBox)`
-  
   margin: 30 auto;
 `
 
@@ -28,6 +27,7 @@ const PBox = styled(AnimatedBox)`
 
 const Content = styled(Box)<{ bg: string }>`
   background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
+  
 
   .gatsby-image-wrapper:not(:last-child) {
     margin-bottom: ${props => props.theme.space[10]};
@@ -38,28 +38,22 @@ const Content = styled(Box)<{ bg: string }>`
   }
 `
 
-const Category = styled(AnimatedBox)`
-  letter-spacing: 0.05em;
-  font-size: ${props => props.theme.fontSizes[1]};
-  text-transform: none;
-`
+
 const RaisedHeader = styled(Container)`
-  padding: 30px 0;
-  margin: -200px 10px 140px 10px;
+  margin: -300px 10px 140px 10px;
   //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
   box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
   border-radius: 12px;
   z-index: 3;
   position: relative;
-  background-color: ${palette.palette.primary.text};
-  color: ${palette.palette.primary.background};
+  background-color: ${theme.palette.primary.text};
+  color: ${theme.palette.primary.background};
   display: flex
   flexDirection: column
   minWidth: 0;
   wordWrap: break-word;
   transition: all 300ms linear ; 
 `
-
 
 const PageTitle = styled(Container)`
   display: grid;
@@ -69,7 +63,7 @@ const PageTitle = styled(Container)`
   'titlepart1 titlepart2'
   'title'   ;
   padding: 1rem ;
-  background-color: ${palette.palette.primary.background};
+  background-color: ${theme.palette.primary.background};
   text-align: center;
   margin: -80px 25% 20px 25%;
   box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
@@ -77,13 +71,12 @@ const PageTitle = styled(Container)`
     marginLeft: "0px",
     marginRight: "0px"
   },
-
-
-
 ` 
+
+
 const TitlePart1 = styled(GridItem)`
   grid-area: titlepart1;
-  color: ${palette.palette.primary.active}; 
+  color: ${theme.palette.primary.active}; 
   text-transform: lowercase;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
@@ -91,32 +84,33 @@ const TitlePart1 = styled(GridItem)`
 
 const TitlePart2 = styled(GridItem)`
   grid-area: titlepart2;
-  color: ${palette.palette.primary.text}; 
+  color: ${theme.palette.primary.text}; 
   text-transform: lowercase;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
  `
+
 const HorizontalImg = styled(Img)`
   grid-area: logo;
 
 `
 const Title = styled(GridItem)`
   grid-area: title;
-  color: ${palette.palette.primary.active}; 
-  text-transform: none;
+  color: ${theme.palette.primary.active}; 
+  text-transform: lowercase;
   font-weight: 400;
-  color: ${palette.palette.primary.text}; 
+  color: ${theme.palette.primary.text}; 
   font-size: ${props => props.theme.fontSizes[1]};
 
 `
 
-
 const Description = styled(animated.div)`
-  max-width: 960px;
+  
   letter-spacing: -0.003em;
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
   line-height: 1.58;
+  margin: 30px;
 `
 
 const PButton = styled(Button)<{ color: string }>`
@@ -124,160 +118,197 @@ const PButton = styled(Button)<{ color: string }>`
   color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
 `
 
-type PageProps = {
-  data: {
-        id: string
-        excerpt: string
-        html: markdown
-        frontmatter: {
-          title: string
-          templateKey: string
-          featured: boolean
-          slug: string
-          featuredimage_alt: string
-          tags: string
-          featuredimage: ChildImageSharp
-          }
-        }
+const Area = styled(animated.div)`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 50vw;
+
+  @media (max-width: ${props => props.theme.breakpoints[2]}) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 60vw;
   }
+`
 
-
-  const FAQPage = ({ data }) => {
-  const categoryAnimation = useSpring({
-    config: config.slow,
-    from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
-    to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
-  })
-  const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
-  const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
-  const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
-  const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
-  return (
-    <div>
-    <Layout color={theme.palette.primary.main}>
-      <SEO
-        pathname={data.markdownRemark.frontmatter.slug}
-        title={`${data.markdownRemark.frontmatter.title} | lawnsmatter.co.uk`}
-        desc={data.markdownRemark.excerpt}
-        node={data.markdownRemark.frontmatter.slug}
-        banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
-        individual
-      />
-      <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
-      <Content bg={theme.palette.primary.main} py={10}>
-      <BackgroundImage
- 
-        fluid={imageData}
-        style={{
-        backgroundAttachment: 'fixed',     
-        backgroundPosition: 'center',
+export const FaqsPageTemplate = ({
+  featuredimage,
+  title,
+  heading,
+  slug,
+  html,
+}) => (
+  <div>
+    <GlobalStyles />
+    
+    <div
+      className="full-width-image margin-top-0"
+      style={{
+        backgroundImage: `url(${
+          !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage
+        })`,
+        backgroundPosition: `center`,
+        backgroundAttachment: `fixed`,
         backgroundSize: 'cover',
-        }}
-        // backgroundSize="cover"          
-        >   
-      <Container
+      }}
+    >
+      <div
         style={{
           display: 'flex',
-          height: '700px',
-          width: '80%' ,
+          height: '500px',
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',
           flexDirection: 'column',
         }}
-      >
-        </Container>  
-        </BackgroundImage>
-
-
-
-        <Container>
- 
- <Container>
+      />
 
  <RaisedHeader    style={{
-      display: 'flex',
-      width: '90%' ,
-      lineHeight: '1',
-      justifyContent: 'space-around',
-      alignItems: 'left',
-      flexDirection: 'column',}}>
- <PageTitle   style={{
-      display: 'flex',
-      width: '80%' ,
-      lineHeight: '1',
-      justifyContent: 'space-around',
-      alignItems: 'left',
-      flexDirection: 'column',}}>
- <Container > 
+        display: 'flex',
+        width: '90%' ,
+        lineHeight: '1',
+        justifyContent: 'space-around',
+        alignItems: 'left',
+        flexDirection: 'column',}}>
+            <PageTitle   style={{
+        display: 'flex',
+        width: '70%' ,
+        lineHeight: '1',
+        justifyContent: 'space-around',
+        alignItems: 'left',
+        flexDirection: 'column',}}>
+       <Container><TitlePart1>Frequently Asked </TitlePart1> 
+       <br />
+       <TitlePart2> Questions</TitlePart2></Container>
 
- <h4 className="pageTitle"
-                     style={{
-                     boxShadow: 'transparent',
-                     borderRadius: '0px',
-                     backgroundColor: palette.palette.primary.background,
-                     color: palette.palette.primary.text,
-                     lineHeight: '1',
-                     padding: '0.3em',
-          
-                 }}>
-
-<Category style={categoryAnimation} color={palette.palette.primary.text}> 
-<TitlePart1>lawns</TitlePart1> <TitlePart2>matter</TitlePart2>
- <br />
- <Title color={palette.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h4>
-</Container>
- </PageTitle>
-   
-
-    <h4>  <Description style={descAnimation}>
-    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-      </Description></h4> 
-      
-   
-    <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-      <Link to="/contactus">
-      <Button variant="contained" color={palette.palette.primary.active} margin="1rem" py={4} px={8}>
-        Contact Us
-      </Button>
-      </Link>
-    </PBox>
+ {/* <h2>  <Title color={theme.palette.primary.active}>{heading}</Title></h2> */}
+        
+          </PageTitle>
+       
+ 
+    <section className="section section--gradient">
+      <div >
+              <div className="content">
+                <div className="columns">
+                  <div className="column is-12">
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      {/* {heading} */}
+                    </h3>
+               <div dangerouslySetInnerHTML={{ __html: html }} />
+                  </div>
+                </div>
+                <Flex
+              flexWrap="nowrap"
+              flexDirection={['row', 'row', 'row', 'column']}
+              alignItems={['center', 'center', 'center', 'flex-start']}
+              justifyContent="space-between"
+            >
     
+               </Flex>
+
+
+                <div className="columns">
+                  <div >
+                    {/* <Link className="btn" to="/products">
+                      See all products
+                    </Link> */}
+                  </div>
+                </div>
+                <div className="column is-12">
+       
+                  <br />
+                
+                  <div className="column is-12 has-text-centered">
+   
+                  </div>
+                </div>
+              </div>
+      </div>
+    </section>
     </RaisedHeader>
-    </Container>  
-    </Container>
-    </Content>
-    </Layout>
+    <FAQIndex />
     </div>
+  </div>
+)
+
+FaqsPageTemplate.propTypes = {
+  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  title: PropTypes.string,
+  heading: PropTypes.string,
+  slug: PropTypes.string,
+  html: PropTypes.markdown,
+  posts: PropTypes.shape({
+    frontmatter: PropTypes.array,
+  }),
+}
+
+const FaqsPage = ({ data }) => {
+  const { indexdata } = data.markdownRemark
+  const { edges: posts } = data.allMarkdownRemark
+
+  return (
+    <Layout>
+      <FaqsPageTemplate
+        featuredimage={data.markdownRemark.frontmatter.featuredimage}
+        title={data.markdownRemark.frontmatter.title}
+        slug={data.markdownRemark.frontmatter.slug}
+        heading={data.markdownRemark.frontmatter.heading}
+        html={data.markdownRemark.html}
+      />
+    </Layout>
   )
 }
 
+FaqsPage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
+  allMarkdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+  }),
+}
 
-export default FAQPage
+export default FaqsPage
 
-export const query = graphql`
-query FAQPage ($id: String!) {
-   markdownRemark(id: { eq: $id }) {
-   excerpt(pruneLength: 400)
-    html
-    frontmatter {
-      slug
+export const pageQuery = graphql`
+query FaqsPageTemplate {
+   markdownRemark(frontmatter: {templateKey: {eq: "faqs"}}) {
+      html
+      frontmatter {
       title
-      templateKey
-      tags
       featuredimage {
         childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 100) {
+            src
           }
         }
       }
-      featuredimage_alt
-      featured
+      slug
+      heading
     }
-    id
+  }
+allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "faq"}}}, sort: {order: ASC, fields: id}) { 
+  edges {
+      node {
+        excerpt(pruneLength: 400)
+        id
+        faqs:   frontmatter {
+          slug
+          title
+          templateKey
+          featured
+          featuredimage {
+            childImageSharp {
+              fluid(quality: 95, maxWidth: 1200) {
+                src
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 
-`
+  `

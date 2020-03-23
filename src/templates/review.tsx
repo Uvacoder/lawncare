@@ -222,15 +222,15 @@ type PageProps = {
                  }}>
 
 <Category style={categoryAnimation} color={palette.palette.primary.text}> 
- <TitlePart1>customer</TitlePart1> <TitlePart2>review</TitlePart2>
- <br />
+ {/* <TitlePart1>customer</TitlePart1> <TitlePart2>review</TitlePart2>
+ <br /> */}
  <Title color={palette.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
 </Container>
  </PageTitle>
    
 
     <h4>  <Description style={descAnimation}>
-    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} /><p>- {data.markdownRemark.frontmatter.title}</p>
+    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </Description></h4> 
       
    

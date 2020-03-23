@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import Layout from './layout'
-import GridItem from './grid-item'
+import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import theme from '../gatsby-plugin-theme-ui/index'
@@ -20,6 +20,7 @@ type PageProps = {
           id: string
           frontmatter: {
             title: string
+            location: string
             slug: string
             templateKey: string
             featured: boolean
@@ -33,36 +34,36 @@ type PageProps = {
 
 const Area = styled(animated.div)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 50vw;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 30vw;
 
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 60vw;
-  }
+
 `
 class FAQIndex extends React.Component {
   render() {
 
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { edges: faqs } = data.allMarkdownRemark
 
     return (
 
-      <Layout color={theme.palette.primary.background}>
-        <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
+    
+   
         <Area>
-        {posts &&
-          posts.map(({ node: post }) => (
+        {faqs &&
+          faqs.map(({ node: faq }) => (
 
-         <GridItem key={post.frontmatter.slug} to={post.frontmatter.slug} aria-label={`View our lastest news "${post.frontmatter.title}"`}>
-                        <Img fluid={post.frontmatter.featuredimage.childImageSharp.fluid} />
-            <span>{post.frontmatter.title}</span>
-          </GridItem>
+         <GridLink padding="1rem" key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`View our lastest news "${faq.frontmatter.title}"`}>
+                        {/* <Img fluid={faq.frontmatter.featuredimage.childImageSharp.fluid} /> */}
+            <span>{faq.frontmatter.title} - {faq.frontmatter.location}
+            <br />
+            <br />
+            <p>{faq.excerpt}</p> </span>
+          </GridLink>
          
           ))}
       </Area>
-      </Layout>
+      
     )
   }
 }
@@ -71,14 +72,15 @@ export default () => (
   <StaticQuery
     query={graphql`
     query FAQIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "faqs"}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "faq"}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
-           excerpt(pruneLength: 400)
+           excerpt(pruneLength: 147)
             id
             frontmatter {
               slug
               title
+              location
               templateKey
               featured
               featuredimage {

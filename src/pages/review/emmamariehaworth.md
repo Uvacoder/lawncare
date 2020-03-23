@@ -15,4 +15,4 @@ has_review: false
 rating: 5
 recommendation_type_positive: true
 ---
-5 Star Rating
+![](./5starrating.png)

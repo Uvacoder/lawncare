@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import Layout from './layout'
-import GridItem from './grid-item'
+import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import theme from '../gatsby-plugin-theme-ui/index'
@@ -55,10 +55,10 @@ class BlogIndex extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
 
-         <GridItem key={post.frontmatter.slug} to={post.frontmatter.slug} aria-label={`View our lastest news "${post.frontmatter.title}"`}>
+         <GridLink key={post.frontmatter.slug} to={post.frontmatter.slug} aria-label={`View our lastest news "${post.frontmatter.title}"`}>
                         <Img fluid={post.frontmatter.featuredimage.childImageSharp.fluid} />
             <span>{post.frontmatter.title}</span>
-          </GridItem>
+          </GridLink>
          
           ))}
       </Area>

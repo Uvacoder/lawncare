@@ -1,14 +1,14 @@
 ---
-templateKey: faqs
-menu: faqs
-slug: /faqs/professionalvsdiy
+templateKey: faq
+menu: faq
+slug: /faq/professionalvsdiy
 title: Why pay for a professional service instead of DIY?
 featured: false
 featuredimage: /img/eugen-str-CrhsIRY3JWY-unsplash.jpg
 featuredimage_alt: Photo by Eugen Str on Unsplash
 rating: []
 tags:
-  - faqs
+  - faq
 ---
 
 

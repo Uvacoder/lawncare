@@ -1,14 +1,14 @@
 ---
-templateKey: faqs
-menu: faqs
-slug: /faqs/childandpetsafety
+templateKey: faq
+menu: faq
+slug: /faq/childandpetsafety
 title: Will the lawn be safe for children and pets?
 featured: false
 featuredimage: /img/treddy-chen-UdQWvefOXJk-unsplash.jpg
 featuredimage_alt: Photo by Treddy Chen on Unsplash
 rating: []
 tags:
-  - faqs
+  - faq
 ---
 
 
