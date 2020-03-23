@@ -1,5 +1,5 @@
 ---
-templateKey: post
+templateKey: review
 menu: review
 slug: /review/emmamariehaworth
 title: Emma Marie Haworth

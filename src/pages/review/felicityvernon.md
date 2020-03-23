@@ -1,5 +1,5 @@
 ---
-templateKey: post
+templateKey: review
 menu: review
 slug: /review/felicityvernon
 title: Felicity Vernon

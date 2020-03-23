@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import Container from '@material-ui/core/Container';
 import theme from '../gatsby-plugin-theme-ui/index'
 
-const GridItem = styled(Container)`
+const GridLink = styled(Link)`
   position: relative;
   > div {
     position: absolute !important;
@@ -45,4 +44,4 @@ const GridItem = styled(Container)`
   }
 `
 
-export default GridItem
+export default GridLink

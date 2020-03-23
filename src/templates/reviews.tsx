@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Features from '../components/Features'
 import Spotlight from '../components/spotlight'
-import BlogIndex from '../components/BlogIndex'
+import ReviewIndex from '../components/ReviewIndex'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
@@ -129,7 +129,7 @@ const Area = styled(animated.div)`
   }
 `
 
-export const ParentPageTemplate = ({
+export const ReviewsPageTemplate = ({
   featuredimage,
   title,
   heading,
@@ -175,9 +175,9 @@ export const ParentPageTemplate = ({
         justifyContent: 'space-around',
         alignItems: 'left',
         flexDirection: 'column',}}>
-       <Container><TitlePart1>professional</TitlePart1> 
+       <Container><TitlePart1>Latest </TitlePart1> 
        <br />
-       <TitlePart2>lawn care</TitlePart2></Container>
+       <TitlePart2>reviews</TitlePart2></Container>
 
  {/* <h2>  <Title color={theme.palette.primary.active}>{heading}</Title></h2> */}
         
@@ -213,26 +213,23 @@ export const ParentPageTemplate = ({
                   </div>
                 </div>
                 <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogIndex />
+       
+                  <br />
+                
                   <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
+   
                   </div>
                 </div>
               </div>
       </div>
     </section>
     </RaisedHeader>
-    
+    <ReviewIndex />
     </div>
   </div>
 )
 
-ParentPageTemplate.propTypes = {
+ReviewsPageTemplate.propTypes = {
   featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -243,13 +240,13 @@ ParentPageTemplate.propTypes = {
   }),
 }
 
-const ParentPage = ({ data }) => {
+const ReviewsPage = ({ data }) => {
   const { indexdata } = data.markdownRemark
   const { edges: posts } = data.allMarkdownRemark
 
   return (
     <Layout>
-      <ParentPageTemplate
+      <ReviewsPageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
@@ -260,7 +257,7 @@ const ParentPage = ({ data }) => {
   )
 }
 
-ParentPage.propTypes = {
+ReviewsPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -271,11 +268,11 @@ ParentPage.propTypes = {
   }),
 }
 
-export default ParentPage
+export default ReviewsPage
 
 export const pageQuery = graphql`
-query ParentPageTemplate {
-   markdownRemark(frontmatter: {templateKey: {eq: "parent"}}) {
+query ReviewsPageTemplate {
+   markdownRemark(frontmatter: {templateKey: {eq: "reviews"}}) {
       html
       frontmatter {
       title

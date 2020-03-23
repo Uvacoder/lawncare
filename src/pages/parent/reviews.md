@@ -1,6 +1,6 @@
 ---
-templateKey: index-page
-menu: review
+templateKey: reviews
+menu: reviews
 menuRanking: 100
 siteRanking: 100
 slug: /reviews

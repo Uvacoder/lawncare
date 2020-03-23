@@ -11,4 +11,4 @@ tags:
   - project
 ---
 
-Enjoy your beautiful lawn
+These are the results of our Lawn care service at a client in Longford Park

@@ -1,5 +1,5 @@
 ---
-templateKey: post
+templateKey: review
 menu: review
 slug: /review/emmashaw
 title: Emma Shaw
