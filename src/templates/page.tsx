@@ -235,8 +235,8 @@ type PageProps = {
                    }}>
  
   <Category style={categoryAnimation} color={palette.palette.primary.text}> 
-   <TitlePart1>lawns</TitlePart1> <TitlePart2>matter</TitlePart2>
-   <br />
+   {/* <TitlePart1>lawns</TitlePart1> <TitlePart2>matter</TitlePart2>
+   <br /> */}
    <Title color={palette.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
   </Container>
    </PageTitle>

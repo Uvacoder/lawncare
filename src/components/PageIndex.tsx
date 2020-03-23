@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import Layout from './layout'
-import GridItem from './grid-item'
+import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import theme from '../gatsby-plugin-theme-ui/index'
@@ -86,7 +86,7 @@ const PageTitle = styled(Container)`
 
 
 ` 
-const TitlePart1 = styled(GridItem)`
+const TitlePart1 = styled(GridLink)`
   grid-area: titlepart1;
   color: ${theme.palette.primary.active}; 
   text-transform: lowercase;
@@ -94,14 +94,14 @@ const TitlePart1 = styled(GridItem)`
   font-size: ${props => props.theme.fontSizes[3]};
  `
 
-const TitlePart2 = styled(GridItem)`
+const TitlePart2 = styled(GridLink)`
   grid-area: titlepart2;
   color: ${theme.palette.primary.text}; 
   text-transform: lowercase;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[3]};
  `
- const Title = styled(GridItem)`
+ const Title = styled(GridLink)`
   grid-area: title;
   color: ${theme.palette.primary.active}; 
   text-transform: none;
@@ -125,7 +125,7 @@ class PageIndex extends React.Component {
         {pages &&
           pages.map(({ node: page }) => (
 
-         <GridItem key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
+         <GridLink key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
            <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
            <Container > 
    {/* <RaisedHeader    style={{
@@ -147,14 +147,14 @@ class PageIndex extends React.Component {
         alignItems: 'left',
         flexDirection: 'column',}}>
            <Category color={theme.palette.primary.text}>
-          <TitlePart1>lawn</TitlePart1> <TitlePart2>care</TitlePart2>
-             <br />
-            <Title color={theme.palette.primary.active}>{page.frontmatter.title}</Title>
+          {/* <TitlePart1>lawn</TitlePart1> <TitlePart2>care</TitlePart2>
+             <br /> */}
+           <h5> <Title color={theme.palette.primary.active}>{page.frontmatter.title}</Title> </h5>
             </Category>
             </PageTitle>
             </Container>
             {/* </RaisedHeader> */}
-          </GridItem>
+          </GridLink>
 
           ))}
       </Area>

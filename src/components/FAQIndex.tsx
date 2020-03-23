@@ -53,9 +53,9 @@ class FAQIndex extends React.Component {
         {faqs &&
           faqs.map(({ node: faq }) => (
 
-         <GridLink padding="1rem" key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`View our lastest news "${faq.frontmatter.title}"`}>
+         <GridLink padding="1rem" key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`Frequently Asked Questions "${faq.frontmatter.title}"`}>
                         {/* <Img fluid={faq.frontmatter.featuredimage.childImageSharp.fluid} /> */}
-            <span>{faq.frontmatter.title} - {faq.frontmatter.location}
+            <span>{faq.frontmatter.title} 
             <br />
             <br />
             <p>{faq.excerpt}</p> </span>
