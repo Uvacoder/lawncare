@@ -201,7 +201,7 @@ type PageProps = {
       const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
       const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
       return (
-    <Layout color={theme.palette.primary.main}>
+     <Layout color={theme.palette.primary.main}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
         title={`${data.markdownRemark.frontmatter.title_detail} | lawnsmatter.co.uk`}

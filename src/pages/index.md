@@ -3,7 +3,7 @@ templateKey: index-page
 slug: /
 menu: index
 title: Lawns Matter
-image: /img/whyus.jpg
+featuredimage: /img/whyus.jpg
 heading: Service in Oxfordshire
 ---
 ##### Lawns Matter are an independent, family run business based in Oxfordshire.

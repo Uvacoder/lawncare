@@ -130,7 +130,7 @@ const Area = styled(animated.div)`
 `
 
 export const IndexPageTemplate = ({
-  image,
+  featuredimage,
   title,
   heading,
   slug,
@@ -143,7 +143,7 @@ export const IndexPageTemplate = ({
       className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage
         })`,
         backgroundPosition: `center`,
         backgroundAttachment: `fixed`,
@@ -233,7 +233,7 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   slug: PropTypes.string,
@@ -250,7 +250,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={data.markdownRemark.frontmatter.image}
+        featuredimage={data.markdownRemark.frontmatter.featuredimage}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
         heading={data.markdownRemark.frontmatter.heading}
@@ -279,10 +279,10 @@ query IndexPageTemplate {
       html
       frontmatter {
       title
-      image {
+      featuredimage {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 100) {
-            src
+          fluid(quality: 95, maxWidth: 1200) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -303,7 +303,7 @@ allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {or
           featuredimage {
             childImageSharp {
               fluid(quality: 95, maxWidth: 1200) {
-                src
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
