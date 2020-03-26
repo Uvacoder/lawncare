@@ -6,7 +6,6 @@ featured: true
 title: Great Tew
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Great Tew
-rating: []
 tags:
 - project
 ---

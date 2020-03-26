@@ -6,7 +6,6 @@ featured: true
 title: Soldern
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Soldern
-rating: []
 tags:
 - project
 ---

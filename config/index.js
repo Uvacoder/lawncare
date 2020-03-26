@@ -36,7 +36,7 @@ module.exports = {
       type: 'Offer',
       itemOffered: {
         type: 'Service',
-        name: ['Professional Lawn Care', 'Lawn Assessment', 'Complete Lawn Care Service', 'Lawn Renovation',  'Scarifying', 'Lawn Aeration', 'Lawn Pest Control', 'Lawn Disease Control', 'Lawn Feed and Weed',  'Lawn Fertilisation',  'Lawn Maintenance',],
+        name: 'Professional Lawn Care Service',
       },
     },
   },
@@ -45,7 +45,7 @@ module.exports = {
     type: 'AggregateRating',
     ratingValue: '5',
     itemReviewed: 'Lawn Care Service',
-    ratingCount: '11',
+    ratingCount: '5',
     reviewCount: '11',
     },
  /*     areaServed:

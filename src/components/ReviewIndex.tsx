@@ -53,10 +53,11 @@ class ReviewIndex extends React.Component {
         {reviews &&
           reviews.map(({ node: review }) => (
 
-         <GridLink padding="1rem" key={review.frontmatter.slug} to={review.frontmatter.slug} aria-label={`View our lastest news "${review.frontmatter.title}"`}>
+         <GridLink key={review.frontmatter.slug} to={review.frontmatter.slug} aria-label={`View our lastest news "${review.frontmatter.title}"`}>
                         {/* <Img fluid={review.frontmatter.featuredimage.childImageSharp.fluid} /> */}
-            <span>{review.frontmatter.title} - {review.frontmatter.location}
+            <span>{review.frontmatter.title} 
             <br />
+            {review.frontmatter.location}
             <br />
             <p>{review.excerpt}</p> </span>
           </GridLink>
@@ -72,10 +73,10 @@ export default () => (
   <StaticQuery
     query={graphql`
     query ReviewIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "review"}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "review"}, featured: {eq: true}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
-           excerpt(pruneLength: 147)
+            excerpt(pruneLength: 147)
             id
             frontmatter {
               slug
@@ -86,7 +87,7 @@ export default () => (
               featuredimage {
                 childImageSharp {
                   fluid(quality: 95, maxWidth: 1200) {
-                    ...GatsbyImageSharpFluid_withWebp
+                      ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
@@ -94,7 +95,8 @@ export default () => (
           }
         }
       }
-    }  
+    }
+    
     `}
     render={(data, count) => <ReviewIndex data={data} count={count} />}
   />

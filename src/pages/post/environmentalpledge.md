@@ -2,7 +2,6 @@
 title: Our Environmental Pledge
 templateKey: post
 menu: about
-rating: []
 slug: /about/environmentalpledge
 featured: true
 featuredimage: /img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg

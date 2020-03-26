@@ -143,7 +143,7 @@ export const ReviewsPageTemplate = ({
       className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage
+          !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid : featuredimage
         })`,
         backgroundPosition: `center`,
         backgroundAttachment: `fixed`,
@@ -279,7 +279,7 @@ query ReviewsPageTemplate {
       featuredimage {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 100) {
-            src
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -300,7 +300,7 @@ allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "review"}}}, sort: {
           featuredimage {
             childImageSharp {
               fluid(quality: 95, maxWidth: 1200) {
-                src
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

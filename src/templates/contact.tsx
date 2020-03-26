@@ -17,7 +17,7 @@ import { config, useSpring, animated } from 'react-spring'
 import Layout from '../components/layout'
 import { Box, AnimatedBox} from '../elements'
 import SEO from '../components/SEO'
-import theme from '../gatsby-plugin-theme-ui/index'
+// import theme from '../gatsby-plugin-theme-ui/index'
 import { Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
@@ -30,6 +30,8 @@ import FilledInput from '@material-ui/core/FilledInput';
 import TextField, { TextFieldProps } from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
+import theme from '../gatsby-plugin-theme-ui/createMuiTheme'
+import lightGreen from '@material-ui/core/colors/lightGreen';
 
 
 
@@ -44,16 +46,16 @@ const SendMessageButton = styled(Button)`
 
 const InputField = withStyles({
   root: {
-    color: 'green',
+    color: 'lightGreen',
     '& label.Mui-focused': {
-      color: 'green',
+      color: 'lightGreen',
     },
     '& .MuiInput-underline:after': {
-      borderBottomColor: 'green',
+      borderBottomColor: 'lightGreen',
     },
     '& .MuiOutlinedInput-root': {
       '&.Mui-focused fieldset': {
-        borderColor: 'green',
+        borderColor: 'lightGreen',
       },
     },
   },
@@ -65,7 +67,7 @@ const PBox = styled(AnimatedBox)`
 `
 
 const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
+  background-color: ${theme.palette.primary};
 
   .gatsby-image-wrapper:not(:last-child) {
     margin-bottom: ${props => props.theme.space[10]};
@@ -204,7 +206,7 @@ type PageProps = {
      <Layout color={theme.palette.primary.main}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
-        title={`${data.markdownRemark.frontmatter.title_detail} | lawnsmatter.co.uk`}
+        title={`${data.markdownRemark.frontmatter.title_detail} | ${data.site.siteMetadata.siteUrl}`}
         desc={data.markdownRemark.frontmatter.desc}
         node={data.markdownRemark.frontmatter.parent}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
@@ -295,7 +297,7 @@ type PageProps = {
   
   <FormControl variant="outlined">
    <Container       display='flex'
-                    width='70%'
+                    width='80%'
                     lineHeight='1'
                     justifyContent='space-around'
                     alignItems='left'
@@ -316,7 +318,7 @@ type PageProps = {
    </FormControl>
 
 
-   <SendMessageButton variant="outlined">Send Message</SendMessageButton>
+   <SendMessageButton variant="contained" color="lightGreen">Send Message</SendMessageButton>
 
              {/* <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea> */}
    
@@ -332,10 +334,6 @@ type PageProps = {
 </Container>
  </PageTitle>
    
-
-   
-   
-    
     </RaisedHeader>
     </Container>  
     </Container>
@@ -359,26 +357,38 @@ export default Contact
 
 export const query = graphql`
 
-  query Contact  {
+  query Contact  { 
  markdownRemark(frontmatter: { menu: { eq: "contactus" }}) {
     excerpt(pruneLength: 400)
-     html
-     frontmatter {
-       slug
-       title
-       templateKey
-       tags
-       featuredimage {
-         childImageSharp {
-           fluid(quality: 95, maxWidth: 1200) {
-             ...GatsbyImageSharpFluid_withWebp
-           }
-         }
-       }
-       featuredimage_alt
-       featured
-     }
-     id
-   }
+    html
+    frontmatter {
+      slug
+      title
+      templateKey
+      tags
+      featuredimage {
+        childImageSharp {
+          fluid(quality: 95, maxWidth: 1200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      featuredimage_alt
+      featured
+    }
+    id
+  }
+  site {
+    siteMetadata {
+      siteUrl
+      serviceName
+      brand
+      availableChannel {
+        servicePhone
+        serviceSmsNumber
+        serviceUrl
+      }
+    }
+  }
  }
 `

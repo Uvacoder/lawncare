@@ -6,7 +6,6 @@ featured: true
 title: Longworth
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Longworth
-rating: []
 tags:
 - project
 ---

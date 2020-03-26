@@ -6,7 +6,6 @@ title: Bicester
 featured: false
 featuredimage: /img/after8.jpg
 featuredimage_alt: Bicester Project After photo
-rating: []
 tags:
   - project
 ---

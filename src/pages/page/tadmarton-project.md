@@ -6,7 +6,6 @@ featured: true
 title: Tadmarton 
 featuredimage: /img/after5.jpg
 featuredimage_alt: Tadmarton After photo
-rating: []
 tags:
   - project
 ---

@@ -6,7 +6,6 @@ featured: true
 title: Syresham
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Syresham
-rating: []
 tags:
 - project
 ---

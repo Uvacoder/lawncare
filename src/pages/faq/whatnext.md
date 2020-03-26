@@ -6,7 +6,6 @@ title: What do I do next?
 featured: false
 featuredimage: /img/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg
 featuredimage_alt: Photo by Javier Allegue Barros on Unsplash
-rating: []
 tags:
   - faq
 ---

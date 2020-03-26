@@ -6,7 +6,6 @@ featured: true
 title: Fritwell
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Fritwell
-rating: []
 tags:
 - project
 ---

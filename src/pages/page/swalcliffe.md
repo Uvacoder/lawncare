@@ -6,7 +6,6 @@ featured: true
 title: Swalcliffe
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Swalcliffe
-rating: []
 tags:
 - project
 ---

@@ -6,7 +6,6 @@ featured: true
 title: Bladen
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Bladen
-rating: []
 tags:
 - project
 ---

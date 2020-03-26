@@ -6,7 +6,6 @@ featured: true
 title: Lower Tadmarton
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Lower Tadmarton
-rating: []
 tags:
 - project
 ---

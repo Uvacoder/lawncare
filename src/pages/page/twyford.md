@@ -6,7 +6,6 @@ featured: true
 title: Twyford
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Twyford
-rating: []
 tags:
 - project
 ---

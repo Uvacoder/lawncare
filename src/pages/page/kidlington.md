@@ -6,7 +6,6 @@ featured: true
 title: Kidlington
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Kidlington
-rating: []
 tags:
 - project
 ---

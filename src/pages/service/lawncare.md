@@ -6,7 +6,6 @@ featured: true
 title: Lawn care
 featuredimage: /img/lawnassessment.jpg
 featuredimage_alt: Lawns Matter Logo
-rating: []
 tags:
   - service
   - about

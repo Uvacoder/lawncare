@@ -6,7 +6,6 @@ featured: true
 title: Bourton on the Water
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Bourton on the Water
-rating: []
 tags:
 - project
 ---

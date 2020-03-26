@@ -6,7 +6,6 @@ featured: true
 title: Why Us?
 featuredimage: /img/whyus.jpg
 featuredimage_alt: Photo by Lawns Matter on client site.
-rating: []
 tags:
   - service
   - about

@@ -6,7 +6,6 @@ title: Longford Park
 featured: false
 featuredimage: /img/after1.jpg
 featuredimage_alt: Longford Park Project After photo
-rating: []
 tags:
   - project
 ---

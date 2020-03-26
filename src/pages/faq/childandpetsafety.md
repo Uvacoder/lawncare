@@ -6,7 +6,6 @@ title: Will the lawn be safe for children and pets?
 featured: false
 featuredimage: /img/treddy-chen-UdQWvefOXJk-unsplash.jpg
 featuredimage_alt: Photo by Treddy Chen on Unsplash
-rating: []
 tags:
   - faq
 ---

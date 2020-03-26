@@ -2,7 +2,6 @@
 title: UK Lawn Care Association
 templateKey: post
 menu: about
-rating: []
 slug: /about/UKLCA_Member
 featured: false
 featuredimage: /img/UKLCA_Member_Logo_Standard.png

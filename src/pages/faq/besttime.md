@@ -6,7 +6,6 @@ title:   When is the best time to start?
 featured: false
 featuredimage: /img/aron-visuals-BXOXnQ26B7o-unsplash.jpg
 featuredimage_alt: Photo by Aron Visuals on Unsplash
-rating: []
 tags:
   - faq
 ---

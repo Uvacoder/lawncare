@@ -3,7 +3,7 @@ templateKey: review
 menu: review
 slug: /review/stephjackson
 title: Steph Jackson
-featured: true
+featured: false
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 featuredimage_alt: Photo by Sharon Mccutcheon on Unsplash
 tags:

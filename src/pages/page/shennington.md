@@ -6,7 +6,6 @@ featured: true
 title: Shennington
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Shennington
-rating: []
 tags:
 - project
 ---

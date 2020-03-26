@@ -160,8 +160,7 @@ type PageProps = {
         desc={data.markdownRemark.excerpt}
         node={data.markdownRemark.frontmatter.slug}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
-        individual
-      />
+         />
       <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
       <Content bg={theme.palette.primary.main} py={10}>
       <BackgroundImage

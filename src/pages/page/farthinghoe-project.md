@@ -6,7 +6,6 @@ featured: true
 title: Farthinghoe 
 featuredimage: /img/after4a.jpg
 featuredimage_alt: Farthinghoe Project After photo
-rating: []
 tags:
   - project
 ---

@@ -6,7 +6,6 @@ featured: true
 title: Milcombe
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Milcombe
-rating: []
 tags:
 - project
 ---

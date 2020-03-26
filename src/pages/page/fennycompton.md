@@ -6,7 +6,6 @@ featured: true
 title: Fenny Compton
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Fenny Compton
-rating: []
 tags:
 - project
 ---

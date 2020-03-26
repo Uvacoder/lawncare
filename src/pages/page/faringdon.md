@@ -6,7 +6,6 @@ featured: true
 title: Faringdon
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Faringdon
-rating: []
 tags:
 - project
 ---

@@ -6,7 +6,6 @@ featured: true
 title: Fathinghoe
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Fathinghoe
-rating: []
 tags:
 - project
 ---

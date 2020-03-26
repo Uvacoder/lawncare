@@ -6,7 +6,6 @@ featured: true
 title: Long Hanborough
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Long Hanborough
-rating: []
 tags:
 - project
 ---

@@ -6,7 +6,6 @@ featured: true
 title: Chadlington
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Chadlington
-rating: []
 tags:
 - project
 ---

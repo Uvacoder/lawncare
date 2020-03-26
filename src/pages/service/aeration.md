@@ -6,7 +6,6 @@ featured: true
 title: Aeration
 featuredimage: /img/aerator.jpg
 featuredimage_alt: Lawnsmatter aerator on client site
-rating: []
 tags:
   - service
 ---

@@ -6,7 +6,6 @@ featured: true
 title: Lawn Renovations
 featuredimage: /img/lawnsmatter_renovation002.jpg
 featuredimage_alt: Photo by Lawns Matter on client site
-rating: []
 tags:
   - service
 ---

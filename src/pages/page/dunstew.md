@@ -6,7 +6,6 @@ featured: true
 title: Duns Tew
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Duns Tew
-rating: []
 tags:
 - project
 ---

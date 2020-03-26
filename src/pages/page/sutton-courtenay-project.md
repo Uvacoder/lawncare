@@ -6,7 +6,6 @@ featured: true
 title: Sutton Courtenay
 featuredimage: /img/after6.jpg
 featuredimage_alt: Sutton Courtenay After photo
-rating: []
 tags:
   - project
 ---

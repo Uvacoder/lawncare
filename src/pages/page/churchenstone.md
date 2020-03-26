@@ -6,7 +6,6 @@ featured: true
 title: Church Enstone
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Church Enstone
-rating: []
 tags:
 - project
 ---

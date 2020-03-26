@@ -2,7 +2,6 @@
 title: Lawn renovation
 templateKey: post
 menu: about
-rating: []
 slug: /about/lawnrenovation
 featured: true
 featuredimage: /img/index_pic03.jpg

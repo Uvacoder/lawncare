@@ -6,7 +6,6 @@ featured: true
 title: Barford St Michael
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Barford St Michael
-rating: []
 tags:
 - project
 ---

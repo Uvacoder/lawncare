@@ -6,7 +6,6 @@ featured: true
 title: Winchcombe
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Winchcombe
-rating: []
 tags:
 - project
 ---

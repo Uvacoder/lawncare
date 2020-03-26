@@ -6,7 +6,6 @@ featured: true
 title: Great Wolford
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Great Wolford
-rating: []
 tags:
 - project
 ---

@@ -25,7 +25,7 @@ collections:
       - { label: title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: Featuredimage, name: featuredimage, widget: image }
-      - { label: "Featuredimage alt", name: featuredimage_alt, widget: string }
+      - { label: "Image description (needed for SEO)", name: featuredimage_alt, widget: string }
       - label: Slideshow
         required: false
         name: slideshow
@@ -33,7 +33,7 @@ collections:
         fields:
           - { label: image, required: false, name: image, widget: image }
           - { label: index, required: false, name: index, widget: number, min: 1, step: 1 }
-          - { label: imagealt, required: false, name: image_alt, widget: string }
+          - { label: "Image description (needed for SEO)", required: false, name: image_alt, widget: string }
           - { label: imageLabel, required: false, name: imageLabel, widget: string }
       - { label: "Main content", required: false, name: body, widget: markdown }
       - { label: Tags, required: false, name: tags, widget: list }
@@ -51,7 +51,7 @@ collections:
       - { label: title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
-      - { label: "Featured image alt", required: false, name: featuredimage_alt, widget: string }
+      - { label: "Image description (needed for SEO)", required: false, name: featuredimage_alt, widget: string }
       - { label: Tags, required: false, name: tags, widget: list }
       - { label: locationName, required: false, name: locationName, widget: string }
   - name: faqs
@@ -68,7 +68,7 @@ collections:
       - { label: title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
-      - { label: "Featured image alt", required: false, name: featuredimage_alt, widget: string }
+      - { label: "Image description (needed for SEO)", required: false, name: featuredimage_alt, widget: string }
       - { label: Tags, required: false, name: tags, widget: list }
       - { label: locationName, required: false, name: locationName, widget: string }
   - name: areaserved
@@ -100,7 +100,7 @@ collections:
                   widget: list
                   fields: 
                       - { label: "Points plotted",  name: steps, widget: number, valueType: int,  min: 10, x: 64, step: 1 }
-                      - { label: milesOrKm,  name: units, widget: select, options: ["miles", "kilometres"], default: miles }
+                      - { label: milesOrKm,  name: units, widget: select, options: [miles, kilometres], default: miles }
   - name: review
     label: Review
     folder: src/pages/review
@@ -118,11 +118,11 @@ collections:
       - { label: has_review, required: false, name: has_review, widget: boolean }
       - { label: recommendation_type_positive, required: false, name: recommendation_type_positive, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
-      - { label: "Featured image alt", required: false, name: featuredimage_alt, widget: string }
+      - { label: "Image description (needed for SEO)", required: false, name: featuredimage_alt, widget: string }
       - { label: Tags, required: false, name: tags, widget: list }
-      - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: MMMM YYYY }
-      - { label: locationName, required: false, name: location, widget: string }
-      - { label: 'Body', required: false, name: 'body', widget: 'markdown' }
+      - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }
+      - { label: Location, required: false, name: location, widget: string }
+      - { label: Body, required: false, name: body, widget: markdown }
   - name: siteinfo
     label: siteinfo
     folder: src/pages/siteinfo
@@ -147,4 +147,4 @@ collections:
           - { label: image, required: false, name: image, widget: image }          
           - { label: heading,  required: false, name: heading, widget: string}    
           - { label: Tags, required: false, name: tags, widget: list }
-          - { label: 'Body', required: false, name: 'body', widget: 'markdown' }
+          - { label: Body, required: false, name: body, widget: markdown }

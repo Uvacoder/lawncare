@@ -1,7 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import lightGreen from '@material-ui/core/colors/lightGreen';
 
-let theme = createMuiTheme({
+const theme = createMuiTheme({
   breakpoints: {
 	keys: {
 		'0': 'xs',

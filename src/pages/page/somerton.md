@@ -6,7 +6,6 @@ featured: true
 title: Somerton
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Somerton
-rating: []
 tags:
 - project
 ---

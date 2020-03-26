@@ -6,7 +6,6 @@ featured: true
 title: Woodstock
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Woodstock
-rating: []
 tags:
 - project
 ---

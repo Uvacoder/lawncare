@@ -6,7 +6,6 @@ featured: true
 title: Deddington
 featuredimage: /img/after7.jpg
 featuredimage_alt: Deddington Project After photo
-rating: []
 tags:
   - project
 ---
