@@ -1,6 +1,5 @@
 ---
 templateKey: review
-menu: review
 slug: /review/sophiehammond
 title: Sophie Hammond
 location: Adderbury

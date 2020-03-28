@@ -1,6 +1,5 @@
 ---
 templateKey: review
-menu: review
 slug: /review/lindawinters
 title: Linda Winters
 location: Bodicote

@@ -1,8 +1,7 @@
 ---
 templateKey: page
-menu: project
 slug: /project/towcester
-featured: true
+featured: false
 title: Towcester
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Towcester

@@ -1,6 +1,5 @@
 ---
 templateKey: page
-menu: about
 slug: /about/servicearea
 featured: false
 title: Area served

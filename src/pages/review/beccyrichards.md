@@ -1,9 +1,7 @@
 ---
 templateKey: review
-menu: review
 slug: /review/beccyrichards
-menuRanking: 100
-siteRanking: 100
+sortorder: 50
 title: Beccy Richards
 location: Banbury
 featured: true

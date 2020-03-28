@@ -69,7 +69,7 @@ const PageTitle = styled(Container)`
 const TitlePart1 = styled(GridItem)`
   grid-area: titlepart1;
   color: ${palette.palette.primary.active}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
  `
@@ -77,7 +77,7 @@ const TitlePart1 = styled(GridItem)`
 const TitlePart2 = styled(GridItem)`
   grid-area: titlepart2;
   color: ${palette.palette.primary.text}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
  `

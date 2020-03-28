@@ -19,7 +19,7 @@ import InstagramIcon from '@material-ui/icons/Instagram'
 import GlobalStyles from '../styles/globalStyle'
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
-
+import MenuOptions from './menuOptions'
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import IconButtonBar from './IconButtonBar'
@@ -135,12 +135,12 @@ export default function PermanentDrawerLeft(props) {
       >
         <div className={classes.drawerHeader}
            >
-
+  <MenuOptions />
 <Link to="/"><Container><LogoLarge /></Container></Link>
         </div>
      
       <List className={classes.content} >
-    
+  
         <Link to="/">
             <ListItem button >
               <ListItemIcon><HomeOutlinedIcon /></ListItemIcon>

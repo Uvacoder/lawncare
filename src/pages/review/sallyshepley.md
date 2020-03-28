@@ -1,6 +1,5 @@
 ---
 templateKey: review
-menu: review
 slug: /review/sallyshepley 
 title: Sally Shepley 
 location: Kings Sutton

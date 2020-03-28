@@ -1,6 +1,5 @@
 ---
 templateKey: faq
-menu: faq
 slug: /faq/howtopay
 title:  How should I pay?
 featured: false

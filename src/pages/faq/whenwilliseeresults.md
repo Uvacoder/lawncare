@@ -1,6 +1,5 @@
 ---
 templateKey: faq
-menu: faq
 slug: /faq/whenwilliseeresults
 title: When will I start to see results
 featured: false

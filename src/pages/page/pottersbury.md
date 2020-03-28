@@ -1,8 +1,7 @@
 ---
 templateKey: page
-menu: project
 slug: /project/pottersbury
-featured: true
+featured: false
 title: Pottersbury
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Pottersbury

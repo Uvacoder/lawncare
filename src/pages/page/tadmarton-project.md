@@ -1,6 +1,5 @@
 ---
 templateKey: page
-menu: project
 slug: /project/tadmarton-project
 featured: true
 title: Tadmarton 

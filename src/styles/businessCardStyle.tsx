@@ -58,13 +58,13 @@ const PageTitle = styled(Container)`
 const TitlePart1 = styled(GridItem)`
   grid-area: titlepart1;
   color: ${props => props.theme.palette.primary.active}; 
-  text-transform: lowercase;
+  text-transform: none;
  `
 
 const TitlePart2 = styled(GridItem)`
   grid-area: titlepart2;
   color: ${props => props.theme.palette.primary.text}; 
-  text-transform: lowercase;
+  text-transform: none;
  `
 
 const HorizontalImg = styled(Img)`

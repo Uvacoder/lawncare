@@ -1,6 +1,5 @@
 ---
 templateKey: page
-menu: project
 slug: /project/farthinghoe-project
 featured: true
 title: Farthinghoe 

@@ -1,7 +1,6 @@
 ---
 title: Great lawns with no compromises
 templateKey: post
-menu: about
 slug: /about/nocompromises
 featured: false
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg

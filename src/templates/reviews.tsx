@@ -77,7 +77,7 @@ const PageTitle = styled(Container)`
 const TitlePart1 = styled(GridItem)`
   grid-area: titlepart1;
   color: ${theme.palette.primary.active}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
  `
@@ -85,7 +85,7 @@ const TitlePart1 = styled(GridItem)`
 const TitlePart2 = styled(GridItem)`
   grid-area: titlepart2;
   color: ${theme.palette.primary.text}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
  `
@@ -97,7 +97,7 @@ const HorizontalImg = styled(Img)`
 const Title = styled(GridItem)`
   grid-area: title;
   color: ${theme.palette.primary.active}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   color: ${theme.palette.primary.text}; 
   font-size: ${props => props.theme.fontSizes[1]};
@@ -143,7 +143,7 @@ export const ReviewsPageTemplate = ({
       className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid : featuredimage
+          !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage
         })`,
         backgroundPosition: `center`,
         backgroundAttachment: `fixed`,
@@ -279,7 +279,7 @@ query ReviewsPageTemplate {
       featuredimage {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+            src
           }
         }
       }
@@ -297,13 +297,6 @@ allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "review"}}}, sort: {
           title
           templateKey
           featured
-          featuredimage {
-            childImageSharp {
-              fluid(quality: 95, maxWidth: 1200) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
         }
       }
     }

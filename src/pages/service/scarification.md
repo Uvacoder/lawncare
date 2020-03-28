@@ -1,6 +1,5 @@
 ---
 templateKey: page
-menu: service
 slug: /service/scarification
 featured: true
 title: Scarification

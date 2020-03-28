@@ -1,6 +1,5 @@
 ---
 templateKey: faq
-menu: faq
 slug: /faq/whataboutmygardener
 title:  What if I already have a gardener?
 featured: false

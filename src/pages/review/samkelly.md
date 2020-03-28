@@ -1,6 +1,5 @@
 ---
 templateKey: review
-menu: review
 slug: /review/samkelly
 title: Sam Kelly
 location: Broughton

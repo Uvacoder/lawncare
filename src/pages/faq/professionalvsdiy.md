@@ -1,6 +1,5 @@
 ---
 templateKey: faq
-menu: faq
 slug: /faq/professionalvsdiy
 title: Why pay for a professional service instead of DIY?
 featured: false

@@ -1,6 +1,5 @@
 ---
 templateKey: page
-menu: project
 slug: /project/sutton-courtenay-project
 featured: true
 title: Sutton Courtenay

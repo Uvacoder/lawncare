@@ -1,6 +1,5 @@
 ---
 templateKey: faq
-menu: faq
 slug: /faq/besttime
 title:   When is the best time to start?
 featured: false

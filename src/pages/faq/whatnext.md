@@ -1,6 +1,5 @@
 ---
 templateKey: faq
-menu: faq
 slug: /faq/whatnext
 title: What do I do next?
 featured: false

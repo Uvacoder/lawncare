@@ -1,8 +1,6 @@
 ---
 templateKey: page
-menu: treatment
-menuRanking: 50
-siteRanking: 50
+sortorder: 50
 slug: /treatment/winter_treatments
 title: Winter Treatments
 featured: true

@@ -1,6 +1,5 @@
 ---
 templateKey: faq
-menu: faq
 slug: /faq/howmuch
 title: How much does a treatment cost?
 featured: false

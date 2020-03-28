@@ -1,6 +1,6 @@
 ---
 templateKey: areaserved
-siteRanking: 100
+sortorder: 100
 hasmap: true
 slug: areaserved
 title: areaserved

@@ -1,6 +1,5 @@
 ---
 templateKey: faq
-menu: faq
 slug: /faq/doineedtobein
 title:  Do I need to be in when the lawn is being treated?
 featured: false

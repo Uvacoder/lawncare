@@ -88,7 +88,7 @@ const PageTitle = styled(Container)`
 const Lawns = styled(GridItem)`
   grid-area: lawns;
   color: ${theme.palette.primary.active}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[3]};
  `
@@ -96,7 +96,7 @@ const Lawns = styled(GridItem)`
 const Matter = styled(GridItem)`
   grid-area: matter;
   color: ${theme.palette.primary.text}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[3]};
  `
@@ -176,7 +176,6 @@ export default () => (
               slug
               title
               templateKey
-              menu
               featured
               featuredimage {
                 childImageSharp {

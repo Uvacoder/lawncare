@@ -18,9 +18,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Template Key", name: templateKey, widget: hidden, default: page }
-      - { label: Menu, required: false, name: menu, widget: select, options: ["/faqs", "/service", "/project", "/about"], default: "/project" }
-      - { label: menuRanking, required: false, name: menuRanking, widget: number, min: 1, step: 1, default: 100 }
-      - { label: siteRanking, required: false, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }
+      - { label: sortorder, required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
       - { label: slug, name: slug, widget: string }
       - { label: title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
@@ -38,16 +36,14 @@ collections:
       - { label: "Main content", required: false, name: body, widget: markdown }
       - { label: Tags, required: false, name: tags, widget: list }
   - name: post
-    label: post
+    label: Post
     folder: src/pages/post
     create: true
     slug: "{{slug }}"
     fields:
       - { label: "Template Key", name: templateKey, widget: hidden, default: post }
       - { label: slug, name: slug, widget: string }
-      - { label: Menu, required: false, name: menu, widget: select, options: ["/faqs", "/service", "/project", "/about"], default: "/post" }
-      - { label: menuRanking, required: false, name: menuRanking, widget: number, min: 1, step: 1, default: 100 }
-      - { label: siteRanking, required: false, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }
+      - { label: sortorder, required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
       - { label: title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
@@ -55,16 +51,14 @@ collections:
       - { label: Tags, required: false, name: tags, widget: list }
       - { label: locationName, required: false, name: locationName, widget: string }
   - name: faqs
-    label: faqs
-    folder: src/pages/faqs
+    label: FAQs
+    folder: src/pages/faq
     create: true
     slug: "{{slug }}"
     fields:
       - { label: "Template Key", name: templateKey, widget: hidden, default: faqs }
       - { label: slug, name: slug, widget: string }
-      - { label: Menu, required: false, name: menu, widget: select, options: ["/faqs", "/service", "/project", "/about"], default: "/faqs" }
-      - { label: menuRanking, required: false, name: menuRanking, widget: number, min: 1, step: 1, default: 100 }
-      - { label: siteRanking, required: false, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }
+      - { label: sortorder, required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
       - { label: title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
@@ -72,15 +66,15 @@ collections:
       - { label: Tags, required: false, name: tags, widget: list }
       - { label: locationName, required: false, name: locationName, widget: string }
   - name: areaserved
-    label: areaserved
+    label: Area Served
     files: 
       - file: src/pages/areaserved.md
-        label: AreaServedMap
+        label: Area Served Map
         name: areaserved       
         slug: "{{slug}}"
         fields:
           - { label: "Template Key", name: templateKey, widget: hidden, default: areaserved }
-          - { label: siteRanking, required: false, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }          
+          - { label: sortorder, required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }       
           - { label: hasmap, required: false, name: hasmap, widget: boolean}
           - { label: slug, name: slug, widget: string }
           - { label: title, required: false, name: title, widget: string }
@@ -94,7 +88,7 @@ collections:
                 - { label: "Cental point",name: location, widget: map, type: Point }
                 - { label: "Area name", name: placename, widget: string }
                 - { label: ServiceAreaRadius, name: radius, widget: number, valueType: int,  min: 1, step: 1}
-                - label: options
+                - label: Options
                   required: false
                   name: options
                   widget: list
@@ -109,9 +103,7 @@ collections:
     fields:
       - { label: "Template Key", name: templateKey, widget: hidden, default: review }
       - { label: slug, name: slug, widget: string }
-      - { label: menuRanking, required: false, name: menuRanking, widget: number, min: 1, step: 1, default: 100 }
-      - { label: siteRanking, required: false, name: siteRanking, widget: number, min: 1, step: 1, default: 100 }      
-      - { label: menu, required: false, name: menu, widget: string}
+      - { label: sortorder, required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }     
       - { label: title, required: false, name: title, widget: string}
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: has_rating, required: false, name: has_rating, widget: boolean }
@@ -130,14 +122,14 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Template Key", name: templateKey, widget: hidden, default: siteinfo }
-      - { label: slug, name: slug, widget: string }
-      - { label: dataType,  required: false, name: dataType, widget: string}
-      - { label: value, name: value, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: DataType,  required: false, name: dataType, widget: string}
+      - { label: Value, name: value, widget: string }
   - name: index
     label: Index
     files: 
       - file: src/pages/index.md
-        label: index
+        label: Index
         name: index       
         slug: "{{slug}}"
         fields:

@@ -1,8 +1,7 @@
 ---
 templateKey: page
-menu: project
 slug: /project/greatwolford
-featured: true
+featured: false
 title: Great Wolford
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Great Wolford

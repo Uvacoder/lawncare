@@ -1,8 +1,6 @@
 ---
 templateKey: page
-menu: treatment
-menuRanking: 50
-siteRanking: 50
+sortorder: 50
 slug: /treatment/spring_treatments
 title: Spring Treatments
 featured: true

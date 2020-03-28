@@ -1,6 +1,5 @@
 ---
 templateKey: faq
-menu: faq
 slug: /faq/discounts
 title: Do you offer a loyalty discount scheme?
 featured: false

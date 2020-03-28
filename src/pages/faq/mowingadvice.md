@@ -1,6 +1,5 @@
 ---
 templateKey: faq
-menu: faq
 slug: /faq/mowingadvice
 title: How should I mow the lawn?
 featured: false

@@ -1,8 +1,6 @@
 ---
 templateKey: tags
-menu: about
-menuRanking: 100
-siteRanking: 100
+sortorder: 50
 slug: /tags/aboutus
 title: About Us
 featured: true

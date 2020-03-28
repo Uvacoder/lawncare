@@ -1,6 +1,5 @@
 ---
 templateKey: page
-menu: service
 slug: /service/aeration
 featured: true
 title: Aeration

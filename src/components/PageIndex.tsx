@@ -23,7 +23,6 @@ type PageProps = {
           frontmatter: {
             title: string
             slug: string
-            menu: string
             templateKey: string
             featured: boolean
             featuredimage: ChildImageSharp
@@ -89,7 +88,7 @@ const PageTitle = styled(Container)`
 const TitlePart1 = styled(GridLink)`
   grid-area: titlepart1;
   color: ${theme.palette.primary.active}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[3]};
  `
@@ -97,7 +96,7 @@ const TitlePart1 = styled(GridLink)`
 const TitlePart2 = styled(GridLink)`
   grid-area: titlepart2;
   color: ${theme.palette.primary.text}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[3]};
  `
@@ -168,7 +167,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query PageIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "page"}, menu: {eq: "project"}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "page"}, slug: {regex: "/project/"}, featured: {eq: true}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
            excerpt(pruneLength: 400)
@@ -176,7 +175,6 @@ export default () => (
             frontmatter {
               slug
               title
-              menu
               templateKey
               featured
               featuredimage {

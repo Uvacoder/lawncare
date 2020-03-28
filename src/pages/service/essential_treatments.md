@@ -1,8 +1,6 @@
 ---
 templateKey: page
-menu: service
-menuRanking: 50
-siteRanking: 50
+sortorder: 50
 slug: /service/essential_treatments
 title: Essential Treatments
 featured: true

@@ -1,6 +1,5 @@
 ---
 templateKey: contact
-menu: contactus
 slug: /contactus
 featured: false
 title: Contact Us

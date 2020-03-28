@@ -1,6 +1,5 @@
 ---
 templateKey: page
-menu: project
 slug: /project/deddington-project
 featured: true
 title: Deddington

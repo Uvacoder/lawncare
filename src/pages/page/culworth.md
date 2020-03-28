@@ -1,8 +1,7 @@
 ---
 templateKey: page
-menu: project
 slug: /project/culworth
-featured: true
+featured: false
 title: Culworth
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Culworth

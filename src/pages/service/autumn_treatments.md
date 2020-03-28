@@ -1,8 +1,6 @@
 ---
 templateKey: page
-menu: treatment
-menuRanking: 50
-siteRanking: 50
+sortorder: 50
 slug: /treatment/autumn_treatments
 title: Autumn Treatments
 featured: true

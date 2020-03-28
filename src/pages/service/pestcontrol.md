@@ -1,6 +1,5 @@
 ---
 templateKey: page
-menu: service
 slug: /service/pestcontrol
 featured: true
 title: Pest Control

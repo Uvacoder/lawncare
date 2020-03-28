@@ -1,8 +1,6 @@
 ---
 templateKey: faqs
-menu: faqs
-menuRanking: 100
-siteRanking: 100
+sortorder: 50
 slug: /faqs
 title: Frequently Asked Questions
 featured: true

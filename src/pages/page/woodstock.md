@@ -1,8 +1,7 @@
 ---
 templateKey: page
-menu: project
 slug: /project/woodstock
-featured: true
+featured: false
 title: Woodstock
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Woodstock

@@ -1,8 +1,7 @@
 ---
 templateKey: page
-menu: project
 slug: /project/milcombe
-featured: true
+featured: false
 title: Milcombe
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Milcombe

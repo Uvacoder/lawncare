@@ -1,6 +1,5 @@
 ---
 templateKey: post
-menu: about
 slug: /about/whychoose
 title: Why Choose Lawns Matter?
 featured: false

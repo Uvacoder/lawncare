@@ -1,6 +1,5 @@
 ---
 templateKey: review
-menu: review
 slug: /review/stephjackson
 title: Steph Jackson
 featured: false

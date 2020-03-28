@@ -1,6 +1,5 @@
 ---
 templateKey: page
-menu: service
 slug: /service/lawncare
 featured: true
 title: Lawn care

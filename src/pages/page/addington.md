@@ -1,8 +1,7 @@
 ---
 templateKey: page
-menu: project
 slug: /project/addington
-featured: true
+featured: false
 title: Addington
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Addington

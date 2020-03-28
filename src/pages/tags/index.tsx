@@ -47,7 +47,7 @@ query TagsQuery {
     }
   }
   allMarkdownRemark {
-    group(field: frontmatter___menu) {
+    group(field: frontmatter___tags) {
       fieldValue
       totalCount
     }

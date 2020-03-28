@@ -77,7 +77,7 @@ const PageTitle = styled(Container)`
 const TitlePart1 = styled(GridItem)`
   grid-area: titlepart1;
   color: ${theme.palette.primary.active}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
  `
@@ -85,7 +85,7 @@ const TitlePart1 = styled(GridItem)`
 const TitlePart2 = styled(GridItem)`
   grid-area: titlepart2;
   color: ${theme.palette.primary.text}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
  `
@@ -97,7 +97,7 @@ const HorizontalImg = styled(Img)`
 const Title = styled(GridItem)`
   grid-area: title;
   color: ${theme.palette.primary.active}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   color: ${theme.palette.primary.text}; 
   font-size: ${props => props.theme.fontSizes[1]};

@@ -1,7 +1,6 @@
 ---
 title: Aeration holes
 templateKey: post
-menu: about
 slug: /about/aerationholes
 featured: true
 featuredimage: /img/aeration1.jpg

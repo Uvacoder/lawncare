@@ -1,8 +1,7 @@
 ---
 templateKey: page
-menu: project
 slug: /project/drayton
-featured: true
+featured: false
 title: Drayton
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Drayton

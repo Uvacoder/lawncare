@@ -1,8 +1,6 @@
 ---
 templateKey: reviews
-menu: reviews
-menuRanking: 100
-siteRanking: 100
+sortorder: 50
 slug: /reviews
 title: Our Lawn Care Service Customer Reviews
 featured: true

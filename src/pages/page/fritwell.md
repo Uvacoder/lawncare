@@ -1,8 +1,7 @@
 ---
 templateKey: page
-menu: project
 slug: /project/fritwell
-featured: true
+featured: false
 title: Fritwell
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Fritwell

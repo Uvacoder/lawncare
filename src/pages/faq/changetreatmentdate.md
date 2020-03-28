@@ -1,6 +1,5 @@
 ---
 templateKey: faq
-menu: faq
 slug: /faq/changetreatmentdate
 title: Can I change the treatment date?
 featured: false

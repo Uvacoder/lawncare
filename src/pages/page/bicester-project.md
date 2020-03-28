@@ -1,9 +1,8 @@
 ---
 templateKey: page
-menu: project
 slug: /project/bicester-project
 title: Bicester 
-featured: false
+featured: true
 featuredimage: /img/after8.jpg
 featuredimage_alt: Bicester Project After photo
 tags:

@@ -1,7 +1,6 @@
 ---
 title: Scarification
 templateKey: post
-menu: post
 slug: /post/scarification
 featured: true
 featuredimage: /img/index_pic02.jpg

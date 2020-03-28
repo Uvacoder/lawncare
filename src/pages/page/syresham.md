@@ -1,8 +1,7 @@
 ---
 templateKey: page
-menu: project
 slug: /project/syresham
-featured: true
+featured: false
 title: Syresham
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Syresham

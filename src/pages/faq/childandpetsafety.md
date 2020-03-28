@@ -1,6 +1,5 @@
 ---
 templateKey: faq
-menu: faq
 slug: /faq/childandpetsafety
 title: Will the lawn be safe for children and pets?
 featured: false

@@ -84,7 +84,7 @@ const PageTitle = styled(Container)`
 const Lawns = styled(GridItem)`
   grid-area: lawns;
   color: ${palette.palette.primary.active}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
  `
@@ -92,7 +92,7 @@ const Lawns = styled(GridItem)`
 const Matter = styled(GridItem)`
   grid-area: matter;
   color: ${palette.palette.primary.text}; 
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes[5]};
  `

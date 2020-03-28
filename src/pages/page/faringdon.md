@@ -1,8 +1,7 @@
 ---
 templateKey: page
-menu: project
 slug: /project/faringdon
-featured: true
+featured: false
 title: Faringdon
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Faringdon

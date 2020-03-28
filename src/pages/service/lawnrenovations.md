@@ -1,6 +1,5 @@
 ---
 templateKey: page
-menu: service
 slug: /service/renovation
 featured: true
 title: Lawn Renovations

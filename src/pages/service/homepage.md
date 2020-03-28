@@ -1,6 +1,5 @@
 ---
 templateKey: landing
-menu: about
 slug: /homepage
 featured: true
 title: Professional Lawn Care

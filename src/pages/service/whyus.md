@@ -1,6 +1,5 @@
 ---
 templateKey: post
-menu: about
 slug: /about/whyus
 featured: true
 title: Why Us?

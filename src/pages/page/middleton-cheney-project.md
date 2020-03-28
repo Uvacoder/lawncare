@@ -1,9 +1,8 @@
 ---
 templateKey: page
-menu: project
 slug: /project/middleton-cheney-project
 title: Middleton Cheney
-featured: false
+featured: true
 featuredimage: /img/after2.jpg
 featuredimage_alt: Middleton Cheney Project After photo
 tags:

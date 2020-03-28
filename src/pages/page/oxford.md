@@ -1,8 +1,7 @@
 ---
 templateKey: page
-menu: project
 slug: /project/oxford
-featured: true
+featured: false
 title: Oxford
 featuredimage: /img/aboutus.jpg
 featuredimage_alt: Results of our Lawn Care Service in Oxford
