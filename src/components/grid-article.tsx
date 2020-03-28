@@ -28,12 +28,12 @@ const GridArticle = styled(Link)`
     text-align: left;
     font-weight: 400;
     font-size: ${theme.fontSizes[3]};
-    padding: ${props => props.theme.space[3]};
+    padding: ${theme.space[3]};
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-    @media (max-width: ${props => props.theme.breakpoints[3]}) {
-      font-size: ${props => props.theme.fontSizes[2]};
-      padding: ${props => props.theme.space[4]};
+    @media (max-width: ${theme.breakpoints[3]}) {
+      font-size: ${theme.fontSizes[2]};
+      padding: ${theme.space[4]};
     }
   }
   &:hover {
