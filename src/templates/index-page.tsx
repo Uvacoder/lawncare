@@ -175,9 +175,9 @@ export const IndexPageTemplate = ({
         justifyContent: 'space-around',
         alignItems: 'left',
         flexDirection: 'column',}}>
-       <Container><TitlePart1>professional</TitlePart1> 
+       <Container><TitlePart1>Professional</TitlePart1> 
        <br />
-       <TitlePart2>lawn care</TitlePart2></Container>
+       <TitlePart2>Lawn Care</TitlePart2></Container>
 
  {/* <h2>  <Title color={theme.palette.primary.active}>{heading}</Title></h2> */}
         

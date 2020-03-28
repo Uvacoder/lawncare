@@ -28,7 +28,7 @@ const GridItem = styled(Container)`
     box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
     text-align: left;
     font-weight: 400;
-    font-size: ${props => props.theme.fontSizes[3]};
+    font-size: ${theme.fontSizes[3]};
     text-transform: none;
     padding: ${props => props.theme.space[4]};
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);

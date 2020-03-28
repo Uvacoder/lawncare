@@ -20,7 +20,7 @@ const NavBottom = styled(Flex)<{  color: theme.palette.primary.background }>`
   a {
     text-decoration: none;
     color: ${props => readableColor(props.theme.palette.primary.text)};
-    font-size: ${props => props.theme.fontSizes[3]};
+    font-size: ${theme.fontSizes[3]};
     line-height: 2;
     justify-content: center;
     &:hover,
@@ -31,7 +31,7 @@ const NavBottom = styled(Flex)<{  color: theme.palette.primary.background }>`
   menu {
     text-decoration: none;
     color: ${props => readableColor(props.theme.palette.primary.text)};
-    font-size: ${props => props.theme.fontSizes[3]};
+    font-size: ${theme.fontSizes[3]};
     line-height: 2;
     align-content: center;
     justify-content: center;

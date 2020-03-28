@@ -90,7 +90,7 @@ const TitlePart1 = styled(GridLink)`
   color: ${theme.palette.primary.active}; 
   text-transform: none;
   font-weight: 400;
-  font-size: ${props => props.theme.fontSizes[3]};
+  font-size: ${theme.fontSizes[3]};
  `
 
 const TitlePart2 = styled(GridLink)`
@@ -98,7 +98,7 @@ const TitlePart2 = styled(GridLink)`
   color: ${theme.palette.primary.text}; 
   text-transform: none;
   font-weight: 400;
-  font-size: ${props => props.theme.fontSizes[3]};
+  font-size: ${theme.fontSizes[3]};
  `
  const Title = styled(GridLink)`
   grid-area: title;
