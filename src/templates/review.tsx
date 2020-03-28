@@ -29,17 +29,17 @@ const Content = styled(Box)<{ bg: string }>`
   background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
 
   .gatsby-image-wrapper:not(:last-child) {
-    margin-bottom: ${props => props.theme.space[10]};
+    margin-bottom: ${theme.space[10]};
 
-    @media (max-width: ${props => props.theme.breakpoints[3]}) {
-      margin-bottom: ${props => props.theme.space[8]};
+    @media (max-width: ${theme.breakpoints[3]}) {
+      margin-bottom: ${theme.space[8]};
     }
   }
 `
 
 const Category = styled(AnimatedBox)`
   letter-spacing: 0.05em;
-  font-size: ${props => props.theme.fontSizes[1]};
+  font-size: ${theme.fontSizes[1]};
   text-transform: none;
 `
 const RaisedHeader = styled(Container)`
@@ -84,7 +84,7 @@ const TitlePart1 = styled(GridItem)`
   color: ${palette.palette.primary.active}; 
   text-transform: none;
   font-weight: 400;
-  font-size: ${props => props.theme.fontSizes[5]};
+  font-size: ${theme.fontSizes[5]};
  `
 
 const TitlePart2 = styled(GridItem)`
@@ -92,7 +92,7 @@ const TitlePart2 = styled(GridItem)`
   color: ${palette.palette.primary.text}; 
   text-transform: none;
   font-weight: 400;
-  font-size: ${props => props.theme.fontSizes[5]};
+  font-size: ${theme.fontSizes[5]};
  `
 
 const HorizontalImg = styled(Img)`
@@ -105,7 +105,7 @@ const Title = styled(GridItem)`
   text-transform: none;
   font-weight: 400;
   color: ${palette.palette.primary.text}; 
-  font-size: ${props => props.theme.fontSizes[1]};
+  font-size: ${theme.fontSizes[1]};
 
 `
 
