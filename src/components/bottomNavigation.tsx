@@ -11,25 +11,23 @@ import FacebookLink from './FacebookLink'
 import InstagramLink from './InstagramLink'
 import EmailLink from './EmailLink'
 import NavBottom from '../styles/navBottomStyle'
-import CssBaseline from '@material-ui/core/CssBaseline';
-import GlobalStyles from '../styles/globalStyle'
-import theme from '../gatsby-plugin-theme-ui/index'
-import palette from '../gatsby-plugin-theme-ui/palette'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
+
 import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
         flexGrow: 0,
-        color: palette.palette.primary.text,
-        backgroundColor: palette.palette.primary.background,
+        color: theme.palette.primary.contrastText,
+        backgroundColor: theme.palette.primary.main,
       },  
     bottomNavigation: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
         alignContent: 'center',
-        backgroundColor: palette.palette.primary.background,
+        backgroundColor: theme.palette.primary.main,
       },
   },
 
@@ -42,9 +40,9 @@ export default function BottomNavigationBar() {
 
   return (
     <div className={classes.root} >
-               <CssBaseline />
-        <GlobalStyles /> 
-        <Container className={classes.bottomNavigation} backgroundColor={palette.palette.primary.background} alignItems="space-between">
+               {/* <CssBaseline />
+        <GlobalStyles />  */}
+        <Container className={classes.bottomNavigation} backgroundColor={theme.palette.primary.main} alignItems="space-between">
     <BottomNavigation
       value={value}
       onChange={(event, newValue) => {
@@ -52,13 +50,11 @@ export default function BottomNavigationBar() {
       }}
       showLabels
       className={classes.root}
-
-
     >
       <BottomNavigationAction  icon={<InstagramLink />} />
       <BottomNavigationAction  icon={<EmailLink />} />
       <BottomNavigationAction icon={<FacebookLink />} /> 
-      <BottomNavigationAction  fill={palette.palette.primary.text} icon={<GappsappsIcon />} />
+      <BottomNavigationAction  fill={theme.palette.primary.contrastText} icon={<GappsappsIcon />} />
 
     </BottomNavigation>
     </Container></div>

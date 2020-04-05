@@ -1,7 +1,7 @@
     // search: {
     //   position: 'relative',
     //   borderRadius: theme.shape.borderRadius,
-    //   color: theme.palette.primary.text,
+    //   color: theme.palette.primary.contrastText,
     //   backgroundColor: fade(theme.palette.primary.light, 0.15),
     //   '&:hover': {
     //     backgroundColor: fade(theme.palette.primary.light, 0.25),
@@ -22,7 +22,7 @@
     //   justifyContent: 'center',
     // },
     // inputRoot: {
-    //   color: theme.palette.primary.text,
+    //   color: theme.palette.primary.contrastText,
     // },
     // inputInput: {
     //   padding: theme.spacing(1, 1, 1, 7),

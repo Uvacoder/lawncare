@@ -1,7 +1,8 @@
 
 import React from 'react'
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import theme from '../gatsby-plugin-theme-ui/index'
+import styled, { createGlobalStyle } from 'styled-components'
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import reset from './reset'
 import { Box, Flex, AnimatedBox } from '../elements'
 import { readableColor } from 'polished'
@@ -16,44 +17,44 @@ const PartialNavLink = ({ children, to, ...rest }: { children: React.ReactNode; 
   </Link>
 )
 
-const NavBottom = styled(Flex)<{  color: theme.palette.primary.background }>`
+const NavBottom = styled(Flex)<{  color: theme.palette.primary.main }>`
   a {
     text-decoration: none;
-    color: ${props => readableColor(props.theme.palette.primary.text)};
-    font-size: ${theme.fontSizes[3]};
+    color: ${props => readableColor(props.theme.palette.primary.contrastText)};
+    font-size: ${theme.typography.h3.fontSize};
     line-height: 2;
     justify-content: center;
     &:hover,
     &:focus,
     &.navlink-active {
-      color: ${props => theme.palette.primary.active};
+      color: ${props => theme.palette.secondary.main};
     }
   menu {
     text-decoration: none;
-    color: ${props => readableColor(props.theme.palette.primary.text)};
-    font-size: ${theme.fontSizes[3]};
+    color: ${props => readableColor(props.theme.palette.primary.contrastText)};
+    font-size: ${theme.typography.h3.fontSize};
     line-height: 2;
     align-content: center;
     justify-content: center;
     &:hover,
     &:focus,
     &.navlink-active {
-      color: ${props => theme.palette.primary.active};
+      color: ${props => theme.palette.secondary.main};
     }
 
-    @media (max-width: ${props => props.theme.breakpoints[2]}) {
-      font-size: ${props => props.theme.fontSizes[0]};
-      margin-left: ${props => props.theme.space[2]};
+     [theme.breakpoints.down('md')]:  {
+      font-size: ${theme.typography.h3.fontSize};
+      margin-left: ${theme.typography.spacing};
     }
 
-    @media (max-width: ${props => props.theme.breakpoints[1]}) {
-      font-size: ${props => props.theme.fontSizes[0]};
-      margin-left: ${props => props.theme.space[2]};
+    [theme.breakpoints.down('sm')]: {
+      font-size: ${theme.typography.h4.fontSize};
+      margin-left: ${theme.typography.spacing};
     }
 
-    @media (max-width: ${props => props.theme.breakpoints[0]}) {
-      font-size: ${props => props.theme.fontSizes[0]};
-      margin-left: ${props => props.theme.space[2]};
+    [theme.breakpoints.only(‘xs’)]: {
+      font-size: ${theme.typography.h5.fontSize};
+      margin-left: ${theme.typography.spacing};
     }
   }
 `

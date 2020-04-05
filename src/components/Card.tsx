@@ -8,7 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import PropTypes from 'prop-types'
 import Container from '@material-ui/core/Container'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
@@ -22,13 +22,12 @@ const RaisedCard = styled(Container)`
   
   z-index: 3;
   position: relative;
-  background-color: ${theme.palette.primary.text};
-  color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.contrastText};
+  color: ${theme.palette.primary.main};
   display: flex
   flexDirection: column
   minWidth: 0;
   wordWrap: break-word;
-  fontSize: 1.5rem ;
   transition: all 300ms linear ; 
 `
 
@@ -38,16 +37,16 @@ const CardContainer = styled(Container)`
   grid-template-rows:  1fr;
   grid-template-areas: 
   'cardcontent cardimage' ;
-  background-color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.main};
   text-align: center;
   box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
   padding: 1;
 ` 
 const CardImage = styled(PreviewCompatibleImage)`
   grid-area: cardimage;
-  background-color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.main};
   padding: 0;
-  .text {color: ${theme.palette.primary.text};}
+  .text {color: ${theme.palette.primary.contrastText};}
 `
 
 const MediaCard = ({ posts }) => (
@@ -71,10 +70,10 @@ const MediaCard = ({ posts }) => (
                         </CardContent>
                     </CardActionArea>
                     <CardActions>
-                        <Button size="small" color={theme.palette.primary.background}>
+                        <Button size="small" color={theme.palette.primary.main}>
                         Share
                         </Button>
-                        <Button size="small" color={theme.palette.primary.background}>
+                        <Button size="small" color={theme.palette.primary.main}>
                         Learn More
                         </Button>
                     </CardActions>

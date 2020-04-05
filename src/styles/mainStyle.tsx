@@ -1,15 +1,16 @@
 import React from 'react'
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import theme from '../gatsby-plugin-theme-ui/index'
-import palette from '../gatsby-plugin-theme-ui/palette'
+import styled, { createGlobalStyle } from 'styled-components'
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
+
 import reset from './reset'
 
 
 const Main = styled.main`
-background-color: ${palette.palette.secondary.main};
+background-color: ${theme.palette.primary.main};
 
-@media (min-width: calc(${props => props.theme.breakpoints[2]} )) {
-  grid-template-columns: ${props => props.theme.sidebar.width.normal} 1fr 1fr  1fr 1fr;
+[theme.breakpoints.down('md')]: {
+  grid-template-columns: ${theme.sidebar.width.big} 1fr 1fr 1fr 1fr;
   grid-column-start: 2;
 }
 `

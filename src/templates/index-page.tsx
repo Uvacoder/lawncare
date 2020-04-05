@@ -3,51 +3,45 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import Features from '../components/Features'
-import Spotlight from '../components/spotlight'
 import BlogIndex from '../components/BlogIndex'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import SEO from '../components/SEO'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import { Box, Flex, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import GridItem from '../components/grid-item'
 import GlobalStyles from '../styles/globalStyle'
-
+import GridStyle from '../styles/gridStyle'
 
 const PBox = styled(AnimatedBox)`
   margin: 30 auto;
 `
 
-
-
 const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
+  background-color: ${props => transparentize(0.9, theme.palette.primary.main)};
   
 
   .gatsby-image-wrapper:not(:last-child) {
-    margin-bottom: ${props => props.theme.space[10]};
+    margin-bottom: ${theme.typography.spacing};
 
-    @media (max-width: ${props => props.theme.breakpoints[3]}) {
-      margin-bottom: ${props => props.theme.space[8]};
+    [theme.breakpoints.down('lg')]: {
+      margin-bottom: ${theme.typography.spacing};
     }
   }
 `
 
-
 const RaisedHeader = styled(Container)`
-  margin: -300px 10px 140px 10px;
-  //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
+  padding: 20px;
+  margin: -300px 5% 0px 5%;
   box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
-  border-radius: 12px;
   z-index: 3;
   position: relative;
-  background-color: ${theme.palette.primary.text};
-  color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.contrastText};
+  color: ${theme.palette.primary.main};
   display: flex
   flexDirection: column
   minWidth: 0;
@@ -63,9 +57,9 @@ const PageTitle = styled(Container)`
   'titlepart1 titlepart2'
   'title'   ;
   padding: 1rem ;
-  background-color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.main};
   text-align: center;
-  margin: -80px 25% 20px 25%;
+  margin: -80px 15% 20px 15%;
   box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
   PageTilePlain: {
     marginLeft: "0px",
@@ -76,31 +70,27 @@ const PageTitle = styled(Container)`
 
 const TitlePart1 = styled(GridItem)`
   grid-area: titlepart1;
-  color: ${theme.palette.primary.active}; 
+  color: ${theme.palette.secondary.main}; 
   text-transform: none;
   font-weight: 400;
-  font-size: ${props => props.theme.fontSizes[5]};
+  font-size: ${theme.typography.h5.fontSize};
  `
 
 const TitlePart2 = styled(GridItem)`
   grid-area: titlepart2;
-  color: ${theme.palette.primary.text}; 
+  color: ${theme.palette.primary.contrastText}; 
   text-transform: none;
   font-weight: 400;
-  font-size: ${props => props.theme.fontSizes[5]};
+  font-size: ${theme.typography.h5.fontSize};
  `
 
-const HorizontalImg = styled(Img)`
-  grid-area: logo;
-
-`
 const Title = styled(GridItem)`
   grid-area: title;
-  color: ${theme.palette.primary.active}; 
+  color: ${theme.palette.secondary.main}; 
   text-transform: none;
   font-weight: 400;
-  color: ${theme.palette.primary.text}; 
-  font-size: ${props => props.theme.fontSizes[1]};
+  color: ${theme.palette.primary.contrastText}; 
+  font-size: ${theme.typography.h1.fontSize};
 
 `
 
@@ -120,13 +110,14 @@ const PButton = styled(Button)<{ color: string }>`
 
 const Area = styled(animated.div)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: ${theme.sidebar.width.big} repeat(auto-fill, minmax(450px, 1fr));
   grid-auto-rows: 50vw;
+  grid-column-start: 2;
 
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 60vw;
-  }
+ [theme.breakpoints.down('md')]:  {
+  grid-template-columns: 1fr;
+  grid-auto-rows: 50vw;
+}
 `
 
 export const IndexPageTemplate = ({
@@ -136,7 +127,9 @@ export const IndexPageTemplate = ({
   slug,
   html,
 }) => (
+
   <div>
+ 
     <GlobalStyles />
     
     <div
@@ -168,6 +161,8 @@ export const IndexPageTemplate = ({
         justifyContent: 'space-around',
         alignItems: 'left',
         flexDirection: 'column',}}>
+
+          
             <PageTitle   style={{
         display: 'flex',
         width: '70%' ,
@@ -179,7 +174,6 @@ export const IndexPageTemplate = ({
        <br />
        <TitlePart2>Lawn Care</TitlePart2></Container>
 
- {/* <h2>  <Title color={theme.palette.primary.active}>{heading}</Title></h2> */}
         
           </PageTitle>
        
@@ -189,39 +183,27 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="columns">
                   <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {/* {heading} */}
-                    </h3>
+           
                <div dangerouslySetInnerHTML={{ __html: html }} />
                   </div>
                 </div>
-                <Flex
+                {/* <Flex
               flexWrap="nowrap"
               flexDirection={['row', 'row', 'row', 'column']}
               alignItems={['center', 'center', 'center', 'flex-start']}
               justifyContent="space-between"
             >
     
-               </Flex>
+               </Flex> */}
 
 
-                <div className="columns">
-                  <div >
-                    {/* <Link className="btn" to="/products">
-                      See all products
-                    </Link> */}
-                  </div>
-                </div>
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                    About Us
                   </h3>
+               
                   <BlogIndex />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
+   
                 </div>
               </div>
       </div>
@@ -229,7 +211,9 @@ export const IndexPageTemplate = ({
     </RaisedHeader>
     
     </div>
+
   </div>
+
 )
 
 IndexPageTemplate.propTypes = {
@@ -241,6 +225,7 @@ IndexPageTemplate.propTypes = {
   posts: PropTypes.shape({
     frontmatter: PropTypes.array,
   }),
+
 }
 
 const IndexPage = ({ data }) => {
@@ -255,7 +240,7 @@ const IndexPage = ({ data }) => {
         slug={data.markdownRemark.frontmatter.slug}
         heading={data.markdownRemark.frontmatter.heading}
         html={data.markdownRemark.html}
-      />
+         />
     </Layout>
   )
 }
@@ -269,6 +254,9 @@ IndexPage.propTypes = {
   allMarkdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
   }),
+  site: PropTypes.shape({
+    siteMetadata: PropTypes.object,
+}),
 }
 
 export default IndexPage
@@ -309,6 +297,11 @@ allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {or
           }
         }
       }
+    }
+  }
+  site {
+    siteMetadata {
+      serviceName
     }
   }
 }

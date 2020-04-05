@@ -10,7 +10,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import SEO from '../components/SEO'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import { Box, Flex, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
@@ -26,14 +26,14 @@ const PBox = styled(AnimatedBox)`
 
 
 const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
+  background-color: ${props => transparentize(0.9, theme.palette.primary.main)};
   
 
   .gatsby-image-wrapper:not(:last-child) {
-    margin-bottom: ${props => props.theme.space[10]};
+    margin-bottom: ${theme.typography.spacing};
 
-    @media (max-width: ${props => props.theme.breakpoints[3]}) {
-      margin-bottom: ${props => props.theme.space[8]};
+    [theme.breakpoints.down('lg')]:  {
+      margin-bottom: ${theme.typography.spacing};
     }
   }
 `
@@ -46,8 +46,8 @@ const RaisedHeader = styled(Container)`
   border-radius: 12px;
   z-index: 3;
   position: relative;
-  background-color: ${theme.palette.primary.text};
-  color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.contrastText};
+  color: ${theme.palette.primary.main};
   display: flex
   flexDirection: column
   minWidth: 0;
@@ -63,7 +63,7 @@ const PageTitle = styled(Container)`
   'titlepart1 titlepart2'
   'title'   ;
   padding: 1rem ;
-  background-color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.main};
   text-align: center;
   margin: -80px 25% 20px 25%;
   box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
@@ -76,18 +76,18 @@ const PageTitle = styled(Container)`
 
 const TitlePart1 = styled(GridItem)`
   grid-area: titlepart1;
-  color: ${theme.palette.primary.active}; 
+  color: ${theme.palette.secondary.main}; 
   text-transform: none;
   font-weight: 400;
-  font-size: ${props => props.theme.fontSizes[5]};
+  font-size: ${theme.typography.h5.fontSize};
  `
 
 const TitlePart2 = styled(GridItem)`
   grid-area: titlepart2;
-  color: ${theme.palette.primary.text}; 
+  color: ${theme.palette.primary.contrastText}; 
   text-transform: none;
   font-weight: 400;
-  font-size: ${props => props.theme.fontSizes[5]};
+  font-size: ${theme.typography.h5.fontSize};
  `
 
 const HorizontalImg = styled(Img)`
@@ -96,11 +96,11 @@ const HorizontalImg = styled(Img)`
 `
 const Title = styled(GridItem)`
   grid-area: title;
-  color: ${theme.palette.primary.active}; 
+  color: ${theme.palette.secondary.main}; 
   text-transform: none;
   font-weight: 400;
-  color: ${theme.palette.primary.text}; 
-  font-size: ${props => props.theme.fontSizes[1]};
+  color: ${theme.palette.primary.contrastText}; 
+  font-size: ${theme.typography.h1.fontSize};
 
 `
 
@@ -123,7 +123,7 @@ const Area = styled(animated.div)`
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 50vw;
 
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
+   [theme.breakpoints.down('md')]:  {
     grid-template-columns: 1fr;
     grid-auto-rows: 60vw;
   }
@@ -179,7 +179,7 @@ export const HeaderPageTemplate = ({
        <br />
        <TitlePart2>matter</TitlePart2></Container>
 
-<h4>  <Title color={theme.palette.primary.active}>{heading}</Title></h4>
+<h4>  <Title color={theme.palette.secondary.main}>{heading}</Title></h4>
         
           </PageTitle>
        
@@ -217,7 +217,7 @@ export const HeaderPageTemplate = ({
                 </div>
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                    Categories
                   </h3>
                   <BlogIndex />
                   <div className="column is-12 has-text-centered">

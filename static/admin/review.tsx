@@ -6,8 +6,7 @@ import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
-import theme from '../gatsby-plugin-theme-ui/index'
-import palette from '../gatsby-plugin-theme-ui/palette'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
@@ -26,20 +25,20 @@ const PBox = styled(AnimatedBox)`
 
 
 const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, theme.palette.primary.background)};
+  background-color: ${props => transparentize(0.9, theme.palette.primary.main)};
 
   .gatsby-image-wrapper:not(:last-child) {
-    margin-bottom: ${theme.space[10]};
+    margin-bottom: ${theme.typography.spacing};
 
-    @media (max-width: ${theme.breakpoints[3]}) {
-      margin-bottom: ${theme.space[8]};
+    [theme.breakpoints.down('lg')]: {
+      margin-bottom: ${theme.typography.spacing};
     }
   }
 `
 
 const Category = styled(AnimatedBox)`
   letter-spacing: 0.05em;
-  font-size: ${theme.fontSizes[1]};
+  font-size: ${theme.typography.h1.fontSize};
   text-transform: none;
 `
 const RaisedHeader = styled(Container)`
@@ -50,8 +49,8 @@ const RaisedHeader = styled(Container)`
   border-radius: 12px;
   z-index: 3;
   position: relative;
-  background-color: ${palette.palette.primary.text};
-  color: ${palette.palette.primary.background};
+  background-color: ${theme.palette.primary.text};
+  color: ${theme.palette.primary.main};
   display: flex
   flexDirection: column
   minWidth: 0;
@@ -67,7 +66,7 @@ const PageTitle = styled(Container)`
   'TitlePart1 titlepart2'
   'title'   ;
   padding: 1rem ;
-  background-color: ${palette.palette.primary.background};
+  background-color: ${theme.palette.primary.main};
   text-align: center;
   margin: -80px 25% 20px 25%;
   box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
@@ -81,18 +80,18 @@ const PageTitle = styled(Container)`
 ` 
 const TitlePart1 = styled(GridItem)`
   grid-area: titlepart1;
-  color: ${palette.palette.primary.active}; 
+  color: ${theme.palette.secondary.main }; 
   text-transform: none;
   font-weight: 400;
-  font-size: ${theme.fontSizes[5]};
+  font-size: ${theme.typography.h5.fontSize};
  `
 
 const TitlePart2 = styled(GridItem)`
   grid-area: titlepart2;
-  color: ${palette.palette.primary.text}; 
+  color: ${theme.palette.primary.text}; 
   text-transform: none;
   font-weight: 400;
-  font-size: ${theme.fontSizes[5]};
+  font-size: ${theme.typography.h5.fontSize};
  `
 
 const HorizontalImg = styled(Img)`
@@ -101,11 +100,11 @@ const HorizontalImg = styled(Img)`
 `
 const Title = styled(GridItem)`
   grid-area: title;
-  color: ${palette.palette.primary.active}; 
+  color: ${theme.palette.secondary.main }; 
   text-transform: none;
   font-weight: 400;
-  color: ${palette.palette.primary.text}; 
-  font-size: ${theme.fontSizes[1]};
+  color: ${theme.palette.primary.text}; 
+  font-size: ${theme.typography.h1.fontSize};
 
 `
 
@@ -214,17 +213,17 @@ type PageProps = {
                      style={{
                      boxShadow: 'transparent',
                      borderRadius: '0px',
-                     backgroundColor: palette.palette.primary.background,
-                     color: palette.palette.primary.text,
+                     backgroundColor: theme.palette.primary.main,
+                     color: theme.palette.primary.text,
                      lineHeight: '1',
                      padding: '0.3em',
           
                  }}>
 
-<Category style={categoryAnimation} color={palette.palette.primary.text}> 
+<Category style={categoryAnimation} color={theme.palette.primary.text}> 
  <TitlePart1>customer</TitlePart1> <TitlePart2>review</TitlePart2>
  <br />
- <Title color={palette.palette.primary.active}>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
+ <Title color={theme.palette.secondary.main }>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
 </Container>
  </PageTitle>
    
@@ -236,7 +235,7 @@ type PageProps = {
    
     <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
       <Link to="/contactus">
-      <Button variant="contained" color={palette.palette.primary.active} margin="1rem" py={4} px={8}>
+      <Button variant="contained" color={theme.palette.secondary.main } margin="1rem" py={4} px={8}>
         Contact Us
       </Button>
       </Link>

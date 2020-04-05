@@ -1,10 +1,10 @@
 module.exports = {
   pathPrefix: '/', // Prefix for all links. "
 
-  siteTitle: 'lawnsmatter.co.uk', // Navigation and Site Title
+  siteTitle: 'Professional Lawn Care Service', // Navigation and Site Title
   siteTitleAlt: 'lawnsmatter.co.uk - Lawn Care Service', // Alternative Site title for SEO
   siteTitleShort: 'lawnsmatter.co.uk', // short_name for manifest
-  siteHeadline: 'Take a look at our services and see our recent projects.', // Headline for schema.org JSONLD
+  siteHeadline: 'Professional Lawn Care Service based in Oxfordshire', // Headline for schema.org JSONLD
   siteUrl: 'https://lawnsmatter.co.uk', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/img/logo.png', // Used for SEO and manifest
@@ -24,7 +24,7 @@ module.exports = {
   // Service SEO
   type: 'Service',
   serviceType: 'Lawn Care',
-  serviceName: 'Professional Lawn Care Service',
+  serviceName: 'Professional Lawn Care',
   provider: {
     type: 'LocalBusiness',
     name: 'Lawns Matter',

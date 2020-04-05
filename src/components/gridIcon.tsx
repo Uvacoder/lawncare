@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import {  Box } from '../elements'
 
 const GridIcon = styled(Box)`
@@ -13,7 +13,7 @@ const GridIcon = styled(Box)`
   margin: .1rem;
   border: 0 1px solid white;
   border-radius: 5px;
-  background-color: ${theme.palette.primary.background}; 
+  background-color: ${theme.palette.primary.main}; 
     
 `
 

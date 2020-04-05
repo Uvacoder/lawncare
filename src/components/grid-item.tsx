@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Container from '@material-ui/core/Container';
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 const GridItem = styled(Container)`
   position: relative;
@@ -21,21 +21,20 @@ const GridItem = styled(Container)`
     left: 0;
     bottom: 0;
     maxHeight: 30%;
-    width: 60%;
-    margin: 15% 10%;
+    width: 90%;
+    margin: 10% ;
     right: 0;
-    background-color: ${theme.palette.primary.background};
+    background-color: ${theme.palette.primary.main};
     box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
     text-align: left;
-    font-weight: 400;
-    font-size: ${theme.fontSizes[3]};
+    font-size: ${theme.typography.h3.fontSize};
     text-transform: none;
-    padding: ${theme.space[4]};
+    padding: ${theme.spacing(2)};
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-    @media (max-width: ${theme.breakpoints[3]}) {
-      font-size: ${theme.fontSizes[2]};
-      padding: ${theme.space[4]};
+    [theme.breakpoints.down('md')]: {
+      font-size: ${theme.typography.h5.fontSize};
+      padding: ${theme.spacing(2)};
     }
   }
   &:hover {

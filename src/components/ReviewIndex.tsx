@@ -9,7 +9,7 @@ import Layout from './layout'
 import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 type PageProps = {
   data: {
@@ -35,7 +35,7 @@ type PageProps = {
 const Area = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 30vw;
+
 
 
 `
@@ -53,14 +53,11 @@ class ReviewIndex extends React.Component {
         {reviews &&
           reviews.map(({ node: review }) => (
 
-         <GridLink key={review.frontmatter.slug} to={review.frontmatter.slug} aria-label={`View our lastest news "${review.frontmatter.title}"`}>
-                        {/* <Img fluid={review.frontmatter.featuredimage.childImageSharp.fluid} /> */}
-            <span>{review.frontmatter.title} 
-            <br />
-            {review.frontmatter.location}
-            <br />
-            <p>{review.excerpt}</p> </span>
-          </GridLink>
+         <Link key={review.frontmatter.slug} to={review.frontmatter.slug} aria-label={`View our lastest news "${review.frontmatter.title}"`}>
+         <h6> {review.excerpt} {review.frontmatter.title} - {review.frontmatter.location}</h6>
+       
+         
+          </Link>
          
           ))}
       </Area>

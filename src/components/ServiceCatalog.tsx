@@ -9,7 +9,8 @@ import Layout from './layout'
 import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
+
 
 type PageProps = {
   data: {
@@ -33,13 +34,13 @@ type PageProps = {
 
 const Area = styled(animated.div)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   grid-auto-rows: 50vw;
   grid-row-start: 2;
 
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
+   [theme.breakpoints.down('md')]:  {
     grid-template-columns: 1fr;
-    grid-auto-rows: 60vw;
+    grid-auto-rows: 50vw;
   }
 `
 class ServiceCatalog extends React.Component {

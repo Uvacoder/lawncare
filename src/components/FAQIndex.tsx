@@ -9,7 +9,7 @@ import Layout from './layout'
 import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 type PageProps = {
   data: {
@@ -33,9 +33,9 @@ type PageProps = {
 }
 
 const Area = styled(animated.div)`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 30vw;
+display: grid;
+grid-template-columns: 1fr;
+padding: 1rem;
 
 
 `
@@ -53,13 +53,11 @@ class FAQIndex extends React.Component {
         {faqs &&
           faqs.map(({ node: faq }) => (
 
-         <GridLink padding="1rem" key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`Frequently Asked Questions "${faq.frontmatter.title}"`}>
-                        {/* <Img fluid={faq.frontmatter.featuredimage.childImageSharp.fluid} /> */}
-            <span>{faq.frontmatter.title} 
-            <br />
-            <br />
-            <p>{faq.excerpt}</p> </span>
-          </GridLink>
+         <Link key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`Frequently Asked Questions "${faq.frontmatter.title}"`}>
+                      
+            <span><h5>Q. {faq.frontmatter.title}</h5>
+            <h6>{faq.excerpt}</h6> </span>
+          </Link>
          
           ))}
       </Area>
@@ -75,7 +73,7 @@ export default () => (
       allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "faq"}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
-           excerpt(pruneLength: 147)
+           excerpt(pruneLength: 400)
             id
             frontmatter {
               slug

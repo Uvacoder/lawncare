@@ -9,7 +9,7 @@ import PhoneLink from './phoneLink'
 import FacebookLink from './FacebookLink'
 import EmailLink from './EmailLink'
 import InstagramIcon from '@material-ui/icons/Instagram'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 
@@ -27,7 +27,7 @@ export default function IconButtonBar() {
     return (
 <div><Container className={classes.iconButtonBar} >
 <ListItem button ><FacebookLink /></ListItem>
-<ListItem button ><Link to="/instagram"><InstagramIcon /></Link></ListItem>
+<ListItem button ><Link to="/instagram"><InstagramIcon  style={{ color: theme.palette.primary.contrastText }} /></Link></ListItem>
 <ListItem button ><PhoneLink /></ListItem>
 <ListItem button ><EmailLink /></ListItem>
 </Container></div>

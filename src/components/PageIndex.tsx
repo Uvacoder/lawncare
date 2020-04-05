@@ -9,7 +9,7 @@ import Layout from './layout'
 import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Container from '@material-ui/core/Container' 
 import { Box, AnimatedBox } from '../elements'
 
@@ -34,9 +34,9 @@ type PageProps = {
 }
 const Category = styled(AnimatedBox)`
   letter-spacing: 0.05em;
-  font-size: ${props => props.theme.fontSizes[1]};
+  font-size: ${theme.typography.h1.fontSize};
   text-transform: capitalize;
-  color: ${theme.palette.primary.active};
+  color: ${theme.palette.secondary.main};
 `
 const Area = styled(animated.div)`
   display: grid;
@@ -56,8 +56,8 @@ const RaisedHeader = styled(Container)`
   border-radius: 12px;
   z-index: 3;
   position: relative;
-  background-color: ${theme.palette.primary.text};
-  color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.contrastText};
+  color: ${theme.palette.primary.main};
   display: flex
   flexDirection: column
   minWidth: 0;
@@ -73,7 +73,7 @@ const PageTitle = styled(Container)`
   'titlepart1 titlepart2'
   'title';
   padding: 1rem ;
-  background-color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.main};
   text-align: center;
    margin: 100px 25% 20px 25%;
   box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
@@ -85,28 +85,15 @@ const PageTitle = styled(Container)`
 
 
 ` 
-const TitlePart1 = styled(GridLink)`
-  grid-area: titlepart1;
-  color: ${theme.palette.primary.active}; 
-  text-transform: none;
-  font-weight: 400;
-  font-size: ${theme.fontSizes[3]};
- `
 
-const TitlePart2 = styled(GridLink)`
-  grid-area: titlepart2;
-  color: ${theme.palette.primary.text}; 
-  text-transform: none;
-  font-weight: 400;
-  font-size: ${theme.fontSizes[3]};
- `
  const Title = styled(GridLink)`
   grid-area: title;
-  color: ${theme.palette.primary.active}; 
+  color: ${theme.palette.secondary.main}; 
+  flex-flow: row wrap;
   text-transform: none;
   font-weight: 400;
-  color: ${theme.palette.primary.text}; 
-  font-size: ${props => props.theme.fontSizes[1]};
+  color: ${theme.palette.primary.contrastText}; 
+  font-size: ${theme.typography.h5.fontSize};
 
 `
 
@@ -119,40 +106,25 @@ class PageIndex extends React.Component {
     return (
 
       <Layout color={theme.palette.primary.main}>
-        <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
+        <SEO title={data.site.siteMetadata.title} />
         <Area>
         {pages &&
           pages.map(({ node: page }) => (
 
          <GridLink key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
            <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
-           <Container > 
-   {/* <RaisedHeader    style={{
-        display: 'flex',
-        width: '90%' ,
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        alignItems: 'left',
-        flexDirection: 'column',}} />
-       */}
-
-   <PageTitle   style={{
-        display: 'flex',
-        width: '50%' ,
-        lineHeight: '1',
-        position: 'relative',
-        bottom: '20px',
-        justifyContent: 'flex-end',
-        alignItems: 'left',
-        flexDirection: 'column',}}>
-           <Category color={theme.palette.primary.text}>
-          {/* <TitlePart1>lawn</TitlePart1> <TitlePart2>care</TitlePart2>
-             <br /> */}
-           <h5> <Title color={theme.palette.primary.active}>{page.frontmatter.title}</Title> </h5>
-            </Category>
-            </PageTitle>
-            </Container>
-            {/* </RaisedHeader> */}
+              <Container > 
+                    <PageTitle   style={{
+                          width: '90%' ,
+                          lineHeight: '1',
+                          justifyContent: 'center',
+                          alignItems: 'left',
+                          flexDirection: 'row',}}>
+                              <Title color={theme.palette.secondary.main}>{page.frontmatter.title}</Title> 
+                    </PageTitle>
+                
+                </Container>
+           
           </GridLink>
 
           ))}
@@ -187,6 +159,11 @@ export default () => (
             }
           }
         }
+      }
+      site {
+        siteMetadata {
+          title
+         }
       }
     }
     `}

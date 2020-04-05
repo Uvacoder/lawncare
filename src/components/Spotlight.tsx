@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import { Box, AnimatedBox } from '../elements'
 import Container from '@material-ui/core/Container'
 import PropTypes from 'prop-types'
@@ -14,8 +14,8 @@ const RaisedHeader = styled(Container)`
   
   z-index: 3;
   position: relative;
-  background-color: ${theme.palette.primary.text};
-  color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.contrastText};
+  color: ${theme.palette.primary.main};
   display: flex
   flexDirection: column
   minWidth: 0;
@@ -30,7 +30,7 @@ const GridContainer = styled(Container)`
   grid-template-rows:  35vw ;
   grid-template-areas: 
   'gridcontent gridimage' ;
-  background-color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.main};
   text-align: center;
   box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
   padding: 0;
@@ -38,17 +38,17 @@ const GridContainer = styled(Container)`
 ` 
 const GridContent = styled(Box)`
   grid-area: gridcontent;
-  background-color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.main};
   text-align: left;
-  color: ${theme.palette.primary.text};
+  color: ${theme.palette.primary.contrastText};
   padding: 1rem;
 
   .title {
-    color: ${theme.palette.primary.active};
+    color: ${theme.palette.secondary.main};
   }
   
   .text{
-    color: ${theme.palette.primary.text};
+    color: ${theme.palette.primary.contrastText};
 
   }
   
@@ -56,9 +56,9 @@ const GridContent = styled(Box)`
 `
 const GridImage = styled(PreviewCompatibleImage)`
   grid-area: gridimage;
-  background-color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.main};
   padding: 0;
-  .text {color: ${theme.palette.primary.text};}
+  .text {color: ${theme.palette.primary.contrastText};}
 `
 const Spotlight = ({ gridItems }) => (
   <div >
@@ -70,7 +70,7 @@ const Spotlight = ({ gridItems }) => (
     
           <GridImage grid-area="gridimage" imageInfo={item} />
  
-          <GridContent grid-area="gridcontent"  background-color={theme.palette.primary.background}>
+          <GridContent grid-area="gridcontent"  background-color={theme.palette.primary.main}>
             <h3 className="title">
               {item.title}    </h3>
               <p className="text">

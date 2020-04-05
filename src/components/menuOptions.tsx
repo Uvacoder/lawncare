@@ -20,13 +20,7 @@ class MenuOptions extends React.Component {
   const { nodes: menuOptions } = data.allNavigationYaml
   return (
 
-    <Link to={data.allNavigationYaml.nodes.link}>
-      <ListItem>
-        <ListItemText>
-          {data.allNavigationYaml.nodes.name}
-        </ListItemText>
-      </ListItem>
-    </Link>
+    <Link to={data.allNavigationYaml.nodes.link}><ListItem><ListItemText>{data.allNavigationYaml.nodes.name}</ListItemText></ListItem></Link>
     )
   }
 }

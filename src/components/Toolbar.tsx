@@ -1,25 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby'
-import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Divider from '@material-ui/core/Divider';
-import ListItemText from '@material-ui/core/ListItemText';
-import LogoLarge from './logoLarge'
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import LogoSmall from './logoSmall'
-import GlobalStyles from '../styles/globalStyle'
-import Button from './CallButton';
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Grid from '@material-ui/core/Grid'
 import SimpleMenu from './SimpleMenu'
 import PhoneNo from '../components/phoneNo'
-import PhoneIcon from '@material-ui/icons/Phone';
-import ToolbarStyle from '../styles/toolbarStyle'
-import palette from '../gatsby-plugin-theme-ui/palette'
-import ButtonBases from '../components/MenuButton'
-import Box from '@material-ui/core/Box';
 import CallButton from '../components/CallButton'
 
 
@@ -36,27 +25,27 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 0,
-      backgroundColor: palette.palette.primary.background,
+      backgroundColor: theme.palette.primary.main,
       display: 'flex',
       flexDirection: 'row',
 
     },
     ListItemText: {
-      color: palette.palette.primary.text,
+      color: theme.palette.primary.contrastText,
     },
     drawerPaper: {
-      color: palette.palette.primary.background,
-      backgroundColor: palette.palette.primary.background,
+      color: theme.palette.primary.main,
+      backgroundColor: theme.palette.primary.main,
     }, 
     drawer: {
       [theme.breakpoints.up('sm')]: {
 
         flexShrink: 2,
-        color: palette.palette.primary.background,
+        color: theme.palette.primary.main,
       },
     },
     LogoSmall: {
-      height: '18vw',
+      height: '12vw',
     }
   }),
 );
@@ -68,60 +57,45 @@ export default function ElevateAppBar(props: Props) {
   return (
     <div className={classes.root}>
      
-      <CssBaseline />
-      <GlobalStyles />
-      <AppBar 
-        className={classes.drawerPaper}
-        backgroundColor={palette.palette.primary.background}
-        position="fixed">
-        <Toolbar
-        backgroundColor={palette.palette.primary.background}
-        
+      {/* <CssBaseline />
+      <GlobalStyles /> */}
+        <AppBar 
+          className={classes.drawerPaper}
+          backgroundColor={theme.palette.primary.main}
+          position="fixed">
+          <Toolbar
+          backgroundColor={theme.palette.primary.main}
           className={classes.drawer}
-          variant="permanent"
-          anchor="top"
-          
-         
-         
-                alignItems="space-between"
-              >
-            
-        <Grid container 
-        position="relative"
-              justify="center"
-          alignItems="flex-end">  
-
-         
-        <Grid item xs={3}
-             display="flex"
-             alignItems="flex-end"
-             justify="center"
-         
-        >
-         
-                <SimpleMenu/>
-           
-           </Grid>   
-        
-          <Grid item xs={6}>
-  
-            <Link to="/">
-              <LogoSmall />
-            </Link>
-     
-            </Grid>     
-            <Grid item xs={3} >
-        
-            <a href={`tel:${<PhoneNo />}`} rel="nofollow">
-
-             <CallButton />
-               </a>
-            </Grid>   
-         <Divider />
-
-        </Grid>
-        </Toolbar>
+          variant="permanent"  
+          anchor="top" 
+          alignItems="space-between" 
+          >
+                
+            <Grid container position="relative" justify="center" alignItems="flex-end">  
+                <Grid item xs={3} display="flex" alignItems="flex-end" justify="center" >
+                  <SimpleMenu />
+                </Grid>   
+                <Grid item xs={6}>
+                  <Link to="/">
+                      <LogoSmall />
+                  </Link>
+                </Grid>     
+                <Grid item xs={3} >
+                  <a href={`tel:${<PhoneNo />}`} rel="nofollow">
+                    <CallButton />
+                  </a>
+                </Grid>   
+              <Divider />
+            </Grid>
+          </Toolbar>
         </AppBar> 
+     {/* The second copy of the toolbar with logo has been inserted to stop the content being cropped. */}
+     
+     <Toolbar>     <Grid item xs={6}>
+                  <Link to="/">
+                      <LogoSmall />
+                  </Link>
+                </Grid> </Toolbar>
     </div>
   );
 }

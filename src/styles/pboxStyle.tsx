@@ -1,7 +1,8 @@
 
 import React from 'react'
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import theme from '../gatsby-plugin-theme-ui/index'
+import styled, { createGlobalStyle } from 'styled-components'
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import reset from './reset'
 
 
@@ -11,11 +12,11 @@ const PBox = styled(AnimatedBox)`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: ${props => props.theme.breakpoints[4]}) {
+  @media (max-width: ${theme.breakpoints.down('xl')}) {
     margin: .1rem;
    }
 
-  @media (max-height: ${props => props.theme.breakpoints[2]}/2 2fr) {
+  @media (max-height: ${theme.breakpoints.down('md')}/2 2fr) {
    margin: .5rem;
   }
 

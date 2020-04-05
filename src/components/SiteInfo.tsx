@@ -9,7 +9,7 @@ import Layout from './layout'
 import GridItem from './grid-item'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 type PageProps = {
   data: {
@@ -36,7 +36,7 @@ const Area = styled(animated.div)`
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 50vw;
 
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
+   [theme.breakpoints.down('md')]:  {
     grid-template-columns: 1fr;
     grid-auto-rows: 60vw;
   }
@@ -49,7 +49,7 @@ class SiteInfo extends React.Component {
 
     return (
 
-      <Layout color={theme.palette.primary.background}>
+      <Layout color={theme.palette.primary.main}>
         <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
         <Area>
         {posts &&

@@ -6,25 +6,25 @@ import {Link} from 'gatsby';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import GlobalStyles from '../styles/globalStyle'
 import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Nav from '../styles/navStyle'
-import palette from '../gatsby-plugin-theme-ui/palette'
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 0,
-      backgroundColor: palette.palette.primary.background,
+      backgroundColor: theme.palette.primary.main,
     },
     button: {
-      color: palette.palette.primary.text,
+      color: theme.palette.primary.contrastText,
     },
     drawer: {
       display: 'flex',
     },
     drawerPaper: {
-      backgroundColor: palette.palette.primary.background,
-      color: palette.palette.primary.main,
+      backgroundColor: theme.palette.primary.main,
+      color: theme.palette.primary.main,
     }
   }),
 );

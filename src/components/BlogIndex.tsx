@@ -4,12 +4,12 @@ import { graphql, StaticQuery, Link } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { config, animated, useSpring } from 'react-spring'
+import { animated } from 'react-spring'
 import Layout from './layout'
 import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 type PageProps = {
   data: {
@@ -36,7 +36,7 @@ const Area = styled(animated.div)`
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 50vw;
 
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
+ [theme.breakpoints.down('md')]: {
     grid-template-columns: 1fr;
     grid-auto-rows: 60vw;
   }
@@ -49,15 +49,13 @@ class BlogIndex extends React.Component {
 
     return (
 
-    
-   
         <Area>
         {posts &&
           posts.map(({ node: post }) => (
 
          <GridLink key={post.frontmatter.slug} to={post.frontmatter.slug} aria-label={`View our lastest news "${post.frontmatter.title}"`}>
                         <Img fluid={post.frontmatter.featuredimage.childImageSharp.fluid} />
-            <span>{post.frontmatter.title}</span>
+            <span><h6>{post.frontmatter.title}</h6></span>
           </GridLink>
          
           ))}

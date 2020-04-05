@@ -8,15 +8,15 @@ import { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
 import reset from './reset'
 
 
-const Wrapper = styled.div`
+const ToolbarWrapper = styled.div`
   display: grid;
-  background-color: ${theme.palette.primary.main};
+  background-color: ${theme.palette.primary.contrastText};
   [theme.breakpoints.up('sm')]: {
-  grid-template-columns: ${theme.sidebar.width.big} 1fr;
+  grid-template-rows: ${theme.toolbar.height.big} 1fr;
   }
   [theme.breakpoints.down('md')]: {
-    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 `
 
-export default Wrapper
+export default ToolbarWrapper

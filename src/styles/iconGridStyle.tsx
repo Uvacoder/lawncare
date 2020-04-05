@@ -1,6 +1,7 @@
 
 import React from 'react'
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
+import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../gatsby-plugin-theme-ui/index'
 import reset from './reset'
 

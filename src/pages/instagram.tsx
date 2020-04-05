@@ -8,20 +8,21 @@ import Layout from '../components/layout'
 import { ChildImageSharp } from '../types'
 import SEO from '../components/SEO'
 import Heart from '../heart.svg'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 const Grid = styled(animated.div)`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 
-  @media (max-width: ${props => props.theme.breakpoints[4]}) {
+  [theme.breakpoints.up('xl')]: {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  @media (max-width: ${props => props.theme.breakpoints[3]}) {
+  [theme.breakpoints.up('lg')]: {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: ${props => props.theme.breakpoints[0]}) {
+  [theme.breakpoints.up('xs')]: {
     grid-template-columns: 1fr;
   }
 `
@@ -41,10 +42,10 @@ const Overlay = styled.div`
 const Title = styled.div`
   color: white;
   font-weight: 700;
-  font-size: ${props => props.theme.fontSizes[3]};
+  font-size: ${theme.typography.h3.fontSize};
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  @media (max-width: ${props => props.theme.breakpoints[3]}) {
-    font-size: ${props => props.theme.fontSizes[1]};
+  [theme.breakpoints.up('lg')]: {
+    font-size: ${theme.typography.h1.fontSize};
   }
   transform: translateY(-45px);
   transition: all 0.4s ease 0s;
@@ -53,8 +54,8 @@ const Title = styled.div`
 
 const Bottom = styled(Flex)`
   color: white;
-  @media (max-width: ${props => props.theme.breakpoints[3]}) {
-    font-size: ${props => props.theme.fontSizes[0]};
+  [theme.breakpoints.up('lg')]: {
+    font-size: ${theme.typography.h2.fontSize};
   }
   transform: translateY(45px);
   opacity: 0;
@@ -91,7 +92,7 @@ const Content = styled(Flex)`
   bottom: 0;
   top: 0; 
   right: 0;
-  padding: ${props => props.theme.space[5]};
+  padding: ${theme.typography.spacing};
 `
 
 const HeartIcon = styled.img`
@@ -144,7 +145,7 @@ const Instagram: React.FunctionComponent<Props> = ({
           // Grab everything before the first hashtag (because I write my captions like that)
           const post = instagram[index]
           const title = post.caption ? post.caption.split('#')[0] : ''
-          const date = new Date(post.timestamp * 1000).toLocaleDateString('de-DE')
+          const date = new Date(post.timestamp * 1000).toLocaleDateString('en-US')
 
           return (
             <Item style={style} href={`https://www.instagram.com/p/${post.id}/`} key={post.id}>

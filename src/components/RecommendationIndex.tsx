@@ -9,7 +9,7 @@ import Layout from './layout'
 import GridItem from './grid-item'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Container from '@material-ui/core/Container' 
 import { Box, AnimatedBox } from '../elements'
 
@@ -34,9 +34,9 @@ type PageProps = {
 }
 const Category = styled(AnimatedBox)`
   letter-spacing: 0.05em;
-  font-size: ${props => props.theme.fontSizes[1]};
+  font-size: ${theme.typography.h1.fontSize};
   text-transform: capitalize;
-  color: ${theme.palette.primary.active};
+  color: ${theme.palette.secondary.main};
 `
 const Area = styled(animated.div)`
   display: grid;
@@ -56,8 +56,8 @@ const RaisedHeader = styled(Container)`
   border-radius: 12px;
   z-index: 3;
   position: relative;
-  background-color: ${theme.palette.primary.text};
-  color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.contrastText};
+  color: ${theme.palette.primary.main};
   display: flex
   flexDirection: column
   minWidth: 0;
@@ -73,7 +73,7 @@ const PageTitle = styled(Container)`
   'lawns matter'
   'title'   ;
   padding: 1rem ;
-  background-color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.main};
   text-align: center;
    margin: 100px 25% 20px 25%;
   box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
@@ -87,26 +87,26 @@ const PageTitle = styled(Container)`
 ` 
 const Lawns = styled(GridItem)`
   grid-area: lawns;
-  color: ${theme.palette.primary.active}; 
+  color: ${theme.palette.secondary.main}; 
   text-transform: none;
   font-weight: 400;
-  font-size: ${theme.fontSizes[3]};
+  font-size: ${theme.typography.h3.fontSize};
  `
 
 const Matter = styled(GridItem)`
   grid-area: matter;
-  color: ${theme.palette.primary.text}; 
+  color: ${theme.palette.primary.contrastText}; 
   text-transform: none;
   font-weight: 400;
-  font-size: ${theme.fontSizes[3]};
+  font-size: ${theme.typography.h3.fontSize};
  `
  const Title = styled(GridItem)`
   grid-area: title;
-  color: ${theme.palette.primary.active}; 
+  color: ${theme.palette.secondary.main}; 
   text-transform: none;
   font-weight: 400;
-  color: ${theme.palette.primary.text}; 
-  font-size: ${props => props.theme.fontSizes[1]};
+  color: ${theme.palette.primary.contrastText}; 
+  font-size: ${theme.typography.h1.fontSize};
 
 `
 
@@ -145,10 +145,10 @@ class RecommendationIndex extends React.Component {
         justifyContent: 'flex-end',
         alignItems: 'left',
         flexDirection: 'column',}}>
-           <Category color={theme.palette.primary.text}>
+           <Category color={theme.palette.primary.contrastText}>
           <Lawns>lawn</Lawns> <Matter>care</Matter>
              <br />
-            <Title color={theme.palette.primary.active}>{page.frontmatter.title}</Title>
+            <Title color={theme.palette.secondary.main}>{page.frontmatter.title}</Title>
             </Category>
             </PageTitle>
             </Container>

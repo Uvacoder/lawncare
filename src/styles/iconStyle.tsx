@@ -1,20 +1,21 @@
 
 import React from 'react'
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import theme from '../gatsby-plugin-theme-ui/index'
+import styled, { createGlobalStyle } from 'styled-components'
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import reset from './reset'
 
 
 const Icon = styled(animated.div)`
-height: ${props => props.theme.sidebar.width.big} 6rem;
+height: ${theme.sidebar.width.big} 6rem;
 margin: 1rem;
 
-@media (max-width: ${props => props.theme.breakpoints[4]}) {
+[theme.breakpoints.up('xl')]:  {
   height: 0 4rem;
   margin: .3rem;
  }
 
- @media (max-width: ${props => props.theme.breakpoints[2]}) {
+  [theme.breakpoints.down('md')]:  {
   height: 3rem;
   margin: .2rem;
 

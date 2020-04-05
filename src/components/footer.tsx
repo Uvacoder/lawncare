@@ -6,7 +6,7 @@ import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styl
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import { flexbox } from '@material-ui/system';
-import palette from '../gatsby-plugin-theme-ui/palette'
+
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -19,12 +19,13 @@ import HomeIcon from '@material-ui/icons/Home';
 import GridIcon from './gridIcon'
 import SocialIconButtonBar from "../components/SocialIconButtonBar"
 import Gappsapps from './gappsapps.tsx'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
         flexGrow: 0,
-        backgroundColor: theme.palette.primary.background,
+        backgroundColor: theme.palette.primary.main,
       },  
     Footer: {
         display: 'flex',
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
         alignContent: 'center',
       },
       ListItemText: {
-        color: theme.palette.primary.text,
+        color: theme.palette.primary.contrastText,
       }
     }
 ));

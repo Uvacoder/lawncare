@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-import theme from '../gatsby-plugin-theme-ui/index'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
@@ -15,7 +15,7 @@ const GridContainer = styled(Container)`
   grid-template-rows: 1fr;
   grid-template-areas: 'gridcontent image' ;
   padding: 1rem ;
-  background-color: ${theme.palette.primary.background};
+  background-color: ${theme.palette.primary.main};
   text-align: center;
   box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
   PageTilePlain: {
@@ -31,8 +31,8 @@ const GridContent = styled(Paper)`
 `
 // const GridContent = styled(Paper)`
 //   grid-area: gridcontent;
-//   background-color: ${theme.palette.primary.background};
-//   color: ${theme.palette.primary.text};
+//   background-color: ${theme.palette.primary.main};
+//   color: ${theme.palette.primary.contrastText};
 // `
 
 const FeatureGrid = ({ gridItems }) => (
