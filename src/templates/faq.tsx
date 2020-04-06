@@ -89,6 +89,7 @@ const Title = styled(GridItem)`
 
 const Description = styled(animated.div)`
   max-width: 960px;
+  padding: 30px;
   letter-spacing: -0.003em;
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;

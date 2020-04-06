@@ -49,7 +49,7 @@ const LayoutGrid = styled(Container)`
   grid-template-columns: ${theme.sidebar.width.normal}  1fr;
   grid-template-areas:
   'PermanentDrawerLeft Main';
-  [theme.breakpoints.down('md')]: {
+  [theme.breakpoints.down('sm')]: {
     grid-template-columns: 1fr;
   grid-template-areas:
   'Main';
@@ -69,6 +69,8 @@ const Layout = ({ children, color }: LayoutProps) => {
 
         <Hidden mdUp>
          <ToolbarTop  bg={theme.palette.primary.main} />
+         <ToolbarTop  bg={theme.palette.primary.main} />
+
          <Main>{children}</Main>
         </Hidden>
         <Hidden smDown>
