@@ -189,7 +189,7 @@ type PageProps = {
 
       <Grid container spacing={3}>
         <Grid item xs ><InputField id="standard-secondary" label="Name" id="name-input"   /></Grid>
-        <Grid item xs><InputField label="Telephone Number" id="telephone-number-input" /></Grid>
+        <Grid item xs><InputField label="Tel No:" id="telephone-number-input" /></Grid>
         <Grid item xs><InputField label="Email" id="email-input"   /></Grid>
         </Grid>
         <Grid container spacing={3}>
