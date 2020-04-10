@@ -20,7 +20,7 @@ const Nav = styled(Flex)<{  color: theme.palette.primary.background }>`
   a {
     text-decoration: none;
     color: ${theme.palette.primary.background};
-    font-size: ${theme.typography.h3.fontSize};
+    font-size: ${theme.typography.h2.fontSize};
     line-height: 2;
     justify-content: center;
     &:hover,
@@ -31,7 +31,7 @@ const Nav = styled(Flex)<{  color: theme.palette.primary.background }>`
   Link {
     text-decoration: none;
     color: ${theme.palette.primary.contrastText};
-    font-size: ${theme.typography.h3.fontSize};
+    font-size: ${theme.typography.h2.fontSize};
     line-height: 2;
     align-content: center;
     justify-content: center;
@@ -44,7 +44,7 @@ const Nav = styled(Flex)<{  color: theme.palette.primary.background }>`
     text-decoration: none;
     color: ${theme.palette.primary.contrastText};
     background-color: ${theme.palette.primary.background};
-    font-size: ${theme.typography.h3.fontSize};
+    font-size: ${theme.typography.h2.fontSize};
     line-height: 2;
     align-content: center;
     justify-content: center;

@@ -18,6 +18,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     button: {
       color: theme.palette.primary.contrastText,
+      fontWeight: theme.typography.fontWeightMedium,
+    },
+    button: {
+      color: theme.palette.primary.contrastText,
+      fontWeight: theme.typography.fontWeightMedium,
     },
     drawer: {
       display: 'flex',
@@ -42,7 +47,7 @@ export default function SimpleMenu() {
 
   return (
     <div className={classes.root}>
-     <CssBaseline />
+
       <GlobalStyles />
       <Nav>
       <Button  size="large" none="false" className={classes.button} aria-controls="simple-menu" aria-haspopup="true"  padding="1rem" onClick={handleClick} > 

@@ -3,21 +3,19 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import Features from '../components/Features'
-import Spotlight from '../components/spotlight'
 import FAQIndex from '../components/FAQIndex'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import { Box, Flex, AnimatedBox } from '../elements'
+import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import GridItem from '../components/grid-item'
 import GlobalStyles from '../styles/globalStyle'
-
+import RaisedHeader from '../styles/raisedHeaderStyle'
 
 const PBox = styled(AnimatedBox)`
   margin: 30 auto;
@@ -39,20 +37,6 @@ const Content = styled(Box)<{ bg: string }>`
 `
 
 
-const RaisedHeader = styled(Container)`
-  margin: -300px 5% 0px 5%;
-  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
-  z-index: 3;
-  position: relative;
-  background-color: ${theme.palette.primary.contrastText};
-  color: ${theme.palette.primary.main};
-  display: flex
-  flexDirection: column
-  minWidth: 0;
-  wordWrap: break-word;
-  transition: all 300ms linear ; 
-`
-
 const PageTitle = styled(Container)`
   display: grid;
   grid-template-columns: 1fr;
@@ -71,33 +55,17 @@ const PageTitle = styled(Container)`
   },
 ` 
 
-
-const TitlePart1 = styled(GridItem)`
-  grid-area: titlepart1;
-  color: ${theme.palette.secondary.main}; 
-  text-transform: none;
-  font-size: ${theme.typography.h5.fontSize};
- `
-
-const TitlePart2 = styled(GridItem)`
-  grid-area: titlepart2;
-  color: ${theme.palette.primary.contrastText}; 
-  text-transform: none;
-  font-size: ${theme.typography.h5.fontSize};
- `
-
-
 const Title = styled(GridItem)`
   grid-area: title;
   color: ${theme.palette.secondary.main}; 
   text-transform: none;
   color: ${theme.palette.primary.contrastText}; 
-  font-size: ${theme.typography.h1.fontSize};
+  font-size: ${theme.typography.h3.fontSize};
 
 `
 
 const Description = styled(animated.div)`
-  
+  padding: ${theme.typography.spacing}; 
   letter-spacing: -0.003em;
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
@@ -110,16 +78,7 @@ const PButton = styled(Button)<{ color: string }>`
   color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
 `
 
-const Area = styled(animated.div)`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 50vw;
 
-  [theme.breakpoints.down('md')]: {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 60vw;
-  }
-`
 
 export const FaqsPageTemplate = ({
   featuredimage,
@@ -153,13 +112,7 @@ export const FaqsPageTemplate = ({
         }}
       />
 
- <RaisedHeader    style={{
-        display: 'flex',
-        width: '90%' ,
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        alignItems: 'left',
-        flexDirection: 'column',}}>
+ <RaisedHeader  >
             <PageTitle   style={{
         display: 'flex',
         width: '70%' ,
@@ -167,9 +120,7 @@ export const FaqsPageTemplate = ({
         justifyContent: 'space-around',
         alignItems: 'left',
         flexDirection: 'column',}}>
-       <Container><TitlePart1>Frequently Asked </TitlePart1> 
-       <br />
-       <TitlePart2> Questions</TitlePart2></Container>
+       <Container><Title>Frequently Asked Questions</Title></Container>
 
  {/* <h2>  <Title color={theme.palette.secondary.main}>{heading}</Title></h2> */}
         
@@ -177,21 +128,19 @@ export const FaqsPageTemplate = ({
        
  
     <section className="section section--gradient">
-      <div >
+      <Description>
               <div className="content">
-                <div className="columns">
-                  <div className="column is-12">
-             
-               <div dangerouslySetInnerHTML={{ __html: html }} />
-                  </div>
-                </div>
+                      <div className="columns">               
+                        <div className="column is-12">
+                           <div dangerouslySetInnerHTML={{ __html: html }} />
+                        </div>
+                      </div>
 
-                <div className="column is-12">
-                <FAQIndex />
-               
-                </div>
+                    <div className="column is-12">
+                      <FAQIndex />
+                    </div>
               </div>
-      </div>
+              </Description>
     </section>
     </RaisedHeader>
  
@@ -242,9 +191,9 @@ export default FaqsPage
 
 export const pageQuery = graphql`
 query FaqsPageTemplate {
-   markdownRemark(frontmatter: {templateKey: {eq: "faqs"}}) {
-      html
-      frontmatter {
+  markdownRemark(frontmatter: {tags: {eq: "FAQ"}}) {
+    html
+    frontmatter {
       title
       featuredimage {
         childImageSharp {
@@ -257,12 +206,12 @@ query FaqsPageTemplate {
       heading
     }
   }
-allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "faq"}}}, sort: {order: ASC, fields: id}) { 
-  edges {
+  allMarkdownRemark(filter: {frontmatter: {tags: {eq: "faq"}}}, sort: {order: ASC, fields: id}) {
+    edges {
       node {
         excerpt(pruneLength: 400)
         id
-        faqs:   frontmatter {
+        faqs: frontmatter {
           slug
           title
           templateKey
@@ -278,7 +227,18 @@ allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "faq"}}}, sort: {ord
       }
     }
   }
+  site {
+    siteMetadata {
+      siteUrl
+      serviceName
+      contactPoint {
+        email
+        name
+      }
+    }
+  }
 }
+
 
 
   `

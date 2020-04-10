@@ -9,21 +9,18 @@ import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
-import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
 import HorizontalLogo from '../components/horizontalLogo'
 import ImageCarousel from '../components/imageCarousel'
-
+import RaisedHeader from '../styles/raisedHeaderStyle'
 
 const PBox = styled(AnimatedBox)`
   
   margin: 30 auto;
 `
-
-
 
 const Content = styled(Box)<{ bg: string }>`
   background-color: ${props => transparentize(0.9, theme.palette.primary.main)};
@@ -42,21 +39,6 @@ const Category = styled(AnimatedBox)`
   font-size: ${theme.typography.h1.fontSize};
   text-transform: none;
 `
-const RaisedHeader = styled(Container)`
-  margin: -300px 5% 0px 5%;
-  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
-  z-index: 3;
-  position: relative;
-  background-color: ${theme.palette.primary.contrastText};
-  color: ${theme.palette.primary.main};
-  display: flex
-  flexDirection: column
-  minWidth: 0;
-  wordWrap: break-word;
-  transition: all 300ms linear ; 
-`
-
-
 
 const PageTitle = styled(Container)`
   display: grid;
@@ -86,9 +68,9 @@ const Title = styled(GridItem)`
 
 `
 
-
 const Description = styled(animated.div)`
   max-width: 960px;
+  padding: 1rem;
   letter-spacing: -0.003em;
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
@@ -171,20 +153,16 @@ type PageProps = {
  
  <Container>
 
- <RaisedHeader    style={{
-      display: 'flex',
-      width: '90%' ,
-      lineHeight: '1',
-      justifyContent: 'space-around',
-      alignItems: 'left',
-      flexDirection: 'column',}}>
- <PageTitle   style={{
+ <RaisedHeader  >
+ <PageTitle  
+  style={{
       display: 'flex',
       width: '70%' ,
       lineHeight: '1',
       justifyContent: 'space-around',
       alignItems: 'left',
-      flexDirection: 'column',}}>
+      flexDirection: 'column',}}
+      >
  <Container > 
 
 

@@ -7,7 +7,6 @@ featured: true
 featuredimage: /img/johannes-plenio-pY0LOiwK9Sc-unsplash.jpg
 featuredimage_alt: Photo by David Kaloczi on Unsplash
 tags:
-  - service
   - treatment
 ---
 

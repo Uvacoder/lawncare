@@ -34,11 +34,11 @@ type PageProps = {
 const Area = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 50vw;
+  grid-auto-rows: 40vw;
 
  [theme.breakpoints.down('md')]: {
     grid-template-columns: 1fr;
-    grid-auto-rows: 60vw;
+    grid-auto-rows: 30vw;
   }
 `
 class BlogIndex extends React.Component {
@@ -55,7 +55,7 @@ class BlogIndex extends React.Component {
 
          <GridLink key={post.frontmatter.slug} to={post.frontmatter.slug} aria-label={`View our lastest news "${post.frontmatter.title}"`}>
                         <Img fluid={post.frontmatter.featuredimage.childImageSharp.fluid} />
-            <span><h6>{post.frontmatter.title}</h6></span>
+            <span>{post.frontmatter.title}</span>
           </GridLink>
          
           ))}

@@ -9,13 +9,15 @@ import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
-import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
 import HorizontalLogo from '../components/horizontalLogo'
 import ImageCarousel from '../components/imageCarousel'
+import RaisedHeader from '../styles/raisedHeaderStyle'
+
+
 
 const PBox = styled(AnimatedBox)`
   
@@ -46,46 +48,25 @@ const Category = styled(AnimatedBox)`
 
 
 const PageTitle = styled(Container)`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas:
-  'title'   ;
   padding: 1rem ;
+  display: flex;
   background-color: ${theme.palette.primary.main};
+  color: ${theme.palette.secondary.main}; 
   text-align: center;
   margin: -80px 15% 0px 15%;
   box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
-  PageTilePlain: {
-    marginLeft: "0px",
-    marginRight: "0px"
-  },
-
+  font-size: ${theme.typography.h5.fontSize};
+  text-transform: none;
+  flexDirection: column;
+  width: 70%;
 ` 
 
 const Title = styled(GridItem)`
   grid-area: title;
   color: ${theme.palette.secondary.main}; 
   text-transform: none;
-  font-weight: 400;
   color: ${theme.palette.primary.contrastText}; 
   font-size: ${theme.typography.h5.fontSize};
-
-`
-const RaisedHeader = styled(Container)`
-  padding: 30px 0;
-  margin: -300px 10px 0px 10px;
-  //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
-  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
-  z-index: 3;
-  position: relative;
-  background-color: ${theme.palette.primary.contrastText};
-  color: ${theme.palette.primary.main};
-  display: flex
-  flexDirection: column
-  minWidth: 0;
-  wordWrap: break-word;
-  transition: all 300ms linear ; 
 
 `
 
@@ -106,10 +87,6 @@ const Description = styled(animated.div)`
 }
 `
 
-const PButton = styled(Button)<{ color: string }>`
-  background: ${props => (props.color === 'white' ? 'black' : props.color)};
-  color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
-`
 
 type PageProps = {
   data: {
@@ -144,7 +121,7 @@ type PageProps = {
     <Layout >
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
-        title={`${data.markdownRemark.frontmatter.title} | Lawns Matter`}
+        title={`${data.site.siteMetadata.title}`}
         desc={data.markdownRemark.html}
         node={data.markdownRemark.frontmatter.slug}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
@@ -183,32 +160,10 @@ type PageProps = {
  
    <Container>
  
-   <RaisedHeader    style={{
-        display: 'flex',
-        width: '90%' ,
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        // alignItems: 'left',
-        flexDirection: 'column',}}>
-   <PageTitle   style={{
-        display: 'flex',
-        width: '70%' ,
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        // alignItems: 'left',
-        flexDirection: 'column',}}>
+   <RaisedHeader   >
+   <PageTitle >
    <Container > 
-{/*  
-   <h2 className="pageTitle"
-                       style={{
-                       boxShadow: 'transparent',
-                       borderRadius: '0px',
-                       backgroundColor: theme.palette.primary.main,
-                       color: theme.palette.primary.contrastText,
-                       lineHeight: '1',
-                       padding: '0.3em',
-            
-                   }}> */}
+
  
   <Category style={categoryAnimation} color={theme.palette.primary.contrastText}> 
    <Title color={theme.palette.secondary.main }>{data.markdownRemark.frontmatter.title}</Title></Category>
@@ -222,13 +177,13 @@ type PageProps = {
         </Description>
         
      
-      <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
+
         <Link to="/contactus">
-        <Button variant="contained" color={theme.palette.secondary.main } margin="1rem" py={4} px={8}>
+        <Button variant="contained" color="primary" margin="1rem" py={4} px={8}>
           Contact Us
         </Button>
         </Link>
-      </PBox>
+
       
       </RaisedHeader>
       </Container>  
@@ -263,6 +218,11 @@ query Page ($id: String!) {
       featured
     }
     id
+  }
+  site {
+    siteMetadata {
+      title
+    }
   }
 }
 

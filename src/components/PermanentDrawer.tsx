@@ -25,7 +25,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import GlobalStyles from '../styles/globalStyle'
 
-const drawerWidth = '275px'
+
 const drawerContentsWidth = '240px'
 
 
@@ -36,12 +36,12 @@ const drawerContentsWidth = '240px'
       display: 'flex',
     },
     drawer: {
-      width: drawerWidth,
+      width: theme.sidebar.width.big,
       flexShrink: 0,
     },
     drawerPaper: {
       backgroundColor: theme.palette.primary.main,
-      width: drawerWidth,
+      width: theme.sidebar.width.big,
     },
     // necessary for content to be below app bar
     toolbar: theme.mixins.toolbar,

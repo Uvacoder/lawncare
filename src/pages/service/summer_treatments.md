@@ -7,7 +7,6 @@ featured: true
 featuredimage: /img/johnny-mcclung-XZWH2LSGYVw-unsplash.jpg
 featuredimage_alt: Photo by David Kaloczi on Unsplash
 tags:
-  - service
   - treatment
 ---
 

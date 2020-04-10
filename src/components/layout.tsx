@@ -46,7 +46,7 @@ interface QueryResult {
 
 const LayoutGrid = styled(Container)`
   display: grid;
-  grid-template-columns: ${theme.sidebar.width.normal}  1fr;
+  grid-template-columns: ${theme.sidebar.width.big}  1fr;
   grid-template-areas:
   'PermanentDrawerLeft Main';
   [theme.breakpoints.down('sm')]: {
@@ -69,7 +69,16 @@ const Layout = ({ children, color }: LayoutProps) => {
 
         <Hidden mdUp>
          <ToolbarTop  bg={theme.palette.primary.main} />
-         <ToolbarTop  bg={theme.palette.primary.main} />
+         <div
+        style={{
+          display: 'flex',
+          height: '40vw',
+          lineHeight: '1',
+          justifyContent: 'space-around',
+          alignItems: 'left',
+          flexDirection: 'column',
+        }}
+      />
 
          <Main>{children}</Main>
         </Hidden>

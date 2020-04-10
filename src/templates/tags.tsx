@@ -18,6 +18,7 @@ import Container from '@material-ui/core/Container'
 import GridItem from '../components/grid-item'
 import GlobalStyles from '../styles/globalStyle'
 import { ChildImageSharp } from '../types'
+import RaisedHeader from '../styles/raisedHeaderStyle'
 
 const PBox = styled(AnimatedBox)`
   margin: 30 auto;
@@ -39,22 +40,6 @@ const Content = styled(Box)<{ bg: string }>`
 `
 
 
-const RaisedHeader = styled(Container)`
-  margin: -300px 10px 140px 10px;
-  //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
-  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
-  border-radius: 12px;
-  z-index: 3;
-  position: relative;
-  background-color: ${theme.palette.primary.contrastText};
-  color: ${theme.palette.primary.main};
-  display: flex
-  flexDirection: column
-  minWidth: 0;
-  wordWrap: break-word;
-  transition: all 300ms linear ; 
-`
-
 const PageTitle = styled(Container)`
   display: grid;
   grid-template-columns: 1fr;
@@ -65,7 +50,7 @@ const PageTitle = styled(Container)`
   padding: 1rem ;
   background-color: ${theme.palette.primary.main};
   text-align: center;
-  margin: -80px 25% 20px 25%;
+  margin: -80px 15% 20px 15%;
   box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
   PageTilePlain: {
     marginLeft: "0px",
@@ -161,13 +146,7 @@ export const HeaderPageTemplate = ({
         }}
       />
 
- <RaisedHeader    style={{
-        display: 'flex',
-        width: '90%' ,
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        alignItems: 'left',
-        flexDirection: 'column',}}>
+ <RaisedHeader  >
             <PageTitle   style={{
         display: 'flex',
         width: '70%' ,
@@ -179,7 +158,7 @@ export const HeaderPageTemplate = ({
        <br />
        <TitlePart2>matter</TitlePart2></Container>
 
-<h4>  <Title color={theme.palette.secondary.main}>{heading}</Title></h4>
+ <Title color={theme.palette.secondary.main}>{heading}</Title>
         
           </PageTitle>
        

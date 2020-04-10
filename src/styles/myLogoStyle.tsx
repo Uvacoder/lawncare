@@ -7,7 +7,7 @@ import reset from './reset'
 
 const MyLogo = styled(animated.div)`
 
-height: 8rem;
+height: 6rem;
 justify-content: flex-start;
 
 `

@@ -33,11 +33,11 @@ type PageProps = {
 const Area = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 50vw;
+  grid-auto-rows: 40vw;
 
    [theme.breakpoints.down('md')]:  {
     grid-template-columns: 1fr;
-    grid-auto-rows: 60vw;
+    grid-auto-rows: 50vw;
   }
 `
 class BlogRoll extends React.Component {

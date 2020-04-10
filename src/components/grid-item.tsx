@@ -20,8 +20,6 @@ const GridItem = styled(Container)`
     position: absolute;
     left: 0;
     bottom: 0;
-    maxHeight: 30%;
-    width: 90%;
     margin: 10% ;
     right: 0;
     background-color: ${theme.palette.primary.main};

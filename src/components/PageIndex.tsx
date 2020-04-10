@@ -12,6 +12,7 @@ import { ChildImageSharp } from '../types'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Container from '@material-ui/core/Container' 
 import { Box, AnimatedBox } from '../elements'
+import RaisedHeader from '../styles/raisedHeaderStyle'
 
 type PageProps = {
   data: {
@@ -47,22 +48,6 @@ const Area = styled(animated.div)`
     grid-template-columns: 1fr;
     grid-auto-rows: 60vw;
   }
-`
-const RaisedHeader = styled(Container)`
-  padding: 30px 0;
-  margin: -100px 10px 140px 10px;
-  //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
-  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
-  border-radius: 12px;
-  z-index: 3;
-  position: relative;
-  background-color: ${theme.palette.primary.contrastText};
-  color: ${theme.palette.primary.main};
-  display: flex
-  flexDirection: column
-  minWidth: 0;
-  wordWrap: break-word;
-  transition: all 300ms linear ; 
 `
 
 const PageTitle = styled(Container)`

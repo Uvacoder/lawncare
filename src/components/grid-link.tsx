@@ -19,16 +19,16 @@ const GridLink = styled(Link)`
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 80%;
     right: 0;
-    background-color: ${theme.palette.primary.main};
-    box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
+    background-color: ${theme.palette.primary.main80opacity};
+    color: ${theme.palette.primary.contrastText};
+    font-weight: ${theme.typography.h5.fontWeight};
     text-align: left;
     font-size: ${theme.typography.h5.fontSize};
+    padding: 0.5rem;
     text-transform: none;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-
-    [theme.breakpoints.down('lg')]: {
+   
+    [theme.breakpoints.down('md')]: {
       font-size: ${theme.typography.h6.fontSize};
     }
   }

@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import Features from '../components/Features'
-import Spotlight from '../components/spotlight'
 import ReviewIndex from '../components/ReviewIndex'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
@@ -17,14 +15,11 @@ import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import GridItem from '../components/grid-item'
 import GlobalStyles from '../styles/globalStyle'
-
+import RaisedHeader from '../styles/raisedHeaderStyle'
 
 const PBox = styled(AnimatedBox)`
   margin: 30 auto;
 `
-
-
-
 const Content = styled(Box)<{ bg: string }>`
   background-color: ${props => transparentize(0.9, theme.palette.primary.main)};
   
@@ -39,27 +34,12 @@ const Content = styled(Box)<{ bg: string }>`
 `
 
 
-const RaisedHeader = styled(Container)`
-  margin: -300px 5% 0px 5%;
-  //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
-  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
-  z-index: 3;
-  position: relative;
-  background-color: ${theme.palette.primary.contrastText};
-  color: ${theme.palette.primary.main};
-  display: flex
-  flexDirection: column
-  minWidth: 0;
-  wordWrap: break-word;
-  transition: all 300ms linear ; 
-`
 
 const PageTitle = styled(Container)`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-  'titlepart1 titlepart2'
   'title'   ;
   padding: 1rem ;
   background-color: ${theme.palette.primary.main};
@@ -72,27 +52,6 @@ const PageTitle = styled(Container)`
   },
 ` 
 
-
-const TitlePart1 = styled(GridItem)`
-  grid-area: titlepart1;
-  color: ${theme.palette.secondary.main}; 
-  text-transform: none;
-  font-weight: 400;
-  font-size: ${theme.typography.h5.fontSize};
- `
-
-const TitlePart2 = styled(GridItem)`
-  grid-area: titlepart2;
-  color: ${theme.palette.primary.contrastText}; 
-  text-transform: none;
-  font-weight: 400;
-  font-size: ${theme.typography.h5.fontSize};
- `
-
-const HorizontalImg = styled(Img)`
-  grid-area: logo;
-
-`
 const Title = styled(GridItem)`
   grid-area: title;
   color: ${theme.palette.secondary.main}; 
@@ -104,7 +63,7 @@ const Title = styled(GridItem)`
 `
 
 const Description = styled(animated.div)`
-  
+  padding: 1.5rem;
   letter-spacing: -0.003em;
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
@@ -160,13 +119,7 @@ export const ReviewsPageTemplate = ({
         }}
       />
 
- <RaisedHeader    style={{
-        display: 'flex',
-        width: '90%' ,
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        alignItems: 'left',
-        flexDirection: 'column',}}>
+ <RaisedHeader >
             <PageTitle   style={{
         display: 'flex',
         width: '70%' ,
@@ -183,15 +136,16 @@ export const ReviewsPageTemplate = ({
       <div >
               <div className="content">
                 <div className="columns">
+                <Description>
                   <div className="column is-12">
-                <Container>
+            
                 <div dangerouslySetInnerHTML={{ __html: html }} />
-                </Container>
+              
                 </div>
-                <Container>
+              
                     <ReviewIndex />
-                    </Container>
-                 
+                  
+                    </Description>
                   </div>
 
 

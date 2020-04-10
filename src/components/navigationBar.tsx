@@ -61,9 +61,9 @@ export default function NavigationBar() {
 <ListItem><Container alignItems="center" ><a href={`tel:${<PhoneNo />}`} rel="nofollow">
   <Button       
         variant="contained"
-        color="white"
+        color={theme.palette.secondary.main}
         className={classes.button}
-        startIcon={<PhoneIcon alignItems="center" />}>
+        startIcon={<PhoneIcon alignItems="center" padding="1rem" />}>
           Call
           </Button> </a></Container></ListItem>
   

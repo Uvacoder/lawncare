@@ -1,29 +1,21 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import { createStyles, fade, Theme, ThemeProvider,  withStyles, makeStyles, createMuiTheme, } from '@material-ui/core/styles';
+import { createStyles, Theme,  withStyles, makeStyles,  } from '@material-ui/core/styles';
 import Img from 'gatsby-image'
-import { transparentize, readableColor } from 'polished'
+import { readableColor } from 'polished'
 import styled from 'styled-components'
 import { config, useSpring, animated } from 'react-spring'
 import Layout from '../components/layout'
 import { Box, AnimatedBox} from '../elements'
 import SEO from '../components/SEO'
-import { Form, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Form } from 'semantic-ui-react'
 import Container from '@material-ui/core/Container'
-import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
 import FormControl from '@material-ui/core/FormControl';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import InputLabel from '@material-ui/core/InputLabel';
-import FilledInput from '@material-ui/core/FilledInput';
 import TextField, { TextFieldProps } from '@material-ui/core/TextField';
-import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import lightGreen from '@material-ui/core/colors/lightGreen';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 
@@ -140,21 +132,6 @@ type PageProps = {
 
       <Content bg={theme.palette.primary.contrastText} >
       
-      <BackgroundImage
-
-        fluid={imageData}
-        style={{
-        backgroundAttachment: 'fixed',     
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        }}
-        // backgroundSize="cover"          
-      >   
-      {/* <ImageCarousel /> */}
-  
-
- </BackgroundImage>
-
 
  <PageTitle 
    style={{
@@ -163,58 +140,63 @@ type PageProps = {
       lineHeight: '1',
       justifyContent: 'space-around',
       alignItems: 'left',
-      flexDirection: 'row',}}
+      flexDirection: 'row',
+    }}
       >
  <Container > 
- <h2 className="pageTitle"
-                     style={{
-                     boxShadow: 'transparent',
-                     borderRadius: '0px',
-                    //  backgroundColor: theme.palette.primary.contrastText,
-                     color: theme.palette.primary.main,
-                     lineHeight: '1',
-                     padding: '0.3em',
-          
-                 }}>
+    <h2 className="pageTitle"
+                        style={{
+                        boxShadow: 'transparent',
+                        borderRadius: '0px',
+                        //  backgroundColor: theme.palette.primary.contrastText,
+                        color: theme.palette.primary.main,
+                        lineHeight: '1',
+                        padding: '0.3em',
+              
+                    }}>
 
-<Category style={categoryAnimation} color={theme.palette.primary.main}> 
+    <Category style={categoryAnimation} color={theme.palette.primary.main}> 
 
- <Title color={theme.palette.secondary.main}>{data.markdownRemark.frontmatter.title}</Title></Category></h2>
+    <Title >{data.markdownRemark.frontmatter.title}</Title>
+    
+    </Category>
+    
+    </h2>
 
- <h4>  <Description style={descAnimation}>
-      <Container>
- <Form size='large' name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
+      <Description style={descAnimation}>
+          <Container>
+    <Form size='large' name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
+        <FormControl>
+          <Grid container spacing={3}>
+            <Grid item xs ><InputField id="standard-secondary" label="Name" id="name-input"   /></Grid>
+            <Grid item xs><InputField label="Tel No:" id="telephone-number-input" /></Grid>
+            <Grid item xs><InputField label="Email" id="email-input"   /></Grid>
+            </Grid>
+            <Grid container spacing={3}>
+            <Grid item xs><InputField label="Address"  id="address-input" size="large"  /></Grid>
+            <Grid item xs><InputField label="Town"  id="postal-town-input" size="large"  /></Grid>
+            <Grid item xs><InputField label="Post Code" id="postcode-input"  /></Grid>
+            </Grid> 
+              <Grid item  ><InputField  label="Message" fullWidth placeholder="Please enter your message here " id="message-input" multiline rows="3" size="large" /></Grid>
+            <Grid container spacing={3}>
+            <Grid item xs></Grid>
+            </Grid>
+            {/* </div> */}
+            <br />
+            <SendMessageButton variant="contained" color="primary">Send Message</SendMessageButton>
+            <br />
+      </FormControl>
+      </Form>
+      </Container>
 
-    <FormControl>
-
-      <Grid container spacing={3}>
-        <Grid item xs ><InputField id="standard-secondary" label="Name" id="name-input"   /></Grid>
-        <Grid item xs><InputField label="Tel No:" id="telephone-number-input" /></Grid>
-        <Grid item xs><InputField label="Email" id="email-input"   /></Grid>
-        </Grid>
-        <Grid container spacing={3}>
-        <Grid item xs><InputField label="Address"  id="address-input" size="large"  /></Grid>
-        <Grid item xs><InputField label="Town"  id="postal-town-input" size="large"  /></Grid>
-        <Grid item xs><InputField label="Post Code" id="postcode-input"  /></Grid>
-        </Grid> 
-          <Grid item  ><InputField  label="Message" fullWidth placeholder="Please enter your message here " id="message-input" multiline rows="3" size="large" /></Grid>
-        <Grid container spacing={3}>
-        <Grid item xs></Grid>
-        </Grid>
-        {/* </div> */}
-        <br />
-        <SendMessageButton variant="contained" color="default">Send Message</SendMessageButton>
-   </FormControl>
-   </Form>
-   </Container>
-
-   </Description></h4> 
-   
+      </Description>
+      
 </Container>
  </PageTitle>
-   
- 
     </Content>
+    <Container>
+      <Img fixed={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid} />
+    </Container>
 
     </Layout>
   )
@@ -240,7 +222,7 @@ export const query = graphql`
           }
         }
       }
-      featuredimage_alt
+      alt
       featured
     }
     id

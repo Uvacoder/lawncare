@@ -7,7 +7,6 @@ featured: true
 featuredimage: /img/max-kleinen--KxkDgEvWT8-unsplash.jpg
 featuredimage_alt: Photo by Max Kleinen on Unsplash
 tags:
-  - service
   - treatment
 ---
 

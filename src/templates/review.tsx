@@ -9,12 +9,13 @@ import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
-import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
 import ImageCarousel from '../components/imageCarousel'
+import RaisedHeader from '../styles/raisedHeaderStyle'
+import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 
 const PBox = styled(AnimatedBox)`
@@ -41,20 +42,7 @@ const Category = styled(AnimatedBox)`
   font-size: ${theme.typography.h5.fontSize};
   text-transform: none;
 `
-const RaisedHeader = styled(Container)`
-  padding: 30px;
-  margin: -200px 5% 0px 5%;
-  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
-  z-index: 3;
-  position: relative;
-  background-color: ${theme.palette.primary.contrastText};
-  color: ${theme.palette.primary.main};
-  display: flex
-  flexDirection: column
-  minWidth: 0;
-  wordWrap: break-word;
-  transition: all 300ms linear ; 
-`
+
 
 const PageTitle = styled(Container)`
   display: grid;
@@ -87,6 +75,7 @@ const Title = styled(GridItem)`
 
 
 const Description = styled(animated.div)`
+  padding: 1rem;
   max-width: 960px;
   letter-spacing: -0.003em;
   --baseline-multiplier: 0.179;
@@ -170,13 +159,7 @@ type PageProps = {
  
  <Container>
 
- <RaisedHeader    style={{
-      display: 'flex',
-      width: '90%' ,
-      lineHeight: '1',
-      justifyContent: 'space-around',
-      alignItems: 'left',
-      flexDirection: 'column',}}>
+ <RaisedHeader  >
  <PageTitle   style={{
       display: 'flex',
       width: '70%' ,
@@ -241,8 +224,6 @@ query ReviewPage ($id: String!) {
       templateKey
       tags
       created_time
-      has_rating
-      has_review
       rating
       recommendation_type_positive
       featuredimage {

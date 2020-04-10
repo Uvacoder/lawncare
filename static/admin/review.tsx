@@ -9,7 +9,6 @@ import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
-import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
@@ -264,8 +263,6 @@ query ReviewPage ($id: String!) {
       templateKey
       tags
       created_time
-      has_rating
-      has_review
       rating
       recommendation_type_positive
       featuredimage {

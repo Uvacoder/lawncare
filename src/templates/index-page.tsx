@@ -16,6 +16,7 @@ import Container from '@material-ui/core/Container'
 import GridItem from '../components/grid-item'
 import GlobalStyles from '../styles/globalStyle'
 import GridStyle from '../styles/gridStyle'
+import RaisedHeader from '../styles/raisedHeaderStyle'
 
 const PBox = styled(AnimatedBox)`
   margin: 30 auto;
@@ -34,27 +35,12 @@ const Content = styled(Box)<{ bg: string }>`
   }
 `
 
-const RaisedHeader = styled(Container)`
-  padding: 20px;
-  margin: -300px 5% 0px 5%;
-  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
-  z-index: 3;
-  position: relative;
-  background-color: ${theme.palette.primary.contrastText};
-  color: ${theme.palette.primary.main};
-  display: flex
-  flexDirection: column
-  minWidth: 0;
-  wordWrap: break-word;
-  transition: all 300ms linear ; 
-`
 
 const PageTitle = styled(Container)`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-  'titlepart1 titlepart2'
   'title'   ;
   padding: 1rem ;
   background-color: ${theme.palette.primary.main};
@@ -67,35 +53,18 @@ const PageTitle = styled(Container)`
   },
 ` 
 
-
-const TitlePart1 = styled(GridItem)`
-  grid-area: titlepart1;
-  color: ${theme.palette.secondary.main}; 
-  text-transform: none;
-  font-weight: 400;
-  font-size: ${theme.typography.h5.fontSize};
- `
-
-const TitlePart2 = styled(GridItem)`
-  grid-area: titlepart2;
-  color: ${theme.palette.primary.contrastText}; 
-  text-transform: none;
-  font-weight: 400;
-  font-size: ${theme.typography.h5.fontSize};
- `
-
 const Title = styled(GridItem)`
   grid-area: title;
   color: ${theme.palette.secondary.main}; 
   text-transform: none;
   font-weight: 400;
   color: ${theme.palette.primary.contrastText}; 
-  font-size: ${theme.typography.h1.fontSize};
+  font-size: ${theme.typography.h3.fontSize};
 
 `
 
 const Description = styled(animated.div)`
-  
+  padding: 1rem; 
   letter-spacing: -0.003em;
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
@@ -116,7 +85,7 @@ const Area = styled(animated.div)`
 
  [theme.breakpoints.down('md')]:  {
   grid-template-columns: 1fr;
-  grid-auto-rows: 50vw;
+  grid-auto-rows: 40vw;
 }
 `
 
@@ -146,7 +115,7 @@ export const IndexPageTemplate = ({
       <div
         style={{
           display: 'flex',
-          height: '1000px',
+          height: '70vw',
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',
@@ -154,13 +123,7 @@ export const IndexPageTemplate = ({
         }}
       />
 
- <RaisedHeader    style={{
-        display: 'flex',
-        width: '90%' ,
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        alignItems: 'left',
-        flexDirection: 'column',}}>
+ <RaisedHeader >
 
           
             <PageTitle   style={{
@@ -170,9 +133,7 @@ export const IndexPageTemplate = ({
         justifyContent: 'space-around',
         alignItems: 'left',
         flexDirection: 'column',}}>
-       <Container><TitlePart1>Professional</TitlePart1> 
-       <br />
-       <TitlePart2>Lawn Care</TitlePart2></Container>
+     <Title>Professional Lawn Care</Title>
 
         
           </PageTitle>
@@ -180,33 +141,24 @@ export const IndexPageTemplate = ({
  
     <section className="section section--gradient">
       <div >
+          <Description>
               <div className="content">
                 <div className="columns">
                   <div className="column is-12">
-           
-               <div dangerouslySetInnerHTML={{ __html: html }} />
+                        <div dangerouslySetInnerHTML={{ __html: html }} />
                   </div>
                 </div>
-                {/* <Flex
-              flexWrap="nowrap"
-              flexDirection={['row', 'row', 'row', 'column']}
-              alignItems={['center', 'center', 'center', 'flex-start']}
-              justifyContent="space-between"
-            >
-    
-               </Flex> */}
-
-
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    About Us
-                  </h3>
-               
-                  <BlogIndex />
-   
-                </div>
-              </div>
-      </div>
+                         <div className="column is-12" >
+                        <h3 className="has-text-weight-semibold is-size-2">
+                          About Us
+                        </h3>
+                      
+                        <BlogIndex />
+        
+                      </div>
+             </div>
+          </Description>
+    </div>
     </section>
     </RaisedHeader>
     

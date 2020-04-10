@@ -10,6 +10,7 @@ import Grid from '@material-ui/core/Grid'
 import SimpleMenu from './SimpleMenu'
 import PhoneNo from '../components/phoneNo'
 import CallButton from '../components/CallButton'
+import { Container } from '@material-ui/core';
 
 
 function ElevationScroll(props: Props) {
@@ -59,6 +60,7 @@ export default function ElevateAppBar(props: Props) {
      
       {/* <CssBaseline />
       <GlobalStyles /> */}
+      <Container >
         <AppBar 
           className={classes.drawerPaper}
           backgroundColor={theme.palette.primary.main}
@@ -89,13 +91,10 @@ export default function ElevateAppBar(props: Props) {
             </Grid>
           </Toolbar>
         </AppBar> 
+        </Container>
      {/* The second copy of the toolbar with logo has been inserted to stop the content being cropped. */}
      
-     <Toolbar>     <Grid item xs={6}>
-                  <Link to="/">
-                      <LogoSmall />
-                  </Link>
-                </Grid> </Toolbar>
+  
     </div>
   );
 }

@@ -10,13 +10,13 @@ import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import palette from '../gatsby-plugin-theme-ui/palette'
 import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
-import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
 import HorizontalLogo from '../components/horizontalLogo'
 import ImageCarousel from '../components/imageCarousel'
+import RaisedHeader from '../styles/raisedHeaderStyle'
 
 const PBox = styled(AnimatedBox)`
   
@@ -44,22 +44,7 @@ const Category = styled(AnimatedBox)`
   text-transform: capitalize;
   color: ${theme.palette.primary.active};
 `
-const RaisedHeader = styled(Container)`
-  padding: 30px 0;
-  margin: -300px 10px 140px 10px;
-  //box-shadow: 0 16px 16px 2px rgba(43,44,62, 0.14), 0 6px 30px 5px rgba(43,44,62, 0.12), 0 8px 10px 5px rgba(43,44,62, 0.2), 0 8px 10px 5px rgba(43,44,62, 0.2);
-  box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
-  border-radius: 12px;
-  z-index: 3;
-  position: relative;
-  background-color: ${theme.palette.primary.text};
-  color: ${theme.palette.primary.background};
-  display: flex
-  flexDirection: column
-  minWidth: 0;
-  wordWrap: break-word;
-  transition: all 300ms linear ; 
-`
+
 
 const LandingTitle = styled(Container)`
   display: grid;
@@ -199,13 +184,7 @@ type LandingProps = {
  
    <Container>
  
-   <RaisedHeader    style={{
-        display: 'flex',
-        width: '90%' ,
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        alignItems: 'left',
-        flexDirection: 'column',}}>
+   <RaisedHeader  >
    <LandingTitle   style={{
         display: 'flex',
         width: '70%' ,

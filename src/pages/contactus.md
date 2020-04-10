@@ -1,10 +1,10 @@
 ---
 templateKey: contact
 slug: /contactus
-featured: false
+featured: true
 title: Contact Us
 featuredimage: /img/contactus.jpg
-featuredimage_alt: Photo by Nervenet
+alt: Photo by Nervenet
 tags:
   - contact
 ---
