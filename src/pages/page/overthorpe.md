@@ -4,7 +4,7 @@ slug: /project/overthorpe
 featured: false
 title: Overthorpe
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Overthorpe
+alt: Results of our Lawn Care Service in Overthorpe
 tags:
 - project
 ---

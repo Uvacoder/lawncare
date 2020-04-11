@@ -4,7 +4,7 @@ slug: /project/croughton
 featured: false
 title: Croughton
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Croughton
+alt: Results of our Lawn Care Service in Croughton
 tags:
 - project
 ---

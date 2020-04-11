@@ -4,7 +4,7 @@ slug: /service/aeration
 featured: true
 title: Aeration
 featuredimage: /img/aerator.jpg
-featuredimage_alt: Lawnsmatter aerator on client site
+alt: Lawnsmatter aerator on client site
 tags:
   - service
 ---

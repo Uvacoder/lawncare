@@ -4,7 +4,7 @@ slug: /homepage
 featured: true
 title: Professional Lawn Care
 featuredimage: /img/whyus.jpg
-featuredimage_alt: Photo by Lawns Matter on client site.
+alt: Photo by Lawns Matter on client site.
 tags:
   - service
   - about

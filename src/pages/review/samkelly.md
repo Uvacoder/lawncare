@@ -5,7 +5,7 @@ title: Sam Kelly
 location: Broughton
 featured: true
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
-featuredimage_alt: Photo by Sharon Mccutcheon on Unsplash
+alt: Photo by Sharon Mccutcheon on Unsplash
 tags:
   - review
 created_time: "2019-10-25T07:30:22+0000"

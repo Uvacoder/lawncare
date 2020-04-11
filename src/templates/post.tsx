@@ -13,7 +13,6 @@ import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
-import HorizontalLogo from '../components/horizontalLogo'
 import ImageCarousel from '../components/imageCarousel'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 
@@ -44,9 +43,7 @@ const PageTitle = styled(Container)`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas:
-  'titlepart1 titlepart2'
-  'title'   ;
+  grid-template-areas: 'title'   ;
   padding: 1rem ;
   background-color: ${theme.palette.primary.main};
   text-align: center;
@@ -92,7 +89,7 @@ type PageProps = {
           templateKey: string
           featured: boolean
           slug: string
-          featuredimage_alt: string
+          alt: string
           tags: string
           featuredimage: ChildImageSharp
           }
@@ -216,7 +213,7 @@ query BlogPage ($id: String!) {
           }
         }
       }
-      featuredimage_alt
+      alt
       featured
     }
     id

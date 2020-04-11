@@ -4,7 +4,7 @@ slug: /project/souldern
 featured: false
 title: Souldern
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Souldern
+alt: Results of our Lawn Care Service in Souldern
 tags:
 - project
 ---

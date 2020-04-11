@@ -4,7 +4,7 @@ slug: /project/stowonthewold
 featured: false
 title: Stow on the Wold
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Stow on the Wold
+alt: Results of our Lawn Care Service in Stow on the Wold
 tags:
 - project
 ---

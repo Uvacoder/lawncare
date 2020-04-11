@@ -1,11 +1,12 @@
 ---
-templateKey: tags
+templateKey: header
 sortorder: 50
-slug: /tags/aboutus
+slug: /aboutus
 title: About Us
 featured: true
+header: about
 featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg
-featuredimage_alt: Photo by Nervenet
+alt: Photo by Nervenet
 tags:
   - service
 ---
@@ -16,3 +17,5 @@ tags:
 * #####We are City and Guilds trained and have a NPTC certification in the Safe use of Pesticides, we are also members of the The UK Lawn Care Network. #####
 
 * #####We specialise is restoring and maintaining lawns which means you get great results at affordable prices backed up with excellent customer service. #####
+
+##### More information #####

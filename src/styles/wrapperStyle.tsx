@@ -9,14 +9,14 @@ import reset from './reset'
 
 
 const Wrapper = styled.div`
-  display: grid;
-  background-color: ${theme.palette.primary.main};
-  [theme.breakpoints.up('sm')]: {
-  grid-template-columns: ${theme.sidebar.width.big} 1fr;
-  }
-  [theme.breakpoints.down('md')]: {
-    grid-template-columns: 1fr;
-  }
+display: grid;
+grid-template-columns: ${props => props.theme.sidebarWidth.big} 1fr;
+@media (max-width: ${props => props.theme.breakpoints[4]}) {
+  grid-template-columns: ${props => props.theme.sidebarWidth.normal} 1fr;
+}
+@media (max-width: ${props => props.theme.breakpoints[2]}) {
+  grid-template-columns: 1fr;
+}
 `
 
 export default Wrapper

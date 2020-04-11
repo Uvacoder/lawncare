@@ -37,6 +37,7 @@ const drawerContentsWidth = '240px'
     },
     drawer: {
       width: theme.sidebar.width.big,
+      position: 'fixed',
       flexShrink: 0,
     },
     drawerPaper: {

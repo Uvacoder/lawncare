@@ -4,7 +4,7 @@ templateKey: post
 slug: /post/scarification
 featured: true
 featuredimage: /img/index_pic02.jpg
-featuredimage_alt: Scarification
+alt: Scarification
 tags:
   - about
   - service

@@ -4,7 +4,7 @@ slug: /project/towcester
 featured: false
 title: Towcester
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Towcester
+alt: Results of our Lawn Care Service in Towcester
 tags:
 - project
 ---

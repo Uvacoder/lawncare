@@ -4,7 +4,7 @@ slug: /project/tadmarton-project
 featured: true
 title: Tadmarton 
 featuredimage: /img/after5.jpg
-featuredimage_alt: Tadmarton After photo
+alt: Tadmarton After photo
 tags:
   - project
 ---

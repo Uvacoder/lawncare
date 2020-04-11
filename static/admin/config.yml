@@ -23,7 +23,7 @@ collections:
       - { label: title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: Featuredimage, name: featuredimage, widget: image }
-      - { label: "Image description (needed for SEO)", name: featuredimage_alt, widget: string }
+      - { label: "Image description (needed for SEO)", name: alt, widget: string }
       - label: Slideshow
         required: false
         name: slideshow
@@ -47,7 +47,7 @@ collections:
       - { label: title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
-      - { label: "Image description (needed for SEO)", required: false, name: featuredimage_alt, widget: string }
+      - { label: "Image description (needed for SEO)", required: false, name: alt, widget: string }
       - { label: Tags, required: false, name: tags, widget: list }
       - { label: locationName, required: false, name: locationName, widget: string }
   - name: faqs
@@ -62,7 +62,7 @@ collections:
       - { label: title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
-      - { label: "Image description (needed for SEO)", required: false, name: featuredimage_alt, widget: string }
+      - { label: "Image description (needed for SEO)", required: false, name: alt, widget: string }
       - { label: Tags, required: false, name: tags, widget: list }
       - { label: locationName, required: false, name: locationName, widget: string }
   - name: areaserved
@@ -108,7 +108,7 @@ collections:
       - { label: has_review, required: false, name: has_review, widget: boolean }
       - { label: recommendation_type_positive, required: false, name: recommendation_type_positive, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
-      - { label: "Image description (needed for SEO)", required: false, name: featuredimage_alt, widget: string }
+      - { label: "Image description (needed for SEO)", required: false, name: alt, widget: string }
       - { label: Tags, required: false, name: tags, widget: list }
       - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }
       - { label: Location, required: false, name: location, widget: string }

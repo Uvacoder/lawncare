@@ -4,7 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 import { ThemeProvider }  from '@material-ui/core/styles'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import reset from './reset'
-
+import { readableColor } from 'polished'
 
 const GlobalStyles = createGlobalStyle`
 *::before,
@@ -122,7 +122,66 @@ raisedheader {
     }
   }
 }
+wrapper {
+  display: grid;
+  grid-template-columns: ${theme.sidebar.width.big} 1fr;
+  [theme.breakpoints.down(‘md')]:{
+    grid-template-columns: 1fr;
+  }
+}
+sidebarinner {
+  position: fixed;
+  height: 100%;
+  width: ${theme.sidebar.width.big};
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background: ${theme.palette.primary.main};
+ [theme.breakpoints.down(‘lg')]: {
+    width: ${theme.sidebar.width.big};
+  }
+  [theme.breakpoints.down(‘md')]:{
+    position: relative;
+    width: 100%;
+  }
+  svg {
+    fill: ${props => readableColor(`${theme.palette.primary.main}`)};
+  }
+}
+nav {
+  a {
+    text-decoration: none;
+    color: ${props => readableColor(`${theme.palette.secondary.main}`)};
+    font-size: ${theme.typography.h3.letterSpacing};
+    line-height: 1.5;
+    &:hover,
+    &:focus,
+    &.navlink-active {
+      color: ${theme.palette.secondary.main};
+    }
+    [theme.breakpoints.down(‘md')]: {
+      font-size: ${theme.typography.h4.fontSize};
+      margin-left: ${theme.typography.h4.letterSpacing};
+    }
+   [theme.breakpoints.down(‘sm')]: {
+      font-size: ${theme.typography.h5.fontSize};
+      margin-left: ${theme.typography.h5.letterSpacing};
+    }
+    [theme.breakpoints.down(‘xs')]: {
+      font-size: ${theme.typography.h6.fontSize};
+      margin-left: ${theme.typography.h6.letterSpacing};
+    }
+  }
+}
+main {
+background-color: ${theme.palette.primary.main};
 
+[theme.breakpoints.down('md')]: {
+  grid-template-columns: ${theme.sidebar.width.big} 1fr 1fr 1fr 1fr;
+  grid-column-start: 2;
+}
+}
 ${reset}
 `
 export default GlobalStyles

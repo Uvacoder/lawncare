@@ -58,7 +58,7 @@ const MediaCard = ({ posts }) => (
                         <CardContent >
                         <CardImage
                         imageInfo={posts.frontmatter.featuredimage}
-                        alt={posts.frontmatter.featuredimage_alt}  
+                        alt={posts.frontmatter.alt}  
                         />
                        
                             <h3>

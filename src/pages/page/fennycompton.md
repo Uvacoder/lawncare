@@ -4,7 +4,7 @@ slug: /project/fennycompton
 featured: false
 title: Fenny Compton
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Fenny Compton
+alt: Results of our Lawn Care Service in Fenny Compton
 tags:
 - project
 ---

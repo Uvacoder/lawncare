@@ -4,7 +4,7 @@ slug: /project/addington
 featured: false
 title: Addington
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Addington
+alt: Results of our Lawn Care Service in Addington
 tags:
 - project
 ---

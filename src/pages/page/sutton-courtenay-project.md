@@ -4,7 +4,7 @@ slug: /project/sutton-courtenay-project
 featured: true
 title: Sutton Courtenay
 featuredimage: /img/after6.jpg
-featuredimage_alt: Sutton Courtenay After photo
+alt: Sutton Courtenay After photo
 tags:
   - project
 ---

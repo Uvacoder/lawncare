@@ -4,7 +4,7 @@ slug: /project/brackley
 featured: false
 title: Brackley
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Brackley
+alt: Results of our Lawn Care Service in Brackley
 tags:
 - project
 ---

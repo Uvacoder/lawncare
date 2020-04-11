@@ -4,7 +4,7 @@ slug: /project/bladen
 featured: false
 title: Bladen
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Bladen
+alt: Results of our Lawn Care Service in Bladen
 tags:
 - project
 ---

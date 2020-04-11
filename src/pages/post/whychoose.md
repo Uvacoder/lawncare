@@ -4,7 +4,7 @@ slug: /about/whychoose
 title: Why Choose Lawns Matter?
 featured: false
 featuredimage: /img/jon-tyson-hhq1Lxtuwd8-unsplash.jpg
-featuredimage_alt: Photo by Jon Tyson on Unsplash
+alt: Photo by Jon Tyson on Unsplash
 tags:
   - about
 ---

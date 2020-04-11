@@ -4,7 +4,7 @@ slug: /about/whyus
 featured: true
 title: Why Us?
 featuredimage: /img/whyus.jpg
-featuredimage_alt: Photo by Lawns Matter on client site.
+alt: Photo by Lawns Matter on client site.
 tags:
   - service
   - about

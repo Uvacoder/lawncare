@@ -4,7 +4,7 @@ slug: /faq/changetreatmentdate
 title: Can I change the treatment date?
 featured: false
 featuredimage: /img/behy-studio-2_l3lUpn4vE-unsplash.jpg
-featuredimage_alt: Photo by Behy Studio on Unsplash
+alt: Photo by Behy Studio on Unsplash
 tags:
   - faq
 ---

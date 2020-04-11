@@ -4,7 +4,7 @@ slug: /project/chadlington
 featured: false
 title: Chadlington
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Chadlington
+alt: Results of our Lawn Care Service in Chadlington
 tags:
 - project
 ---

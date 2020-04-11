@@ -4,7 +4,7 @@ templateKey: post
 slug: /about/environmentalpledge
 featured: true
 featuredimage: /img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg
-featuredimage_alt: Scenery
+alt: Scenery
 tags:
   - about
   - service

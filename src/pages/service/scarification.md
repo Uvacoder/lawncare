@@ -4,7 +4,7 @@ slug: /service/scarification
 featured: true
 title: Scarification
 featuredimage: /img/scarifying-101.jpg
-featuredimage_alt: Lawns Matter scarifying on client site
+alt: Lawns Matter scarifying on client site
 tags:
   - service
 ---

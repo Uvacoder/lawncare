@@ -5,7 +5,7 @@ slug: /reviews
 title: Lawn Care Customer Reviews
 featured: true
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: About Lawns Matter Background Pic
+alt: About Lawns Matter Background Pic
 tags:
   - review
 ---

@@ -5,7 +5,7 @@ slug: /service/essential_treatments
 title: Essential Treatments
 featured: true
 featuredimage: /img/david-kaloczi-10xlYvD5yn4-unsplash.jpg
-featuredimage_alt: Photo by David Kaloczi on Unsplash
+alt: Photo by David Kaloczi on Unsplash
 tags:
   - service
 ---

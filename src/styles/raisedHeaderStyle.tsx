@@ -3,7 +3,6 @@ import styled, { createGlobalStyle } from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Container from '@material-ui/core/Container';
 
-import reset from './reset'
 
 const RaisedHeader = styled(Container)`
   padding: 30px 0;

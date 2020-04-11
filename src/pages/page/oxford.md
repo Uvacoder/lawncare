@@ -4,7 +4,7 @@ slug: /project/oxford
 featured: false
 title: Oxford
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Oxford
+alt: Results of our Lawn Care Service in Oxford
 tags:
 - project
 ---

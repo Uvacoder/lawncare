@@ -4,7 +4,7 @@ slug: /project/southmoor
 featured: false
 title: Southmoor
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Southmoor
+alt: Results of our Lawn Care Service in Southmoor
 tags:
 - project
 ---

@@ -4,20 +4,17 @@ import 'typeface-work-sans'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import reset from '../styles/reset'
 import GlobalStyles from '../styles/globalStyle'
-import Main from '../styles/mainStyle'
-import Wrapper from '../styles/wrapperStyle'
 import PermanentDrawerLeft from './PermanentDrawer'
 import ToolbarTop from './Toolbar'
 import Hidden from '@material-ui/core/Hidden'
 import withWidth from '@material-ui/core/withWidth'
 import { Container } from '@material-ui/core'
-import Footer from './footer'
-import SideBarInner from '../styles/sideBarInnerStyle'
+import { Box, Flex } from '../elements'
 import BottomNavigationBar from './bottomNavigation'
 import {ThemeProvider}  from '@material-ui/core/styles'
 import ToolbarWrapper from '../styles/toolbarWrapperStyle'
 import styled from 'styled-components'
-
+import { readableColor } from 'polished'
 
 const isPartiallyActive = ({ isPartiallyCurrent }: { isPartiallyCurrent: boolean }) =>
   isPartiallyCurrent ? { className: 'navlink-active navlink' } : { className: 'navlink' }
@@ -27,6 +24,76 @@ const PartialNavLink = ({ children, to, ...rest }: { children: React.ReactNode; 
     {children}
   </Link>
 )
+
+
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: ${props => props.theme.sidebarWidth.big} 1fr;
+ [theme.breakpoints.down(‘lg')]: {
+    grid-template-columns: ${props => props.theme.sidebarWidth.normal} 1fr;
+  }
+  [theme.breakpoints.down(‘md')]:{
+    grid-template-columns: 1fr;
+  }
+`
+
+const SideBarInner = styled(Box)<{ bg: string }>`
+  position: fixed;
+  height: 100%;
+  width: ${theme.sidebar.width.big};
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background: ${theme.palette.primary.main};
+ [theme.breakpoints.down(‘lg')]: {
+    width: ${theme.sidebar.width.big};
+  }
+  [theme.breakpoints.down(‘md')]:{
+    position: relative;
+    width: 100%;
+  }
+  svg {
+    fill: ${props => readableColor(`${theme.palette.primary.main}`)};
+  }
+`
+
+const Nav = styled(Flex)<{ color: string }>`
+  a {
+    text-decoration: none;
+    color: ${props => readableColor(`${props.color}`)};
+    font-size: ${theme.typography.h3.letterSpacing};
+    line-height: 1.5;
+    &:hover,
+    &:focus,
+    &.navlink-active {
+      color: ${props => props.theme.colors.primary};
+    }
+    [theme.breakpoints.down(‘md')]: {
+      font-size: ${theme.typography.h4.fontSize};
+      margin-left: ${theme.typography.h4.letterSpacing};
+    }
+   [theme.breakpoints.down(‘sm')]: {
+      font-size: ${theme.typography.h5.fontSize};
+      margin-left: ${theme.typography.h5.letterSpacing};
+    }
+    [theme.breakpoints.down(‘xs')]: {
+      font-size: ${theme.typography.h6.fontSize};
+      margin-left: ${theme.typography.h6.letterSpacing};
+    }
+  }
+`
+
+const Main = styled.main`
+background-color: ${theme.palette.primary.main};
+
+[theme.breakpoints.down('md')]: {
+  grid-template-columns: ${theme.sidebar.width.big} 1fr 1fr 1fr 1fr;
+  grid-column-start: 2;
+}
+`
+
+
 
 type LayoutProps = { children: React.ReactNode } & typeof defaultProps
 
@@ -44,18 +111,6 @@ interface QueryResult {
 }
 
 
-const LayoutGrid = styled(Container)`
-  display: grid;
-  grid-template-columns: ${theme.sidebar.width.big}  1fr;
-  grid-template-areas:
-  'PermanentDrawerLeft Main';
-  [theme.breakpoints.down('sm')]: {
-    grid-template-columns: 1fr;
-  grid-template-areas:
-  'Main';
-  },
-  
-` 
 
 
 const Layout = ({ children, color }: LayoutProps) => {
@@ -83,10 +138,22 @@ const Layout = ({ children, color }: LayoutProps) => {
          <Main>{children}</Main>
         </Hidden>
         <Hidden smDown>
-        <LayoutGrid>
+     <SideBarInner>
           <PermanentDrawerLeft />
+          </SideBarInner>
+          <div
+        style={{
+          display: 'flex',
+          width: '40vw',
+          lineHeight: '1',
+          justifyContent: 'space-around',
+          alignItems: 'left',
+          flexDirection: 'row',
+        }}
+      />
+          <Container position="relative">
           <Main>{children}</Main>
-          </LayoutGrid>
+          </Container>
           </Hidden>
       <Hidden mdUp>
         <BottomNavigationBar  bg={theme.palette.primary.main}  />

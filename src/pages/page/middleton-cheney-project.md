@@ -4,7 +4,7 @@ slug: /project/middleton-cheney-project
 title: Middleton Cheney
 featured: true
 featuredimage: /img/after2.jpg
-featuredimage_alt: Middleton Cheney Project After photo
+alt: Middleton Cheney Project After photo
 tags:
   - project
 ---

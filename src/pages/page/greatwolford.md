@@ -4,7 +4,7 @@ slug: /project/greatwolford
 featured: false
 title: Great Wolford
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Great Wolford
+alt: Results of our Lawn Care Service in Great Wolford
 tags:
 - project
 ---

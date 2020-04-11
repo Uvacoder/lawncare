@@ -4,7 +4,7 @@ templateKey: post
 slug: /about/lawnrenovation
 featured: true
 featuredimage: /img/index_pic03.jpg
-featuredimage_alt: Lawn renovation
+alt: Lawn renovation
 tags:
   - about
   - service

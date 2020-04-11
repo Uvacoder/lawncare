@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import Features from '../components/Features'
 import BlogIndex from '../components/BlogIndex'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { animated } from 'react-spring'
+import { config, animated, useSpring } from 'react-spring'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import { Box, Flex, AnimatedBox } from '../elements'
@@ -36,7 +37,6 @@ const Content = styled(Box)<{ bg: string }>`
     }
   }
 `
-
 
 const PageTitle = styled(Container)`
   display: grid;
@@ -91,7 +91,7 @@ const Area = styled(animated.div)`
 }
 `
 
-export const TagsPageTemplate = ({
+export const HeaderPageTemplate = ({
   featuredimage,
   title,
   heading,
@@ -139,9 +139,6 @@ export const TagsPageTemplate = ({
  
     <section className="section section--gradient">
       <div >
-        {/* <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1"> */}
               <div className="content">
                 <div className="columns">
                   <div className="column is-12">
@@ -150,22 +147,10 @@ export const TagsPageTemplate = ({
                
                   </div>
                 </div>
-                <Flex
-              flexWrap="nowrap"
-              flexDirection={['row', 'row', 'row', 'column']}
-              alignItems={['center', 'center', 'center', 'flex-start']}
-              justifyContent="space-between"
-            >
     
-               </Flex>
-
 
                 <div className="columns">
-                  <div >
-                    {/* <Link className="btn" to="/products">
-                      See all products
-                    </Link> */}
-                  </div>
+        
                 </div>
                 <div className="column is-12">
        
@@ -185,7 +170,7 @@ export const TagsPageTemplate = ({
   // </div>
 )
 
-TagsPageTemplate.propTypes = {
+HeaderPageTemplate.propTypes = {
   featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -196,13 +181,13 @@ TagsPageTemplate.propTypes = {
   }),
 }
 
-const TagsPage = ({ data }) => {
-  const { tagsdata } = data.markdownRemark
+const HeaderPage = ({ data }) => {
+  const { headerdata } = data.markdownRemark
   const { edges: posts } = data.allMarkdownRemark
 
   return (
     <Layout>
-      <TagsPageTemplate
+      <HeaderPageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
@@ -213,7 +198,7 @@ const TagsPage = ({ data }) => {
   )
 }
 
-TagsPage.propTypes = {
+HeaderPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -224,12 +209,12 @@ TagsPage.propTypes = {
   }),
 }
 
-export default TagsPage
+export default HeaderPage
 
 export const pageQuery = graphql`
  
-  query TagsPageTemplate {
-    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {order: ASC, fields: id}) {
+  query HeaderPageTemplate {
+    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "about"}}}, sort: {order: ASC, fields: id}) {
       totalCount
       edges {
         node {
@@ -249,7 +234,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    markdownRemark(frontmatter: {templateKey: {eq: "tags"}}) {
+    markdownRemark(frontmatter: {templateKey: {eq: "header"}}) {
       id
       html
       frontmatter {

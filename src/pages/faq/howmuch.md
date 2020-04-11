@@ -4,7 +4,7 @@ slug: /faq/howmuch
 title: How much does a treatment cost?
 featured: false
 featuredimage: /img/steve-smith-Zvvu4zRKijE-unsplash.jpg
-featuredimage_alt: Photo by Steve Smith on Unsplash
+alt: Photo by Steve Smith on Unsplash
 tags:
   - faq
 ---

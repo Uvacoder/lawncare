@@ -4,7 +4,7 @@ slug: /project/greatbourton
 featured: false
 title: Great Bourton
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Great Bourton
+alt: Results of our Lawn Care Service in Great Bourton
 tags:
 - project
 ---

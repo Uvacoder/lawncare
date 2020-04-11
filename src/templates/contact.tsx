@@ -98,7 +98,7 @@ type PageProps = {
           templateKey: string
           featured: boolean
           slug: string
-          featuredimage_alt: string
+          alt: string
           tags: string
           featuredimage: ChildImageSharp
           }

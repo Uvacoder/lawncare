@@ -4,7 +4,7 @@ slug: /project/deddington-project
 featured: true
 title: Deddington
 featuredimage: /img/after7.jpg
-featuredimage_alt: Deddington Project After photo
+alt: Deddington Project After photo
 tags:
   - project
 ---

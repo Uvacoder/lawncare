@@ -4,7 +4,7 @@ slug: /project/eynsham
 featured: false
 title: Eynsham
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Eynsham
+alt: Results of our Lawn Care Service in Eynsham
 tags:
 - project
 ---

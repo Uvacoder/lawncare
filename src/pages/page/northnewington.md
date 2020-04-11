@@ -4,7 +4,7 @@ slug: /project/northnewington
 featured: false
 title: North Newington
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in North Newington
+alt: Results of our Lawn Care Service in North Newington
 tags:
 - project
 ---

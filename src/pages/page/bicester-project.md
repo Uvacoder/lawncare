@@ -4,7 +4,7 @@ slug: /project/bicester-project
 title: Bicester 
 featured: true
 featuredimage: /img/after8.jpg
-featuredimage_alt: Bicester Project After photo
+alt: Bicester Project After photo
 tags:
   - project
 ---

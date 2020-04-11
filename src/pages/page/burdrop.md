@@ -4,7 +4,7 @@ slug: /project/burdrop
 featured: false
 title: Burdrop
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Burdrop
+alt: Results of our Lawn Care Service in Burdrop
 tags:
 - project
 ---

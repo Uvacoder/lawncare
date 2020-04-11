@@ -18,23 +18,6 @@ import GlobalStyles from '../styles/globalStyle'
 import GridStyle from '../styles/gridStyle'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 
-const PBox = styled(AnimatedBox)`
-  margin: 30 auto;
-`
-
-const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, theme.palette.primary.main)};
-  
-
-  .gatsby-image-wrapper:not(:last-child) {
-    margin-bottom: ${theme.typography.spacing};
-
-    [theme.breakpoints.down('lg')]: {
-      margin-bottom: ${theme.typography.spacing};
-    }
-  }
-`
-
 
 const PageTitle = styled(Container)`
   display: grid;
@@ -72,23 +55,6 @@ const Description = styled(animated.div)`
   margin: 30px;
 `
 
-const PButton = styled(Button)<{ color: string }>`
-  background: ${props => (props.color === 'white' ? 'black' : props.color)};
-  color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
-`
-
-const Area = styled(animated.div)`
-  display: grid;
-  grid-template-columns: ${theme.sidebar.width.big} repeat(auto-fill, minmax(450px, 1fr));
-  grid-auto-rows: 50vw;
-  grid-column-start: 2;
-
- [theme.breakpoints.down('md')]:  {
-  grid-template-columns: 1fr;
-  grid-auto-rows: 40vw;
-}
-`
-
 export const IndexPageTemplate = ({
   featuredimage,
   title,
@@ -115,7 +81,7 @@ export const IndexPageTemplate = ({
       <div
         style={{
           display: 'flex',
-          height: '70vw',
+          height: '50vw',
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',

@@ -4,7 +4,7 @@ slug: /project/pottersbury
 featured: false
 title: Pottersbury
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Pottersbury
+alt: Results of our Lawn Care Service in Pottersbury
 tags:
 - project
 ---

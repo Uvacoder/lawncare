@@ -4,7 +4,7 @@ slug: /project/swalcliffe
 featured: false
 title: Swalcliffe
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Swalcliffe
+alt: Results of our Lawn Care Service in Swalcliffe
 tags:
 - project
 ---

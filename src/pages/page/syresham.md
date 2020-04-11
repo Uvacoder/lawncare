@@ -4,7 +4,7 @@ slug: /project/syresham
 featured: false
 title: Syresham
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Syresham
+alt: Results of our Lawn Care Service in Syresham
 tags:
 - project
 ---

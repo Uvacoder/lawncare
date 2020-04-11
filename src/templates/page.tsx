@@ -71,7 +71,7 @@ const Title = styled(GridItem)`
 `
 
 const Description = styled(animated.div)`
-  
+
   letter-spacing: -0.003em;
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
@@ -98,7 +98,7 @@ type PageProps = {
           templateKey: string
           featured: boolean
           slug: string
-          featuredimage_alt: string
+          alt: string
           tags: string
           featuredimage: ChildImageSharp
           }
@@ -174,17 +174,17 @@ type PageProps = {
 
       <Description style={descAnimation}>
       <div className="raisedheader" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-        </Description>
+     
         
      
-
+      <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
         <Link to="/contactus">
         <Button variant="contained" color="primary" margin="1rem" py={4} px={8}>
           Contact Us
         </Button>
         </Link>
-
-      
+        </PBox>
+        </Description>
       </RaisedHeader>
       </Container>  
       </Container>
@@ -214,7 +214,7 @@ query Page ($id: String!) {
           }
         }
       }
-      featuredimage_alt
+      alt
       featured
     }
     id

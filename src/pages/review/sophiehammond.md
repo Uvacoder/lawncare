@@ -5,7 +5,7 @@ title: Sophie Hammond
 location: Adderbury
 featured: true
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
-featuredimage_alt: Photo by Sharon Mccutcheon on Unsplash
+alt: Photo by Sharon Mccutcheon on Unsplash
 tags:
   - review
 created_time: "2020-03-01T09:45:55+0000"

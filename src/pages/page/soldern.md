@@ -4,7 +4,7 @@ slug: /project/soldern
 featured: false
 title: Soldern
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Soldern
+alt: Results of our Lawn Care Service in Soldern
 tags:
 - project
 ---

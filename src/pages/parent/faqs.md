@@ -5,7 +5,7 @@ slug: /faqs
 title: Frequently Asked Questions
 featured: true
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: About Lawns Matter Background Pic
+alt: About Lawns Matter Background Pic
 tags:
   - FAQ
 ---

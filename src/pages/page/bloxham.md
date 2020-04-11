@@ -4,7 +4,7 @@ slug: /project/bloxham
 featured: false
 title: Bloxham
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Bloxham
+alt: Results of our Lawn Care Service in Bloxham
 tags:
 - project
 ---

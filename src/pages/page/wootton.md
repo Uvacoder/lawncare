@@ -4,7 +4,7 @@ slug: /project/wootton
 featured: false
 title: Wootton
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Wootton
+alt: Results of our Lawn Care Service in Wootton
 tags:
 - project
 ---

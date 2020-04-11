@@ -14,15 +14,15 @@ const Grid = styled(animated.div)`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 
-  [theme.breakpoints.up('xl')]: {
+  [theme.breakpoints.down('xl')]: {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  [theme.breakpoints.up('lg')]: {
+  [theme.breakpoints.down('lg')]: {
     grid-template-columns: 1fr 1fr;
   }
 
-  [theme.breakpoints.up('xs')]: {
+  [theme.breakpoints.down('sm')]: {
     grid-template-columns: 1fr;
   }
 `
@@ -40,12 +40,13 @@ const Overlay = styled.div`
 `
 
 const Title = styled.div`
+  padding: 1rem;
   color: white;
-  font-weight: 700;
+  font-weight: 500;
   font-size: ${theme.typography.h3.fontSize};
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   [theme.breakpoints.up('lg')]: {
-    font-size: ${theme.typography.h1.fontSize};
+    font-size: ${theme.typography.h3.fontSize};
   }
   transform: translateY(-45px);
   transition: all 0.4s ease 0s;
@@ -139,6 +140,7 @@ const Instagram: React.FunctionComponent<Props> = ({
 
   return (
     <Layout color="#2B2C3E">
+    <div>
       <SEO title="Instagram | Lawns Matter" />
       <Grid style={pageAnimation}>
         {trail.map((style, index) => {
@@ -164,6 +166,7 @@ const Instagram: React.FunctionComponent<Props> = ({
           )
         })}
       </Grid>
+      </div>
     </Layout>
   )
 }

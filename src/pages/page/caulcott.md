@@ -4,7 +4,7 @@ slug: /project/caulcott
 featured: false
 title: Caulcott
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Caulcott
+alt: Results of our Lawn Care Service in Caulcott
 tags:
 - project
 ---

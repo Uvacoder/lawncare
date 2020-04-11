@@ -13,6 +13,7 @@ import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Container from '@material-ui/core/Container' 
 import { Box, AnimatedBox } from '../elements'
 import RaisedHeader from '../styles/raisedHeaderStyle'
+import GridItem from './grid-item'
 
 type PageProps = {
   data: {
@@ -33,12 +34,7 @@ type PageProps = {
     }
   }
 }
-const Category = styled(AnimatedBox)`
-  letter-spacing: 0.05em;
-  font-size: ${theme.typography.h1.fontSize};
-  text-transform: capitalize;
-  color: ${theme.palette.secondary.main};
-`
+
 const Area = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -51,32 +47,21 @@ const Area = styled(animated.div)`
 `
 
 const PageTitle = styled(Container)`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas:
-  'titlepart1 titlepart2'
-  'title';
-  padding: 1rem ;
-  background-color: ${theme.palette.primary.main};
-  text-align: center;
-   margin: 100px 25% 20px 25%;
-  box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
-  PageTilePlain: {
-    marginLeft: "0px",
-    marginRight: "0px"
-  },
-
-
-
+padding: 1rem ;
+display: flex;
+background-color: ${theme.palette.primary.main};
+color: ${theme.palette.secondary.main}; 
+text-align: center;
+box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
+font-size: ${theme.typography.h5.fontSize};
+text-transform: none;
+flexDirection: column;
 ` 
 
- const Title = styled(GridLink)`
+const Title = styled(GridItem)`
   grid-area: title;
-  color: ${theme.palette.secondary.main}; 
-  flex-flow: row wrap;
+  color: ${theme.palette.secondary.main }; 
   text-transform: none;
-  font-weight: 400;
   color: ${theme.palette.primary.contrastText}; 
   font-size: ${theme.typography.h5.fontSize};
 
@@ -95,23 +80,24 @@ class PageIndex extends React.Component {
         <Area>
         {pages &&
           pages.map(({ node: page }) => (
-
+      
          <GridLink key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
            <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
               <Container > 
-                    <PageTitle   style={{
-                          width: '90%' ,
-                          lineHeight: '1',
-                          justifyContent: 'center',
-                          alignItems: 'left',
-                          flexDirection: 'row',}}>
-                              <Title color={theme.palette.secondary.main}>{page.frontmatter.title}</Title> 
+                    <PageTitle 
+                      // style={{
+                      //     lineHeight: '1',
+                      //     justifyContent: 'center',
+                      //     alignItems: 'left',
+                      //     flexDirection: 'row',}}
+                          >
+                             <Title>{page.frontmatter.title}</Title>
                     </PageTitle>
                 
                 </Container>
            
           </GridLink>
-
+          
           ))}
       </Area>
       </Layout>

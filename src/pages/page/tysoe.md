@@ -4,7 +4,7 @@ slug: /project/tysoe
 featured: false
 title: Tysoe
 featuredimage: /img/aboutus.jpg
-featuredimage_alt: Results of our Lawn Care Service in Tysoe
+alt: Results of our Lawn Care Service in Tysoe
 tags:
 - project
 ---
