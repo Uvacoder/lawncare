@@ -17,6 +17,14 @@ import TextField, { TextFieldProps } from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Grid from '@material-ui/core/Grid';
+import RaisedHeader from '../styles/raisedHeaderStyle'
+import PBox from '../styles/pboxStyle'
+import PageTitle from '../styles/pageTitleStyle'
+import Content from '../styles/contentStyle'
+import Category from '../styles/categoryStyle'
+import PButton from '../styles/pbuttonStyle'
+import Title from '../styles/titleStyle'
+import Description from '../styles/descriptionStyle'
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -59,35 +67,6 @@ const InputField = withStyles({
 })(TextInputField);
 
 
-const Content = styled(Box)<{ bg: string }>`
-
-`
-const Category = styled(AnimatedBox)`
-
-`
-
-
-const PButton = styled(Button)<{ color: string }>`
-  background: ${props => (props.color === 'white' ? 'black' : props.color)};
-  color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
-`
-
-
-const PageTitle = styled(Container)`
-
-
-` 
-
- const Title = styled(GridItem)`
- text-align: center;
-
-`
-
-const Description =  styled(Container)`
-
-`
-
-
 type PageProps = {
   data: {
         id: string
@@ -120,7 +99,7 @@ type PageProps = {
       const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
       const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
       return (
-     <Layout color={theme.palette.primary.contrastText}>
+     <Layout color={theme.palette.primary.main}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
         title={`${data.markdownRemark.frontmatter.title_detail} | ${data.site.siteMetadata.siteUrl}`}
@@ -130,7 +109,7 @@ type PageProps = {
       />
      
 
-      <Content bg={theme.palette.primary.contrastText} >
+      <Content bg={theme.palette.primary.main} >
       
 
  <PageTitle 
@@ -183,7 +162,7 @@ type PageProps = {
             </Grid>
             {/* </div> */}
             <br />
-            <SendMessageButton variant="contained" color="primary">Send Message</SendMessageButton>
+            <SendMessageButton variant="contained" color="default">Send Message</SendMessageButton>
             <br />
       </FormControl>
       </Form>

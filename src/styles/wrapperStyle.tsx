@@ -6,15 +6,12 @@ import withWidth from '@material-ui/core/withWidth';
 import Typography from '@material-ui/core/Typography';
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
 import reset from './reset'
-
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const Wrapper = styled.div`
 display: grid;
-grid-template-columns: ${props => props.theme.sidebarWidth.big} 1fr;
-@media (max-width: ${props => props.theme.breakpoints[4]}) {
-  grid-template-columns: ${props => props.theme.sidebarWidth.normal} 1fr;
-}
-@media (max-width: ${props => props.theme.breakpoints[2]}) {
+grid-template-columns: ${theme.sidebar.width.big} 1fr;
+[theme.breakpoints.down('md')]: {
   grid-template-columns: 1fr;
 }
 `

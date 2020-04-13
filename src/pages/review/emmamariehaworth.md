@@ -11,4 +11,3 @@ created_time: "2018-04-24T07:16:09+0000"
 rating: 5
 recommendation_type_positive: true
 ---
-![](./5starrating.png)

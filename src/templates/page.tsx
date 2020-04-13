@@ -16,76 +16,14 @@ import GridItem from '../components/grid-item'
 import HorizontalLogo from '../components/horizontalLogo'
 import ImageCarousel from '../components/imageCarousel'
 import RaisedHeader from '../styles/raisedHeaderStyle'
-
-
-
-const PBox = styled(AnimatedBox)`
-  
-  margin: 30 auto;
-`
-
-
-
-const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, theme.palette.primary.main)};
-  
-
-  .gatsby-image-wrapper:not(:last-child) {
-    margin-bottom: ${theme.typography.spacing};
-
-    [theme.breakpoints.down('lg')]: {
-      margin-bottom: ${theme.typography.spacing};
-    }
-  }
-`
-
-const Category = styled(AnimatedBox)`
-  letter-spacing: 0.05em;
-  font-size: ${theme.typography.h3.fontSize};
-  text-transform: capitalize;
-  color: ${theme.palette.secondary.main };
-`
-
-
-const PageTitle = styled(Container)`
-  padding: 1rem ;
-  display: flex;
-  background-color: ${theme.palette.primary.main};
-  color: ${theme.palette.secondary.main}; 
-  text-align: center;
-  margin: -80px 15% 0px 15%;
-  box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
-  font-size: ${theme.typography.h5.fontSize};
-  text-transform: none;
-  flexDirection: column;
-  width: 70%;
-` 
-
-const Title = styled(GridItem)`
-  grid-area: title;
-  color: ${theme.palette.secondary.main}; 
-  text-transform: none;
-  color: ${theme.palette.primary.contrastText}; 
-  font-size: ${theme.typography.h5.fontSize};
-
-`
-
-const Description = styled(animated.div)`
-
-  letter-spacing: -0.003em;
-  --baseline-multiplier: 0.179;
-  --x-height-multiplier: 0.35;
-  line-height: 1.58;
-  margin: 30px;
-  
-  a {
-    color: ${theme.palette.primary.main}; 
-    &:hover,
-    &:focus {
-      color: ${theme.palette.secondary.main};
-    }
-}
-`
+import PBox from '../styles/pboxStyle'
+import PageTitle from '../styles/pageTitleStyle'
+import Content from '../styles/contentStyle'
+import Category from '../styles/categoryStyle'
+import PButton from '../styles/pbuttonStyle'
+import Title from '../styles/titleStyle'
+import Description from  '../styles/descriptionStyle'
+import GlobalStyles from '../styles/globalStyle'
 
 
 type PageProps = {
@@ -118,6 +56,7 @@ type PageProps = {
   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
     <div >
+          <GlobalStyles />
     <Layout >
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
@@ -127,8 +66,8 @@ type PageProps = {
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         individual
       />
-         <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
-         <Content bg={theme.palette.primary.main} >
+   <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
+     <Content bg={theme.palette.primary.main} >
       
         <BackgroundImage
  
@@ -138,56 +77,35 @@ type PageProps = {
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           }}
-          // backgroundSize="cover"          
         >   
-        {/* <ImageCarousel /> */}
-    
           <Container
-        style={{
-          display: 'flex',
-          height: '800px',
-          width: '70%' ,
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        </Container>  
-   </BackgroundImage>
+        style={{ height: '800px',  }}
+        />
 
-   <Container>
- 
-   <Container>
- 
-   <RaisedHeader   >
-   <PageTitle >
-   <Container > 
+        </BackgroundImage>
 
- 
-  <Category style={categoryAnimation} color={theme.palette.primary.contrastText}> 
-   <Title color={theme.palette.secondary.main }>{data.markdownRemark.frontmatter.title}</Title></Category>
-   {/* </h2> */}
-  </Container>
-   </PageTitle>
-     
-
-      <Description style={descAnimation}>
-      <div className="raisedheader" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-     
-        
-     
-      <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <Link to="/contactus">
-        <Button variant="contained" color="primary" margin="1rem" py={4} px={8}>
-          Contact Us
-        </Button>
-        </Link>
-        </PBox>
-        </Description>
-      </RaisedHeader>
-      </Container>  
-      </Container>
+        <Container>
+          <Container>
+                <RaisedHeader   >
+                  <PageTitle >
+                      <Container > 
+                        <Category style={categoryAnimation} color={theme.palette.primary.contrastText}> 
+                         <Title color={theme.palette.secondary.main }>{data.markdownRemark.frontmatter.title}</Title></Category>
+                      </Container>
+                  </PageTitle>
+                  <Description >
+                    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+                      <PBox style={{ textAlign: 'center' }}>
+                        <Link to="/contactus">
+                        <Button variant="contained" color="primary" margin="1rem" py={4} px={8}>
+                          Contact Us
+                        </Button>
+                        </Link>
+                      </PBox>
+                  </Description>
+                </RaisedHeader>
+          </Container>  
+        </Container>
       </Content>
     </Layout>
     </div>

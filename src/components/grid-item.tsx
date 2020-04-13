@@ -26,6 +26,7 @@ const GridItem = styled(Container)`
     box-shadow: 3px 3px 5px 0px rgb(47, 54, 68, 0.4);
     text-align: left;
     font-size: ${theme.typography.h3.fontSize};
+    font-weight: ${theme.typography.h3.fontWeight};
     text-transform: none;
     padding: ${theme.spacing(2)};
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);

@@ -1,7 +1,7 @@
 ---
 templateKey: faq
 slug: /faq/discounts
-title: Do you offer a loyalty discount scheme?
+title: Do you offer a discount scheme?
 featured: false
 featuredimage: /img/jj-ying-UcI5OAPD820-unsplash.jpg
 alt: Photo by JJ Ying on Unsplash

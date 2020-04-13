@@ -1,9 +1,10 @@
 ---
-templateKey: page
+templateKey: header
 sortorder: 50
 slug: /service/essential_treatments
 title: Essential Treatments
 featured: true
+child_tag: treatment
 featuredimage: /img/david-kaloczi-10xlYvD5yn4-unsplash.jpg
 alt: Photo by David Kaloczi on Unsplash
 tags:

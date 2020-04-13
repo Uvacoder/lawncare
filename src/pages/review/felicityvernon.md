@@ -15,5 +15,3 @@ recommendation_type_positive: true
 ---
 "Highly Recommend, Very Professional. We are very pleased with the results so far!"
 
-
-![](./5starrating.png)

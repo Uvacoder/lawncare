@@ -10,7 +10,7 @@ import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-
+import Area from '../styles/areaStyle'
 
 type PageProps = {
   data: {
@@ -32,17 +32,7 @@ type PageProps = {
   }
 }
 
-const Area = styled(animated.div)`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  grid-auto-rows: 50vw;
-  grid-row-start: 2;
 
-   [theme.breakpoints.down('md')]:  {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 50vw;
-  }
-`
 class ServiceCatalog extends React.Component {
   render() {
 

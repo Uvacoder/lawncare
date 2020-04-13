@@ -15,6 +15,7 @@ import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
 import ImageCarousel from '../components/imageCarousel'
 import RaisedHeader from '../styles/raisedHeaderStyle'
+import StarRatings from 'react-star-ratings';
 import PBox from '../styles/pboxStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
@@ -22,6 +23,7 @@ import Category from '../styles/categoryStyle'
 import PButton from '../styles/pbuttonStyle'
 import Title from '../styles/titleStyle'
 import Description from  '../styles/descriptionStyle'
+
 
 type PageProps = {
   data: {
@@ -41,7 +43,7 @@ type PageProps = {
   }
 
 
-  const ReviewPage = ({ data }) => {
+  const RatingPage = ({ data }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -56,7 +58,7 @@ type PageProps = {
     <Layout color={theme.palette.primary.main}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
-        title={`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.siteUrl}`}
+        title={`${data.markdownRemark.frontmatter.title} | lawnsmatter.co.uk`}
         desc={data.markdownRemark.excerpt}
         node={data.markdownRemark.frontmatter.slug}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
@@ -86,14 +88,40 @@ type PageProps = {
       >
         </Container>  
         </BackgroundImage>
+
+
+
         <Container>
+ 
  <Container>
 
  <RaisedHeader  >
- <PageTitle  >
+ <PageTitle   style={{
+      display: 'flex',
+      width: '70%' ,
+      lineHeight: '1',
+      justifyContent: 'space-around',
+      alignItems: 'left',
+      flexDirection: 'column',}}>
  <Container > 
+{/* 
+ <h2 className="pageTitle"
+                     style={{
+                     boxShadow: 'transparent',
+                     borderRadius: '0px',
+                     backgroundColor: theme.palette.primary.main,
+                     color: theme.palette.primary.contrastText,
+                     lineHeight: '1',
+                     padding: '0.3em',
+          
+                 }}> */}
 
+{/* <Category style={categoryAnimation} color={theme.palette.primary.contrastText}>  */}
+ {/* <TitlePart1>customer</TitlePart1> <TitlePart2>rating</TitlePart2>
+ <br /> */}
  <Title color={theme.palette.secondary.main }>{data.markdownRemark.frontmatter.title}</Title>
+ {/* </Category> */}
+ {/* </h2> */}
 
 </Container>
  </PageTitle>
@@ -101,7 +129,12 @@ type PageProps = {
 
     <h4>  <Description style={descAnimation}>
     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-
+    <StarRatings
+        rating={data.markdownRemark.frontmatter.rating}
+        starDimension="40px"
+        starSpacing="15px"
+        starRatedColor="FFD700"
+      />
       </Description></h4> 
       
    
@@ -123,10 +156,10 @@ type PageProps = {
 }
 
 
-export default ReviewPage
+export default RatingPage
 
 export const query = graphql`
-query ReviewPage ($id: String!) {
+query RatingPage ($id: String!) {
    markdownRemark(id: { eq: $id }) {
    excerpt(pruneLength: 400)
     html

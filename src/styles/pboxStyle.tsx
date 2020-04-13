@@ -4,7 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import reset from './reset'
-
+import { Box, AnimatedBox} from '../elements'
 
 const PBox = styled(AnimatedBox)`
   padding: 1rem;
@@ -12,7 +12,7 @@ const PBox = styled(AnimatedBox)`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: ${theme.breakpoints.down('xl')}) {
+  [theme.breakpoints.down('xl')]:{
     margin: .1rem;
    }
 

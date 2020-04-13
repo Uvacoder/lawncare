@@ -16,68 +16,13 @@ import Container from '@material-ui/core/Container'
 import GridItem from '../components/grid-item'
 import GlobalStyles from '../styles/globalStyle'
 import RaisedHeader from '../styles/raisedHeaderStyle'
-
-const PBox = styled(AnimatedBox)`
-  margin: 30 auto;
-`
-
-
-
-const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, theme.palette.primary.main)};
-  
-
-  .gatsby-image-wrapper:not(:last-child) {
-    margin-bottom: ${theme.typography.spacing};
-
-    [theme.breakpoints.down('lg')]: {
-      margin-bottom: ${theme.typography.spacing};
-    }
-  }
-`
-
-
-const PageTitle = styled(Container)`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas:
-  'titlepart1 titlepart2'
-  'title'   ;
-  padding: 1rem ;
-  background-color: ${theme.palette.primary.main};
-  text-align: center;
-  margin: -80px 15% 20px 15%;
-  box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
-  PageTilePlain: {
-    marginLeft: "0px",
-    marginRight: "0px"
-  },
-` 
-
-const Title = styled(GridItem)`
-  grid-area: title;
-  color: ${theme.palette.secondary.main}; 
-  text-transform: none;
-  color: ${theme.palette.primary.contrastText}; 
-  font-size: ${theme.typography.h3.fontSize};
-
-`
-
-const Description = styled(animated.div)`
-  padding: ${theme.typography.spacing}; 
-  letter-spacing: -0.003em;
-  --baseline-multiplier: 0.179;
-  --x-height-multiplier: 0.35;
-  line-height: 1.58;
-  margin: 30px;
-`
-
-const PButton = styled(Button)<{ color: string }>`
-  background: ${props => (props.color === 'white' ? 'black' : props.color)};
-  color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
-`
-
+import PBox from '../styles/pboxStyle'
+import PageTitle from '../styles/pageTitleStyle'
+import Content from '../styles/contentStyle'
+import Category from '../styles/categoryStyle'
+import PButton from '../styles/pbuttonStyle'
+import Title from '../styles/titleStyle'
+import Description from  '../styles/descriptionStyle'
 
 
 export const FaqsPageTemplate = ({

@@ -35,6 +35,10 @@ const drawerContentsWidth = '240px'
     root: {
       display: 'flex',
     },
+    mainSection: {
+      width: `calc(100% - ${theme.sidebar.width.big}px)`,
+      marginLeft: theme.sidebar.width.big,
+    },
     drawer: {
       width: theme.sidebar.width.big,
       position: 'fixed',
@@ -59,10 +63,7 @@ export default function PermanentDrawerLeft(props) {
 
   return (
     <div className={classes.root}>
-  {/* <Paper
-  
-   
-  > */}
+
   <GlobalStyles />
 
     <Drawer
@@ -140,12 +141,7 @@ export default function PermanentDrawerLeft(props) {
             {/* </Container> */}
       </Drawer>
 
-      {/* <main > */}
-
-        {/* <div className={drawerHeader} /> */}
-
-      {/* </main> */}
-      {/* </Paper> */}
+  
     </div>
   );
 }

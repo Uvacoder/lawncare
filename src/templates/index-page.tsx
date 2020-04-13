@@ -17,43 +17,14 @@ import GridItem from '../components/grid-item'
 import GlobalStyles from '../styles/globalStyle'
 import GridStyle from '../styles/gridStyle'
 import RaisedHeader from '../styles/raisedHeaderStyle'
+import PBox from '../styles/pboxStyle'
+import PageTitle from '../styles/pageTitleStyle'
+import Content from '../styles/contentStyle'
+import Category from '../styles/categoryStyle'
+import PButton from '../styles/pbuttonStyle'
+import Title from '../styles/titleStyle'
+import Description from  '../styles/descriptionStyle'
 
-
-const PageTitle = styled(Container)`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas:
-  'title'   ;
-  padding: 1rem ;
-  background-color: ${theme.palette.primary.main};
-  text-align: center;
-  margin: -80px 15% 20px 15%;
-  box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
-  PageTilePlain: {
-    marginLeft: "0px",
-    marginRight: "0px"
-  },
-` 
-
-const Title = styled(GridItem)`
-  grid-area: title;
-  color: ${theme.palette.secondary.main}; 
-  text-transform: none;
-  font-weight: 400;
-  color: ${theme.palette.primary.contrastText}; 
-  font-size: ${theme.typography.h3.fontSize};
-
-`
-
-const Description = styled(animated.div)`
-  padding: 1rem; 
-  letter-spacing: -0.003em;
-  --baseline-multiplier: 0.179;
-  --x-height-multiplier: 0.35;
-  line-height: 1.58;
-  margin: 30px;
-`
 
 export const IndexPageTemplate = ({
   featuredimage,
@@ -79,53 +50,21 @@ export const IndexPageTemplate = ({
       }}
     >
       <div
-        style={{
-          display: 'flex',
-          height: '50vw',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
+        style={{ height: '50vw', }}
       />
 
  <RaisedHeader >
-
-          
-            <PageTitle   style={{
-        display: 'flex',
-        width: '70%' ,
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        alignItems: 'left',
-        flexDirection: 'column',}}>
+            <PageTitle >
      <Title>Professional Lawn Care</Title>
-
-        
           </PageTitle>
-       
- 
-    <section className="section section--gradient">
-      <div >
           <Description>
-              <div className="content">
-                <div className="columns">
-                  <div className="column is-12">
-                        <div dangerouslySetInnerHTML={{ __html: html }} />
-                  </div>
-                </div>
-                         <div className="column is-12" >
-                        <h3 className="has-text-weight-semibold is-size-2">
-                          About Us
-                        </h3>
-                      
-                        <BlogIndex />
-        
-                      </div>
-             </div>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+                <h3 >
+                  About Us
+                </h3>
+                
+          <BlogIndex />
           </Description>
-    </div>
-    </section>
     </RaisedHeader>
     
     </div>

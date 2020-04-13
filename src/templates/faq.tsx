@@ -1,90 +1,30 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
+import FAQIndex from '../components/FAQIndex'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
-import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
-import BackgroundImage from 'gatsby-background-image'
 import GridItem from '../components/grid-item'
-import ImageCarousel from '../components/imageCarousel'
+import GlobalStyles from '../styles/globalStyle'
 import RaisedHeader from '../styles/raisedHeaderStyle'
+import BackgroundImage from 'gatsby-background-image'
+import PBox from '../styles/pboxStyle'
+import PageTitle from '../styles/pageTitleStyle'
+import Content from '../styles/contentStyle'
+import Category from '../styles/categoryStyle'
+import PButton from '../styles/pbuttonStyle'
+import Title from '../styles/titleStyle'
+import Description from  '../styles/descriptionStyle'
 
-const PBox = styled(AnimatedBox)`
-  
-  margin: 30 auto;
-`
-
-
-
-const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, theme.palette.primary.main)};
-
-  .gatsby-image-wrapper:not(:last-child) {
-    margin-bottom: ${theme.typography.spacing};
-
-    [theme.breakpoints.down('lg')]: {
-      margin-bottom: ${theme.typography.spacing};
-    }
-  }
-`
-
-const Category = styled(AnimatedBox)`
-  letter-spacing: 0.05em;
-  text-transform: none;
-`
-
-
-const PageTitle = styled(Container)`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas:
-  'TitlePart1 titlepart2'
-  'title'   ;
-  padding: 1rem ;
-  background-color: ${theme.palette.primary.main};
-  text-align: center;
-  margin: -80px 15% 20px 15%;
-  box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
-  PageTilePlain: {
-    marginLeft: "0px",
-    marginRight: "0px"
-  },
-
-
-
-` 
-
-const Title = styled(GridItem)`
-  grid-area: title;
-  color: ${theme.palette.secondary.main}; 
-  text-transform: none;
-  color: ${theme.palette.primary.contrastText}; 
-  font-size: ${theme.typography.h6.fontSize};
-
-`
-
-
-const Description = styled(animated.div)`
-  max-width: 960px;
-  padding: 30px;
-  letter-spacing: -0.003em;
-  --baseline-multiplier: 0.179;
-  --x-height-multiplier: 0.35;
-  line-height: 1.58;
-`
-
-const PButton = styled(Button)<{ color: string }>`
-  background: ${props => (props.color === 'white' ? 'black' : props.color)};
-  color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
-`
 
 type PageProps = {
   data: {
@@ -119,7 +59,7 @@ type PageProps = {
     <Layout color={theme.palette.primary.main}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
-        title={`${data.markdownRemark.frontmatter.title} | lawnsmatter.co.uk`}
+        title={`${data.markdownRemark.frontmatter.title} |  ${data.site.siteMetadata.siteUrl}`}
         desc={data.markdownRemark.excerpt}
         node={data.markdownRemark.frontmatter.slug}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
@@ -170,8 +110,7 @@ type PageProps = {
 
 
 <Category style={categoryAnimation} color={theme.palette.primary.contrastText}> 
- {/* <TitlePart1>customer</TitlePart1> <TitlePart2>Faq</TitlePart2>
- <br /> */}
+
  <Title color={theme.palette.secondary.main }>{data.markdownRemark.frontmatter.title}</Title></Category>
 </Container>
  </PageTitle>
@@ -184,7 +123,7 @@ type PageProps = {
    
     <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
       <Link to="/contactus">
-      <Button variant="contained" color={theme.palette.secondary.main} margin="1rem" py={4} px={8}>
+      <Button variant="contained" color="primary" margin="1rem" py={4} px={8}>
         Contact Us
       </Button>
       </Link>
@@ -223,6 +162,16 @@ query FaqPage ($id: String!) {
       featured
     }
     id
+  }
+  site {
+    siteMetadata {
+      siteUrl
+      serviceName
+      contactPoint {
+        email
+        name
+      }
+    }
   }
 }
 

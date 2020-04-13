@@ -10,6 +10,7 @@ import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
+import BackgroundImage from 'gatsby-background-image'
 import { Box, Flex, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
@@ -18,78 +19,13 @@ import GridItem from '../components/grid-item'
 import GlobalStyles from '../styles/globalStyle'
 import { ChildImageSharp } from '../types'
 import RaisedHeader from '../styles/raisedHeaderStyle'
-
-const PBox = styled(AnimatedBox)`
-  margin: 30 auto;
-`
-
-
-
-const Content = styled(Box)<{ bg: string }>`
-  background-color: ${props => transparentize(0.9, theme.palette.primary.main)};
-  
-
-  .gatsby-image-wrapper:not(:last-child) {
-    margin-bottom: ${theme.typography.spacing};
-
-    [theme.breakpoints.down('lg')]:  {
-      margin-bottom: ${theme.typography.spacing};
-    }
-  }
-`
-
-const PageTitle = styled(Container)`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas:  'title'   ;
-  padding: 1rem ;
-  background-color: ${theme.palette.primary.main};
-  text-align: center;
-  margin: -80px 15% 20px 15%;
-  box-shadow: 5px 5px 7px 0px rgb(47, 54, 68, 0.4);
-  PageTilePlain: {
-    marginLeft: "0px",
-    marginRight: "0px"
-  },
-` 
-
-
-const Title = styled(GridItem)`
-  grid-area: title;
-  color: ${theme.palette.secondary.main}; 
-  text-transform: none;
-  font-weight: ${theme.typography.h4.fontWeight};
-  color: ${theme.palette.primary.contrastText}; 
-  font-size: ${theme.typography.h2.fontSize};
-
-`
-
-const Description = styled(animated.div)`
-  padding: 1rem;
-  letter-spacing: -0.003em;
-  --baseline-multiplier: 0.179;
-  --x-height-multiplier: 0.35;
-  line-height: 1.58;
-  margin: 10px;
-`
-
-const PButton = styled(Button)<{ color: string }>`
-  background: ${props => (props.color === 'white' ? 'black' : props.color)};
-  color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
-`
-
-const Area = styled(animated.div)`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  grid-auto-rows: 50vw;
-  grid-row-start: 2;
-
- [theme.breakpoints.down('md')]:  {
-  grid-template-columns: 1fr;
-  grid-auto-rows: 50vw;
-}
-`
+import PBox from '../styles/pboxStyle'
+import PageTitle from '../styles/pageTitleStyle'
+import Content from '../styles/contentStyle'
+import Category from '../styles/categoryStyle'
+import PButton from '../styles/pbuttonStyle'
+import Title from '../styles/titleStyle'
+import Description from  '../styles/descriptionStyle'
 
 export const HeaderPageTemplate = ({
   featuredimage,
@@ -100,7 +36,8 @@ export const HeaderPageTemplate = ({
 }) => (
   <div>
     <GlobalStyles />
-    
+
+  
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -112,16 +49,7 @@ export const HeaderPageTemplate = ({
         backgroundSize: 'cover',
       }}
     >
-      <div
-        style={{
-          display: 'flex',
-          height: '800px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      />
+      <div style={{  height: '800px',  }} />
 
  <RaisedHeader  >
             <PageTitle   style={{
@@ -130,7 +58,8 @@ export const HeaderPageTemplate = ({
         lineHeight: '1',
         justifyContent: 'space-around',
         alignItems: 'left',
-        flexDirection: 'column',}}>
+        flexDirection: 'column',
+        }}>
 
  <Title color={theme.palette.secondary.main}>{title}</Title>
         
@@ -214,7 +143,7 @@ export default HeaderPage
 export const pageQuery = graphql`
  
   query HeaderPageTemplate {
-    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "about"}}}, sort: {order: ASC, fields: id}) {
+    allMarkdownRemark(filter: {frontmatter: {tags: {eq: "treatment"}}}, sort: {order: ASC, fields: id}) {
       totalCount
       edges {
         node {
@@ -243,6 +172,7 @@ export const pageQuery = graphql`
         slug
         heading
         featured
+        child_tag
         featuredimage {
           childImageSharp {
             fluid(quality: 95, maxWidth: 600) {
@@ -254,6 +184,16 @@ export const pageQuery = graphql`
         sortorder
       }
     }
-  }
+    site {
+        siteMetadata {
+          siteUrl
+          serviceName
+          contactPoint {
+            email
+            name
+          }
+        }
+      }
+    }
   
 `

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import  { createMuiTheme }  from '@material-ui/core'
 
 
@@ -138,35 +138,35 @@ const theme = createMuiTheme({
 			},
 			h2: {
 				fontFamily: 'Open Sans',
-				fontWeight: '500',
+				fontWeight: '700',
 				fontSize: '2.75rem',
 				lineHeight: '1.2',
 				letterSpacing: '-0.00833em',
 			},
 			h3: {
 				fontFamily: 'Open Sans',
-				fontWeight: '500',
+				fontWeight: '700',
 				fontSize: '2rem',
 				lineHeight: '1.167',
 				letterSpacing: '0em',
 	    	},
 			h4: {
 				fontFamily: 'Open Sans',
-				fontWeight: '400',
+				fontWeight: '500',
 				fontSize: '1.5rem',
 				lineHeight: '1.235',
 				letterSpacing: '0.00735em',
 	    	},
 			h5: {
 				fontFamily: 'Open Sans',
-				fontWeight: '400',
+				fontWeight: '500',
 				fontSize: '1.2rem',
 				lineHeight: '1.334',
 				letterSpacing: '0em',
 	    	},
 			h6: {
 				fontFamily: 'Open Sans',
-				fontWeight: '300',
+				fontWeight: '500',
 				fontSize: '1.1rem',
 				lineHeight: '1.6',
 				letterSpacing: '0.0075em',
@@ -180,7 +180,7 @@ const theme = createMuiTheme({
 	    	},
 			subtitle2: {
 				fontFamily: 'Open Sans',
-				fontWeight: '500',
+				fontWeight: '400',
 				fontSize: '1rem',
 				lineHeight: '1.57',
 				letterSpacing: '0.00714em',
@@ -201,7 +201,7 @@ const theme = createMuiTheme({
 	    	},
 			button: {
 				fontFamily: 'Open Sans',
-				fontWeight: '300',
+				fontWeight: '500',
 				fontSize: '0.875rem',
 				lineHeight: '1.75',
 				letterSpacing: '0.02857em',
@@ -209,7 +209,7 @@ const theme = createMuiTheme({
 		    },
 			caption: {
 				fontFamily: 'Open Sans',
-				fontWeight: '400',
+				fontWeight: '500',
 				fontSize: '0.75rem',
 				lineHeight: '1.66',
 				letterSpacing: '0.03333em',
@@ -230,6 +230,7 @@ const theme = createMuiTheme({
 			width: {
 				big: '275px',
 				normal: '240px',
+				main: `calc(100% - 275px)`,
 			},
 			height: '100%',
 			},
