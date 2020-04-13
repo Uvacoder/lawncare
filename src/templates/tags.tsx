@@ -132,7 +132,7 @@ TagsPageTemplate.propTypes = {
 }
 
 const TagsPage = ({ data }) => {
-  const { tagsdata } = data.markdownRemark
+  const { data } = data.markdownRemark
   const { edges: posts } = data.allMarkdownRemark
 
   return (
