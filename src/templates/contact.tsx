@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const TextInputField = styled(TextField)`
   variant: outlined;
+  color: secondary; 
 `
 const SendMessageButton = styled(Button)`
   variant: outlined;  
@@ -51,7 +52,7 @@ const SendMessageButton = styled(Button)`
 
 const InputField = withStyles({
   root: {
-    color: 'lightGreen',
+    color: theme.palette.secondary.main,
     '& label.Mui-focused': {
       color: 'lightGreen',
     },

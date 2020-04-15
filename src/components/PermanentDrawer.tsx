@@ -48,7 +48,6 @@ import GlobalStyles from '../styles/globalStyle'
       width: theme.sidebar.width.big,
     },
     // necessary for content to be below app bar
-    toolbar: theme.mixins.toolbar,
     content: {
       flexGrow: 1,
       backgroundColor: theme.palette.primary.main,
@@ -95,11 +94,6 @@ export default function PermanentDrawerLeft(props) {
             <ListItem button style={{ color: theme.palette.primary.contrastText }} >
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><InfoOutlinedIcon /></ListItemIcon>
               <ListItemText>Our Service</ListItemText>
-            </ListItem></Link>
-            <Link to="/treatments/">
-            <ListItem button style={{ color: theme.palette.primary.contrastText }} >
-              <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><InfoOutlinedIcon /></ListItemIcon>
-              <ListItemText>Our Treatments</ListItemText>
             </ListItem></Link>
             <Link to="/reviews">
             <ListItem button style={{ color: theme.palette.primary.contrastText }} >

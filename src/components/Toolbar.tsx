@@ -64,7 +64,7 @@ export default function ElevateAppBar(props: Props) {
           className={classes.drawerPaper}
           backgroundColor={theme.palette.primary.main}
           position="fixed">
-          <Toolbar
+          {/* <Toolbar
           backgroundColor={theme.palette.primary.main}
           className={classes.drawer}
           variant="permanent"  
@@ -72,7 +72,7 @@ export default function ElevateAppBar(props: Props) {
           alignItems="space-between" 
     
      
-          >
+          > */}
                 
             <Grid container position="relative" justify="center" alignItems="flex-end"  >  
                 <Grid item xs={3} display="flex" alignItems="flex-end" justify="center" >
@@ -90,7 +90,7 @@ export default function ElevateAppBar(props: Props) {
                 </Grid>   
               <Divider />
             </Grid>
-          </Toolbar>
+          {/* </Toolbar> */}
         </AppBar> 
         </Container>
   

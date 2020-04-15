@@ -1,7 +1,7 @@
 ---
 templateKey: header
 sortorder: 10
-slug: /treatments/
+slug: /treatment
 title: Essential Treatments
 featured: true
 category: treatment

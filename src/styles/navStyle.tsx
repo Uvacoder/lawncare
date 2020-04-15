@@ -45,6 +45,7 @@ const Nav = styled(Flex)<{  color: theme.palette.primary.background }>`
     color: ${theme.palette.primary.contrastText};
     background-color: ${theme.palette.primary.background};
     font-size: ${theme.typography.h2.fontSize};
+    font-weight: ${theme.typography.h2.fontWeight};
     line-height: 2;
     align-content: center;
     justify-content: center;
