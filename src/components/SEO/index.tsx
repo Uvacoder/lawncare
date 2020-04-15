@@ -100,7 +100,7 @@ const SEO = ({ title, desc, banner, pathname, node, organization }: Props) => {
     {
       '@type': 'ListItem',
       item: {
-        '@id': `${siteUrl}/servicecatalog`,
+        '@id': `${siteUrl}/service`,
         name: 'Our Service',
       },
       position: 2,
@@ -116,7 +116,7 @@ const SEO = ({ title, desc, banner, pathname, node, organization }: Props) => {
     {
       '@type': 'ListItem',
       item: {
-        '@id': `${siteUrl}/faqs`,
+        '@id': `${siteUrl}/faq/`,
         name: 'Questions?',
       },
       position: 4,

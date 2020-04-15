@@ -5,7 +5,7 @@ title: Emma Shaw
 featured: false
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
-tags:
+categories:
   - review
   - rating
 created_time: "2018-03-29T19:38:59+0000"

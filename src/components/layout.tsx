@@ -55,13 +55,13 @@ const Layout = ({ children, color }: LayoutProps) => {
          <Main>{children}</Main>
         </Hidden>
         <Hidden smDown>
-        <Area>
+     
          <SideBarInner>
             <PermanentDrawerLeft />
           </SideBarInner>
-          </Area>
-          <Container position="relative" style={{marginLeft: theme.sidebar.width.big}}>
-          <Main>{children}</Main>
+      
+          <Container position="relative" style={{marginLeft: theme.sidebar.width.big, width: theme.sidebar.width.main }}>
+           <Main>{children}</Main>
           </Container>
           </Hidden>
       <Hidden mdUp>

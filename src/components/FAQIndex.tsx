@@ -10,6 +10,7 @@ import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
+import List from '../styles/listStyle'
 
 type PageProps = {
   data: {
@@ -32,13 +33,7 @@ type PageProps = {
   }
 }
 
-const Area = styled(animated.div)`
-display: grid;
-grid-template-columns: 1fr;
-padding: 1rem;
 
-
-`
 class FAQIndex extends React.Component {
   render() {
 
@@ -49,7 +44,7 @@ class FAQIndex extends React.Component {
 
     
    
-        <Area>
+        <List>
         {faqs &&
           faqs.map(({ node: faq }) => (
 
@@ -60,7 +55,7 @@ class FAQIndex extends React.Component {
           </Link>
          
           ))}
-      </Area>
+      </List>
       
     )
   }
@@ -81,13 +76,7 @@ export default () => (
               location
               templateKey
               featured
-              featuredimage {
-                childImageSharp {
-                  fluid(quality: 95, maxWidth: 1200) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
+          
             }
           }
         }

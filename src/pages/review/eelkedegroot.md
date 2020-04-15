@@ -6,7 +6,7 @@ loction: Bicester
 featured: true
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
-tags:
+categories:
   - review
 created_time: "2019-06-08T17:03:02+0000"
 rating: 

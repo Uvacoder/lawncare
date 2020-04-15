@@ -5,7 +5,7 @@ slug: /about/aerationholes
 featured: true
 featuredimage: /img/aeration1.jpg
 alt: Aeration holes
-tags:
+categories:
   - about
   - service
 ---

@@ -3,18 +3,19 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import FAQIndex from '../components/FAQIndex'
+import BlogIndex from '../components/BlogIndex'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { config, animated, useSpring } from 'react-spring'
+import { animated } from 'react-spring'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import { Box, AnimatedBox } from '../elements'
+import { Box, Flex, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import GridItem from '../components/grid-item'
 import GlobalStyles from '../styles/globalStyle'
+import { ChildImageSharp } from '../types'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PBox from '../styles/pboxStyle'
 import PageTitle from '../styles/pageTitleStyle'
@@ -25,7 +26,7 @@ import Title from '../styles/titleStyle'
 import Description from  '../styles/descriptionStyle'
 
 
-export const FaqsPageTemplate = ({
+export const categoriesPageTemplate = ({
   featuredimage,
   title,
   heading,
@@ -49,7 +50,7 @@ export const FaqsPageTemplate = ({
       <div
         style={{
           display: 'flex',
-          height: '500px',
+          height: '800px',
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',
@@ -65,35 +66,57 @@ export const FaqsPageTemplate = ({
         justifyContent: 'space-around',
         alignItems: 'left',
         flexDirection: 'column',}}>
-       <Container><Title>Frequently Asked Questions</Title></Container>
 
- {/* <h2>  <Title color={theme.palette.secondary.main}>{heading}</Title></h2> */}
+ <Title color={theme.palette.secondary.main}>{title}</Title>
         
           </PageTitle>
        
  
     <section className="section section--gradient">
-      <Description>
+      <div >
+        {/* <div className="section">
+          <div className="columns">
+            <div className="column is-10 is-offset-1"> */}
               <div className="content">
-                      <div className="columns">               
-                        <div className="column is-12">
-                           <div dangerouslySetInnerHTML={{ __html: html }} />
-                        </div>
-                      </div>
+                <div className="columns">
+                  <div className="column is-12">
+            
+               <Description dangerouslySetInnerHTML={{ __html: html }} />
+               
+                  </div>
+                </div>
+                <Flex
+              flexWrap="nowrap"
+              flexDirection={['row', 'row', 'row', 'column']}
+              alignItems={['center', 'center', 'center', 'flex-start']}
+              justifyContent="space-between"
+            >
+    
+               </Flex>
 
-                    <div className="column is-12">
-                      <FAQIndex />
-                    </div>
+
+                <div className="columns">
+                  <div >
+                    {/* <Link className="btn" to="/products">
+                      See all products
+                    </Link> */}
+                  </div>
+                </div>
+                <div className="column is-12">
+       
+                  <BlogIndex />
+             
+                </div>
               </div>
-              </Description>
+      </div>
     </section>
     </RaisedHeader>
- 
+    
     </div>
-  </div>
+ </div>
 )
 
-FaqsPageTemplate.propTypes = {
+categoriesPageTemplate.propTypes = {
   featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -104,13 +127,12 @@ FaqsPageTemplate.propTypes = {
   }),
 }
 
-const FaqsPage = ({ data }) => {
-  const { indexdata } = data.markdownRemark
+const categoriesPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
     <Layout>
-      <FaqsPageTemplate
+      <categoriesPageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
@@ -121,7 +143,7 @@ const FaqsPage = ({ data }) => {
   )
 }
 
-FaqsPage.propTypes = {
+categoriesPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -132,58 +154,58 @@ FaqsPage.propTypes = {
   }),
 }
 
-export default FaqsPage
+export default categoriesPage
 
 export const pageQuery = graphql`
-query FaqsPageTemplate {
-  markdownRemark(frontmatter: {tags: {eq: "FAQ"}}) {
-    html
-    frontmatter {
-      title
-      featuredimage {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 100) {
-            src
+ 
+  query categoriesPageTemplate {
+    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {order: ASC, fields: id}) {
+      totalCount
+      edges {
+        node {
+          frontmatter {
+            title
+            slug
+            featuredimage {
+              childImageSharp {
+                fluid(quality: 95, maxWidth: 600) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            alt
           }
+          excerpt(pruneLength: 147)
         }
       }
-      slug
-      heading
     }
-  }
-  allMarkdownRemark(filter: {frontmatter: {tags: {eq: "faq"}}}, sort: {order: ASC, fields: id}) {
-    edges {
-      node {
-        excerpt(pruneLength: 400)
-        id
-        faqs: frontmatter {
-          slug
-          title
-          templateKey
-          featured
-          featuredimage {
-            childImageSharp {
-              fluid(quality: 95, maxWidth: 1200) {
-                src
-              }
+    markdownRemark(frontmatter: {templateKey: {eq: "categories"}}) {
+      id
+      html
+      frontmatter {
+        title
+        templateKey
+        slug
+        heading
+        featured
+        categories
+        featuredimage {
+          childImageSharp {
+            fluid(quality: 95, maxWidth: 1200) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
+        alt
+        sortorder
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }
-  site {
-    siteMetadata {
-      siteUrl
-      serviceName
-      contactPoint {
-        email
-        name
-      }
-    }
-  }
-}
-
-
-
-  `
+  
+  
+`

@@ -5,7 +5,7 @@ title: How should I mow the lawn?
 featured: false
 featuredimage: /img/remi-muller-LlHgaeBwYVE-unsplash.jpg
 alt: Photo by Remi Muller on Unsplash
-tags:
+categories:
   - faq
 ---
 

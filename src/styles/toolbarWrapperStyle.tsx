@@ -10,7 +10,7 @@ import reset from './reset'
 
 const ToolbarWrapper = styled.div`
   display: grid;
-  background-color: ${theme.palette.primary.contrastText};
+  background-color: ${theme.palette.primary.main};
   [theme.breakpoints.up('sm')]: {
   grid-template-rows: ${theme.toolbar.height.big} 1fr;
   }

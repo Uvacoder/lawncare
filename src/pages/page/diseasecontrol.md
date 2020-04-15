@@ -5,7 +5,7 @@ featured: true
 title: Disease Control
 featuredimage: /img/disease.jpg
 alt: Photo by from Lawns Matter's Facebook page
-tags:
+categories:
   - service
 ---
 Disease control

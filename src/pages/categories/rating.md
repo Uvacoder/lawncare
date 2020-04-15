@@ -1,13 +1,14 @@
 ---
-templateKey: reviews
+templateKey: rating
 sortorder: 50
-slug: /reviews
-title: Lawn Care Customer Reviews
+slug: /rating
+title: Lawn Care Customer Ratings
 featured: true
+category: rating
 featuredimage: /img/aboutus.jpg
 alt: About Lawns Matter Background Pic
-tags:
-  - review
+categories:
+  - rating
 ---
 #### We are proud of our quality of work, as we are delivering what we believe is the best quality lawn care service available. ####
 

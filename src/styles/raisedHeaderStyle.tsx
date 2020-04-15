@@ -19,6 +19,6 @@ const RaisedHeader = styled(Container)`
   wordWrap: break-word;
   transition: all 300ms linear ; 
   lineHeight: 1;
-  justifyContent: 'space-around';
+
 `
 export default RaisedHeader

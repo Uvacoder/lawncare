@@ -125,13 +125,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'contact',
-        path: `${__dirname}/static/content/contact`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'config',
         path: `${__dirname}/config`,
       },

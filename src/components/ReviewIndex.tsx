@@ -10,6 +10,7 @@ import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
+import List from '../styles/listStyle'
 
 type PageProps = {
   data: {
@@ -32,13 +33,7 @@ type PageProps = {
   }
 }
 
-const Area = styled(animated.div)`
-  display: grid;
-  grid-template-columns: 1fr;
 
-
-
-`
 class ReviewIndex extends React.Component {
   render() {
 
@@ -49,7 +44,7 @@ class ReviewIndex extends React.Component {
 
     
    
-        <Area>
+        <List>
         {reviews &&
           reviews.map(({ node: review }) => (
 
@@ -60,7 +55,7 @@ class ReviewIndex extends React.Component {
           </Link>
          
           ))}
-      </Area>
+      </List>
       
     )
   }
@@ -91,6 +86,11 @@ export default () => (
             }
           }
         }
+      }
+      site {
+        siteMetadata {
+          title
+         }
       }
     }
     

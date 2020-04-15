@@ -6,7 +6,7 @@ location: Broughton
 featured: true
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
-tags:
+categories:
   - review
 created_time: "2019-10-25T07:30:22+0000"
 rating: 

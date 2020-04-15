@@ -5,7 +5,7 @@ title:  How should I pay?
 featured: false
 featuredimage: /img/colin-watts-8WRRJ4xJeyg-unsplash.jpg
 alt: Photo by Colin Watts Muller on Unsplash
-tags:
+categories:
   - faq
 ---
 

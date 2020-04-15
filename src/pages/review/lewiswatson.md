@@ -6,7 +6,7 @@ location: Bucknell
 featured: true
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
-tags:
+categories:
   - review
 created_time: "2018-08-13T19:48:14+0000"
 rating: 

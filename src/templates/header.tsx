@@ -84,11 +84,7 @@ export const HeaderPageTemplate = ({
                 <div className="column is-12">
        
                   <BlogIndex />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
+                 
                 </div>
               </div>
       </div>
@@ -96,7 +92,7 @@ export const HeaderPageTemplate = ({
     </RaisedHeader>
     
     </div>
-  // </div>
+ </div>
 )
 
 HeaderPageTemplate.propTypes = {
@@ -143,7 +139,7 @@ export default HeaderPage
 export const pageQuery = graphql`
  
   query HeaderPageTemplate {
-    allMarkdownRemark(filter: {frontmatter: {tags: {eq: "treatment"}}}, sort: {order: ASC, fields: id}) {
+    allMarkdownRemark(filter: {frontmatter: {categories: {eq: "treatment"}}}, sort: {order: ASC, fields: id}) {
       totalCount
       edges {
         node {
@@ -172,7 +168,7 @@ export const pageQuery = graphql`
         slug
         heading
         featured
-        child_tag
+        category
         featuredimage {
           childImageSharp {
             fluid(quality: 95, maxWidth: 600) {

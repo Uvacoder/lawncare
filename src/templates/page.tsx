@@ -37,7 +37,7 @@ type PageProps = {
           featured: boolean
           slug: string
           alt: string
-          tags: string
+          categories: string
           featuredimage: ChildImageSharp
           }
         }
@@ -64,8 +64,7 @@ type PageProps = {
         desc={data.markdownRemark.html}
         node={data.markdownRemark.frontmatter.slug}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
-        individual
-      />
+       />
    <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
      <Content bg={theme.palette.primary.main} >
       
@@ -74,7 +73,7 @@ type PageProps = {
           fluid={imageData}
           style={{
           backgroundAttachment: 'fixed',     
-          backgroundPosition: 'center',
+          backgroundPosition: 'top',
           backgroundSize: 'cover',
           }}
         >   
@@ -124,7 +123,7 @@ query Page ($id: String!) {
       slug
       title
       templateKey
-      tags
+      categories
       featuredimage {
         childImageSharp {
           fluid(quality: 95, maxWidth: 1200) {

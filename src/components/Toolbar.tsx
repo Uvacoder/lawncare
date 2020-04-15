@@ -57,10 +57,9 @@ export default function ElevateAppBar(props: Props) {
 
   return (
     <div className={classes.root}>
-     
-      {/* <CssBaseline />
-      <GlobalStyles /> */}
-      <Container >
+          <Container
+
+      >
         <AppBar 
           className={classes.drawerPaper}
           backgroundColor={theme.palette.primary.main}
@@ -71,9 +70,11 @@ export default function ElevateAppBar(props: Props) {
           variant="permanent"  
           anchor="top" 
           alignItems="space-between" 
+    
+     
           >
                 
-            <Grid container position="relative" justify="center" alignItems="flex-end">  
+            <Grid container position="relative" justify="center" alignItems="flex-end"  >  
                 <Grid item xs={3} display="flex" alignItems="flex-end" justify="center" >
                   <SimpleMenu />
                 </Grid>   
@@ -92,8 +93,7 @@ export default function ElevateAppBar(props: Props) {
           </Toolbar>
         </AppBar> 
         </Container>
-     {/* The second copy of the toolbar with logo has been inserted to stop the content being cropped. */}
-     
+  
   
     </div>
   );

@@ -5,7 +5,7 @@ featured: false
 title: Culworth
 featuredimage: /img/aboutus.jpg
 alt: Results of our Lawn Care Service in Culworth
-tags:
+categories:
 - project
 ---
 These are the results of our Lawn care service at a client in Culworth

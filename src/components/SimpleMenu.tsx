@@ -75,9 +75,9 @@ export default function SimpleMenu() {
         }}
       >
     <Link to="/"><MenuItem  onClick={handleClose}>Home</MenuItem></Link>  
-    <Link to="/servicecatalog"><MenuItem  onClick={handleClose}>Services</MenuItem></Link>  
+    <Link to="/service"><MenuItem  onClick={handleClose}>Services</MenuItem></Link>  
     <Link to="/reviews"><MenuItem  onClick={handleClose}>Reviews</MenuItem></Link>  
-    <Link to="/faqs"><MenuItem  onClick={handleClose}>FAQs</MenuItem></Link>  
+    <Link to="/faq/"><MenuItem  onClick={handleClose}>FAQs</MenuItem></Link>  
     <Link to="/page"><MenuItem  onClick={handleClose}>Portfolio</MenuItem></Link>  
     <Link to="/instagram"><MenuItem  onClick={handleClose}>Instagram</MenuItem></Link>  
     <Link to="/contactus"><MenuItem  onClick={handleClose}>Contact Us</MenuItem></Link>  

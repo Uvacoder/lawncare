@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
           opacity: 0,
         },
         '& $imageTitle': {
-          border: '4px solid currentColor',
+          border: '0px solid currentColor',
         },
       },
     },
@@ -72,7 +72,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     imageTitle: {
       position: 'relative',
-      padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
     },
     imageMarked: {
       height: 3,

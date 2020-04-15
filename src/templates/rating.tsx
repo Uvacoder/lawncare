@@ -36,7 +36,7 @@ type PageProps = {
           featured: boolean
           slug: string
           alt: string
-          tags: string
+          categories: string
           featuredimage: ChildImageSharp
           }
         }
@@ -58,7 +58,7 @@ type PageProps = {
     <Layout color={theme.palette.primary.main}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
-        title={`${data.markdownRemark.frontmatter.title} | lawnsmatter.co.uk`}
+        title={`${data.markdownRemark.frontmatter.title}`}
         desc={data.markdownRemark.excerpt}
         node={data.markdownRemark.frontmatter.slug}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
@@ -77,13 +77,7 @@ type PageProps = {
         >   
       <Container
         style={{
-          display: 'flex',
           height: '700px',
-          width: '70%' ,
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
         }}
       >
         </Container>  
@@ -96,49 +90,29 @@ type PageProps = {
  <Container>
 
  <RaisedHeader  >
- <PageTitle   style={{
-      display: 'flex',
-      width: '70%' ,
-      lineHeight: '1',
-      justifyContent: 'space-around',
-      alignItems: 'left',
-      flexDirection: 'column',}}>
+ <PageTitle  >
  <Container > 
-{/* 
- <h2 className="pageTitle"
-                     style={{
-                     boxShadow: 'transparent',
-                     borderRadius: '0px',
-                     backgroundColor: theme.palette.primary.main,
-                     color: theme.palette.primary.contrastText,
-                     lineHeight: '1',
-                     padding: '0.3em',
-          
-                 }}> */}
 
-{/* <Category style={categoryAnimation} color={theme.palette.primary.contrastText}>  */}
- {/* <TitlePart1>customer</TitlePart1> <TitlePart2>rating</TitlePart2>
- <br /> */}
- <Title color={theme.palette.secondary.main }>{data.markdownRemark.frontmatter.title}</Title>
- {/* </Category> */}
- {/* </h2> */}
+ <Title color={theme.palette.secondary.main }>
+   {data.markdownRemark.frontmatter.title}
+   </Title>
 
 </Container>
  </PageTitle>
    
-
-    <h4>  <Description style={descAnimation}>
-    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+ <PBox style={{ textAlign: 'center' }} >
+<Description style={descAnimation}>
+  
     <StarRatings
         rating={data.markdownRemark.frontmatter.rating}
         starDimension="40px"
         starSpacing="15px"
         starRatedColor="FFD700"
       />
-      </Description></h4> 
+      </Description> 
       
    
-    <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
+   
       <Link to="/contactus">
       <Button variant="contained" color="primary" margin="1rem" py={4} px={8}>
         Contact Us
@@ -167,7 +141,7 @@ query RatingPage ($id: String!) {
       slug
       title
       templateKey
-      tags
+      categories
       created_time
       rating
       recommendation_type_positive

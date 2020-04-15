@@ -9,21 +9,14 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
 
-  const contactTemplate = require.resolve('./src/templates/contact.tsx')
+ // const contactTemplate = require.resolve('./src/templates/contact.tsx')
  // const serviceTemplate = require.resolve('./src/templates/service.tsx')
   // const webpageTemplate = require.resolve('./src/templates/webpage.tsx')
   // const projectTemplate = require.resolve('./src/templates/project.tsx')
-  // const tagsTemplate = require.resolve('./src/templates/tags.tsx')
+  // const categoriesTemplate = require.resolve('./src/templates/categories.tsx')
  
 
  return graphql(`{
-      contact: allContactYaml {
-        nodes {
-          slug
-          images
-          tags
-        }
-      }
    allMarkdownRemark  {
         edges {
           node {
@@ -31,7 +24,7 @@ exports.createPages = async ({ graphql, actions }) => {
             frontmatter {
               slug
               templateKey
-              tags
+              categories
             }
           }
         }
@@ -49,7 +42,7 @@ exports.createPages = async ({ graphql, actions }) => {
         const id = edge.node.id
         createPage({
           path: edge.node.frontmatter.slug,
-          tags: edge.node.frontmatter.tags,
+          categories: edge.node.frontmatter.categories,
           component: path.resolve(
            `src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`
           //  `src/templates/page.tsx`
@@ -61,35 +54,25 @@ exports.createPages = async ({ graphql, actions }) => {
         })
       })
   
-  let tags = []
-  // Iterate through each webpage, putting all found tags into `tags`
+  let categories = []
+  // Iterate through each webpage, putting all found categories into `categories`
   posts.forEach(edge => {
-    if (_.get(edge, `node.frontmatter.tags`)) {
-      tags = tags.concat(edge.node.frontmatter.tags)
+    if (_.get(edge, `node.frontmatter.categories`)) {
+      categories = categories.concat(edge.node.frontmatter.categories)
     }
   })
-  // Eliminate duplicate tags
-  tags = _.uniq(tags)
+  // Eliminate duplicate categories
+  categories = _.uniq(categories)
 
   // Make tag pages
-  tags.forEach(tag => {
-    const tagPath = `/tags/${_.kebabCase(tag)}/`
+  categories.forEach(tag => {
+    const tagPath = `/categories/${_.kebabCase(tag)}/`
 
     createPage({
       path: tagPath,
-      component: path.resolve(`src/templates/tags.tsx`),
+      component: path.resolve(`src/templates/categories.tsx`),
       context: {
         tag,
-      },
-    })
-  }),
-  result.data.contact.nodes.forEach(node => {
-    createPage({
-      path: node.slug,
-      component: contactTemplate,
-      context: {
-        slug: node.slug,
-        images: `/${node.images}/`,
       },
     })
   })

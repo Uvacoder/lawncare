@@ -10,7 +10,7 @@ import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Area from '../styles/areaStyle'
+
 
 type PageProps = {
   data: {
@@ -31,7 +31,16 @@ type PageProps = {
     }
   }
 }
+const Area = styled(animated.div)`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40vw;
 
+ [theme.breakpoints.down('md')]: {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 30vw;
+  }
+`
 
 class ServiceCatalog extends React.Component {
   render() {
@@ -41,8 +50,10 @@ class ServiceCatalog extends React.Component {
 
     return (
 
-      <Layout color={theme.palette.primary.main}>
-        <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
+      <div>
+      <SEO
+        title={data.site.siteMetadata.title}
+          />
         <Area>
         {pages &&
           pages.map(({ node: page }) => (
@@ -54,7 +65,7 @@ class ServiceCatalog extends React.Component {
          
           ))}
       </Area>
-      </Layout>
+      </div>
     )
   }
 }
@@ -64,26 +75,33 @@ export default () => (
   <StaticQuery
     query={graphql`
     query ServiceCatalogQuery {
-      allMarkdownRemark(filter: {frontmatter: {tags: {eq: "service"}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {categories: {eq: "service"}, category: {ne: "service"}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
             excerpt(pruneLength: 400)
+            html
             id
             frontmatter {
               slug
               title
               templateKey
               featured
+              sortorder
               featuredimage {
                 id
                 childImageSharp {
-                  fluid(quality: 95, maxWidth: 1200) {
+                  fluid(quality: 95, maxWidth: 600) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
             }
           }
+        }
+      }
+      site {
+        siteMetadata {
+          title
         }
       }
     }

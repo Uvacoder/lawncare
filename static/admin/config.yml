@@ -34,7 +34,7 @@ collections:
           - { label: "Image description (needed for SEO)", required: false, name: image_alt, widget: string }
           - { label: imageLabel, required: false, name: imageLabel, widget: string }
       - { label: "Main content", required: false, name: body, widget: markdown }
-      - { label: Tags, required: false, name: tags, widget: list }
+      - { label: categories, required: false, name: categories, widget: list }
   - name: post
     label: Post
     folder: src/pages/post
@@ -48,7 +48,7 @@ collections:
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
       - { label: "Image description (needed for SEO)", required: false, name: alt, widget: string }
-      - { label: Tags, required: false, name: tags, widget: list }
+      - { label: categories, required: false, name: categories, widget: list }
       - { label: locationName, required: false, name: locationName, widget: string }
   - name: faqs
     label: FAQs
@@ -63,7 +63,7 @@ collections:
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
       - { label: "Image description (needed for SEO)", required: false, name: alt, widget: string }
-      - { label: Tags, required: false, name: tags, widget: list }
+      - { label: categories, required: false, name: categories, widget: list }
       - { label: locationName, required: false, name: locationName, widget: string }
   - name: areaserved
     label: Area Served
@@ -92,7 +92,7 @@ collections:
                   fields: 
                       - { label: "Points plotted",  name: steps, widget: number, valueType: int,  min: 10, x: 64, step: 1 }
                       - { label: "miles or Km",  name: units, widget: select, options: [miles, kilometres], default: miles }
-                - { label: Tags, required: false, name: tags, widget: list }
+                - { label: categories, required: false, name: categories, widget: list }
   - name: review
     label: Review
     folder: src/pages/review
@@ -109,7 +109,7 @@ collections:
       - { label: recommendation_type_positive, required: false, name: recommendation_type_positive, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
       - { label: "Image description (needed for SEO)", required: false, name: alt, widget: string }
-      - { label: Tags, required: false, name: tags, widget: list }
+      - { label: categories, required: false, name: categories, widget: list }
       - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }
       - { label: Location, required: false, name: location, widget: string }
       - { label: Body, required: false, name: body, widget: markdown }
@@ -136,5 +136,5 @@ collections:
           - { label: title, required: false, name: title, widget: string }
           - { label: image, required: false, name: image, widget: image }          
           - { label: heading,  required: false, name: heading, widget: string}    
-          - { label: Tags, required: false, name: tags, widget: list }
+          - { label: categories, required: false, name: categories, widget: list }
           - { label: Body, required: false, name: body, widget: markdown }

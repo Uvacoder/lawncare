@@ -37,7 +37,7 @@ type PageProps = {
           featured: boolean
           slug: string
           alt: string
-          tags: string
+          categories: string
           featuredimage: ChildImageSharp
           }
         }
@@ -79,13 +79,8 @@ type PageProps = {
         >   
       <Container
         style={{
-          display: 'flex',
           height: '700px',
-          width: '70%' ,
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'center',
-          flexDirection: 'column',
+
         }}
       >
         </Container>  
@@ -104,7 +99,8 @@ type PageProps = {
       lineHeight: '1',
       justifyContent: 'space-around',
       alignItems: 'left',
-      flexDirection: 'column',}}>
+      flexDirection: 'column',}}
+      >
  <Container > 
 
 
@@ -121,7 +117,7 @@ type PageProps = {
       </Description> 
       
    
-    <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
+    <PBox style={{ textAlign: 'center' }} >
       <Link to="/contactus">
       <Button variant="contained" color="primary" margin="1rem" py={4} px={8}>
         Contact Us
@@ -150,7 +146,7 @@ query FaqPage ($id: String!) {
       slug
       title
       templateKey
-      tags
+      categories
       featuredimage {
         childImageSharp {
           fluid(quality: 95, maxWidth: 1200) {

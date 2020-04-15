@@ -14,7 +14,6 @@ import SimpleMenu from './SimpleMenu'
 import PhoneLink from './phoneLink'
 import PhoneIcon from '@material-ui/icons/Phone';
 import HomeIcon from '@material-ui/icons/Home';
-import GridIcon from './gridIcon'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 const useStyles = makeStyles((theme: Theme) =>

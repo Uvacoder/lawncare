@@ -1,9 +1,4 @@
-
 import  { createMuiTheme }  from '@material-ui/core'
-
-
-// const primary = '#2B2C3E'
-// const secondary = '#90C03E'
 
 const theme = createMuiTheme({
 		palette: {
@@ -120,7 +115,7 @@ const theme = createMuiTheme({
 			'23': '0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)',
 			'24': '0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)',
 			},
-		spacing: 4,
+		spacing: 0.1,
 		typography: {
 			htmlFontSize: 16,
 			fontFamily: 'Open Sans',
@@ -236,8 +231,8 @@ const theme = createMuiTheme({
 			},
 		toolbar: {
 			height: {
-				big: '150px',
-				normal: '120px',
+				big: 150,
+				normal: 120,
 				},
 			width: '100%',
 		},

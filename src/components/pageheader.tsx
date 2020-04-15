@@ -19,17 +19,13 @@ const PageHeader = styled(Link)`
     position: absolute;
     left: 0;
     bottom: 0;
-    margin: 2rem 1rem;
     right: 0;
     text-align: left;
     font-weight: 400;
     font-size: ${theme.typography.h4.fontSize};
-    padding: ${theme.typography.spacing};
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
     [theme.breakpoints.down('lg')]: {
       font-size: ${theme.typography.h3.fontSize};
-      padding: ${theme.typography.spacing};
     }
   }
   &:hover {

@@ -5,7 +5,7 @@ title:  What if I already have a gardener?
 featured: false
 featuredimage: /img/mohammad-saemian-riYppYjeltk-unsplash.jpg
 alt: Photo by mohammad saemian on Unsplash
-tags:
+categories:
   - faq
 ---
 

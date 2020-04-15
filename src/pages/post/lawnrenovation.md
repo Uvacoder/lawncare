@@ -5,7 +5,7 @@ slug: /about/lawnrenovation
 featured: true
 featuredimage: /img/index_pic03.jpg
 alt: Lawn renovation
-tags:
+categories:
   - about
   - service
 ---

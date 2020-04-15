@@ -6,7 +6,7 @@ location: Chacombe
 featured: true
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
-tags:
+categories:
   - review
   - rating
 created_time: "2018-06-15T18:41:28+0000"

@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      padding: theme.spacing(2),
+      // padding: theme.spacing(2),
       textAlign: 'center',
       color: theme.palette.primary.main,
     },
@@ -78,7 +78,7 @@ type PageProps = {
           featured: boolean
           slug: string
           alt: string
-          tags: string
+          categories: string
           featuredimage: ChildImageSharp
           }
         }
@@ -193,7 +193,7 @@ export const query = graphql`
       slug
       title
       templateKey
-      tags
+      categories
       featuredimage {
         childImageSharp {
           fluid(quality: 95, maxWidth: 1200) {

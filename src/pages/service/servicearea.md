@@ -5,7 +5,7 @@ featured: false
 title: Area served
 featuredimage: /img/lawnsmattervan.jpg
 alt: Photo by Lawns Matter on client site.
-tags:
+categories:
   - service
   - about
 ---

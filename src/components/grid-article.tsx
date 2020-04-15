@@ -27,8 +27,7 @@ const GridArticle = styled(Link)`
     text-align: left;
     font-size: ${theme.typography.h4.fontSize};
     font-weight: ${theme.typography.h4.fontWeight};
-    padding: ${theme.spacing(2)};
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
 
     [theme.breakpoints.down('md')]:{
       font-size: ${theme.typography.h6.fontSize};

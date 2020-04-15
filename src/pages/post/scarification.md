@@ -5,7 +5,7 @@ slug: /about/scarification
 featured: true
 featuredimage: /img/index_pic02.jpg
 alt: Scarification
-tags:
+categories:
   - about
   - service
 ---

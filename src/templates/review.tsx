@@ -34,7 +34,7 @@ type PageProps = {
           featured: boolean
           slug: string
           alt: string
-          tags: string
+          categories: string
           featuredimage: ChildImageSharp
           }
         }
@@ -105,7 +105,7 @@ type PageProps = {
       </Description></h4> 
       
    
-    <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
+    <PBox style={{ textAlign: 'center' }} >
       <Link to="/contactus">
       <Button variant="contained" color="primary" margin="1rem" py={4} px={8}>
         Contact Us
@@ -134,7 +134,7 @@ query ReviewPage ($id: String!) {
       slug
       title
       templateKey
-      tags
+      categories
       created_time
       rating
       recommendation_type_positive

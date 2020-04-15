@@ -6,7 +6,7 @@ location: Adderbury
 featured: true
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
-tags:
+categories:
   - review
 created_time: "2020-03-01T09:45:55+0000"
 rating: 

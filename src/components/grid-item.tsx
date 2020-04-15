@@ -28,12 +28,10 @@ const GridItem = styled(Container)`
     font-size: ${theme.typography.h3.fontSize};
     font-weight: ${theme.typography.h3.fontWeight};
     text-transform: none;
-    padding: ${theme.spacing(2)};
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
     [theme.breakpoints.down('md')]: {
       font-size: ${theme.typography.h5.fontSize};
-      padding: ${theme.spacing(2)};
+    
     }
   }
   &:hover {

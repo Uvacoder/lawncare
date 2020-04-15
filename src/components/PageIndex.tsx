@@ -10,9 +10,7 @@ import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Container from '@material-ui/core/Container' 
-import { Box, AnimatedBox } from '../elements'
-import GridItem from './grid-item'
+import Area from '../styles/areaStyle' 
 
 type PageProps = {
   data: {
@@ -34,37 +32,9 @@ type PageProps = {
   }
 }
 
-const Area = styled(animated.div)`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 35vw;
 
-  [theme.breakpoints.down('md')]: {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 40vw;
-  }
-`
 
-const PageTitle = styled(Container)`
-padding: 1rem ;
-display: flex;
-background-color: ${theme.palette.primary.main80opacity};
-color: ${theme.palette.secondary.main}; 
-text-align: center;
-font-size: ${theme.typography.h5.fontSize};
-font-weight: ${theme.typography.h4.fontWeight};
-text-transform: none;
-flexDirection: column;
-` 
 
-const Title = styled(GridItem)`
-  grid-area: title;
-  color: ${theme.palette.secondary.main }; 
-  text-transform: none;
-  color: ${theme.palette.primary.contrastText}; 
-  font-size: ${theme.typography.h5.fontSize};
-  font-weight: ${theme.typography.h5.fontWeight};
-`
 
 class PageIndex extends React.Component {
   render() {
@@ -82,15 +52,8 @@ class PageIndex extends React.Component {
       
          <GridLink key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
            <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
-              <Container > 
-                    <PageTitle >
-                             <Title>{page.frontmatter.title}</Title>
-                    </PageTitle>
-                
-                </Container>
-           
+                             <span>{page.frontmatter.title}</span>
           </GridLink>
-          
           ))}
       </Area>
       </Layout>

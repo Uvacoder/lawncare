@@ -4,10 +4,10 @@ sortorder: 50
 slug: /aboutus
 title: About Us
 featured: true
-header: about
+category: about
 featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg
 alt: Photo by Nervenet
-tags:
+categories:
   - service
 ---
 ####Lawns Matter are an independent, family run business based in Oxfordshire.####

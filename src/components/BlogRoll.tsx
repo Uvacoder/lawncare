@@ -9,6 +9,7 @@ import GridItem from './grid-item'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
+import Area from '../styles/areaStyle'
 
 type PageProps = {
   data: {
@@ -30,16 +31,7 @@ type PageProps = {
   }
 }
 
-const Area = styled(animated.div)`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 40vw;
 
-   [theme.breakpoints.down('md')]:  {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 50vw;
-  }
-`
 class BlogRoll extends React.Component {
   render() {
 
@@ -49,7 +41,7 @@ class BlogRoll extends React.Component {
     return (
 
       <Layout color={theme.palette.primary.main}>
-        <SEO title="Lawn Care Service | lawnsmatter.co.uk" />
+        <SEO title={data.site.siteMetadata.title} />
         <Area>
         {posts &&
           posts.map(({ node: post }) => (

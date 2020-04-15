@@ -20,9 +20,6 @@ const SideBarInner = styled(Box)<{ bg: string }>`
     position: relative;
     width: 100%;
   }
-  svg {
-    fill: ${props => readableColor(`${theme.palette.primary.main}`)};
-  }
 `
 
 export default SideBarInner

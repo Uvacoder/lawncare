@@ -14,7 +14,7 @@ const AreaservedPreview = ({ entry, getAsset }) => {
       featuredimage={entry.getIn(['data', 'image'])}
       alt={entry.getIn(['data', 'string'])}
       body={entry.getIn(['data', 'markdown'])}
-      tags={entry.getIn(['data', 'list'])}
+      categories={entry.getIn(['data', 'list'])}
     /></div>
   )
 }

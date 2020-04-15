@@ -5,7 +5,7 @@ featured: true
 title: Tadmarton 
 featuredimage: /img/after5.jpg
 alt: Tadmarton After photo
-tags:
+categories:
   - project
 ---
 These are the results of our Lawn care service at a client in Tadmarton

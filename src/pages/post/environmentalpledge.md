@@ -5,7 +5,7 @@ slug: /about/environmentalpledge
 featured: true
 featuredimage: /img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg
 alt: Scenery
-tags:
+categories:
   - about
   - service
 ---

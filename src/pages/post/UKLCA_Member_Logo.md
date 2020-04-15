@@ -5,7 +5,7 @@ slug: /about/UKLCA_Member
 featured: false
 featuredimage: /img/UKLCA_Member_Logo_Standard.png
 alt: UK Lawn Care Association Member Logo
-tags:
+categories:
   - about
 ---
 

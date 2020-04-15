@@ -5,7 +5,7 @@ slug: /about/ourservice
 featured: true
 featuredimage: /img/index_pic01.jpg 
 alt: Lawns Matter Van
-tags:
+categories:
   - about
   - service
 ---

@@ -26,14 +26,12 @@ import Toolbar from '@material-ui/core/Toolbar';
 import GlobalStyles from '../styles/globalStyle'
 
 
-const drawerContentsWidth = '240px'
-
-
 
   const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: 'flex',
+      backgroundColor: theme.palette.primary.main,
     },
     mainSection: {
       width: `calc(100% - ${theme.sidebar.width.big}px)`,
@@ -41,6 +39,7 @@ const drawerContentsWidth = '240px'
     },
     drawer: {
       width: theme.sidebar.width.big,
+      backgroundColor: theme.palette.primary.main,
       position: 'fixed',
       flexShrink: 0,
     },
@@ -53,7 +52,7 @@ const drawerContentsWidth = '240px'
     content: {
       flexGrow: 1,
       backgroundColor: theme.palette.primary.main,
-      padding: theme.spacing(3),
+      // padding: theme.spacing(3),
     },
   }),
 );
@@ -75,7 +74,6 @@ export default function PermanentDrawerLeft(props) {
         anchor="left"
       >
          <div className={classes.toolbar} />
-         {/* <Container fixed> */}
  
         <Link to="/">
         <Container>
@@ -93,17 +91,22 @@ export default function PermanentDrawerLeft(props) {
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><HomeOutlinedIcon /></ListItemIcon>
               <ListItemText>Home</ListItemText>
             </ListItem></Link>
-            <Link to="/servicecatalog">
+            <Link to="/service">
             <ListItem button style={{ color: theme.palette.primary.contrastText }} >
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><InfoOutlinedIcon /></ListItemIcon>
               <ListItemText>Our Service</ListItemText>
+            </ListItem></Link>
+            <Link to="/treatments/">
+            <ListItem button style={{ color: theme.palette.primary.contrastText }} >
+              <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><InfoOutlinedIcon /></ListItemIcon>
+              <ListItemText>Our Treatments</ListItemText>
             </ListItem></Link>
             <Link to="/reviews">
             <ListItem button style={{ color: theme.palette.primary.contrastText }} >
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><StarBorderOutlinedIcon /></ListItemIcon>
               <ListItemText>Reviews</ListItemText>
             </ListItem></Link>
-            <Link to="/faqs" >
+            <Link to="/faq/" >
             <ListItem button style={{ color: theme.palette.primary.contrastText }} >
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><HelpOutlineIcon /></ListItemIcon>
               <ListItemText>Questions?</ListItemText>
