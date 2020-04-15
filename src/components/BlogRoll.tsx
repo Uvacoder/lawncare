@@ -83,7 +83,12 @@ export default () => (
           }
         }
       }
-    }  
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    } 
     `}
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
