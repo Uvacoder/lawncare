@@ -25,7 +25,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import GlobalStyles from '../styles/globalStyle'
 
-
+ const ListText = styled(ListItemText)`
+    fontWeight: ${theme.typography.h1.fontWeight};
+    fontSize: ${theme.typography.h1.fontSize};
+ ` 
 
   const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -88,7 +91,7 @@ export default function PermanentDrawerLeft(props) {
         <Link to="/" >
             <ListItem button style={{ color: theme.palette.primary.contrastText }} >
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><HomeOutlinedIcon /></ListItemIcon>
-              <ListItemText>Home</ListItemText>
+              <ListText>Home</ListText>
             </ListItem></Link>
             <Link to="/service">
             <ListItem button style={{ color: theme.palette.primary.contrastText }} >
