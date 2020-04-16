@@ -12,7 +12,7 @@ import { ChildImageSharp } from '../types'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 
-type PageProps = {
+type TreatmentProps = {
   data: {
     allMarkdownRemark: {
       edges: {
@@ -46,21 +46,19 @@ class TreatmentIndex extends React.Component {
   render() {
 
     const { data } = this.props
-    const { edges: pages } = data.allMarkdownRemark
+    const { edges: treatments } = data.allMarkdownRemark
 
     return (
 
       <div>
-      <SEO
-        title={data.site.siteMetadata.title}
-          />
+ 
         <Area>
-        {pages &&
-          pages.map(({ node: page }) => (
+        {treatments &&
+          treatments.map(({ node: treatment }) => (
 
-         <GridLink key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
-                        <Img fluid={page.frontmatter.featuredimage.childImageSharp.fluid} />
-            <span>{page.frontmatter.title}</span>
+         <GridLink key={treatment.frontmatter.slug} to={treatment.frontmatter.slug} aria-label={`View treatments "${treatment.frontmatter.title}"`}>
+                        <Img fluid={treatment.frontmatter.featuredimage.childImageSharp.fluid} />
+            <span>{treatment.frontmatter.title}</span>
           </GridLink>
          
           ))}
