@@ -106,9 +106,14 @@ type PageProps = {
 
 export default TreatmentHeaderPage
 
-export const query = graphql`
-query TreatmentHeaderPage {
-  markdownRemark(frontmatter: {category: {eq: "treatment"}}) {
+export const query = graphql`query TreatmentHeaderPage {
+ 
+  site {
+    siteMetadata {
+      title
+    }
+  }
+  markdownRemark(frontmatter: {category: {eq: "treatments"}}) {
     excerpt(pruneLength: 400)
     html
     frontmatter {
@@ -119,7 +124,7 @@ query TreatmentHeaderPage {
       featuredimage {
         childImageSharp {
           fluid(quality: 95, maxWidth: 1200) {
-             ...GatsbyImageSharpFluid_withWebp
+            src
           }
         }
       }
@@ -128,13 +133,6 @@ query TreatmentHeaderPage {
     }
     id
   }
-  site {
-    siteMetadata {
-      title
-    }
-  }
 }
-
-
 
 `

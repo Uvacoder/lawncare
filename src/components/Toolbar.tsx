@@ -75,15 +75,15 @@ export default function ElevateAppBar(props: Props) {
           > */}
                 
             <Grid container position="relative" justify="center" alignItems="flex-end"  >  
-                <Grid item xs={3} display="flex" alignItems="flex-end" justify="center" >
+                <Grid item xs={4} display="flex" alignItems="flex-end" justify="center" >
                   <SimpleMenu />
                 </Grid>   
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <Link to="/">
                       <LogoSmall />
                   </Link>
                 </Grid>     
-                <Grid item xs={3} >
+                <Grid item xs={4} >
                   <a href={`tel:${<PhoneNo />}`} rel="nofollow">
                     <CallButton />
                   </a>

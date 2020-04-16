@@ -25,6 +25,7 @@ exports.createPages = async ({ graphql, actions }) => {
               slug
               templateKey
               categories
+              category
             }
           }
         }
@@ -49,6 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
           ),
           // additional data can be passed via context
           context: {
+            category: edge.node.frontmatter.category,
             id,
           },
         })

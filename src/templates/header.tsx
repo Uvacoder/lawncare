@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Features from '../components/Features'
-import BlogIndex from '../components/BlogIndex'
+import CategoryIndex from '../components/CategoryIndex'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
@@ -83,7 +83,7 @@ export const HeaderPageTemplate = ({
                 </div>
                 <div className="column is-12">
        
-                  <BlogIndex />
+                  <CategoryIndex />
                  
                 </div>
               </div>
@@ -138,8 +138,8 @@ export default HeaderPage
 
 export const pageQuery = graphql`
  
-  query HeaderPageTemplate {
-    allMarkdownRemark(filter: {frontmatter: {categories: {eq: "treatment"}}}, sort: {order: ASC, fields: id}) {
+  query HeaderPageTemplate ($category: String! ) {
+    allMarkdownRemark(filter: {frontmatter: {categories: {eq: $category}}}, sort: {order: ASC, fields: id}) {
       totalCount
       edges {
         node {

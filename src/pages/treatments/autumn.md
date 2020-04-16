@@ -7,7 +7,7 @@ featured: true
 featuredimage: /img/johannes-plenio-pY0LOiwK9Sc-unsplash.jpg
 alt: Photo by David Kaloczi on Unsplash
 categories:
-  - treatment
+  - treatments
 ---
 
 * **Autumn (September to December)**

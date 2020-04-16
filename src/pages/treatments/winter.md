@@ -1,13 +1,13 @@
 ---
 templateKey: page
 sortorder: 50
-slug: /treatment/winter_treatments
+slug: /treatments/winter
 title: Winter Treatments
 featured: true
 featuredimage: /img/max-kleinen--KxkDgEvWT8-unsplash.jpg
 alt: Photo by Max Kleinen on Unsplash
 categories:
-  - treatment
+  - treatments
 ---
 
 * **Winter (January to February)**

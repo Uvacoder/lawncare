@@ -1,13 +1,13 @@
 ---
 templateKey: page
 sortorder: 50
-slug: /treatment/spring_treatments
+slug: /treatments/spring
 title: Spring Treatments
 featured: true
 featuredimage: /img/annie-spratt-43o1KVbOWXA-unsplash.jpg
 alt: Photo by David Kaloczi on Unsplash
 categories:
-  - treatment
+  - treatments
 ---
 
 * **Spring  (March - April)**

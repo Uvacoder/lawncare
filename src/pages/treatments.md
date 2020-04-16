@@ -1,10 +1,10 @@
 ---
 templateKey: header
 sortorder: 10
-slug: /treatment
+slug: /treatments
 title: Essential Treatments
 featured: true
-category: treatment
+category: treatments
 featuredimage: /img/david-kaloczi-10xlYvD5yn4-unsplash.jpg
 alt: Photo by David Kaloczi on Unsplash
 categories:
