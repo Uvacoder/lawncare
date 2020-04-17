@@ -34,11 +34,11 @@ type PageProps = {
 const Area = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 40vw;
+  grid-auto-rows: 35vw;
 
  [theme.breakpoints.down('md')]: {
     grid-template-columns: 1fr;
-    grid-auto-rows: 30vw;
+    grid-auto-rows: 25vw;
   }
 `
 

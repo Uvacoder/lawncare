@@ -49,7 +49,9 @@ export const HeaderPageTemplate = ({
         backgroundSize: 'cover',
       }}
     >
-      <div style={{  height: '800px',  }} />
+         <div
+        style={{ height: '50vw', }}
+      />
 
  <RaisedHeader  >
             <PageTitle   style={{
