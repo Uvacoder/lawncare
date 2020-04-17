@@ -152,20 +152,25 @@ type PageProps = {
     </Category>
     
     </h2>
-
+</Container>
+ </PageTitle>
       <Description style={descAnimation}>
           <Container>
     <Form size='large' name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
         <FormControl>
           <Grid container spacing={1} >
-            <Grid item xs ><InputField  label="Name" id="name-input"   /></Grid>
-            <Grid item xs><InputField label="Tel No:" id="telephone-number-input" /></Grid>
-            <Grid item xs><InputField label="Email" id="email-input"   /></Grid>
+            <Grid item xs={3} ><InputField  label="Name" id="name-input"   /></Grid>
+            <Grid item xs={1} />
+            <Grid item xs={3}><InputField label="Tel No:" id="telephone-number-input" /></Grid>
+            <Grid item xs={1} />
+            <Grid item xs={4}><InputField label="Email" id="email-input"   /></Grid>
             </Grid>
-            <Grid container spacing={1}>
-            <Grid item xs><InputField label="Address"  id="address-input" size="large"  /></Grid>
-            <Grid item xs><InputField label="Town"  id="postal-town-input" size="large"  /></Grid>
-            <Grid item xs><InputField label="Post Code" id="postcode-input"  /></Grid>
+            <Grid container spacing={1} >
+            <Grid item xs={4} ><InputField label="Address"  id="address-input" size="large"  /></Grid>
+            <Grid item xs={1} />
+            <Grid item xs={3} ><InputField label="Town"  id="postal-town-input" size="large"  /></Grid>
+            <Grid item xs={1} />
+            <Grid item xs={3} ><InputField label="Post Code" id="postcode-input"  /></Grid>
             </Grid> 
               <Grid item  ><InputField  label="Message" fullWidth placeholder="Please enter your message here " id="message-input" multiline rows="3" size="large" /></Grid>
             <Grid container spacing={1}>
@@ -181,8 +186,7 @@ type PageProps = {
 
       </Description>
       
-</Container>
- </PageTitle>
+
     </Content>
 
 

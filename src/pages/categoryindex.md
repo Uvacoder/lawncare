@@ -1,14 +1,14 @@
 ---
-templateKey: header
+templateKey: categories
 sortorder: 10
-slug: /treatments
-title: Essential Treatments
+slug: /categoryindex
+title: Search by category
 featured: true
-category: treatments
+category: categories
 featuredimage: /img/david-kaloczi-10xlYvD5yn4-unsplash.jpg
 alt: Photo by David Kaloczi on Unsplash
 categories:
-  - service
+  - header
 ---
 Lawns Matter ensures that our clients lawns receive the best in nutrition by using the finest professional turf fertilisers to nourish your lawn.  
 

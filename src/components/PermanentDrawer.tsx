@@ -128,9 +128,7 @@ export default function PermanentDrawerLeft(props) {
 
         </List>
      
-        <IconButtonBar 
-        // className={iconButtonBar}
-       />
+        <IconButtonBar />
             <Divider />
         <a href="https://www.gappsapps.co.uk" 
         // className={gappsappsLogo} 
