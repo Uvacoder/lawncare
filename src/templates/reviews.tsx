@@ -48,53 +48,22 @@ export const ReviewsPageTemplate = ({
     >
       <div
         style={{
-          display: 'flex',
           height: '500px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
         }}
       />
 
  <RaisedHeader >
-            <PageTitle   style={{
-        display: 'flex',
-        width: '70%' ,
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        alignItems: 'left',
-        flexDirection: 'column',}}>
+            <PageTitle   >
       <Title color={theme.palette.secondary.main}>{title}</Title>
         
           </PageTitle>
        
  
-    <section className="section section--gradient">
-      <div >
-              <div className="content">
-                <div className="columns">
                 <Description>
-                  <div className="column is-12">
-            
-                <div dangerouslySetInnerHTML={{ __html: html }} />
-              
-                </div>
-              
-                    <ReviewIndex />
-                  
-                    </Description>
-                  </div>
+                  <div dangerouslySetInnerHTML={{ __html: html }} />
+                  <ReviewIndex />  
+                </Description>
 
-
-
-  
-       
-                
-              </div>
-      </div>
-    </section>
-  
     </RaisedHeader>
   
     </div>

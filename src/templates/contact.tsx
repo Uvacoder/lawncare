@@ -19,12 +19,14 @@ import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Grid from '@material-ui/core/Grid';
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PBox from '../styles/pboxStyle'
+import GlobalStyles from '../styles/globalStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
 import Category from '../styles/categoryStyle'
 import PButton from '../styles/pbuttonStyle'
 import Title from '../styles/titleStyle'
 import Description from '../styles/descriptionStyle'
+import BackgroundImage from 'gatsby-background-image'
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -35,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
     paper: {
       // padding: theme.spacing(2),
       textAlign: 'center',
-      color: theme.palette.primary.main,
+      color: theme.palette.primary.contrastText,
     },
   }),
 );
@@ -99,43 +101,51 @@ type PageProps = {
       const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
       const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
       const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
-      return (
-     <Layout color={theme.palette.primary.main}>
+      return ( 
+      
+     <Layout color={theme.palette.primary.contrastText}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
-        title={`${data.markdownRemark.frontmatter.title_detail} | ${data.site.siteMetadata.siteUrl}`}
+        title={data.site.siteMetadata.serviceName}
         desc={data.markdownRemark.frontmatter.desc}
         node={data.markdownRemark.frontmatter.parent}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
       />
      
+   
+      <Content bg={theme.palette.primary.contrastText} >
+      <BackgroundImage
+        
+        fluid={imageData}
+        style={{
+        backgroundAttachment: 'fixed',     
+        backgroundPosition: 'top center',
+        backgroundSize: '960px 640px',
+        }}
+        // backgroundSize="cover"          
+        >   
+      <Container
+        style={{
+          height: '60vw',
 
-      <Content bg={theme.palette.primary.main} >
-      
-
- <PageTitle 
-   style={{
-      display: 'flex',
-       width: '70%' ,
-      lineHeight: '1',
-      justifyContent: 'space-around',
-      alignItems: 'left',
-      flexDirection: 'row',
-    }}
+        }}
       >
+        </Container>  
+        </BackgroundImage>
+ <PageTitle >
  <Container > 
     <h2 className="pageTitle"
                         style={{
                         boxShadow: 'transparent',
                         borderRadius: '0px',
                         //  backgroundColor: theme.palette.primary.contrastText,
-                        color: theme.palette.primary.main,
+                        color: theme.palette.primary.contrastText,
                         lineHeight: '1',
                         padding: '0.3em',
               
                     }}>
 
-    <Category style={categoryAnimation} color={theme.palette.primary.main}> 
+    <Category style={categoryAnimation} color={theme.palette.primary.contrastText}> 
 
     <Title >{data.markdownRemark.frontmatter.title}</Title>
     
@@ -147,18 +157,18 @@ type PageProps = {
           <Container>
     <Form size='large' name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
         <FormControl>
-          <Grid container spacing={3}>
-            <Grid item xs ><InputField id="standard-secondary" label="Name" id="name-input"   /></Grid>
+          <Grid container spacing={1} >
+            <Grid item xs ><InputField  label="Name" id="name-input"   /></Grid>
             <Grid item xs><InputField label="Tel No:" id="telephone-number-input" /></Grid>
             <Grid item xs><InputField label="Email" id="email-input"   /></Grid>
             </Grid>
-            <Grid container spacing={3}>
+            <Grid container spacing={1}>
             <Grid item xs><InputField label="Address"  id="address-input" size="large"  /></Grid>
             <Grid item xs><InputField label="Town"  id="postal-town-input" size="large"  /></Grid>
             <Grid item xs><InputField label="Post Code" id="postcode-input"  /></Grid>
             </Grid> 
               <Grid item  ><InputField  label="Message" fullWidth placeholder="Please enter your message here " id="message-input" multiline rows="3" size="large" /></Grid>
-            <Grid container spacing={3}>
+            <Grid container spacing={1}>
             <Grid item xs></Grid>
             </Grid>
             {/* </div> */}
@@ -174,9 +184,7 @@ type PageProps = {
 </Container>
  </PageTitle>
     </Content>
-    <Container>
-      <Img fixed={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid} />
-    </Container>
+
 
     </Layout>
   )

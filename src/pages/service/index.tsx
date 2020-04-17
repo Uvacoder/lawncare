@@ -76,9 +76,7 @@ type PageProps = {
             }}    
             >   
           <Container
-            style={{
-              height: '60vw',
-            }} />  
+            style={{ height: '60vw', }} />  
             </BackgroundImage>
 
         <RaisedHeader  >

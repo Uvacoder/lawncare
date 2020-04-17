@@ -75,7 +75,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query ServiceCatalogQuery {
-      allMarkdownRemark(filter: {frontmatter: {categories: {eq: "service"}, category: {ne: "service"}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {categories: {eq: "service"}, category: {ne: "service"}}}, sort: {order: ASC, fields: frontmatter___sortorder}) {
         edges {
           node {
             excerpt(pruneLength: 400)

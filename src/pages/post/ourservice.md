@@ -1,6 +1,7 @@
 ---
 title: Our Service
 templateKey: post
+sortorder: 20
 slug: /about/ourservice
 featured: true
 featuredimage: /img/index_pic01.jpg 

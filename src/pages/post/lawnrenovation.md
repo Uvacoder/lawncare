@@ -1,6 +1,7 @@
 ---
 title: Lawn renovation
 templateKey: post
+sortorder: 30
 slug: /about/lawnrenovation
 featured: true
 featuredimage: /img/index_pic03.jpg

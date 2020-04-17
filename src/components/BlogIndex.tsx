@@ -69,7 +69,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query BlogIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {order: ASC, fields: frontmatter___sortorder}) {
         edges {
           node {
            excerpt(pruneLength: 400)
