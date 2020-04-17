@@ -119,14 +119,14 @@ type PageProps = {
         fluid={imageData}
         style={{
         backgroundAttachment: 'fixed',     
-        backgroundPosition: 'top center',
+        backgroundPosition: 'top ',
         backgroundSize: '960px 640px',
         }}
         // backgroundSize="cover"          
         >   
       <Container
         style={{
-          height: '60vw',
+          height: '33vw',
 
         }}
       >
@@ -147,14 +147,9 @@ type PageProps = {
 
     <Category style={categoryAnimation} color={theme.palette.primary.contrastText}> 
 
+    <Description style={descAnimation}>
     <Title >{data.markdownRemark.frontmatter.title}</Title>
-    
-    </Category>
-    
-    </h2>
-</Container>
- </PageTitle>
-      <Description style={descAnimation}>
+
           <Container>
     <Form size='large' name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
         <FormControl>
@@ -185,6 +180,13 @@ type PageProps = {
       </Container>
 
       </Description>
+    
+    </Category>
+    
+    </h2>
+</Container>
+ </PageTitle>
+    
       
 
     </Content>
