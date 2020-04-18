@@ -124,10 +124,10 @@ collections:
       - { label: DataType,  required: false, name: dataType, widget: string}
       - { label: Value, name: value, widget: string }
   - name: index
-    label: Index
+    label: Home page
     files: 
       - file: src/pages/index.md
-        label: Index
+        label: Home page
         name: index       
         slug: "{{slug}}"
         fields:
