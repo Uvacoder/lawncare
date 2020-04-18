@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Contact from '../../templates/contact'
 
-const ContactusPreview = ({ entry, getAsset }) => {
+const ContactPreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
 
@@ -40,11 +40,11 @@ const ContactusPreview = ({ entry, getAsset }) => {
   )
 }
 
-ContactusPreview.propTypes = {
+ContactPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 }
 
-export default ContactusPreview
+export default ContactPreview

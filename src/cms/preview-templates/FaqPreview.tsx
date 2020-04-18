@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import FaqsPage from '../../templates/faqs'
+import FaqPage from '../../templates/faq'
 
 
 
-const FaqsPreview = ({ entry, getAsset }) => {
+const FaqPreview = ({ entry, getAsset }) => {
 
   return (
          <div>
-    <FaqsPage
+    <FaqPage
       slug={entry.getIn(['data', 'string'])}
       title={entry.getIn(['data', 'string'])}
       featuredimage={entry.getIn(['data', 'image'])}
@@ -19,11 +19,11 @@ const FaqsPreview = ({ entry, getAsset }) => {
   )
 }
 
-FaqsPreview.propTypes = {
+FaqPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 }
 
-export default FaqsPreview
+export default FaqPreview
