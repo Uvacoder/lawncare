@@ -32,10 +32,6 @@ import GlobalStyles from '../styles/globalStyle'
       display: 'flex',
       backgroundColor: theme.palette.primary.main,
     },
-    listText: {
-     
-      fontSize: theme.typography.h1.fontSize ,
-    },
     mainSection: {
       width: `calc(100% - ${theme.sidebar.width.big}px)`,
       marginLeft: theme.sidebar.width.big,
