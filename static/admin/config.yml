@@ -139,6 +139,7 @@ collections:
           - { label: categories, required: false, name: categories, widget: list }
           - { label: Body, required: false, name: body, widget: markdown }
             - name: post
+  - name: treatments
     label: Treatments
     folder: src/pages/treatments
     create: true
