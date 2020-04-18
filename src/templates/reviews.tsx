@@ -142,6 +142,16 @@ allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "review"}}}, sort: {
       }
     }
   }
+  site {
+    siteMetadata {
+      siteUrl
+      serviceName
+      contactPoint {
+        email
+        name
+      }
+    }
+  }
 }
 
 
