@@ -138,7 +138,6 @@ collections:
           - { label: heading,  required: false, name: heading, widget: string}    
           - { label: categories, required: false, name: categories, widget: list }
           - { label: Body, required: false, name: body, widget: markdown }
-            - name: post
   - name: treatments
     label: Treatments
     folder: src/pages/treatments
@@ -153,3 +152,4 @@ collections:
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
       - { label: "Image description (needed for SEO)", required: false, name: alt, widget: string }
       - { label: categories, required: false, name: categories, widget: list }
+      - { label: Body, required: false, name: body, widget: markdown }
