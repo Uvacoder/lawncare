@@ -138,3 +138,17 @@ collections:
           - { label: heading,  required: false, name: heading, widget: string}    
           - { label: categories, required: false, name: categories, widget: list }
           - { label: Body, required: false, name: body, widget: markdown }
+            - name: post
+    label: Treatments
+    folder: src/pages/treatments
+    create: true
+    slug: "{{slug }}"
+    fields:
+      - { label: "Template Key", name: templateKey, widget: hidden, default: page }
+      - { label: slug, name: slug, widget: string }
+      - { label: sortorder, required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
+      - { label: title, name: title, widget: string }
+      - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: featuredImage, required: false, name: featuredimage, widget: image }
+      - { label: "Image description (needed for SEO)", required: false, name: alt, widget: string }
+      - { label: categories, required: false, name: categories, widget: list }

@@ -5,8 +5,8 @@ slug: /treatments
 title: Essential Treatments
 featured: true
 category: treatments
-featuredimage: /img/david-kaloczi-10xlYvD5yn4-unsplash.jpg
-alt: Photo by David Kaloczi on Unsplash
+featuredimage: /img/silas-baisch-T-MZrVSBFso-unsplash.jpg
+alt: Photo by Silas Baisch on Unsplash
 categories:
   - service
 ---
