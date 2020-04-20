@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/burdrop
-featured: false
+featured: true
 title: Burdrop
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/burdrop.jpeg
 alt: Results of our Lawn Care Service in Burdrop
 categories:
 - project

@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/bloxham
-featured: false
+featured: true
 title: Bloxham
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/bloxham.jpeg
 alt: Results of our Lawn Care Service in Bloxham
 categories:
 - project

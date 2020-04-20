@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/lowertadmarton
-featured: false
+featured: true
 title: Lower Tadmarton
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/lowertadmarton.jpeg
 alt: Results of our Lawn Care Service in Lower Tadmarton
 categories:
 - project

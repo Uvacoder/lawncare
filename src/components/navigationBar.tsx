@@ -62,7 +62,8 @@ export default function NavigationBar() {
         variant="contained"
         color={theme.palette.secondary.main}
         className={classes.button}
-        startIcon={<PhoneIcon alignItems="center" padding="1rem" />}>
+        startIcon={<PhoneIcon alignItems="center" />}
+        padding={theme.typography.h4.fontSize} >
           Call
           </Button> </a></Container></ListItem>
   

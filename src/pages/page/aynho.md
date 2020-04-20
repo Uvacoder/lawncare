@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/aynho
-featured: false
+featured: true
 title: Aynho
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/aynho.jpeg
 alt: Results of our Lawn Care Service in Aynho
 categories:
 - project

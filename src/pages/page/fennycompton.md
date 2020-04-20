@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/fennycompton
-featured: false
+featured: true
 title: Fenny Compton
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/fennycompton.jpeg
 alt: Results of our Lawn Care Service in Fenny Compton
 categories:
 - project

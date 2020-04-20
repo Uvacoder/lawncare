@@ -18,11 +18,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     button: {
       color: theme.palette.primary.contrastText,
-      fontWeight: theme.typography.fontWeightMedium,
-    },
-    button: {
-      color: theme.palette.primary.contrastText,
-      fontWeight: theme.typography.fontWeightMedium,
+      fontWeight:  theme.typography.h5.fontWeight,
+      fontSize: theme.typography.h5.fontSize,
     },
     drawer: {
       display: 'flex',
@@ -57,15 +54,13 @@ export default function SimpleMenu() {
         id="simple-menu"
         className={classes.drawer}
         anchorEl={anchorEl}
-        // anchorReference="anchorPosition"
-        // anchorPosition={{ top: 150, left: 0 }}
         anchorOrigin={{
           vertical: 'bottom',
-          horizontal: 'left',
+          horizontal: 'center',
         }}
         transformOrigin={{
           vertical: 'top',
-          horizontal: 'right',
+          horizontal: 'center',
         }}
         keepMounted
         open={Boolean(anchorEl)}
@@ -74,6 +69,7 @@ export default function SimpleMenu() {
           paper: classes.drawerPaper,
         }}
       >
+
     <Link to="/"><MenuItem  onClick={handleClose}>Home</MenuItem></Link>  
     <Link to="/service"><MenuItem  onClick={handleClose}>Services</MenuItem></Link>  
     <Link to="/reviews"><MenuItem  onClick={handleClose}>Reviews</MenuItem></Link>  
@@ -81,6 +77,7 @@ export default function SimpleMenu() {
     <Link to="/page"><MenuItem  onClick={handleClose}>Portfolio</MenuItem></Link>  
     <Link to="/instagram"><MenuItem  onClick={handleClose}>Instagram</MenuItem></Link>  
     <Link to="/contactus"><MenuItem  onClick={handleClose}>Contact Us</MenuItem></Link>  
+ 
       </Menu>
       </Nav>
     </div>

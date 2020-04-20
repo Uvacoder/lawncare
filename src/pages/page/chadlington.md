@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/chadlington
-featured: false
+featured: true
 title: Chadlington
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/chadlington.jpeg
 alt: Results of our Lawn Care Service in Chadlington
 categories:
 - project
