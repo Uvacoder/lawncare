@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/longhanborough
-featured: false
+featured: true
 title: Long Hanborough
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/longhanborough.jpeg
 alt: Results of our Lawn Care Service in Long Hanborough
 categories:
 - project
