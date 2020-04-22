@@ -110,7 +110,7 @@ export default function PermanentDrawerLeft(props) {
               <ListItemText >Our Portfolio</ListItemText>
             </ListItem></Link>
             <Link to="/instagram">
-            <ListItem button  aria-label="Link to our instagram pictures page" style={{ color: theme.palette.primary.contrastText }}>
+            <ListItem button  aria-label="view our Instagram images" style={{ color: theme.palette.primary.contrastText }}>
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }}><InstagramIcon /></ListItemIcon>
               <ListItemText >Instagram</ListItemText>
             </ListItem></Link>
