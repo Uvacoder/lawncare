@@ -129,7 +129,7 @@ export default function PermanentDrawerLeft(props) {
         <a href="https://www.gappsapps.co.uk" 
         // className={gappsappsLogo} 
         rel="nofollow">
-            <ListItem button  aria-label="Link to the developer of this webnsite Gappsapps" >
+            <ListItem button  aria-label="Link to the developer of this website Gappsapps" >
              <Gappsapps />
             </ListItem></a>
             {/* </Container> */}
