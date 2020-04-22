@@ -3,13 +3,17 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import BlogIndex from '../components/BlogIndex'
+import Helmet from 'react-helmet'
 import SEO from '../components/SEO'
 import GlobalStyles from '../styles/globalStyle'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Title from '../styles/titleStyle'
+import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
-
+import Container from '@material-ui/core/Container'
+import BackgroundImage from 'gatsby-background-image'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 export const IndexPageTemplate = ({
   featuredimage,
@@ -23,36 +27,44 @@ export const IndexPageTemplate = ({
  
     <GlobalStyles />
     <SEO />
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage
-        })`,
-        backgroundPosition: `center`,
-        backgroundAttachment: `fixed`,
-        backgroundSize: 'cover',
-      }}
-    >
-      <div
-        style={{ height: '50vw', }}
-      />
+    <Helmet title={title} />
+     <Content bg={theme.palette.primary.main} >
+      
+        <BackgroundImage
+ 
+          fluid={featuredimage.childImageSharp.fluid}
+          style={{
+          backgroundAttachment: 'fixed',     
+          backgroundPosition: 'top',
+          backgroundSize: 'cover',
+          }}
+        >   
+          <Container
+        style={{ height: '800px',  }}
+        />
 
- <RaisedHeader >
-            <PageTitle >
-     <Title>Professional Lawn Care</Title>
-          </PageTitle>
-          <Description>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-                <h3 >
-                  About Us
-                </h3>
-                
-          <BlogIndex />
-          </Description>
-    </RaisedHeader>
-    
-    </div>
+        </BackgroundImage>
+
+        <Container>
+          <Container>
+            
+            <RaisedHeader >
+                        <PageTitle >
+                <Title>Professional Lawn Care</Title>
+                      </PageTitle>
+                      <Description>
+                        <div dangerouslySetInnerHTML={{ __html: html }} />
+                            <h3 >
+                              About Us
+                            </h3>
+                            
+                      <BlogIndex />
+                      </Description>
+                </RaisedHeader>
+      
+                </Container>  
+        </Container>
+      </Content>
 
   </div>
 
@@ -144,6 +156,7 @@ allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {or
   site {
     siteMetadata {
       serviceName
+      title
     }
   }
 }

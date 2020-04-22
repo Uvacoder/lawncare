@@ -9,7 +9,10 @@ import GlobalStyles from '../styles/globalStyle'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Title from '../styles/titleStyle'
+import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
+import Container from '@material-ui/core/Container'
+import BackgroundImage from 'gatsby-background-image'
 
 export const ReviewsPageTemplate = ({
   featuredimage,
@@ -21,23 +24,26 @@ export const ReviewsPageTemplate = ({
   <div>
     <GlobalStyles />
     <SEO />
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage
-        })`,
-        backgroundPosition: `center`,
-        backgroundAttachment: `fixed`,
-        backgroundSize: 'cover',
-      }}
-    >
-      <div
-        style={{
-          height: '500px',
-        }}
-      />
+     <Content bg={theme.palette.primary.main} >
+      
+        <BackgroundImage
+ 
+          fluid={featuredimage.childImageSharp.fluid}
+          style={{
+          backgroundAttachment: 'fixed',     
+          backgroundPosition: 'top',
+          backgroundSize: 'cover',
+          }}
+        >   
+          <Container
+        style={{ height: '800px',  }}
+        />
 
+        </BackgroundImage>
+
+        <Container>
+          <Container>
+            
  <RaisedHeader >
             <PageTitle   >
       <Title color={theme.palette.secondary.main}>{title}</Title>
@@ -52,7 +58,10 @@ export const ReviewsPageTemplate = ({
 
     </RaisedHeader>
   
-    </div>
+    </Container>  
+        </Container>
+      </Content>
+
   </div>
 )
 

@@ -23,28 +23,27 @@ export const categoriesPageTemplate = ({
   <div>
     <GlobalStyles />
     <SEO />
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage
-        })`,
-        backgroundPosition: `center`,
-        backgroundAttachment: `fixed`,
-        backgroundSize: 'cover',
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '800px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      />
+    <Helmet title={title} />
+     <Content bg={theme.palette.primary.main} >
+      
+        <BackgroundImage
+ 
+          fluid={featuredimage.childImageSharp.fluid}
+          style={{
+          backgroundAttachment: 'fixed',     
+          backgroundPosition: 'top',
+          backgroundSize: 'cover',
+          }}
+        >   
+          <Container
+        style={{ height: '800px',  }}
+        />
 
+        </BackgroundImage>
+
+        <Container>
+          <Container>
+            
  <RaisedHeader  >
             <PageTitle   style={{
         display: 'flex',
@@ -98,8 +97,11 @@ export const categoriesPageTemplate = ({
       </div>
     </section>
     </RaisedHeader>
-    
-    </div>
+ 
+    </Container>  
+        </Container>
+      </Content>
+
  </div>
 )
 
