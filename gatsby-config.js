@@ -243,10 +243,15 @@ module.exports = {
         icon: 'static/img/favicon/favicon.png',
         icons: [
           {
-            src: `/favicon/android-chrome-192x192.png`,
-            sizes: `192x192`,
+            src: `/favicon/LargeLogo.png`,
+            sizes: `1024x1024`,
             type: `image/png`
         },
+        {
+          src: `/favicon/android-chrome-192x192.png`,
+          sizes: `192x192`,
+          type: `image/png`
+      },
         {
           src: `/favicon/android-chrome-256x256.png`,
           sizes: `256x256`,
