@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const TextInputField = styled(TextField)`
   variant: outlined;
-  color: secondary; 
+  color: ${theme.palette.primary.contrastText}; 
 `
 const SendMessageButton = styled(Button)`
   variant: outlined;  
@@ -154,18 +154,19 @@ type PageProps = {
     <Form size='large' name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
         <FormControl>
           <Grid container spacing={1} >
-            <Grid item xs={3} ><InputField  label="Name" id="name-input"   /></Grid>
+            <Grid item xs={5} ><InputField label="Name" id="name-input"   /></Grid>
             <Grid item xs={1} />
-            <Grid item xs={3}><InputField label="Tel No:" id="telephone-number-input" /></Grid>
+            <Grid item xs={6} ><InputField label="Address"  id="address-input" size="large"  /></Grid>
+            </Grid>  
+            <Grid container spacing={1} >   
+            <Grid item xs={5} ><InputField label="Town"  id="postal-town-input" size="large"  /></Grid>
             <Grid item xs={1} />
-            <Grid item xs={4}><InputField label="Email" id="email-input"   /></Grid>
-            </Grid>
-            <Grid container spacing={1} >
-            <Grid item xs={4} ><InputField label="Address"  id="address-input" size="large"  /></Grid>
+            <Grid item xs={6}><InputField label="Tel No:" id="telephone-number-input" /></Grid>
+            </Grid>  
+            <Grid container spacing={1} >  
+            <Grid item xs={5} ><InputField label="Post Code" id="postcode-input"  /></Grid>
             <Grid item xs={1} />
-            <Grid item xs={3} ><InputField label="Town"  id="postal-town-input" size="large"  /></Grid>
-            <Grid item xs={1} />
-            <Grid item xs={3} ><InputField label="Post Code" id="postcode-input"  /></Grid>
+            <Grid item xs={6}><InputField label="Email" id="email-input"   /></Grid>
             </Grid> 
               <Grid item  ><InputField  label="Message" fullWidth placeholder="Please enter your message here " id="message-input" multiline rows="3" size="large" /></Grid>
             <Grid container spacing={1}>
@@ -173,7 +174,7 @@ type PageProps = {
             </Grid>
             {/* </div> */}
             <br />
-            <SendMessageButton variant="contained" color="default">Send Message</SendMessageButton>
+            <SendMessageButton  aria-label="Send message button" variant="contained" color="default">Send Message</SendMessageButton>
             <br />
       </FormControl>
       </Form>

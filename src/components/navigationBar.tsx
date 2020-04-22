@@ -41,6 +41,7 @@ export default function NavigationBar() {
         variant="contained"
         color="white"
         className={classes.button}
+        aria-label="Link to Home page"
         startIcon={<HomeIcon alignItems="center" />}>
           
 
@@ -50,6 +51,7 @@ export default function NavigationBar() {
             <ListItem button ><Container alignItems="center" > <Button       
         variant="outlined"
         color="white"
+        aria-label="Menu Button"
         className={classes.button}
         startIcon={<SimpleMenu alignItems="center" />}>
           
@@ -61,6 +63,7 @@ export default function NavigationBar() {
   <Button       
         variant="contained"
         color={theme.palette.secondary.main}
+        aria-label="Call us"
         className={classes.button}
         startIcon={<PhoneIcon alignItems="center" />}
         padding={theme.typography.h4.fontSize} >

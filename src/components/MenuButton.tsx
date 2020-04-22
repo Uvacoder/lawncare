@@ -93,6 +93,7 @@ export default function ButtonBases() {
       {images.map(image => (
         <ButtonBase
           focusRipple
+          aria-label={image.title}
           key={image.title}
           className={classes.image}
           focusVisibleClassName={classes.focusVisible}

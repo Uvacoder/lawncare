@@ -119,7 +119,7 @@ type PageProps = {
    
     <PBox style={{ textAlign: 'center' }} >
       <Link to="/contactus">
-      <Button variant="contained" color="primary" margin="1rem" py={4} px={8}>
+      <Button  aria-label="Link to contact us page" variant="contained" color="primary" margin="1rem" py={4} px={8}>
         Contact Us
       </Button>
       </Link>

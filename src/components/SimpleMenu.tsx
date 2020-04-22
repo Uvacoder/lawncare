@@ -47,7 +47,7 @@ export default function SimpleMenu() {
 
       <GlobalStyles />
       <Nav>
-      <Button  size="large" none="false" className={classes.button} aria-controls="simple-menu" aria-haspopup="true"  padding="1rem" onClick={handleClick} > 
+      <Button  size="large" none="false" className={classes.button}  aria-label="Menu Button" aria-controls="simple-menu" aria-haspopup="true"  padding="1rem" onClick={handleClick} > 
      Menu
       </Button>
       <Menu
@@ -70,13 +70,13 @@ export default function SimpleMenu() {
         }}
       >
 
-    <Link to="/"><MenuItem  onClick={handleClose}>Home</MenuItem></Link>  
-    <Link to="/service"><MenuItem  onClick={handleClose}>Services</MenuItem></Link>  
-    <Link to="/reviews"><MenuItem  onClick={handleClose}>Reviews</MenuItem></Link>  
-    <Link to="/faq/"><MenuItem  onClick={handleClose}>FAQs</MenuItem></Link>  
-    <Link to="/page"><MenuItem  onClick={handleClose}>Portfolio</MenuItem></Link>  
-    <Link to="/instagram"><MenuItem  onClick={handleClose}>Instagram</MenuItem></Link>  
-    <Link to="/contactus"><MenuItem  onClick={handleClose}>Contact Us</MenuItem></Link>  
+    <Link to="/"  aria-label="Link to Home page" ><MenuItem  onClick={handleClose}>Home</MenuItem></Link>  
+    <Link to="/service" aria-label="Link to service catalog" ><MenuItem  onClick={handleClose}>Services</MenuItem></Link>  
+    <Link to="/reviews"  aria-label="Link to reviews page"><MenuItem  onClick={handleClose}>Reviews</MenuItem></Link>  
+    <Link to="/faq/"  aria-label="Link to Frequently Asked Questions page" ><MenuItem  onClick={handleClose}>FAQs</MenuItem></Link>  
+    <Link to="/page" aria-label="Link to our portfolio page" ><MenuItem  onClick={handleClose}>Portfolio</MenuItem></Link>  
+    <Link to="/instagram"  aria-label="Link to our instagram pics page"><MenuItem  onClick={handleClose}>Instagram</MenuItem></Link>  
+    <Link to="/contactus"  aria-label="Link to contact us form"><MenuItem  onClick={handleClose}>Contact Us</MenuItem></Link>  
  
       </Menu>
       </Nav>

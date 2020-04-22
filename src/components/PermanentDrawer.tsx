@@ -85,37 +85,37 @@ export default function PermanentDrawerLeft(props) {
        >
 
         <Link to="/" >
-            <ListItem button >
+            <ListItem button aria-label="Link to Home page">
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><HomeOutlinedIcon /></ListItemIcon>
               <ListItemText style={{ color: theme.palette.primary.contrastText }} >Home</ListItemText>
             </ListItem></Link>
             <Link to="/service">
-            <ListItem button style={{ color: theme.palette.primary.contrastText }} >
+            <ListItem button  aria-label="Link to service catalog" style={{ color: theme.palette.primary.contrastText }} >
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><InfoOutlinedIcon /></ListItemIcon>
               <ListItemText>Our Service</ListItemText>
             </ListItem></Link>
             <Link to="/reviews">
-            <ListItem button style={{ color: theme.palette.primary.contrastText }} >
+            <ListItem button  aria-label="Link to reviews" style={{ color: theme.palette.primary.contrastText }} >
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><StarBorderOutlinedIcon /></ListItemIcon>
               <ListItemText>Reviews</ListItemText>
             </ListItem></Link>
             <Link to="/faq/" >
-            <ListItem button style={{ color: theme.palette.primary.contrastText }} >
+            <ListItem button  aria-label="Link to Frequently Asked Questions" style={{ color: theme.palette.primary.contrastText }} >
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><HelpOutlineIcon /></ListItemIcon>
               <ListItemText>Questions?</ListItemText>
             </ListItem></Link> 
             <Link to="/page" >
-            <ListItem button style={{ color: theme.palette.primary.contrastText }} >
+            <ListItem button  aria-label="Link to our portfolio page" style={{ color: theme.palette.primary.contrastText }} >
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><FolderOutlinedIcon /></ListItemIcon>
               <ListItemText >Our Portfolio</ListItemText>
             </ListItem></Link>
             <Link to="/instagram">
-            <ListItem button style={{ color: theme.palette.primary.contrastText }}>
+            <ListItem button  aria-label="Link to our instagram pictures page" style={{ color: theme.palette.primary.contrastText }}>
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }}><InstagramIcon /></ListItemIcon>
               <ListItemText >Instagram</ListItemText>
             </ListItem></Link>
             <Link to="/contactus">
-            <ListItem button style={{ color: theme.palette.primary.contrastText }} >
+            <ListItem button  aria-label="Link to the countact us form" style={{ color: theme.palette.primary.contrastText }} >
               <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><ContactMailIcon /></ListItemIcon>
               <ListItemText >Contact Us</ListItemText>
             </ListItem></Link>
@@ -129,7 +129,7 @@ export default function PermanentDrawerLeft(props) {
         <a href="https://www.gappsapps.co.uk" 
         // className={gappsappsLogo} 
         rel="nofollow">
-            <ListItem button >
+            <ListItem button  aria-label="Link to the developer of this webnsite Gappsapps" >
              <Gappsapps />
             </ListItem></a>
             {/* </Container> */}

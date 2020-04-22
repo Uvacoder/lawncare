@@ -32,7 +32,7 @@ export default function CallButton() {
       return (
             <div padding="1rem" className={classes.root}>
 
-        <Button  color="default" size="large" none="false" className={classes.button} padding="1rem"><PhoneIcon />Call</Button>
+        <Button aria-label="Call us" color="default" size="large" none="false" className={classes.button} padding="1rem"><PhoneIcon />Call</Button>
         </div>
       );
 }

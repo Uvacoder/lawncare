@@ -48,7 +48,7 @@ export default function Footer() {
         <GlobalStyles />
         <Container className={classes.Footer} alignItems="space-between">
 
-<ListItem button >
+<ListItem button aria-label="Link to developer of this website Gappsapps">
 <a href="https://www.gappsapps.co.uk" rel="nofollow">
             <ListItem button >
               <ListItemIcon><Gappsapps /></ListItemIcon>
