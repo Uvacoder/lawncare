@@ -9,7 +9,7 @@ import PageTitle from '../../styles/pageTitleStyle'
 import Content from '../../styles/contentStyle'
 import Description from  '../../styles/descriptionStyle'
 import ServiceCatalog from '../../components/ServiceCatalog'
-import HeaderImage from '../../components/HeaderImage'
+import ParallaxHeader from '../../components/ParallaxHeader'
 
 type PageProps = {
   data: {
@@ -44,7 +44,7 @@ type PageProps = {
          />
       <Helmet title={data.markdownRemark.frontmatter.title} />
       <Content bg={theme.palette.primary.main}>
-      <HeaderImage backgroundImage={imageData} />
+      <ParallaxHeader backgroundImage={imageData} />
         <RaisedHeader  >
         <PageTitle>{data.markdownRemark.frontmatter.title}</PageTitle>
           <Description >
