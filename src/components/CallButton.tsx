@@ -1,11 +1,7 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import PhoneIcon from '@material-ui/icons/Phone';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import GlobalStyles from '../styles/globalStyle'
-import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Nav from '../styles/navStyle'
-import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -31,8 +27,7 @@ export default function CallButton() {
 
       return (
             <div padding="1rem" className={classes.root}>
-
-        <Button aria-label="Call us" color="default" size="large" none="false" className={classes.button} padding="1rem"><PhoneIcon />Call</Button>
+          <IconButton aria-label="Call us" color="default" size="large" none="false" className={classes.button} padding="1rem"><PhoneIcon /> Call</IconButton>
         </div>
       );
 }

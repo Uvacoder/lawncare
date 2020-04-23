@@ -34,7 +34,7 @@ type TreatmentProps = {
 const Area = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 40vw;
+  grid-auto-rows: 35vw;
 
  [theme.breakpoints.down('md')]: {
     grid-template-columns: 1fr;
@@ -85,7 +85,7 @@ export default () => (
               featuredimage {
                 id
                 childImageSharp {
-                  fluid(quality: 95, maxWidth: 600) {
+                  fluid(quality: 100, maxHeight: 450, maxWidth: 450) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }

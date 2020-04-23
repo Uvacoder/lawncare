@@ -102,7 +102,7 @@ query Page ($id: String!) {
       categories
       featuredimage {
         childImageSharp {
-          fluid(maxHeight: 1200, maxWidth: 1645) {
+          fluid(maxWidth: 1645) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
