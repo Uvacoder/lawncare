@@ -19,8 +19,6 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import Container from '@material-ui/core/Container';
 import IconButtonBar from './IconButtonBar'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import GlobalStyles from '../styles/globalStyle'
 
 

@@ -26,8 +26,8 @@ export default function IconButtonBar() {
     const theme = useTheme();
     return (
 <div><Container className={classes.iconButtonBar} >
-<ListItem button aria-label="Link to our Facebook page" ><FacebookLink /></ListItem>
-<ListItem button aria-label="view our instagram pictures"><Link to="/instagram"><InstagramIcon  style={{ color: theme.palette.primary.contrastText }} /></Link></ListItem>
+<ListItem button aria-label="Our Facebook page" ><FacebookLink /></ListItem>
+<ListItem button aria-label="Our instagram pictures"><Link to="/instagram"><InstagramIcon  style={{ color: theme.palette.primary.contrastText }} /></Link></ListItem>
 <ListItem button aria-label="Call us" ><PhoneLink /></ListItem>
 <ListItem button aria-label="Email us" ><EmailLink /></ListItem>
 </Container></div>
