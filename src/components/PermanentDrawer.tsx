@@ -16,10 +16,8 @@ import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
 import InstagramIcon from '@material-ui/icons/Instagram'
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
-import MenuOptions from './menuOptions'
 import Container from '@material-ui/core/Container';
 import IconButtonBar from './IconButtonBar'
-import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -33,7 +31,6 @@ import GlobalStyles from '../styles/globalStyle'
       backgroundColor: theme.palette.primary.main,
     },
     mainSection: {
-      width: `calc(100% - ${theme.sidebar.width.big}px)`,
       marginLeft: theme.sidebar.width.big,
     },
     drawer: {

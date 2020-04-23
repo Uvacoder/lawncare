@@ -8,7 +8,6 @@ import SEO from '../components/SEO'
 import GlobalStyles from '../styles/globalStyle'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
-import Title from '../styles/titleStyle'
 import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
 import Container from '@material-ui/core/Container'
@@ -25,7 +24,12 @@ export const IndexPageTemplate = ({
   <div>
  
     <GlobalStyles />
-    <SEO />
+    <SEO  pathname={slug}
+        title={title}
+        node={slug}
+        banner={featuredimage}
+        organisation
+        />
     <Helmet title={title} />
      <Content bg={theme.palette.primary.main} >
      <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />

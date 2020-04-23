@@ -11,10 +11,6 @@ import { Container } from '@material-ui/core'
 import { Box, Flex } from '../elements'
 import BottomNavigationBar from './bottomNavigation'
 import {ThemeProvider}  from '@material-ui/core/styles'
-import ToolbarWrapper from '../styles/toolbarWrapperStyle'
-import styled from 'styled-components'
-import { readableColor } from 'polished'
-import Area from '../styles/areaStyle'
 import SideBarInner from '../styles/sideBarInnerStyle'
 import Main from '../styles/mainStyle'
 
@@ -60,7 +56,7 @@ const Layout = ({ children, color }: LayoutProps) => {
             <PermanentDrawerLeft />
           </SideBarInner>
       
-          <Container position="relative" style={{marginLeft: theme.sidebar.width.big, width: theme.sidebar.width.main }}>
+          <Container position="relative" style={{marginLeft: theme.sidebar.width.big }}>
            <Main>{children}</Main>
           </Container>
           </Hidden>

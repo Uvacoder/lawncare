@@ -39,10 +39,10 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
+      <div>
 
-      <Layout color={theme.palette.primary.main}>
         <SEO title={data.site.siteMetadata.title} />
-        <Area>
+        
         {posts &&
           posts.map(({ node: post }) => (
 
@@ -52,9 +52,9 @@ class BlogRoll extends React.Component {
           </GridItem>
          
           ))}
-      </Area>
-      </Layout>
-    )
+    </div>
+       )
+     
   }
 }
 
@@ -74,7 +74,7 @@ export default () => (
               featured
               featuredimage {
                 childImageSharp {
-                  fluid(quality: 95, maxWidth: 1200) {
+                  fluid(quality: 90, maxWidth: 1920) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }

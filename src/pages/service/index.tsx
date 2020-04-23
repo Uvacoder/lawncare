@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import { config, animated, useSpring } from 'react-spring'
 import Layout from '../../components/layout'
 import SEO from '../../components/SEO'
 import theme from '../../gatsby-theme-material-ui-top-layout/theme'
@@ -31,14 +30,7 @@ type PageProps = {
 
 
   const ServiceHeaderPage = ({ data }) => {
-  const categoryAnimation = useSpring({
-    config: config.slow,
-    from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
-    to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
-  })
-  const titleAnimation = useSpring({ config: config.slow, delay: 300, from: { opacity: 0 }, to: { opacity: 1 } })
-  const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
-  const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
+
   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
     <div>
@@ -54,7 +46,7 @@ type PageProps = {
       <Content bg={theme.palette.primary.main}>
       <HeaderImage backgroundImage={imageData} />
         <RaisedHeader  >
-        <animated.PageTitle style={titleAnimation} >{data.markdownRemark.frontmatter.title}</animated.PageTitle>
+        <PageTitle>{data.markdownRemark.frontmatter.title}</PageTitle>
           <Description >
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
        
@@ -83,7 +75,7 @@ query ServiceHeaderPage {
       categories
       featuredimage {
         childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
+          fluid(quality: 90, maxWidth: 1920) {
              ...GatsbyImageSharpFluid_withWebp
           }
         }

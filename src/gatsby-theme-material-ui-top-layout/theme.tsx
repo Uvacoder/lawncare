@@ -225,7 +225,6 @@ const theme = createMuiTheme({
 			width: {
 				big: '275px',
 				normal: '240px',
-				main: `calc(100% - 275px)`,
 			},
 			height: '100%',
 			},

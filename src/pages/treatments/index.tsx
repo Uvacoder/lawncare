@@ -21,7 +21,6 @@ import Category from '../../styles/categoryStyle'
 import Title from '../../styles/titleStyle'
 import Description from  '../../styles/descriptionStyle'
 import TreatmentIndex from '../../components/TreatmentIndex'
-import Area from '../../styles/areaStyle'
 
 type PageProps = {
   data: {
@@ -121,7 +120,7 @@ export const query = graphql`query TreatmentHeaderPage {
       categories
       featuredimage {
         childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
+          fluid(quality: 90, maxWidth: 1920) {
             src
           }
         }
