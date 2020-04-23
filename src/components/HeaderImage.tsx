@@ -5,7 +5,8 @@ import BackgroundImage from 'gatsby-background-image'
 
 
 
-const HeaderImage = ({ backgroundImage }) => (               
+const HeaderImage = ({ backgroundImage }) => (  
+         
 
     <BackgroundImage
         fluid={backgroundImage}
@@ -19,7 +20,8 @@ const HeaderImage = ({ backgroundImage }) => (
         style={{ height: '800px',  }}
         />
     </BackgroundImage> 
-    
+  
+ 
 )
 
 HeaderImage.propTypes = {

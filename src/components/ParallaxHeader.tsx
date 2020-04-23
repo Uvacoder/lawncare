@@ -1,17 +1,13 @@
-import React from "react";
-// nodejs library that concatenates classes
+import React from 'react'
+import PropTypes from 'prop-types'
+import BackgroundImage from 'gatsby-background-image'
 import classNames from "classnames";
-// nodejs library to set properties for components
-import PropTypes from "prop-types";
-import Container from '@material-ui/core/Container'
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// core components
 import styles from "../styles/parallaxStyle";
 
 const useStyles = makeStyles(styles);
 
-export default function Parallax(props) {
+export default function ParallaxHeader(props) {
   let windowScrollTop;
   if (window.innerWidth >= 768) {
     windowScrollTop = window.pageYOffset / 3;
@@ -46,20 +42,24 @@ export default function Parallax(props) {
     [className]: className !== undefined
   });
   return (
-    <div
-      className={parallaxClasses}
-      style={{
-        ...style,
-        backgroundImage: backgroundImage,
-        transform: transform
-      }}
-    >
+    <BackgroundImage
+    fluid={backgroundImage}
+    className={parallaxClasses}
+    style={{
+    ...style,
+    backgroundAttachment: 'fixed',     
+    backgroundPosition: 'top',
+    backgroundSize: 'cover',
+    transform: transform
+    }}
+    >  
+ 
       {children}
-    </div>
+    </BackgroundImage>
   );
 }
 
-Parallax.propTypes = {
+ParallaxHeader.propTypes = {
   className: PropTypes.string,
   filter: PropTypes.bool,
   children: PropTypes.node,
@@ -67,3 +67,4 @@ Parallax.propTypes = {
   backgroundImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   small: PropTypes.bool
 };
+

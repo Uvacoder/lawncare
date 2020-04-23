@@ -9,9 +9,9 @@ import {  Flex } from '../elements'
 import GlobalStyles from '../styles/globalStyle'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
-import Title from '../styles/titleStyle'
 import Description from  '../styles/descriptionStyle'
 import HeaderImage from '../components/HeaderImage'
+import ParallaxHeader from '../components/ParallaxHeader'
 
 export const categoriesPageTemplate = ({
   featuredimage,
@@ -24,7 +24,7 @@ export const categoriesPageTemplate = ({
     <SEO />
     <Helmet title={title} />
      <Content bg={theme.palette.primary.main} >
-     <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
+     <ParallaxHeader backgroundImage={featuredimage.childImageSharp.fluid} />
 
         <Container>
           <Container>
