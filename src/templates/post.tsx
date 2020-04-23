@@ -92,7 +92,7 @@ query BlogPage ($id: String!) {
       categories
       featuredimage {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
+          fluid(maxHeight: 1200, maxWidth: 1645) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
