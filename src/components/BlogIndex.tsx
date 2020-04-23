@@ -1,15 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql, StaticQuery, Link } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { animated } from 'react-spring'
-import Layout from './layout'
 import GridLink from './grid-link'
-import SEO from './SEO'
 import { ChildImageSharp } from '../types'
-import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 type PageProps = {
   data: {
@@ -34,13 +29,15 @@ type PageProps = {
 const Area = styled(animated.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 40vw;
+  grid-auto-rows: 35vw;
 
  [theme.breakpoints.down('md')]: {
     grid-template-columns: 1fr;
     grid-auto-rows: 30vw;
   }
 `
+
+
 class BlogIndex extends React.Component {
   render() {
 
@@ -81,7 +78,7 @@ export default () => (
               featured
               featuredimage {
                 childImageSharp {
-                  fluid(maxHeight: 600 maxWidth: 600)  {
+                  fluid(quality: 100, maxWidth: 600, maxHeight: 600) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }

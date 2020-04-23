@@ -1,15 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, StaticQuery, Link } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
-import { config, animated, useSpring } from 'react-spring'
-import Layout from './layout'
 import GridItem from './grid-item'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
-import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Area from '../styles/areaStyle'
 
 type PageProps = {
   data: {
@@ -74,7 +69,7 @@ export default () => (
               featured
               featuredimage {
                 childImageSharp {
-                  fluid(maxHeight: 600 maxWidth: 600)  {
+                  fluid(quality: 100, maxWidth: 600, maxHeight: 600) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
