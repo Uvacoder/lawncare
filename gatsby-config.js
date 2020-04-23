@@ -129,7 +129,6 @@ module.exports = {
         path: `${__dirname}/config`,
       },
     },
-    `gatsby-plugin-mdx`,
     `gatsby-plugin-catch-links`,
     {
       resolve: '@stackbit/gatsby-plugin-menus',
