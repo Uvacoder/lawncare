@@ -101,8 +101,6 @@ type PageProps = {
       </Grid> 
       </FormContainer>
       <br />
-      <br />
-
       <FormContainer >
               <RaisedHeader >
             <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>

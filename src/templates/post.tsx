@@ -1,12 +1,10 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
-import { config, animated, useSpring } from 'react-spring'
+import { config, useSpring } from 'react-spring'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import { Box, AnimatedBox } from '../elements'
-import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import ParallaxHeader from '../components/ParallaxHeader'
@@ -56,19 +54,12 @@ type PageProps = {
         node={data.markdownRemark.frontmatter.slug}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
          />
-      <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
+      <Helmet title={data.markdownRemark.frontmatter.title} />
       <Content bg={theme.palette.primary.main} py={10}>
       <ParallaxHeader backgroundImage={imageData} />
 
         <RaisedHeader  >
-          <PageTitle >
-              <Container > 
-
-                  <Category style={categoryAnimation} color={theme.palette.primary.contrastText}> 
-                    <Title color={theme.palette.secondary.main }>{data.markdownRemark.frontmatter.title}</Title>
-                  </Category>
-              </Container>
-          </PageTitle>
+          <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>
           <Description style={descAnimation}>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </Description>
