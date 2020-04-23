@@ -1,8 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
@@ -11,15 +9,12 @@ import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
-import BackgroundImage from 'gatsby-background-image'
-import GridItem from '../components/grid-item'
-import ImageCarousel from '../components/imageCarousel'
+import HeaderImage from '../components/HeaderImage'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PBox from '../styles/pboxStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
 import Category from '../styles/categoryStyle'
-import PButton from '../styles/pbuttonStyle'
 import Title from '../styles/titleStyle'
 import Description from  '../styles/descriptionStyle'
 
@@ -63,20 +58,7 @@ type PageProps = {
          />
       <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
       <Content bg={theme.palette.primary.main} py={10}>
-          <BackgroundImage
-    
-            fluid={imageData}
-            style={{
-            backgroundAttachment: 'fixed',     
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            }}    
-            >   
-          <Container
-            style={{
-              height: '60vw',
-            }} />  
-            </BackgroundImage>
+      <HeaderImage backgroundImage={imageData} />
 
         <RaisedHeader  >
           <PageTitle >
@@ -119,7 +101,7 @@ query BlogPage ($id: String!) {
       categories
       featuredimage {
         childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
+          fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

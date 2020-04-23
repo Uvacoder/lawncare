@@ -1,26 +1,17 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
-import { config, animated, useSpring } from 'react-spring'
+import { config, useSpring } from 'react-spring'
 import Layout from '../../components/layout'
 import SEO from '../../components/SEO'
 import theme from '../../gatsby-theme-material-ui-top-layout/theme'
-import { Box, AnimatedBox } from '../../elements'
-import { transparentize, readableColor } from 'polished'
 import Container from '@material-ui/core/Container'
-import BackgroundImage from 'gatsby-background-image'
-import GridItem from '../../components/grid-item'
-import ImageCarousel from '../../components/imageCarousel'
 import RaisedHeader from '../../styles/raisedHeaderStyle'
-import PBox from '../../styles/pboxStyle'
 import PageTitle from '../../styles/pageTitleStyle'
 import Content from '../../styles/contentStyle'
-import Category from '../../styles/categoryStyle'
-import Title from '../../styles/titleStyle'
 import Description from  '../../styles/descriptionStyle'
 import FAQIndex from '../../components/FAQIndex'
+import HeaderImage from '../../components/HeaderImage'
 
 type PageProps = {
   data: {
@@ -58,40 +49,20 @@ type PageProps = {
         title={data.markdownRemark.frontmatter.title}
         desc={data.markdownRemark.excerpt}
         node={data.markdownRemark.frontmatter.slug}
-        banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
+        banner={imageData}
          />
-      <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
-      <Content bg={theme.palette.primary.main} py={10}>
-          <BackgroundImage
-    
-            fluid={imageData}
-            style={{
-            backgroundAttachment: 'fixed',     
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            }}    
-            >   
-          <Container
-            style={{
-              height: '60vw',
-            }} />  
-            </BackgroundImage>
-
+      <Helmet title={data.markdownRemark.frontmatter.title} />
+      <Content bg={theme.palette.primary.main} >
+      <HeaderImage backgroundImage={imageData} />
+      <Container >
         <RaisedHeader  >
-          <PageTitle >
-              <Container > 
-
-                  <Category style={categoryAnimation} color={theme.palette.primary.contrastText}> 
-                    <Title color={theme.palette.secondary.main }>{data.markdownRemark.frontmatter.title}</Title>
-                  </Category>
-              </Container>
-          </PageTitle>
+          <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>
           <Description style={descAnimation}>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-      
-          <FAQIndex />
+           <FAQIndex />
           </Description>
         </RaisedHeader>
+        </Container>
      </Content>
 </Layout>
     </div>

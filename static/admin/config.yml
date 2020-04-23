@@ -134,8 +134,7 @@ collections:
           - { label: "Template Key", name: templateKey, widget: hidden, default: index-page }
           - { label: slug, name: slug, widget: string }          
           - { label: title, required: false, name: title, widget: string }
-          - { label: image, required: false, name: image, widget: image }          
-          - { label: heading,  required: false, name: heading, widget: string}    
+          - { label: image, required: false, name: image, widget: image }         
           - { label: categories, required: false, name: categories, widget: list }
           - { label: Body, required: false, name: body, widget: markdown }
   - name: treatments

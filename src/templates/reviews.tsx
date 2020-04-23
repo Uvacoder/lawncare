@@ -12,12 +12,11 @@ import Title from '../styles/titleStyle'
 import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
 import Container from '@material-ui/core/Container'
-import BackgroundImage from 'gatsby-background-image'
+import HeaderImage from '../components/HeaderImage'
 
 export const ReviewsPageTemplate = ({
   featuredimage,
   title,
-  heading,
   slug,
   html,
 }) => (
@@ -25,40 +24,15 @@ export const ReviewsPageTemplate = ({
     <GlobalStyles />
     <SEO />
      <Content bg={theme.palette.primary.main} >
-      
-        <BackgroundImage
- 
-          fluid={featuredimage.childImageSharp.fluid}
-          style={{
-          backgroundAttachment: 'fixed',     
-          backgroundPosition: 'top',
-          backgroundSize: 'cover',
-          }}
-        >   
-          <Container
-        style={{ height: '800px',  }}
-        />
-
-        </BackgroundImage>
-
+     <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
         <Container>
-          <Container>
-            
- <RaisedHeader >
-            <PageTitle   >
-      <Title color={theme.palette.secondary.main}>{title}</Title>
-        
-          </PageTitle>
-       
- 
-                <Description>
-                  <div dangerouslySetInnerHTML={{ __html: html }} />
-                  <ReviewIndex />  
-                </Description>
-
-    </RaisedHeader>
-  
-    </Container>  
+                  <RaisedHeader >
+                    <PageTitle>{title}</PageTitle>
+                        <Description>
+                          <div dangerouslySetInnerHTML={{ __html: html }} />
+                          <ReviewIndex />  
+                        </Description>
+                  </RaisedHeader>
         </Container>
       </Content>
 
@@ -68,7 +42,6 @@ export const ReviewsPageTemplate = ({
 ReviewsPageTemplate.propTypes = {
   featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   slug: PropTypes.string,
   html: PropTypes.markdown,
   posts: PropTypes.shape({
@@ -86,7 +59,6 @@ const ReviewsPage = ({ data }) => {
         featuredimage={data.markdownRemark.frontmatter.featuredimage}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
-        heading={data.markdownRemark.frontmatter.heading}
         html={data.markdownRemark.html}
       />
     </Layout>
@@ -114,13 +86,12 @@ query ReviewsPageTemplate {
       title
       featuredimage {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 100) {
-            src
+          fluid(quality: 90, maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       slug
-      heading
     }
   }
 allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "review"}}}, sort: {order: ASC, fields: id}) { 

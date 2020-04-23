@@ -11,7 +11,7 @@ import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
-import BackgroundImage from 'gatsby-background-image'
+import HeaderImage from '../components/HeaderImage'
 import GridItem from '../components/grid-item'
 import ImageCarousel from '../components/imageCarousel'
 import RaisedHeader from '../styles/raisedHeaderStyle'
@@ -59,33 +59,11 @@ type PageProps = {
         title={`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.siteUrl}`}
         desc={data.markdownRemark.excerpt}
         node={data.markdownRemark.frontmatter.slug}
-        banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
+        banner={imageData}
          />
       <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
       <Content bg={theme.palette.primary.main} py={10}>
-      <BackgroundImage
- 
-        fluid={imageData}
-        style={{
-        backgroundAttachment: 'fixed',     
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        }}
-        // backgroundSize="cover"          
-        >   
-      <Container
-        style={{
-          display: 'flex',
-          height: '700px',
-          width: '70%' ,
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        </Container>  
-        </BackgroundImage>
+      <HeaderImage backgroundImage={imageData} />
         <Container>
  <Container>
 
@@ -140,7 +118,7 @@ query ReviewPage ($id: String!) {
       recommendation_type_positive
       featuredimage {
         childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
+          fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

@@ -12,13 +12,12 @@ import Title from '../styles/titleStyle'
 import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
 import Container from '@material-ui/core/Container'
-import BackgroundImage from 'gatsby-background-image'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
+import HeaderImage from '../components/HeaderImage'
 
 export const IndexPageTemplate = ({
   featuredimage,
   title,
-  heading,
   slug,
   html,
 }) => (
@@ -29,40 +28,17 @@ export const IndexPageTemplate = ({
     <SEO />
     <Helmet title={title} />
      <Content bg={theme.palette.primary.main} >
-      
-        <BackgroundImage
- 
-          fluid={featuredimage.childImageSharp.fluid}
-          style={{
-          backgroundAttachment: 'fixed',     
-          backgroundPosition: 'top',
-          backgroundSize: 'cover',
-          }}
-        >   
-          <Container
-        style={{ height: '800px',  }}
-        />
-
-        </BackgroundImage>
-
+     <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
         <Container>
-          <Container>
-            
             <RaisedHeader >
                         <PageTitle >
-                <Title>Professional Lawn Care</Title>
+               {title}
                       </PageTitle>
                       <Description>
                         <div dangerouslySetInnerHTML={{ __html: html }} />
-                            <h3 >
-                              About Us
-                            </h3>
-                            
                       <BlogIndex />
                       </Description>
-                </RaisedHeader>
-      
-                </Container>  
+                </RaisedHeader> 
         </Container>
       </Content>
 
@@ -73,7 +49,6 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   slug: PropTypes.string,
   html: PropTypes.markdown,
   posts: PropTypes.shape({
@@ -84,7 +59,6 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { indexdata } = data.markdownRemark
-  const { edges: posts } = data.allMarkdownRemark
 
   return (
     <Layout>
@@ -92,7 +66,6 @@ const IndexPage = ({ data }) => {
         featuredimage={data.markdownRemark.frontmatter.featuredimage}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
-        heading={data.markdownRemark.frontmatter.heading}
         html={data.markdownRemark.html}
          />
     </Layout>
@@ -104,9 +77,6 @@ IndexPage.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
-  }),
-  allMarkdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
   }),
   site: PropTypes.shape({
     siteMetadata: PropTypes.object,
@@ -123,34 +93,12 @@ query IndexPageTemplate {
       title
       featuredimage {
         childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
+          fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       slug
-      heading
-    }
-  }
-allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {order: ASC, fields: frontmatter___sortorder}) { 
-  edges {
-      node {
-        excerpt(pruneLength: 400)
-        id
-        posts:   frontmatter {
-          slug
-          title
-          templateKey
-          featured
-          featuredimage {
-            childImageSharp {
-              fluid(quality: 95, maxWidth: 1200) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-      }
     }
   }
   site {

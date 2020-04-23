@@ -11,12 +11,11 @@ import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Title from '../styles/titleStyle'
 import Description from  '../styles/descriptionStyle'
-
+import HeaderImage from '../components/HeaderImage'
 
 export const categoriesPageTemplate = ({
   featuredimage,
   title,
-  heading,
   slug,
   html,
 }) => (
@@ -25,37 +24,13 @@ export const categoriesPageTemplate = ({
     <SEO />
     <Helmet title={title} />
      <Content bg={theme.palette.primary.main} >
-      
-        <BackgroundImage
- 
-          fluid={featuredimage.childImageSharp.fluid}
-          style={{
-          backgroundAttachment: 'fixed',     
-          backgroundPosition: 'top',
-          backgroundSize: 'cover',
-          }}
-        >   
-          <Container
-        style={{ height: '800px',  }}
-        />
-
-        </BackgroundImage>
+     <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
 
         <Container>
           <Container>
             
  <RaisedHeader  >
-            <PageTitle   style={{
-        display: 'flex',
-        width: '70%' ,
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        alignItems: 'left',
-        flexDirection: 'column',}}>
-
- <Title color={theme.palette.secondary.main}>{title}</Title>
-        
-          </PageTitle>
+            <PageTitle >{title}</PageTitle>
        
  
     <section className="section section--gradient">
@@ -108,7 +83,6 @@ export const categoriesPageTemplate = ({
 categoriesPageTemplate.propTypes = {
   featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   slug: PropTypes.string,
   html: PropTypes.markdown,
   posts: PropTypes.shape({
@@ -117,7 +91,7 @@ categoriesPageTemplate.propTypes = {
 }
 
 const categoriesPage = ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark
+ 
 
   return (
     <Layout>
@@ -125,7 +99,6 @@ const categoriesPage = ({ data }) => {
         featuredimage={data.markdownRemark.frontmatter.featuredimage}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
-        heading={data.markdownRemark.frontmatter.heading}
         html={data.markdownRemark.html}
       />
     </Layout>
@@ -138,9 +111,6 @@ categoriesPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-  allMarkdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-  }),
 }
 
 export default categoriesPage
@@ -148,26 +118,6 @@ export default categoriesPage
 export const pageQuery = graphql`
  
   query categoriesPageTemplate {
-    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {order: ASC, fields: id}) {
-      totalCount
-      edges {
-        node {
-          frontmatter {
-            title
-            slug
-            featuredimage {
-              childImageSharp {
-                fluid(quality: 95, maxWidth: 600) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-            alt
-          }
-          excerpt(pruneLength: 147)
-        }
-      }
-    }
     markdownRemark(frontmatter: {templateKey: {eq: "categories"}}) {
       id
       html
@@ -175,12 +125,11 @@ export const pageQuery = graphql`
         title
         templateKey
         slug
-        heading
         featured
         categories
         featuredimage {
           childImageSharp {
-            fluid(quality: 95, maxWidth: 1200) {
+            fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

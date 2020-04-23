@@ -1,17 +1,16 @@
 import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Container from '@material-ui/core/Container';
-import { Box, AnimatedBox} from '../elements'
+import { config, animated, useSpring } from 'react-spring'
 
 const PageTitle = styled(Container)`
-display: grid;
 width: 70%;
-grid-template-columns: 1fr;
-grid-template-rows: 1fr;
-grid-template-areas:
-'title'   ;
-padding: 1rem ;
+text-transform: none;
+padding: 2rem;
+color: ${theme.palette.primary.contrastText}; 
+font-size: ${theme.typography.h4.fontSize};
+font-weight: ${theme.typography.h4.fontWeight};
 background-color: ${theme.palette.primary.main};
 text-align: center;
 margin: -80px 15% 0px 15%;

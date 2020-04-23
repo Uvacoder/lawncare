@@ -11,7 +11,7 @@ import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
-import BackgroundImage from 'gatsby-background-image'
+import HeaderImage from '../components/HeaderImage'
 import GridItem from '../components/grid-item'
 import HorizontalLogo from '../components/horizontalLogo'
 import ImageCarousel from '../components/imageCarousel'
@@ -45,53 +45,29 @@ type PageProps = {
 
 
   const Page = ({ data }) => {
-  const categoryAnimation = useSpring({
-    config: config.slow,
-    from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
-    to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
-  })
-  const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
-  const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
-  const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
-  const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
+ 
+   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
     <div >
           <GlobalStyles />
     <Layout >
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
-        title={`${data.site.siteMetadata.title}`}
+        title={data.site.siteMetadata.title}
         desc={data.markdownRemark.html}
         node={data.markdownRemark.frontmatter.slug}
-        banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
+        banner={imageData}
        />
    <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
      <Content bg={theme.palette.primary.main} >
       
-        <BackgroundImage
- 
-          fluid={imageData}
-          style={{
-          backgroundAttachment: 'fixed',     
-          backgroundPosition: 'top',
-          backgroundSize: 'cover',
-          }}
-        >   
-          <Container
-        style={{ height: '800px',  }}
-        />
-
-        </BackgroundImage>
+     
+     <HeaderImage backgroundImage={imageData} />
 
         <Container>
           <Container>
                 <RaisedHeader   >
-                  <PageTitle >
-                      <Container > 
-                        <Category style={categoryAnimation} color={theme.palette.primary.contrastText}> 
-                         <Title color={theme.palette.secondary.main }>{data.markdownRemark.frontmatter.title}</Title></Category>
-                      </Container>
-                  </PageTitle>
+                  <PageTitle >{data.markdownRemark.frontmatter.title} </PageTitle>
                   <Description >
                     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
                       <PBox style={{ textAlign: 'center' }}>
@@ -126,7 +102,7 @@ query Page ($id: String!) {
       categories
       featuredimage {
         childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
+          fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

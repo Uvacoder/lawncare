@@ -1,27 +1,16 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
 import { config, animated, useSpring } from 'react-spring'
 import Layout from '../../components/layout'
 import SEO from '../../components/SEO'
 import theme from '../../gatsby-theme-material-ui-top-layout/theme'
-import { Box, AnimatedBox } from '../../elements'
-import { transparentize, readableColor } from 'polished'
-import Container from '@material-ui/core/Container'
-import BackgroundImage from 'gatsby-background-image'
-import GridItem from '../../components/grid-item'
-import ImageCarousel from '../../components/imageCarousel'
 import RaisedHeader from '../../styles/raisedHeaderStyle'
-import PBox from '../../styles/pboxStyle'
 import PageTitle from '../../styles/pageTitleStyle'
 import Content from '../../styles/contentStyle'
-import Category from '../../styles/categoryStyle'
-import Title from '../../styles/titleStyle'
 import Description from  '../../styles/descriptionStyle'
 import ServiceCatalog from '../../components/ServiceCatalog'
-import Area from '../../styles/areaStyle'
+import HeaderImage from '../../components/HeaderImage'
 
 type PageProps = {
   data: {
@@ -47,7 +36,7 @@ type PageProps = {
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
     to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
   })
-  const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
+  const titleAnimation = useSpring({ config: config.slow, delay: 300, from: { opacity: 0 }, to: { opacity: 1 } })
   const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
   const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
@@ -59,34 +48,14 @@ type PageProps = {
         title={data.markdownRemark.frontmatter.title}
         desc={data.markdownRemark.excerpt}
         node={data.markdownRemark.frontmatter.slug}
-        banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
+        banner={imageData}
          />
-      <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
-      <Content bg={theme.palette.primary.main} py={10}>
-          <BackgroundImage
-            
-            fluid={imageData}
-            style={{
-            width: '100%',
-            backgroundAttachment: 'fixed',     
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            }}    
-            >   
-          <Container
-            style={{ height: '60vw', }} />  
-            </BackgroundImage>
-
+      <Helmet title={data.markdownRemark.frontmatter.title} />
+      <Content bg={theme.palette.primary.main}>
+      <HeaderImage backgroundImage={imageData} />
         <RaisedHeader  >
-          <PageTitle >
-              <Container > 
-
-                  <Category style={categoryAnimation} color={theme.palette.primary.contrastText}> 
-                    <Title color={theme.palette.secondary.main }>{data.markdownRemark.frontmatter.title}</Title>
-                  </Category>
-              </Container>
-          </PageTitle>
-          <Description style={descAnimation}>
+        <animated.PageTitle style={titleAnimation} >{data.markdownRemark.frontmatter.title}</animated.PageTitle>
+          <Description >
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
        
             <ServiceCatalog />
