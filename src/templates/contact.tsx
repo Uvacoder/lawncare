@@ -13,9 +13,7 @@ import Grid from '@material-ui/core/Grid';
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
-import HeaderImage from '../components/HeaderImage'
 import FormContainer from '../styles/formContainerStyle'
-import Container from '@material-ui/core/Container'
 import Img from 'gatsby-image'
 
 const useStyles = makeStyles((theme: Theme) =>
