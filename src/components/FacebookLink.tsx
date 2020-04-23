@@ -15,7 +15,7 @@ const FacebookLink = () => (
     }
     `}
     render={data => <a href={`https://www.facebook.com/${data.site.siteMetadata.facebook}`} rel="nofollow" >
- <FacebookIcon  alt="Link to our Facebook page" style={{ color: theme.palette.primary.contrastText }} /></a>}
+ <FacebookIcon  alt="Our Facebook page" style={{ color: theme.palette.primary.contrastText }} /></a>}
   ></StaticQuery>
 )
 

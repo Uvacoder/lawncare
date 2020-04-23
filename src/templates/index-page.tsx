@@ -97,7 +97,7 @@ query IndexPageTemplate {
       title
       featuredimage {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
+          fluid(maxHeight: 1920, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
