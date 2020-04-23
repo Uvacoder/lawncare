@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
-import { config, useSpring } from 'react-spring'
 import Layout from '../../components/layout'
 import SEO from '../../components/SEO'
 import theme from '../../gatsby-theme-material-ui-top-layout/theme'
@@ -32,14 +31,6 @@ type PageProps = {
 
 
   const FaqHeaderPage = ({ data }) => {
-  const categoryAnimation = useSpring({
-    config: config.slow,
-    from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
-    to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
-  })
-  const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
-  const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
-  const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
     <div>
@@ -57,7 +48,7 @@ type PageProps = {
       <Container >
         <RaisedHeader  >
           <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>
-          <Description style={descAnimation}>
+          <Description >
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
            <FAQIndex />
           </Description>
