@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/bladen
-featured: false
+featured: true
 title: Bladen
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/bladen.jpg
 alt: Results of our Lawn Care Service in Bladen
 categories:
 - project

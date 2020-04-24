@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/tysoe
-featured: false
+featured: true
 title: Tysoe
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/tysoe.jpg
 alt: Results of our Lawn Care Service in Tysoe
 categories:
 - project

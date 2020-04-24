@@ -113,16 +113,6 @@ collections:
       - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }
       - { label: Location, required: false, name: location, widget: string }
       - { label: Body, required: false, name: body, widget: markdown }
-  - name: siteinfo
-    label: siteinfo
-    folder: src/pages/siteinfo
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Template Key", name: templateKey, widget: hidden, default: siteinfo }
-      - { label: Slug, name: slug, widget: string }
-      - { label: DataType,  required: false, name: dataType, widget: string}
-      - { label: Value, name: value, widget: string }
   - name: index
     label: Home page
     files: 

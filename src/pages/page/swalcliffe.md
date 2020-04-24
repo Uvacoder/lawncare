@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/swalcliffe
-featured: false
+featured: true
 title: Swalcliffe
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/swalcliffe.jpg
 alt: Results of our Lawn Care Service in Swalcliffe
 categories:
 - project

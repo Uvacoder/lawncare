@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/longworth
-featured: false
+featured: true
 title: Longworth
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/longworth.jpg
 alt: Results of our Lawn Care Service in Longworth
 categories:
 - project

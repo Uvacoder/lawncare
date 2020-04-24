@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/shennington
-featured: false
+featured: true
 title: Shennington
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/shennington.jpg
 alt: Results of our Lawn Care Service in Shennington
 categories:
 - project

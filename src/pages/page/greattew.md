@@ -1,9 +1,9 @@
 ---
 templateKey: page
 slug: /project/greattew
-featured: false
+featured: true
 title: Great Tew
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/greattew.jpg
 alt: Results of our Lawn Care Service in Great Tew
 categories:
 - project
