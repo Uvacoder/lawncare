@@ -11,7 +11,7 @@ import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Description from  '../styles/descriptionStyle'
 import HeaderImage from '../components/HeaderImage'
-import HeaderImage from '../components/HeaderImage'
+
 
 export const categoriesPageTemplate = ({
   featuredimage,
