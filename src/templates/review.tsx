@@ -118,7 +118,7 @@ query ReviewPage ($id: String!) {
       recommendation_type_positive
       featuredimage {
         childImageSharp {
-          fluid(maxHeight: 1200, maxWidth: 1645) {
+          fluid(quality:95 maxHeight: 1200, maxWidth: 1920)  {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
