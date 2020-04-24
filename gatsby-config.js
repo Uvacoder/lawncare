@@ -198,12 +198,6 @@ module.exports = {
         username: `lawnsmatter`,
       },
     }, 
-    // {
-    //   resolve: `gatsby-plugin-facebook-sdk`,
-    //   options: {
-    //     appId: '629164404334446',
-    //   },
-    // },
      {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -215,16 +209,6 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-source-facebook`,
-    //   options: {
-    //     places: [`986924381457198`], // Can be either a numeric ID or the URL ID
-    //     params: {
-    //       fields: "id,albums{photos{images,name,created_time}},ratings{created_time,has_rating,has_review,rating,recommendation_type,review_text,reviewer}"},
-    //     key: 'EAAI8OMDTX24BAHI0H9DArAJO6xIZCWFZAidPEK0zRZB9BrWnNS0yKnc0dxPMaZCc0LIl30PtuumU3pL4ixWPZCf0Mkah3ztBngZCPaIXCzHGkGnLaG9Kzz2IzIGH3JRZAZCK1mXM5KBcegAXYoOKBQvOWDUxYpTccXQcksJ59sZBmoQZDZD', // You will need to create a Facebook application and go through review in order to get an API token.
-    //     version: '6.0', // The version of the graph API to use. Defaults to 5.0
-    //   },
-    // },
      'gatsby-plugin-sitemap',
     'gatsby-theme-overreacted-toggle',
     {
@@ -241,7 +225,7 @@ module.exports = {
         icons: [
           {
             src: `/favicon/LargeLogo.png`,
-            sizes: `1024x1024`,
+            sizes: `795x795`,
             type: `image/png`
         },
         {

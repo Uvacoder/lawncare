@@ -1,7 +1,7 @@
 import React from 'react';
 import PhoneIcon from '@material-ui/icons/Phone';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     button: {
       color: theme.palette.primary.contrastText,
+      fontWeight:  theme.typography.h5.fontWeight,
+      fontSize: theme.typography.h5.fontSize,
+      padding: '1rem',
     },
     drawer: {
       display: 'flex',
@@ -27,7 +30,7 @@ export default function CallButton() {
 
       return (
             <div padding="1rem" className={classes.root}>
-          <IconButton aria-label="Call us" color="default" size="large" none="false" className={classes.button} padding="1rem"><PhoneIcon /> Call</IconButton>
+          <Button aria-label="Call us" color="default" size="large" none="false" className={classes.button} padding="1rem"><PhoneIcon /> Call</Button>
         </div>
       );
 }

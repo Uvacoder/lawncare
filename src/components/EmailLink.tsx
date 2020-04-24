@@ -2,7 +2,7 @@ import React from 'react'
 import EmailIcon from '@material-ui/icons/Email';
 import { StaticQuery, graphql } from "gatsby"
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import IconButton from '@material-ui/core/IconButton';
+
 
 const EmailLink = () => (
   <StaticQuery
@@ -19,11 +19,11 @@ const EmailLink = () => (
     }
     `}
     render={data =>  
-      <IconButton aria-label="Email">
+     
         <a href={`mailto:${data.site.siteMetadata.contactPoint.email}?subject=Lawn%20Care&body=Dear%20${data.site.siteMetadata.contactPoint.name}`} rel="nofollow">
-          <EmailIcon style={{ color: theme.palette.primary.contrastText }}/>
+          <EmailIcon title="email" style={{ color: theme.palette.primary.contrastText }}/>
         </a>
-        </IconButton>
+   
         }
       >
         

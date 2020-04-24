@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.primary.contrastText,
       fontWeight:  theme.typography.h5.fontWeight,
       fontSize: theme.typography.h5.fontSize,
+      padding: '1rem',
     },
     drawer: {
       display: 'flex',

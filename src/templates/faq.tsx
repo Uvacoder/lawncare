@@ -1,10 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import FAQIndex from '../components/FAQIndex'
-import { config, animated, useSpring } from 'react-spring'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Button from '@material-ui/core/Button'
@@ -36,14 +33,6 @@ type PageProps = {
 
 
   const FaqPage = ({ data }) => {
-  const categoryAnimation = useSpring({
-    config: config.slow,
-    from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
-    to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
-  })
-  const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
-  const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
-  const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
     <div>
@@ -65,13 +54,9 @@ type PageProps = {
 
     <RaisedHeader  >
             <PageTitle>{data.markdownRemark.frontmatter.title}</PageTitle>
-   
-
-              <Description style={descAnimation}>
-              <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+               <Description>
+                 <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
                </Description> 
-      
-   
               <PBox style={{ textAlign: 'center' }} >
                 <Link to="/contactus">
                 <Button  aria-label="Link to contact us page" variant="contained" color="primary" margin="1rem" py={4} px={8}>
