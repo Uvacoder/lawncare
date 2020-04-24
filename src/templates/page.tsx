@@ -11,7 +11,7 @@ import { Box, AnimatedBox } from '../elements'
 import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
-import ParallaxHeader from '../components/ParallaxHeader'
+import HeaderImage from '../components/HeaderImage'
 import GridItem from '../components/grid-item'
 import HorizontalLogo from '../components/horizontalLogo'
 import ImageCarousel from '../components/imageCarousel'
@@ -62,7 +62,7 @@ type PageProps = {
      <Content bg={theme.palette.primary.main} >
       
      
-     <ParallaxHeader backgroundImage={imageData} />
+     <HeaderImage backgroundImage={imageData} />
 
         <Container>
           <Container>

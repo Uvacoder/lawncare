@@ -12,7 +12,7 @@ import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
 import Container from '@material-ui/core/Container'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import ParallaxHeader from '../components/ParallaxHeader'
+import HeaderImage from '../components/HeaderImage'
 
 export const IndexPageTemplate = ({
   featuredimage,
@@ -32,7 +32,7 @@ export const IndexPageTemplate = ({
         />
     <Helmet title={title} />
      <Content bg={theme.palette.primary.main} >
-     <ParallaxHeader backgroundImage={featuredimage.childImageSharp.fluid} />
+     <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
         <Container>
             <RaisedHeader >
                         <PageTitle >

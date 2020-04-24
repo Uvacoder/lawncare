@@ -9,7 +9,7 @@ import PageTitle from '../../styles/pageTitleStyle'
 import Content from '../../styles/contentStyle'
 import Description from  '../../styles/descriptionStyle'
 import TreatmentIndex from '../../components/TreatmentIndex'
-import ParallaxHeader from '../../components/ParallaxHeader'
+import HeaderImage from '../../components/HeaderImage'
 
 type PageProps = {
   data: {
@@ -43,7 +43,7 @@ type PageProps = {
          />
       <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
       <Content bg={theme.palette.primary.main} py={10}>
-         <ParallaxHeader backgroundImage={imageData} />
+         <HeaderImage backgroundImage={imageData} />
         <RaisedHeader  >
         <PageTitle>{data.markdownRemark.frontmatter.title}</PageTitle>
           <Description >

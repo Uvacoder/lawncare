@@ -7,7 +7,7 @@ import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
-import ParallaxHeader from '../components/ParallaxHeader'
+import HeaderImage from '../components/HeaderImage'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PBox from '../styles/pboxStyle'
 import PageTitle from '../styles/pageTitleStyle'
@@ -56,7 +56,7 @@ type PageProps = {
          />
       <Helmet title={data.markdownRemark.frontmatter.title} />
       <Content bg={theme.palette.primary.main} py={10}>
-      <ParallaxHeader backgroundImage={imageData} />
+      <HeaderImage backgroundImage={imageData} />
 
         <RaisedHeader  >
           <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>

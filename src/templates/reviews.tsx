@@ -12,7 +12,7 @@ import Title from '../styles/titleStyle'
 import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
 import Container from '@material-ui/core/Container'
-import ParallaxHeader from '../components/ParallaxHeader'
+import HeaderImage from '../components/HeaderImage'
 
 export const ReviewsPageTemplate = ({
   featuredimage,
@@ -24,7 +24,7 @@ export const ReviewsPageTemplate = ({
     <GlobalStyles />
     <SEO />
      <Content bg={theme.palette.primary.main} >
-     <ParallaxHeader backgroundImage={featuredimage.childImageSharp.fluid} />
+     <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
         <Container>
                   <RaisedHeader >
                     <PageTitle>{title}</PageTitle>
