@@ -1,26 +1,18 @@
 import React from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
-import { Link } from 'gatsby'
 import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import LogoLarge from './logoLarge'
 import Gappsapps from './gappsapps'
-import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
-import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
-import FolderOutlinedIcon from '@material-ui/icons/FolderOutlined';
-import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
-import InstagramIcon from '@material-ui/icons/Instagram'
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
-import ContactMailIcon from '@material-ui/icons/ContactMail';
 import Container from '@material-ui/core/Container';
 import IconButtonBar from './IconButtonBar'
-import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import GlobalStyles from '../styles/globalStyle'
-
+import styled from 'styled-components'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
+import SideBarInner from  '../styles/sideBarInnerStyle'
+import Box from '@material-ui/core/Box';
 
   const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -41,22 +33,68 @@ import GlobalStyles from '../styles/globalStyle'
       backgroundColor: theme.palette.primary.main,
       width: theme.sidebar.width.big,
     },
-    // necessary for content to be below app bar
     content: {
       flexGrow: 1,
       backgroundColor: theme.palette.primary.main,
-      // padding: theme.spacing(3),
     },
   }),
 );
-export default function PermanentDrawerLeft(props) {
-  const { container, width } = props;  
+
+const isPartiallyActive = ({ isPartiallyCurrent }: { isPartiallyCurrent: boolean }) =>
+  isPartiallyCurrent ? { className: 'navlink-active navlink' } : { className: 'navlink' }
+
+const PartialNavLink = ({ children, to, ...rest }: { children: React.ReactNode; to: string }) => (
+  <Link getProps={isPartiallyActive} to={to} {...rest}>
+    {children}
+  </Link>
+)
+
+
+
+const Nav = styled(Box)<{ color: string }>`
+  a {
+    margin-left: 40px;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: column;
+    text-decoration: none;
+    color: ${theme.palette.primary.contrastText};
+    font-size: ${theme.typography.h4.fontSize};
+    font-weight: ${theme.typography.h4.fontWeight};
+    &:hover,
+    &:focus,
+    &.navlink-active {
+      color: ${theme.palette.secondary.main};
+    }
+  }
+`
+type PermanentDrawerLeftProps = { children: React.ReactNode } & typeof defaultProps
+
+const defaultProps = {
+  color: theme.palette.primary.main,
+}
+
+interface QueryResult {
+  navigation: {
+    nodes: {
+      name: string
+      link: string
+    }[]
+  }
+}
+
+const PermanentDrawerLeft = ({ children, color }: PermanentDrawerLeftProps) => {
   const classes = useStyles();
+  const data: QueryResult = useStaticQuery(query)
 
   return (
     <div className={classes.root}>
 
   <GlobalStyles />
+
+    <SideBarInner>
 
     <Drawer
         className={classes.drawer}
@@ -66,71 +104,57 @@ export default function PermanentDrawerLeft(props) {
         }}
         anchor="left"
       >
-         <div className={classes.toolbar} />
- 
+         {/* <div className={classes.toolbar} /> */}
+    
         <Link to="/">
         <Container>
             <LogoLarge />
           </Container>
         </Link>
-        {/* </div> */}
-     
-      <List
-      //  className={content} 
-       >
-
-        <Link to="/" >
-            <ListItem button aria-label="Link to Home page">
-              <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><HomeOutlinedIcon /></ListItemIcon>
-              <ListItemText style={{ color: theme.palette.primary.contrastText }} >Home</ListItemText>
-            </ListItem></Link>
-            <Link to="/service">
-            <ListItem button  aria-label="Link to service catalog" style={{ color: theme.palette.primary.contrastText }} >
-              <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><InfoOutlinedIcon /></ListItemIcon>
-              <ListItemText>Our Service</ListItemText>
-            </ListItem></Link>
-            <Link to="/reviews">
-            <ListItem button  aria-label="Link to reviews" style={{ color: theme.palette.primary.contrastText }} >
-              <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><StarBorderOutlinedIcon /></ListItemIcon>
-              <ListItemText>Reviews</ListItemText>
-            </ListItem></Link>
-            <Link to="/faq/" >
-            <ListItem button  aria-label="Link to Frequently Asked Questions" style={{ color: theme.palette.primary.contrastText }} >
-              <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><HelpOutlineIcon /></ListItemIcon>
-              <ListItemText>Questions?</ListItemText>
-            </ListItem></Link> 
-            <Link to="/page" >
-            <ListItem button  aria-label="Link to our portfolio page" style={{ color: theme.palette.primary.contrastText }} >
-              <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><FolderOutlinedIcon /></ListItemIcon>
-              <ListItemText >Our Portfolio</ListItemText>
-            </ListItem></Link>
-            <Link to="/instagram">
-            <ListItem button  aria-label="view our Instagram images" style={{ color: theme.palette.primary.contrastText }}>
-              <ListItemIcon style={{ color: theme.palette.primary.contrastText }}><InstagramIcon /></ListItemIcon>
-              <ListItemText >Instagram</ListItemText>
-            </ListItem></Link>
-            <Link to="/contactus">
-            <ListItem button  aria-label="Link to the countact us form" style={{ color: theme.palette.primary.contrastText }} >
-              <ListItemIcon style={{ color: theme.palette.primary.contrastText }} ><ContactMailIcon /></ListItemIcon>
-              <ListItemText >Contact Us</ListItemText>
-            </ListItem></Link>
-
-            <Divider />
-
-        </List>
-     
+       
+        <Nav >
+        {data.navigation.nodes.map(item => (
+                  <PartialNavLink to={item.link} key={item.name}>
+                    {item.name}
+                  </PartialNavLink>
+                ))}
+        </Nav>
+          <br />
+          <br />
+        <Divider />
+          
         <IconButtonBar />
+
             <Divider />
-        <a href="https://www.gappsapps.co.uk" 
+            <br />
+        <Nav href="https://www.gappsapps.co.uk" 
         // className={gappsappsLogo} 
         rel="nofollow">
             <ListItem button  aria-label="Link to the developer of this website Gappsapps" >
              <Gappsapps />
-            </ListItem></a>
+            </ListItem></Nav>
             {/* </Container> */}
+           
       </Drawer>
+   
+      </SideBarInner>
 
   
     </div>
   );
 }
+
+export default PermanentDrawerLeft
+
+PermanentDrawerLeft.defaultProps = defaultProps
+
+const query = graphql`
+  query PermanentDrawerLeft {
+    navigation: allNavigationYaml {
+      nodes {
+        name
+        link
+      }
+    }
+  }
+`

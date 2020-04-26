@@ -228,6 +228,7 @@ const theme = createMuiTheme({
 			},
 			height: '100%',
 			},
+			margin: '25px',
 		toolbar: {
 			height: {
 				big: 150,

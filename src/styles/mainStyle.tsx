@@ -1,6 +1,4 @@
-import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
-import { ThemeProvider } from '@material-ui/core/styles';
+import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
