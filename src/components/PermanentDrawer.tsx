@@ -53,7 +53,7 @@ const PartialNavLink = ({ children, to, ...rest }: { children: React.ReactNode; 
 
 const Nav = styled(Box)<{ color: string }>`
   a {
-    margin-left: 40px;
+    margin-left: 27px;
     padding: 1rem;
     display: flex;
     flex-wrap: nowrap;
@@ -133,7 +133,6 @@ const PermanentDrawerLeft = ({ children, color }: PermanentDrawerLeftProps) => {
             <ListItem button  aria-label="Link to the developer of this website Gappsapps" >
              <Gappsapps />
             </ListItem></Nav>
-            {/* </Container> */}
            
       </Drawer>
    

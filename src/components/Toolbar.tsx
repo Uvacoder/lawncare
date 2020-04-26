@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby'
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Divider from '@material-ui/core/Divider';
 import LogoSmall from './logoSmall'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'

@@ -1,40 +1,90 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import {Link} from 'gatsby';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import GlobalStyles from '../styles/globalStyle'
-import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
+import styled from 'styled-components'
+import { makeStyles, createStyles } from '@material-ui/core/styles';
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Nav from '../styles/navStyle'
+import Box from '@material-ui/core/Box';
 
 
 const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      flexGrow: 0,
-      backgroundColor: theme.palette.primary.main,
-    },
-    button: {
-      color: theme.palette.primary.contrastText,
-      fontWeight:  theme.typography.h5.fontWeight,
-      fontSize: theme.typography.h5.fontSize,
-      padding: '1rem',
-    },
-    drawer: {
-      display: 'flex',
-    },
-    drawerPaper: {
-      backgroundColor: theme.palette.primary.main,
-      color: theme.palette.primary.main,
-    }
-  }),
+createStyles({
+  root: {
+    display: 'flex',
+    backgroundColor: theme.palette.primary.main,
+  },
+  button: {
+    color: theme.palette.primary.contrastText,
+    fontWeight:  theme.typography.h5.fontWeight,
+    fontSize: theme.typography.h5.fontSize,
+    padding: '1rem',
+  },
+  mainSection: {
+    marginLeft: theme.sidebar.width.big,
+  },
+  drawer: {
+    backgroundColor: theme.palette.primary.main,
+    position: 'fixed',
+    flexShrink: 0,
+  },
+  content: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.primary.main,
+  },
+}),
 );
 
-export default function SimpleMenu() {
+const isPartiallyActive = ({ isPartiallyCurrent }: { isPartiallyCurrent: boolean }) =>
+isPartiallyCurrent ? { className: 'navlink-active navlink' } : { className: 'navlink' }
+
+const PartialNavLink = ({ children, to, ...rest }: { children: React.ReactNode; to: string }) => (
+<Link getProps={isPartiallyActive} to={to} {...rest}>
+  {children}
+</Link>
+)
+
+
+
+const Nav = styled(Box)<{ color: string }>`
+a {
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  text-decoration: none;
+  color: ${theme.palette.primary.contrastText};
+  font-size: ${theme.typography.h5.fontSize};
+  font-weight: ${theme.typography.h5.fontWeight};
+  &:hover,
+  &:focus,
+  &.navlink-active {
+    color: ${theme.palette.secondary.main};
+  }
+}
+`
+type SimpleMenuProps = { children: React.ReactNode } & typeof defaultProps
+
+const defaultProps = {
+color: theme.palette.primary.main,
+}
+
+interface QueryResult {
+navigation: {
+  nodes: {
+    name: string
+    link: string
+  }[]
+}
+}
+
+
+
+const SimpleMenu = ({ children, color }: SimpleMenuProps) =>  {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const classes = useStyles();
+  const data: QueryResult = useStaticQuery(query)
   const handleClick = event => {
     setAnchorEl(event.currentTarget);
   };
@@ -48,13 +98,26 @@ export default function SimpleMenu() {
 
       <GlobalStyles />
       <Nav>
-      <Button  size="large" none="false" className={classes.button}  aria-label="Menu Button" aria-controls="simple-menu" aria-haspopup="true"  padding="1rem" onClick={handleClick} > 
+      <div padding="1rem" >
+      <Button  
+      color="default"
+      size="large" 
+      aria-label="Menu Button" 
+      aria-controls="simple-menu" 
+      aria-haspopup="true"  
+      padding="1rem" 
+      className={classes.button} 
+      onClick={handleClick} 
+      > 
      Menu
       </Button>
+     
+
       <Menu
-        id="simple-menu"
-        className={classes.drawer}
+        // id="simple-menu"
         anchorEl={anchorEl}
+        elevation={0}
+        getContentAnchorEl={null}
         anchorOrigin={{
           vertical: 'bottom',
           horizontal: 'center',
@@ -67,20 +130,34 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
         classes={{
-          paper: classes.drawerPaper,
+          paper: classes.content,
         }}
       >
-
-    <Link to="/"  aria-label="Link to Home page" ><MenuItem  onClick={handleClose}>Home</MenuItem></Link>  
-    <Link to="/service" aria-label="Link to service catalog" ><MenuItem  onClick={handleClose}>Services</MenuItem></Link>  
-    <Link to="/reviews"  aria-label="Link to reviews page"><MenuItem  onClick={handleClose}>Reviews</MenuItem></Link>  
-    <Link to="/faq/"  aria-label="Link to Frequently Asked Questions page" ><MenuItem  onClick={handleClose}>FAQs</MenuItem></Link>  
-    <Link to="/page" aria-label="Link to our portfolio page" ><MenuItem  onClick={handleClose}>Portfolio</MenuItem></Link>  
-    <Link to="/instagram"  aria-label="Link to our instagram pics page"><MenuItem  onClick={handleClose}>Instagram</MenuItem></Link>  
-    <Link to="/contactus"  aria-label="Link to contact us form"><MenuItem  onClick={handleClose}>Contact Us</MenuItem></Link>  
- 
+                <Nav >
+        {data.navigation.nodes.map(item => (
+                  <PartialNavLink to={item.link} key={item.name}>
+                    {item.name}
+                  </PartialNavLink>
+                ))}
+        </Nav>
       </Menu>
+      </div>
       </Nav>
     </div>
   );
 }
+
+export default SimpleMenu
+
+SimpleMenu.defaultProps = defaultProps
+
+const query = graphql`
+  query SimpleMenu {
+    navigation: allNavigationYaml {
+      nodes {
+        name
+        link
+      }
+    }
+  }
+`
