@@ -1,7 +1,7 @@
 ---
 templateKey: page
 slug: /project/brackley
-featured: true
+featured: false
 title: Brackley
 featuredimage: /img/brackley.jpg
 alt: Results of our Lawn Care Service in Brackley
