@@ -25,7 +25,7 @@ export default function IconButtonBar() {
 <div><Container className={classes.iconButtonBar} >
 <Button><FacebookLink /></Button>
 <Button><PhoneLink /></Button>
-<Button><EmailLink /></Button>
 <Button><Link to="/instagram"><InstagramIcon  style={{ color: theme.palette.primary.contrastText }} />Instagram</Link></Button>
+<Button><EmailLink /></Button>
 </Container></div>
     )}
