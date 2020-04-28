@@ -4,7 +4,7 @@ templateKey: post
 sortorder: 20
 slug: /about/ourservice
 featured: true
-featuredimage: /img/index_pic01.jpg 
+featuredimage: ./ourservice.jpg 
 alt: Lawns Matter Van
 categories:
   - about

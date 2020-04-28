@@ -3,7 +3,7 @@ templateKey: page
 slug: /about/thanks
 featured: true
 title: Thanks
-featuredimage: /img/johnny-brown-1k35_trK6qo-unsplash.jpg
+featuredimage: ./johnny-brown-1k35_trK6qo-unsplash.jpg
 alt: Photo by Johnny Brown on Unsplash
 categories:
   - about

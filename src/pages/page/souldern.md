@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/souldern
 featured: true
 title: Souldern
-featuredimage: /img/souldern.jpg
+featuredimage: ./souldern.jpg
 alt: Results of our Lawn Care Service in Souldern
 categories:
 - project

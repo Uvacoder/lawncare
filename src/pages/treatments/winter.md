@@ -4,7 +4,7 @@ sortorder: 50
 slug: /treatments/winter
 title: Winter Treatments
 featured: true
-featuredimage: /img/max-kleinen--KxkDgEvWT8-unsplash.jpg
+featuredimage: ./max-kleinen--KxkDgEvWT8-unsplash.jpg
 alt: Photo by Max Kleinen on Unsplash
 categories:
   - treatments

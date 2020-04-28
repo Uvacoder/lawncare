@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/southnewington
 featured: true
 title: South Newington
-featuredimage: /img/southnewington.jpg
+featuredimage: ./southnewington.jpg
 alt: Results of our Lawn Care Service in South Newington
 categories:
 - project

@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/farthinghoe-project
 featured: true
 title: Farthinghoe 
-featuredimage: /img/after4a.jpg
+featuredimage: ./farthinghoe-project.jpg
 alt: Farthinghoe Project After photo
 categories:
   - project

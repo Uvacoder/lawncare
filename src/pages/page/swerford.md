@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/swerford
 featured: true
 title: Swerford
-featuredimage: /img/swerford.jpeg
+featuredimage: ./swerford.jpeg
 alt: Results of our Lawn Care Service in Swerford
 categories:
 - project

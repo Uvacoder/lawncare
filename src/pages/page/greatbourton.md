@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/greatbourton
 featured: true
 title: Great Bourton
-featuredimage: /img/greatbourton.jpg
+featuredimage: ./greatbourton.jpg
 alt: Results of our Lawn Care Service in Great Bourton
 categories:
 - project

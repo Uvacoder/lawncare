@@ -5,8 +5,8 @@ slug: /aboutus
 title: About Us
 featured: true
 category: about
-featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg
-alt: Photo by Nervenet
+featuredimage: ./david-guenther-DrDZmWff3vo-unsplash.jpg
+alt: Photo David Guenther on Unsplash
 categories:
   - service
 ---

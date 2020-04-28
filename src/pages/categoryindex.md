@@ -5,8 +5,8 @@ slug: /categoryindex
 title: Search by category
 featured: true
 category: categories
-featuredimage: /img/david-kaloczi-10xlYvD5yn4-unsplash.jpg
-alt: Photo by David Kaloczi on Unsplash
+featuredimage: ./ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg
+alt: Photo by Ochir Erdene Oyunmedeg on Unsplash
 categories:
   - header
 ---

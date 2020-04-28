@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/barfordstmichael
 featured: true
 title: Barford St Michael
-featuredimage: /img/barfordstmichael.jpeg
+featuredimage: ./barfordstmichael.jpeg
 alt: Results of our Lawn Care Service in Barford St Michael
 categories:
 - project

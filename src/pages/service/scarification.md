@@ -3,7 +3,7 @@ templateKey: page
 slug: /service/scarification
 featured: true
 title: Scarification
-featuredimage: /img/scarifying-101.jpg
+featuredimage: ./scarifying-101.jpg
 alt: Lawns Matter scarifying on client site
 categories:
   - service
