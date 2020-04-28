@@ -10,7 +10,7 @@ alt: Photo David Guenther on Unsplash
 categories:
   - service
 ---
-### Lawns Matter are an independent, family run business based in Oxfordshire. ###
+#### Lawns Matter are an independent, family run business based in Oxfordshire. ####
 
 * ##### We are passionate about lawns and pride ourselves on giving the customer a bespoke service using the best products the market has to offer. #####
 
