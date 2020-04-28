@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const Main = styled.main`
 background-color: ${theme.palette.primary.main};

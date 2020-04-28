@@ -3,7 +3,6 @@ import PhoneIcon from '@material-ui/icons/Phone'
 import { StaticQuery, graphql } from "gatsby"
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
-
 const PhoneLink = () => (
   <StaticQuery
     query={graphql`

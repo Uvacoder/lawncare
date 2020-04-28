@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const GappsappsTinyPWA = () => (
   <svg width="40%" height="40%"viewBox="0 0 1039 455" >
     <title>Gappsapps</title>

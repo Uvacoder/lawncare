@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const Gappsapps = () => (
   <a href="https://www.gappsapps.co.uk" rel="nofollow">
   <svg width="103px" height="32px" viewBox="0 0 103 32" alt="Gappsapps">

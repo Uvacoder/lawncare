@@ -1,6 +1,6 @@
 
 import styled from 'styled-components'
-import {  animated } from 'react-spring'
+import { animated } from 'react-spring'
 
 const List = styled(animated.div)`
   display: grid;

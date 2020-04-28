@@ -11,7 +11,6 @@ import PhoneNo from '../components/phoneNo'
 import CallButton from '../components/CallButton'
 import { Container } from '@material-ui/core';
 
-
 function ElevationScroll(props: Props) {
   const { children } = props;
 

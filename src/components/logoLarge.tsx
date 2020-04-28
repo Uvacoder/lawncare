@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const LogoLarge = () => (
   <svg width="100%" height="100%" viewBox="0 0 300 274" >
     <title>Lawns Matter Logo</title>

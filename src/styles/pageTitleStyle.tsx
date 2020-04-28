@@ -1,8 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Container from '@material-ui/core/Container';
-import { config, animated, useSpring } from 'react-spring'
 
 const PageTitle = styled(Container)`
 width: 70%;

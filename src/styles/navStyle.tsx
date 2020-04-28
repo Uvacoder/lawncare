@@ -1,11 +1,8 @@
 
 import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
-import { ThemeProvider } from '@material-ui/core/styles';
+import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import reset from './reset'
-import { Box, Flex, AnimatedBox } from '../elements'
-import { readableColor } from 'polished'
+import { Flex } from '../elements'
 
 const isPartiallyActive = ({ isPartiallyCurrent }: { isPartiallyCurrent: boolean }) =>
   isPartiallyCurrent ? { className: 'navlink-active navlink' } : { className: 'navlink' }
