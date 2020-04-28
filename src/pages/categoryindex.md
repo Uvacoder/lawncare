@@ -1,5 +1,5 @@
 ---
-templateKey: header
+templateKey: categories
 sortorder: 10
 slug: /categoryindex
 title: Search by category
