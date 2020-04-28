@@ -1,7 +1,7 @@
 ---
 templateKey: categories
 sortorder: 10
-slug: /categoryindex
+slug: /categories
 title: Search by category
 featured: true
 category: categories
