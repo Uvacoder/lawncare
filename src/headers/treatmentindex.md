@@ -1,5 +1,5 @@
 ---
-templateKey: treatments
+templateKey: header
 sortorder: 10
 slug: /treatments
 title: Essential Treatments
