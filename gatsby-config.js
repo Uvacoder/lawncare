@@ -109,7 +109,15 @@ module.exports = {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/img`,
+        path: `${__dirname}/static/uploads`,
+        name: `uploads`,
+      },
+    },
+    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/img`,
         name: `images`,
       },
     },
@@ -204,7 +212,7 @@ module.exports = {
         fonts: [
           {
             family: `Open Sans`,
-            variants: [`400`, `700`]
+            variants: [`300`, `400`, `500`, `700`]
           },
         ],
       },
@@ -221,7 +229,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'standalone',
-        icon: 'static/img/favicon/favicon.png',
+        icon: 'src/img/favicon/favicon.png',
         icons: [
           {
             src: `/favicon/LargeLogo.png`,

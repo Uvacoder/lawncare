@@ -79,7 +79,7 @@ export const query = graphql`query TreatmentHeaderPage {
       categories
       featuredimage {
         childImageSharp {
-          fluid(maxHeight: 1200, maxWidth: 1645) {
+          fluid(maxWidth: 1645) {
             src
           }
         }

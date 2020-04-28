@@ -8,7 +8,6 @@ import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import GlobalStyles from '../styles/globalStyle'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
-import Title from '../styles/titleStyle'
 import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
 import Container from '@material-ui/core/Container'
@@ -50,8 +49,6 @@ ReviewsPageTemplate.propTypes = {
 }
 
 const ReviewsPage = ({ data }) => {
-  const { indexdata } = data.markdownRemark
-  const { edges: posts } = data.allMarkdownRemark
 
   return (
     <Layout>
@@ -84,9 +81,9 @@ query ReviewsPageTemplate {
       html
       frontmatter {
       title
-      featuredimage {
+   featuredimage {
         childImageSharp {
-          fluid(quality:95 maxHeight: 1200, maxWidth: 1920)   {
+          fluid(quality:95 maxWidth: 1920)   {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

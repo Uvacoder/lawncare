@@ -3,7 +3,7 @@ templateKey: page
 slug: /service/pestcontrol
 featured: true
 title: Pest Control
-featuredimage: /img/chafer2.jpg
+featuredimage: /img/pestcontrol.jpg
 alt: Photo of red thread disease by Lawns Matter
 categories:
   - service
