@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/caulcott
 featured: true
 title: Caulcott
-featuredimage: /img/caulcott.jpeg
+featuredimage: ./caulcott.jpeg
 alt: Results of our Lawn Care Service in Caulcott
 categories:
 - project

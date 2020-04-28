@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/southmoor
 featured: true
 title: Southmoor
-featuredimage: /img/southmoor.jpg
+featuredimage: ./southmoor.jpg
 alt: Results of our Lawn Care Service in Southmoor
 categories:
 - project

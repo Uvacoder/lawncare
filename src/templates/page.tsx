@@ -1,14 +1,9 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
-import { config, animated, useSpring } from 'react-spring'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import { Box, AnimatedBox } from '../elements'
-import { transparentize, readableColor } from 'polished'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import HeaderImage from '../components/HeaderImage'
@@ -96,7 +91,7 @@ query Page ($id: String!) {
       categories
       featuredimage {
         childImageSharp {
-          fluid(quality:95 maxHeight: 1200, maxWidth: 1920)  {
+          fluid(quality:95 maxWidth: 1920)  {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

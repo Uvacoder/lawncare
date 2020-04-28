@@ -113,6 +113,11 @@ type Props = {
         original: string
       }[]
     }
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
   }
 }
 
@@ -140,13 +145,14 @@ const Instagram: React.FunctionComponent<Props> = ({
   return (
     <Layout color="#2B2C3E">
     <div>
-      <SEO title="Instagram | Lawns Matter" />
+      <SEO title={`Our Instagram Images`}/>
       <Grid style={pageAnimation}>
         {trail.map((style, index) => {
           // Grab everything before the first hashtag (because I write my captions like that)
+  
           const post = instagram[index]
           const title = post.caption ? post.caption.split('#')[0] : ''
-          const date = new Date(post.timestamp * 1000).toLocaleDateString('en-US')
+          const date = new Date(post.timestamp * 1000).toLocaleDateString('en-GB')
 
           return (
             <Item style={style} href={`https://www.instagram.com/p/${post.id}/`} key={post.id}>
@@ -190,4 +196,5 @@ query Instagram {
     }
   }
 }
+
 `

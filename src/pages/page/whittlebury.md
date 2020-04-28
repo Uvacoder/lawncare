@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/whittlebury
 featured: true
 title: Whittlebury
-featuredimage: /img/whittlebury.jpg
+featuredimage: ./whittlebury.jpg
 alt: Results of our Lawn Care Service in Whittlebury
 categories:
 - project

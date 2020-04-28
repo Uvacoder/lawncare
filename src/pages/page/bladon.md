@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/bladon
 featured: true
 title: Bladon
-featuredimage: /img/bladon.jpg
+featuredimage: ./bladon.jpg
 alt: Results of our Lawn Care Service in Bladon
 categories:
 - project

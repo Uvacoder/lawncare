@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/evenly
 featured: true
 title: Evenly
-featuredimage: /img/evenly.jpeg
+featuredimage: ./evenly.jpeg
 alt: Results of our Lawn Care Service in Evenly
 categories:
 - project

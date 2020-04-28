@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import BlogIndex from '../components/BlogIndex'
+import CategoryIndex from '../components/CategoryIndex'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import {  Flex } from '../elements'
@@ -35,9 +35,6 @@ export const categoriesPageTemplate = ({
  
     <section className="section section--gradient">
       <div >
-        {/* <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1"> */}
               <div className="content">
                 <div className="columns">
                   <div className="column is-12">
@@ -129,7 +126,7 @@ export const pageQuery = graphql`
         categories
         featuredimage {
           childImageSharp {
-            fluid(quality:95 maxHeight: 1200, maxWidth: 1920)  {
+            fluid(quality:95 maxWidth: 1920)  {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

@@ -1,11 +1,11 @@
 ---
-templateKey: categories
+templateKey: header
 sortorder: 10
 slug: /treatments
 title: Essential Treatments
 featured: true
 category: treatments
-featuredimage: /img/silas-baisch-T-MZrVSBFso-unsplash.jpg
+featuredimage: ./silas-baisch-T-MZrVSBFso-unsplash.jpg
 alt: Photo by Silas Baisch on Unsplash
 categories:
   - service

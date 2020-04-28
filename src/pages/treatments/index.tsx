@@ -41,7 +41,7 @@ type PageProps = {
         node={data.markdownRemark.frontmatter.slug}
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
          />
-      <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
+      <Helmet title={data.markdownRemark.frontmatter.title} />
       <Content bg={theme.palette.primary.main} py={10}>
          <HeaderImage backgroundImage={imageData} />
         <RaisedHeader  >
@@ -79,7 +79,7 @@ export const query = graphql`query TreatmentHeaderPage {
       categories
       featuredimage {
         childImageSharp {
-          fluid(maxHeight: 1200, maxWidth: 1645) {
+          fluid(maxWidth: 1645) {
             src
           }
         }

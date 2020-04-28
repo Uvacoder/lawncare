@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/bourtononthewater
 featured: true
 title: Bourton on the Water
-featuredimage: /img/bourtononthewater.jpeg
+featuredimage: ./bourtononthewater.jpeg
 alt: Results of our Lawn Care Service in Bourton on the Water
 categories:
 - project

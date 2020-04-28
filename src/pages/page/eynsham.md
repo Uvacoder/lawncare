@@ -3,7 +3,7 @@ templateKey: page
 slug: /project/eynsham
 featured: true
 title: Eynsham
-featuredimage: /img/eynsham.jpeg
+featuredimage: ./eynsham.jpeg
 alt: Results of our Lawn Care Service in Eynsham
 categories:
 - project
