@@ -35,9 +35,6 @@ export const categoriesPageTemplate = ({
  
     <section className="section section--gradient">
       <div >
-        {/* <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1"> */}
               <div className="content">
                 <div className="columns">
                   <div className="column is-12">

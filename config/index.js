@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: '/', // Prefix for all links. "
 
-  siteTitle: 'Professional Lawn Care Service', // Navigation and Site Title
+  siteTitle: 'Lawns Matter Professional Lawn Care Service', // Navigation and Site Title
   siteTitleAlt: 'lawnsmatter.co.uk - Lawn Care Service', // Alternative Site title for SEO
   siteTitleShort: 'lawnsmatter.co.uk', // short_name for manifest
   siteHeadline: 'Professional Lawn Care Service based in Oxfordshire', // Headline for schema.org JSONLD

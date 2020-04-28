@@ -46,9 +46,7 @@ exports.createPages = async ({ graphql, actions }) => {
           categories: edge.node.frontmatter.categories,
           component: path.resolve(
            `src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`
-          //  `src/templates/page.tsx`
           ),
-          // additional data can be passed via context
           context: {
             category: edge.node.frontmatter.category,
             id,
