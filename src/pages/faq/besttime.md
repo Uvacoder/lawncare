@@ -3,7 +3,7 @@ templateKey: faq
 slug: /faq/besttime
 title:   When is the best time to start?
 featured: false
-featuredimage: ./aron-visuals-BXOXnQ26B7o-unsplash.jpg
+featuredimage: /img/aron-visuals-BXOXnQ26B7o-unsplash.jpg
 alt: Photo by Aron Visuals on Unsplash
 categories:
   - faq

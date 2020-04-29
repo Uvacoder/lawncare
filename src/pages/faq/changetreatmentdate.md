@@ -3,7 +3,7 @@ templateKey: faq
 slug: /faq/changetreatmentdate
 title: Can I change the treatment date?
 featured: false
-featuredimage: ./behy-studio-2_l3lUpn4vE-unsplash.jpg
+featuredimage: /img/behy-studio-2_l3lUpn4vE-unsplash.jpg
 alt: Photo by Behy Studio on Unsplash
 categories:
   - faq

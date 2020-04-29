@@ -3,8 +3,8 @@ templateKey: page
 slug: /project/bodicote
 featured: true
 title: Bodicote
-featuredimage: ./bodicote.jpg
-alt: Results of our Lawn Care Service in Bodicote
+featuredimage: /img/bodicote.jpg
+alt: Results of our lawn care service in Bodicote
 categories:
 - project
 ---

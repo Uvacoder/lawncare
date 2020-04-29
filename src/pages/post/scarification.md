@@ -4,7 +4,7 @@ templateKey: post
 sortorder: 40
 slug: /about/scarification
 featured: true
-featuredimage: ./scarification.jpg
+featuredimage: /img/scarification.jpg
 alt: Scarification
 categories:
   - about

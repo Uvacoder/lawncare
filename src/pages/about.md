@@ -5,7 +5,7 @@ slug: /aboutus
 title: About Us
 featured: true
 category: about
-featuredimage: ./david-guenther-DrDZmWff3vo-unsplash.jpg
+featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg
 alt: Photo David Guenther on Unsplash
 categories:
   - service

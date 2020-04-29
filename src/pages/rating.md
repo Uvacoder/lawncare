@@ -5,7 +5,7 @@ slug: /rating
 title: Lawn Care Customer Ratings
 featured: true
 category: rating
-featuredimage: ./aboutus.jpg
+featuredimage: /img/aboutus.jpg
 alt: About Lawns Matter Background Pic
 categories:
   - rating

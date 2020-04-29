@@ -3,7 +3,7 @@ templateKey: faq
 slug: /faq/howmuch
 title: How much does a treatment cost?
 featured: false
-featuredimage: ./steve-smith-Zvvu4zRKijE-unsplash.jpg
+featuredimage: /img/steve-smith-Zvvu4zRKijE-unsplash.jpg
 alt: Photo by Steve Smith on Unsplash
 categories:
   - faq

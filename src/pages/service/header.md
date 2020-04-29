@@ -5,7 +5,7 @@ slug: /service/header
 title: Our Service
 featured: true
 category: service
-featuredimage: ./david-guenther-DrDZmWff3vo-unsplash.jpg
+featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg
 alt: Photo by David Kaloczi on Unsplash
 categories:
   - service

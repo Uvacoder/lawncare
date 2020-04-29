@@ -4,7 +4,7 @@ templateKey: post
 sortorder: 70
 slug: /about/environmentalpledge
 featured: true
-featuredimage: ./ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg
+featuredimage: /img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg
 alt: Scenery
 categories:
   - about

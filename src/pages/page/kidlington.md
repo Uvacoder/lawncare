@@ -3,11 +3,11 @@ templateKey: page
 slug: /project/kidlington
 featured: true
 title: Kidlington
-featuredimage: ./kidlington.jpg
-alt: Results of our Lawn Care Service in Kidlington
+featuredimage: /img/kidlington.jpg
+alt: Results of our lawn care service in Kidlington
 categories:
 - project
 ---
-These are the results of our Lawn care service at a client in Kidlington
+These are the results of our lawn care service at a client in Kidlington
 
 

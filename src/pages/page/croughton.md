@@ -3,11 +3,11 @@ templateKey: page
 slug: /project/croughton
 featured: true
 title: Croughton
-featuredimage: ./croughton.jpeg
-alt: Results of our Lawn Care Service in Croughton
+featuredimage: /img/croughton.jpeg
+alt: Results of our lawn care service in Croughton
 categories:
 - project
 ---
-These are the results of our Lawn care service at a client in Croughton
+These are the results of our lawn care service at a client in Croughton
 
 

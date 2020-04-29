@@ -5,7 +5,7 @@ slug: /categories
 title: Search by category
 featured: true
 category: categories
-featuredimage: ./ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg
+featuredimage: /img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg
 alt: Photo by Ochir Erdene Oyunmedeg on Unsplash
 categories:
   - header

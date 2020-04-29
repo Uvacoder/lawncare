@@ -3,7 +3,7 @@ templateKey: faq
 slug: /faq/howtopay
 title:  How should I pay?
 featured: false
-featuredimage: ./colin-watts-8WRRJ4xJeyg-unsplash.jpg
+featuredimage: /img/colin-watts-8WRRJ4xJeyg-unsplash.jpg
 alt: Photo by Colin Watts Muller on Unsplash
 categories:
   - faq

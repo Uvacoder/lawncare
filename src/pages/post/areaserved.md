@@ -4,7 +4,7 @@ templateKey: post
 sortorder: 50
 slug: /about/areaserved
 featured: true
-featuredimage: ./areaserved.jpg
+featuredimage: /img/areaserved.jpg
 alt: Map of area served
 categories:
   - about
