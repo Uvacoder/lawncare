@@ -219,7 +219,7 @@ const theme = createMuiTheme({
 			},
 		},
 		shape: {
-			borderRadius: '12px' ,
+			borderRadius: '4px' ,
 		},
 		sidebar: {
 			width: {
