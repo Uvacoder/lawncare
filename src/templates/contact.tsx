@@ -16,6 +16,7 @@ import Content from '../styles/contentStyle'
 import FormContainer from '../styles/formContainerStyle'
 import Img from 'gatsby-image'
 
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -91,12 +92,12 @@ type PageProps = {
    
      <Content bg={theme.palette.primary.main} >
      <FormContainer >
-     <Grid container spacing={1} >
-            <Grid item xs={2} />
-            <Grid item xs={8} >
+     <Grid container spacing={1}  >
+            <Grid item xs={1} />
+            <Grid item xs={10} >
           <Img fluid={imageData}/>
             </Grid>
-            <Grid item xs={2} />
+            <Grid item xs={1} />
        
       </Grid> 
       </FormContainer>

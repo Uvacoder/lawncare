@@ -31,6 +31,7 @@ import Box from '@material-ui/core/Box';
     },
     drawerPaper: {
       backgroundColor: theme.palette.primary.main,
+      boxShadow: "6px 6px 10px 0px rgb(47, 54, 68, 0.4)",
       width: theme.sidebar.width.big,
     },
     content: {
