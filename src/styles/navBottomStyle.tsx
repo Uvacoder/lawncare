@@ -3,7 +3,6 @@ import React from 'react'
 import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import { Flex} from '../elements'
-import { readableColor } from 'polished'
 
 
 const isPartiallyActive = ({ isPartiallyCurrent }: { isPartiallyCurrent: boolean }) =>
@@ -18,18 +17,18 @@ const PartialNavLink = ({ children, to, ...rest }: { children: React.ReactNode; 
 const NavBottom = styled(Flex)<{  color: theme.palette.primary.main }>`
   a {
     text-decoration: none;
-    color: ${props => readableColor(props.theme.palette.primary.contrastText)};
+    color: ${theme.palette.primary.contrastText};
     font-size: ${theme.typography.h3.fontSize};
     line-height: 2;
     justify-content: center;
     &:hover,
     &:focus,
     &.navlink-active {
-      color: ${props => theme.palette.secondary.main};
+      color: ${theme.palette.secondary.main};
     }
   menu {
     text-decoration: none;
-    color: ${props => readableColor(props.theme.palette.primary.contrastText)};
+    color: ${theme.palette.primary.contrastText};
     font-size: ${theme.typography.h3.fontSize};
     line-height: 2;
     align-content: center;
@@ -37,7 +36,7 @@ const NavBottom = styled(Flex)<{  color: theme.palette.primary.main }>`
     &:hover,
     &:focus,
     &.navlink-active {
-      color: ${props => theme.palette.secondary.main};
+      color: ${theme.palette.secondary.main};
     }
 
      [theme.breakpoints.down('md')]:  {

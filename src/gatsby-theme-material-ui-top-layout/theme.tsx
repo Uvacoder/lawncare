@@ -236,6 +236,10 @@ const theme = createMuiTheme({
 				},
 			width: '100%',
 		},
+		iconButtonBar: {
+			display: 'flex',
+			flexDirection: 'row',
+		  },
  });
 
 export default theme;

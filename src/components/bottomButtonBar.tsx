@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import PhoneLink from './phoneLink'
+import DeveloperLink from './DeveloperLink'
 import FacebookLink from './FacebookLink'
 import EmailLink from './EmailLink'
 import Button from '@material-ui/core/Button'
@@ -10,13 +10,13 @@ import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 
 
-export default function IconButtonBar() {
+export default function BottomButtonBar() {
 
     return (
-<div><Container style={{display: theme.iconButtonBar.display, flexDirection: theme.iconButtonBar.flexDirection }}>
+<div><Container style={{display: theme.iconButtonBar.display, flexDirection: theme.iconButtonBar.flexDirection, backgroundColor: theme.palette.primary.main, justifyContent: "center"}}>
 <Button><FacebookLink  /></Button>
-<Button><PhoneLink /></Button>
 <Button><InstagramLink  /></Button>
 <Button><EmailLink  /></Button>
+<Button><DeveloperLink /></Button>
 </Container></div>
     )}

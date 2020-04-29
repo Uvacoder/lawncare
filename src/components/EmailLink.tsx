@@ -21,8 +21,9 @@ const EmailLink = () => (
     render={data =>  
       <Button>
         <a href={`mailto:${data.site.siteMetadata.contactPoint.email}?subject=Lawn%20Care&body=Dear%20${data.site.siteMetadata.contactPoint.name}`} rel="nofollow">
-          <EmailIcon style={{ color: theme.palette.primary.contrastText }}/>email</a>
-          </Button>
+          <EmailIcon style={{ color: theme.palette.primary.contrastText }}/><br />email
+        </a>
+        </Button>
         }
       >
         

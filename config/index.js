@@ -9,7 +9,7 @@ module.exports = {
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/img/logo.png', // Used for SEO and manifest
   siteDescription: 'lawnsmatter.co.uk',
-  author: 'gappsapps', // Author for schema.org JSONLD
+  author: 'gappsapps.co.uk', // Author for schema.org JSONLD
 
   siteFBAppID: '629164404334446', // Facebook App ID - Optional
   userTwitter: '@lawnsmatter', // Twitter Username

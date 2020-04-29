@@ -8,6 +8,7 @@ import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Grid from '@material-ui/core/Grid'
 import SimpleMenu from './SimpleMenu'
 import PhoneNo from '../components/phoneNo'
+import PhoneButton from '../components/PhoneButton'
 import CallButton from '../components/CallButton'
 import { Container } from '@material-ui/core';
 
@@ -86,7 +87,8 @@ export default function ElevateAppBar(props: Props) {
                 <Grid item xs={1} /> 
                 <Grid item xs={2} >
                   <a href={`tel:${<PhoneNo />}`} rel="nofollow">
-                    <CallButton />
+                    {/* <CallButton /> */}
+                    <PhoneButton />
                   </a>
                 </Grid>   
                 <Grid item xs={1} /> 
