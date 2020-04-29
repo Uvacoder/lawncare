@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import DeveloperLink from './DeveloperLink'
+import DeveloperLink from './developerLink'
 import FacebookLink from './FacebookLink'
 import EmailLink from './EmailLink'
 import Button from '@material-ui/core/Button'
