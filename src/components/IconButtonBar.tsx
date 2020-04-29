@@ -8,6 +8,7 @@ import FacebookLink from './FacebookLink'
 import EmailLink from './EmailLink'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import ListItem from '@material-ui/core/ListItem'
+import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -22,9 +23,9 @@ export default function IconButtonBar() {
     const theme = useTheme();
     return (
 <div><Container className={classes.iconButtonBar} >
-<ListItem button title="Facebook" ><FacebookLink /></ListItem>
-<ListItem button title="Instagram"><Link to="/instagram"><InstagramIcon  style={{ color: theme.palette.primary.contrastText }} /></Link></ListItem>
-<ListItem button title="Call us" ><PhoneLink /></ListItem>
-<ListItem button title="Email" ><EmailLink /></ListItem>
+<Button><FacebookLink /></Button>
+<Button><PhoneLink /></Button>
+<Button><Link to="/instagram"><InstagramIcon  style={{ color: theme.palette.primary.contrastText }} />Instagram</Link></Button>
+<Button><EmailLink /></Button>
 </Container></div>
     )}
