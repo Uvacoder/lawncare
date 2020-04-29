@@ -1,21 +1,23 @@
 
 import React from 'react';
-import { Link } from 'gatsby'
-import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme, createStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import PhoneLink from './phoneLink'
 import FacebookLink from './FacebookLink'
 import EmailLink from './EmailLink'
-import InstagramIcon from '@material-ui/icons/Instagram'
-import ListItem from '@material-ui/core/ListItem'
 import Button from '@material-ui/core/Button'
+import InstagramLink from './InstagramLink'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     iconButtonBar: {
         display: 'flex',
         flexDirection: 'row',
-      },}
+      },
+    Button: {
+      color: theme.palette.primary.contrastText,
+    }}
 ));
 
 export default function IconButtonBar() {
@@ -25,7 +27,7 @@ export default function IconButtonBar() {
 <div><Container className={classes.iconButtonBar} >
 <Button><FacebookLink /></Button>
 <Button><PhoneLink /></Button>
-<Button><Link to="/instagram"><InstagramIcon  style={{ color: theme.palette.primary.contrastText }} />Instagram</Link></Button>
+<Button><InstagramLink /></Button>
 <Button><EmailLink /></Button>
 </Container></div>
     )}

@@ -19,7 +19,7 @@ const FacebookLink = () => (
     render={data =>
       <Button>
         <a href={`https://www.facebook.com/${data.site.siteMetadata.facebook}`} rel="nofollow" >
- <FacebookIcon  style={{ color: theme.palette.primary.contrastText }} />Facebook</a>
+ <FacebookIcon />Facebook</a>
  </Button>}
   ></StaticQuery>
 )
