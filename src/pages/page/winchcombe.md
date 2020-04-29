@@ -3,11 +3,11 @@ templateKey: page
 slug: /project/winchcombe
 featured: true
 title: Winchcombe
-featuredimage: ./winchcombe.jpg
-alt: Results of our Lawn Care Service in Winchcombe
+featuredimage: /img/winchcombe.jpg
+alt: Results of our lawn care service in Winchcombe
 categories:
 - project
 ---
-These are the results of our Lawn care service at a client in Winchcombe
+These are the results of our lawn care service at a client in Winchcombe
 
 

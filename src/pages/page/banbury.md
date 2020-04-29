@@ -3,11 +3,11 @@ templateKey: page
 slug: /project/banbury
 featured: true
 title: Banbury
-featuredimage: ./banbury.jpg
-alt: Results of our Lawn Care Service in Banbury
+featuredimage: /img/banbury.jpg
+alt: Results of our lawn care service in Banbury
 categories:
 - project
 ---
-These are the results of our Lawn care service at a client in Banbury
+These are the results of our lawn care service at a client in Banbury
 
 

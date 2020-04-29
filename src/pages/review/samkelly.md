@@ -4,7 +4,7 @@ slug: /review/samkelly
 title: Sam Kelly
 location: Broughton
 featured: true
-featuredimage: ./umberto-lpZJLPjkMHk-unsplash.jpg
+featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
 categories:
   - review

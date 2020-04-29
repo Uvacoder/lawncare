@@ -16,6 +16,7 @@ import Content from '../styles/contentStyle'
 import FormContainer from '../styles/formContainerStyle'
 import Img from 'gatsby-image'
 
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -91,7 +92,7 @@ type PageProps = {
    
      <Content bg={theme.palette.primary.main} >
      <FormContainer >
-     <Grid container spacing={1} >
+     <Grid container spacing={1}  >
             <Grid item xs={2} />
             <Grid item xs={8} >
           <Img fluid={imageData}/>
@@ -127,7 +128,7 @@ type PageProps = {
                               <Grid item xs></Grid>
                               </Grid>
                               <br />
-                              <SendMessageButton  aria-label="Send message button" variant="contained" color="default">Send Message</SendMessageButton>
+                              <SendMessageButton  aria-label="Send message button" variant="contained" color="primary">Send Message</SendMessageButton>
                               <br />
                         </FormControl>
                         </Form>

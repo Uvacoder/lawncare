@@ -5,7 +5,7 @@ sortorder: 50
 title: Beccy Richards
 location: Banbury
 featured: true
-featuredimage: ./umberto-lpZJLPjkMHk-unsplash.jpg
+featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
 categories:
   - review

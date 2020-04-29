@@ -3,7 +3,7 @@ templateKey: rating
 slug: /rating/sallyshepley 
 title: Sally Shepley 
 featured: true
-featuredimage: ./annie-spratt-3A46Gcjd6L4-unsplash.jpg
+featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
 categories:
   - rating

@@ -4,7 +4,7 @@ templateKey: post
 sortorder: 10
 slug: /about/whychoose
 featured: false
-featuredimage: ./jon-tyson-hhq1Lxtuwd8-unsplash.jpg
+featuredimage: /img/jon-tyson-hhq1Lxtuwd8-unsplash.jpg
 alt: Photo by Jon Tyson on Unsplash
 categories:
   - about

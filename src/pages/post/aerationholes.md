@@ -4,7 +4,7 @@ templateKey: post
 sortorder: 100
 slug: /about/aerationholes
 featured: true
-featuredimage: ./aeration1.jpg
+featuredimage: /img/aeration1.jpg
 alt: Aeration holes
 categories:
   - about

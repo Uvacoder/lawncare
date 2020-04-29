@@ -3,7 +3,7 @@ templateKey: page
 slug: /service/renovation
 featured: true
 title: Lawn Renovations
-featuredimage: ./lawnsmatter_renovation002.jpg
+featuredimage: /img/lawnsmatter_renovation002.jpg
 alt: Photo by Lawns Matter on client site
 categories:
   - service

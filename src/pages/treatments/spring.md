@@ -4,7 +4,7 @@ sortorder: 50
 slug: /treatments/spring
 title: Spring Treatments
 featured: true
-featuredimage: ./annie-spratt-43o1KVbOWXA-unsplash.jpg
+featuredimage: /img/annie-spratt-43o1KVbOWXA-unsplash.jpg
 alt: Photo by David Kaloczi on Unsplash
 categories:
   - treatments

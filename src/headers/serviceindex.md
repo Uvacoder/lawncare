@@ -5,7 +5,7 @@ slug: /service
 title: Our Service
 featured: true
 category: service
-featuredimage: ./aboutus.jpg
+featuredimage: /img/aboutus.jpg
 alt: About Lawns Matter Background Pic
 categories:
   - service

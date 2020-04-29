@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme: Theme) =>
     drawerPaper: {
       color: theme.palette.primary.main,
       backgroundColor: theme.palette.primary.main,
+      boxShadow: "6px 6px 10px 0px rgb(47, 54, 68, 0.4)",
     }, 
     drawer: {
       [theme.breakpoints.up('sm')]: {

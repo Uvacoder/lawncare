@@ -5,7 +5,7 @@ slug: /treatments
 title: Essential Treatments
 featured: true
 category: treatments
-featuredimage: ./silas-baisch-T-MZrVSBFso-unsplash.jpg
+featuredimage: /img/silas-baisch-T-MZrVSBFso-unsplash.jpg
 alt: Photo by Silas Baisch on Unsplash
 categories:
   - service

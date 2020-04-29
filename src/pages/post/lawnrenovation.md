@@ -4,7 +4,7 @@ templateKey: post
 sortorder: 30
 slug: /about/lawnrenovation
 featured: true
-featuredimage: ./lawnrenovation.jpg
+featuredimage: /img/lawnrenovation.jpg
 alt: Lawn renovation
 categories:
   - about

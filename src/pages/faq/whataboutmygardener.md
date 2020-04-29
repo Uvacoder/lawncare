@@ -3,7 +3,7 @@ templateKey: faq
 slug: /faq/whataboutmygardener
 title:  What if I already have a gardener?
 featured: false
-featuredimage: ./mohammad-saemian-riYppYjeltk-unsplash.jpg
+featuredimage: /img/mohammad-saemian-riYppYjeltk-unsplash.jpg
 alt: Photo by mohammad saemian on Unsplash
 categories:
   - faq

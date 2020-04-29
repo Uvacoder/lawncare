@@ -3,9 +3,9 @@ templateKey: page
 slug: /project/deddington
 featured: true
 title: Deddington
-featuredimage: ./deddington.jpg
+featuredimage: /img/deddington.jpg
 alt: Deddington Project After photo
 categories:
   - project
 ---
-These are the results of our Lawn care service at a client in Deddington
+These are the results of our lawn care service at a client in Deddington

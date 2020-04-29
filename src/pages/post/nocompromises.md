@@ -4,7 +4,7 @@ templateKey: post
 sortorder: 60
 slug: /about/nocompromises
 featured: false
-featuredimage: ./annie-spratt-3A46Gcjd6L4-unsplash.jpg
+featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 alt: Photo by Annie Sprat on Unsplash
 categories:
   - about

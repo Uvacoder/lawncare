@@ -9,4 +9,4 @@ categories:
   - project
 ---
 
-These are the results of our Lawn care service at a client in Longford Park
+These are the results of our lawn care service at a client in Longford Park

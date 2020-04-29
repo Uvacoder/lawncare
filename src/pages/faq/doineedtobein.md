@@ -3,7 +3,7 @@ templateKey: faq
 slug: /faq/doineedtobein
 title:  Do I need to be in when the lawn is being treated?
 featured: false
-featuredimage: ./marina-de-salis-UozvGeM-_Ko-unsplash.jpg
+featuredimage: /img/marina-de-salis-UozvGeM-_Ko-unsplash.jpg
 alt: Photo by Marina De Salis on Unsplash
 categories:
   - faq

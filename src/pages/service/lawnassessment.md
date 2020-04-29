@@ -3,7 +3,7 @@ templateKey: page
 slug: /service/lawnassessment
 featured: true
 title: Lawn care
-featuredimage: ./lawnassessment.jpg
+featuredimage: /img/lawnassessment.jpg
 alt: Lawns Matter Logo
 categories:
   - service
