@@ -5,7 +5,7 @@ import InstagramIcon from '@material-ui/icons/Instagram'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 const InstagramLink = () => (
-   
+
 <Link to="/instagram"><InstagramIcon style={{ color: theme.palette.primary.contrastText }} />Instagram</Link>
 
 )
