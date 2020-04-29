@@ -6,6 +6,7 @@ import PermanentDrawerLeft from './PermanentDrawer'
 import ToolbarTop from './Toolbar'
 import Hidden from '@material-ui/core/Hidden'
 import { Container } from '@material-ui/core'
+import BottomButtonBar from './bottomButtonBar'
 import BottomNavigationBar from './bottomNavigation'
 import {ThemeProvider}  from '@material-ui/core/styles'
 import SideBarInner from '../styles/sideBarInnerStyle'
@@ -21,6 +22,7 @@ const Layout = ({ children, color }: LayoutProps) => {
          <ToolbarTop  bg={theme.palette.primary.main} />
          <div style={{ height: '27vw',  }} />
          <Main>{children}</Main>
+         <BottomButtonBar  bg={theme.palette.primary.main}   />
         </Hidden>
         <Hidden smDown>
      
@@ -30,11 +32,10 @@ const Layout = ({ children, color }: LayoutProps) => {
       
           <Container position="relative" style={{marginLeft: theme.sidebar.width.big }}>
            <Main>{children}</Main>
+
           </Container>
           </Hidden>
-      <Hidden mdUp>
-        <BottomNavigationBar  bg={theme.palette.primary.main}  />
-      </Hidden>
+ 
     </ThemeProvider>
   )
 }
