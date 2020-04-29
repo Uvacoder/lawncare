@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import DeveloperLink from './DeveloperLink'
+import DeveloperLink from './developerLink'
 import FacebookLink from './FacebookLink'
 import InstagramLink from './InstagramLink'
 import EmailLink from './EmailLink'
