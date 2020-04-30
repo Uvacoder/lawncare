@@ -2,7 +2,7 @@
 title: Area Served
 templateKey: post
 sortorder: 50
-slug: /about/areaserved
+slug: /service/areaserved
 featured: true
 featuredimage: /img/areaserved.jpg
 alt: Map of area served

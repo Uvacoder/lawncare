@@ -1,15 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import Layout from '../../components/layout'
-import SEO from '../../components/SEO'
-import theme from '../../gatsby-theme-material-ui-top-layout/theme'
-import RaisedHeader from '../../styles/raisedHeaderStyle'
-import PageTitle from '../../styles/pageTitleStyle'
-import Content from '../../styles/contentStyle'
-import Description from  '../../styles/descriptionStyle'
-import TreatmentIndex from '../../components/TreatmentIndex'
-import HeaderImage from '../../components/HeaderImage'
+import Layout from '../../../components/layout'
+import SEO from '../../../components/SEO'
+import theme from '../../../gatsby-theme-material-ui-top-layout/theme'
+import RaisedHeader from '../../../styles/raisedHeaderStyle'
+import PageTitle from '../../../styles/pageTitleStyle'
+import Content from '../../../styles/contentStyle'
+import Description from  '../../../styles/descriptionStyle'
+import TreatmentIndex from '../../../components/TreatmentIndex'
+import HeaderImage from '../../../components/HeaderImage'
 
 type PageProps = {
   data: {
@@ -39,10 +39,10 @@ type PageProps = {
         title={data.markdownRemark.frontmatter.title}
         desc={data.markdownRemark.excerpt}
         node={data.markdownRemark.frontmatter.slug}
-        banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
+        banner={imageData}
          />
       <Helmet title={data.markdownRemark.frontmatter.title} />
-      <Content bg={theme.palette.primary.main} py={10}>
+      <Content bg={theme.palette.primary.main} >
          <HeaderImage backgroundImage={imageData} />
         <RaisedHeader  >
         <PageTitle>{data.markdownRemark.frontmatter.title}</PageTitle>
@@ -79,8 +79,8 @@ export const query = graphql`query TreatmentHeaderPage {
       categories
       featuredimage {
         childImageSharp {
-          fluid(maxWidth: 1645) {
-            src
+          fluid(quality: 90, maxWidth: 1920) {
+             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

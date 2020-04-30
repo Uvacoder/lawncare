@@ -225,7 +225,7 @@ module.exports = {
         icons: [
           {
             src: `/favicon/LargeLogo.png`,
-            sizes: `795x795`,
+            sizes: `640x640`,
             type: `image/png`
         },
         {

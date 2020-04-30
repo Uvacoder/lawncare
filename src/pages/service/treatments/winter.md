@@ -1,7 +1,7 @@
 ---
 templateKey: page
 sortorder: 50
-slug: /treatments/winter
+slug: /service/treatments/winter
 title: Winter Treatments
 featured: true
 featuredimage: /img/max-kleinen--KxkDgEvWT8-unsplash.jpg

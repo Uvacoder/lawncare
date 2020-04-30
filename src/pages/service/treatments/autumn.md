@@ -1,7 +1,7 @@
 ---
 templateKey: page
 sortorder: 50
-slug: /treatments/autumn
+slug: /service/treatments/autumn
 title: Autumn Treatments
 featured: true
 featuredimage: /img/johannes-plenio-pY0LOiwK9Sc-unsplash.jpg

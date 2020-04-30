@@ -1,103 +1,137 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import CategoryIndex from '../components/CategoryIndex'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import GlobalStyles from '../styles/globalStyle'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
 import Container from '@material-ui/core/Container'
 import HeaderImage from '../components/HeaderImage'
+import Img from "gatsby-image"
+import GridLink from '../components/grid-link'
+import { ChildImageSharp } from '../types'
+import GlobalStyles from '../styles/globalStyle'
+import { animated } from 'react-spring'
+import styled from 'styled-components'
 
-export const HeaderPageTemplate = ({
-  featuredimage,
-  title,
-  slug,
-  html,
-}) => (
-  <div>
-    <GlobalStyles />
-    <SEO />
+type PageProps =  {
+  header:{
+    id: string
+    html: markdown
+    frontmatter: {
+      title: string
+      templateKey:  string
+      slug:  string
+      featured:  boolean
+      category:  string
+      featuredimage: childImageSharp
+      alt: string
+      sortorder: number
+    }
+  }
+  posts: {
+    id: string
+    frontmatter: {
+      alt: string
+      slug: string
+      featured:  boolean
+      title: string
+      templateKey: string
+      sortorder: number
+      location: string
+      featured: boolean
+      featuredimage:  ChildImageSharp
+    }
+  }[]
+  site: {
+    siteMetadata: {
+      siteUrl: string
+      serviceName: string
+      contactPoint: {
+        email: string
+        name: string
+      }
+    }
+  }
+}
+
+const Area = styled(animated.div)`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 35vw;
+
+ [theme.breakpoints.down('md')]: {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 30vw;
+  }
+`
+
+
+    const HeaderIndex = ({ data, posts }) => {
+      const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
+    
+      return  (  
+<Layout>
+    <SEO  pathname={data.markdownRemark.slug}
+        title={data.markdownRemark.title}
+        node={data.markdownRemark.slug}
+        banner={imageData}
+        organisation
+        />
+    <Helmet title={data.markdownRemark.title} />
     <Content bg={theme.palette.primary.main} >
-      <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
+      <HeaderImage backgroundImage={imageData} />
         <Container>
             <RaisedHeader  >
-                <PageTitle >{title}</PageTitle>
+                <PageTitle >{data.markdownRemark.title}</PageTitle>
                 <Description>
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
-                    <CategoryIndex />
+                    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+                    <Area>
+                        {posts &&
+                        posts.map(({ node: post }) => (
+                          <GridLink key={post.frontmatter.slug} to={post.frontmatter.slug} aria-label={`View page "${post.frontmatter.title}"`}>
+                               <Img fluid={post.frontmatter.featuredimage.childImageSharp.fluid} />
+                               <span>{post.frontmatter.title}</span>
+                          </GridLink>
+                          ))}
+                    </Area>
                 </Description>
            </RaisedHeader>
          </Container>
     </Content>
-
-  </div>
-)
-
-HeaderPageTemplate.propTypes = {
-  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  slug: PropTypes.string,
-  html: PropTypes.markdown,
-  posts: PropTypes.shape({
-    frontmatter: PropTypes.array,
-  }),
-}
-
-const HeaderPage = ({ data }) => {
-  const { headerdata } = data.markdownRemark
-
-
-  return (
-    <Layout>
-      <HeaderPageTemplate
-        featuredimage={data.markdownRemark.frontmatter.featuredimage}
-        title={data.markdownRemark.frontmatter.title}
-        slug={data.markdownRemark.frontmatter.slug}
-        html={data.markdownRemark.html}
-      />
     </Layout>
-  )
-}
+    )
+  }
 
-HeaderPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
+export default HeaderIndex
 
-export default HeaderPage
-
-export const pageQuery = graphql`
- 
-  query HeaderPageTemplate {
-    markdownRemark(frontmatter: {templateKey: {eq: "header"}}) {
-      id
-      html
-      frontmatter {
-        title
-        templateKey
-        slug
-        featured
-        category
-        featuredimage {
-          childImageSharp {
-            fluid(quality:95 maxWidth: 1920)  {
-              ...GatsbyImageSharpFluid_withWebp
+export const query = graphql`
+  query HeaderIndex($category: String!) {
+   markdownRemark(frontmatter: {category: {eq: $category}}) {
+        id
+        html
+        frontmatter {
+          title
+          templateKey
+          slug
+          featured
+          category
+          featuredimage {
+            childImageSharp {
+              fluid(quality: 95, maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
             }
           }
+          alt
+          sortorder
         }
-        alt
-        sortorder
       }
-    }
-    site {
+      site {
         siteMetadata {
           siteUrl
           serviceName
@@ -107,6 +141,31 @@ export const pageQuery = graphql`
           }
         }
       }
+    posts: allMarkdownRemark (filter: {frontmatter: {categories: {eq: $category}, featured: {eq: true}}}, sort: {order: ASC, fields: frontmatter___sortorder}) {
+        edges {
+           node {
+            id
+            frontmatter {
+              alt
+              slug
+              featured
+              title
+              categories
+              templateKey
+              sortorder
+              location
+              featuredimage {
+                childImageSharp {
+                  fluid(quality: 90, maxWidth: 450, maxHeight: 450) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
-  
-`
+    `
+
+

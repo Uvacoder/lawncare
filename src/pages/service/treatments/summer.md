@@ -1,7 +1,7 @@
 ---
 templateKey: page
 sortorder: 50
-slug: /treatments/summer
+slug: /service/treatments/summer
 title: Summer Treatments
 featured: true
 featuredimage: /img/johnny-mcclung-XZWH2LSGYVw-unsplash.jpg

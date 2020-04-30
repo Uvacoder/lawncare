@@ -50,7 +50,7 @@ class FAQIndex extends React.Component {
 
          <Link key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`Frequently Asked Questions "${faq.frontmatter.title}"`}>
                       
-            <span><h5>Q. {faq.frontmatter.title}</h5>
+            <span><h4 >Q. {faq.frontmatter.title}</h4>
             <h6>{faq.excerpt}</h6> </span>
           </Link>
          

@@ -2,7 +2,7 @@
 title: Our Service
 templateKey: post
 sortorder: 20
-slug: /about/ourservice
+slug: /service/ourservice
 featured: true
 featuredimage: /img/ourservice.jpg 
 alt: Lawns Matter Van

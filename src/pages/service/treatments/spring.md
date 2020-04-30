@@ -1,7 +1,7 @@
 ---
 templateKey: page
 sortorder: 50
-slug: /treatments/spring
+slug: /service/treatments/spring
 title: Spring Treatments
 featured: true
 featuredimage: /img/annie-spratt-43o1KVbOWXA-unsplash.jpg

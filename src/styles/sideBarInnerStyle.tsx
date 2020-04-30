@@ -11,10 +11,7 @@ const SideBarInner = styled(Box)<{ bg: string }>`
   flex-direction: column;
   flex-wrap: nowrap;
   background: ${theme.palette.primary.main};
-  [theme.breakpoints.down('md')]: {
-    position: relative;
-    width: 100%;
-  }
+
 `
 
 export default SideBarInner

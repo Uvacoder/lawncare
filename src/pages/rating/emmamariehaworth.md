@@ -2,7 +2,7 @@
 templateKey: rating
 slug: /rating/emmamariehaworth
 title: Emma Marie Haworth
-featured: false
+featured: true
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
 categories:

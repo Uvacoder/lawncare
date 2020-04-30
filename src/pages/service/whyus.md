@@ -1,6 +1,6 @@
 ---
 templateKey: post
-slug: /about/whyus
+slug: /service/whyus
 featured: true
 title: Why Us?
 featuredimage: /img/whyus.jpg
