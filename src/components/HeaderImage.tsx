@@ -10,6 +10,7 @@ const HeaderImage = ({ backgroundImage }) => (
     <BackgroundImage
         fluid={backgroundImage}
         style={{
+        width: '100%',
         backgroundAttachment: 'fixed',     
         backgroundPosition: 'center',
         backgroundSize: 'cover',      
