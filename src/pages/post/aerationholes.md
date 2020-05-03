@@ -2,7 +2,7 @@
 title: Aeration holes
 templateKey: post
 sortorder: 100
-slug: /about/aerationholes
+slug: /service/aerationholes
 featured: true
 featuredimage: /img/aeration1.jpg
 alt: Aeration holes

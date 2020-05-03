@@ -1,7 +1,6 @@
 ---
 templateKey: header
 sortorder: 50
-slug: /service
 title: Our Service
 featured: true
 category: service

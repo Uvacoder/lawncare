@@ -1,10 +1,11 @@
 ---
 title: Area Served
-templateKey: post
+templateKey: map
 sortorder: 50
-slug: /about/areaserved
+slug: /service/areaserved
 featured: true
 featuredimage: /img/areaserved.jpg
+backgroundimage: /img/marcel-l-E4sL7IrHy04-unsplash.jpg
 alt: Map of area served
 categories:
   - about

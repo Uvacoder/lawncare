@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import { Form } from 'semantic-ui-react'
 import FormControl from '@material-ui/core/FormControl';
-import TextField, { TextFieldProps } from '@material-ui/core/TextField';
+import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Grid from '@material-ui/core/Grid';
@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      // padding: theme.spacing(2),
       textAlign: 'center',
       color: theme.palette.primary.contrastText,
     },
@@ -69,7 +68,7 @@ type PageProps = {
           featured: boolean
           slug: string
           alt: string
-          categories: string
+          category: string
           featuredimage: ChildImageSharp
           }
         }
@@ -145,14 +144,12 @@ export default Contact
 export const query = graphql`
 
   query Contact  { 
- markdownRemark(frontmatter: {slug: {regex: "/contactus/"}})  {
-    excerpt(pruneLength: 400)
-    html
+ markdownRemark(frontmatter: {templateKey: {eq: "contact"}})  {
     frontmatter {
       slug
       title
       templateKey
-      categories
+      category
       featuredimage {
         childImageSharp {
           fluid(quality:95 maxHeight: 1200, maxWidth: 1920)  {

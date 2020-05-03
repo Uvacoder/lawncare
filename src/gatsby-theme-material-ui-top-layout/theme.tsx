@@ -219,12 +219,13 @@ const theme = createMuiTheme({
 			},
 		},
 		shape: {
-			borderRadius: '4px' ,
+			borderRadius: '2px' ,
 		},
 		sidebar: {
 			width: {
 				big: '275px',
 				normal: '240px',
+				main: 'calc(100% - 275px)',
 			},
 			height: '100%',
 			},
@@ -240,6 +241,16 @@ const theme = createMuiTheme({
 			display: 'flex',
 			flexDirection: 'row',
 		  },
+		headerImage: {
+			height: {
+				desktop: '800px',
+				mobile: '500px',
+				},
+		},
+		leafletContainer: {
+			height: '40vw',
+			width: '100%',
+		},
  });
 
 export default theme;

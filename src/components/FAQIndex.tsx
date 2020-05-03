@@ -1,13 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql, StaticQuery, Link } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
-import { config, animated, useSpring } from 'react-spring'
-import Layout from './layout'
-import GridLink from './grid-link'
-import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import List from '../styles/listStyle'
@@ -50,7 +42,7 @@ class FAQIndex extends React.Component {
 
          <Link key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`Frequently Asked Questions "${faq.frontmatter.title}"`}>
                       
-            <span><h5>Q. {faq.frontmatter.title}</h5>
+            <span><h4 >Q. {faq.frontmatter.title}</h4>
             <h6>{faq.excerpt}</h6> </span>
           </Link>
          

@@ -1,7 +1,6 @@
 ---
 templateKey: rating
 sortorder: 50
-slug: /rating
 title: Lawn Care Customer Ratings
 featured: true
 category: rating

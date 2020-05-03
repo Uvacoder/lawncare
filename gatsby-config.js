@@ -67,6 +67,7 @@ module.exports = {
     }
   },
   plugins: [
+    'gatsby-plugin-resolve-src',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-brotli',
@@ -76,20 +77,18 @@ module.exports = {
     },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
-    'gatsby-transformer-yaml',    
+    'gatsby-transformer-yaml', 
     {
-      resolve: `gatsby-plugin-webfonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        fonts: {
-          google: [
-            {
-              family: 'Open Sans',
-              variants: ["300", "400", "500", "700"],
-            },
-          ],
-        },
+        fonts: [
+          {
+            family: `Open Sans`,
+            variants: [`300`, `400`, `500`, `700`]
+          },
+        ],
       },
-    },
+    },   
     {
       resolve: `gatsby-theme-material-ui`,
       options: {
@@ -128,34 +127,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-catch-links`,
-    {
-      resolve: '@stackbit/gatsby-plugin-menus',
-      options: {
-        // static definition of menu items (optional)
-/*         menus: {
-          main: // identifier of menu container
-            [ // array of contained children menu items
-              {
-                identifier: 'myId', // identifier for this item (optional)
-                title: 'Title for page',
-                url: '/page-1/',
-                weight: 1
-              }
-            ]
-          ]
-        }, */
-        // Gatsby node types from which we extract menus (optional, see "Advanced usage")
-        sourceNodeType: 'MarkdownRemark', 
-        // the relative node path where we can find the 'menus' container (optional)
-        sourceDataPath: 'frontmatter',
-        // the relative node path where we can find the page's URL (required)
-        sourceUrlPath: 'slug',
-        // custom menu loading function (optional)
-      //  menuLoader: customLoaderFunction,
-        // the property to use for injecting to the page context (optional, see "Advanced usage")
-        pageContextProperty: 'menus',
-      },
-    },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
@@ -198,17 +169,6 @@ module.exports = {
         username: `lawnsmatter`,
       },
     }, 
-     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [`300`, `400`, `500`, `700`]
-          },
-        ],
-      },
-    },
      'gatsby-plugin-sitemap',
     'gatsby-theme-overreacted-toggle',
     {
@@ -225,7 +185,7 @@ module.exports = {
         icons: [
           {
             src: `/favicon/LargeLogo.png`,
-            sizes: `795x795`,
+            sizes: `512x512`,
             type: `image/png`
         },
         {
@@ -263,6 +223,7 @@ module.exports = {
   ],
       },
     },
+    'gatsby-plugin-react-leaflet',
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-netlify-cms`,

@@ -2,7 +2,7 @@
 templateKey: rating
 slug: /rating/emmashaw
 title: Emma Shaw
-featured: false
+featured: true
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
 categories:

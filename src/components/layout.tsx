@@ -25,7 +25,7 @@ const Layout = ({ children, color }: LayoutProps) => {
          <BottomButtonBar  bg={theme.palette.primary.main}   />
         </Hidden>
         <Hidden smDown>
-     
+        <div style={{width: theme.sidebar.width.main }}>
          <SideBarInner>
             <PermanentDrawerLeft />
           </SideBarInner>
@@ -34,6 +34,7 @@ const Layout = ({ children, color }: LayoutProps) => {
            <Main>{children}</Main>
 
           </Container>
+          </div>    
           </Hidden>
  
     </ThemeProvider>

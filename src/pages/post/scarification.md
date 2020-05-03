@@ -2,7 +2,7 @@
 title: Scarification
 templateKey: post
 sortorder: 40
-slug: /about/scarification
+slug: /service/scarification
 featured: true
 featuredimage: /img/scarification.jpg
 alt: Scarification

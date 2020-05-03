@@ -12,7 +12,14 @@
     "noUnusedParameters": true,
     "removeComments": false,
     "preserveConstEnums": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "*": [
+        "types/*",
+        "*"
+      ]
+    }
   },
   "include": ["./src/**/*", "./cypress/**/*"]
 }

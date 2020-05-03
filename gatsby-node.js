@@ -13,7 +13,7 @@ exports.createPages = async ({ graphql, actions }) => {
  // const serviceTemplate = require.resolve('./src/templates/service.tsx')
   // const webpageTemplate = require.resolve('./src/templates/webpage.tsx')
   // const projectTemplate = require.resolve('./src/templates/project.tsx')
-  // const categoriesTemplate = require.resolve('./src/templates/categories.tsx')
+  const categoriesTemplate = require.resolve('./src/templates/categories.tsx')
  
 
  return graphql(`{
@@ -48,8 +48,8 @@ exports.createPages = async ({ graphql, actions }) => {
            `src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`
           ),
           context: {
+            id: edge.node.id,
             category: edge.node.frontmatter.category,
-            id,
           },
         })
       })
@@ -64,15 +64,15 @@ exports.createPages = async ({ graphql, actions }) => {
   // Eliminate duplicate categories
   categories = _.uniq(categories)
 
-  // Make tag pages
-  categories.forEach(tag => {
-    const tagPath = `/categories/${_.kebabCase(tag)}/`
+  // Make categories pages
+  categories.forEach(categories => {
+    const categoriesPath = `/categories/${_.kebabCase(categories)}/`
 
     createPage({
-      path: tagPath,
+      path: categoriesPath,
       component: path.resolve(`src/templates/categories.tsx`),
       context: {
-        tag,
+        categories,
       },
     })
   })

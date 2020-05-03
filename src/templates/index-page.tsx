@@ -35,12 +35,10 @@ export const IndexPageTemplate = ({
      <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
         <Container>
             <RaisedHeader >
-                        <PageTitle >
-               {title}
-                      </PageTitle>
+                        <PageTitle >{title}</PageTitle>
                       <Description>
                         <div dangerouslySetInnerHTML={{ __html: html }} />
-                      <BlogIndex />
+                        <BlogIndex />
                       </Description>
                 </RaisedHeader> 
         </Container>
