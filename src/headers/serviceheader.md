@@ -4,7 +4,7 @@ sortorder: 50
 title: Our Service
 featured: true
 category: service
-featuredimage: /img/aboutus.jpg
+featuredimage: /img/chang-qing-8oPubUm97Cc-unsplash.jpg
 alt: About Lawns Matter Background Pic
 categories:
   - service
