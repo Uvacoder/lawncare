@@ -45,14 +45,11 @@ type PageProps = {
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         organisation
       />
-      <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
+      <Helmet title={data.markdownRemark.frontmatter.title} />
       <Content bg={theme.palette.primary.main} py={10}>
       <HeaderImage backgroundImage={imageData} />
         <Container>
- 
-
-
-    <RaisedHeader  >
+     <RaisedHeader  >
             <PageTitle>{data.markdownRemark.frontmatter.title}</PageTitle>
                <Description>
                  <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />

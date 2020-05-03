@@ -5,8 +5,8 @@ slug: /faqs
 title: Frequently Asked Questions
 featured: true
 category: faqs
-featuredimage: /img/aboutus.jpg
-alt: About Lawns Matter Background Pic
+featuredimage: /img/agnieszka-yDbe0IoKJnc-unsplash.jpg
+alt: Photo by Agnieszka on Unsplash
 categories:
   - faq
 ---

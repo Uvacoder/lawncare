@@ -5,8 +5,8 @@ slug: /reviews
 title: Lawn Care Customer Reviews
 featured: true
 category: reviews
-featuredimage: /img/aboutus.jpg
-alt: About Lawns Matter Background Pic
+featuredimage: /img/alistair-macrobert-UI4lA6hZlQE-unsplash.jpg
+alt: Photo by Alistair MacRobert on Unsplash
 categories:
   - review
 ---

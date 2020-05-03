@@ -247,6 +247,10 @@ const theme = createMuiTheme({
 				mobile: '500px',
 				},
 		},
+		leafletContainer: {
+			height: '40vw',
+			width: '100%',
+		},
  });
 
 export default theme;

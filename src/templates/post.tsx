@@ -1,19 +1,15 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
-import { config, useSpring } from 'react-spring'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Button from '@material-ui/core/Button'
-import Container from '@material-ui/core/Container'
 import HeaderImage from '../components/HeaderImage'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PBox from '../styles/pboxStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
-import Category from '../styles/categoryStyle'
-import Title from '../styles/titleStyle'
 import Description from  '../styles/descriptionStyle'
 
 type PageProps = {
@@ -35,14 +31,7 @@ type PageProps = {
 
 
   const BlogPage = ({ data }) => {
-  const categoryAnimation = useSpring({
-    config: config.slow,
-    from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
-    to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
-  })
-  const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
-  const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
-  const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
+
   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
     <div>
@@ -55,12 +44,12 @@ type PageProps = {
         banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
          />
       <Helmet title={data.markdownRemark.frontmatter.title} />
-      <Content bg={theme.palette.primary.main} py={10}>
+      <Content bg={theme.palette.primary.main} >
       <HeaderImage backgroundImage={imageData} />
 
         <RaisedHeader  >
           <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>
-          <Description style={descAnimation}>
+          <Description>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </Description>
           <PBox style={{ textAlign: 'center' }}  >
