@@ -251,6 +251,17 @@ const theme = createMuiTheme({
 			height: '40vw',
 			width: '100%',
 		},
+		headerimage: {
+			sm: {
+			  width: '600px',
+			},
+			md: {
+			  width: '960px',
+			},
+			lg: {
+			  width: '100%',
+			},
+		},
  });
 
 export default theme;
