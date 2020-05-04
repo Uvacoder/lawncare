@@ -23,7 +23,14 @@ export class AreaServedMap extends Component {
     const position = [51.9806, -1.32055]
     if (typeof window !== 'undefined') {
       return (
-        <Map style={{ height: theme.leafletContainer.height, width: theme.leafletContainer.width }} {...options} center={position} zoom={10}>
+        <Map style={{ 
+          height: theme.leafletContainer.height, 
+          width: theme.leafletContainer.width 
+          }} 
+          {...options} 
+          center={position} 
+          zoom={9} 
+          >
     <TileLayer
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
