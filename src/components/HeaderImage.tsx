@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BackgroundImage from 'gatsby-background-image'
 import HeaderContainer from '../styles/headerContainerStyle'
 import Container from '@material-ui/core/Container'
+import Img from "gatsby-image"
 
 const HeaderImage = ({ backgroundImage }) => (  
          
   <Container  >
-    <BackgroundImage
+    <Img
         fluid={backgroundImage}
         width='100%'
         backgroundAttachment='fixed'
@@ -15,7 +15,7 @@ const HeaderImage = ({ backgroundImage }) => (
         backgroundSize='cover'
         >   
         <HeaderContainer />
-    </BackgroundImage> 
+    </Img> 
     </Container>
  
 )
