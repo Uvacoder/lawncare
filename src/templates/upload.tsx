@@ -4,12 +4,9 @@ import { createStyles, Theme,  withStyles, makeStyles  } from '@material-ui/core
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
-import { Form } from 'semantic-ui-react'
-import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Grid from '@material-ui/core/Grid';
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
@@ -34,11 +31,6 @@ const TextInputField = styled(TextField)`
   variant: outlined;
   color: ${theme.palette.primary.contrastText}; 
 `
-const SendMessageButton = styled(Button)`
-  variant: outlined;  
-  color: primary;
-`
-
 
 const InputField = withStyles({
   root: {
@@ -93,14 +85,14 @@ type PageProps = {
      <Content bg={theme.palette.primary.main} >
      <HeaderImage backgroundImage={imageData} />
 
-      <FormContainer >
+      <Container >
               <RaisedHeader >
             <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>
-            <FormContainer >
+            {/* <FormContainer > */}
           <Uploader />
-                        </FormContainer>
+                        {/* </FormContainer> */}
               </RaisedHeader>
-              </FormContainer>
+              </Container>
     </Content>
     </Layout>
   )
