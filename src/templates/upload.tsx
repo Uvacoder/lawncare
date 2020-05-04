@@ -14,7 +14,7 @@ import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
 import FormContainer from '../styles/formContainerStyle'
-import Img from 'gatsby-image'
+import HeaderImage from '../components/HeaderImage'
 import Uploader from '../components/uploader'
 
 
@@ -91,17 +91,8 @@ type PageProps = {
      
    
      <Content bg={theme.palette.primary.main} >
-     <FormContainer >
-     <Grid container spacing={1}  >
-            <Grid item xs={2} />
-            <Grid item xs={8} >
-          <Img fluid={imageData}/>
-            </Grid>
-            <Grid item xs={2} />
-       
-      </Grid> 
-      </FormContainer>
-      <br />
+     <HeaderImage backgroundImage={imageData} />
+
       <FormContainer >
               <RaisedHeader >
             <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>

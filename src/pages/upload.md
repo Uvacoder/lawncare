@@ -1,7 +1,7 @@
 ---
 templateKey: upload
 slug: /upload
-title: Upload your lawn photographs
+title: Photo upload 
 featured: true
 category: upload
 featuredimage: /img/viktor-forgacs-zwl6fOnNqrk-unsplash.jpg

@@ -113,10 +113,10 @@ export default class Uploader extends React.Component {
                           
                           <FormControl className="control">
                             <Grid container spacing={1} >
-                              <Grid item xs={5} >            
+                              <Grid item xs={10}  spacing={2} >            
                      
                                 <InputField
-                                  label="Your Name"
+                                  label="Name"
                                   className="input"
                                   type={'text'}
                                   name={'name'}
@@ -126,13 +126,8 @@ export default class Uploader extends React.Component {
                                 />
                         
                               </Grid>
-                              <Grid item xs={1} />
-                              <Grid item xs={6} >
-
-                              </Grid>
-                            </Grid>  
-                            <Grid container spacing={1} >
-                              <Grid item xs={5} >            
+                           
+                              <Grid item xs={10}  spacing={2}>            
                               <InputField
                                   label="Location"
                                   className="input"
@@ -143,8 +138,8 @@ export default class Uploader extends React.Component {
                                   required={true}
                                 />
                               </Grid>
-                              <Grid item xs={1} />
-                              <Grid item xs={6} >
+                           
+                              <Grid item xs={10}  spacing={2}>
                               <UploadButtons
                                    label="file" 
                                   className="file-input"
