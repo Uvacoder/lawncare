@@ -5,8 +5,8 @@ slug: /faqs
 title: Frequently Asked Questions
 featured: true
 category: faqs
-featuredimage: /img/agnieszka-yDbe0IoKJnc-unsplash.jpg
-alt: Photo by Agnieszka on Unsplash
+featuredimage: /img/jon-tyson-hhq1Lxtuwd8-unsplash.jpg
+alt: Photo by Jon Tyson on Unsplash
 categories:
   - faq
 ---
