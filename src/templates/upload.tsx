@@ -10,7 +10,6 @@ import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
-import FormContainer from '../styles/formContainerStyle'
 import HeaderImage from '../components/HeaderImage'
 import Uploader from '../components/uploader'
 
@@ -88,9 +87,9 @@ type PageProps = {
       <Container >
               <RaisedHeader >
             <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>
-            {/* <FormContainer > */}
+         
           <Uploader />
-                        {/* </FormContainer> */}
+                   
               </RaisedHeader>
               </Container>
     </Content>
