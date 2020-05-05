@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /service/diseasecontrol
-featured: true
+visible: true
+featured: false
 title: Disease Control
 featuredimage: /img/disease.jpg
 alt: Photo by from Lawns Matter's Facebook page

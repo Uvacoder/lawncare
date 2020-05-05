@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/burdrop
-featured: true
+visible: true
+featured: false
 title: Burdrop
 featuredimage: /img/burdrop.jpeg
 alt: Results of our lawn care service in Burdrop

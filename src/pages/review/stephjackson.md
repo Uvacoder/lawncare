@@ -2,7 +2,8 @@
 templateKey: review
 slug: /review/stephjackson
 title: Steph Jackson
-featured: true
+visible: true
+featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
 categories:

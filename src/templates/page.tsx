@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
+import {Helmet} from 'react-helmet'
 import Container from '@material-ui/core/Container'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
@@ -49,7 +49,7 @@ PageTemplate.propTypes = {
   slug: PropTypes.string,
   html: PropTypes.markdown,
   posts: PropTypes.shape({
-    frontmatter: PropTypes.array,
+    frontmatter: PropTypes.object,
   }),
 }
 
@@ -74,14 +74,8 @@ Page.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-  allMarkdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-  }),
+
 }
-
-
-
-
 
 export default Page
 

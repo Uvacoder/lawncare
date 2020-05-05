@@ -13,7 +13,7 @@ type PageProps = {
             title: string
             slug: string
             templateKey: string
-            featured: boolean
+            visible: boolean
             }[]
         }
       }
@@ -53,7 +53,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query FAQIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "faq"}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "faq"}, visible: {eq: true}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
            excerpt(pruneLength: 400)
@@ -62,7 +62,7 @@ export default () => (
               slug
               title
               templateKey
-              featured
+              visible
           
             }
           }

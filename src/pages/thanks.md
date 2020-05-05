@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /about/thanks
+visible: true
 featured: true
 title: Thanks
 featuredimage: /img/johnny-brown-1k35_trK6qo-unsplash.jpg

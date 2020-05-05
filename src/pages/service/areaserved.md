@@ -3,6 +3,7 @@ title: Area Served
 templateKey: map
 sortorder: 50
 slug: /service/areaserved
+visible: true
 featured: true
 featuredimage: /img/areaserved.jpg
 backgroundimage: /img/marcel-l-E4sL7IrHy04-unsplash.jpg

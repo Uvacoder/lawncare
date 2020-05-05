@@ -3,7 +3,8 @@ templateKey: review
 slug: /review/felicityvernon
 title: Felicity Vernon
 location: Chacombe
-featured: true
+visible: true
+featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
 categories:

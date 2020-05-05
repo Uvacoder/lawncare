@@ -3,7 +3,8 @@ templateKey: page
 sortorder: 50
 slug: /service/treatments/spring
 title: Spring Treatments
-featured: true
+visible: true
+featured: false
 featuredimage: /img/annie-spratt-43o1KVbOWXA-unsplash.jpg
 alt: Photo by David Kaloczi on Unsplash
 categories:

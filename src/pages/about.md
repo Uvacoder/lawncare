@@ -3,6 +3,7 @@ templateKey: header
 sortorder: 50
 slug: /aboutus
 title: About Us
+visible: true
 featured: true
 category: about
 featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg

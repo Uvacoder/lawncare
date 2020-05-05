@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /service/aeration
-featured: true
+visible: true
+featured: false
 title: Aeration
 featuredimage: /img/aerator.jpg
 alt: Lawnsmatter aerator on client site

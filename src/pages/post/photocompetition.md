@@ -3,6 +3,7 @@ title: Photo competition
 templateKey: post
 sortorder: 40
 slug: /pages/post/photocompetition
+visible: true
 featured: true
 featuredimage: /img/viktor-forgacs-zwl6fOnNqrk-unsplash.jpg
 alt: Photo by Viktor Forgacs on Unsplash

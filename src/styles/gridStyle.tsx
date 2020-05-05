@@ -5,11 +5,11 @@ const GridStyle = styled(animated.div)`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 
-  [theme.breakpoints.up('xl')]: {
+  [theme.breakpoints.only('xl')]: {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  [theme.breakpoints.up('lg')]: {
+  [theme.breakpoints.only('lg')]: {
     grid-template-columns: 1fr 1fr;
   }
 

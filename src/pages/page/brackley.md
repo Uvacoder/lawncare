@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/brackley
+visible: true
 featured: false
 title: Brackley
 featuredimage: /img/brackley.jpg

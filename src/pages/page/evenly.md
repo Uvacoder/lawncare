@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/evenly
-featured: true
+visible: true
+featured: false
 title: Evenly
 featuredimage: /img/evenly.jpeg
 alt: Results of our lawn care service in Evenly

@@ -3,6 +3,7 @@ templateKey: reviews
 sortorder: 50
 slug: /reviews
 title: Lawn Care Customer Reviews
+visible: true
 featured: true
 category: reviews
 featuredimage: /img/alistair-macrobert-UI4lA6hZlQE-unsplash.jpg

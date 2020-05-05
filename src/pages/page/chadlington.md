@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/chadlington
+visible: true
 featured: false
 title: Chadlington
 featuredimage: /img/chadlington.jpeg

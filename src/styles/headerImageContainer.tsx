@@ -6,7 +6,7 @@ const HeaderImageContainer = styled(Container)`
 
   height: ${theme.headerImage.height.desktop};
 
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('md')]: {
         height: ${theme.headerImage.height.mobile};
     }
   }

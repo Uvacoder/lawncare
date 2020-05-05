@@ -18,6 +18,14 @@ const RaisedHeader = styled(Container)`
   wordWrap: break-word;
   transition: all 300ms linear ; 
   lineHeight: 1;
-
+  a {
+    transition: all 0.3s ease-in-out;
+    color: ${theme.palette.secondary.dark};
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: ${theme.palette.secondary.dark};
+    }
+  }
 `
 export default RaisedHeader

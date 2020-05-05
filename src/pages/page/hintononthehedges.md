@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/hintononthehedges
-featured: true
+visible: true
+featured: false
 title: Hinton on the hedges
 featuredimage: /img/hintononthehedges.jpg
 alt: Results of our lawn care service in Hinton on the hedges

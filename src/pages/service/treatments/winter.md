@@ -3,7 +3,8 @@ templateKey: page
 sortorder: 50
 slug: /service/treatments/winter
 title: Winter Treatments
-featured: true
+visible: true
+featured: false
 featuredimage: /img/max-kleinen--KxkDgEvWT8-unsplash.jpg
 alt: Photo by Max Kleinen on Unsplash
 categories:

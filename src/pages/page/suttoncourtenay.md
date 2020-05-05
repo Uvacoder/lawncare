@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/suttoncourtenay
-featured: true
+visible: true
+featured: false
 title: Sutton Courtenay
 featuredimage: /img/suttoncourtenay.jpg
 alt: Sutton Courtenay After photo

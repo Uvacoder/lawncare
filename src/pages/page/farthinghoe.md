@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/farthinghoe
-featured: true
+visible: true
+featured: false
 title: Farthinghoe 
 featuredimage: /img/farthinghoe.jpeg
 alt: Farthinghoe Project photo

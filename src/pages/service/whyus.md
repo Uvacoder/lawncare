@@ -1,10 +1,11 @@
 ---
 templateKey: post
 slug: /service/whyus
+visible: true
 featured: true
 title: Why Us?
-featuredimage: /img/jon-tyson-hhq1Lxtuwd8-unsplash.jpg
-alt: Photo by Lawns Matter on client site.
+featuredimage: /img/oleksandra-bardash-AlJg9kPvOJ4-unsplash_cropped.jpg
+alt: Photo by Oleksandra Bardash on unsplash
 categories:
   - service
   - about

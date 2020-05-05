@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/churchenstone
-featured: true
+visible: true
+featured: false
 title: Church Enstone
 featuredimage: /img/churchenstone.jpeg
 alt: Results of our lawn care service in Church Enstone

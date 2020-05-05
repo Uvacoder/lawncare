@@ -3,7 +3,8 @@ templateKey: review
 slug: /review/eelkedegroot
 title: Eelke de Groot
 loction: Bicester
-featured: true
+visible: true
+featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
 categories:

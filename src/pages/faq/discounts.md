@@ -2,6 +2,7 @@
 templateKey: faq
 slug: /faq/discounts
 title: Do you offer discounts?
+visible: true
 featured: false
 featuredimage: /img/jj-ying-UcI5OAPD820-unsplash.jpg
 alt: Photo by JJ Ying on Unsplash

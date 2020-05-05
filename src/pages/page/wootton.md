@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/wooton
-featured: true
+visible: true
+featured: false
 title: Wooton
 featuredimage: /img/wooton.jpg
 alt: Results of our lawn care service in Wooton

@@ -2,7 +2,8 @@
 templateKey: page
 slug: /project/bicester
 title: Bicester 
-featured: true
+visible: true
+featured: false
 featuredimage: /img/bicester.jpg
 alt: Bicester Project After photo
 categories:

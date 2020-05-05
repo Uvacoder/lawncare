@@ -2,7 +2,8 @@
 templateKey: review
 slug: /review/emmashaw
 title: Emma Shaw
-featured: true
+visible: true
+featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
 categories:

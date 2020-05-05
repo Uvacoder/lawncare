@@ -3,6 +3,7 @@ templateKey: categories
 sortorder: 10
 slug: /categories
 title: Search by category
+visible: true
 featured: true
 category: categories
 featuredimage: /img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg

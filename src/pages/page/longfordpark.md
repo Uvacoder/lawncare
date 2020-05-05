@@ -2,7 +2,8 @@
 templateKey: page
 slug: /project/longfordpark
 title: Longford Park
-featured: true
+visible: true
+featured: false
 featuredimage: /img/longfordpark.jpg
 alt: Longford Park Project After photo
 categories:

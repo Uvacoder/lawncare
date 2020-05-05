@@ -3,7 +3,8 @@ title: Aeration holes
 templateKey: post
 sortorder: 100
 slug: /service/aerationholes
-featured: true
+visible: true
+featured: false
 featuredimage: /img/aeration1.jpg
 alt: Aeration holes
 categories:

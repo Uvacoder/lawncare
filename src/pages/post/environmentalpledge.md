@@ -3,6 +3,7 @@ title: Our Environmental Pledge
 templateKey: post
 sortorder: 70
 slug: /service/environmentalpledge
+visible: true
 featured: true
 featuredimage: /img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg
 alt: Scenery

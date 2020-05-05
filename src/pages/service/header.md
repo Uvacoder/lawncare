@@ -3,7 +3,8 @@ templateKey: page
 sortorder: 10
 slug: /service/header
 title: Our Service
-featured: true
+visible: true
+featured: false
 category: service
 featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg
 alt: Photo by David Kaloczi on Unsplash

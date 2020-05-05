@@ -3,7 +3,8 @@ templateKey: review
 slug: /review/lindawinters
 title: Linda Winters
 location: Bodicote
-featured: true
+visible: true
+featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: Photo by Sharon Mccutcheon on Unsplash
 categories:

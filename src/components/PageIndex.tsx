@@ -21,6 +21,7 @@ type PageProps = {
             slug: string
             templateKey: string
             featured: boolean
+            visible: boolean
             featuredimage: ChildImageSharp
             }[]
         }
@@ -72,7 +73,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query PageIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "page"}, featured: {eq: true}, categories: {eq: "project"}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {categories: {eq: "project"}, visible: {eq: true}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
             id
@@ -81,6 +82,7 @@ export default () => (
               title
               templateKey
               featured
+              visible
               featuredimage {
                 childImageSharp {
                   fluid(quality: 90, maxWidth: 450, maxHeight: 450)  {

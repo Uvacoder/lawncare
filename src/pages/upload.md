@@ -2,7 +2,8 @@
 templateKey: upload
 slug: /upload
 title: Photo upload 
-featured: true
+visible: true
+featured: false
 category: upload
 featuredimage: /img/viktor-forgacs-zwl6fOnNqrk-unsplash.jpg
 alt: Photo by Nervenet

@@ -12,7 +12,6 @@ const HeaderImage = ({ backgroundImage }) => (
   <Banner>
           <Img 
               fluid={backgroundImage}
-              // width='100%'
               backgroundAttachment='relative'
               backgroundPosition='center'
               backgroundSize='cover'

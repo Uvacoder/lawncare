@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/warmington
-featured: true
+visible: true
+featured: false
 title: Warmington
 featuredimage: /img/warmington.jpg
 alt: Results of our lawn care service in Warmington
