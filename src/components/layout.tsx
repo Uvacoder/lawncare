@@ -7,11 +7,9 @@ import ToolbarTop from './Toolbar'
 import Hidden from '@material-ui/core/Hidden'
 import { Container } from '@material-ui/core'
 import BottomButtonBar from './bottomButtonBar'
-import BottomNavigationBar from './bottomNavigation'
 import {ThemeProvider}  from '@material-ui/core/styles'
 import SideBarInner from '../styles/sideBarInnerStyle'
 import Main from '../styles/mainStyle'
-
 
 const Layout = ({ children, color }: LayoutProps) => {
   return (

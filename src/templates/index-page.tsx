@@ -23,7 +23,7 @@ export const IndexPageTemplate = ({
 
   <div>
  
-    <GlobalStyles />
+
     <SEO  pathname={slug}
         title={title}
         node={slug}

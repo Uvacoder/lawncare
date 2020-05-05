@@ -1,70 +1,85 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Button from '@material-ui/core/Button'
 import HeaderImage from '../components/HeaderImage'
 import RaisedHeader from '../styles/raisedHeaderStyle'
-import PBox from '../styles/pboxStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
+import GlobalStyles from '../styles/globalStyle'
+import ContactUsButton from '../components/ContactUsButton'
 
-type PageProps = {
-  data: {
-        id: string
-        excerpt: string
-        html: markdown
-        frontmatter: {
-          title: string
-          templateKey: string
-          featured: boolean
-          slug: string
-          alt: string
-          categories: string
-          featuredimage: ChildImageSharp
-          }
-        }
-  }
-
-
-  const BlogPage = ({ data }) => {
-
-  const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
-  return (
+export const BlogPageTemplate = ({  
+    featuredimage,
+    title,
+    slug,
+    html, 
+  }) => (
     <div>
-    <Layout color={theme.palette.primary.main}>
-      <SEO
-        pathname={data.markdownRemark.frontmatter.slug}
-        title={data.markdownRemark.frontmatter.title}
-        desc={data.markdownRemark.excerpt}
-        node={data.markdownRemark.frontmatter.slug}
-        banner={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
-         />
-      <Helmet title={data.markdownRemark.frontmatter.title} />
-      <Content bg={theme.palette.primary.main} >
-      <HeaderImage backgroundImage={imageData} />
+       <GlobalStyles />
+       <SEO  pathname={slug}
+        title={title}
+        node={slug}
+        banner={featuredimage}
+        organisation
+        />
 
+      <Helmet title={title} />
+      <Content bg={theme.palette.primary.main} >
+      <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
         <RaisedHeader  >
-          <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>
+          <PageTitle >{title}</PageTitle>
           <Description>
-            <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <ContactUsButton />
           </Description>
-          <PBox style={{ textAlign: 'center' }}  >
-            <Link to="/contactus">
-            <Button  aria-label="Link to contact us form " variant="contained" color="primary" margin="1rem" py={4} px={8}>
-              Contact Us
-            </Button>
-            </Link>
-          </PBox>
+        
         </RaisedHeader>
      </Content>
-</Layout>
+
     </div>
   )
+
+
+BlogPageTemplate.propTypes = {
+    featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    title: PropTypes.string,
+    slug: PropTypes.string,
+    html: PropTypes.markdown,
+    posts: PropTypes.shape({
+      frontmatter: PropTypes.array,
+    }),
+  }
+
+const BlogPage = ({ data }) => {
+
+  return (
+    <Layout>
+      <BlogPageTemplate
+        featuredimage={data.markdownRemark.frontmatter.featuredimage}
+        title={data.markdownRemark.frontmatter.title}
+        slug={data.markdownRemark.frontmatter.slug}
+        html={data.markdownRemark.html}
+      />
+    </Layout>
+  )
 }
+
+BlogPage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
+  allMarkdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+  }),
+}
+
 
 
 export default BlogPage

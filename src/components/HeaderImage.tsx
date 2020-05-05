@@ -5,18 +5,20 @@ import Container from '@material-ui/core/Container'
 import Img from "gatsby-image"
 
 const HeaderImage = ({ backgroundImage }) => (  
-         
-  <Container  >
+
+  <Container>
     <Img
         fluid={backgroundImage}
         width='100%'
-        backgroundAttachment='fixed'
+        backgroundAttachment='relative'
         backgroundPosition='center'
         backgroundSize='cover'
-        >   
-        <HeaderContainer />
-    </Img> 
-    </Container>
+          >
+
+<HeaderContainer />
+</Img> 
+</Container>
+    
  
 )
 
