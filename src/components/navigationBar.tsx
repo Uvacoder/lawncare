@@ -1,20 +1,14 @@
 
-import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby'
-import { makeStyles, useTheme, fade, createStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Button from '@material-ui/core/Button';
-import { flexbox } from '@material-ui/system';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import List from '@material-ui/core/List';
+import React from 'react'
+import { Link } from 'gatsby'
+import { makeStyles, useTheme, createStyles } from '@material-ui/core/styles'
+import Container from '@material-ui/core/Container'
+import Button from '@material-ui/core/Button'
+import ListItem from '@material-ui/core/ListItem'
 import PhoneNo from '../components/phoneNo'
 import SimpleMenu from './SimpleMenu'
-import PhoneLink from './phoneLink'
-import PhoneIcon from '@material-ui/icons/Phone';
-import HomeIcon from '@material-ui/icons/Home';
-import theme from '../gatsby-theme-material-ui-top-layout/theme'
+import PhoneIcon from '@material-ui/icons/Phone'
+import HomeIcon from '@material-ui/icons/Home'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

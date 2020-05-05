@@ -1,6 +1,6 @@
 
-import React from 'react';
-import Container from '@material-ui/core/Container';
+import React from 'react'
+import Container from '@material-ui/core/Container'
 import PhoneLink from './phoneLink'
 import Button from '@material-ui/core/Button'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'

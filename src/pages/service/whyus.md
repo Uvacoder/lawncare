@@ -3,7 +3,7 @@ templateKey: post
 slug: /service/whyus
 featured: true
 title: Why Us?
-featuredimage: /img/whyus.jpg
+featuredimage: /img/jon-tyson-hhq1Lxtuwd8-unsplash.jpg
 alt: Photo by Lawns Matter on client site.
 categories:
   - service

@@ -1,16 +1,15 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'gatsby'
-import { makeStyles, createStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Divider from '@material-ui/core/Divider';
+import { makeStyles, createStyles } from '@material-ui/core/styles'
+import AppBar from '@material-ui/core/AppBar'
+import Divider from '@material-ui/core/Divider'
 import LogoSmall from './logoSmall'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Grid from '@material-ui/core/Grid'
 import SimpleMenu from './SimpleMenu'
 import PhoneNo from '../components/phoneNo'
 import PhoneButton from '../components/PhoneButton'
-import CallButton from '../components/CallButton'
-import { Container } from '@material-ui/core';
+import { Container } from '@material-ui/core'
 
 function ElevationScroll(props: Props) {
   const { children } = props;

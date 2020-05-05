@@ -1,7 +1,5 @@
 import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
-import { ChildImageSharp } from '../types'
-import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import List from '../styles/listStyle'
 
 type PageProps = {
@@ -13,11 +11,9 @@ type PageProps = {
           id: string
           frontmatter: {
             title: string
-            location: string
             slug: string
             templateKey: string
             featured: boolean
-            featuredimage: ChildImageSharp
             }[]
         }
       }
@@ -65,7 +61,6 @@ export default () => (
             frontmatter {
               slug
               title
-              location
               templateKey
               featured
           

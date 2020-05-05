@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import PropTypes from 'prop-types'
+import Container from '@material-ui/core/Container'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
@@ -9,6 +9,7 @@ import HeaderImage from '../components/HeaderImage'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
+import PropTypes from 'prop-types'
 import Description from  '../styles/descriptionStyle'
 import ContactUsButton from '../components/ContactUsButton'
 
@@ -28,6 +29,7 @@ export  const PageTemplate = ({
     <Helmet title={title} />
      <Content bg={theme.palette.primary.main} >
      <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
+     <Container>
           <RaisedHeader   >
             <PageTitle >{title} </PageTitle>
             <Description >
@@ -35,6 +37,7 @@ export  const PageTemplate = ({
               <ContactUsButton />
             </Description>
           </RaisedHeader> 
+          </Container>
       </Content>
     </div>
   )

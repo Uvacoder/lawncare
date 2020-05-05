@@ -1,7 +1,7 @@
-import React from 'react';
-import PhoneIcon from '@material-ui/icons/Phone';
-import { makeStyles, createStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import React from 'react'
+import PhoneIcon from '@material-ui/icons/Phone'
+import { makeStyles, createStyles } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
 
 
 const useStyles = makeStyles((theme: Theme) =>

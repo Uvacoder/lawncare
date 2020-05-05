@@ -1,15 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { createStyles, Theme,  withStyles, makeStyles  } from '@material-ui/core/styles';
+import { createStyles, Theme,  withStyles, makeStyles  } from '@material-ui/core/styles'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
-import { Form } from 'semantic-ui-react'
-import FormControl from '@material-ui/core/FormControl';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import FormControl from '@material-ui/core/FormControl'
+import TextField from '@material-ui/core/TextField'
+import Button from '@material-ui/core/Button'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Grid from '@material-ui/core/Grid';
+import Grid from '@material-ui/core/Grid'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
@@ -107,7 +106,7 @@ type PageProps = {
               <RaisedHeader >
             <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>
              <FormContainer >
-                            <Form size='large' name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
+                            <form size='large' name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
                           <FormControl>
                             <Grid container  >
                               <Grid item xs={7} ><InputField fullWidth label="Name" id="name-input"   /></Grid>
@@ -128,7 +127,7 @@ type PageProps = {
                               <br />
                               </Grid>
                         </FormControl>
-                        </Form>
+                        </form>
                         </FormContainer>
               </RaisedHeader>
               </FormContainer>

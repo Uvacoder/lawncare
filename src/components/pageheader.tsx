@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
 const PageHeader = styled(Link)`
   position: relative;

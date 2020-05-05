@@ -1,6 +1,5 @@
-import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
-import Container from '@material-ui/core/Container';
+import styled from 'styled-components'
+import Container from '@material-ui/core/Container'
 
 const FormContainer = styled(Container)`
 width: 90%;

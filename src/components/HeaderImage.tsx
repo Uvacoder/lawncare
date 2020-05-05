@@ -1,25 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import HeaderContainer from '../styles/headerContainerStyle'
-import Container from '@material-ui/core/Container'
 import Img from "gatsby-image"
+import HeaderImageContainer from '../styles/headerImageContainer'
+import Banner from '../styles/bannerStyle'
+
 
 const HeaderImage = ({ backgroundImage }) => (  
 
-  <Container>
-    <Img
-        fluid={backgroundImage}
-        width='100%'
-        backgroundAttachment='relative'
-        backgroundPosition='center'
-        backgroundSize='cover'
-          >
+  <HeaderImageContainer>
+  <Banner>
+          <Img 
+              fluid={backgroundImage}
+              // width='100%'
+              backgroundAttachment='relative'
+              backgroundPosition='center'
+              backgroundSize='cover'
+                >
+            <HeaderContainer />
+          </Img> 
+          </Banner>   
+   </HeaderImageContainer>
 
-<HeaderContainer />
-</Img> 
-</Container>
-    
- 
 )
 
 HeaderImage.propTypes = {

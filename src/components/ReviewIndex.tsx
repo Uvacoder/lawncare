@@ -16,7 +16,6 @@ type PageProps = {
             slug: string
             templateKey: string
             featured: boolean
-            featuredimage: ChildImageSharp
             }[]
         }
       }
@@ -67,13 +66,6 @@ export default () => (
               location
               templateKey
               featured
-              featuredimage {
-                childImageSharp {
-                  fluid(quality: 90, maxWidth: 1920) {
-                      ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
             }
           }
         }
@@ -86,6 +78,6 @@ export default () => (
     }
     
     `}
-    render={(data, count) => <ReviewIndex data={data} count={count} />}
+    render={(data) => <ReviewIndex data={data}  />}
   />
 )

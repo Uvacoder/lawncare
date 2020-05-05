@@ -1,14 +1,13 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import styled from 'styled-components'
-import Grid from '@material-ui/core/Grid';
-import FormControl from '@material-ui/core/FormControl';
+import Grid from '@material-ui/core/Grid'
+import FormControl from '@material-ui/core/FormControl'
 import FormContainer from '../styles/formContainerStyle'
-import { Form } from 'semantic-ui-react'
-import TextField from '@material-ui/core/TextField';
-import { withStyles  } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField'
+import { withStyles  } from '@material-ui/core/styles'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button'
 import UploadButtons from 'components/UploadButtons'
 
 const TextInputField = styled(TextField)`
@@ -100,7 +99,7 @@ export default class Uploader extends React.Component {
     return (
       <div>
           <FormContainer >
-                    <Form size='large' name="file-upload" action="/contact/thanks/" method="POST" data-netlify="true" data-netlify-honeypot="botfield "  onSubmit={this.handleSubmit}>
+                    <form size='large' name="file-upload" action="/contact/thanks/" method="POST" data-netlify="true" data-netlify-honeypot="botfield "  onSubmit={this.handleSubmit}>
                       {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                     <input type="hidden" name="form-name" value="file-upload" />
                     <div hidden>
@@ -166,7 +165,7 @@ export default class Uploader extends React.Component {
                       </Grid>
                       <br />
                 </FormControl>
-                        </Form>
+                        </form>
                         </FormContainer>
 
  

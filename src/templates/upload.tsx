@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { createStyles, Theme,  withStyles, makeStyles  } from '@material-ui/core/styles';
+import { createStyles, Theme,  withStyles, makeStyles  } from '@material-ui/core/styles'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
-import TextField from '@material-ui/core/TextField';
-import Container from '@material-ui/core/Container';
+import TextField from '@material-ui/core/TextField'
+import Container from '@material-ui/core/Container'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'

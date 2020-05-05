@@ -13,7 +13,7 @@ import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import HeaderImage from '../components/HeaderImage'
 import RaisedHeader from '../styles/raisedHeaderStyle'
-import StarRatings from 'react-star-ratings';
+import StarRatings from 'react-star-ratings'
 import PBox from '../styles/pboxStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'

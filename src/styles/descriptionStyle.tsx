@@ -1,7 +1,6 @@
-import React from 'react'
 import styled   from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Container from '@material-ui/core/Container';
+import Container from '@material-ui/core/Container'
 
 const Description = styled(Container)`
   padding: 1rem;

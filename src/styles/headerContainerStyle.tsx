@@ -1,5 +1,5 @@
-import React from 'react';
-import { Theme, makeStyles, createStyles } from '@material-ui/core/styles';
+import React from 'react'
+import { Theme, makeStyles, createStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
@@ -7,6 +7,8 @@ import theme from '../gatsby-theme-material-ui-top-layout/theme'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
+      flexGrow: 1,
+      backgroundColor: theme.palette.primary.light,
       [theme.breakpoints.down('sm')]: {
         height: theme.headerImage.height.mobile,
       },
