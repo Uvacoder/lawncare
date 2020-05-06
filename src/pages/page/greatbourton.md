@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/greatbourton
+sortorder: 1150
 visible: true
 featured: false
 title: Great Bourton

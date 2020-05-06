@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/ambrosden
+sortorder: 1010
 visible: true
 featured: false
 title: Ambrosden

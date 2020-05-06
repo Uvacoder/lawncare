@@ -1,6 +1,6 @@
 ---
 templateKey: categories
-sortorder: 10
+sortorder: 16
 slug: /categories
 title: Search by category
 visible: true

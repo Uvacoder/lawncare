@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/fennycompton
+sortorder: 1140
 visible: true
 featured: false
 title: Fenny Compton

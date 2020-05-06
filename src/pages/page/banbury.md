@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/banbury
+sortorder: 1030
 visible: true
 featured: false
 title: Banbury

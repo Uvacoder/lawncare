@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/winchcombe
+sortorder: 1360
 visible: true
 featured: false
 title: Winchcombe

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/bloxham
+sortorder: 1080
 visible: true
 featured: false
 title: Bloxham

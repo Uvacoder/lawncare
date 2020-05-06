@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/swacliffe
+sortorder: 1300
 visible: true
 featured: false
 title: Swalcliffe

@@ -1,6 +1,7 @@
 ---
 templateKey: review
 slug: /review/eelkedegroot
+sortorder: 1420
 title: Eelke de Groot
 loction: Bicester
 visible: true

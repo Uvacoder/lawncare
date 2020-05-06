@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/bourtononthewater
+sortorder: 1100
 visible: true
 featured: false
 title: Bourton on the Water

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/greattew
+sortorder: 1005
 visible: true
 featured: false
 title: Great Tew

@@ -2,6 +2,7 @@
 templateKey: page
 slug: /project/bicester
 title: Bicester 
+sortorder: 1050
 visible: true
 featured: false
 featuredimage: /img/bicester.jpg

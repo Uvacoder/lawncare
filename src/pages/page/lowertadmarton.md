@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/lowertadmarton
+sortorder: 1210
 visible: true
 featured: false
 title: Lower Tadmarton

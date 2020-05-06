@@ -1,6 +1,6 @@
 ---
 templateKey: reviews
-sortorder: 50
+sortorder: 54
 slug: /reviews
 title: Lawn Care Customer Reviews
 visible: true

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/chadlington
+sortorder: 1140
 visible: true
 featured: false
 title: Chadlington

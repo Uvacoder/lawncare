@@ -1,7 +1,7 @@
 ---
 title: Aeration holes
 templateKey: page
-sortorder: 100
+sortorder: 610
 slug: /service/aerationholes
 visible: true
 featured: false

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/southnewington
+sortorder: 1280
 visible: true
 featured: false
 title: South Newington

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/barfordstmichael
+sortorder: 1040
 visible: true
 featured: false
 title: Barford St Michael

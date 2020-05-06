@@ -69,12 +69,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-brotli',
-      options: {
-        extensions: ['tsx', 'html', 'js', 'svg', 'jpg', 'jpeg', 'png', 'ts', 'md']
-      }
-    },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
     'gatsby-transformer-yaml', 

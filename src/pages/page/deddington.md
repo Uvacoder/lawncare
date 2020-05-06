@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/deddington
+sortorder: 1160
 visible: true
 featured: false
 title: Deddington

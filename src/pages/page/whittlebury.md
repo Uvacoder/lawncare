@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/whittlebury
+sortorder: 1350
 visible: true
 featured: false
 title: Whittlebury

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/suttoncourtenay
+sortorder: 1290
 visible: true
 featured: false
 title: Sutton Courtenay

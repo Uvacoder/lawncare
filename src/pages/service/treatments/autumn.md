@@ -1,6 +1,6 @@
 ---
 templateKey: page
-sortorder: 50
+sortorder: 350
 slug: /service/treatments/autumn
 title: Autumn Treatments
 visible: true

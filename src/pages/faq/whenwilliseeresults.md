@@ -2,6 +2,7 @@
 templateKey: faq
 slug: /faq/whenwilliseeresults
 title: When will I start to see results?
+sortorder: 25
 visible: true
 featured: false
 featuredimage: /img/chang-qing-8oPubUm97Cc-unsplash.jpg

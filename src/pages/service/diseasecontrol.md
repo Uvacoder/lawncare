@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /service/diseasecontrol
+sortorder: 720
 visible: true
 featured: false
 title: Disease Control

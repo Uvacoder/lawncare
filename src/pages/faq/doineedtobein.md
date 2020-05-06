@@ -2,6 +2,7 @@
 templateKey: faq
 slug: /faq/doineedtobein
 title:  Do I need to be in when the lawn is being treated?
+sortorder: 50
 visible: true
 featured: false
 featuredimage: /img/marina-de-salis-UozvGeM-_Ko-unsplash.jpg

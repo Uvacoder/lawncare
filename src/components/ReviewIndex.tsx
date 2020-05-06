@@ -55,7 +55,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query ReviewIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "review"}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "review"}}},  sort: {order: ASC, fields: frontmatter___sortorder}) {
         edges {
           node {
             excerpt(pruneLength: 147)

@@ -1,6 +1,6 @@
 ---
 templateKey: page
-sortorder: 50
+sortorder: 250
 slug: /service/treatments/summer
 title: Summer Treatments
 visible: true

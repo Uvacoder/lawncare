@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/bodicote
+sortorder: 1090
 visible: true
 featured: false
 title: Bodicote

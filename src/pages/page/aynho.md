@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/aynho
+sortorder: 1020
 visible: true
 featured: false
 title: Aynho

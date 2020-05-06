@@ -1,6 +1,6 @@
 ---
 templateKey: page
-sortorder: 50
+sortorder: 150
 slug: /service/treatments/spring
 title: Spring Treatments
 visible: true

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /service/aeration
+sortorder: 600
 visible: true
 featured: false
 title: Aeration

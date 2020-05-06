@@ -1,6 +1,6 @@
 ---
 templateKey: page
-sortorder: 10
+sortorder: 14
 slug: /service/header
 title: Our Service
 visible: true

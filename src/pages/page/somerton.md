@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/somerton
+sortorder: 1250
 visible: true
 featured: false
 title: Somerton

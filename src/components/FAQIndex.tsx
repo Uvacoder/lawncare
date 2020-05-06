@@ -51,7 +51,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query FAQIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "faq"}, visible: {eq: true}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "faq"}, visible: {eq: true}}}, sort: {order: ASC, fields: frontmatter___sortorder}) {
         edges {
           node {
            excerpt(pruneLength: 400)

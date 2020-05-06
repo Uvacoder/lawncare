@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/croughton
+sortorder: 1160
 visible: true
 featured: false
 title: Croughton
