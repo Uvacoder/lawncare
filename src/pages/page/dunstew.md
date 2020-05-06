@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/dunstew
-featured: true
+visible: true
+featured: false
 title: Duns Tew
 featuredimage: /img/dunstew.jpeg
 alt: Results of our lawn care service in Duns Tew

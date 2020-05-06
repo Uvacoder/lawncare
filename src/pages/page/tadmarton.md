@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/tadmarton
-featured: true
+visible: true
+featured: false
 title: Tadmarton 
 featuredimage: /img/tadmarton.jpg
 alt: Tadmarton After photo

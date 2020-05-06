@@ -1,10 +1,11 @@
 ---
 templateKey: faq
 slug: /faq/whenwilliseeresults
-title: When will I start to see results
+title: When will I start to see results?
+visible: true
 featured: false
 featuredimage: /img/chang-qing-8oPubUm97Cc-unsplash.jpg
-alt: Photo by Chang Qing on Unsplash
+alt: photo by Chang Qing on Unsplash
 categories:
   - faq
 ---

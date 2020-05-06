@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/greattew
-featured: true
+visible: true
+featured: false
 title: Great Tew
 featuredimage: /img/greattew.jpg
 alt: Results of our lawn care service in Great Tew

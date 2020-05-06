@@ -1,18 +1,19 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { createStyles, Theme,  withStyles, makeStyles  } from '@material-ui/core/styles';
+import { createStyles, Theme,  withStyles, makeStyles  } from '@material-ui/core/styles'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
-import TextField from '@material-ui/core/TextField';
-import Container from '@material-ui/core/Container';
+import TextField from '@material-ui/core/TextField'
+import Container from '@material-ui/core/Container'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
-import FormContainer from '../styles/formContainerStyle'
 import HeaderImage from '../components/HeaderImage'
 import Uploader from '../components/uploader'
+import {Helmet} from 'react-helmet'
+import Description from  '../styles/descriptionStyle'
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -76,24 +77,24 @@ type PageProps = {
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
         title={data.markdownRemark.frontmatter.title}
-        desc={data.markdownRemark.frontmatter.desc}
         node={data.markdownRemark.frontmatter.parent}
         banner={imageData}
       />
      
-   
-     <Content bg={theme.palette.primary.main} >
-     <HeaderImage backgroundImage={imageData} />
+     <Helmet title={data.markdownRemark.title} />
+      <Content bg={theme.palette.primary.main} >
+        <HeaderImage backgroundImage={imageData} />
 
-      <Container >
-              <RaisedHeader >
+        <Container >
+          <RaisedHeader >
             <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>
-            {/* <FormContainer > */}
-          <Uploader />
-                        {/* </FormContainer> */}
-              </RaisedHeader>
-              </Container>
-    </Content>
+            <Description >
+              <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+            <Uploader />  
+            </Description>      
+          </RaisedHeader>
+        </Container>
+      </Content>
     </Layout>
   )
 }
@@ -104,7 +105,8 @@ export const query = graphql`
 
   query Upload  { 
  markdownRemark(frontmatter: {templateKey: {eq: "upload"}})  {
-    frontmatter {
+  html  
+  frontmatter {
       slug
       title
       templateKey

@@ -1,10 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql, StaticQuery, Link } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { config, animated, useSpring } from 'react-spring'
+import { animated } from 'react-spring'
 import Layout from './layout'
 import GridLink from './grid-link'
 import SEO from './SEO'
@@ -17,13 +15,13 @@ type PageProps = {
     allMarkdownRemark: {
       edges: {
         node: {
-          excerpt: string
           id: string
           frontmatter: {
             title: string
             slug: string
             templateKey: string
             featured: boolean
+            visible: boolean
             featuredimage: ChildImageSharp
             }[]
         }
@@ -75,19 +73,19 @@ export default () => (
   <StaticQuery
     query={graphql`
     query PageIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "page"}, slug: {regex: "/project/"}, featured: {eq: true}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {categories: {eq: "project"}, visible: {eq: true}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
-           excerpt(pruneLength: 400)
             id
             frontmatter {
               slug
               title
               templateKey
               featured
+              visible
               featuredimage {
                 childImageSharp {
-                  fluid(quality: 100, maxWidth: 450, maxHeight: 450)  {
+                  fluid(quality: 90, maxWidth: 450, maxHeight: 450)  {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -103,6 +101,6 @@ export default () => (
       }
     }
     `}
-    render={(data, count) => <PageIndex data={data} count={count} />}
+    render={(data) => <PageIndex data={data} />}
   />
 )

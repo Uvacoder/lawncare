@@ -8,14 +8,7 @@ const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-
- // const contactTemplate = require.resolve('./src/templates/contact.tsx')
- // const serviceTemplate = require.resolve('./src/templates/service.tsx')
-  // const webpageTemplate = require.resolve('./src/templates/webpage.tsx')
-  // const projectTemplate = require.resolve('./src/templates/project.tsx')
-  const categoriesTemplate = require.resolve('./src/templates/categories.tsx')
  
-
  return graphql(`{
    allMarkdownRemark  {
         edges {

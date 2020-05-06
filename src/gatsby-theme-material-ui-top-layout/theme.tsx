@@ -243,13 +243,13 @@ const theme = createMuiTheme({
 		  },
 		headerImage: {
 			height: {
-				desktop: '800px',
-				mobile: '500px',
+				desktop: '40vw',
+				mobile: '400px',
 				},
 		},
 		leafletContainer: {
-			height: '40vw',
-			width: '100%',
+			height: '85vh',
+			width: '100vw',
 		},
  });
 

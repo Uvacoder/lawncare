@@ -1,9 +1,9 @@
-import React from 'react';
-import { makeStyles, useTheme, createStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import React from 'react'
+import { makeStyles, useTheme, createStyles } from '@material-ui/core/styles'
+import Container from '@material-ui/core/Container'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import CssBaseline from '@material-ui/core/CssBaseline'
 import GlobalStyles from '../styles/globalStyle'
 import SocialIconButtonBar from "../components/SocialIconButtonBar"
 import Gappsapps from './gappsapps.tsx'

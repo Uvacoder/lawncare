@@ -3,9 +3,10 @@ templateKey: page
 sortorder: 50
 slug: /service/treatments/summer
 title: Summer Treatments
-featured: true
+visible: true
+featured: false
 featuredimage: /img/johnny-mcclung-XZWH2LSGYVw-unsplash.jpg
-alt: Photo by David Kaloczi on Unsplash
+alt: photo by David Kaloczi on Unsplash
 categories:
   - treatments
 ---

@@ -1,18 +1,18 @@
-import React from 'react';
+import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
+import { createStyles, Theme, makeStyles } from '@material-ui/core/styles'
+import Drawer from '@material-ui/core/Drawer'
+import Divider from '@material-ui/core/Divider'
+import ListItem from '@material-ui/core/ListItem'
 import LogoLarge from './logoLarge'
 import Gappsapps from './gappsapps'
-import Container from '@material-ui/core/Container';
+import Container from '@material-ui/core/Container'
 import IconButtonBar from './IconButtonBar'
 import GlobalStyles from '../styles/globalStyle'
 import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import SideBarInner from  '../styles/sideBarInnerStyle'
-import Box from '@material-ui/core/Box';
+import Box from '@material-ui/core/Box'
 
   const useStyles = makeStyles((theme: Theme) =>
   createStyles({

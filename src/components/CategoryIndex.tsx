@@ -17,7 +17,6 @@ type PageProps = {
             slug: string
             templateKey: string
             featured: boolean
-            featuredimage: ChildImageSharp
             }[]
         }
       }
@@ -34,7 +33,7 @@ padding: 1rem;
 class CategoryIndex extends React.Component {
   render() {
 
-    const { data } = this.props
+    const { data, count } = this.props
     const { edges: categories } = data.allMarkdownRemark
 
     return (
@@ -45,10 +44,10 @@ class CategoryIndex extends React.Component {
         {categories &&
           categories.map(({ node: category}) => (
 
-         <Link key={category.frontmatter.slug} to={category.frontmatter.slug} aria-label={`Frequently Asked Questions "${category.frontmatter.title}"`}>
+         <Link key={category.group.fieldValue} to={category.group.fieldValue} aria-label={`Category "${category.group.fieldValue}"`}>
                       
-            <span><h5>{category.frontmatter.title}</h5>
-            <h6>{category.excerpt}</h6> </span>
+            <span><h5>{category.group.fieldValue} - {category.group.totalCount}</h5></span>
+     
           </Link>
          
           ))}
@@ -61,7 +60,7 @@ class CategoryIndex extends React.Component {
 export default () => (
   <StaticQuery
     query={graphql`
-    query categoriesQuery {
+    query CategoriesQuery {
       site {
         siteMetadata {
           title
@@ -71,23 +70,6 @@ export default () => (
         group(field: frontmatter___categories) {
           fieldValue
           totalCount
-        }
-      }
-      markdownRemark(frontmatter: {categories: {eq: "header"}}) {
-        id
-        frontmatter {
-          slug
-          title
-          location
-          templateKey
-          featured
-           featuredimage {
-            childImageSharp {
-              fluid(quality: 90, maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
         }
       }
     }

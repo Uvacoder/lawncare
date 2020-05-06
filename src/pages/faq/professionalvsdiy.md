@@ -2,9 +2,10 @@
 templateKey: faq
 slug: /faq/professionalvsdiy
 title: Why pay for a professional service instead of DIY?
+visible: true
 featured: false
 featuredimage: /img/eugen-str-CrhsIRY3JWY-unsplash.jpg
-alt: Photo by Eugen Str on Unsplash
+alt: photo by Eugen Str on Unsplash
 categories:
   - faq
 ---

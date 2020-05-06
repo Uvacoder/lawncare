@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /service/pestcontrol
-featured: true
+visible: true
+featured: false
 title: Pest Control
 featuredimage: /img/pestcontrol.jpg
 alt: Photo of chafer grubs

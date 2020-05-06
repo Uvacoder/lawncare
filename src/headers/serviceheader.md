@@ -2,6 +2,7 @@
 templateKey: header
 sortorder: 50
 title: Our Service
+visible: true
 featured: true
 category: service
 featuredimage: /img/chang-qing-8oPubUm97Cc-unsplash.jpg

@@ -3,10 +3,11 @@ templateKey: header
 sortorder: 50
 slug: /faqs
 title: Frequently Asked Questions
+visible: true
 featured: true
 category: faqs
-featuredimage: /img/jon-tyson-hhq1Lxtuwd8-unsplash.jpg
-alt: Photo by Jon Tyson on Unsplash
+featuredimage: /img/fauzan-saari-pZXg_ObLOM4-unsplash.jpg
+alt: photo by Fauzan Saari on Unsplash
 categories:
   - faq
 ---

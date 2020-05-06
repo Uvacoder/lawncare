@@ -2,9 +2,10 @@
 templateKey: faq
 slug: /faq/whatnext
 title: What do I do next?
+visible: true
 featured: false
 featuredimage: /img/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg
-alt: Photo by Javier Allegue Barros on Unsplash
+alt: photo by Javier Allegue Barros on Unsplash
 categories:
   - faq
 ---

@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/deddington
-featured: true
+visible: true
+featured: false
 title: Deddington
 featuredimage: /img/deddington.jpg
 alt: Deddington Project After photo

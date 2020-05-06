@@ -1,17 +1,16 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
+import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import HeaderImage from '../components/HeaderImage'
-import PBox from '../styles/pboxStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
+import ContactUsButton from '../components/ContactUsButton'
 
 
 type PageProps = {
@@ -46,7 +45,7 @@ type PageProps = {
         organisation
       />
       <Helmet title={data.markdownRemark.frontmatter.title} />
-      <Content bg={theme.palette.primary.main} py={10}>
+      <Content bg={theme.palette.primary.main} >
       <HeaderImage backgroundImage={imageData} />
         <Container>
      <RaisedHeader  >
@@ -54,13 +53,7 @@ type PageProps = {
                <Description>
                  <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
                </Description> 
-              <PBox style={{ textAlign: 'center' }} >
-                <Link to="/contactus">
-                <Button  aria-label="Link to contact us page" variant="contained" color="primary" margin="1rem" py={4} px={8}>
-                  Contact Us
-                </Button>
-                </Link>
-              </PBox>
+               <ContactUsButton />
     
     </RaisedHeader>  
     </Container>

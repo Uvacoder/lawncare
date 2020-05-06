@@ -72,7 +72,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-brotli',
       options: {
-        extensions: ['tsx', 'html', 'js', 'svg']
+        extensions: ['tsx', 'html', 'js', 'svg', 'jpg', 'jpeg', 'png', 'ts', 'md']
       }
     },
     'gatsby-plugin-styled-components',

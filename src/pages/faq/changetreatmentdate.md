@@ -2,9 +2,10 @@
 templateKey: faq
 slug: /faq/changetreatmentdate
 title: Can I change the treatment date?
+visible: true
 featured: false
 featuredimage: /img/behy-studio-2_l3lUpn4vE-unsplash.jpg
-alt: Photo by Behy Studio on Unsplash
+alt: photo by Behy Studio on Unsplash
 categories:
   - faq
 ---

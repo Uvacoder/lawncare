@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/ambrosden
-featured: true
+visible: true
+featured: false
 title: Ambrosden
 featuredimage: /img/ambrosden.jpeg
 alt: Results of our lawn care service in Ambrosden

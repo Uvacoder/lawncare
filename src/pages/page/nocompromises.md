@@ -1,11 +1,12 @@
 ---
 title: Great lawns with no compromises
-templateKey: post
+templateKey: page
 sortorder: 60
 slug: /service/nocompromises
+visible: true
 featured: false
-featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
-alt: Photo by Annie Sprat on Unsplash
+featuredimage: /img/nicolas-desmangles-FVpn3UdlMpg-unsplash.jpg
+alt: photo by Nicolas Desmangles on Unsplash
 categories:
   - about
 ---

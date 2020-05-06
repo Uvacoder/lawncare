@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Helmet from 'react-helmet'
+import {Helmet} from 'react-helmet'
 import { config, useSpring } from 'react-spring'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'

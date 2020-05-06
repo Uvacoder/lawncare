@@ -1,5 +1,5 @@
 import React from 'react'
-import EmailIcon from '@material-ui/icons/Email';
+import EmailIcon from '@material-ui/icons/Email'
 import { StaticQuery, graphql } from "gatsby"
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Button from '@material-ui/core/Button'

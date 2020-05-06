@@ -2,7 +2,8 @@
 templateKey: page
 slug: /project/middletoncheney
 title: Middleton Cheney
-featured: true
+visible: true
+featured: false
 featuredimage: /img/middletoncheney.jpg
 alt: Middleton Cheney Project photo
 categories:

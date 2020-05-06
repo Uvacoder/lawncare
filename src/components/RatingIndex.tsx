@@ -16,7 +16,6 @@ type PageProps = {
             slug: string
             templateKey: string
             featured: boolean
-            featuredimage: ChildImageSharp
             }[]
         }
       }
@@ -39,8 +38,8 @@ class RatingIndex extends React.Component {
         {ratings &&
           ratings.map(({ node: rating }) => (
 
-         <Link key={rating.frontmatter.slug} to={rating.frontmatter.slug} aria-label={`View our lastest news "${rating.frontmatter.title}"`}>
-         <h6> {rating.excerpt} {rating.frontmatter.title} - {rating.frontmatter.location}</h6>
+         <Link key={rating.frontmatter.slug} to={rating.frontmatter.slug} aria-label={`View our ratings "${rating.frontmatter.title}"`}>
+         <h6> {rating.frontmatter.title} - {rating.frontmatter.rating} Star rating</h6>
        
          
           </Link>
@@ -56,24 +55,15 @@ export default () => (
   <StaticQuery
     query={graphql`
     query RatingIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "rating"}, featured: {eq: true}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "rating"}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
-            excerpt(pruneLength: 147)
             id
             frontmatter {
               slug
               title
               location
-              templateKey
-              featured
-              featuredimage {
-                childImageSharp {
-                  fluid(quality: 90, maxWidth: 1920) {
-                      ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
+              rating
             }
           }
         }

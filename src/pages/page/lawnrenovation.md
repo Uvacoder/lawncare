@@ -1,8 +1,9 @@
 ---
 title: Lawn renovation
-templateKey: post
+templateKey: page
 sortorder: 30
 slug: /service/lawnrenovation
+visible: true
 featured: true
 featuredimage: /img/lawnrenovation.jpg
 alt: Lawn renovation

@@ -3,10 +3,11 @@ templateKey: categories
 sortorder: 10
 slug: /categories
 title: Search by category
-featured: true
+visible: true
+featured: false
 category: categories
 featuredimage: /img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg
-alt: Photo by Ochir Erdene Oyunmedeg on Unsplash
+alt: photo by Ochir Erdene Oyunmedeg on Unsplash
 categories:
   - header
 ---

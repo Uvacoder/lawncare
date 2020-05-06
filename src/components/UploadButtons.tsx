@@ -1,8 +1,8 @@
-import React from 'react';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import PhotoCamera from '@material-ui/icons/PhotoCamera';
+import React from 'react'
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
+import IconButton from '@material-ui/core/IconButton'
+import PhotoCamera from '@material-ui/icons/PhotoCamera'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

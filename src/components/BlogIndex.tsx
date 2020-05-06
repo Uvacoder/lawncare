@@ -16,7 +16,6 @@ type PageProps = {
           frontmatter: {
             title: string
             slug: string
-            templateKey: string
             featured: boolean
             featuredimage: ChildImageSharp
             }[]
@@ -66,7 +65,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query BlogIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "post"}}}, sort: {order: ASC, fields: frontmatter___sortorder}) {
+      allMarkdownRemark(filter: {frontmatter: {featured: {eq: true}, visible: {eq: true}}}, sort: {order: ASC, fields: frontmatter___sortorder}) {
         edges {
           node {
            excerpt(pruneLength: 400)
@@ -74,11 +73,10 @@ export default () => (
             frontmatter {
               slug
               title
-              templateKey
               featured
               featuredimage {
                 childImageSharp {
-                  fluid(quality: 100, maxWidth: 450, maxHeight: 450) {
+                  fluid(quality: 90, maxWidth: 450, maxHeight: 450) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }

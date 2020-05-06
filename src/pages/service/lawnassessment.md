@@ -1,8 +1,10 @@
 ---
 templateKey: page
 slug: /service/lawnassessment
+sortorder: 10
+visible: true
 featured: true
-title: Lawn care
+title: Lawn Assessment
 featuredimage: /img/lawnassessment.jpg
 alt: Lawns Matter Logo
 categories:

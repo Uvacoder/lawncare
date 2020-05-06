@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/croughton
-featured: true
+visible: true
+featured: false
 title: Croughton
 featuredimage: /img/croughton.jpeg
 alt: Results of our lawn care service in Croughton

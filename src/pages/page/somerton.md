@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/somerton
-featured: true
+visible: true
+featured: false
 title: Somerton
 featuredimage: /img/somerton.jpg
 alt: Results of our lawn care service in Somerton

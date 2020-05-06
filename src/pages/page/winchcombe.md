@@ -1,7 +1,8 @@
 ---
 templateKey: page
 slug: /project/winchcombe
-featured: true
+visible: true
+featured: false
 title: Winchcombe
 featuredimage: /img/winchcombe.jpg
 alt: Results of our lawn care service in Winchcombe

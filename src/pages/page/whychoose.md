@@ -1,11 +1,12 @@
 ---
 title: Why Choose Lawns Matter?
-templateKey: post
+templateKey: page
 sortorder: 10
 slug: /about/whychoose
+visible: true
 featured: false
-featuredimage: /img/jon-tyson-hhq1Lxtuwd8-unsplash.jpg
-alt: Photo by Jon Tyson on Unsplash
+featuredimage: /img/echo-grid-j3KZDZxFipA-unsplash.jpg
+alt: photo by Echo Grid on Unsplash
 categories:
   - about
 ---

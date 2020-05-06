@@ -1,12 +1,12 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
+import React from 'react'
+import Button from '@material-ui/core/Button'
+import Menu from '@material-ui/core/Menu'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import GlobalStyles from '../styles/globalStyle'
 import styled from 'styled-components'
-import { makeStyles, createStyles } from '@material-ui/core/styles';
+import { makeStyles, createStyles } from '@material-ui/core/styles'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Box from '@material-ui/core/Box';
+import Box from '@material-ui/core/Box'
 
 
 const useStyles = makeStyles((theme: Theme) =>

@@ -1,7 +1,5 @@
 import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
-import { ChildImageSharp } from '../types'
-import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import List from '../styles/listStyle'
 
 type PageProps = {
@@ -13,11 +11,9 @@ type PageProps = {
           id: string
           frontmatter: {
             title: string
-            location: string
             slug: string
             templateKey: string
-            featured: boolean
-            featuredimage: ChildImageSharp
+            visible: boolean
             }[]
         }
       }
@@ -39,11 +35,9 @@ class FAQIndex extends React.Component {
         <List>
         {faqs &&
           faqs.map(({ node: faq }) => (
-
-         <Link key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`Frequently Asked Questions "${faq.frontmatter.title}"`}>
-                      
+         <Link key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`Frequently Asked Questions "${faq.frontmatter.title}"`}>     
             <span><h4 >Q. {faq.frontmatter.title}</h4>
-            <h6>{faq.excerpt}</h6> </span>
+            <h5>{faq.excerpt}</h5> </span>
           </Link>
          
           ))}
@@ -57,7 +51,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query FAQIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "faq"}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "faq"}, visible: {eq: true}}}, sort: {order: ASC, fields: id}) {
         edges {
           node {
            excerpt(pruneLength: 400)
@@ -65,9 +59,8 @@ export default () => (
             frontmatter {
               slug
               title
-              location
               templateKey
-              featured
+              visible
           
             }
           }

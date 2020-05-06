@@ -18,23 +18,15 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Template Key", name: templateKey, widget: hidden, default: page }
-      - { label: sortorder, required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
-      - { label: slug, name: slug, widget: string }
-      - { label: title, name: title, widget: string }
+      - { label: "Sort order", required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
+      - { label: Path, name: slug, widget: string }
+      - { label: Title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
-      - { label: Featuredimage, name: featuredimage, widget: image }
+      - { label: Image, name: featuredimage, widget: image }
       - { label: "Image description (needed for SEO)", name: alt, widget: string }
-      - label: Slideshow
-        required: false
-        name: slideshow
-        widget: list
-        fields:
-          - { label: image, required: false, name: image, widget: image }
-          - { label: index, required: false, name: index, widget: number, min: 1, step: 1 }
-          - { label: "Image description (needed for SEO)", required: false, name: image_alt, widget: string }
-          - { label: imageLabel, required: false, name: imageLabel, widget: string }
       - { label: "Main content", required: false, name: body, widget: markdown }
-      - { label: categories, required: false, name: categories, widget: list }
+      - { label: Categories, required: false, name: categories, widget: list }
+      - { label: Location, required: false, name: locationName, widget: string }
   - name: post
     label: Post
     folder: src/pages/post

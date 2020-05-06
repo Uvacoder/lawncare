@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import BlogIndex from '../components/BlogIndex'
-import Helmet from 'react-helmet'
+import {Helmet} from 'react-helmet'
 import SEO from '../components/SEO'
 import GlobalStyles from '../styles/globalStyle'
 import RaisedHeader from '../styles/raisedHeaderStyle'
@@ -23,7 +23,7 @@ export const IndexPageTemplate = ({
 
   <div>
  
-    <GlobalStyles />
+
     <SEO  pathname={slug}
         title={title}
         node={slug}
@@ -32,8 +32,9 @@ export const IndexPageTemplate = ({
         />
     <Helmet title={title} />
      <Content bg={theme.palette.primary.main} >
+   
      <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
-        <Container>
+     <Container>
             <RaisedHeader >
                         <PageTitle >{title}</PageTitle>
                       <Description>

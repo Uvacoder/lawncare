@@ -1,20 +1,20 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { createStyles, Theme,  withStyles, makeStyles  } from '@material-ui/core/styles';
+import { createStyles, Theme,  withStyles, makeStyles  } from '@material-ui/core/styles'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
-import { Form } from 'semantic-ui-react'
-import FormControl from '@material-ui/core/FormControl';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import FormControl from '@material-ui/core/FormControl'
+import TextField from '@material-ui/core/TextField'
+import Button from '@material-ui/core/Button'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Grid from '@material-ui/core/Grid';
+import Grid from '@material-ui/core/Grid'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
 import FormContainer from '../styles/formContainerStyle'
 import Img from 'gatsby-image'
+import HeaderImage from '../components/HeaderImage'
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -92,45 +92,42 @@ type PageProps = {
      <Content bg={theme.palette.primary.main} >
      <FormContainer >
      <Grid container spacing={1}  >
-            <Grid item xs={2} />
-            <Grid item xs={8} >
+            <Grid item xs={1} />
+            <Grid item xs={10} >
           <Img fluid={imageData}/>
             </Grid>
-            <Grid item xs={2} />
+            <Grid item xs={1} />
        
       </Grid> 
       </FormContainer>
-      <br />
+     
+     {/* <HeaderImage backgroundImage={imageData} /> */}
       <FormContainer >
               <RaisedHeader >
             <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>
-            <FormContainer >
-                            <Form size='large' name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
+             <FormContainer >
+                            <form size='large' name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
                           <FormControl>
-                            <Grid container spacing={1} >
-                              <Grid item xs={5} ><InputField label="Name" id="name-input"   /></Grid>
-                              <Grid item xs={1} />
-                              <Grid item xs={6} ><InputField label="Address"  id="address-input" size="large"  /></Grid>
+                            <Grid container  >
+                              <Grid item xs={7} ><InputField fullWidth label="Name" id="name-input"   /></Grid>
+                              <Grid item xs={7} ><InputField fullWidth label="Tel No:" id="telephone-number-input" /></Grid>
+                           
+                              <Grid item xs={12} ><InputField fullWidth label="Address"  id="address-input" size="large"  /></Grid>
+                              <Grid item xs={7}><InputField fullWidth label="Post Code" id="postcode-input"  /></Grid>
+                           
+                              <Grid item xs={7}><InputField fullWidth label="Email" id="email-input"   /></Grid>
                               </Grid>  
-                              <Grid container spacing={1} >   
-                              <Grid item xs={5} ><InputField label="Town"  id="postal-town-input" size="large"  /></Grid>
-                              <Grid item xs={1} />
-                              <Grid item xs={6}><InputField label="Tel No:" id="telephone-number-input" /></Grid>
-                              </Grid>  
-                              <Grid container spacing={1} >  
-                              <Grid item xs={5} ><InputField label="Post Code" id="postcode-input"  /></Grid>
-                              <Grid item xs={1} />
-                              <Grid item xs={6}><InputField label="Email" id="email-input"   /></Grid>
-                              </Grid> 
+
                                 <Grid item  ><InputField  label="Message" fullWidth placeholder="Please enter your message here " id="message-input" multiline rows="3" size="large" /></Grid>
                               <Grid container spacing={1}>
-                              <Grid item xs></Grid>
+                              <Grid item xs={12}><br /></Grid>
+                           
+                              <br />
+                              <Grid item xs={12}><SendMessageButton  aria-label="Send message button" variant="contained" color="primary">Send Message</SendMessageButton></Grid>
+                              <br />
                               </Grid>
-                              <br />
-                              <SendMessageButton  aria-label="Send message button" variant="contained" color="primary">Send Message</SendMessageButton>
-                              <br />
                         </FormControl>
-                        </Form>
+                        </form>
                         </FormContainer>
               </RaisedHeader>
               </FormContainer>
