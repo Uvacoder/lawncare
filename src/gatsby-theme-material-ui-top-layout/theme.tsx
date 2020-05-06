@@ -248,8 +248,8 @@ const theme = createMuiTheme({
 				},
 		},
 		leafletContainer: {
-			height: '40vw',
-			width: '100%',
+			height: '85vh',
+			width: '100vw',
 		},
  });
 

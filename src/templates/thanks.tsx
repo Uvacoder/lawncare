@@ -77,7 +77,7 @@ export default ThanksPage
 
 export const pageQuery = graphql`
 query ThanksPageTemplate {
-   markdownRemark(frontmatter: {templateKey: {eq: "reviews"}}) {
+   markdownRemark(frontmatter: {templateKey: {eq: "thanks"}}) {
       html
       frontmatter {
       title
@@ -89,20 +89,6 @@ query ThanksPageTemplate {
         }
       }
       slug
-    }
-  }
-allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "review"}}}, sort: {order: ASC, fields: id}) { 
-  edges {
-      node {
-        excerpt(pruneLength: 400)
-        id
-        posts:   frontmatter {
-          slug
-          title
-          templateKey
-          featured
-        }
-      }
     }
   }
   site {

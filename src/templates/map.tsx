@@ -22,7 +22,7 @@ export class AreaServedMap extends Component {
       return (
         <Map style={{ 
           height: theme.leafletContainer.height, 
-          width: theme.leafletContainer.width,
+          width: "100%",
           zIndex: 2,
           }} 
           {...options} 
@@ -78,11 +78,11 @@ type PageProps = {
   
        />
    <Helmet title={data.markdownRemark.frontmatter.title} />
-     <Content bg={theme.palette.primary.main} >
-
+   <Content bg={theme.palette.primary.main} >
      <AreaServedMap />
-
-        <Container  >
+    
+     <Container  >
+ 
                 <RaisedHeader   >
                   <PageTitle >{data.markdownRemark.frontmatter.title} </PageTitle>
                   <Description >
