@@ -5,7 +5,6 @@ import Layout from '../components/layout'
 import BlogIndex from '../components/BlogIndex'
 import { Helmet } from 'react-helmet'
 import SEO from '../components/SEO'
-import GlobalStyles from '../styles/globalStyle'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
@@ -95,7 +94,7 @@ query IndexPageTemplate {
       title
       featuredimage {
         childImageSharp {
-          fluid(quality:95 maxWidth: 1920) {
+          fluid(quality:95 maxHeight: 1080, maxWidth: 1920)  {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

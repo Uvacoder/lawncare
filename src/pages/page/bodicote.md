@@ -10,6 +10,6 @@ alt: Results of our lawn care service in Bodicote
 categories:
 - project
 ---
-These are the results of our Lawn care in Bodicote 
+These are the results of our Lawn care in Bodicote.
 
 

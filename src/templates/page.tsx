@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import Container from '@material-ui/core/Container'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
@@ -12,6 +11,7 @@ import Content from '../styles/contentStyle'
 import PropTypes from 'prop-types'
 import Description from  '../styles/descriptionStyle'
 import ContactUsButton from '../components/ContactUsButton'
+import PageIndex from '../components/PageIndex'
 
 export  const PageTemplate = ({  
     featuredimage,
@@ -29,15 +29,20 @@ export  const PageTemplate = ({
     <Helmet title={title} />
      <Content bg={theme.palette.primary.main} >
      <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
-     <Container>
+
+        
+
+
           <RaisedHeader   >
             <PageTitle >{title} </PageTitle>
             <Description >
-              <div dangerouslySetInnerHTML={{ __html: html }} />
+            <h4> <div dangerouslySetInnerHTML={{ __html: html }} /></h4>
               <ContactUsButton />
+              <h4>Take a look at some of our other projects...</h4>
+              <PageIndex />
             </Description>
           </RaisedHeader> 
-          </Container>
+
       </Content>
     </div>
   )
@@ -90,7 +95,7 @@ query Page ($id: String!) {
       categories
       featuredimage {
         childImageSharp {
-          fluid(quality:95 maxWidth: 1920)  {
+          fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

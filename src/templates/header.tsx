@@ -122,7 +122,7 @@ export const query = graphql`
           category
           featuredimage {
             childImageSharp {
-              fluid(quality: 95, maxWidth: 1920) {
+              fluid(quality:95 maxHeight: 1080, maxWidth: 1920) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

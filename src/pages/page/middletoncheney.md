@@ -10,4 +10,4 @@ alt: Middleton Cheney Project photo
 categories:
   - project
 ---
-These are the results of our lawn care service at a client in Middleton Cheney
+These are the results of our lawn care service at a client in Middleton Cheney.

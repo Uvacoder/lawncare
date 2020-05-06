@@ -11,7 +11,7 @@ import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
 import ContactUsButton from '../components/ContactUsButton'
-
+import FAQIndex from '../components/FAQIndex'
 
 type PageProps = {
   data: {
@@ -51,10 +51,12 @@ type PageProps = {
      <RaisedHeader  >
             <PageTitle>{data.markdownRemark.frontmatter.title}</PageTitle>
                <Description>
-                 <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-               </Description> 
+               <h4>  <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} /></h4>
                <ContactUsButton />
-    
+               <h4>More questions? Please take a look below...</h4>
+               <FAQIndex />
+               </Description> 
+
     </RaisedHeader>  
     </Container>
     </Content>
@@ -78,7 +80,7 @@ query FaqPage ($id: String!) {
       categories
       featuredimage {
         childImageSharp {
-          fluid(quality:95 maxWidth: 1920)  {
+          fluid(quality:95 maxHeight: 1080, maxWidth: 1920)  {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

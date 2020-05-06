@@ -1,19 +1,17 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import { config, useSpring } from 'react-spring'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import HeaderImage from '../components/HeaderImage'
 import RaisedHeader from '../styles/raisedHeaderStyle'
-import PBox from '../styles/pboxStyle'
 import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
-import Title from '../styles/titleStyle'
 import Description from  '../styles/descriptionStyle'
+import ContactUsButton from '../components/ContactUsButton'
+import ReviewIndex from '../components/ReviewIndex'
 
 type PageProps = {
   data: {
@@ -34,18 +32,10 @@ type PageProps = {
 
 
   const ReviewPage = ({ data }) => {
-  const categoryAnimation = useSpring({
-    config: config.slow,
-    from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
-    to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
-  })
-  const titleAnimation = useSpring({ config: config.slow, delay: 30, from: { opacity: 0 }, to: { opacity: 1 } })
-  const descAnimation = useSpring({ config: config.slow, delay: 60, from: { opacity: 0 }, to: { opacity: 1 } })
-  const imagesAnimation = useSpring({ config: config.slow, delay: 80, from: { opacity: 0 }, to: { opacity: 1 } })
-  const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
+    const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
+    <Layout>
     <div>
-    <Layout color={theme.palette.primary.main}>
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
         title={`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.siteUrl}`}
@@ -54,41 +44,23 @@ type PageProps = {
         banner={imageData}
          />
       <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
-      <Content bg={theme.palette.primary.main} py={10}>
-      <HeaderImage backgroundImage={imageData} />
-        <Container>
- <Container>
-
- <RaisedHeader  >
- <PageTitle  >
- <Container > 
-
- <Title color={theme.palette.secondary.main }>{data.markdownRemark.frontmatter.title}</Title>
-
-</Container>
- </PageTitle>
-   
-
-    <h4>  <Description style={descAnimation}>
-    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-
-      </Description></h4> 
+      <Content bg={theme.palette.primary.main} >
+        <HeaderImage backgroundImage={imageData} />
+        <Container>  
+          <RaisedHeader  >
+              <PageTitle  >{data.markdownRemark.frontmatter.title}</PageTitle>
+                <Description >
+                <h4><div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} /></h4>  
+                  <ContactUsButton  />
+                  <h4>Read more of our customer reviews...</h4>
+              <ReviewIndex />
+                </Description>
+          </RaisedHeader>
+          </Container>  
+      </Content>
       
-   
-    <PBox style={{ textAlign: 'center' }} >
-      <Link to="/contactus">
-      <Button  aria-label="Link to contact us form" variant="contained" color="primary" margin="1rem" py={4} px={8}>
-        Contact Us
-      </Button>
-      </Link>
-    </PBox>
-    
-    </RaisedHeader>
-    </Container>  
-    </Container>
-    </Content>
-    </Layout>
     </div>
+    </Layout>
   )
 }
 
@@ -109,7 +81,7 @@ query ReviewPage ($id: String!) {
       recommendation_type_positive
       featuredimage {
         childImageSharp {
-          fluid(quality:95 maxWidth: 1920)  {
+          fluid(quality:95 maxHeight: 1080, maxWidth: 1920)  {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

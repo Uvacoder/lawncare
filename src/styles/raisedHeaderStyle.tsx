@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container'
 const RaisedHeader = styled(Container)`
   padding: 30px 0;
   width: 90%;
-  margin: -100px 5% 0px 5%;
+  margin: -50px 5% 0px 5%;
   box-shadow: 6px 6px 10px 0px rgb(47, 54, 68, 0.4);
   z-index: 3;
   position: relative;

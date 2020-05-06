@@ -10,6 +10,6 @@ alt: Results of our lawn care service in Chadlington
 categories:
 - project
 ---
-These are the results of our lawn care service at a client in Chadlington
+These are the results of our lawn care service at a client in Chadlington.
 
 

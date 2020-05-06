@@ -1,7 +1,7 @@
 ---
 templateKey: page
 sortorder: 14
-slug: /service/header
+slug: /services
 title: Our Service
 visible: true
 featured: false

@@ -10,6 +10,6 @@ alt: Results of our lawn care service in Evenly
 categories:
 - project
 ---
-These are the results of our lawn care service at a client in Evenly
+These are the results of our lawn care service at a client in Evenly.
 
 

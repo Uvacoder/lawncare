@@ -10,6 +10,6 @@ alt: Results of our lawn care service in Banbury
 categories:
 - project
 ---
-These are the results of our lawn care service at a client in Banbury
+These are the results of our lawn care service at a client in Banbury.
 
 

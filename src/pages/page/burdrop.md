@@ -10,6 +10,6 @@ alt: Results of our lawn care service in Burdrop
 categories:
 - project
 ---
-These are the results of our lawn care service at a client in Burdrop
+These are the results of our lawn care service at a client in Burdrop.
 
 

@@ -58,9 +58,6 @@ class PageIndex extends React.Component {
     const { edges: pages } = data.allMarkdownRemark
 
     return (
-
-      <Layout color={theme.palette.primary.main}>
-        <SEO title={data.site.siteMetadata.title} />
         <Area>
         {pages &&
           pages.map(({ node: page }) => (
@@ -71,7 +68,7 @@ class PageIndex extends React.Component {
           </GridLink>
           ))}
       </Area>
-      </Layout>
+
     )
   }
 }

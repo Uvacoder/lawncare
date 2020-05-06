@@ -10,6 +10,6 @@ alt: Results of our lawn care service in Wooton
 categories:
 - project
 ---
-These are the results of our lawn care service at a client in wooton
+These are the results of our lawn care service at a client in Wooton.
 
 

@@ -10,6 +10,6 @@ alt: Results of our lawn care service in Tysoe
 categories:
 - project
 ---
-These are the results of our lawn care service at a client in Tysoe
+These are the results of our lawn care service at a client in Tysoe.
 
 

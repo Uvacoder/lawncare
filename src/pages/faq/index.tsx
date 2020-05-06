@@ -75,7 +75,7 @@ query FaqHeaderPage {
       categories
       featuredimage {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
+          fluid(quality:95 maxHeight: 1080, maxWidth: 1920)  {
              ...GatsbyImageSharpFluid_withWebp
           }
         }

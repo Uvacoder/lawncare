@@ -10,4 +10,4 @@ alt: Sutton Courtenay After photo
 categories:
   - project
 ---
-These are the results of our lawn care service at a client in Sutton Courtenay
+These are the results of our lawn care service at a client in Sutton Courtenay.

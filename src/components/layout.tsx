@@ -22,13 +22,14 @@ const Layout = ({ children, color }: LayoutProps) => {
          <Main>{children}</Main>
          <BottomButtonBar  bg={theme.palette.primary.main}   />
         </Hidden>
+
         <Hidden smDown>
         <div style={{width: theme.sidebar.width.main }}>
          <SideBarInner>
             <PermanentDrawerLeft />
           </SideBarInner>
-      
-          <Container position="relative" style={{marginLeft: theme.sidebar.width.big }}>
+        <Container position="relative" style={{marginLeft: theme.sidebar.width.big }}>
+          
            <Main>{children}</Main>
 
           </Container>
