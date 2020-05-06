@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 import Container from '@material-ui/core/Container'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
