@@ -11,8 +11,6 @@ import StarRatings from 'react-star-ratings'
 import PageTitle from '../styles/pageTitleStyle'
 import GlobalStyles from '../styles/globalStyle'
 import Content from '../styles/contentStyle'
-import Description from  '../styles/descriptionStyle'
-import Box from '@material-ui/core/Box';
 
 export const RatingPageTemplate = ({
   featuredimage,
