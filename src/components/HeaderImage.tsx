@@ -2,14 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import HeaderContainer from '../styles/headerContainerStyle'
 import Img from "gatsby-image"
-import HeaderImageContainer from '../styles/headerImageContainer'
-import Banner from '../styles/bannerStyle'
-
 
 const HeaderImage = ({ backgroundImage }) => (  
 
-  <HeaderImageContainer>
-  <Banner>
+
           <Img 
               fluid={backgroundImage}
               backgroundAttachment='relative'
@@ -18,8 +14,8 @@ const HeaderImage = ({ backgroundImage }) => (
                 >
             <HeaderContainer />
           </Img> 
-          </Banner>   
-   </HeaderImageContainer>
+ 
+
 
 )
 

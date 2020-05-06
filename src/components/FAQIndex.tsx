@@ -35,11 +35,9 @@ class FAQIndex extends React.Component {
         <List>
         {faqs &&
           faqs.map(({ node: faq }) => (
-
-         <Link key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`Frequently Asked Questions "${faq.frontmatter.title}"`}>
-                      
+         <Link key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`Frequently Asked Questions "${faq.frontmatter.title}"`}>     
             <span><h4 >Q. {faq.frontmatter.title}</h4>
-            <h6>{faq.excerpt}</h6> </span>
+            <h5>{faq.excerpt}</h5> </span>
           </Link>
          
           ))}

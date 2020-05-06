@@ -6,8 +6,8 @@ title: Frequently Asked Questions
 visible: true
 featured: true
 category: faqs
-featuredimage: /img/fauzan-saari-pZXg_ObLOM4-unsplash_cropped.jpg
-alt: Photo by Fauzan Saari on Unsplash
+featuredimage: /img/fauzan-saari-pZXg_ObLOM4-unsplash.jpg
+alt: photo by Fauzan Saari on Unsplash
 categories:
   - faq
 ---

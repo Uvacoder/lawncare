@@ -1,6 +1,6 @@
 ---
 title: Lawn renovation
-templateKey: post
+templateKey: page
 sortorder: 30
 slug: /service/lawnrenovation
 visible: true

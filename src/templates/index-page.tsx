@@ -32,8 +32,9 @@ export const IndexPageTemplate = ({
         />
     <Helmet title={title} />
      <Content bg={theme.palette.primary.main} >
+   
      <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
-        <Container>
+     <Container>
             <RaisedHeader >
                         <PageTitle >{title}</PageTitle>
                       <Description>

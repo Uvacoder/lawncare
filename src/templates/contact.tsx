@@ -90,18 +90,18 @@ type PageProps = {
      
    
      <Content bg={theme.palette.primary.main} >
-     {/* <FormContainer >
+     <FormContainer >
      <Grid container spacing={1}  >
-            <Grid item xs={2} />
-            <Grid item xs={8} >
+            <Grid item xs={1} />
+            <Grid item xs={10} >
           <Img fluid={imageData}/>
             </Grid>
-            <Grid item xs={2} />
+            <Grid item xs={1} />
        
       </Grid> 
-      </FormContainer> */}
+      </FormContainer>
      
-     <HeaderImage backgroundImage={imageData} />
+     {/* <HeaderImage backgroundImage={imageData} /> */}
       <FormContainer >
               <RaisedHeader >
             <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>

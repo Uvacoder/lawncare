@@ -5,7 +5,7 @@ title: How much does a treatment cost?
 visible: true
 featured: false
 featuredimage: /img/steve-smith-Zvvu4zRKijE-unsplash.jpg
-alt: Photo by Steve Smith on Unsplash
+alt: photo by Steve Smith on Unsplash
 categories:
   - faq
 ---

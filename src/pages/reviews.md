@@ -7,9 +7,9 @@ visible: true
 featured: true
 category: reviews
 featuredimage: /img/alistair-macrobert-UI4lA6hZlQE-unsplash.jpg
-alt: Photo by Alistair MacRobert on Unsplash
+alt: photo by Alistair MacRobert on Unsplash
 categories:
-  - review
+  - header
 ---
 ##### We are proud of our quality of work, as we are delivering what we believe is the best quality lawn care service available. #####
 

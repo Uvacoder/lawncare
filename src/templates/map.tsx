@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
-import { render } from 'react-dom'
 import { Map, Marker, Circle, CircleMarker, Popup, TileLayer } from 'react-leaflet'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import { graphql, Link } from 'gatsby'
+import { graphql} from 'gatsby'
 import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
-import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
-import HeaderImage from '../components/HeaderImage'
 import RaisedHeader from '../styles/raisedHeaderStyle'
 import ContactUsButton from '../components/ContactUsButton'
 import PageTitle from '../styles/pageTitleStyle'
@@ -25,17 +22,18 @@ export class AreaServedMap extends Component {
       return (
         <Map style={{ 
           height: theme.leafletContainer.height, 
-          width: theme.leafletContainer.width 
+          width: theme.leafletContainer.width,
+          zIndex: 2,
           }} 
           {...options} 
           center={position} 
-          zoom={9} 
+          zoom={10} 
           >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
         />
-            <Circle center={position} fillColor="blue" radius={24140.2} />
+            <Circle center={position} label="attribution" fillColor="blue" radius={24140.2}  ><Popup>Area Served</Popup></Circle>
       </Map>
     
       )
@@ -55,7 +53,11 @@ type PageProps = {
           slug: string
           alt: string
           categories: string
-          featuredimage: ChildImageSharp
+          }
+        }
+        site: {
+          siteMetadata: {
+            title: string
           }
         }
      }
@@ -63,7 +65,7 @@ type PageProps = {
 
   const AreaServed = ({ data }) => {
  
-   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
+   
   return (
     <div >
           <GlobalStyles />
@@ -73,16 +75,14 @@ type PageProps = {
         title={data.site.siteMetadata.title}
         desc={data.markdownRemark.html}
         node={data.markdownRemark.frontmatter.slug}
-        banner={imageData}
+  
        />
-   <Helmet title={`${data.markdownRemark.frontmatter.title} `} />
+   <Helmet title={data.markdownRemark.frontmatter.title} />
      <Content bg={theme.palette.primary.main} >
-      
-     
-     {/* <HeaderImage backgroundImage={backgroundImageData} /> */}
+
      <AreaServedMap />
-        <Container>
-          <Container>
+
+        <Container  >
                 <RaisedHeader   >
                   <PageTitle >{data.markdownRemark.frontmatter.title} </PageTitle>
                   <Description >
@@ -91,7 +91,6 @@ type PageProps = {
                
                   </Description>
                 </RaisedHeader>
-          </Container>  
         </Container>
       </Content>
     </Layout>
@@ -111,13 +110,6 @@ query AreaServed ($id: String!) {
       title
       templateKey
       categories
-      featuredimage {
-        childImageSharp {
-          fluid(quality:95 maxWidth: 1920)  {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
       alt
       featured
     }

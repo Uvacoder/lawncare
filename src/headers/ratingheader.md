@@ -1,8 +1,9 @@
 ---
-templateKey: rating
+templateKey: ratings
 sortorder: 50
 title: Lawn Care Customer Ratings
 visible: true
+slug: /rating
 featured: true
 category: rating
 featuredimage: /img/aboutus.jpg

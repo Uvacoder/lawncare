@@ -1,6 +1,6 @@
 ---
 title: Scarification
-templateKey: post
+templateKey: page
 sortorder: 40
 slug: /service/scarification
 visible: true

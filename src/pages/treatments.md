@@ -1,13 +1,13 @@
 ---
 templateKey: header
-slug: /treatments
+slug: /service/treatments
 sortorder: 10
 title: Essential Treatments
 visible: true
 featured: true
 category: treatments
 featuredimage: /img/philipp-lublasser-LNYdZutqsi0-unsplash_cropped.jpg
-alt: Photo by Philipp Lublasser on Unsplash
+alt: photo by Philipp Lublasser on Unsplash
 categories:
   - service
 ---

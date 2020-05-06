@@ -16,7 +16,6 @@ type PageProps = {
           frontmatter: {
             title: string
             slug: string
-            templateKey: string
             featured: boolean
             featuredimage: ChildImageSharp
             }[]
@@ -74,7 +73,6 @@ export default () => (
             frontmatter {
               slug
               title
-              templateKey
               featured
               featuredimage {
                 childImageSharp {

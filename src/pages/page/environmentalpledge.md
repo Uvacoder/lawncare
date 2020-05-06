@@ -1,6 +1,6 @@
 ---
 title: Our Environmental Pledge
-templateKey: post
+templateKey: page
 sortorder: 70
 slug: /service/environmentalpledge
 visible: true

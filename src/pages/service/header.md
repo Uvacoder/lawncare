@@ -7,7 +7,7 @@ visible: true
 featured: false
 category: service
 featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg
-alt: Photo by David Kaloczi on Unsplash
+alt: photo by David Kaloczi on Unsplash
 categories:
   - service
 ---

@@ -1,12 +1,12 @@
 ---
 title: Great lawns with no compromises
-templateKey: post
+templateKey: page
 sortorder: 60
 slug: /service/nocompromises
 visible: true
 featured: false
 featuredimage: /img/nicolas-desmangles-FVpn3UdlMpg-unsplash.jpg
-alt: Photo by Nicolas Desmangles on Unsplash
+alt: photo by Nicolas Desmangles on Unsplash
 categories:
   - about
 ---

@@ -1,11 +1,16 @@
 ---
 templateKey: upload
-slug: /upload
+slug: /photoupload
+sortorder: 40
 title: Photo upload 
 visible: true
-featured: false
+featured: true
 category: upload
 featuredimage: /img/viktor-forgacs-zwl6fOnNqrk-unsplash.jpg
-alt: Photo by Nervenet
+alt: photo by Viktor Forgacs on Unsplash
+categories:
+  - about
 ---
-Please upload a picture of your lawn, if you would like to enter our lawn of the month competition. 
+Our passion is creating beautiful lawns for our clients and we are proud of our work, so we are looking for the best photos of our customer's lawns. 
+
+If you are an existing customer and have any photos that you would be happy for us to use on our site, please upload a photo.

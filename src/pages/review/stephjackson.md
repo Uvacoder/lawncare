@@ -5,7 +5,7 @@ title: Steph Jackson
 visible: true
 featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
-alt: Photo by Sharon Mccutcheon on Unsplash
+alt: photo by Sharon Mccutcheon on Unsplash
 categories:
   - review
 created_time: "2018-09-07T18:43:17+0000"rating: 

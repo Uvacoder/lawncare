@@ -1,6 +1,6 @@
 ---
 title: Aeration holes
-templateKey: post
+templateKey: page
 sortorder: 100
 slug: /service/aerationholes
 visible: true

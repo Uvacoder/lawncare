@@ -1,13 +1,12 @@
 ---
-templateKey: post
-slug: /service/whyus
+templateKey: page
+slug: /about/whyus
 visible: true
 featured: true
 title: Why Us?
 featuredimage: /img/oleksandra-bardash-AlJg9kPvOJ4-unsplash_cropped.jpg
-alt: Photo by Oleksandra Bardash on unsplash
+alt: photo by Oleksandra Bardash on unsplash
 categories:
-  - service
   - about
 ---
 #### Lawns Matter are an independent, family run business based in Oxfordshire.  ####

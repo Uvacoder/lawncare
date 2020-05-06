@@ -243,8 +243,8 @@ const theme = createMuiTheme({
 		  },
 		headerImage: {
 			height: {
-				desktop: '85vh',
-				mobile: '200px',
+				desktop: '40vw',
+				mobile: '400px',
 				},
 		},
 		leafletContainer: {

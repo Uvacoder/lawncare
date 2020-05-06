@@ -6,5 +6,5 @@ visible: true
 featured: false
 category: contact
 featuredimage: /img/contactus.jpg
-alt: Photo by Nervenet
+alt: photo by Nervenet
 ---

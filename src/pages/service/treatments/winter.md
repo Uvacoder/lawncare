@@ -6,7 +6,7 @@ title: Winter Treatments
 visible: true
 featured: false
 featuredimage: /img/max-kleinen--KxkDgEvWT8-unsplash.jpg
-alt: Photo by Max Kleinen on Unsplash
+alt: photo by Max Kleinen on Unsplash
 categories:
   - treatments
 ---

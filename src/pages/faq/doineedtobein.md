@@ -5,7 +5,7 @@ title:  Do I need to be in when the lawn is being treated?
 visible: true
 featured: false
 featuredimage: /img/marina-de-salis-UozvGeM-_Ko-unsplash.jpg
-alt: Photo by Marina De Salis on Unsplash
+alt: photo by Marina De Salis on Unsplash
 categories:
   - faq
 ---

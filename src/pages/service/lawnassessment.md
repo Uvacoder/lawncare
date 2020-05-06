@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /service/lawnassessment
+sortorder: 10
 visible: true
 featured: true
 title: Lawn Assessment

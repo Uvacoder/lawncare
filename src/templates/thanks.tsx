@@ -1,49 +1,36 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import ThanksIndex from '../components/ThanksIndex'
 import SEO from '../components/SEO'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import PropTypes from 'prop-types'
-import Container from '@material-ui/core/Container'
-import HeaderImage from '../components/HeaderImage'
-import RaisedHeader from '../styles/raisedHeaderStyle'
-import StarRatings from 'react-star-ratings'
-import PageTitle from '../styles/pageTitleStyle'
 import GlobalStyles from '../styles/globalStyle'
+import RaisedHeader from '../styles/raisedHeaderStyle'
+import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
 import Description from  '../styles/descriptionStyle'
-import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container'
+import HeaderImage from '../components/HeaderImage'
 
-export const RatingPageTemplate = ({
+export const ThanksPageTemplate = ({
   featuredimage,
   title,
   slug,
-  rating,
+  html,
 }) => (
   <div>
     <GlobalStyles />
-    <SEO  pathname={slug}
-        title={title}
-        node={slug}
-        banner={featuredimage}
-        organisation
-        />
+    <SEO />
      <Content bg={theme.palette.primary.main} >
      <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
         <Container>
                   <RaisedHeader >
-                    <PageTitle>{title}
-                    <br />
-                    <br />
-                          <StarRatings
-                          rating={rating}
-                          starDimension="40px"
-                          starSpacing="15px"
-                          starRatedColor="FFD700"
-                        />  
-                     </PageTitle>
-                  
-            
+                    <PageTitle>{title}</PageTitle>
+                        <Description>
+                          <div dangerouslySetInnerHTML={{ __html: html }} />
+                          <ThanksIndex />  
+                        </Description>
                   </RaisedHeader>
         </Container>
       </Content>
@@ -51,62 +38,72 @@ export const RatingPageTemplate = ({
   </div>
 )
 
-RatingPageTemplate.propTypes = {
+ThanksPageTemplate.propTypes = {
   featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   slug: PropTypes.string,
-  rating: PropTypes.string,
+  html: PropTypes.markdown,
+  posts: PropTypes.shape({
+    frontmatter: PropTypes.array,
+  }),
 }
 
-const RatingPage = ({ data }) => {
+const ThanksPage = ({ data }) => {
 
   return (
     <Layout>
-      <RatingPageTemplate
+      <ThanksPageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
-        rating={data.markdownRemark.frontmatter.rating}
+        html={data.markdownRemark.html}
       />
     </Layout>
   )
 }
 
-RatingPage.propTypes = {
+ThanksPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
   }),
+  allMarkdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+  }),
 }
 
+export default ThanksPage
 
-export default RatingPage
-
-export const query = graphql`
-query RatingPage ($id: String!) {
-   markdownRemark(id: { eq: $id }) {
-   excerpt(pruneLength: 400)
-    html
-    frontmatter {
-      slug
+export const pageQuery = graphql`
+query ThanksPageTemplate {
+   markdownRemark(frontmatter: {templateKey: {eq: "reviews"}}) {
+      html
+      frontmatter {
       title
-      templateKey
-      categories
-      created_time
-      rating
-      recommendation_type_positive
-      featuredimage {
+   featuredimage {
         childImageSharp {
-          fluid(quality:95 maxWidth: 1920)  {
+          fluid(quality:95 maxWidth: 1920)   {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      alt
-      featured
+      slug
     }
-    id
+  }
+allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "review"}}}, sort: {order: ASC, fields: id}) { 
+  edges {
+      node {
+        excerpt(pruneLength: 400)
+        id
+        posts:   frontmatter {
+          slug
+          title
+          templateKey
+          featured
+        }
+      }
+    }
   }
   site {
     siteMetadata {
@@ -121,5 +118,4 @@ query RatingPage ($id: String!) {
 }
 
 
-
-`
+  `
