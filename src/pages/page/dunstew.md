@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/dunstew
+sortorder: 1170
 visible: true
 featured: false
 title: Duns Tew

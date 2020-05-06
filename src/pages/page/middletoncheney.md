@@ -2,6 +2,7 @@
 templateKey: page
 slug: /project/middletoncheney
 title: Middleton Cheney
+sortorder: 1230
 visible: true
 featured: false
 featuredimage: /img/middletoncheney.jpg

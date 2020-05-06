@@ -33,8 +33,16 @@ type PageProps = {
 
 const Area = styled(animated.div)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   grid-auto-rows: 40vw;
+
+  [theme.breakpoints.down('xl')]: {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  [theme.breakpoints.down('lg')]: {
+    grid-template-columns: 1fr 1fr;
+  }
 
  [theme.breakpoints.down('md')]: {
     grid-template-columns: 1fr;
@@ -73,7 +81,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query PageIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {categories: {eq: "project"}, visible: {eq: true}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {categories: {eq: "project"}, visible: {eq: true}}},  sort: {order: ASC, fields: frontmatter___sortorder}) {
         edges {
           node {
             id
@@ -85,7 +93,7 @@ export default () => (
               visible
               featuredimage {
                 childImageSharp {
-                  fluid(quality: 90, maxWidth: 450, maxHeight: 450)  {
+                  fluid(quality: 100, maxWidth: 450, maxHeight: 450)  {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }

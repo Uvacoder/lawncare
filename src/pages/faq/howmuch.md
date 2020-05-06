@@ -2,6 +2,7 @@
 templateKey: faq
 slug: /faq/howmuch
 title: How much does a treatment cost?
+sortorder: 60
 visible: true
 featured: false
 featuredimage: /img/steve-smith-Zvvu4zRKijE-unsplash.jpg

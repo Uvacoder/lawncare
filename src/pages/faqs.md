@@ -1,6 +1,6 @@
 ---
 templateKey: header
-sortorder: 50
+sortorder: 52
 slug: /faqs
 title: Frequently Asked Questions
 visible: true

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/swerford
+sortorder: 1310
 visible: true
 featured: false
 title: Swerford

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/southmoor
+sortorder: 1270
 visible: true
 featured: false
 title: Southmoor

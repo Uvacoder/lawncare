@@ -98,6 +98,7 @@ allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "review"}}}, sort: {
         id
         posts:   frontmatter {
           slug
+          sortorder
           title
           templateKey
           featured

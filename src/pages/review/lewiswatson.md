@@ -1,6 +1,7 @@
 ---
 templateKey: review
 slug: /review/lewiswatson
+sortorder: 1450
 title: Lewis Watson
 location: Bucknell
 visible: true

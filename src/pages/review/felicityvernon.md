@@ -1,6 +1,7 @@
 ---
 templateKey: review
 slug: /review/felicityvernon
+sortorder: 1440
 title: Felicity Vernon
 location: Chacombe
 visible: true

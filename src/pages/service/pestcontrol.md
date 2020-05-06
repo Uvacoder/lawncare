@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /service/pestcontrol
+sortorder: 630
 visible: true
 featured: false
 title: Pest Control

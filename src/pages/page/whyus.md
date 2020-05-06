@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /about/whyus
+sortorder: 24
 visible: true
 featured: true
 title: Why Us?

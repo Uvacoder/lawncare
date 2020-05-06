@@ -67,7 +67,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query TreatmentIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {categories: {eq: "treatments"}}}, sort: {order: ASC, fields: id}) {
+      allMarkdownRemark(filter: {frontmatter: {categories: {eq: "treatments"}}}, sort: {order: ASC, fields: frontmatter___sortorder}) {
         edges {
           node {
             id

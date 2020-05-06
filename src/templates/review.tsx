@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { config, useSpring } from 'react-spring'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
@@ -26,7 +26,7 @@ type PageProps = {
           featured: boolean
           slug: string
           alt: string
-          categories: string
+          categories: array
           featuredimage: ChildImageSharp
           }
         }
@@ -106,7 +106,6 @@ query ReviewPage ($id: String!) {
       templateKey
       categories
       created_time
-      rating
       recommendation_type_positive
       featuredimage {
         childImageSharp {

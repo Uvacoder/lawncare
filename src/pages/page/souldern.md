@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/souldern
+sortorder: 1260
 visible: true
 featured: false
 title: Souldern

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/shennington
+sortorder: 1240
 visible: true
 featured: false
 title: Shennington

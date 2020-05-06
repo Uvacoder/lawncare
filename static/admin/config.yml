@@ -56,10 +56,10 @@ collections:
         fields:
           - { label: "Template Key", name: templateKey, widget: hidden, default: index-page }
           - { label: slug, name: slug, widget: string }          
-          - { label: title, required: false, name: title, widget: string }
-          - { label: image, required: false, name: image, widget: image }         
-          - { label: categories, required: false, name: categories, widget: list }
+          - { label: title, required: false, name: title, widget: string }      
           - { label: Body, required: false, name: body, widget: markdown }
+          - { label: Image, required: false, name: featuredimage, widget: image }
+          - { label: "Image description (needed for SEO)", required: false, name: alt, widget: string }
   - name: headers
     label: "Section header"
     folder: src/pages

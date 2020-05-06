@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/hintononthehedges
+sortorder: 1160
 visible: true
 featured: false
 title: Hinton on the hedges

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/evenly
+sortorder: 1180
 visible: true
 featured: false
 title: Evenly

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /service/scarification
+sortorder: 77
 visible: true
 featured: false
 title: Scarification

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/tysoe
+sortorder: 1330
 visible: true
 featured: false
 title: Tysoe

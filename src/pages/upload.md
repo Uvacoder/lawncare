@@ -1,7 +1,7 @@
 ---
 templateKey: upload
 slug: /photoupload
-sortorder: 40
+sortorder: 44
 title: Photo upload 
 visible: true
 featured: true

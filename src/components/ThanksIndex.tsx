@@ -53,7 +53,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query ThanksIndexQuery {
-        allMarkdownRemark(filter: {frontmatter: {visible: {eq: true}, alt: {regex: "/Unsplash/"}}}, sort: {order: ASC, fields: id}) {
+        allMarkdownRemark(filter: {frontmatter: {visible: {eq: true}, alt: {regex: "/Unsplash/"}}}, sort: {order: ASC, fields: frontmatter___slug}) {
           edges {
             node {
               frontmatter {

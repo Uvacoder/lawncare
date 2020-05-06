@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/bladon
+sortorder: 1060
 visible: true
 featured: false
 title: Bladon

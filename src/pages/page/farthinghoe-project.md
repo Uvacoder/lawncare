@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/farthinghoe-project
+sortorder: 1120
 visible: true
 featured: false
 title: Farthinghoe 

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/kidlington
+sortorder: 1170
 visible: true
 featured: false
 title: Kidlington

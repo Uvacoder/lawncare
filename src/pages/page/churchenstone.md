@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/churchenstone
+sortorder: 1150
 visible: true
 featured: false
 title: Church Enstone

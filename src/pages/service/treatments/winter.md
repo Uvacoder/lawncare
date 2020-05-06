@@ -1,6 +1,6 @@
 ---
 templateKey: page
-sortorder: 50
+sortorder: 450
 slug: /service/treatments/winter
 title: Winter Treatments
 visible: true

@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/eynsham
+sortorder: 1190
 visible: true
 featured: false
 title: Eynsham

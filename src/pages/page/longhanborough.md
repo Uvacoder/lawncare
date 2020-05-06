@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/longhanborough
+sortorder: 1190
 visible: true
 featured: false
 title: Long Hanborough

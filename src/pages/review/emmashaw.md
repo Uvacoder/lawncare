@@ -1,6 +1,7 @@
 ---
 templateKey: review
 slug: /review/emmashaw
+sortorder: 1430
 title: Emma Shaw
 visible: true
 featured: false

@@ -2,6 +2,7 @@
 templateKey: faq
 slug: /faq/mowingadvice
 title: How should I mow the lawn?
+sortorder: 80
 visible: true
 featured: false
 featuredimage: /img/remi-muller-LlHgaeBwYVE-unsplash.jpg

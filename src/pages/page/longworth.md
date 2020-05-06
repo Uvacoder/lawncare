@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/longworth
+sortorder: 1200
 visible: true
 featured: false
 title: Longworth

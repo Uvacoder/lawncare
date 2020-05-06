@@ -1,7 +1,7 @@
 ---
 title: Area Served
 templateKey: map
-sortorder: 50
+sortorder: 38
 slug: /service/areaserved
 visible: true
 featured: true

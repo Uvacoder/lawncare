@@ -1,6 +1,7 @@
 ---
 templateKey: page
 slug: /project/warmington
+sortorder: 1340
 visible: true
 featured: false
 title: Warmington

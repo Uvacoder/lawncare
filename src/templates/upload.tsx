@@ -12,7 +12,7 @@ import PageTitle from '../styles/pageTitleStyle'
 import Content from '../styles/contentStyle'
 import HeaderImage from '../components/HeaderImage'
 import Uploader from '../components/uploader'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import Description from  '../styles/descriptionStyle'
 
 
