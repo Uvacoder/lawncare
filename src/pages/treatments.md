@@ -2,7 +2,7 @@
 templateKey: treatments
 slug: /treatments
 sortorder: 6
-title: Essential Treatments
+title: Seasonal Treatments
 visible: true
 featured: true
 featuredimage: /img/gustavo-es8pTY5UD7Q-unsplash.jpg

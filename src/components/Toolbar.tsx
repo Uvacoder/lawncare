@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Divider from '@material-ui/core/Divider'
@@ -64,15 +63,7 @@ export default function ElevateAppBar(props: Props) {
           className={classes.drawerPaper}
           backgroundColor={theme.palette.primary.main}
           position="fixed">
-          {/* <Toolbar
-          backgroundColor={theme.palette.primary.main}
-          className={classes.drawer}
-          variant="permanent"  
-          anchor="top" 
-          alignItems="space-between" 
-    
-     
-          > */}
+
                 
             <Grid container position="relative"  alignItems="flex-end"  justifyItems="center" >  
                 <Grid item xs={1} /> 
@@ -81,9 +72,9 @@ export default function ElevateAppBar(props: Props) {
                 </Grid>   
                 <Grid item xs={1} /> 
                 <Grid item xs={4}>
-                  <Link to="/">
+     
                       <LogoLarge />
-                  </Link>
+      
                 </Grid>     
                 <Grid item xs={1} /> 
                 <Grid item xs={2} >

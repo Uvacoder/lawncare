@@ -30,8 +30,6 @@ class FAQIndex extends React.Component {
 
     return (
 
-    
-   
         <List>
         {faqs &&
           faqs.map(({ node: faq }) => (

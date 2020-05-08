@@ -16,6 +16,3 @@ category:
 
 
 - Back to our [Treatments](/treatments) page
-- [Spring Treatments](/treatments/spring)
-- [Summer Treatments](/treatments/summer)
-- [Autumn Treatments](/treatments/autumn)
