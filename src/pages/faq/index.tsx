@@ -23,7 +23,7 @@ type PageProps = {
           featured: boolean
           slug: string
           alt: string
-          categories: string
+          category: string
           featuredimage: ChildImageSharp
           }
         }
@@ -65,17 +65,17 @@ export default FaqHeaderPage
 
 export const query = graphql`
 query FaqHeaderPage {
-  markdownRemark(frontmatter: {category: {eq: "faqs"}}) {
+  markdownRemark(frontmatter: {slug: {eq: "/faqs"}}) {
     excerpt(pruneLength: 400)
     html
     frontmatter {
       slug
       title
       templateKey
-      categories
+      category
       featuredimage {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
+          fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
              ...GatsbyImageSharpFluid_withWebp
           }
         }

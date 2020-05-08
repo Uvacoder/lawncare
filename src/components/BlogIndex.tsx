@@ -11,7 +11,6 @@ type PageProps = {
     allMarkdownRemark: {
       edges: {
         node: {
-          excerpt: string
           id: string
           frontmatter: {
             title: string
@@ -68,7 +67,6 @@ export default () => (
       allMarkdownRemark(filter: {frontmatter: {featured: {eq: true}, visible: {eq: true}}}, sort: {order: ASC, fields: frontmatter___sortorder}) {
         edges {
           node {
-           excerpt(pruneLength: 400)
             id
             frontmatter {
               slug

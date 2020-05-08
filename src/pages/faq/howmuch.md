@@ -7,7 +7,7 @@ visible: true
 featured: false
 featuredimage: /img/steve-smith-Zvvu4zRKijE-unsplash.jpg
 alt: photo by Steve Smith on Unsplash
-categories:
+category:
   - faq
 ---
 

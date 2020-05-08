@@ -7,7 +7,7 @@ visible: true
 featured: false
 featuredimage: /img/colin-watts-8WRRJ4xJeyg-unsplash.jpg
 alt: photo by Colin Watts Muller on Unsplash
-categories:
+category:
   - faq
 ---
 

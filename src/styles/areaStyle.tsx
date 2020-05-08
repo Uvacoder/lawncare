@@ -3,14 +3,10 @@ import { animated} from 'react-spring'
 
 const Area = styled(animated.div)`
   display: grid;
-  grid-template-columns: repeat(1fr);
-  grid-auto-rows: 40vw;
-  grid-row-start: 2;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 350px;
 
-   [theme.breakpoints.down('md')]:  {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 35vw;
-  }
 `
 
 export default Area
+

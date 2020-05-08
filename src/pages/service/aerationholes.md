@@ -1,13 +1,13 @@
 ---
 title: Aeration holes
-templateKey: page
+templateKey: service
 sortorder: 610
 slug: /service/aerationholes
 visible: true
 featured: false
 featuredimage: /img/aeration1.jpg
 alt: Aeration holes
-categories:
+category:
   - about
   - service
 ---

@@ -7,7 +7,7 @@ visible: true
 featured: true
 featuredimage: /img/lawnrenovation.jpg
 alt: Lawn renovation
-categories:
+category:
   - about
   - service
 ---

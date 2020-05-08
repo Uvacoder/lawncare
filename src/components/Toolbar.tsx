@@ -3,7 +3,8 @@ import { Link } from 'gatsby'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Divider from '@material-ui/core/Divider'
-import LogoSmall from './logoSmall'
+// import LogoSmall from './logoSmall'
+import LogoLarge from './logoLarge'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Grid from '@material-ui/core/Grid'
 import SimpleMenu from './SimpleMenu'
@@ -44,7 +45,7 @@ const useStyles = makeStyles((theme: Theme) =>
         color: theme.palette.primary.main,
       },
     },
-    LogoSmall: {
+    LogoLarge: {
       height: '12vw',
     }
   }),
@@ -81,7 +82,7 @@ export default function ElevateAppBar(props: Props) {
                 <Grid item xs={1} /> 
                 <Grid item xs={4}>
                   <Link to="/">
-                      <LogoSmall />
+                      <LogoLarge />
                   </Link>
                 </Grid>     
                 <Grid item xs={1} /> 

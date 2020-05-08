@@ -7,7 +7,7 @@ visible: true
 featured: false
 featuredimage: /img/behy-studio-2_l3lUpn4vE-unsplash.jpg
 alt: photo by Behy Studio on Unsplash
-categories:
+category:
   - faq
 ---
 

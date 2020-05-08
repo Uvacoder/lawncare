@@ -14,7 +14,7 @@ const ReviewPreview = ({ entry, getAsset }) => {
       featuredimage={entry.getIn(['data', 'image'])}
       alt={entry.getIn(['data', 'string'])}
       body={entry.getIn(['data', 'markdown'])}
-      categories={entry.getIn(['data', 'list'])}
+      category={entry.getIn(['data', 'list'])}
     /></div>
   )
 }

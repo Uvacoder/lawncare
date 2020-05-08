@@ -7,7 +7,7 @@ visible: true
 featured: false
 featuredimage: /img/mohammad-saemian-riYppYjeltk-unsplash.jpg
 alt: photo by mohammad saemian on Unsplash
-categories:
+category:
   - faq
 ---
 

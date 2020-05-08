@@ -1,69 +1,21 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
-import Container from '@material-ui/core/Container'
 import Layout from '../components/layout'
-import SEO from '../components/SEO'
-import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import HeaderImage from '../components/HeaderImage'
-import RaisedHeader from '../styles/raisedHeaderStyle'
-import PageTitle from '../styles/pageTitleStyle'
-import Content from '../styles/contentStyle'
 import PropTypes from 'prop-types'
-import Description from  '../styles/descriptionStyle'
-import ContactUsButton from '../components/ContactUsButton'
+import PageTemplate from '../components/PageTemplate'
+import PageIndex from '../components/PageIndex'
 
-export  const PageTemplate = ({  
-    featuredimage,
-    title,
-    slug,
-    html, 
-  }) =>  (
-    <div >
-          <SEO  pathname={slug}
-        title={title}
-        node={slug}
-        banner={featuredimage}
-        organisation
-        />
-    <Helmet title={title} />
-     <Content bg={theme.palette.primary.main} >
-     <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
-     <Container>
-          <RaisedHeader   >
-            <PageTitle >{title} </PageTitle>
-            <Description >
-              <div dangerouslySetInnerHTML={{ __html: html }} />
-              <ContactUsButton />
-            </Description>
-          </RaisedHeader> 
-          </Container>
-      </Content>
-    </div>
-  )
-
-
-PageTemplate.propTypes = {
-  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  slug: PropTypes.string,
-  html: PropTypes.markdown,
-  posts: PropTypes.shape({
-    frontmatter: PropTypes.object,
-  }),
-}
-
-
-const Page = ({ data }) => {
+export const Page = ({ data }) => {
 
   return (
     <Layout>
       <PageTemplate
-        featuredimage={data.markdownRemark.frontmatter.featuredimage}
+        featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
-        html={data.markdownRemark.html}
-      />
+        html={data.markdownRemark.html}>
+           <PageIndex   category={data.markdownRemark.frontmatter.category} />
+        </PageTemplate>   
     </Layout>
   )
 }
@@ -87,10 +39,10 @@ query Page ($id: String!) {
       slug
       title
       templateKey
-      categories
+      category
       featuredimage {
         childImageSharp {
-          fluid(quality:95 maxWidth: 1920)  {
+          fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

@@ -1,97 +1,136 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
 import Layout from '../../components/layout'
+import ServiceCatalog from '../../components/ServiceCatalog'
 import SEO from '../../components/SEO'
 import theme from '../../gatsby-theme-material-ui-top-layout/theme'
+import GlobalStyles from '../../styles/globalStyle'
 import RaisedHeader from '../../styles/raisedHeaderStyle'
 import PageTitle from '../../styles/pageTitleStyle'
 import Content from '../../styles/contentStyle'
 import Description from  '../../styles/descriptionStyle'
-import ServiceCatalog from '../../components/ServiceCatalog'
+import Container from '@material-ui/core/Container'
 import HeaderImage from '../../components/HeaderImage'
 
-type PageProps = {
-  data: {
-        id: string
-        excerpt: string
-        html: markdown
-        frontmatter: {
-          title: string
-          templateKey: string
-          featured: boolean
-          slug: string
-          alt: string
-          categories: string
-          featuredimage: ChildImageSharp
-          }
-        }
-  }
+export const ServicesPageTemplate = ({
+  featuredimage,
+  title,
+  slug,
+  html,
+}) => (
+  <div>
+    <GlobalStyles />
+    <SEO />
+     <Content bg={theme.palette.primary.main} >
+     <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
+        <Container>
+                  <RaisedHeader >
+                    <PageTitle>{title}</PageTitle>
+                        <Description>
+                          <div dangerouslySetInnerHTML={{ __html: html }} />
+                          <ServiceCatalog />  
+                        </Description>
+                  </RaisedHeader>
+        </Container>
+      </Content>
 
+  </div>
+)
 
-  const ServiceHeaderPage = ({ data }) => {
+ServicesPageTemplate.propTypes = {
+  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  title: PropTypes.string,
+  slug: PropTypes.string,
+  html: PropTypes.markdown,
+  posts: PropTypes.shape({
+    frontmatter: PropTypes.array,
+  }),
+}
 
-  const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
+const ServicesPage = ({ data }) => {
+
   return (
-    <div>
-    <Layout color={theme.palette.primary.main}>
-      <SEO
-        pathname={data.markdownRemark.frontmatter.slug}
+    <Layout>
+      <ServicesPageTemplate
+        featuredimage={data.markdownRemark.frontmatter.featuredimage}
         title={data.markdownRemark.frontmatter.title}
-        desc={data.markdownRemark.excerpt}
-        node={data.markdownRemark.frontmatter.slug}
-        banner={imageData}
-         />
-      <Helmet title={data.markdownRemark.frontmatter.title} />
-      <Content bg={theme.palette.primary.main}>
-      <HeaderImage backgroundImage={imageData} />
-        <RaisedHeader  >
-        <PageTitle>{data.markdownRemark.frontmatter.title}</PageTitle>
-          <Description >
-            <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-       
-            <ServiceCatalog />
-           
-          </Description>
-        </RaisedHeader>
-     </Content>
-</Layout>
-    </div>
+        slug={data.markdownRemark.frontmatter.slug}
+        html={data.markdownRemark.html}
+      />
+    </Layout>
   )
 }
 
+ServicesPage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
+  allMarkdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+  }),
+}
 
-export default ServiceHeaderPage
+export default ServicesPage
 
-export const query = graphql`
-query ServiceHeaderPage {
-  markdownRemark(frontmatter: {category: {eq: "service"}}) {
-    excerpt(pruneLength: 400)
-    html
-    frontmatter {
-      slug
+export const uery = graphql`
+query ServicesPageTemplate {
+   markdownRemark(frontmatter: {slug: {eq: "/services"}}) {
+      html
+      frontmatter {
       title
-      templateKey
-      categories
-      featuredimage {
+   featuredimage {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
-             ...GatsbyImageSharpFluid_withWebp
+          fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      alt
-      featured
+      slug
     }
-    id
+  }
+allMarkdownRemark (filter: {frontmatter: {category: {eq: "service"}}}, sort: {order: ASC, fields: id}) { 
+  edges {
+      node {
+        excerpt(pruneLength: 400)
+        id
+        posts:   frontmatter {
+          slug
+          sortorder
+          title
+          templateKey
+          featured
+        }
+      }
+    }
   }
   site {
     siteMetadata {
-      title
+      siteUrl
+      serviceName
+      contactPoint {
+        email
+        name
+      }
     }
   }
 }
 
 
+  `
 
-`
+// import React from 'react'
+// import ServiceCatalog from '../../components/ServiceCatalog'
+// import Layout from '../../components/layout'
+
+// export default class ServiceCatalogPage extends React.Component {
+//   render() {
+//     return (
+//       <Layout>
+//               <ServiceCatalog />
+//               </Layout>
+//     )
+//   }
+// }

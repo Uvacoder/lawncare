@@ -7,7 +7,7 @@ visible: true
 featured: false
 featuredimage: /img/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg
 alt: photo by Javier Allegue Barros on Unsplash
-categories:
+category:
   - faq
 ---
 

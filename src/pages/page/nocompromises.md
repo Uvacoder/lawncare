@@ -7,7 +7,7 @@ visible: true
 featured: false
 featuredimage: /img/nicolas-desmangles-FVpn3UdlMpg-unsplash.jpg
 alt: photo by Nicolas Desmangles on Unsplash
-categories:
+category:
   - about
 ---
 

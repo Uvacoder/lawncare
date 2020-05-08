@@ -7,7 +7,7 @@ visible: true
 featured: false
 featuredimage: /img/chang-qing-8oPubUm97Cc-unsplash.jpg
 alt: photo by Chang Qing on Unsplash
-categories:
+category:
   - faq
 ---
 
