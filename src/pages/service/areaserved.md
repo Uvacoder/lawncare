@@ -8,7 +8,7 @@ featured: true
 featuredimage: /img/areaserved.jpg
 backgroundimage: /img/marcel-l-E4sL7IrHy04-unsplash.jpg
 alt: Map of area served
-categories:
+category:
   - about
   - service
 ---

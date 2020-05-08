@@ -3,72 +3,21 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import BlogIndex from '../components/BlogIndex'
-import { Helmet } from 'react-helmet'
-import SEO from '../components/SEO'
-import RaisedHeader from '../styles/raisedHeaderStyle'
-import PageTitle from '../styles/pageTitleStyle'
-import Content from '../styles/contentStyle'
-import Description from  '../styles/descriptionStyle'
-import Container from '@material-ui/core/Container'
-import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import HeaderImage from '../components/HeaderImage'
+import PageTemplate from '../components/PageTemplate'
 
-export const IndexPageTemplate = ({
-  featuredimage,
-  title,
-  slug,
-  html,
-}) => (
 
-  <div>
- 
-
-    <SEO  pathname={slug}
-        title={title}
-        node={slug}
-        banner={featuredimage}
-        organisation
-        />
-    <Helmet title={title} />
-     <Content bg={theme.palette.primary.main} >
-   
-     <HeaderImage backgroundImage={featuredimage.childImageSharp.fluid} />
-     <Container>
-            <RaisedHeader >
-                        <PageTitle >{title}</PageTitle>
-                      <Description>
-                        <div dangerouslySetInnerHTML={{ __html: html }} />
-                        <BlogIndex />
-                      </Description>
-                </RaisedHeader> 
-        </Container>
-      </Content>
-
-  </div>
-
-)
-
-IndexPageTemplate.propTypes = {
-  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  slug: PropTypes.string,
-  html: PropTypes.markdown,
-  posts: PropTypes.shape({
-    frontmatter: PropTypes.array,
-  }),
-
-}
-
-const IndexPage = ({ data }) => {
+export const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate
-        featuredimage={data.markdownRemark.frontmatter.featuredimage}
+      <PageTemplate
+        featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
         html={data.markdownRemark.html}
-         />
+         >
+            <BlogIndex />
+        </PageTemplate>
     </Layout>
   )
 }
@@ -79,22 +28,20 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-  site: PropTypes.shape({
-    siteMetadata: PropTypes.object,
-}),
+
 }
 
 export default IndexPage
 
 export const pageQuery = graphql`
-query IndexPageTemplate {
+query IndexPage {
    markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
       html
       frontmatter {
       title
       featuredimage {
         childImageSharp {
-          fluid(quality:95 maxHeight: 1080, maxWidth: 1920)  {
+          fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

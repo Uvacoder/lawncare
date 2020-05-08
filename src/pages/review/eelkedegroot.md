@@ -8,7 +8,7 @@ visible: true
 featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: photo by Sharon Mccutcheon on Unsplash
-categories:
+category:
   - review
 created_time: "2019-06-08T17:03:02+0000"
 recommendation_type_positive: true

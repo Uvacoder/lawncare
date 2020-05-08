@@ -9,7 +9,7 @@ const LogoLarge = () => (
         file(relativePath: {regex: "/logo512/"}) {
           id
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 512, maxHeight: 512) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

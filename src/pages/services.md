@@ -5,10 +5,9 @@ slug: /services
 title: Our Service
 visible: true
 featured: false
-category: service
 featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg
 alt: photo by David Kaloczi on Unsplash
-categories:
+category:
   - service
 ---
 ##### We want to ensure that you know all about our lawn care service, so we have included the important information below. We look forward to hearing from you. #####

@@ -77,13 +77,13 @@ export default ServicesPage
 
 export const uery = graphql`
 query ServicesPageTemplate {
-   markdownRemark(frontmatter: {category: {eq: "service"}}) {
+   markdownRemark(frontmatter: {slug: {eq: "/services"}}) {
       html
       frontmatter {
       title
    featuredimage {
         childImageSharp {
-          fluid(quality:95 maxHeight: 1080, maxWidth: 1920)  {
+          fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -91,7 +91,7 @@ query ServicesPageTemplate {
       slug
     }
   }
-allMarkdownRemark (filter: {frontmatter: {categories: {eq: "service"}}}, sort: {order: ASC, fields: id}) { 
+allMarkdownRemark (filter: {frontmatter: {category: {eq: "service"}}}, sort: {order: ASC, fields: id}) { 
   edges {
       node {
         excerpt(pruneLength: 400)

@@ -7,7 +7,7 @@ visible: true
 featured: false
 featuredimage: /img/aron-visuals-BXOXnQ26B7o-unsplash.jpg
 alt: photo by Aron Visuals on Unsplash
-categories:
+category:
   - faq
 ---
 

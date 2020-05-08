@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
-import { ChildImageSharp } from '../types'
 import List from '../styles/listStyle'
 
 type PageProps = {

@@ -7,7 +7,7 @@ visible: true
 featured: false
 featuredimage: /img/eugen-str-CrhsIRY3JWY-unsplash.jpg
 alt: photo by Eugen Str on Unsplash
-categories:
+category:
   - faq
 ---
 

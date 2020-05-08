@@ -109,7 +109,7 @@ const SimpleMenu = ({ children, color }: SimpleMenuProps) =>  {
       className={classes.button} 
       onClick={handleClick} 
       > 
-     Menu
+   <a> Menu</a>
       </Button>
      
 

@@ -7,7 +7,7 @@ visible: true
 featured: false
 featuredimage: /img/remi-muller-LlHgaeBwYVE-unsplash.jpg
 alt: photo by Remi Muller on Unsplash
-categories:
+category:
   - faq
 ---
 

@@ -1,5 +1,5 @@
 ---
-templateKey: page
+templateKey: service
 slug: /service/scarification
 sortorder: 77
 visible: true
@@ -7,7 +7,7 @@ featured: false
 title: Scarification
 featuredimage: /img/scarifying-101.jpg
 alt: Lawns Matter scarifying on client site
-categories:
+category:
   - service
 ---
 Scarification is a very important treatment.  It helps to remove the build up thatch and moss in your lawn.  It also helps with getting air and water penetration to the soil, which will allow the grass to thrive more.

@@ -1,14 +1,13 @@
 ---
-templateKey: header
+templateKey: treatments
 slug: /treatments
 sortorder: 6
 title: Essential Treatments
 visible: true
 featured: true
-category: treatments
-featuredimage: /img/philipp-lublasser-LNYdZutqsi0-unsplash_cropped.jpg
-alt: photo by Philipp Lublasser on Unsplash
-categories:
+featuredimage: /img/gustavo-es8pTY5UD7Q-unsplash.jpg
+alt: photo by Gustavo on Unsplash
+category:
   - service
 ---
 Lawns Matter ensures that our clients lawns receive the best in nutrition by using the finest professional turf fertilisers to nourish your lawn.  

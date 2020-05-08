@@ -7,7 +7,7 @@ visible: true
 featured: false
 featuredimage: /img/treddy-chen-UdQWvefOXJk-unsplash.jpg
 alt: photo by Treddy Chen on Unsplash
-categories:
+category:
   - faq
 ---
 

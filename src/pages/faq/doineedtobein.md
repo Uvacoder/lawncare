@@ -7,7 +7,7 @@ visible: true
 featured: false
 featuredimage: /img/marina-de-salis-UozvGeM-_Ko-unsplash.jpg
 alt: photo by Marina De Salis on Unsplash
-categories:
+category:
   - faq
 ---
 

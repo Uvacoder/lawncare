@@ -1,8 +1,8 @@
 import React from 'react'
-import { graphql, StaticQuery, Link } from 'gatsby'
-import styled from 'styled-components'
-import { animated } from 'react-spring'
-import { ChildImageSharp } from '../types'
+import kebabCase from "lodash/kebabCase"
+import { Link, graphql, StaticQuery } from 'gatsby'
+import List from 'styles/listStyle'
+import Area from '../styles/areaStyle'
 
 type PageProps = {
   data: {
@@ -13,10 +13,9 @@ type PageProps = {
           id: string
           frontmatter: {
             title: string
-            location: string
             slug: string
-            templateKey: string
             featured: boolean
+            featuredimage: ChildImageSharp
             }[]
         }
       }
@@ -24,57 +23,78 @@ type PageProps = {
   }
 }
 
-const Area = styled(animated.div)`
-display: grid;
-grid-template-columns: 1fr;
-padding: 1rem;
-
-`
 class CategoryIndex extends React.Component {
   render() {
 
-    const { data, count } = this.props
-    const { edges: categories } = data.allMarkdownRemark
+    const { data } = this.props
+    const { edges: groups } = data.allMarkdownRemark
 
-    return (
 
-    
-   
-        <Area>
-        {categories &&
-          categories.map(({ node: category}) => (
+              return (
 
-         <Link key={category.group.fieldValue} to={category.group.fieldValue} aria-label={`Category "${category.group.fieldValue}"`}>
-                      
-            <span><h5>{category.group.fieldValue} - {category.group.totalCount}</h5></span>
-     
-          </Link>
-         
-          ))}
-      </Area>
+                <Area>
+                {groups &&
+                groups.map(({ node: group }) => (
+                  <List key={group.fieldValue}>
+                      <Link to={`/categories/${kebabCase(group.fieldValue)}/`}>
+                        {group.fieldValue} ({group.totalCount})
+                      </Link>
+                  </List>
+                ))}
+           </Area>
       
-    )
+      )
+    }
   }
-}
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-    query CategoriesQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-      allMarkdownRemark(filter: {frontmatter: {categories: {ne: "header"}}}) {
-        group(field: frontmatter___categories) {
-          fieldValue
-          totalCount
-        }
+
+  export default () => (
+    <StaticQuery
+      query={graphql`
+  query($category: String) {
+    site {
+      siteMetadata {
+        title
       }
     }
-    
-    `}
-    render={(data, count) => <CategoryIndex data={data} count={count} />}
-  />
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___sortorder], order: ASC }
+      filter: { frontmatter: { category: { in: [$category] }, visible: {eq: true} } }
+    ) {
+      totalCount
+      edges {
+        node {
+          frontmatter {
+            slug
+            title
+            category
+          }
+        }
+      }
+      group(field: frontmatter___category) {
+        fieldValue
+        totalCount
+      }
+    }
+    markdownRemark(frontmatter: {templateKey: {eq: "category"}}) {
+      id
+      frontmatter {
+        featuredimage {
+          childImageSharp {
+            fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        slug
+        title
+        alt
+      }
+      html
+    }
+  }
+  `}
+  render={(data, count) => <CategoryIndex data={data} count={count} />}
+/>
 )
