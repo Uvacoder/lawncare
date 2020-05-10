@@ -15,7 +15,7 @@ const LogoLarge = () => (
             file(name: {eq: "logo"}) {
               id
               childImageSharp {
-                fluid(pngQuality: 100, maxWidth: 275, maxHeight: 275) {
+                fluid(quality: 100, maxWidth: 512, maxHeight: 512) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

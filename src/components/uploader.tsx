@@ -1,13 +1,10 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import styled from 'styled-components'
-import Grid from '@material-ui/core/Grid'
-import FormControl from '@material-ui/core/FormControl'
+import { Grid, FormControl, TextField, Button } from '@material-ui/core'
 import FormContainer from '../styles/formContainerStyle'
-import TextField from '@material-ui/core/TextField'
 import { withStyles  } from '@material-ui/core/styles'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Button from '@material-ui/core/Button'
 import UploadButtons from 'components/UploadButtons'
 
 const TextInputField = styled(TextField)`

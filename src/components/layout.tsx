@@ -18,7 +18,7 @@ const Layout = ({ children, color }: LayoutProps) => {
         <GlobalStyles />
         <Hidden mdUp>
          <ToolbarTop  bg={theme.palette.primary.main} />
-         <div style={{ height: '48vw',  }} />
+         <div style={{ height: '33vw',  }} />
          <Main>{children}</Main>
          <BottomButtonBar  bg={theme.palette.primary.main}   />
         </Hidden>
