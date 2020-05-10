@@ -5,6 +5,7 @@ sortorder: 1480
 title: Sam Kelly
 location: Broughton
 visible: true
+header: false
 featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: photo by Sharon Mccutcheon on Unsplash

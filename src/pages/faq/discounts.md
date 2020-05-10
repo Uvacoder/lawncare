@@ -4,6 +4,7 @@ slug: /faq/discounts
 title: Do you offer discounts?
 sortorder: 40
 visible: true
+header: false
 featured: false
 featuredimage: /img/jj-ying-UcI5OAPD820-unsplash.jpg
 alt: photo by JJ Ying on Unsplash

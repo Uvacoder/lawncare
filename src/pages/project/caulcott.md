@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/caulcott
 sortorder: 1130
 visible: true
+header: false
 featured: false
 title: Caulcott
 featuredimage: /img/caulcott.jpeg

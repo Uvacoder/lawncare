@@ -3,6 +3,7 @@ templateKey: service
 slug: /service/scarification
 sortorder: 77
 visible: true
+header: false
 featured: false
 title: Scarification
 featuredimage: /img/scarifying-101.jpg

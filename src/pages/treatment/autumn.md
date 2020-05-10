@@ -4,6 +4,7 @@ sortorder: 350
 slug: /treatment/autumn
 title: Autumn Treatments
 visible: true
+header: false
 featured: false
 featuredimage: /img/johannes-plenio-pY0LOiwK9Sc-unsplash.jpg
 alt: photo by David Kaloczi on Unsplash

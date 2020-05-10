@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/winchcombe
 sortorder: 1360
 visible: true
+header: false
 featured: false
 title: Winchcombe
 featuredimage: /img/winchcombe.jpg

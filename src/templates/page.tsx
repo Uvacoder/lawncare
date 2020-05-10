@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import PropTypes from 'prop-types'
 import PageTemplate from '../components/PageTemplate'
 import PageIndex from '../components/PageIndex'
@@ -13,6 +13,7 @@ export const Page = ({ data }) => {
         featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
+        location={data.markdownRemark.frontmatter.location}
         html={data.markdownRemark.html}>
            <PageIndex   category={data.markdownRemark.frontmatter.category} />
         </PageTemplate>   

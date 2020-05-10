@@ -4,7 +4,8 @@ sortorder: 54
 slug: /reviews
 title: Lawn Care Customer Reviews
 visible: true
-featured: true
+header: true
+featured: false 
 featuredimage: /img/alistair-macrobert-UI4lA6hZlQE-unsplash.jpg
 alt: photo by Alistair MacRobert on Unsplash
 category:

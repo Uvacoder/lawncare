@@ -3,6 +3,7 @@ templateKey: service
 slug: /service/lawnassessment
 sortorder: 11
 visible: true
+header: false
 featured: true
 title: Lawn Assessment
 featuredimage: /img/lawnassessment.jpg

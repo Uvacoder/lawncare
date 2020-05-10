@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import PropTypes from 'prop-types'
 import PageTemplate from '../components/PageTemplate'
 import ServiceCatalog from '../components/ServiceCatalog'

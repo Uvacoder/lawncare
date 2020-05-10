@@ -4,6 +4,7 @@ slug: /review/stephjackson
 sortorder: 1501
 title: Steph Jackson
 visible: true
+header: false
 featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: photo by Sharon Mccutcheon on Unsplash

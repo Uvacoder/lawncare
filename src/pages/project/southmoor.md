@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/southmoor
 sortorder: 1270
 visible: true
+header: false
 featured: false
 title: Southmoor
 featuredimage: /img/southmoor.jpg

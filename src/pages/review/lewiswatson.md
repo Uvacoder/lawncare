@@ -5,6 +5,7 @@ sortorder: 1450
 title: Lewis Watson
 location: Bucknell
 visible: true
+header: false
 featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: photo by Sharon Mccutcheon on Unsplash

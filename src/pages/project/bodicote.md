@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/bodicote
 sortorder: 1090
 visible: true
+header: false
 featured: false
 title: Bodicote
 featuredimage: /img/bodicote.jpg

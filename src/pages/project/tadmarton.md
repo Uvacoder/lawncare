@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/tadmarton
 sortorder: 1320
 visible: true
+header: false
 featured: false
 title: Tadmarton 
 featuredimage: /img/tadmarton.jpg

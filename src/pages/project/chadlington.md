@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/chadlington
 sortorder: 1140
 visible: false
+header: false
 featured: false
 title: Chadlington
 featuredimage: /img/chadlington.jpeg

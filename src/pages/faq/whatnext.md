@@ -4,6 +4,7 @@ slug: /faq/whatnext
 title: What do I do next?
 sortorder: 45
 visible: true
+header: false
 featured: false
 featuredimage: /img/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg
 alt: photo by Javier Allegue Barros on Unsplash

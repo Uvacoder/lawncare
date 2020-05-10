@@ -39,7 +39,7 @@ class ReviewIndex extends React.Component {
           reviews.map(({ node: review }) => (
 
          <Link key={review.frontmatter.slug} to={review.frontmatter.slug} aria-label={`View our lastest news "${review.frontmatter.title}"`}>
-         <h6> {review.excerpt} {review.frontmatter.title} - {review.frontmatter.location}</h6>
+         <h5>Review of {data.site.siteMetadata.serviceName} service in {review.frontmatter.location}: {review.excerpt} - {review.frontmatter.title} </h5>
        
          
           </Link>
@@ -55,7 +55,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query ReviewIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "review"}}},  sort: {order: ASC, fields: frontmatter___sortorder}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "review"}, header: {eq: false}}},  sort: {order: ASC, fields: frontmatter___sortorder}) {
         edges {
           node {
             excerpt(pruneLength: 147)
@@ -73,6 +73,7 @@ export default () => (
       site {
         siteMetadata {
           title
+          serviceName
          }
       }
     }

@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/brackley
 sortorder: 1110
 visible: false
+header: false
 featured: false
 title: Brackley
 featuredimage: /img/brackley.jpg

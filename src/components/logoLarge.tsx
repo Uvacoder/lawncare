@@ -12,10 +12,10 @@ const LogoLarge = () => (
       <StaticQuery
         query={graphql`
           {
-            file(relativePath: {regex: "/logo512/"}) {
+            file(name: {eq: "logo"}) {
               id
               childImageSharp {
-                fluid(maxWidth: 512, maxHeight: 512) {
+                fluid(pngQuality: 100, maxWidth: 275, maxHeight: 275) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

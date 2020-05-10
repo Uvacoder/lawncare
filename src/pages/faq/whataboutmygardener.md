@@ -4,6 +4,7 @@ slug: /faq/whataboutmygardener
 title:  What if I already have a gardener?
 sortorder: 350
 visible: true
+header: false
 featured: false
 featuredimage: /img/mohammad-saemian-riYppYjeltk-unsplash.jpg
 alt: photo by mohammad saemian on Unsplash

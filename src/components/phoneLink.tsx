@@ -18,7 +18,8 @@ const PhoneLink = () => (
     }
     `}
     render={data =>  
-     <Button>
+     <Button
+     size="large" >
     <a href={`tel:${data.site.siteMetadata.availableChannel.servicePhone}`} rel="nofollow">
       <PhoneIcon alignItems="center" style={{color: theme.palette.primary.contrastText}}/><br />Phone</a>
       </Button>

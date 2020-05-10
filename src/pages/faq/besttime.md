@@ -4,6 +4,7 @@ slug: /faq/besttime
 title:   When is the best time to start?
 sortorder: 10
 visible: true
+header: false
 featured: false
 featuredimage: /img/aron-visuals-BXOXnQ26B7o-unsplash.jpg
 alt: photo by Aron Visuals on Unsplash

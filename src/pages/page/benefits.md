@@ -4,6 +4,7 @@ templateKey: page
 sortorder: 80
 slug: /service/benefits
 visible: true
+header: false
 featured: false
 featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 alt: photo by Annie Sprat on Unsplash

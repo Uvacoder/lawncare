@@ -1,30 +1,28 @@
 import styled from 'styled-components'
-import { animated} from 'react-spring'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
+import MenuList from '@material-ui/core/MenuList'
 
-const MenuStyle = styled(animated.div)`
-root: {
-    display: flex;
-    backgroundColor: ${theme.palette.primary.main};
-  };
-  button: {
-    color: ${theme.palette.primary.contrastText};
-    fontWeight:  ${theme.typography.h5.fontWeight};
-    fontSize: ${theme.typography.h5.fontSize};
-    padding: 1rem;
-  };
-  mainSection: {
-    marginLeft: ${theme.sidebar.width.big};
-  };
-  drawer: {
-    backgroundColor: ${theme.palette.primary.main};
-    position: fixed;
-    flexShrink: 0;
-  };
-  content: {
-    flexGrow: 1;
-    backgroundColor: ${theme.palette.primary.main};
-  };
+const MenuStyle = styled(MenuList)`
+padding-top: 0;
+padding-bottom: 0;
+display: flex;
+flex-direction: column;
+background: ${theme.palette.primary.main};
+a {
+padding: 0.5rem;
+display: flex;
+flex-wrap: nowrap;
+flex-direction: column;
+text-decoration: none;
+color: ${theme.palette.primary.contrastText};
+font-size: ${theme.typography.h5.fontSize};
+font-weight: ${theme.typography.h5.fontWeight};
+&:hover;
+&:focus;
+&.navlink-active {
+  color: ${theme.palette.secondary.main};
+}
+}
 `
 
 export default MenuStyle

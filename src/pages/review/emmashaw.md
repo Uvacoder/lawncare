@@ -4,6 +4,7 @@ slug: /review/emmashaw
 sortorder: 1430
 title: Emma Shaw
 visible: true
+header: false
 featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: photo by Sharon Mccutcheon on Unsplash

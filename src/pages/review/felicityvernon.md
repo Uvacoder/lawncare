@@ -5,6 +5,7 @@ sortorder: 1440
 title: Felicity Vernon
 location: Chacombe
 visible: true
+header: false
 featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: photo by Sharon Mccutcheon on Unsplash

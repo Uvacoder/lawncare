@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/swerford
 sortorder: 1310
 visible: true
+header: false
 featured: false
 title: Swerford
 featuredimage: /img/swerford.jpeg

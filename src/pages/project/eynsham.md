@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/eynsham
 sortorder: 1190
 visible: true
+header: false
 featured: false
 title: Eynsham
 featuredimage: /img/eynsham.jpeg

@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/churchenstone
 sortorder: 1150
 visible: true
+header: false
 featured: false
 title: Church Enstone
 featuredimage: /img/churchenstone.jpeg

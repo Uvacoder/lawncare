@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/warmington
 sortorder: 1340
 visible: true
+header: false
 featured: false
 title: Warmington
 featuredimage: /img/warmington.jpg

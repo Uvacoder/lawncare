@@ -4,6 +4,7 @@ slug: /treatments
 sortorder: 6
 title: Seasonal Treatments
 visible: true
+header: true
 featured: true
 featuredimage: /img/gustavo-es8pTY5UD7Q-unsplash.jpg
 alt: photo by Gustavo on Unsplash

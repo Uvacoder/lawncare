@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/souldern
 sortorder: 1260
 visible: true
+header: false
 featured: false
 title: Souldern
 featuredimage: /img/souldern.jpg

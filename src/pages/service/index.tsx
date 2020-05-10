@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 import ServiceCatalog from '../../components/ServiceCatalog'
 import SEO from '../../components/SEO'
 import theme from '../../gatsby-theme-material-ui-top-layout/theme'

@@ -4,6 +4,7 @@ templateKey: service
 sortorder: 610
 slug: /service/aerationholes
 visible: true
+header: false
 featured: false
 featuredimage: /img/aeration1.jpg
 alt: Aeration holes

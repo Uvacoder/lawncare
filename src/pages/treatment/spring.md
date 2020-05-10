@@ -4,6 +4,7 @@ sortorder: 150
 slug: /treatment/spring
 title: Spring Treatments
 visible: true
+header: false
 featured: false
 featuredimage: /img/annie-spratt-43o1KVbOWXA-unsplash.jpg
 alt: photo by David Kaloczi on Unsplash
