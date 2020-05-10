@@ -4,6 +4,7 @@ sortorder: 450
 slug: /treatment/winter
 title: Winter Treatments
 visible: true
+header: false
 featured: false
 featuredimage: /img/max-kleinen--KxkDgEvWT8-unsplash.jpg
 alt: photo by Max Kleinen on Unsplash
@@ -16,6 +17,3 @@ category:
 
 
 - Back to our [Treatments](/treatments) page
-- [Spring Treatments](/treatments/spring)
-- [Summer Treatments](/treatments/summer)
-- [Autumn Treatments](/treatments/autumn)

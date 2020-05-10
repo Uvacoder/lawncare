@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/ambrosden
 sortorder: 1010
 visible: true
+header: false
 featured: false
 title: Ambrosden
 featuredimage: /img/ambrosden.jpeg

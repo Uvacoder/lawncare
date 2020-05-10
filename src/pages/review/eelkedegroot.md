@@ -5,6 +5,7 @@ sortorder: 1420
 title: Eelke de Groot
 loction: Bicester
 visible: true
+header: false
 featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: photo by Sharon Mccutcheon on Unsplash

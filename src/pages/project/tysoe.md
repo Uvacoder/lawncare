@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/tysoe
 sortorder: 1330
 visible: true
+header: false
 featured: false
 title: Tysoe
 featuredimage: /img/tysoe.jpg

@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
-import IconButton from '@material-ui/core/IconButton'
 import PhotoCamera from '@material-ui/icons/PhotoCamera'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -31,17 +30,11 @@ export default function UploadButtons() {
       />
       <label htmlFor="contained-button-file">
         <Button variant="contained" color="primary" component="span" startIcon={ <PhotoCamera />}>
-       Upload
-       
-         
+       Upload 
         </Button>
       </label>
       <input accept="image/*" className={classes.input} id="icon-button-file" type="file" />
-      {/* <label htmlFor="icon-button-file">
-        <IconButton color="primary" aria-label="upload picture" component="span">
-     
-        </IconButton>
-      </label> */}
+
     </div>
   );
 }

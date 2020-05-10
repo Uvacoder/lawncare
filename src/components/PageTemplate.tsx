@@ -9,6 +9,7 @@ export const PageTemplate = ({
     featuredimage,
     title,
     slug,
+    location,
     html, 
   }) =>  (
     <div >
@@ -16,10 +17,11 @@ export const PageTemplate = ({
         title={title}
         node={slug}
         banner={featuredimage}
+        location={location}
         organisation
         />
     <Helmet title={title} />
-        <PageContent featuredimage={featuredimage} title={title} slug={slug} html={html}>
+        <PageContent featuredimage={featuredimage} title={title} slug={slug} html={html} location={location}>
             {children}
         </PageContent>
     </div>
@@ -31,6 +33,7 @@ PageTemplate.propTypes = {
   featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   slug: PropTypes.string,
+  location: PropTypes.string,
   html: PropTypes.markdown,
   posts: PropTypes.shape({
     frontmatter: PropTypes.object,

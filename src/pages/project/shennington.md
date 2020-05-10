@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/shennington
 sortorder: 1240
 visible: true
+header: false
 featured: false
 title: Shennington
 featuredimage: /img/shennington.jpg

@@ -4,6 +4,7 @@ slug: /faq/howtopay
 title:  How should I pay?
 sortorder: 70
 visible: true
+header: false
 featured: false
 featuredimage: /img/colin-watts-8WRRJ4xJeyg-unsplash.jpg
 alt: photo by Colin Watts Muller on Unsplash

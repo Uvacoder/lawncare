@@ -4,6 +4,7 @@ templateKey: map
 sortorder: 38
 slug: /service/areaserved
 visible: true
+header: true
 featured: true
 featuredimage: /img/areaserved.jpg
 backgroundimage: /img/marcel-l-E4sL7IrHy04-unsplash.jpg

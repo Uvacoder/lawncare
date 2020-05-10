@@ -4,6 +4,7 @@ templateKey: page
 sortorder: 10
 slug: /about/whychoose
 visible: true
+header: false
 featured: false
 featuredimage: /img/echo-grid-j3KZDZxFipA-unsplash.jpg
 alt: photo by Echo Grid on Unsplash

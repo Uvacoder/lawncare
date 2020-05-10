@@ -3,6 +3,7 @@ templateKey: service
 slug: /service/aeration
 sortorder: 600
 visible: true
+header: false
 featured: false
 title: Aeration
 featuredimage: /img/aerator.jpg

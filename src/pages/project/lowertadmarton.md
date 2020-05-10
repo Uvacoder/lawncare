@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/lowertadmarton
 sortorder: 1210
 visible: true
+header: false
 featured: false
 title: Lower Tadmarton
 featuredimage: /img/lowertadmarton.jpeg

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import { Flex} from '../elements'
+import Box from '@material-ui/core/Box'
 
 
 const isPartiallyActive = ({ isPartiallyCurrent }: { isPartiallyCurrent: boolean }) =>
@@ -13,7 +13,7 @@ const PartialNavLink = ({ children, to, ...rest }: { children: React.ReactNode; 
   </Link>
 )
 
-const NavBottom = styled(Flex)<{  color: theme.palette.primary.main }>`
+const NavBottom = styled(Box)<{  color: theme.palette.primary.main }>`
   a {
     text-decoration: none;
     color: ${theme.palette.primary.contrastText};

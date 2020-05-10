@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/dunstew
 sortorder: 1170
 visible: true
+header: false
 featured: false
 title: Duns Tew
 featuredimage: /img/dunstew.jpeg

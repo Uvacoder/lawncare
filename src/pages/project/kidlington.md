@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/kidlington
 sortorder: 1170
 visible: true
+header: false
 featured: false
 title: Kidlington
 featuredimage: /img/kidlington.jpg

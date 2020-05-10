@@ -4,6 +4,7 @@ slug: /faq/mowingadvice
 title: How should I mow the lawn?
 sortorder: 80
 visible: true
+header: false
 featured: false
 featuredimage: /img/remi-muller-LlHgaeBwYVE-unsplash.jpg
 alt: photo by Remi Muller on Unsplash

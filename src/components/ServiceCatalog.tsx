@@ -1,12 +1,10 @@
 import React from 'react'
 import { graphql, StaticQuery} from 'gatsby'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
-import { animated } from 'react-spring'
 import GridLink from './grid-link'
 import SEO from './SEO'
 import { ChildImageSharp } from '../types'
-
+import Area from '../styles/areaStyle'
 
 type PageProps = {
   data: {
@@ -27,16 +25,6 @@ type PageProps = {
     }
   }
 }
-const Area = styled(animated.div)`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 35vw;
-
- [theme.breakpoints.down('md')]: {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 25vw;
-  }
-`
 
 class ServiceCatalog extends React.Component {
   render() {
@@ -71,7 +59,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query ServiceCatalogQuery {
-      allMarkdownRemark(filter: {frontmatter: {category: {eq: "service"}}}, sort: {order: ASC, fields: frontmatter___sortorder}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "service"}}}, sort: {order: ASC, fields: frontmatter___sortorder}) {
         edges {
           node {
             excerpt(pruneLength: 400)

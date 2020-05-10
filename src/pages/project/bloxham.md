@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/bloxham
 sortorder: 1080
 visible: true
+header: false
 featured: false
 title: Bloxham
 featuredimage: /img/bloxham.jpeg

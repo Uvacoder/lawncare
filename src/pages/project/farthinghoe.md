@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/farthinghoe
 sortorder: 1130
 visible: true
+header: false
 featured: false
 title: Farthinghoe 
 featuredimage: /img/farthinghoe.jpeg

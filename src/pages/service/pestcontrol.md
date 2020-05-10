@@ -3,6 +3,7 @@ templateKey: service
 slug: /service/pestcontrol
 sortorder: 630
 visible: true
+header: false
 featured: false
 title: Pest Control
 featuredimage: /img/pestcontrol.jpg

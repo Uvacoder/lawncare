@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/fennycompton
 sortorder: 1140
 visible: true
+header: false
 featured: false
 title: Fenny Compton
 featuredimage: /img/fennycompton.jpeg

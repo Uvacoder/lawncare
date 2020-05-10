@@ -4,6 +4,7 @@ slug: /project/middleton-cheney
 sortorder: 1220
 title: Middleton Cheney
 visible: true
+header: false
 featured: false
 featuredimage: /img/middleton-cheney.jpg
 alt: Middleton Cheney Project After photo

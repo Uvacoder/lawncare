@@ -1,16 +1,13 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
-import Divider from '@material-ui/core/Divider'
-// import LogoSmall from './logoSmall'
+import { Divider, AppBar, Grid, Paper } from '@material-ui/core'
 import LogoLarge from './logoLarge'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import Grid from '@material-ui/core/Grid'
 import SimpleMenu from './SimpleMenu'
 import PhoneNo from '../components/phoneNo'
-import PhoneButton from '../components/PhoneButton'
-import { Container } from '@material-ui/core'
+import PhoneLink from './phoneLink'
+
+
 
 function ElevationScroll(props: Props) {
   const { children } = props;
@@ -44,9 +41,6 @@ const useStyles = makeStyles((theme: Theme) =>
         flexShrink: 2,
         color: theme.palette.primary.main,
       },
-    },
-    LogoLarge: {
-      height: '12vw',
     }
   }),
 );
@@ -56,50 +50,42 @@ export default function ElevateAppBar(props: Props) {
  
 
   return (
-    <div className={classes.root}>
-          <Container
-
-      >
+ 
+      <Paper elevation={3} >
+   
         <AppBar 
           className={classes.drawerPaper}
           backgroundColor={theme.palette.primary.main}
           position="fixed">
-          {/* <Toolbar
-          backgroundColor={theme.palette.primary.main}
-          className={classes.drawer}
-          variant="permanent"  
-          anchor="top" 
-          alignItems="space-between" 
-    
-     
-          > */}
-                
+
             <Grid container position="relative"  alignItems="flex-end"  justifyItems="center" >  
-                <Grid item xs={1} /> 
+            <Grid item xs={1} />
                 <Grid item xs={2} >
-                  <SimpleMenu />
+               
+                  <SimpleMenu   />
+      
                 </Grid>   
-                <Grid item xs={1} /> 
+                <Grid item xs={1} />
                 <Grid item xs={4}>
-                  <Link to="/">
+     
                       <LogoLarge />
-                  </Link>
+      
                 </Grid>     
-                <Grid item xs={1} /> 
+                <Grid item xs={1} />
                 <Grid item xs={2} >
                   <a href={`tel:${<PhoneNo />}`} rel="nofollow">
-                    {/* <CallButton /> */}
-                    <PhoneButton />
+                     <PhoneLink />
                   </a>
                 </Grid>   
-                <Grid item xs={1} /> 
+                <Grid item xs={1} />
+             
               <Divider />
             </Grid>
           {/* </Toolbar> */}
         </AppBar> 
-        </Container>
+       
   
-  
-    </div>
+        </Paper>
+ 
   );
 }

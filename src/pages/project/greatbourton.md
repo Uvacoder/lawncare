@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/greatbourton
 sortorder: 1150
 visible: true
+header: false
 featured: false
 title: Great Bourton
 featuredimage: /img/greatbourton.jpg

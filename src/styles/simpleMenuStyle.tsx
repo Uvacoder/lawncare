@@ -3,24 +3,26 @@ import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Box from '@material-ui/core/Box'
 
-
-const Nav = styled(Box)<{ color: string }>`
+const Nav = styled(Box)`
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background: ${theme.palette.primary.main};
 a {
-  margin-left: 22px;
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   text-decoration: none;
   color: ${theme.palette.primary.contrastText};
-  font-size: ${theme.typography.h4.fontSize};
-  font-weight: ${theme.typography.h4.fontWeight};
-  &:hover,
-  &:focus,
+  font-size: ${theme.typography.h5.fontSize};
+  font-weight: ${theme.typography.h5.fontWeight};
+  &:hover;
+  &:focus;
   &.navlink-active {
     color: ${theme.palette.secondary.main};
   }
 }
 `
-
 export default Nav

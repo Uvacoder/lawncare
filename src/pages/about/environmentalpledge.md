@@ -4,6 +4,7 @@ templateKey: page
 sortorder: 70
 slug: /about/environmentalpledge
 visible: true
+header: false
 featured: true
 featuredimage: /img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg
 alt: Scenery

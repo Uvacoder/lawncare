@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/longhanborough
 sortorder: 1190
 visible: true
+header: false
 featured: false
 title: Long Hanborough
 featuredimage: /img/longhanborough.jpeg

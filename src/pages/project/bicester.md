@@ -4,6 +4,7 @@ slug: /project/bicester
 title: Bicester 
 sortorder: 1050
 visible: true
+header: false
 featured: false
 featuredimage: /img/bicester.jpg
 alt: Bicester Project After photo

@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/aynho
 sortorder: 1020
 visible: true
+header: false
 featured: false
 title: Aynho
 featuredimage: /img/aynho.jpeg

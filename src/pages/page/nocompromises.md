@@ -4,6 +4,7 @@ templateKey: page
 sortorder: 60
 slug: /service/nocompromises
 visible: true
+header: false
 featured: false
 featuredimage: /img/nicolas-desmangles-FVpn3UdlMpg-unsplash.jpg
 alt: photo by Nicolas Desmangles on Unsplash

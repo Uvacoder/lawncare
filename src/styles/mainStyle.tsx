@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
+import Box from '@material-ui/core/Box'
 
-const Main = styled.main`
+const Main = styled(Box)`
 background-color: ${theme.palette.primary.light};
 grid-template-columns: ${theme.sidebar.width.big}  ${theme.sidebar.width.main} ;
 grid-column-start: 2;

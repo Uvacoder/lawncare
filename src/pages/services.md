@@ -4,6 +4,7 @@ sortorder: 14
 slug: /services
 title: Our Service
 visible: true
+header: true
 featured: false
 featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg
 alt: photo by David Kaloczi on Unsplash

@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/somerton
 sortorder: 1250
 visible: true
+header: false
 featured: false
 title: Somerton
 featuredimage: /img/somerton.jpg

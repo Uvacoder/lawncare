@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/wooton
 sortorder: 1370
 visible: true
+header: false
 featured: false
 title: Wooton
 featuredimage: /img/wooton.jpg

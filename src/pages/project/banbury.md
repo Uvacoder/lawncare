@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/banbury
 sortorder: 1030
 visible: true
+header: false
 featured: false
 title: Banbury
 featuredimage: /img/banbury.jpg

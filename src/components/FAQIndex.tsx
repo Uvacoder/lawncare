@@ -30,14 +30,12 @@ class FAQIndex extends React.Component {
 
     return (
 
-    
-   
         <List>
         {faqs &&
           faqs.map(({ node: faq }) => (
          <Link key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`Frequently Asked Questions "${faq.frontmatter.title}"`}>     
-            <span><h4 >Q. {faq.frontmatter.title}</h4>
-            <h4>{faq.excerpt}</h4> </span>
+            <span><h5 >Q. {faq.frontmatter.title}</h5>
+            <h5>{faq.excerpt}</h5> </span>
           </Link>
          
           ))}
@@ -51,7 +49,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query FAQIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "faq"}, visible: {eq: true}}}, sort: {order: ASC, fields: frontmatter___sortorder}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "faq"}, visible: {eq: true}, header: {eq: false}}}, sort: {order: ASC, fields: frontmatter___sortorder}) {
         edges {
           node {
            excerpt(pruneLength: 400)

@@ -5,6 +5,7 @@ sortorder: 1490
 title: Sophie Hammond
 location: Adderbury
 visible: true
+header: false
 featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg
 alt: photo by Sharon Mccutcheon on Unsplash

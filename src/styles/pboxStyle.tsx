@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import { AnimatedBox} from '../elements'
+import Box from '@material-ui/core/Box'
 
-const PBox = styled(AnimatedBox)`
+const PBox = styled(Box)`
   padding: 1rem;
   margin: .1rem;
   align-items: center;

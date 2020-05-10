@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/hinton-in-the-hedges
 sortorder: 1160
 visible: true
+header: false
 featured: false
 title: Hinton-in-the-hedges
 featuredimage: /img/hintoninthehedges.jpg

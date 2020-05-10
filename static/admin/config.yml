@@ -17,11 +17,13 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Template Key", name: templateKey,  widget: "select", options: ["page", "faq", "review"], default: page }
+      - { label: "Template Key", name: templateKey,  widget: "select", options: ["page", "faq", "review", "service", "treatments", "project"], default: page }
       - { label: "Sort order", required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
       - { label: Path, name: slug, widget: string }
       - { label: Title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: Visible, required: false, name: visible, widget: boolean }
+      - { label: Header, required: false, name: header, widget: boolean }
       - { label: Image, name: featuredimage, widget: image }
       - { label: "Image description (needed for SEO)", name: alt, widget: string }
       - { label: "Main content", required: false, name: body, widget: markdown }
@@ -31,7 +33,7 @@ collections:
   - name: areaserved
     label: Area Served
     files: 
-      - file: src/pages/areaserved.md
+      - file: src/pages/service/areaserved.md
         label: Area Served Map
         name: areaserved       
         slug: "{{slug}}"
@@ -42,7 +44,10 @@ collections:
           - { label: Longitude, required: true, name: longitude, widget: number,  valueType: float }
           - { label: Latitude, required: true, name: latitude, widget: number,  valueType: float }
           - { label: Zoom, required: true, name: zoom, widget: number,  valueType: int,  default: 10 }
-          - { label: Path, name: slug, widget: string, default: "/ourservice/areaserved" }
+          - { label: Featured, required: false, name: featured, widget: boolean }
+          - { label: Visible, required: false, name: visible, widget: boolean }
+          - { label: Header, required: false, name: header, widget: boolean }
+          - { label: Path, name: slug, widget: string, default: "/service/areaserved" }
           - { label: Featured, required: false, name: featured, widget: boolean }
           - { label: "Main content", required: false, name: body, widget: markdown }
           - { label: category, required: false, name: category, widget: list }
@@ -71,6 +76,8 @@ collections:
       - { label: sortorder, required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
       - { label: title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: Visible, required: false, name: visible, widget: boolean }
+      - { label: Header, required: false, name: header, widget: boolean }
       - { label: featuredImage, required: false, name: featuredimage, widget: image }
       - { label: "Image description (needed for SEO)", required: false, name: alt, widget: string }
       - { label: Category, required: false, name: category, widget: list }

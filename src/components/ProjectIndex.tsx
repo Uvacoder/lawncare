@@ -10,12 +10,10 @@ type PageProps = {
     allMarkdownRemark: {
       edges: {
         node: {
-          excerpt: string
           id: string
           frontmatter: {
             title: string
             slug: string
-            featured: boolean
             featuredimage: ChildImageSharp
             }[]
         }
@@ -52,7 +50,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query ProjectIndexQuery {
-      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}, visible: {eq: true}}},  sort: {order: ASC, fields: frontmatter___sortorder}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}, visible: {eq: true}, header: {eq: false}}},  sort: {order: ASC, fields: frontmatter___sortorder}) {
         edges {
           node {
             id
@@ -60,7 +58,6 @@ export default () => (
               slug
               title
               templateKey
-              featured
               visible
               featuredimage {
                 childImageSharp {

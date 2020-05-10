@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/suttoncourtenay
 sortorder: 1290
 visible: true
+header: false
 featured: false
 title: Sutton Courtenay
 featuredimage: /img/suttoncourtenay.jpg

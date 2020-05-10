@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import List from 'styles/listStyle'
 import PageTemplate from '../components/PageTemplate'
 import Layout from '../components/layout'
 import CategoryIndex from '../components/CategoryIndex'

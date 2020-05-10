@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import { Box } from '../elements'
+import Box from '@material-ui/core/Box'
 import { transparentize } from 'polished'
 
 const Content = styled(Box)<{ bg: string }>`

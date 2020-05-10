@@ -7,8 +7,6 @@ import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Grid from '@material-ui/core/Grid'
-import RaisedHeader from '../styles/raisedHeaderStyle'
-import PageTitle from '../styles/pageTitleStyle'
 import FormContainer from '../styles/formContainerStyle'
 
 

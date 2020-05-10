@@ -4,6 +4,7 @@ sortorder: 250
 slug: /treatment/summer
 title: Summer Treatments
 visible: true
+header: false
 featured: false
 featuredimage: /img/johnny-mcclung-XZWH2LSGYVw-unsplash.jpg
 alt: photo by David Kaloczi on Unsplash
@@ -16,6 +17,3 @@ category:
 
 
 - Back to our [Treatments](/treatments) page
-- [Spring Treatments](/treatments/spring)
-- [Autumn Treatmentsm](/treatments/autumn)
-- [Winter Treatments](/treatments/winter)

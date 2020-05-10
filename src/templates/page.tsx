@@ -13,6 +13,7 @@ export const Page = ({ data }) => {
         featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
+        location={data.markdownRemark.frontmatter.location}
         html={data.markdownRemark.html}>
            <PageIndex   category={data.markdownRemark.frontmatter.category} />
         </PageTemplate>   

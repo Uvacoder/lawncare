@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/barfordstmichael
 sortorder: 1040
 visible: true
+header: false
 featured: false
 title: Barford St Michael
 featuredimage: /img/barfordstmichael.jpeg

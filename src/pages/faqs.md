@@ -4,6 +4,7 @@ sortorder: 52
 slug: /faqs
 title: Frequently Asked Questions
 visible: true
+header: true
 featured: true
 featuredimage: /img/fauzan-saari-pZXg_ObLOM4-unsplash.jpg
 alt: photo by Fauzan Saari on Unsplash

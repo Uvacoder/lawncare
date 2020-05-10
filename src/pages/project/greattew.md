@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/greattew
 sortorder: 1005
 visible: true
+header: false
 featured: false
 title: Great Tew
 featuredimage: /img/greattew.jpg

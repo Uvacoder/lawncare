@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/evenly
 sortorder: 1180
 visible: true
+header: false
 featured: false
 title: Evenly
 featuredimage: /img/evenly.jpeg

@@ -3,6 +3,7 @@ templateKey: page
 slug: /about/whyus
 sortorder: 24
 visible: true
+header: false
 featured: true
 title: Why Us?
 featuredimage: /img/oleksandra-bardash-AlJg9kPvOJ4-unsplash_cropped.jpg

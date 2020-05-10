@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/swacliffe
 sortorder: 1300
 visible: true
+header: false
 featured: false
 title: Swalcliffe
 featuredimage: /img/swacliffe.jpg

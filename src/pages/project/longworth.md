@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/longworth
 sortorder: 1200
 visible: true
+header: false
 featured: false
 title: Longworth
 featuredimage: /img/longworth.jpg

@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/southnewington
 sortorder: 1280
 visible: true
+header: false
 featured: false
 title: South Newington
 featuredimage: /img/southnewington.jpg

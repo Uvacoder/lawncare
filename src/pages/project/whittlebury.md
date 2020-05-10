@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/whittlebury
 sortorder: 1350
 visible: true
+header: false
 featured: false
 title: Whittlebury
 featuredimage: /img/whittlebury.jpg

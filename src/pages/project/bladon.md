@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/bladon
 sortorder: 1060
 visible: true
+header: false
 featured: false
 title: Bladon
 featuredimage: /img/bladon.jpg

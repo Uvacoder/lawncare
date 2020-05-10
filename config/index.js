@@ -24,7 +24,7 @@ module.exports = {
   // Service SEO
   type: 'Service',
   serviceType: 'Lawn Care',
-  serviceName: 'Professional Lawn Care',
+  serviceName: 'Lawn Care',
   provider: {
     type: 'LocalBusiness',
     name: 'Lawns Matter',
@@ -36,7 +36,7 @@ module.exports = {
       type: 'Offer',
       itemOffered: {
         type: 'Service',
-        name: 'Professional Lawn Care Service',
+        name: 'Lawn Care Service',
       },
     },
   },
