@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import ComponentHeader from '../components/ComponentHeader'
 import {AreaServedMap} from '../components/AreaServedMap'
 

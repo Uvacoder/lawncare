@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import Uploader from '../components/uploader'
 import FormPageTemplate from '../components/FormPageTemplate'
 

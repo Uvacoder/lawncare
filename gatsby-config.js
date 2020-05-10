@@ -154,6 +154,10 @@ module.exports = {
               destinationDir: `static`,
             },
           },
+          {
+            resolve: `gatsby-remark-images`,
+          },
+          `gatsby-remark-lazy-load`,
         ],
       },
     },  
