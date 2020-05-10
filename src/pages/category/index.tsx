@@ -6,7 +6,7 @@ import { Link, graphql } from 'gatsby'
 import PageTitle from '../styles/pageTitleStyle'
 import List from 'styles/listStyle'
 import PageTemplate from '../../components/PageTemplate'
-import Layout from '../../components/Layout'
+import Layout from '../../components/layout'
 
 const CategoryPage = ({
   data: {

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import PageTemplate from '../components/PageTemplate'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import CategoryIndex from '../components/CategoryIndex'
 
 export const Categories = ({ data }) => {
