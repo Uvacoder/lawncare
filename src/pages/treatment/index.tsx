@@ -8,7 +8,6 @@ import PropTypes from 'prop-types'
 export const Treatments = ({ data }) => {
 
   return (
-    <Layout>
       <PageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
@@ -16,7 +15,6 @@ export const Treatments = ({ data }) => {
         html={data.markdownRemark.html}>
             <TreatmentIndex />
             </PageTemplate>   
-    </Layout>
   )
 }
 

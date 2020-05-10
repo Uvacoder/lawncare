@@ -34,7 +34,7 @@ type PageProps = {
   const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
     <div>
-    <Layout color={theme.palette.primary.main}>
+
       <SEO
         pathname={data.markdownRemark.frontmatter.slug}
         title={data.markdownRemark.frontmatter.title}
@@ -55,7 +55,7 @@ type PageProps = {
         </RaisedHeader>
         </Container>
      </Content>
-</Layout>
+
     </div>
   )
 }

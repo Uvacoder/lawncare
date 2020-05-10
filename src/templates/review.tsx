@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import ReviewIndex from '../components/ReviewIndex'
 import PageTemplate from '../components/PageTemplate'
 import PropTypes from 'prop-types'
@@ -10,7 +9,6 @@ import PropTypes from 'prop-types'
   const ReviewPage = ({ data }) => {
    
     return (
-      <Layout>
         <PageTemplate
           featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
           title={data.markdownRemark.frontmatter.title}
@@ -19,7 +17,6 @@ import PropTypes from 'prop-types'
           html={data.markdownRemark.html}>
             <ReviewIndex category={data.markdownRemark.frontmatter.category} />
         </PageTemplate>   
-      </Layout>
     )
   }
   

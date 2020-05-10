@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import PropTypes from 'prop-types'
 import PageTemplate from '../components/PageTemplate'
 import ServiceCatalog from '../components/ServiceCatalog'
@@ -8,7 +7,6 @@ import ServiceCatalog from '../components/ServiceCatalog'
 export const Service = ({ data }) => {
 
   return (
-    <Layout>
       <PageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
@@ -16,7 +14,6 @@ export const Service = ({ data }) => {
         html={data.markdownRemark.html}>
            <ServiceCatalog   category={data.markdownRemark.frontmatter.category} />
         </PageTemplate>   
-    </Layout>
   )
 }
 

@@ -143,7 +143,7 @@ const Instagram: React.FunctionComponent<Props> = ({
   })
 
   return (
-    <Layout color="#2B2C3E">
+ 
     <div>
       <SEO title={`Our Instagram Images`}/>
       <Grid style={pageAnimation}>
@@ -172,7 +172,7 @@ const Instagram: React.FunctionComponent<Props> = ({
         })}
       </Grid>
       </div>
-    </Layout>
+
   )
 }
 

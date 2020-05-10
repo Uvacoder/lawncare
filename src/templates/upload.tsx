@@ -9,7 +9,6 @@ import FormPageTemplate from '../components/FormPageTemplate'
  export const Upload = ({ data }) => {
   
   return (
-    <Layout>
       <FormPageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
@@ -18,7 +17,6 @@ import FormPageTemplate from '../components/FormPageTemplate'
          >
      <Uploader />
         </FormPageTemplate>
-    </Layout>
   )
 }
 

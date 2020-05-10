@@ -8,7 +8,6 @@ import {AreaServedMap} from '../components/AreaServedMap'
 export const MapPage = ({ data }) => {
 
   return (
-    <Layout>
       <ComponentHeader
         featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
@@ -17,7 +16,6 @@ export const MapPage = ({ data }) => {
          >
             <AreaServedMap />
         </ComponentHeader>
-    </Layout>
   )
 }
 

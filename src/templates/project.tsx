@@ -8,7 +8,6 @@ import ProjectIndex from '../components/ProjectIndex'
 export const Project = ({ data }) => {
 
   return (
-    <Layout>
       <PageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
@@ -16,7 +15,6 @@ export const Project = ({ data }) => {
         html={data.markdownRemark.html}>
            <ProjectIndex   category={data.markdownRemark.frontmatter.category} />
         </PageTemplate>   
-    </Layout>
   )
 }
 

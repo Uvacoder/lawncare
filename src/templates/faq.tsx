@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import FAQIndex from '../components/FAQIndex'
 import PageTemplate from '../components/PageTemplate'
 
@@ -9,7 +8,6 @@ import PageTemplate from '../components/PageTemplate'
 export const FAQPage = ({ data }) => {
 
   return (
-    <Layout>
       <PageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
@@ -19,7 +17,6 @@ export const FAQPage = ({ data }) => {
              <h4>More questions? Please take a look below...</h4>
                <FAQIndex />
         </PageTemplate>
-    </Layout>
   )
 }
 

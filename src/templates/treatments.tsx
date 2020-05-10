@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import TreatmentIndex from '../components/TreatmentIndex'
 import PageTemplate from '../components/PageTemplate'
 
@@ -9,7 +8,6 @@ import PageTemplate from '../components/PageTemplate'
 export const TreatmentsPage = ({ data }) => {
 
   return (
-    <Layout>
       <PageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
@@ -18,7 +16,6 @@ export const TreatmentsPage = ({ data }) => {
          >
             <TreatmentIndex />
         </PageTemplate>
-    </Layout>
   )
 }
 

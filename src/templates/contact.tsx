@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import ContactForm from '../components/ContactForm'
 import FormPageTemplate from '../components/FormPageTemplate'
 
@@ -9,7 +8,6 @@ import FormPageTemplate from '../components/FormPageTemplate'
  export const Contact = ({ data }) => {
   
   return (
-    <Layout>
       <FormPageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
@@ -18,7 +16,6 @@ import FormPageTemplate from '../components/FormPageTemplate'
          >
             <ContactForm />
         </FormPageTemplate>
-    </Layout>
   )
 }
 

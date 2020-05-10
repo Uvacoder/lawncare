@@ -51,14 +51,14 @@ ServicesPageTemplate.propTypes = {
 const ServicesPage = ({ data }) => {
 
   return (
-    <Layout>
+ 
       <ServicesPageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
         html={data.markdownRemark.html}
       />
-    </Layout>
+ 
   )
 }
 
@@ -120,17 +120,3 @@ allMarkdownRemark (filter: {frontmatter: {category: {eq: "service"}}}, sort: {or
 
 
   `
-
-// import React from 'react'
-// import ServiceCatalog from '../../components/ServiceCatalog'
-// import Layout from '../../components/layout'
-
-// export default class ServiceCatalogPage extends React.Component {
-//   render() {
-//     return (
-//       <Layout>
-//               <ServiceCatalog />
-//               </Layout>
-//     )
-//   }
-// }

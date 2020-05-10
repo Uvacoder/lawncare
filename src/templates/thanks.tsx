@@ -1,14 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import ThanksIndex from '../components/ThanksIndex'
 import PageTemplate from '../components/PageTemplate'
 
 export const ThanksPage = ({ data }) => {
 
   return (
-    <Layout>
       <PageTemplate
         featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
@@ -18,8 +16,6 @@ export const ThanksPage = ({ data }) => {
     
         <ThanksIndex  category={data.markdownRemark.frontmatter.category}/>
       </PageTemplate>
-
-    </Layout>
   )
 }
 ThanksPage.propTypes = {

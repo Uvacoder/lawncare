@@ -6,7 +6,6 @@ import { Link, graphql } from 'gatsby'
 import PageTitle from '../styles/pageTitleStyle'
 import List from 'styles/listStyle'
 import PageTemplate from '../../components/PageTemplate'
-import Layout from '../../components/layout'
 
 const CategoryPage = ({
   data: {
@@ -24,7 +23,7 @@ const CategoryPage = ({
 
 
  return (
- <Layout>
+ <div>
     <Helmet title={title} />
     <PageTemplate featuredimage={featuredimage} title={title} slug={slug} html={html} >
       <h1>Categories</h1>
@@ -38,7 +37,7 @@ const CategoryPage = ({
           ))}
         </List>      
     </PageTemplate>
-</Layout>
+</div>
 )
 }
 CategoryPage.propTypes ={
