@@ -37,7 +37,7 @@ class PageIndex extends React.Component {
           pages.map(({ node: page }) => (
       
          <GridLink key={page.frontmatter.slug} to={page.frontmatter.slug} aria-label={`View page "${page.frontmatter.title}"`}>
-            <Img fluid={page.frontmatter.standardimage.childImageSharp.fluid} />
+            <Img fluid={page.frontmatter.gridimage.childImageSharp.fluid} />
            <span>{page.frontmatter.title}</span>
           </GridLink>
           ))}
@@ -62,7 +62,7 @@ export default () => (
               templateKey
               featured
               visible
-              ...standardImage
+              ...gridImage
             }
           }
         }
