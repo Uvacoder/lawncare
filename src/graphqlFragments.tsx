@@ -35,7 +35,7 @@ export const standardImage = graphql`
     standardimage:   featuredimage {
       childImageSharp {
         fluid( maxHeight: 600 maxWidth: 900 cropFocus: SOUTH) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
