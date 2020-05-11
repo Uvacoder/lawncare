@@ -2,6 +2,7 @@
 templateKey: project
 slug: /project/middletoncheney
 title: Middleton Cheney
+location: Middleton Cheney
 sortorder: 1230
 visible: true
 header: false

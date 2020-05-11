@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Croughton
+location: Croughton
 featuredimage: /img/croughton.jpeg
 alt: Results of our lawn care service in Croughton
 category:

@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Caulcott
+location: Caulcott
 featuredimage: /img/caulcott.jpeg
 alt: Results of our lawn care service in Caulcott
 category:

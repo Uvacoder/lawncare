@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Tadmarton 
+location: Tadmarton 
 featuredimage: /img/tadmarton.jpg
 alt: Tadmarton After photo
 category:

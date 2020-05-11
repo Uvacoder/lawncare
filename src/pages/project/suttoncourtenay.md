@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Sutton Courtenay
+location: Sutton Courtenay
 featuredimage: /img/suttoncourtenay.jpg
 alt: Sutton Courtenay After photo
 category:

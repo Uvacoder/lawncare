@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Whittlebury
+location: Whittlebury
 featuredimage: /img/whittlebury.jpg
 alt: Results of our lawn care service in Whittlebury
 category:

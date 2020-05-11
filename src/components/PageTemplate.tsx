@@ -10,6 +10,7 @@ export const PageTemplate = ({
     title,
     slug,
     location,
+    serviceName,
     html, 
   }) =>  (
     <div >
@@ -37,5 +38,10 @@ PageTemplate.propTypes = {
   html: PropTypes.markdown,
   posts: PropTypes.shape({
     frontmatter: PropTypes.object,
+  }),
+  site: PropTypes.shape({
+    siteMetadata: PropTypes.shape({
+      serviceName: PropTypes.string.isRequired,
+    }),
   }),
 }

@@ -3,6 +3,7 @@ templateKey: project
 slug: /project/middleton-cheney
 sortorder: 1220
 title: Middleton Cheney
+location: Middleton Cheney
 visible: true
 header: false
 featured: false

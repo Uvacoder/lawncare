@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Bodicote
+location: Bodicote
 featuredimage: /img/bodicote.jpg
 alt: Results of our lawn care service in Bodicote
 category:

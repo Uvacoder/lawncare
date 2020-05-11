@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Hinton-in-the-hedges
+location: Hinton-in-the-hedges
 featuredimage: /img/hintoninthehedges.jpg
 alt: Results of our lawn care service in Hinton-in-the-Hedges
 category:

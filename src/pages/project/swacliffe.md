@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Swalcliffe
+location: Swalcliffe
 featuredimage: /img/swacliffe.jpg
 alt: Results of our lawn care service in Swacliffe
 category:

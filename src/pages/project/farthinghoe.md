@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Farthinghoe 
+location: Farthinghoe 
 featuredimage: /img/farthinghoe.jpeg
 alt: Farthinghoe Project photo
 category:

@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Somerton
+location: Somerton
 featuredimage: /img/somerton.jpg
 alt: Results of our lawn care service in Somerton
 category:

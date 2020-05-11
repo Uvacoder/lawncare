@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Southmoor
+location: Southmoor
 featuredimage: /img/southmoor.jpg
 alt: Results of our lawn care service in Southmoor
 category:

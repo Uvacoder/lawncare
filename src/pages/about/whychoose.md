@@ -1,6 +1,6 @@
 ---
 title: Why Choose Lawns Matter?
-templateKey: page
+templateKey: about
 sortorder: 10
 slug: /about/whychoose
 visible: true

@@ -9,7 +9,7 @@ export const Page = ({ data }) => {
   return (
       <PageTemplate
         featuredimage={data.markdownRemark.frontmatter.standardimage.childImageSharp.fluid}
-        title={data.markdownRemark.frontmatter.title}
+        title={site.siteMetadata.serviceName}
         slug={data.markdownRemark.frontmatter.slug}
         location={data.markdownRemark.frontmatter.location}
         html={data.markdownRemark.html}>
@@ -24,7 +24,11 @@ Page.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-
+  site: PropTypes.shape({
+    siteMetadata: PropTypes.shape({
+      serviceName: PropTypes.string.isRequired,
+    }),
+  }),
 }
 
 export default Page
@@ -46,6 +50,7 @@ query Page ($id: String!) {
   }
   site {
     siteMetadata {
+      serviceName
       title
     }
   }

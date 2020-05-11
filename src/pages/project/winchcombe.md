@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Winchcombe
+location: Winchcombe
 featuredimage: /img/winchcombe.jpg
 alt: Results of our lawn care service in Winchcombe
 category:

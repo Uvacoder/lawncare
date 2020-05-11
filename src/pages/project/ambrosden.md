@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Ambrosden
+location: Ambrosden
 featuredimage: /img/ambrosden.jpeg
 alt: Results of our lawn care service in Ambrosden
 category:

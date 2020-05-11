@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Deddington
+location: Deddington
 featuredimage: /img/deddington.jpg
 alt: Deddington Project After photo
 category:

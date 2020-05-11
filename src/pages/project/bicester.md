@@ -2,6 +2,7 @@
 templateKey: project
 slug: /project/bicester
 title: Bicester 
+location: Bicester 
 sortorder: 1050
 visible: true
 header: false

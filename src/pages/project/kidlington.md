@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Kidlington
+location: Kidlington
 featuredimage: /img/kidlington.jpg
 alt: Results of our lawn care service in Kidlington
 category:

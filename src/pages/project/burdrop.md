@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Burdrop
+location: Burdrop
 featuredimage: /img/burdrop.jpeg
 alt: Results of our lawn care service in Burdrop
 category:

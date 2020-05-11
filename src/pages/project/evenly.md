@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Evenly
+location: Evenly
 featuredimage: /img/evenly.jpeg
 alt: Results of our lawn care service in Evenly
 category:

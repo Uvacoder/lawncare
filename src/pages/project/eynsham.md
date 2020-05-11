@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Eynsham
+location: Eynsham
 featuredimage: /img/eynsham.jpeg
 alt: Results of our lawn care service in Eynsham
 category:

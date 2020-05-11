@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Bladon
+location: Bladon
 featuredimage: /img/bladon.jpg
 alt: Results of our lawn care service in Bladon
 category:

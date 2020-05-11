@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Barford St Michael
+location: Barford St Michael
 featuredimage: /img/barfordstmichael.jpeg
 alt: Results of our lawn care service in Barford St Michael
 category:

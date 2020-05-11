@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Longworth
+location: Longworth
 featuredimage: /img/longworth.jpg
 alt: Results of our lawn care service in Longworth
 category:

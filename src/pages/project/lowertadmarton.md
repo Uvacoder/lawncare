@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Lower Tadmarton
+location: Lower Tadmarton
 featuredimage: /img/lowertadmarton.jpeg
 alt: Results of our lawn care service in Lower Tadmarton
 category:

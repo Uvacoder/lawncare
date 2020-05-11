@@ -3,7 +3,7 @@ templateKey: review
 slug: /review/emmashaw
 sortorder: 1430
 title: Emma Shaw
-visible: true
+visible: false
 header: false
 featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg

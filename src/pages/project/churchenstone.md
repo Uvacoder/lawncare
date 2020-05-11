@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Church Enstone
+location: Church Enstone
 featuredimage: /img/churchenstone.jpeg
 alt: Results of our lawn care service in Church Enstone
 category:

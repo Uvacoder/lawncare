@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Bloxham
+location: Bloxham
 featuredimage: /img/bloxham.jpeg
 alt: Results of our lawn care service in Bloxham
 category:

@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Banbury
+location: Banbury
 featuredimage: /img/banbury.jpg
 alt: Results of our lawn care service in Banbury
 category:

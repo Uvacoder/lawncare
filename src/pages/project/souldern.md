@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Souldern
+location: Souldern
 featuredimage: /img/souldern.jpg
 alt: Results of our lawn care service in Souldern
 category:
