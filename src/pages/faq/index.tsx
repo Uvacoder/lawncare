@@ -1,65 +1,33 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
-import Layout from '../../components/layout'
-import SEO from '../../components/SEO'
-import theme from '../../gatsby-theme-material-ui-top-layout/theme'
-import Container from '@material-ui/core/Container'
-import RaisedHeader from '../../styles/raisedHeaderStyle'
-import PageTitle from '../../styles/pageTitleStyle'
-import Content from '../../styles/contentStyle'
-import Description from  '../../styles/descriptionStyle'
+import PageTemplate from '../../components/PageTemplate'
+import PropTypes from 'prop-types'
 import FAQIndex from '../../components/FAQIndex'
-import HeaderImage from '../../components/HeaderImage'
 
-type PageProps = {
-  data: {
-        id: string
-        excerpt: string
-        html: markdown
-        frontmatter: {
-          title: string
-          templateKey: string
-          featured: boolean
-          slug: string
-          alt: string
-          category: string
-          featuredimage: ChildImageSharp
-          }
-        }
-  }
+export const FaqHeaderPage = ({ data }) => {
 
-
-  const FaqHeaderPage = ({ data }) => {
-  const imageData = data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid
   return (
-    <div>
-
-      <SEO
-        pathname={data.markdownRemark.frontmatter.slug}
+      <PageTemplate
+        featuredimage={data.markdownRemark.frontmatter.bannerdesktop.childImageSharp.fluid}
+        featuredimage={data.markdownRemark.frontmatter.bannertablet.childImageSharp.fluid}
+        featuredimage={data.markdownRemark.frontmatter.bannersmartphone.childImageSharp.fluid}
+        featuredimage={data.markdownRemark.frontmatter.bannermobile.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
-        desc={data.markdownRemark.excerpt}
-        node={data.markdownRemark.frontmatter.slug}
-        banner={imageData}
-         />
-      <Helmet title={data.markdownRemark.frontmatter.title} />
-      <Content bg={theme.palette.primary.main} >
-      <HeaderImage backgroundImage={imageData} />
-      <Container >
-        <RaisedHeader  >
-          <PageTitle >{data.markdownRemark.frontmatter.title}</PageTitle>
-          <Description >
-            <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-           <FAQIndex />
-          </Description>
-        </RaisedHeader>
-        </Container>
-     </Content>
-
-    </div>
+        slug={data.markdownRemark.frontmatter.slug}
+        html={data.markdownRemark.html}>
+            <FAQIndex   category={data.markdownRemark.frontmatter.category} />
+            </PageTemplate>   
   )
 }
 
+FaqHeaderPage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
+
+}
 
 export default FaqHeaderPage
 
@@ -73,13 +41,10 @@ query FaqHeaderPage {
       title
       templateKey
       category
-      featuredimage {
-        childImageSharp {
-          fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
-             ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+      ...bannerImageDesktop
+      ...bannerImageTablet
+      ...bannerImageSmartphone
+      ...bannerImageMobile
       alt
       featured
     }

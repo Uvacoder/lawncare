@@ -4,13 +4,14 @@ import ReviewIndex from '../components/ReviewIndex'
 import PageTemplate from '../components/PageTemplate'
 import PropTypes from 'prop-types'
 
-
-
   const ReviewPage = ({ data }) => {
    
     return (
         <PageTemplate
-          featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
+          featuredimage={data.markdownRemark.frontmatter.bannerdesktop.childImageSharp.fluid}
+          featuredimage={data.markdownRemark.frontmatter.bannertablet.childImageSharp.fluid}
+          featuredimage={data.markdownRemark.frontmatter.bannersmartphone.childImageSharp.fluid}
+          featuredimage={data.markdownRemark.frontmatter.bannermobile.childImageSharp.fluid}
           title={data.markdownRemark.frontmatter.title}
           location={data.markdownRemark.frontmatter.location}
           slug={data.markdownRemark.frontmatter.slug}
@@ -43,13 +44,10 @@ query ReviewPage ($id: String!) {
       category
       created_time
       recommendation_type_positive
-      featuredimage {
-        childImageSharp {
-          fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+      ...bannerImageDesktop
+      ...bannerImageTablet
+      ...bannerImageSmartphone
+      ...bannerImageMobile
       alt
       featured
     }

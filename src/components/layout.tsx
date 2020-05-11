@@ -28,7 +28,7 @@ export default function Layout({ children }: LayoutProps) {
         <GlobalStyles />
         <Hidden mdUp>
          <ToolbarTop  bg={theme.palette.primary.main} />
-         <div style={{ height: '32vw',  }} />
+         <div style={{ height: '275px',  }} />
          <Main>{children}</Main>
          <BottomButtonBar  bg={theme.palette.primary.main}   />
         </Hidden>

@@ -146,6 +146,7 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 1645,
+              withWebp: true,
             },
           },
           {
@@ -167,6 +168,21 @@ module.exports = {
         username: `lawnsmatter`,
       },
     }, 
+    {
+      resolve: `gatsby-plugin-react-svg`,
+        options: {
+          rule: {
+            include: /favicon/,
+            options: {
+              tag: "Logo",
+              name: "Lawns Matter",
+              props: {
+                title: "Lawns Matter",
+              },
+          },
+        },
+      },
+    },
      'gatsby-plugin-sitemap',
     'gatsby-theme-overreacted-toggle',
     {

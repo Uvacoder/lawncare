@@ -8,8 +8,11 @@ export const Categories = ({ data }) => {
 
   return (
       <PageTemplate
-        featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
-        title={data.markdownRemark.frontmatter.title}
+      featuredimage={data.markdownRemark.frontmatter.bannerdesktop.childImageSharp.fluid}
+      featuredimage={data.markdownRemark.frontmatter.bannertablet.childImageSharp.fluid}
+      featuredimage={data.markdownRemark.frontmatter.bannersmartphone.childImageSharp.fluid}
+      featuredimage={data.markdownRemark.frontmatter.bannermobile.childImageSharp.fluid}
+       title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
         html={data.markdownRemark.html}
        >
@@ -80,13 +83,10 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: {templateKey: {eq: "category"}}) {
       id
       frontmatter {
-        featuredimage {
-          childImageSharp {
-            fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
+        ...bannerImageDesktop
+        ...bannerImageTablet
+        ...bannerImageSmartphone
+        ...bannerImageMobile
         slug
         title
         alt
