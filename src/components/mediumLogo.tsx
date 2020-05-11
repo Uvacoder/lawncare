@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "gatsby"
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 
-const Logo = () => (
+const MediumLogo = () => (
  
     <Link to="/" aria-label="Home Page">
       <svg width={theme.logo.size.md} height={theme.logo.size.md} viewBox="0 0 512 512"  >
@@ -29,4 +29,4 @@ const Logo = () => (
 
 )
 
-export default Logo
+export default MediumLogo

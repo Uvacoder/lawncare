@@ -6,13 +6,12 @@ export const gridImage = graphql`
   fragment gridImage on MarkdownRemarkFrontmatter {
     gridimage:  featuredimage {
       childImageSharp {
-        fluid(quality: 90 maxWidth: 300) {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 90 maxWidth: 250) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
   }
- 
 
 `
 
