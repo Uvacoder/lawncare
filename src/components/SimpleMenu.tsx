@@ -19,7 +19,6 @@ const SimpleMenu = ({ children, color }: SimpleMenuProps) =>  {
 
 <div>
     <Button  
-        size="large" 
         aria-label="Menu" 
         aria-controls="simple-menu" 
         aria-haspopup="true"  

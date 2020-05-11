@@ -28,7 +28,15 @@ export default function Layout({ children }: LayoutProps) {
         <GlobalStyles />
         <Hidden mdUp>
          <ToolbarTop  bg={theme.palette.primary.main} />
-         <div style={{ height: '275px',  }} />
+         <Hidden mdUp >
+                  <Hidden xsDown>
+                  <div style={{ height: theme.logo.size.sm  }} />
+                  </Hidden>    
+                  </Hidden>    
+                  <Hidden smUp>
+                  <div style={{ height: theme.logo.size.xs  }} />
+                  </Hidden>    
+      
          <Main>{children}</Main>
          <BottomButtonBar  bg={theme.palette.primary.main}   />
         </Hidden>

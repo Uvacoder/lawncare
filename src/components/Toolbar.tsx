@@ -1,12 +1,12 @@
 import React from 'react'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
-import { Divider, AppBar, Grid, Paper } from '@material-ui/core'
-import Logo from './logo'
+import { AppBar, Grid, Paper } from '@material-ui/core'
+import SmallLogo from './smallLogo'
+import ExtraSmallLogo from './extraSmallLogo'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import SimpleMenu from './SimpleMenu'
-import PhoneNo from '../components/phoneNo'
 import PhoneLink from './phoneLink'
-import Container from '@material-ui/core/Container'
+import Hidden from '@material-ui/core/Hidden'
 
 
 function ElevationScroll(props: Props) {
@@ -65,7 +65,14 @@ export default function ElevateAppBar(props: Props) {
                   </Grid>   
                   <Grid item xs />
                   <Grid item xs >
-                        <Logo />
+                  <Hidden mdUp >
+                  <Hidden xsDown>
+                        <SmallLogo />
+                  </Hidden>    
+                  </Hidden>    
+                  <Hidden smUp>
+                        <ExtraSmallLogo />
+                  </Hidden>      
                   </Grid>     
                   <Grid item xs />
                   <Grid item xs>
