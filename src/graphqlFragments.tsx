@@ -7,7 +7,7 @@ export const gridImage = graphql`
     gridimage:  featuredimage {
       childImageSharp {
         fluid(quality: 90 maxWidth: 250) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
