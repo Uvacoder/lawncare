@@ -6,7 +6,7 @@ import Box from '@material-ui/core/Box'
 
 const Nav = styled(Box)<{ color: string }>`
 a {
-  margin-left: 22px;
+  margin-left: 12px;
   padding: 1rem;
   display: flex;
   flex-wrap: nowrap;
