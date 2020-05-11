@@ -8,6 +8,7 @@ const HeaderImage = ({ backgroundImage }) => (
 
           <Img 
               fluid={backgroundImage}
+              
               backgroundAttachment='relative'
               backgroundPosition='center'
               backgroundSize='cover'
