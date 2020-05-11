@@ -34,7 +34,7 @@ export const standardImage = graphql`
   fragment standardImage on MarkdownRemarkFrontmatter {
     standardimage:   featuredimage {
       childImageSharp {
-        fluid( maxHeight: 600 maxWidth: 900) {
+        fluid( maxHeight: 600 maxWidth: 900 cropFocus: SOUTH) {
           ...GatsbyImageSharpFluid
         }
       }
