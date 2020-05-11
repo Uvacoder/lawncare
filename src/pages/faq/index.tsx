@@ -8,10 +8,7 @@ export const FaqHeaderPage = ({ data }) => {
 
   return (
       <PageTemplate
-        featuredimage={data.markdownRemark.frontmatter.bannerdesktop.childImageSharp.fluid}
-        featuredimage={data.markdownRemark.frontmatter.bannertablet.childImageSharp.fluid}
-        featuredimage={data.markdownRemark.frontmatter.bannersmartphone.childImageSharp.fluid}
-        featuredimage={data.markdownRemark.frontmatter.bannermobile.childImageSharp.fluid}
+        featuredimage={data.markdownRemark.frontmatter.standardimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
         html={data.markdownRemark.html}>
@@ -41,10 +38,7 @@ query FaqHeaderPage {
       title
       templateKey
       category
-      ...bannerImageDesktop
-      ...bannerImageTablet
-      ...bannerImageSmartphone
-      ...bannerImageMobile
+      ...standardImage
       alt
       featured
     }

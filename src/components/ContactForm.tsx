@@ -108,10 +108,7 @@ export default () => (
       slug
       title
       templateKey
-      ...bannerImageDesktop
-      ...bannerImageTablet
-      ...bannerImageSmartphone
-      ...bannerImageMobile
+      ...standardImage
       alt
       featured
     }

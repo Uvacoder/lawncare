@@ -8,10 +8,7 @@ import PropTypes from 'prop-types'
    
     return (
         <PageTemplate
-          featuredimage={data.markdownRemark.frontmatter.bannerdesktop.childImageSharp.fluid}
-          featuredimage={data.markdownRemark.frontmatter.bannertablet.childImageSharp.fluid}
-          featuredimage={data.markdownRemark.frontmatter.bannersmartphone.childImageSharp.fluid}
-          featuredimage={data.markdownRemark.frontmatter.bannermobile.childImageSharp.fluid}
+        featuredimage={data.markdownRemark.frontmatter.standardimage.childImageSharp.fluid}
           title={data.markdownRemark.frontmatter.title}
           location={data.markdownRemark.frontmatter.location}
           slug={data.markdownRemark.frontmatter.slug}
@@ -44,10 +41,7 @@ query ReviewPage ($id: String!) {
       category
       created_time
       recommendation_type_positive
-      ...bannerImageDesktop
-      ...bannerImageTablet
-      ...bannerImageSmartphone
-      ...bannerImageMobile
+      ...standardImage
       alt
       featured
     }

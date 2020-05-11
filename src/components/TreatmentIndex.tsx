@@ -51,7 +51,7 @@ class TreatmentIndex extends React.Component {
           treatments.map(({ node: treatment }) => (
 
          <GridLink key={treatment.frontmatter.slug} to={treatment.frontmatter.slug} aria-label={`View treatments "${treatment.frontmatter.title}"`}>
-                        <Img fluid={treatment.frontmatter.featuredimage.childImageSharp.fluid} />
+                        <Img fluid={treatment.frontmatter.standardimage.childImageSharp.fluid} />
             <span>{treatment.frontmatter.title}</span>
           </GridLink>
          
@@ -76,14 +76,7 @@ export default () => (
               title
               templateKey
               featured
-              featuredimage {
-                id
-                childImageSharp {
-                  fluid(quality: 100, maxHeight: 450, maxWidth: 450) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
+              ...standardImage
             }
           }
         }

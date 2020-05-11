@@ -25,7 +25,7 @@ const CategoryPage = ({
  return (
  <div>
     <Helmet title={title} />
-    <PageTemplate featuredimage={bannerdesktop}  featuredimage={bannertablet}  featuredimage={bannersmartphone}  featuredimage={bannermobile} title={title} slug={slug} html={html} >
+    <PageTemplate featuredimage={standardimage} title={title} slug={slug} html={html} >
       <h1>Categories</h1>
         <List>
           {group.map(category => (
@@ -90,10 +90,7 @@ export const pageQuery = graphql`
   category:  markdownRemark(frontmatter: {templateKey: {eq: "categories"}}) {
       id
       frontmatter {
-        ...bannerImageDesktop
-        ...bannerImageTablet
-        ...bannerImageSmartphone
-        ...bannerImageMobile
+        ...standardImage
         slug
         title
         alt

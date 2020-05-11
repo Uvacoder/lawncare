@@ -8,10 +8,6 @@ export const MapPage = ({ data }) => {
 
   return (
       <ComponentHeader
-        featuredimage={data.markdownRemark.frontmatter.bannerdesktop.childImageSharp.fluid}
-        featuredimage={data.markdownRemark.frontmatter.bannertablet.childImageSharp.fluid}
-        featuredimage={data.markdownRemark.frontmatter.bannersmartphone.childImageSharp.fluid}
-        featuredimage={data.markdownRemark.frontmatter.bannermobile.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
         html={data.markdownRemark.html}
@@ -38,10 +34,6 @@ query MapPage {
       html
       frontmatter {
       title
-      ...bannerImageDesktop
-      ...bannerImageTablet
-      ...bannerImageSmartphone
-      ...bannerImageMobile
       slug
     }
   }

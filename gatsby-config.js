@@ -142,23 +142,17 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              // It`s important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
               maxWidth: 1645,
               withWebp: true,
             },
           },
+          `gatsby-remark-lazy-load`,
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
               destinationDir: `static`,
             },
           },
-          {
-            resolve: `gatsby-remark-images`,
-          },
-          `gatsby-remark-lazy-load`,
         ],
       },
     },  
