@@ -35,7 +35,7 @@ class ProjectIndex extends React.Component {
           projects.map(({ node: project }) => (
       
          <GridLink key={project.frontmatter.slug} to={project.frontmatter.slug} aria-label={`View project "${project.frontmatter.title}"`}>
-            <Img fluid={project.frontmatter.featuredimage.childImageSharp.fluid} />
+            <Img fluid={project.frontmatter.standardimage.childImageSharp.fluid} />
            <span>{project.frontmatter.title}</span>
           </GridLink>
           ))}
@@ -59,13 +59,7 @@ export default () => (
               title
               templateKey
               visible
-              featuredimage {
-                childImageSharp {
-                  fluid(quality: 100, maxWidth: 450, maxHeight: 450)  {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
+              ...standardImage
             }
           }
         }

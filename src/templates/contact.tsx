@@ -9,10 +9,7 @@ import FormPageTemplate from '../components/FormPageTemplate'
   
   return (
       <FormPageTemplate
-        featuredimage={data.markdownRemark.frontmatter.bannerdesktop.childImageSharp.fluid}
-        featuredimage={data.markdownRemark.frontmatter.bannertablet.childImageSharp.fluid}
-        featuredimage={data.markdownRemark.frontmatter.bannersmartphone.childImageSharp.fluid}
-        featuredimage={data.markdownRemark.frontmatter.bannermobile.childImageSharp.fluid}
+        featuredimage={data.markdownRemark.frontmatter.standardimage.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
         html={data.markdownRemark.html}
@@ -41,10 +38,7 @@ export const query = graphql`
       slug
       title
       templateKey
-      ...bannerImageDesktop
-      ...bannerImageTablet
-      ...bannerImageSmartphone
-      ...bannerImageMobile
+      ...standardImage
       alt
       featured
     }

@@ -2,13 +2,12 @@ import { graphql } from 'gatsby'
 
 
 
-
-export const gridImageMobile = graphql`
-  fragment gridImageMobile on MarkdownRemarkFrontmatter {
-    gridmobile:   featuredimage {
+export const gridImage = graphql`
+  fragment gridImage on MarkdownRemarkFrontmatter {
+    gridimage:  featuredimage {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 300, maxHeight: 300)  {
-          GatsbyImageSharpFluid_noBase64
+        fluid( maxWidth: 450) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -18,39 +17,12 @@ export const gridImageMobile = graphql`
 `
 
 
-export const gridImageDesktop = graphql`
-  fragment gridImageDesktop on MarkdownRemarkFrontmatter {
-    griddesktop:  featuredimage {
+export const bannerImage = graphql`
+  fragment bannerImage on MarkdownRemarkFrontmatter {
+    bannerimage:   featuredimage {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 450, maxHeight: 450) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-    }
-  }
- 
-
-`
-
-
-export const bannerImageDesktop = graphql`
-  fragment bannerImageDesktop on MarkdownRemarkFrontmatter {
-    bannerdesktop:   featuredimage {
-      childImageSharp {
-        fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-    }
-  }
-`
-
-export const bannerImageTablet = graphql`
-  fragment bannerImageTablet on MarkdownRemarkFrontmatter {
-    bannertablet:   featuredimage {
-      childImageSharp {
-        fluid(quality:95 maxHeight: 720, maxWidth: 1005)  {
-          ...GatsbyImageSharpFluid_noBase64
+        fluid( maxWidth: 800)  {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -58,26 +30,12 @@ export const bannerImageTablet = graphql`
 `
 
 
-
-export const bannerImageSmartphone = graphql`
-  fragment bannerImageSmartphone on MarkdownRemarkFrontmatter {
-    bannersmartphone:   featuredimage {
+export const standardImage = graphql`
+  fragment standardImage on MarkdownRemarkFrontmatter {
+    standardimage:   featuredimage {
       childImageSharp {
-        fluid(quality:95 maxHeight: 540, maxWidth: 960){
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
-
-
-export const bannerImageMobile = graphql`
-  fragment bannerImageMobile on MarkdownRemarkFrontmatter {
-    bannermobile:   featuredimage {
-      childImageSharp {
-        fluid(quality:95 maxHeight: 337, maxWidth: 600){
-          ...GatsbyImageSharpFluid_withWebp
+        fluid(sizes: "maxWidth: 1645px, maxWidth: 1005px, maxWidth: 960px, maxWidth: 450px, maxWidth: 300px") {
+          ...GatsbyImageSharpFluid
         }
       }
     }

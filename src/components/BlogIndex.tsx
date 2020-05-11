@@ -37,7 +37,7 @@ class BlogIndex extends React.Component {
           posts.map(({ node: post }) => (
 
          <GridLink key={post.frontmatter.slug} to={post.frontmatter.slug} aria-label={`View our lastest news "${post.frontmatter.title}"`}>
-                        <Img fluid={post.frontmatter.featuredimage.childImageSharp.fluid} />
+                        <Img fluid={post.frontmatter.standardimage.childImageSharp.fluid} />
             <span>{post.frontmatter.title}</span>
           </GridLink>
          
@@ -60,13 +60,7 @@ export default () => (
               slug
               title
               featured
-              featuredimage {
-                childImageSharp {
-                  fluid(quality: 90, maxWidth: 450, maxHeight: 450) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
+              ...standardImage
             }
           }
         }
