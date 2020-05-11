@@ -35,7 +35,7 @@ class ProjectIndex extends React.Component {
           projects.map(({ node: project }) => (
       
          <GridLink key={project.frontmatter.slug} to={project.frontmatter.slug} aria-label={`View project "${project.frontmatter.title}"`}>
-            <Img fluid={project.frontmatter.standardimage.childImageSharp.fluid} />
+            <Img fluid={project.frontmatter.gridimage.childImageSharp.fluid} />
            <span>{project.frontmatter.title}</span>
           </GridLink>
           ))}
@@ -59,7 +59,7 @@ export default () => (
               title
               templateKey
               visible
-              ...standardImage
+              ...gridImage
             }
           }
         }

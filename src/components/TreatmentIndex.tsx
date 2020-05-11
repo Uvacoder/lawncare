@@ -1,10 +1,9 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
-import { animated } from 'react-spring'
 import GridLink from './grid-link'
 import { ChildImageSharp } from '../types'
+import Area from '../styles/areaStyle'
 
 type TreatmentProps = {
   data: {
@@ -25,16 +24,7 @@ type TreatmentProps = {
     }
   }
 }
-const Area = styled(animated.div)`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 35vw;
 
- [theme.breakpoints.down('md')]: {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 30vw;
-  }
-`
 
 class TreatmentIndex extends React.Component {
   render() {
@@ -51,7 +41,7 @@ class TreatmentIndex extends React.Component {
           treatments.map(({ node: treatment }) => (
 
          <GridLink key={treatment.frontmatter.slug} to={treatment.frontmatter.slug} aria-label={`View treatments "${treatment.frontmatter.title}"`}>
-                        <Img fluid={treatment.frontmatter.standardimage.childImageSharp.fluid} />
+                        <Img fluid={treatment.frontmatter.gridimage.childImageSharp.fluid} />
             <span>{treatment.frontmatter.title}</span>
           </GridLink>
          
@@ -76,7 +66,7 @@ export default () => (
               title
               templateKey
               featured
-              ...standardImage
+              ...gridImage
             }
           }
         }

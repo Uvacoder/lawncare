@@ -6,7 +6,7 @@ export const gridImage = graphql`
   fragment gridImage on MarkdownRemarkFrontmatter {
     gridimage:  featuredimage {
       childImageSharp {
-        fluid( maxWidth: 450) {
+        fluid(quality: 90 maxWidth: 300) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -16,18 +16,6 @@ export const gridImage = graphql`
 
 `
 
-
-export const bannerImage = graphql`
-  fragment bannerImage on MarkdownRemarkFrontmatter {
-    bannerimage:   featuredimage {
-      childImageSharp {
-        fluid( maxWidth: 800)  {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
 
 export const standardImage = graphql`
