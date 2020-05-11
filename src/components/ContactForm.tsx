@@ -108,13 +108,10 @@ export default () => (
       slug
       title
       templateKey
-      featuredimage {
-        childImageSharp {
-          fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+      ...bannerImageDesktop
+      ...bannerImageTablet
+      ...bannerImageSmartphone
+      ...bannerImageMobile
       alt
       featured
     }

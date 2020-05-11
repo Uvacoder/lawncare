@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import BlogIndex from '../components/BlogIndex'
 import PageTemplate from '../components/PageTemplate'
 
@@ -9,16 +8,17 @@ import PageTemplate from '../components/PageTemplate'
 export const IndexPage = ({ data }) => {
 
   return (
-    <Layout>
       <PageTemplate
-        featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
+        featuredimage={data.markdownRemark.frontmatter.bannerdesktop.childImageSharp.fluid}
+        featuredimage={data.markdownRemark.frontmatter.bannertablet.childImageSharp.fluid}
+        featuredimage={data.markdownRemark.frontmatter.bannersmartphone.childImageSharp.fluid}
+        featuredimage={data.markdownRemark.frontmatter.bannermobile.childImageSharp.fluid}
         title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
         html={data.markdownRemark.html}
          >
             <BlogIndex />
         </PageTemplate>
-    </Layout>
   )
 }
 
@@ -39,13 +39,10 @@ query IndexPage {
       html
       frontmatter {
       title
-      featuredimage {
-        childImageSharp {
-          fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+       ...bannerImageDesktop
+      ...bannerImageTablet
+      ...bannerImageSmartphone
+      ...bannerImageMobile
       slug
     }
   }

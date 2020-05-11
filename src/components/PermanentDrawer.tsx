@@ -1,7 +1,7 @@
 import React from 'react'
 import Divider from '@material-ui/core/Divider'
 import ListItem from '@material-ui/core/ListItem'
-import LogoLarge from './logoLarge'
+import Logo from './logo'
 import Gappsapps from './gappsapps'
 import IconButtonBar from './IconButtonBar'
 import SideBarInner from  '../styles/sideBarInnerStyle'
@@ -15,7 +15,7 @@ const PermanentDrawerLeft = ({ children, color }: PermanentDrawerLeftProps) => {
   return (
     <Box >
       <SideBarInner>
-          <LogoLarge />
+          <Logo />
           <Nav>
             <ListItem>
               <MenuOptions />

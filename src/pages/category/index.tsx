@@ -6,7 +6,6 @@ import { Link, graphql } from 'gatsby'
 import PageTitle from '../styles/pageTitleStyle'
 import List from 'styles/listStyle'
 import PageTemplate from '../../components/PageTemplate'
-import Layout from '../../components/layout'
 
 const CategoryPage = ({
   data: {
@@ -24,9 +23,9 @@ const CategoryPage = ({
 
 
  return (
- <Layout>
+ <div>
     <Helmet title={title} />
-    <PageTemplate featuredimage={featuredimage} title={title} slug={slug} html={html} >
+    <PageTemplate featuredimage={bannerdesktop}  featuredimage={bannertablet}  featuredimage={bannersmartphone}  featuredimage={bannermobile} title={title} slug={slug} html={html} >
       <h1>Categories</h1>
         <List>
           {group.map(category => (
@@ -38,7 +37,7 @@ const CategoryPage = ({
           ))}
         </List>      
     </PageTemplate>
-</Layout>
+</div>
 )
 }
 CategoryPage.propTypes ={
@@ -91,13 +90,10 @@ export const pageQuery = graphql`
   category:  markdownRemark(frontmatter: {templateKey: {eq: "categories"}}) {
       id
       frontmatter {
-        featuredimage {
-          childImageSharp {
-            fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
+        ...bannerImageDesktop
+        ...bannerImageTablet
+        ...bannerImageSmartphone
+        ...bannerImageMobile
         slug
         title
         alt

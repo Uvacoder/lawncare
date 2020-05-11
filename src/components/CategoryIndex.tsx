@@ -77,23 +77,7 @@ class CategoryIndex extends React.Component {
         totalCount
       }
     }
-    markdownRemark(frontmatter: {templateKey: {eq: "category"}}) {
-      id
-      frontmatter {
-        featuredimage {
-          childImageSharp {
-            fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        slug
-        title
-        alt
-      }
-      html
-    }
-  }
+   }
   `}
   render={(data, count) => <CategoryIndex data={data} count={count} />}
 />

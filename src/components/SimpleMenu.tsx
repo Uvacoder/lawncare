@@ -36,14 +36,9 @@ const SimpleMenu = ({ children, color }: SimpleMenuProps) =>  {
   
       
       <Popover
-
         anchorEl={anchorEl}
         elevation={5}
         getContentAnchorEl={null}
-        MenuListProps = {{
-          // padding-top: 0,
-          // padding-bottom: 0,
-        }}
         anchorOrigin={{
           vertical: 'bottom',
           horizontal: 'center',
@@ -54,11 +49,9 @@ const SimpleMenu = ({ children, color }: SimpleMenuProps) =>  {
         }}
         keepMounted
         open={Boolean(anchorEl)}
-        onClose={handleClose}
+        onClick={handleClose} >
         
-      >
-        
-      <MenuStyle>
+      <MenuStyle  >
            <MenuOptions />
       </MenuStyle>
        

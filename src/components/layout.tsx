@@ -1,5 +1,7 @@
 import React from 'react'
 import 'typeface-work-sans'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet';
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import GlobalStyles from '../styles/globalStyle'
 import PermanentDrawerLeft from './PermanentDrawer'
@@ -11,14 +13,22 @@ import {ThemeProvider}  from '@material-ui/core/styles'
 import SideBarInner from '../styles/sideBarInnerStyle'
 import Main from '../styles/mainStyle'
 
-const Layout = ({ children, color }: LayoutProps) => {
+export default function Layout({ children }: LayoutProps) {
   return (
-   
-    <ThemeProvider theme={theme}>
+    <React.Fragment>
+      <Helmet>
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
+
+     <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Hidden mdUp>
          <ToolbarTop  bg={theme.palette.primary.main} />
-         <div style={{ height: '33vw',  }} />
+         <div style={{ height: '275px',  }} />
          <Main>{children}</Main>
          <BottomButtonBar  bg={theme.palette.primary.main}   />
         </Hidden>
@@ -37,10 +47,13 @@ const Layout = ({ children, color }: LayoutProps) => {
           </Hidden>
  
     </ThemeProvider>
-  )
+    </React.Fragment>
+  );
 }
 
 
 
-export default Layout
+Layout.propTypes = {
+  children: PropTypes.node,
+};
 

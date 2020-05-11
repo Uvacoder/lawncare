@@ -1,12 +1,12 @@
 import React from 'react'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import { Divider, AppBar, Grid, Paper } from '@material-ui/core'
-import LogoLarge from './logoLarge'
+import Logo from './logo'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import SimpleMenu from './SimpleMenu'
 import PhoneNo from '../components/phoneNo'
 import PhoneLink from './phoneLink'
-
+import Container from '@material-ui/core/Container'
 
 
 function ElevationScroll(props: Props) {
@@ -58,30 +58,23 @@ export default function ElevateAppBar(props: Props) {
           backgroundColor={theme.palette.primary.main}
           position="fixed">
 
-            <Grid container position="relative"  alignItems="flex-end"  justifyItems="center" >  
-            <Grid item xs={1} />
-                <Grid item xs={2} >
-               
-                  <SimpleMenu   />
-      
-                </Grid>   
-                <Grid item xs={1} />
-                <Grid item xs={4}>
-     
-                      <LogoLarge />
-      
-                </Grid>     
-                <Grid item xs={1} />
-                <Grid item xs={2} >
-                  <a href={`tel:${<PhoneNo />}`} rel="nofollow">
-                     <PhoneLink />
-                  </a>
-                </Grid>   
-                <Grid item xs={1} />
-             
-              <Divider />
+            <Grid container display="flex" flexDirection="row" position="relative"  alignItems="flex-end"   >  
+              <Grid item xs />
+                  <Grid item xs >
+                    <SimpleMenu   />
+                  </Grid>   
+                  <Grid item xs />
+                  <Grid item xs >
+                        <Logo />
+                  </Grid>     
+                  <Grid item xs />
+                  <Grid item xs>
+                      <PhoneLink />
+                  </Grid>   
+                  <Grid item xs />
+
             </Grid>
-          {/* </Toolbar> */}
+       
         </AppBar> 
        
   

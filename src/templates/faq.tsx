@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import FAQIndex from '../components/FAQIndex'
 import PageTemplate from '../components/PageTemplate'
 
@@ -9,17 +8,18 @@ import PageTemplate from '../components/PageTemplate'
 export const FAQPage = ({ data }) => {
 
   return (
-    <Layout>
       <PageTemplate
-        featuredimage={data.markdownRemark.frontmatter.featuredimage.childImageSharp.fluid}
-        title={data.markdownRemark.frontmatter.title}
+      featuredimage={data.markdownRemark.frontmatter.bannerdesktop.childImageSharp.fluid}
+      featuredimage={data.markdownRemark.frontmatter.bannertablet.childImageSharp.fluid}
+      featuredimage={data.markdownRemark.frontmatter.bannersmartphone.childImageSharp.fluid}
+      featuredimage={data.markdownRemark.frontmatter.bannermobile.childImageSharp.fluid}
+       title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
         html={data.markdownRemark.html}
          >
              <h4>More questions? Please take a look below...</h4>
                <FAQIndex />
         </PageTemplate>
-    </Layout>
   )
 }
 
@@ -44,13 +44,10 @@ query FAQPage ($id: String!) {
       title
       templateKey
       category
-      featuredimage {
-        childImageSharp {
-          fluid(quality:95 maxHeight: 1080, maxWidth: 1645)  {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+      ...bannerImageDesktop
+      ...bannerImageTablet
+      ...bannerImageSmartphone
+      ...bannerImageMobile
       alt
       featured
     }
