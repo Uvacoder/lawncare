@@ -5,7 +5,8 @@ sortorder: 1320
 visible: true
 header: false
 featured: false
-title: Tadmarton 
+title: Lawn care in Tadmarton 
+location: Tadmarton 
 featuredimage: /img/tadmarton.jpg
 alt: Tadmarton After photo
 category:

@@ -24,7 +24,11 @@ Page.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-
+  site: PropTypes.shape({
+    siteMetadata: PropTypes.shape({
+      serviceName: PropTypes.string.isRequired,
+    }),
+  }),
 }
 
 export default Page
@@ -46,6 +50,7 @@ query Page ($id: String!) {
   }
   site {
     siteMetadata {
+      serviceName
       title
     }
   }

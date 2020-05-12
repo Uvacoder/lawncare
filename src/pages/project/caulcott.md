@@ -5,7 +5,8 @@ sortorder: 1130
 visible: true
 header: false
 featured: false
-title: Caulcott
+title: Lawn care in Caulcott
+location: Caulcott
 featuredimage: /img/caulcott.jpeg
 alt: Results of our lawn care service in Caulcott
 category:

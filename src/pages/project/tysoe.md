@@ -5,7 +5,8 @@ sortorder: 1330
 visible: true
 header: false
 featured: false
-title: Tysoe
+title: Lawn care in Tysoe
+location: Tysoe
 featuredimage: /img/tysoe.jpg
 alt: Results of our lawn care service in Tysoe
 category:

@@ -2,7 +2,8 @@
 templateKey: project
 slug: /project/longfordpark
 sortorder: 1180
-title: Longford Park
+title: Lawn care in Longford Park
+location: Longford Park
 visible: true
 header: false
 featured: false

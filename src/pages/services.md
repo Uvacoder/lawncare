@@ -2,7 +2,7 @@
 templateKey: page
 sortorder: 14
 slug: /services
-title: Our Service
+title: Lawn Care Service
 visible: true
 header: true
 featured: false

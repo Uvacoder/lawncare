@@ -2,23 +2,23 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import PageTemplate from '../components/PageTemplate'
-import ProjectIndex from '../components/ProjectIndex'
+import AboutIndex from '../components/AboutIndex'
 
-export const Project = ({ data }) => {
+export const About = ({ data }) => {
 
   return (
       <PageTemplate
         featuredimage={data.markdownRemark.frontmatter.standardimage.childImageSharp.fluid}
-        title={`${data.site.siteMetadata.serviceName} in ${data.markdownRemark.frontmatter.location}`}
+        title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
+        location={data.markdownRemark.frontmatter.location}
         html={data.markdownRemark.html}>
-    <h6>     Please take a look at the rest of our portfolio...  </h6>
-           <ProjectIndex   />
+           <AboutIndex   category={data.markdownRemark.frontmatter.category} />
         </PageTemplate>   
   )
 }
 
-Project.propTypes = {
+About.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -26,21 +26,20 @@ Project.propTypes = {
   }),
   site: PropTypes.shape({
     siteMetadata: PropTypes.shape({
-      serviceName: PropTypes.object,
+      serviceName: PropTypes.string.isRequired,
     }),
   }),
 }
 
-export default Project
+export default About
 
 export const query = graphql`
-query Project ($id: String!) {
+query About ($id: String!) {
    markdownRemark(id: { eq: $id }) {
     html
     frontmatter {
       slug
       title
-      location
       templateKey
       category
       ...standardImage
@@ -52,6 +51,7 @@ query Project ($id: String!) {
   site {
     siteMetadata {
       serviceName
+      title
     }
   }
 }

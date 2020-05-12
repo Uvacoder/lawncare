@@ -5,7 +5,8 @@ sortorder: 1290
 visible: true
 header: false
 featured: false
-title: Sutton Courtenay
+title: Lawn care in Sutton Courtenay
+location: Sutton Courtenay
 featuredimage: /img/suttoncourtenay.jpg
 alt: Sutton Courtenay After photo
 category:

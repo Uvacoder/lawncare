@@ -6,6 +6,7 @@ visible: true
 header: false
 featured: false
 title: Wooton
+location: Wooton
 featuredimage: /img/wooton.jpg
 alt: Results of our lawn care service in Wooton
 category:

@@ -5,7 +5,8 @@ sortorder: 1180
 visible: true
 header: false
 featured: false
-title: Evenly
+title: Lawn care in Evenly
+location: Evenly
 featuredimage: /img/evenly.jpeg
 alt: Results of our lawn care service in Evenly
 category:

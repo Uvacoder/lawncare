@@ -5,7 +5,8 @@ sortorder: 1020
 visible: true
 header: false
 featured: false
-title: Aynho
+location: Aynho
+title: Lawn care in Aynho
 featuredimage: /img/aynho.jpeg
 alt: Results of our lawn care service in Aynho
 category:

@@ -1,8 +1,8 @@
 ---
 title: Lawn renovation
-templateKey: page
+templateKey: about
 sortorder: 30
-slug: /service/lawnrenovation
+slug: /about/lawnrenovation
 visible: true
 header: false
 featured: true

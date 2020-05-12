@@ -5,7 +5,8 @@ sortorder: 1200
 visible: true
 header: false
 featured: false
-title: Longworth
+title: Lawn care in Longworth
+location: Longworth
 featuredimage: /img/longworth.jpg
 alt: Results of our lawn care service in Longworth
 category:

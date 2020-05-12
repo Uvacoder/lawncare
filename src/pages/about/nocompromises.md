@@ -1,8 +1,8 @@
 ---
 title: Great lawns with no compromises
-templateKey: page
+templateKey: about
 sortorder: 60
-slug: /service/nocompromises
+slug: /about/nocompromises
 visible: true
 header: false
 featured: false

@@ -5,7 +5,8 @@ sortorder: 1160
 visible: true
 header: false
 featured: false
-title: Deddington
+title: Lawn care in Deddington
+location: Deddington
 featuredimage: /img/deddington.jpg
 alt: Deddington Project After photo
 category:

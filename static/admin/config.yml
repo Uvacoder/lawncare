@@ -11,9 +11,135 @@ media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 collections:
+  - name: about      
+    label: "About page"
+    folder: "src/pages/about"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Template Key", name: templateKey,  widget: "hidden", default: "about" }
+      - { label: "Sort order", required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
+      - { label: Path, name: slug, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: Visible, required: false, name: visible, widget: boolean }
+      - { label: "Header Image", name: featuredimage, widget: image }
+      - { label: "Image description (needed for SEO)", name: alt, widget: string }
+      - { label: "Main content", required: false, name: body, widget: markdown }
+      - { label: category, required: false, name: category, widget: list }
+      - { label: Location, required: false, name: locationName, widget: string }
+      - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }
+  - name: faq      
+    label: "Frequently Asked Question page"
+    folder: "src/pages/faq"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Template Key", name: templateKey,  widget: "hidden", default: "faq" }
+      - { label: "Sort order", required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
+      - { label: Path, name: slug, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: Visible, required: false, name: visible, widget: boolean }
+      - { label: "Header Image", name: featuredimage, widget: image }
+      - { label: "Image description (needed for SEO)", name: alt, widget: string }
+      - { label: "Main content", required: false, name: body, widget: markdown }
+      - { label: category, required: false, name: category, widget: list }
+      - { label: Location, required: false, name: locationName, widget: string }
+      - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }
+  - name: page      
+    label: "Page"
+    folder: "src/pages/page"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Template Key", name: templateKey,  widget: "hidden", default: "page" }
+      - { label: "Sort order", required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
+      - { label: Path, name: slug, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: Visible, required: false, name: visible, widget: boolean }
+      - { label: "Header Image", name: featuredimage, widget: image }
+      - { label: "Image description (needed for SEO)", name: alt, widget: string }
+      - { label: "Main content", required: false, name: body, widget: markdown }
+      - { label: category, required: false, name: category, widget: list }
+      - { label: Location, required: false, name: locationName, widget: string }
+      - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }      
+  - name: project      
+    label: "Project page"
+    folder: "src/pages/project"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Template Key", name: templateKey,  widget: "hidden", default: "project" }
+      - { label: "Sort order", required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
+      - { label: Path, name: slug, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: Visible, required: false, name: visible, widget: boolean }
+      - { label: "Header Image", name: featuredimage, widget: image }
+      - { label: "Image description (needed for SEO)", name: alt, widget: string }
+      - { label: "Main content", required: false, name: body, widget: markdown }
+      - { label: category, required: false, name: category, widget: list }
+      - { label: Location, required: true, name: locationName, widget: string }
+      - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }      
+  - name: review      
+    label: "Review page"
+    folder: "src/pages/review"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Template Key", name: templateKey,  widget: "hidden", default: "review" }
+      - { label: "Sort order", required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
+      - { label: Path, name: slug, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: Visible, required: false, name: visible, widget: boolean }
+      - { label: "Header Image", name: featuredimage, widget: image }
+      - { label: "Image description (needed for SEO)", name: alt, widget: string }
+      - { label: "Main content", required: false, name: body, widget: markdown }
+      - { label: category, required: false, name: category, widget: list }
+      - { label: Location, required: false, name: locationName, widget: string }
+      - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }      
+  - name: service      
+    label: "Service Page"
+    folder: "src/pages/service"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Template Key", name: templateKey,  widget: "hidden", default: "service" }
+      - { label: "Sort order", required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
+      - { label: Path, name: slug, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: Visible, required: false, name: visible, widget: boolean }
+      - { label: "Header Image", name: featuredimage, widget: image }
+      - { label: "Image description (needed for SEO)", name: alt, widget: string }
+      - { label: "Main content", required: false, name: body, widget: markdown }
+      - { label: category, required: false, name: category, widget: list }
+      - { label: Location, required: false, name: locationName, widget: string }
+      - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }      
+  - name: treatment      
+    label: "Treatment page"
+    folder: "src/pages/treatment"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Template Key", name: templateKey,  widget: "hidden", default: "treatment" }
+      - { label: "Sort order", required: false, name: sortorder, widget: number, min: 1, step: 1, default: 100 }
+      - { label: Path, name: slug, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Featured, required: false, name: featured, widget: boolean }
+      - { label: Visible, required: false, name: visible, widget: boolean }
+      - { label: "Header Image", name: featuredimage, widget: image }
+      - { label: "Image description (needed for SEO)", name: alt, widget: string }
+      - { label: "Main content", required: false, name: body, widget: markdown }
+      - { label: category, required: false, name: category, widget: list }
+      - { label: Location, required: false, name: locationName, widget: string }
+      - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }      
   - name: page      
     label: Page
-    folder: "src/pages/{{templateKey}}"
+    folder: "src/pages"
     create: true
     slug: "{{slug}}"
     fields:
@@ -23,13 +149,12 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Featured, required: false, name: featured, widget: boolean }
       - { label: Visible, required: false, name: visible, widget: boolean }
-      - { label: Header, required: false, name: header, widget: boolean }
-      - { label: Image, name: featuredimage, widget: image }
+      - { label: "Header Image", name: featuredimage, widget: image }
       - { label: "Image description (needed for SEO)", name: alt, widget: string }
       - { label: "Main content", required: false, name: body, widget: markdown }
       - { label: category, required: false, name: category, widget: list }
       - { label: Location, required: false, name: locationName, widget: string }
-      - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }
+      - { label: created_time,  required: false, name: created_time, widget: datetime, dateFormat: "MMMM YYYY" }      
   - name: areaserved
     label: Area Served
     files: 

@@ -3,7 +3,7 @@ templateKey: review
 slug: /review/stephjackson
 sortorder: 1501
 title: Steph Jackson
-visible: true
+visible: false
 header: false
 featured: false
 featuredimage: /img/umberto-lpZJLPjkMHk-unsplash.jpg

@@ -1,5 +1,5 @@
 ---
-templateKey: page
+templateKey: about
 slug: /about/whyus
 sortorder: 24
 visible: true
