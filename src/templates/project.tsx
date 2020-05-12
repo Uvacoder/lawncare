@@ -12,6 +12,7 @@ export const Project = ({ data }) => {
         title={`${data.site.siteMetadata.serviceName} in ${data.markdownRemark.frontmatter.location}`}
         slug={data.markdownRemark.frontmatter.slug}
         html={data.markdownRemark.html}>
+    <h6>     Please take a look at the rest of our portfolio...  </h6>
            <ProjectIndex   />
         </PageTemplate>   
   )
