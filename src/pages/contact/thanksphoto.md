@@ -11,5 +11,5 @@ alt: photo by Clarence Onimus on Unsplash
 category:
   - contact
 ---
-##### Thank you for your message. We usually respond hope to respond within 3 working days. ######
+##### The upload is complete. Thank you for your photo.  ######
 
