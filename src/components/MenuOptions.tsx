@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
-import List from '@material-ui/core/List';
 
 class MenuOptions extends React.Component {
     render() {
@@ -9,14 +8,14 @@ class MenuOptions extends React.Component {
       const { nodes: items } = data.allNavigationYaml
       return (
 
-      <List >
+      <div >
   
          {items.map(item => (
                       <Link to={item.link} key={item.name}>
                        {item.name}
                       </Link>
                     ))}
-       </List>
+       </div>
      
       
     )

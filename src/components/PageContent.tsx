@@ -8,7 +8,6 @@ import ContactUsButton from './ContactUsButton'
 import Box from '@material-ui/core/Box'
 import Content from '../styles/contentStyle'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
-import List from 'styles/listStyle'
 
 export const PageContent = ({  
     children,
