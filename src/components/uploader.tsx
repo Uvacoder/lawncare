@@ -53,6 +53,7 @@ export default class Uploader extends React.Component {
                     <form size='large' 
                     name="file-upload" 
                     action="/contact/thanksphoto/" 
+                    data-netlify-recaptcha="true" 
                     method="POST"
                     type="file"
                     data-netlify="true" 
@@ -114,6 +115,8 @@ export default class Uploader extends React.Component {
     
                       <Grid item xs={12}>
                         <br />
+                      <div data-netlify-recaptcha="true"></div>
+                      <br />
                       </Grid>
        
                       <Grid item xs={12} >

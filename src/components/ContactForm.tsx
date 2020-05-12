@@ -50,6 +50,7 @@ export default class Contact extends React.Component {
                 name="contact" 
                 method="POST" 
                 data-netlify="true" 
+                data-netlify-recaptcha="true" 
                 action="/contact/thanks/"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
@@ -78,6 +79,8 @@ export default class Contact extends React.Component {
                             <Grid item xs={12}><br /></Grid>
                         
                             <br />
+                      <div data-netlify-recaptcha="true"></div>
+                      <br />
                             <Grid item xs={12}><Button  type="submit" color="primary" aria-label="Send message button" variant="contained" color="primary">Send Message</Button></Grid>
                             <br />
                         </Grid>
