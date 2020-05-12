@@ -4,17 +4,12 @@ import ListItem from '@material-ui/core/ListItem'
 import Logo from './logo'
 import Gappsapps from './gappsapps'
 import IconButtonBar from './IconButtonBar'
-import SideBarInner from  '../styles/sideBarInnerStyle'
 import Nav from '../styles/navStyle'
 import MenuOptions from '../components/MenuOptions'
-import Box from '@material-ui/core/Box'
-
-
 
 const PermanentDrawerLeft = ({ children, color }: PermanentDrawerLeftProps) => {
   return (
-    <Box >
-      <SideBarInner>
+    <div >
           <Logo />
           <Nav>
             <ListItem>
@@ -32,8 +27,7 @@ const PermanentDrawerLeft = ({ children, color }: PermanentDrawerLeftProps) => {
               <Gappsapps />
             </ListItem>
           </Nav>
-      </SideBarInner>
-    </Box>
+    </div>
   );
 }
 

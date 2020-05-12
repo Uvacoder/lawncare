@@ -15,7 +15,7 @@ import Main from '../styles/mainStyle'
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <React.Fragment>
+    <div>
       <Helmet>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link
@@ -24,7 +24,7 @@ export default function Layout({ children }: LayoutProps) {
         />
       </Helmet>
 
-     <ThemeProvider theme={theme}>
+     <div>
         <GlobalStyles />
         <Hidden mdUp>
          <ToolbarTop  bg={theme.palette.primary.main} />
@@ -46,16 +46,14 @@ export default function Layout({ children }: LayoutProps) {
          <SideBarInner>
             <PermanentDrawerLeft />
           </SideBarInner>
-        <Container position="relative" style={{marginLeft: theme.sidebar.width.big }}>
-          
+        <Container position="relative" style={{marginLeft: theme.sidebar.width.big }}>         
            <Main>{children}</Main>
-
           </Container>
           </div>    
           </Hidden>
  
-    </ThemeProvider>
-    </React.Fragment>
+    </div>
+    </div>
   );
 }
 

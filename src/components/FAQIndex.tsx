@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
-import List from '../styles/listStyle'
 
 type PageProps = {
   data: {
@@ -30,7 +29,7 @@ class FAQIndex extends React.Component {
 
     return (
 
-        <List>
+        <div>
         {faqs &&
           faqs.map(({ node: faq }) => (
          <Link key={faq.frontmatter.slug} to={faq.frontmatter.slug} aria-label={`Frequently Asked Questions "${faq.frontmatter.title}"`}>     
@@ -39,7 +38,7 @@ class FAQIndex extends React.Component {
           </Link>
          
           ))}
-      </List>
+      </div>
       
     )
   }

@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql, StaticQuery} from 'gatsby'
 import Img from 'gatsby-image'
 import GridLink from './grid-link'
-import SEO from './SEO'
 import { ChildImageSharp } from '../types'
 import Area from '../styles/areaStyle'
 
