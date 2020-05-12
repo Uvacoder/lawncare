@@ -1,7 +1,7 @@
 ---
 templateKey: project
 slug: /project/middletoncheney
-title: Middleton Cheney
+title: Lawn care in Middleton Cheney
 location: Middleton Cheney
 sortorder: 1230
 visible: true

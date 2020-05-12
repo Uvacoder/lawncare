@@ -5,7 +5,7 @@ sortorder: 1270
 visible: true
 header: false
 featured: false
-title: Southmoor
+title: Lawn care in Southmoor
 location: Southmoor
 featuredimage: /img/southmoor.jpg
 alt: Results of our lawn care service in Southmoor

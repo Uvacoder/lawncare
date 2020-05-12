@@ -41,7 +41,7 @@ PageTemplate.propTypes = {
   }),
   site: PropTypes.shape({
     siteMetadata: PropTypes.shape({
-      serviceName: PropTypes.string.isRequired,
+      serviceName: PropTypes.object,
     }),
   }),
 }

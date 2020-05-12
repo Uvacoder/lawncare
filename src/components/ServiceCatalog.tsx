@@ -35,9 +35,7 @@ class ServiceCatalog extends React.Component {
     return (
 
       <div>
-      <SEO
-        title={data.site.siteMetadata.title}
-          />
+ 
         <Area>
         {pages &&
           pages.map(({ node: page }) => (

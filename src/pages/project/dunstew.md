@@ -5,7 +5,7 @@ sortorder: 1170
 visible: true
 header: false
 featured: false
-title: Duns Tew
+title: Lawn care in Duns Tew
 location: Duns Tew
 featuredimage: /img/dunstew.jpeg
 alt: Results of our lawn care service in Duns Tew

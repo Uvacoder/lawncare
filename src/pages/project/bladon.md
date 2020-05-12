@@ -5,7 +5,7 @@ sortorder: 1060
 visible: true
 header: false
 featured: false
-title: Bladon
+title: Lawn care in Bladon
 location: Bladon
 featuredimage: /img/bladon.jpg
 alt: Results of our lawn care service in Bladon

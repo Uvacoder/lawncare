@@ -5,7 +5,7 @@ sortorder: 1360
 visible: true
 header: false
 featured: false
-title: Winchcombe
+title: Lawn care in Winchcombe
 location: Winchcombe
 featuredimage: /img/winchcombe.jpg
 alt: Results of our lawn care service in Winchcombe

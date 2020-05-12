@@ -5,7 +5,7 @@ sortorder: 1190
 visible: true
 header: false
 featured: false
-title: Eynsham
+title: Lawn care in Eynsham
 location: Eynsham
 featuredimage: /img/eynsham.jpeg
 alt: Results of our lawn care service in Eynsham

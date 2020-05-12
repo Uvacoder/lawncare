@@ -5,7 +5,7 @@ sortorder: 1240
 visible: true
 header: false
 featured: false
-title: Shennington
+title: Lawn care in Shennington
 location: Shennington
 featuredimage: /img/shennington.jpg
 alt: Results of our lawn care service in Shennington

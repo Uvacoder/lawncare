@@ -5,7 +5,7 @@ sortorder: 1280
 visible: true
 header: false
 featured: false
-title: South Newington
+title: Lawn care in South Newington
 location: South Newington
 featuredimage: /img/southnewington.jpg
 alt: Results of our lawn care service in South Newington

@@ -2,7 +2,7 @@
 templateKey: about
 sortorder: 52
 slug: /aboutus
-title: About Us
+title: About Lawns Matter
 visible: true
 header: true
 featured: true

@@ -9,7 +9,7 @@ export const Page = ({ data }) => {
   return (
       <PageTemplate
         featuredimage={data.markdownRemark.frontmatter.standardimage.childImageSharp.fluid}
-        title={site.siteMetadata.serviceName}
+        title={data.markdownRemark.frontmatter.title}
         slug={data.markdownRemark.frontmatter.slug}
         location={data.markdownRemark.frontmatter.location}
         html={data.markdownRemark.html}>

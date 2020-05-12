@@ -5,7 +5,7 @@ sortorder: 1160
 visible: true
 header: false
 featured: false
-title: Hinton-in-the-hedges
+title: Lawn care in Hinton-in-the-hedges
 location: Hinton-in-the-hedges
 featuredimage: /img/hintoninthehedges.jpg
 alt: Results of our lawn care service in Hinton-in-the-Hedges

@@ -5,7 +5,7 @@ sortorder: 1170
 visible: true
 header: false
 featured: false
-title: Kidlington
+title: Lawn care in Kidlington
 location: Kidlington
 featuredimage: /img/kidlington.jpg
 alt: Results of our lawn care service in Kidlington

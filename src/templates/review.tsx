@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
     return (
         <PageTemplate
         featuredimage={data.markdownRemark.frontmatter.standardimage.childImageSharp.fluid}
-          title={data.markdownRemark.frontmatter.title}
+          title={`Review of ${data.site.siteMetadata.serviceName} in ${data.markdownRemark.frontmatter.location}`}
           location={data.markdownRemark.frontmatter.location}
           slug={data.markdownRemark.frontmatter.slug}
           html={data.markdownRemark.html}>

@@ -1,7 +1,7 @@
 ---
 templateKey: project
 slug: /project/bicester
-title: Bicester 
+title: Lawn care in Bicester 
 location: Bicester 
 sortorder: 1050
 visible: true
