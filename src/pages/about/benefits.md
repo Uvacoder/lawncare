@@ -10,7 +10,6 @@ featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
 alt: photo by Annie Sprat on Unsplash
 category:
   - about
-  - service
 ---
 
 We are passionate about beautiful lawns and are devoting our working lives to

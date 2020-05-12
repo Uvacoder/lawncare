@@ -1,57 +1,11 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
-import styled from 'styled-components'
 import { Grid, FormControl, TextField, Button } from '@material-ui/core'
 import FormContainer from '../styles/formContainerStyle'
-import { withStyles  } from '@material-ui/core/styles'
-import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import UploadButtons from 'components/UploadButtons'
-
-const TextInputField = styled(TextField)`
-  variant: outlined;
-  color: ${theme.palette.primary.contrastText}; 
-`
-const SubmitButton = styled(Button)`
-  variant: outlined;  
-  color: primary;
-`
-
-const ChooseFileField = withStyles({
-  root: {
-    color: theme.palette.secondary.main,
-    '& label.Mui-focused': {
-      color: 'Green',
-    },
-    '& .MuiInput-underline:after': {
-      borderBottomColor: 'Green',
-    },
-    '& .MuiOutlinedInput-root': {
-      '&.Mui-focused fieldset': {
-        borderColor: 'Green',
-      },
-    },
-  },
-})(TextInputField);
-
-
-
-const InputField = withStyles({
-  root: {
-    color: theme.palette.secondary.main,
-    '& label.Mui-focused': {
-      color: 'Green',
-    },
-    '& .MuiInput-underline:after': {
-      borderBottomColor: 'Green',
-    },
-    '& .MuiOutlinedInput-root': {
-      '&.Mui-focused fieldset': {
-        borderColor: 'Green',
-      },
-    },
-  },
-})(TextInputField);
-
+import Link from "gatsby-link";
+import Helmet from "react-helmet";
+import { navigateTo } from "gatsby-link";
 
 
 function encode(data) {
@@ -96,20 +50,27 @@ export default class Uploader extends React.Component {
     return (
       <div>
           <FormContainer >
-                    <form size='large' name="file-upload" action="/contact/thanks/" method="POST" data-netlify="true" data-netlify-honeypot="botfield "  onSubmit={this.handleSubmit}>
+                    <form size='large' 
+                    name="file-upload" 
+                    action="/contact/thanksphoto/" 
+                    method="POST"
+                    type="file"
+                    data-netlify="true" 
+                    data-netlify-honeypot="bot-field "  
+                    onSubmit={this.handleSubmit}>
                       {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                     <input type="hidden" name="form-name" value="file-upload" />
-                    <div hidden>
+                    <p hidden>
                       <label>
                         Don’t fill this out:{' '}
                         <input name="bot-field" onChange={this.handleChange} />
                       </label>
-                    </div>
+                    </p>
                   
                   <FormControl className="control">
                     <Grid container spacing={2} >
                       <Grid item xs >            
-                        <InputField
+                        <TextField
                           label="Name"
                           className="input"
                           type={'text'}
@@ -123,7 +84,7 @@ export default class Uploader extends React.Component {
                         <br />
                       </Grid>
                       <Grid item xs >            
-                        <InputField
+                        <TextField
                             label="Location"
                             className="input"
                             type={'text'}
@@ -146,7 +107,7 @@ export default class Uploader extends React.Component {
                         />
                       </Grid>
                       <Grid item  xs={12} >
-                        <InputField  label="Message" fullWidth placeholder="Please enter your message here " id="message-input" multiline rows="3" size="large" padding="1rem" />
+                        <TextField  label="Message" fullWidth placeholder="Please enter your message here " id="message-input" multiline rows="3" size="large" padding="1rem" />
                       </Grid>
               <br />
                
@@ -157,7 +118,7 @@ export default class Uploader extends React.Component {
        
                       <Grid item xs={12} >
 
-                      <SubmitButton  aria-label="Submit" variant="contained" color="primary">Submit</SubmitButton>
+                      <Button  aria-label="Submit"  type="submit" variant="contained" color="primary">Submit</Button>
                       </Grid>
                       </Grid>
                       <br />
