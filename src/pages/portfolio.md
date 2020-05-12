@@ -11,6 +11,5 @@ alt: photo by Gustavo on Unsplash
 category:
   - project
 ---
-Take a look at the portfolio, showing the results of our servce. 
-
+We are proud of the service that we provide and invite you to look at some of the beautiful lawns that we have created. 
 

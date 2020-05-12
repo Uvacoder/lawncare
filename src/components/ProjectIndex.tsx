@@ -14,6 +14,7 @@ type PageProps = {
           frontmatter: {
             title: string
             slug: string
+            location: string
             featuredimage: ChildImageSharp
             }[]
         }
@@ -36,7 +37,7 @@ class ProjectIndex extends React.Component {
       
          <GridLink key={project.frontmatter.slug} to={project.frontmatter.slug} aria-label={`View project "${project.frontmatter.title}"`}>
             <Img fluid={project.frontmatter.gridimage.childImageSharp.fluid} />
-           <span>{project.frontmatter.title}</span>
+           <span>{project.frontmatter.location}</span>
           </GridLink>
           ))}
       </Area>
@@ -57,6 +58,7 @@ export default () => (
             frontmatter {
               slug
               title
+              location
               templateKey
               visible
               ...gridImage

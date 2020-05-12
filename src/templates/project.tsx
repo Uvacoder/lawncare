@@ -10,9 +10,10 @@ export const Project = ({ data }) => {
       <PageTemplate
         featuredimage={data.markdownRemark.frontmatter.standardimage.childImageSharp.fluid}
         title={`${data.site.siteMetadata.serviceName} in ${data.markdownRemark.frontmatter.location}`}
+        location={data.markdownRemark.frontmatter.location}
         slug={data.markdownRemark.frontmatter.slug}
         html={data.markdownRemark.html}>
-    <h6>     Please take a look at the rest of our portfolio...  </h6>
+    <h5>   Take a look at our portfolio, showing the results of our servce...  </h5>
            <ProjectIndex   />
         </PageTemplate>   
   )
