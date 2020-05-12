@@ -16,7 +16,7 @@ type PageProps = {
             title: string
             slug: string
             featured: boolean
-            featuredimage: ChildImageSharp
+            gridimage: ChildImageSharp
             }[]
         }
       }

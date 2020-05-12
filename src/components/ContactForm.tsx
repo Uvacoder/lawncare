@@ -1,133 +1,93 @@
 import React from 'react'
-import { graphql, StaticQuery  } from 'gatsby'
-import { createStyles, Theme,  withStyles, makeStyles  } from '@material-ui/core/styles'
-import styled from 'styled-components'
 import FormControl from '@material-ui/core/FormControl'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
-import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import Grid from '@material-ui/core/Grid'
 import FormContainer from '../styles/formContainerStyle'
+import { navigateTo } from "gatsby-link";
 
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      flexGrow: 1,
-    },
-    paper: {
-      textAlign: 'center',
-      color: theme.palette.primary.contrastText,
-    },
-  }),
-);
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
 
-const TextInputField = styled(TextField)`
-  variant: outlined;
-  color: ${theme.palette.primary.contrastText}; 
-`
-const SendMessageButton = styled(Button)`
-  variant: outlined;  
-  color: primary;
-`
+export default class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
-const InputField = withStyles({
-  root: {
-    color: theme.palette.secondary.main,
-    '& label.Mui-focused': {
-      color: 'Green',
-    },
-    '& .MuiInput-underline:after': {
-      borderBottomColor: 'Green',
-    },
-    '& .MuiOutlinedInput-root': {
-      '&.Mui-focused fieldset': {
-        borderColor: 'Green',
-      },
-    },
-  },
-})(TextInputField);
+  handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
+    })
+      .then(() => navigateTo(form.getAttribute("action")))
+      .catch(error => alert(error));
+  };
 
 
-type PageProps = {
-  data: {
-        id: string
-        excerpt: string
-        html: markdown 
-        frontmatter: {
-          title: string
-          templateKey: string
-          featured: boolean
-          slug: string
-          alt: string
-          featuredimage: ChildImageSharp
-          }
-        }
-     }
-
-class ContactForm extends React.Component {
     render() {
             
         return (
+          <div>
       
             <FormContainer >
-                <form size='large' name="contact" method="POST" data-netlify="true" data-netlify-honeypot="botfield ">
+                <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true" 
+                data-netlify-recaptcha="true" 
+                action="/contact/thanks/"
+                data-netlify-honeypot="bot-field"
+                onSubmit={this.handleSubmit}
+                
+                >
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p hidden>
+                        <label>
+                          Don’t fill this out:{" "}
+                           <input name="bot-field" onChange={this.handleChange} />
+                        </label>
+                      </p>
+    
                     <FormControl>
                         <Grid container  >
-                            <Grid item xs={7} ><InputField fullWidth label="Name" id="name-input"   /></Grid>
-                            <Grid item xs={7} ><InputField fullWidth label="Tel No:" id="telephone-number-input" /></Grid>
+                            <Grid item xs={7} ><TextField fullWidth label="Name" id="name-input" onChange={this.handleChange}  /></Grid>
+                            <Grid item xs={7} ><TextField fullWidth label="Tel No:" id="telephone-number-input"  onChange={this.handleChange}  /></Grid>
                         
-                            <Grid item xs={12} ><InputField fullWidth label="Address"  id="address-input" size="large"  /></Grid>
-                            <Grid item xs={7}><InputField fullWidth label="Post Code" id="postcode-input"  /></Grid>
+                            <Grid item xs={12} ><TextField fullWidth label="Address"  id="address-input" size="large"  onChange={this.handleChange} /></Grid>
+                            <Grid item xs={7}><TextField fullWidth label="Post Code" id="postcode-input"  onChange={this.handleChange}  /></Grid>
                         
-                            <Grid item xs={7}><InputField fullWidth label="Email" id="email-input"   /></Grid>
+                            <Grid item xs={7}><TextField fullWidth label="Email" id="email-input"  onChange={this.handleChange}   /></Grid>
                             </Grid>  
 
-                            <Grid item  ><InputField  label="Message" fullWidth placeholder="Please enter your message here " id="message-input" multiline rows="3" size="large" /></Grid>
+                            <Grid item  ><TextField  label="Message" fullWidth placeholder="Please enter your message here " id="message-input" multiline rows="3" size="large"  onChange={this.handleChange}  /></Grid>
                             <Grid container spacing={1}>
                             <Grid item xs={12}><br /></Grid>
                         
                             <br />
-                            <Grid item xs={12}><SendMessageButton  aria-label="Send message button" variant="contained" color="primary">Send Message</SendMessageButton></Grid>
+                      <div data-netlify-recaptcha="true"></div>
+                      <br />
+                            <Grid item xs={12}><Button  type="submit" color="primary" aria-label="Send message button" variant="contained" color="primary">Send Message</Button></Grid>
                             <br />
                         </Grid>
                     </FormControl>
                 </form>
             </FormContainer>
-
+            </div>
   )
 }
 }
-export default () => (
-    <StaticQuery
-      query={graphql`
-  query ContactForm  { 
- markdownRemark(frontmatter: {templateKey: {eq: "contact"}})  {
-    frontmatter {
-      slug
-      title
-      templateKey
-      ...standardImage
-      alt
-      featured
-    }
-    id
-  }
-  site {
-    siteMetadata {
-      siteUrl
-      serviceName
-      brand
-      availableChannel {
-        servicePhone
-        serviceSmsNumber
-        serviceUrl
-      }
-    }
-  }
- }
- `}
-    render={(data) => <ContactForm data={data} />}
-  />
-)

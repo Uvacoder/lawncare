@@ -24,7 +24,7 @@ export const PageContent = ({
           <RaisedHeader   >
             <PageTitle > {title}  </PageTitle>
                 <Description >
-               <h6>  <span dangerouslySetInnerHTML={{ __html: html }} ></span>  <Box>  {location}</Box></h6>
+               <h6>  <span dangerouslySetInnerHTML={{ __html: html }} ></span>  </h6>
                    
                         <Box>
                         {children}

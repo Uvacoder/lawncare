@@ -1,5 +1,5 @@
 ---
-templateKey: page
+templateKey: about
 sortorder: 14
 slug: /services
 title: Lawn Care Service
