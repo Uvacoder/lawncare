@@ -3,9 +3,6 @@ import { navigate } from 'gatsby-link'
 import { Grid, FormControl, TextField, Button } from '@material-ui/core'
 import FormContainer from '../styles/formContainerStyle'
 import UploadButtons from 'components/UploadButtons'
-import Link from "gatsby-link";
-import Helmet from "react-helmet";
-import { navigateTo } from "gatsby-link";
 
 
 function encode(data) {
@@ -59,8 +56,7 @@ export default class Uploader extends React.Component {
                     data-netlify="true" 
                     data-netlify-honeypot="bot-field "  
                     onSubmit={this.handleSubmit}
-                    netlify>
-                      {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                    >
                     <input type="hidden" name="form-name" value="file-upload" />
                     <p hidden>
                       <label>

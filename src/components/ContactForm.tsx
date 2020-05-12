@@ -46,7 +46,6 @@ export default class Contact extends React.Component {
       
             <FormContainer >
                 <form 
-                size='large' 
                 name="contact" 
                 method="POST" 
                 data-netlify="true" 
@@ -54,7 +53,7 @@ export default class Contact extends React.Component {
                 action="/contact/thanks/"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
-                netlify
+                
                 >
                     <input type="hidden" name="form-name" value="contact" />
                     <p hidden>
