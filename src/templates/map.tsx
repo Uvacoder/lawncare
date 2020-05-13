@@ -30,7 +30,7 @@ export default MapPage
 
 export const pageQuery = graphql`
 query MapPage {
-   markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+   markdownRemark(frontmatter: {templateKey: {eq: "map"}}) {
       html
       frontmatter {
       title
