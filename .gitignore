@@ -68,3 +68,6 @@ yarn-error.log
 cypress/e2e/build
 
 .DS_Store
+
+# Local Netlify folder
+.netlify
