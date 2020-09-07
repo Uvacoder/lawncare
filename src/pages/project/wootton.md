@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Wooton
 location: Wooton
-featuredimage: /img/wooton.jpg
+featuredimage: /img/wooton.webp
 alt: Results of our lawn care service in Wooton
 category:
   - project

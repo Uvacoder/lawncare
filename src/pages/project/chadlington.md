@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Chadlington
 location: Chadlington
-featuredimage: /img/chadlington.jpeg
+featuredimage: /img/chadlington.webp
 alt: Results of our lawn care service in Chadlington
 category:
   - project

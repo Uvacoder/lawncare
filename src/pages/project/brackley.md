@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Brackley
 location: Brackley
-featuredimage: /img/brackley.jpg
+featuredimage: /img/brackley.webp
 alt: Results of our lawn care service in Brackley
 category:
   - project

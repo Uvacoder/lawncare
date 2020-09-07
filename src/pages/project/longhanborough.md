@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Long Hanborough
 location: Long Hanborough
-featuredimage: /img/longhanborough.jpeg
+featuredimage: /img/longhanborough.webp
 alt: Results of our lawn care service in Long Hanborough
 category:
   - project

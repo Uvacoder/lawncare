@@ -6,7 +6,7 @@ slug: /about/lawnrenovation
 visible: true
 header: false
 featured: true
-featuredimage: /img/lawnrenovation.jpg
+featuredimage: /img/lawnrenovation.webp
 alt: Lawn renovation
 category:
   - about

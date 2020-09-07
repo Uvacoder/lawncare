@@ -6,7 +6,7 @@ slug: /about/benefits
 visible: true
 header: false
 featured: false
-featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.jpg
+featuredimage: /img/annie-spratt-3A46Gcjd6L4-unsplash.webp
 alt: photo by Annie Sprat on Unsplash
 category:
   - about

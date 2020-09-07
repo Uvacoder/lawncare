@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Burdrop
 location: Burdrop
-featuredimage: /img/burdrop.jpeg
+featuredimage: /img/burdrop.webp
 alt: Results of our lawn care service in Burdrop
 category:
   - project

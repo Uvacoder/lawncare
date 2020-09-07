@@ -6,7 +6,7 @@ title: Autumn Treatments
 visible: true
 header: false
 featured: false
-featuredimage: /img/johannes-plenio-pY0LOiwK9Sc-unsplash.jpg
+featuredimage: /img/johannes-plenio-pY0LOiwK9Sc-unsplash.webp
 alt: photo by David Kaloczi on Unsplash
 category:
   - treatments

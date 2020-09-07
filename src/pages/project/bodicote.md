@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Bodicote
 location: Bodicote
-featuredimage: /img/bodicote.jpg
+featuredimage: /img/bodicote.webp
 alt: Results of our lawn care service in Bodicote
 category:
   - project

@@ -6,7 +6,7 @@ slug: /service/aerationholes
 visible: true
 header: false
 featured: false
-featuredimage: /img/aeration1.jpg
+featuredimage: /img/aeration1.webp
 alt: Aeration holes
 category:
   - about

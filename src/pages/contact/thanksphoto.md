@@ -6,7 +6,7 @@ title: Thanks for uploading your photo
 visible: false
 header: true
 featured: false
-featuredimage: /img/clarence-onimus-oEMfnfqey1c-unsplash_cropped.jpg
+featuredimage: /img/clarence-onimus-oEMfnfqey1c-unsplash_cropped.webp
 alt: photo by Clarence Onimus on Unsplash
 category:
   - contact

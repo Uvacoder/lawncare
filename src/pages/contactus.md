@@ -5,6 +5,6 @@ title: Contact Us
 visible: true
 header: true
 featured: false
-featuredimage: /img/contactus.jpg
+featuredimage: /img/contactus.webp
 alt: photo by Nervenet
 ---

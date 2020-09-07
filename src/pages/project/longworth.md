@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Longworth
 location: Longworth
-featuredimage: /img/longworth.jpg
+featuredimage: /img/longworth.webp
 alt: Results of our lawn care service in Longworth
 category:
   - project

@@ -6,7 +6,7 @@ sortorder: 45
 visible: true
 header: false
 featured: false
-featuredimage: /img/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg
+featuredimage: /img/javier-allegue-barros-C7B-ExXpOIE-unsplash.webp
 alt: photo by Javier Allegue Barros on Unsplash
 category:
   - faq

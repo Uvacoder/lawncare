@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Croughton
 location: Croughton
-featuredimage: /img/croughton.jpeg
+featuredimage: /img/croughton.webp
 alt: Results of our lawn care service in Croughton
 category:
   - project

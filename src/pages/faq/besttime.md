@@ -6,7 +6,7 @@ sortorder: 10
 visible: true
 header: false
 featured: false
-featuredimage: /img/aron-visuals-BXOXnQ26B7o-unsplash.jpg
+featuredimage: /img/aron-visuals-BXOXnQ26B7o-unsplash.webp
 alt: photo by Aron Visuals on Unsplash
 category:
   - faq

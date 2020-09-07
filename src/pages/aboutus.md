@@ -6,7 +6,7 @@ title: About Lawns Matter
 visible: true
 header: true
 featured: true
-featuredimage: /img/lukasz-niescioruk-gOm3hfVMsH8-unsplash.jpg
+featuredimage: /img/lukasz-niescioruk-gOm3hfVMsH8-unsplash.webp
 alt: photo by Łukasz Nieścioruk on Unsplash
 category:
   - about

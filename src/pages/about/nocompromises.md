@@ -6,7 +6,7 @@ slug: /about/nocompromises
 visible: true
 header: false
 featured: false
-featuredimage: /img/nicolas-desmangles-FVpn3UdlMpg-unsplash.jpg
+featuredimage: /img/nicolas-desmangles-FVpn3UdlMpg-unsplash.webp
 alt: photo by Nicolas Desmangles on Unsplash
 category:
   - about

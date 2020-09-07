@@ -6,7 +6,7 @@ title: Search by category
 visible: true
 header: true
 featured: false
-featuredimage: /img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg
+featuredimage: /img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.webp
 alt: photo by Ochir Erdene Oyunmedeg on Unsplash
 category:
   - header

@@ -7,7 +7,7 @@ visible: true
 header: true
 location: Oxfordshire
 featured: false 
-featuredimage: /img/alistair-macrobert-UI4lA6hZlQE-unsplash.jpg
+featuredimage: /img/alistair-macrobert-UI4lA6hZlQE-unsplash.webp
 alt: photo by Alistair MacRobert on Unsplash
 category:
   - header

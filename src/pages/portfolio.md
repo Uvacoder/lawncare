@@ -6,7 +6,7 @@ visible: true
 featured: false
 location: Oxfordshire
 title: Our Portfolio
-featuredimage: /img/gustavo-Y-Q4bpIXNZY-unsplash.jpg
+featuredimage: /img/gustavo-Y-Q4bpIXNZY-unsplash.webp
 alt: photo by Gustavo on Unsplash
 category:
   - project

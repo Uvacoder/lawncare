@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Tysoe
 location: Tysoe
-featuredimage: /img/tysoe.jpg
+featuredimage: /img/tysoe.webp
 alt: Results of our lawn care service in Tysoe
 category:
   - project

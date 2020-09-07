@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Fenny Compton
 location: Fenny Compton
-featuredimage: /img/fennycompton.jpeg
+featuredimage: /img/fennycompton.webp
 alt: Results of our lawn care service in Fenny Compton
 category:
   - project

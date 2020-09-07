@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Somerton
 location: Somerton
-featuredimage: /img/somerton.jpg
+featuredimage: /img/somerton.webp
 alt: Results of our lawn care service in Somerton
 category:
   - project

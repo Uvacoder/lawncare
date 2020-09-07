@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Swerford
 location: Swerford
-featuredimage: /img/swerford.jpeg
+featuredimage: /img/swerford.webp
 alt: Results of our lawn care service in Swerford
 category:
   - project

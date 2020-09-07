@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Warmington
 location: Warmington
-featuredimage: /img/warmington.jpg
+featuredimage: /img/warmington.webp
 alt: Results of our lawn care service in Warmington
 category:
   - project

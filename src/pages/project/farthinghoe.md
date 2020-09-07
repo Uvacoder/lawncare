@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Farthinghoe 
 location: Farthinghoe 
-featuredimage: /img/farthinghoe.jpeg
+featuredimage: /img/farthinghoe.webp
 alt: Farthinghoe Project photo
 category:
   - project

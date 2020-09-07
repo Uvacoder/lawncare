@@ -6,7 +6,7 @@ sortorder: 70
 visible: true
 header: false
 featured: false
-featuredimage: /img/colin-watts-8WRRJ4xJeyg-unsplash.jpg
+featuredimage: /img/colin-watts-8WRRJ4xJeyg-unsplash.webp
 alt: photo by Colin Watts Muller on Unsplash
 category:
   - faq

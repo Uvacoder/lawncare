@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Shennington
 location: Shennington
-featuredimage: /img/shennington.jpg
+featuredimage: /img/shennington.webp
 alt: Results of our lawn care service in Shennington
 category:
   - project

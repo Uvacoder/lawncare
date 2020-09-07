@@ -6,7 +6,7 @@ visible: true
 header: false
 featured: false
 title: Disease Control
-featuredimage: /img/disease.jpg
+featuredimage: /img/disease.webp
 alt: photo by from Lawns Matter's Facebook page
 category:
   - service

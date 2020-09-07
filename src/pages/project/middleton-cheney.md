@@ -7,7 +7,7 @@ location: Middleton Cheney
 visible: true
 header: false
 featured: false
-featuredimage: /img/middleton-cheney.jpg
+featuredimage: /img/middleton-cheney.webp
 alt: Middleton Cheney Project After photo
 category:
   - project

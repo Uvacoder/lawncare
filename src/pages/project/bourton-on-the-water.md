@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Bourton-on-the-Water
 location: Bourton-on-the-Water
-featuredimage: /img/bourtononthewater.jpeg
+featuredimage: /img/bourtononthewater.webp
 alt: Results of our lawn care service in Bourton-on-the-Water
 category:
   - project
