@@ -6,7 +6,7 @@ title: Thanks for your message
 visible: false
 header: true
 featured: false
-featuredimage: /img/aaron-burden-zunGugEsJCE-unsplash.jpg
+featuredimage: /img/aaron-burden-zunGugEsJCE-unsplash.webp
 alt: photo by Aaron Burden on Unsplash
 category:
   - contact

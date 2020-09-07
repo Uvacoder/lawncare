@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Great Tew
 location: Great Tew
-featuredimage: /img/greattew.jpg
+featuredimage: /img/greattew.webp
 alt: Results of our lawn care service in Great Tew
 category:
   - project

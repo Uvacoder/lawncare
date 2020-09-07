@@ -6,8 +6,8 @@ slug: /service/areaserved
 visible: true
 header: true
 featured: true
-featuredimage: /img/areaserved.jpg
-backgroundimage: /img/marcel-l-E4sL7IrHy04-unsplash.jpg
+featuredimage: /img/areaserved.webp
+backgroundimage: /img/marcel-l-E4sL7IrHy04-unsplash.webp
 alt: Map of area served
 category:
   - about

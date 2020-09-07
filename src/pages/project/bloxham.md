@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Bloxham
 location: Bloxham
-featuredimage: /img/bloxham.jpeg
+featuredimage: /img/bloxham.webp
 alt: Results of our lawn care service in Bloxham
 category:
   - project

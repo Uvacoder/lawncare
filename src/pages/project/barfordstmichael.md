@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Barford St Michael
 location: Barford St Michael
-featuredimage: /img/barfordstmichael.jpeg
+featuredimage: /img/barfordstmichael.webp
 alt: Results of our lawn care service in Barford St Michael
 category:
   - project

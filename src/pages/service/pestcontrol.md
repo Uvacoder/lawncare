@@ -6,7 +6,7 @@ visible: true
 header: false
 featured: false
 title: Pest Control
-featuredimage: /img/pestcontrol.jpg
+featuredimage: /img/pestcontrol.webp
 alt: Photo of chafer grubs
 category:
   - service

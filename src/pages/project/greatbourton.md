@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Great Bourton
 location: Great Bourton
-featuredimage: /img/greatbourton.jpg
+featuredimage: /img/greatbourton.webp
 alt: Results of our lawn care service in Great Bourton
 category:
   - project

@@ -6,7 +6,7 @@ sortorder: 90
 visible: true
 header: false
 featured: false
-featuredimage: /img/eugen-str-CrhsIRY3JWY-unsplash.jpg
+featuredimage: /img/eugen-str-CrhsIRY3JWY-unsplash.webp
 alt: photo by Eugen Str on Unsplash
 category:
   - faq

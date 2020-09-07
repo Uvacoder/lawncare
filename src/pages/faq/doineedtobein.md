@@ -6,7 +6,7 @@ sortorder: 50
 visible: true
 header: false
 featured: false
-featuredimage: /img/marina-de-salis-UozvGeM-_Ko-unsplash.jpg
+featuredimage: /img/marina-de-salis-UozvGeM-_Ko-unsplash.webp
 alt: photo by Marina De Salis on Unsplash
 category:
   - faq

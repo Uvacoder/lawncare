@@ -6,7 +6,7 @@ title: Lawn Care Service
 visible: true
 header: true
 featured: false
-featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.jpg
+featuredimage: /img/david-guenther-DrDZmWff3vo-unsplash.webp
 alt: photo by David Kaloczi on Unsplash
 category:
   - service

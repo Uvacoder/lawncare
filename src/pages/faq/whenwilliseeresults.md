@@ -6,7 +6,7 @@ sortorder: 25
 visible: true
 header: false
 featured: false
-featuredimage: /img/chang-qing-8oPubUm97Cc-unsplash.jpg
+featuredimage: /img/chang-qing-8oPubUm97Cc-unsplash.webp
 alt: photo by Chang Qing on Unsplash
 category:
   - faq

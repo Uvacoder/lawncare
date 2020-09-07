@@ -7,7 +7,7 @@ location: Longford Park
 visible: true
 header: false
 featured: false
-featuredimage: /img/longfordpark.jpg
+featuredimage: /img/longfordpark.webp
 alt: Longford Park Project After photo
 category:
   - project

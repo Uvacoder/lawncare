@@ -6,7 +6,7 @@ title: Spring Treatments
 visible: true
 header: false
 featured: false
-featuredimage: /img/annie-spratt-43o1KVbOWXA-unsplash.jpg
+featuredimage: /img/annie-spratt-43o1KVbOWXA-unsplash.webp
 alt: photo by David Kaloczi on Unsplash
 category:
   - treatments

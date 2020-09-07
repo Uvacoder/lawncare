@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Tadmarton 
 location: Tadmarton 
-featuredimage: /img/tadmarton.jpg
+featuredimage: /img/tadmarton.webp
 alt: Tadmarton After photo
 category:
   - project

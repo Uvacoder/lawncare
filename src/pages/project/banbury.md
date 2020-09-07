@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Banbury
 location: Banbury
-featuredimage: /img/banbury.jpg
+featuredimage: /img/banbury.webp
 alt: Results of our lawn care service in Banbury
 category:
   - project

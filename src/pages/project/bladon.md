@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Bladon
 location: Bladon
-featuredimage: /img/bladon.jpg
+featuredimage: /img/bladon.webp
 alt: Results of our lawn care service in Bladon
 category:
   - project

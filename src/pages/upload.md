@@ -6,7 +6,7 @@ title: Photo upload
 visible: true
 header: true
 featured: true
-featuredimage: /img/viktor-forgacs-zwl6fOnNqrk-unsplash.jpg
+featuredimage: /img/viktor-forgacs-zwl6fOnNqrk-unsplash.webp
 alt: photo by Viktor Forgacs on Unsplash
 category:
   - about

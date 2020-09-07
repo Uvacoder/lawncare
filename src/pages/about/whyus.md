@@ -6,7 +6,7 @@ visible: true
 header: false
 featured: true
 title: Why Us?
-featuredimage: /img/oleksandra-bardash-AlJg9kPvOJ4-unsplash_cropped.jpg
+featuredimage: /img/oleksandra-bardash-AlJg9kPvOJ4-unsplash_cropped.webp
 alt: photo by Oleksandra Bardash on unsplash
 category:
   - about

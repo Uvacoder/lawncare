@@ -7,7 +7,7 @@ sortorder: 1050
 visible: true
 header: false
 featured: false
-featuredimage: /img/bicester.jpg
+featuredimage: /img/bicester.webp
 alt: Bicester Project After photo
 category:
   - project

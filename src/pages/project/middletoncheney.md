@@ -7,7 +7,7 @@ sortorder: 1230
 visible: true
 header: false
 featured: false
-featuredimage: /img/middletoncheney.jpg
+featuredimage: /img/middletoncheney.webp
 alt: Middleton Cheney Project photo
 category:
   - project

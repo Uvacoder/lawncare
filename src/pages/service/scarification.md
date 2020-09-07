@@ -6,7 +6,7 @@ visible: true
 header: false
 featured: false
 title: Scarification
-featuredimage: /img/scarifying-101.jpg
+featuredimage: /img/scarifying-101.webp
 alt: Lawns Matter scarifying on client site
 category:
   - service

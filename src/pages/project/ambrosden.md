@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Ambrosden
 location: Ambrosden
-featuredimage: /img/ambrosden.jpeg
+featuredimage: /img/ambrosden.webp
 alt: Results of our lawn care service in Ambrosden
 category:
   - project

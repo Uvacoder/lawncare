@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Caulcott
 location: Caulcott
-featuredimage: /img/caulcott.jpeg
+featuredimage: /img/caulcott.webp
 alt: Results of our lawn care service in Caulcott
 category:
   - project

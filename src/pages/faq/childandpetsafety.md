@@ -6,7 +6,7 @@ sortorder: 30
 visible: true
 header: false
 featured: false
-featuredimage: /img/treddy-chen-UdQWvefOXJk-unsplash.jpg
+featuredimage: /img/treddy-chen-UdQWvefOXJk-unsplash.webp
 alt: photo by Treddy Chen on Unsplash
 category:
   - faq

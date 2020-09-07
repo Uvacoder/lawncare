@@ -6,7 +6,7 @@ sortorder: 60
 visible: true
 header: false
 featured: false
-featuredimage: /img/steve-smith-Zvvu4zRKijE-unsplash.jpg
+featuredimage: /img/steve-smith-Zvvu4zRKijE-unsplash.webp
 alt: photo by Steve Smith on Unsplash
 category:
   - faq

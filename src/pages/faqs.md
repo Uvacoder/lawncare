@@ -6,7 +6,7 @@ title: Frequently Asked Questions
 visible: true
 header: true
 featured: true
-featuredimage: /img/fauzan-saari-pZXg_ObLOM4-unsplash.jpg
+featuredimage: /img/fauzan-saari-pZXg_ObLOM4-unsplash.webp
 alt: photo by Fauzan Saari on Unsplash
 category:
   - faq

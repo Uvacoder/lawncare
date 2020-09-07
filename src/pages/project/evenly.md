@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Evenly
 location: Evenly
-featuredimage: /img/evenly.jpeg
+featuredimage: /img/evenly.webp
 alt: Results of our lawn care service in Evenly
 category:
   - project

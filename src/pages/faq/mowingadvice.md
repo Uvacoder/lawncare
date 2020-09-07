@@ -6,7 +6,7 @@ sortorder: 80
 visible: true
 header: false
 featured: false
-featuredimage: /img/remi-muller-LlHgaeBwYVE-unsplash.jpg
+featuredimage: /img/remi-muller-LlHgaeBwYVE-unsplash.webp
 alt: photo by Remi Muller on Unsplash
 category:
   - faq

@@ -6,7 +6,7 @@ title: Summer Treatments
 visible: true
 header: false
 featured: false
-featuredimage: /img/johnny-mcclung-XZWH2LSGYVw-unsplash.jpg
+featuredimage: /img/johnny-mcclung-XZWH2LSGYVw-unsplash.webp
 alt: photo by David Kaloczi on Unsplash
 category:
   - treatments

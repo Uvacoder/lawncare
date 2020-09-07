@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Sutton Courtenay
 location: Sutton Courtenay
-featuredimage: /img/suttoncourtenay.jpg
+featuredimage: /img/suttoncourtenay.webp
 alt: Sutton Courtenay After photo
 category:
   - project

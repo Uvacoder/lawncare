@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Winchcombe
 location: Winchcombe
-featuredimage: /img/winchcombe.jpg
+featuredimage: /img/winchcombe.webp
 alt: Results of our lawn care service in Winchcombe
 category:
   - project

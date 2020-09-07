@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Deddington
 location: Deddington
-featuredimage: /img/deddington.jpg
+featuredimage: /img/deddington.webp
 alt: Deddington Project After photo
 category:
   - project

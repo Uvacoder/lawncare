@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Swalcliffe
 location: Swalcliffe
-featuredimage: /img/swacliffe.jpg
+featuredimage: /img/swacliffe.webp
 alt: Results of our lawn care service in Swacliffe
 category:
   - project

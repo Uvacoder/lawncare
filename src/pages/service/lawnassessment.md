@@ -6,7 +6,7 @@ visible: true
 header: false
 featured: true
 title: Lawn Assessment
-featuredimage: /img/lawnassessment.jpg
+featuredimage: /img/lawnassessment.webp
 alt: Lawns Matter Logo
 category:
   - service

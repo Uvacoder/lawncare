@@ -7,7 +7,7 @@ header: false
 featured: false
 location: Aynho
 title: Lawn care in Aynho
-featuredimage: /img/aynho.jpeg
+featuredimage: /img/aynho.webp
 alt: Results of our lawn care service in Aynho
 category:
   - project

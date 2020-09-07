@@ -7,7 +7,7 @@ header: false
 featured: false
 title: Lawn care in Lower Tadmarton
 location: Lower Tadmarton
-featuredimage: /img/lowertadmarton.jpeg
+featuredimage: /img/lowertadmarton.webp
 alt: Results of our lawn care service in Lower Tadmarton
 category:
   - project

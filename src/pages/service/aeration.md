@@ -6,7 +6,7 @@ visible: true
 header: false
 featured: false
 title: Aeration
-featuredimage: /img/aerator.jpg
+featuredimage: /img/aerator.webp
 alt: Lawnsmatter aerator on client site
 category:
   - service

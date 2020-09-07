@@ -6,7 +6,7 @@ sortorder: 20
 visible: true
 header: false
 featured: false
-featuredimage: /img/behy-studio-2_l3lUpn4vE-unsplash.jpg
+featuredimage: /img/behy-studio-2_l3lUpn4vE-unsplash.webp
 alt: photo by Behy Studio on Unsplash
 category:
   - faq
