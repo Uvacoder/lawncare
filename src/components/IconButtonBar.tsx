@@ -15,7 +15,7 @@ export default function IconButtonBar() {
 <div><Container style={{display: theme.iconButtonBar.display, flexDirection: theme.iconButtonBar.flexDirection }}>
 <FacebookLink  />
 <PhoneLink />
-<InstagramLink  />
+{/* <InstagramLink  /> */}
 <EmailLink  />
 </Container></div>
     )}
