@@ -72,17 +72,17 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
     'gatsby-transformer-yaml', 
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [`300`, `400`, `500`, `700`]
-          },
-        ],
-      },
-    },   
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Open Sans`,
+    //         variants: [`300`, `400`, `500`, `700`]
+    //       },
+    //     ],
+    //   },
+    // },   
     {
       resolve: `gatsby-theme-material-ui`,
       options: {
