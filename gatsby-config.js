@@ -150,18 +150,12 @@ module.exports = {
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
-              destinationDir: `static`,
+              destinationDir: `static`, 
             },
           },
         ],
       },
     },  
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `lawnsmatter`,
-      },
-    }, 
     {
       resolve: `gatsby-plugin-react-svg`,
         options: {

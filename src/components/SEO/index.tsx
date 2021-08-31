@@ -132,18 +132,10 @@ const SEO = ({ title, desc, banner, pathname, node, organization }: Props) => {
     {
       '@type': 'ListItem',
       item: {
-        '@id': `${siteUrl}/instagram`,
-        name: 'Instagram',
-      },
-      position: 6,
-    },
-    {
-      '@type': 'ListItem',
-      item: {
         '@id': `${siteUrl}/contactus`,
         name: 'Contact Us',
       },
-      position: 7,
+      position: 6,
     },
 
 
